@@ -20,7 +20,9 @@ const router = createBrowserRouter([
       { path: 'settings', element: <SettingsPage /> }
     ]
   }
-]);
+], {
+  basename: import.meta.env.BASE_URL
+});
 
 export function App() {
   return <RouterProvider router={router} />;
