@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 const isGhPages = process.env.GITHUB_ACTIONS === 'true';
-const repoName = 'Hust_quiz';
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
 
 export default defineConfig({
-  base: isGhPages ? `/${repoName}/` : '/',
+  base: isGhPages && repoName ? `/${repoName}/` : '/',
   plugins: [
     react(),
     VitePWA({

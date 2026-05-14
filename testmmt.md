@@ -1,0 +1,4 @@
+- phân mảnh gói tin
+- cổng
+- ipv4
+- giao thức tcp
