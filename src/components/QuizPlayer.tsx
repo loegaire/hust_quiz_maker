@@ -5,6 +5,7 @@ import { db } from '../lib/db';
 import { scoreAnswer } from '../lib/scoring';
 import { shuffleArray } from '../lib/shuffle';
 import { QuestionCard } from './QuestionCard';
+import { RichText } from './RichText';
 import { Timer } from './Timer';
 import type { AnswerRecord, Attempt } from '../types/attempt';
 import type { QuestionRow, QuizPackRow } from '../lib/db';
@@ -210,7 +211,7 @@ export function QuizPlayer({
       {feedback ? (
         <div className={`rounded-xl p-4 text-sm ${feedback.correct ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'}`}>
           <p className="font-semibold">{feedback.correct ? 'Correct' : 'Incorrect'}</p>
-          <p className="mt-1">{feedback.explanation}</p>
+          <RichText content={feedback.explanation} className="mt-1" />
         </div>
       ) : null}
 

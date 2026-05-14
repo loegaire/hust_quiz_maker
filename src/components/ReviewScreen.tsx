@@ -1,5 +1,6 @@
 import type { AnswerRecord } from '../types/attempt';
 import type { QuizQuestion } from '../types/quiz';
+import { RichText } from './RichText';
 
 interface ReviewScreenProps {
   questions: QuizQuestion[];
@@ -17,7 +18,7 @@ export function ReviewScreen({ questions, answers }: ReviewScreenProps) {
 
         return (
           <article key={question.id} className="rounded-xl bg-[var(--card)] p-4 shadow-sm">
-            <p className="font-semibold">{question.question.text}</p>
+            <RichText content={question.question.text} className="font-semibold" />
             <p className={`mt-1 text-sm ${answer.isCorrect ? 'text-emerald-700' : 'text-red-700'}`}>
               {answer.isCorrect ? 'Correct' : 'Incorrect'}
             </p>
@@ -31,7 +32,10 @@ export function ReviewScreen({ questions, answers }: ReviewScreenProps) {
                 <p>Your answer: {answer.textAnswer || answer.selectedChoiceIds?.join(', ') || 'No answer'}</p>
               </div>
             )}
-            <p className="mt-2 text-sm text-[var(--muted)]">Explanation: {question.explanation.text}</p>
+            <div className="mt-2 text-sm text-[var(--muted)]">
+              <span>Explanation:</span>
+              <RichText content={question.explanation.text} />
+            </div>
           </article>
         );
       })}
