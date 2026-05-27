@@ -60,7 +60,7 @@ export function ImportJsonBox({ onImported }: ImportJsonBoxProps) {
           Save
         </button>
       </div>
-      {error ? <p className="text-sm text-red-700">{error}</p> : null}
+      {error ? <p className="whitespace-pre-wrap rounded-lg bg-red-50 p-3 text-sm text-red-700">{error}</p> : null}
       {preview ? <p className="text-sm text-emerald-700">Ready: {preview.quiz.title} ({preview.quiz.questions.length} questions)</p> : null}
     </div>
   );

@@ -58,7 +58,7 @@ export function SettingsPage() {
   };
 
   const clearData = async () => {
-    await Promise.all([db.quizPacks.clear(), db.questions.clear(), db.attempts.clear(), db.answers.clear()]);
+    await Promise.all([db.quizPacks.clear(), db.questions.clear(), db.attempts.clear(), db.answers.clear(), db.draftSessions.clear()]);
     window.location.reload();
   };
 

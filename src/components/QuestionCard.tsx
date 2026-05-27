@@ -1,4 +1,5 @@
 import { ChoiceButton } from './ChoiceButton';
+import { ContentBlockView } from './ContentBlockView';
 import { FillGapQuestion } from './FillGapQuestion';
 import { RichText } from './RichText';
 import type { QuizQuestion } from '../types/quiz';
@@ -16,7 +17,7 @@ export function QuestionCard({ question, selectedChoiceIds, textAnswer, locked, 
   return (
     <article className="space-y-4 rounded-xl bg-[var(--card)] p-5 shadow-sm">
       <div>
-        <RichText content={question.question.text} className="text-lg font-semibold" />
+        <ContentBlockView content={question.question} textClassName="text-lg font-semibold" />
         {question.tags?.length ? <p className="mt-1 text-xs text-[var(--muted)]">Tags: {question.tags.join(', ')}</p> : null}
       </div>
 
@@ -25,7 +26,12 @@ export function QuestionCard({ question, selectedChoiceIds, textAnswer, locked, 
           {question.choices.map((choice) => (
             <ChoiceButton
               key={choice.id}
-              text={`${choice.id}. ${choice.text}`}
+              content={
+                <div className="space-y-1">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">{choice.id}</p>
+                  <RichText content={choice.text} />
+                </div>
+              }
               selected={selectedChoiceIds.includes(choice.id)}
               onClick={() => onSelectChoice(choice.id)}
               disabled={locked}

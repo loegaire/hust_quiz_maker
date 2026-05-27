@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { ReviewScreen } from '../components/ReviewScreen';
 import { ScoreSummary } from '../components/ScoreSummary';
 import { db, type QuestionRow } from '../lib/db';
@@ -39,10 +39,10 @@ export function ReviewPage() {
       <section className="space-y-3">
         <h1 className="font-display text-3xl">Attempts</h1>
         {attempts.map((a) => (
-          <a key={a.id} href={`/review?attemptId=${a.id}`} className="block rounded-xl bg-[var(--card)] p-4 shadow-sm hover:shadow">
+          <Link key={a.id} to={`/review?attemptId=${a.id}`} className="block rounded-xl bg-[var(--card)] p-4 shadow-sm hover:shadow">
             <p className="font-semibold">Quiz ID: {a.quizId}</p>
             <p className="text-sm text-[var(--muted)]">{new Date(a.startedAt).toLocaleString()} · Score {a.score}/{a.totalQuestions}</p>
-          </a>
+          </Link>
         ))}
       </section>
     );

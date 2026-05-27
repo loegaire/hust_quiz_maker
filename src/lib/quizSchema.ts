@@ -1,10 +1,18 @@
 import { z } from 'zod';
 
-const imageSchema = z.object({
-  id: z.string().min(1),
-  src: z.string().min(1),
-  alt: z.string().optional()
-});
+const imageSchema = z.union([
+  z.string().min(1),
+  z
+    .object({
+      id: z.string().min(1).optional(),
+      src: z.string().min(1).optional(),
+      ascii: z.string().min(1).optional(),
+      alt: z.string().optional()
+    })
+    .refine((value) => Number(Boolean(value.src)) + Number(Boolean(value.ascii)) === 1, {
+      message: 'Each media item must include exactly one of "src" or "ascii".'
+    })
+]);
 
 const contentSchema = z.object({
   text: z.string().min(1),

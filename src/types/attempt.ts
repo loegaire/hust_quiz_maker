@@ -24,6 +24,29 @@ export interface AnswerRecord {
   timeSpentMs: number;
 }
 
+export interface DraftResponse {
+  questionId: string;
+  selectedChoiceIds?: string[];
+  textAnswer?: string;
+  isCorrect: boolean;
+  answered: boolean;
+}
+
+export interface DraftSession {
+  id: string;
+  quizId: string;
+  startedAt: number;
+  updatedAt: number;
+  mode: 'practice' | 'exam';
+  timed: boolean;
+  timeLimitMs?: number;
+  deadlineAt?: number;
+  questionOrder: string[];
+  choiceOrderByQuestion: Record<string, string[]>;
+  currentIndex: number;
+  responses: Record<string, DraftResponse>;
+}
+
 export interface AppSetting<T = unknown> {
   key: string;
   value: T;

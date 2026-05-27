@@ -1,15 +1,23 @@
 export type Difficulty = 'easy' | 'medium' | 'hard';
 export type QuestionType = 'single_choice' | 'multiple_choice' | 'fill_gap';
 
-export interface QuizImage {
+export interface QuizImageAsset {
   id: string;
   src: string;
   alt?: string;
 }
 
+export interface QuizAsciiAsset {
+  id: string;
+  ascii: string;
+  alt?: string;
+}
+
+export type QuizMedia = QuizImageAsset | QuizAsciiAsset;
+
 export interface ContentBlock {
   text: string;
-  images: QuizImage[];
+  images: QuizMedia[];
 }
 
 export interface ExplanationBlock extends ContentBlock {}

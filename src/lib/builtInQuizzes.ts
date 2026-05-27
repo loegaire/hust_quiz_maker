@@ -1,7 +1,8 @@
 import { db } from './db';
+import { normalizeQuiz } from './normalizeQuiz';
 import type { QuizPackFile } from '../types/quiz';
 
-const BUILT_IN_FILES = ['/quizzes/sample-networking.json', '/quizzes/sample-database.json'];
+const BUILT_IN_FILES = ['quizzes/sample-networking.json', 'quizzes/sample-database.json'];
 
 export async function loadBuiltInQuizzes(): Promise<void> {
   const existing = await db.quizPacks.where('sourceType').equals('built_in').count();
@@ -12,10 +13,10 @@ export async function loadBuiltInQuizzes(): Promise<void> {
   const now = Date.now();
 
   for (const path of BUILT_IN_FILES) {
-    const res = await fetch(path);
+    const res = await fetch(`${import.meta.env.BASE_URL}${path}`);
     if (!res.ok) continue;
 
-    const data = (await res.json()) as QuizPackFile;
+    const data = normalizeQuiz((await res.json()) as QuizPackFile);
 
     await db.transaction('rw', db.quizPacks, db.questions, async () => {
       await db.quizPacks.put({

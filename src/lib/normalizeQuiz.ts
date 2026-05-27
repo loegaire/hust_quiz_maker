@@ -1,11 +1,38 @@
 import type { QuizPackFile } from '../types/quiz';
 
+function normalizeMedia(
+  items: Array<string | { id?: string; src?: string; ascii?: string; alt?: string }>
+) {
+  return items.map((item, index) => {
+    if (typeof item === 'string') {
+      return {
+        id: `ascii-${index + 1}`,
+        ascii: item
+      };
+    }
+
+    if (item.src) {
+      return {
+        id: item.id ?? `img-${index + 1}`,
+        src: item.src,
+        alt: item.alt
+      };
+    }
+
+    return {
+      id: item.id ?? `ascii-${index + 1}`,
+      ascii: item.ascii ?? '',
+      alt: item.alt
+    };
+  });
+}
+
 export function normalizeQuiz(data: QuizPackFile): QuizPackFile {
   const quiz = data.quiz;
   const normalizedQuestions = quiz.questions.map((q) => ({
     ...q,
-    question: { ...q.question, images: q.question.images ?? [] },
-    explanation: { ...q.explanation, images: q.explanation.images ?? [] }
+    question: { ...q.question, images: normalizeMedia(q.question.images ?? []) },
+    explanation: { ...q.explanation, images: normalizeMedia(q.explanation.images ?? []) }
   }));
 
   return {

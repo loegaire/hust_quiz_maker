@@ -1,5 +1,5 @@
 import Dexie, { type Table } from 'dexie';
-import type { AnswerRecord, AppSetting, Attempt } from '../types/attempt';
+import type { AnswerRecord, AppSetting, Attempt, DraftSession } from '../types/attempt';
 import type { QuizQuestion, StoredQuizPack } from '../types/quiz';
 
 export interface QuizPackRow extends StoredQuizPack {
@@ -19,6 +19,7 @@ class QuizDB extends Dexie {
   questions!: Table<QuestionRow, string>;
   attempts!: Table<Attempt, string>;
   answers!: Table<AnswerRecord, string>;
+  draftSessions!: Table<DraftSession, string>;
   settings!: Table<AppSetting, string>;
 
   constructor() {
@@ -28,6 +29,14 @@ class QuizDB extends Dexie {
       questions: 'id, quizId, type',
       attempts: 'id, quizId, startedAt',
       answers: 'id, attemptId, questionId',
+      settings: 'key'
+    });
+    this.version(2).stores({
+      quizPacks: 'id, sourceType, updatedAt',
+      questions: 'id, quizId, type',
+      attempts: 'id, quizId, startedAt',
+      answers: 'id, attemptId, questionId',
+      draftSessions: 'id, quizId, updatedAt',
       settings: 'key'
     });
   }
