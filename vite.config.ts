@@ -11,7 +11,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg'],
+      includeAssets: ['favicon.svg', 'brand/img.jpg', 'brand/img2.jpg', 'brand/icon-192.png', 'brand/icon-512.png'],
       manifest: {
         name: 'HUST Quiz',
         short_name: 'HUST Quiz',
@@ -21,12 +21,12 @@ export default defineConfig({
         theme_color: '#214e34',
         icons: [
           {
-            src: 'pwa-192x192.png',
+            src: 'brand/icon-192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'pwa-512x512.png',
+            src: 'brand/icon-512.png',
             sizes: '512x512',
             type: 'image/png'
           }

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { parseQuizJson, saveImportedQuiz } from '../lib/importQuiz';
+import { quizAssets } from '../lib/quizCatalog';
 
-function quizAssetPath(path: string) {
-  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
-}
+const heroImageUrl = `${import.meta.env.BASE_URL}brand/img2.jpg`;
+const bundleImageUrl = `${import.meta.env.BASE_URL}brand/img.jpg`;
 
 export function HomePage() {
   const [loading, setLoading] = useState(false);
@@ -13,21 +13,16 @@ export function HomePage() {
   const loadExams = async () => {
     try {
       setLoading(true);
-      setMessage('Loading index...');
-      const res = await fetch(quizAssetPath('quizzes/index.json'));
-      if (!res.ok) {
-        throw new Error(`Could not load quiz index (${res.status})`);
-      }
-      const files: string[] = await res.json();
+      setMessage('Loading quizzes...');
       
       let loaded = 0;
       let failed = 0;
-      for (const file of files) {
-        setMessage(`Importing ${file}... (${loaded}/${files.length})`);
-        const qRes = await fetch(quizAssetPath(`quizzes/${encodeURIComponent(file)}`));
+      for (const asset of quizAssets) {
+        setMessage(`Importing ${asset.filename}... (${loaded}/${quizAssets.length})`);
+        const qRes = await fetch(asset.url);
         if (!qRes.ok) {
           failed++;
-          console.error(`Failed to fetch ${file}: ${qRes.status}`);
+          console.error(`Failed to fetch ${asset.filename}: ${qRes.status}`);
           continue;
         }
         const text = await qRes.text();
@@ -37,7 +32,7 @@ export function HomePage() {
           loaded++;
         } catch (e) {
           failed++;
-          console.error(`Failed to import ${file}:`, e);
+          console.error(`Failed to import ${asset.filename}:`, e);
         }
       }
       setMessage(`Loaded ${loaded} exams${failed ? `, ${failed} failed` : ''}. Go to Open Library to view them.`);
@@ -51,21 +46,35 @@ export function HomePage() {
 
   return (
     <section className="grid gap-4 md:grid-cols-2">
-      <div className="neo-card md:col-span-2">
-        <h1 className="font-display text-3xl">Local-First Quiz App</h1>
-        <p className="mt-2 text-[var(--muted)]">Import JSON quizzes, study in practice/exam modes, and keep progress in your browser.</p>
+      <div className="neo-card relative min-h-64 overflow-hidden md:col-span-2">
+        <div
+          aria-hidden="true"
+          className="absolute inset-y-0 right-0 hidden w-1/2 border-l-4 border-black bg-cover bg-center opacity-90 md:block"
+          style={{ backgroundImage: `url("${heroImageUrl}")` }}
+        />
+        <div className="relative max-w-xl bg-[var(--card)]/95 pr-0 md:pr-8">
+          <h1 className="font-display text-3xl">Local-First Quiz App</h1>
+          <p className="mt-2 text-[var(--muted)]">Import JSON quizzes, study in practice/exam modes, and keep progress in your browser.</p>
+        </div>
         
-        <div className="neo-panel mt-4 bg-[var(--accent-blue)]">
-          <h3 className="font-bold mb-2">Automated Course Exams (20201 - 20252)</h3>
-          <p className="text-sm mb-3">One-click import for all parsed exams from AI, MMT, KTLT, and Database.</p>
-          <button 
-            onClick={loadExams} 
-            disabled={loading}
-            className="neo-button bg-[var(--accent-pink)] disabled:opacity-50"
-          >
-            {loading ? 'Importing...' : 'Auto-Load All Course Exams'}
-          </button>
-          {message && <p className="mt-2 text-sm font-bold text-black">{message}</p>}
+        <div className="neo-panel relative mt-4 max-w-xl overflow-hidden bg-[var(--accent-blue)]">
+          <div
+            aria-hidden="true"
+            className="absolute inset-y-0 right-0 hidden w-40 border-l-4 border-black bg-cover bg-center opacity-75 sm:block"
+            style={{ backgroundImage: `url("${bundleImageUrl}")` }}
+          />
+          <div className="relative max-w-sm">
+            <h3 className="font-bold mb-2">Quiz Bundle</h3>
+            <p className="text-sm mb-3">One-click import for every quiz JSON bundled with the site.</p>
+            <button
+              onClick={loadExams}
+              disabled={loading}
+              className="neo-button bg-[var(--accent-pink)] disabled:opacity-50"
+            >
+              {loading ? 'Importing...' : 'Load All Quizzes'}
+            </button>
+            {message && <p className="mt-2 text-sm font-bold text-black">{message}</p>}
+          </div>
         </div>
       </div>
       <Link to="/library" className="neo-card block transition hover:translate-x-1 hover:translate-y-1">
