@@ -1,0 +1,690 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "ai-nmai-on-tap",
+    "title": "Trí tuệ nhân tạo (AI) - Ôn tập NMAI",
+    "description": "Bộ câu hỏi ôn tập môn Trí tuệ nhân tạo (AI) được tổng hợp từ NMAI.md, gồm 32 câu trắc nghiệm lý thuyết đa dạng (logic vị từ, tìm kiếm, CSP, học máy, tác tử, biểu diễn tri thức).",
+    "language": "vi",
+    "source": {
+      "type": "manual_from_markdown",
+      "notes": "Chuyển đổi thủ công từ file NMAI.md. Câu 2 tham chiếu hình ảnh cây tìm kiếm không có sẵn nên phần đề bài được mô tả lại bằng text. Câu 9 trong MD là bản trùng của câu 1, đã bỏ qua và đánh số lại từ đầu."
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q001",
+        "type": "single_choice",
+        "question": {
+          "text": "Chuyển đổi phát biểu sau sang logic vị từ: \"All boys are cool.\"",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "∀x: boy(x) → cool(x)" },
+          { "id": "B", "text": "∀x: boy(x) ↔ cool(x)" },
+          { "id": "C", "text": "∀x: boy(x) → (cool,x)" },
+          { "id": "D", "text": "∀x: boy(x) ∧ cool(x)" }
+        ],
+        "answer": { "correctChoiceIds": ["A"] },
+        "explanation": {
+          "text": "\"All boys are cool\" có nghĩa: \"Với mọi x, nếu x là một cậu bé thì x ngầu.\" Dùng lượng từ phổ dụng ∀ kết hợp với phép kéo theo (→) khi diễn đạt thuộc tính của một tập hợp có điều kiện. Phép hội (∧) với ∀ sẽ có nghĩa \"mọi thứ đều vừa là boy vừa là cool\" — sai. Phép tương đương (↔) nghĩa là \"khi và chỉ khi\" — cũng sai. Đáp án C có lỗi cú pháp.",
+          "images": []
+        },
+        "tags": ["logic-vi-tu"],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q002",
+        "type": "single_choice",
+        "question": {
+          "text": "Xét cây tìm kiếm với tập đích gồm 2 nút G1 và G2. Cây có gốc A, A nối với B (trái) và C (phải); B nối với D (trái) và E (phải); E nối với H; C nối với F (trái) và G2 (phải). Hãy cho biết thứ tự duyệt các nút đến khi gặp nút đích khi sử dụng tìm kiếm độ sâu giới hạn với ngưỡng sâu l = 2 (nút gốc có độ sâu = 0).",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "A, B, D, E, C, F, G2" },
+          { "id": "B", "text": "A, B, C, D, E, F, G2" },
+          { "id": "C", "text": "A, B, D, E, H, C, F, G2" },
+          { "id": "D", "text": "A, B, D, E, C, G2" }
+        ],
+        "answer": { "correctChoiceIds": ["A"] },
+        "explanation": {
+          "text": "DLS với l=2 duyệt theo DFS từ trái sang phải, không đi sâu quá độ sâu 2. Thứ tự: A (sâu 0) → B (sâu 1) → D (sâu 2) → quay lại B → E (sâu 2) [H bị bỏ vì sâu 3 > l] → quay lại A → C (sâu 1) → F (sâu 2) → G2 (sâu 2). G2 là nút đích → dừng. Kết quả: A, B, D, E, C, F, G2.",
+          "images": []
+        },
+        "tags": ["tim-kiem", "dls"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q003",
+        "type": "single_choice",
+        "question": {
+          "text": "Tìm kiếm nào tương tự như tìm kiếm minimax (trong duyệt cây tìm kiếm)?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Tìm kiếm theo chiều rộng" },
+          { "id": "B", "text": "Tất cả các câu trả lời còn lại" },
+          { "id": "C", "text": "Tìm kiếm theo chiều sâu" },
+          { "id": "D", "text": "Tìm kiếm leo đồi" }
+        ],
+        "answer": { "correctChoiceIds": ["C"] },
+        "explanation": {
+          "text": "Minimax đi sâu hết một nhánh đến tận lá rồi mới backtrack để truyền giá trị min/max lên — đây chính là cơ chế DFS. BFS duyệt theo từng tầng, không giống Minimax. Leo đồi (Hill Climbing) là tìm kiếm cục bộ tham lam, không quay lui toàn bộ cây.",
+          "images": []
+        },
+        "tags": ["tim-kiem", "minimax"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q004",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong bài toán thỏa mãn ràng buộc, biến ràng buộc nhiều nhất (most constrained variable) là gì?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Biến còn lại ít giá trị hợp lệ nhất có thể gán" },
+          { "id": "B", "text": "Biến còn lại nhiều giá trị hợp lệ nhất có thể gán" },
+          { "id": "C", "text": "Biến ràng buộc ít biến khác nhất (chưa được gán giá trị)" },
+          { "id": "D", "text": "Biến bị ràng buộc bởi số lượng các biến khác nhiều nhất (chưa được gán giá trị)" }
+        ],
+        "answer": { "correctChoiceIds": ["A"] },
+        "explanation": {
+          "text": "\"Most constrained variable\" = heuristic MRV (Minimum Remaining Values): chọn biến có miền giá trị hợp lệ còn lại ít nhất để gán trước. Mục đích là fail-first — phát hiện bế tắc sớm, cắt tỉa cây tìm kiếm. Đáp án D mô tả Degree Heuristic (biến bậc cao nhất), thường dùng làm tie-breaker khi MRV hòa.",
+          "images": []
+        },
+        "tags": ["csp", "heuristic"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q005",
+        "type": "single_choice",
+        "question": {
+          "text": "Hành động của tác tử đơn giản (simple reflex agent) hoàn toàn dựa vào:",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Nhận thức hiện tại (Current perception)" },
+          { "id": "B", "text": "Lịch sử nhận thức (Perception history)" },
+          { "id": "C", "text": "Lý thuyết học" },
+          { "id": "D", "text": "Các hàm tiện ích" }
+        ],
+        "answer": { "correctChoiceIds": ["A"] },
+        "explanation": {
+          "text": "Simple reflex agent hoạt động dựa trên tập quy tắc condition-action và chỉ dùng percept hiện tại — không lưu lịch sử. Lịch sử nhận thức là đặc điểm của model-based agent. Lý thuyết học thuộc learning agent. Hàm tiện ích thuộc utility-based agent.",
+          "images": []
+        },
+        "tags": ["tac-tu"],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q006",
+        "type": "single_choice",
+        "question": {
+          "text": "Câu nào sau đây là dạng logic vị từ của câu \"All students study at least one branch\"?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "∀x ∀y: Student(x) ∧ Branch(y) → StudyBranch(x,y)" },
+          { "id": "B", "text": "∀x ∃y: Student(x) ∧ Branch(y) → StudyBranch(x,y)" },
+          { "id": "C", "text": "∀x: Student(x) → (∃y: Branch(y) ∧ StudyBranch(x,y))" },
+          { "id": "D", "text": "∀x: Student(x!) → (∀y: Branch(y!) ∧ StudyBranch(x,y!))" }
+        ],
+        "answer": { "correctChoiceIds": ["C"] },
+        "explanation": {
+          "text": "\"Mọi sinh viên đều học ít nhất một ngành\": dùng ∀x với → cho nhóm có điều kiện, rồi ∃y với ∧ cho \"tồn tại ít nhất một ngành\". Đáp án A dùng ∀∀ → nghĩa là học TẤT CẢ các ngành. Đáp án B dùng ∃y với → — lỗi kinh điển vì kéo theo có thể đúng khi tiền đề sai. Đáp án D có cú pháp sai (x!, y!) và ∀y cũng sai nghĩa.",
+          "images": []
+        },
+        "tags": ["logic-vi-tu"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q007",
+        "type": "single_choice",
+        "question": {
+          "text": "Một thủ tục suy diễn từ cơ sở tri thức KB được gọi là hoàn chỉnh (complete) nếu nó có thể:",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Suy diễn ra một số mệnh đề được bao hàm từ KB" },
+          { "id": "B", "text": "Suy diễn ra bất kỳ mệnh đề được bao hàm từ KB" },
+          { "id": "C", "text": "Suy diễn ra bất kỳ mệnh đề nào từ KB" }
+        ],
+        "answer": { "correctChoiceIds": ["B"] },
+        "explanation": {
+          "text": "Tính hoàn chỉnh (Completeness): nếu KB ⊨ α thì thuật toán phải chứng minh được KB ⊢ α — tức là phải suy diễn được TẤT CẢ các hệ quả hợp lệ. Đáp án A chỉ đúng một phần — thuật toán không hoàn chỉnh. Đáp án C bỏ từ \"được bao hàm\" — sinh cả mệnh đề sai, vi phạm tính đúng đắn (Soundness).",
+          "images": []
+        },
+        "tags": ["suy-dien", "logic"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q008",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong giải thuật Alpha-Beta Pruning, các giá trị Alpha và Beta được cập nhật lúc nào (ở đâu)?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Dọc theo đường đi tìm kiếm (trong cây tìm kiếm)" },
+          { "id": "B", "text": "Tại nút đầu" },
+          { "id": "C", "text": "Tại bước tìm kiếm cuối cùng (kết thúc của quá trình tìm kiếm)" },
+          { "id": "D", "text": "Tại nút có giá trị ước lượng lớn hơn Beta và nhỏ hơn Alpha" }
+        ],
+        "answer": { "correctChoiceIds": ["A"] },
+        "explanation": {
+          "text": "Alpha-Beta duyệt theo DFS. α (giá trị tốt nhất cho MAX) và β (giá trị tốt nhất cho MIN) được khởi tạo ở gốc và liên tục cập nhật dọc theo đường đi khi quay lui, mỗi khi đánh giá xong một nhánh. Nếu α ≥ β thì cắt tỉa. Không phải chỉ cập nhật ở đầu hay cuối.",
+          "images": []
+        },
+        "tags": ["tim-kiem", "minimax", "alpha-beta"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q009",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong logic định đề, mệnh đề (P ∧ Q) ∧ ¬R → Q là:",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Đúng đắn (valid)" },
+          { "id": "B", "text": "Không thỏa mãn được (unsatisfiable)" },
+          { "id": "C", "text": "Không đúng đắn (not valid)" }
+        ],
+        "answer": { "correctChoiceIds": ["A"] },
+        "explanation": {
+          "text": "Để mệnh đề sai, cần vế phải Q = Sai VÀ vế trái (P∧Q)∧¬R = Đúng. Nhưng vế trái đòi hỏi Q = Đúng — mâu thuẫn. Vậy không thể làm mệnh đề sai → là hằng đúng (valid/tautology). Chứng minh: (P∧Q)∧¬R → Q ≡ (¬P∨¬Q∨R) ∨ Q ≡ ¬P∨R∨(Q∨¬Q) ≡ True.",
+          "images": []
+        },
+        "tags": ["logic-menh-de", "tauto"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q010",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Tìm kiếm theo chiều rộng (BFS) là (có thể chọn nhiều đáp án):",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Hoàn chỉnh" },
+          { "id": "B", "text": "Tối ưu (nếu chi phí mỗi bước bằng nhau)" },
+          { "id": "C", "text": "Độ phức tạp về thời gian lớn hơn tìm kiếm theo chiều sâu" },
+          { "id": "D", "text": "Độ phức tạp về bộ nhớ nhỏ hơn tìm kiếm theo chiều sâu" }
+        ],
+        "answer": { "correctChoiceIds": ["A", "B"] },
+        "explanation": {
+          "text": "BFS hoàn chỉnh (luôn tìm ra nghiệm nếu tồn tại, với hệ số rẽ nhánh hữu hạn) và tối ưu (tìm nghiệm nông nhất trước — tối ưu khi chi phí đồng đều). BFS không nhất thiết chậm hơn DFS (C sai). BFS tốn bộ nhớ O(b^d) — nhiều hơn DFS O(bm) rất nhiều (D sai).",
+          "images": []
+        },
+        "tags": ["tim-kiem", "bfs"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q011",
+        "type": "single_choice",
+        "question": {
+          "text": "Suy diễn tiến là quá trình (__), suy diễn lùi là quá trình (__)",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Hướng đích, hướng đích" },
+          { "id": "B", "text": "Hướng dữ liệu, hướng dữ liệu" },
+          { "id": "C", "text": "Hướng dữ liệu, hướng đích" },
+          { "id": "D", "text": "Hướng đích, hướng dữ liệu" }
+        ],
+        "answer": { "correctChoiceIds": ["C"] },
+        "explanation": {
+          "text": "Suy diễn tiến (Forward Chaining) bắt đầu từ dữ liệu/fact đã biết → sinh kết luận mới → hướng dữ liệu (data-driven). Suy diễn lùi (Backward Chaining) bắt đầu từ mục tiêu cần chứng minh → tìm tiền đề → hướng đích (goal-driven).",
+          "images": []
+        },
+        "tags": ["suy-dien", "forward-chaining", "backward-chaining"],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q012",
+        "type": "single_choice",
+        "question": {
+          "text": "Tìm kiếm với chi phí tối thiểu (Uniform Cost Search) mở rộng các node với:",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Chi phí đường đi ngắn nhất (từ node gốc)" },
+          { "id": "B", "text": "Chi phí ước lượng tới nút đích ngắn nhất" },
+          { "id": "C", "text": "Chi phí đường đi trung bình" },
+          { "id": "D", "text": "Chi phí đường đi lớn nhất" }
+        ],
+        "answer": { "correctChoiceIds": ["A"] },
+        "explanation": {
+          "text": "UCS luôn mở rộng nút có g(n) — tổng chi phí thực tế từ gốc đến nút hiện tại — nhỏ nhất, dùng priority queue. Điều này đảm bảo tính tối ưu. Đáp án B mô tả hàm h(n) của Greedy Best-First Search. Trung bình và lớn nhất không dùng trong các thuật toán tìm kiếm tối ưu.",
+          "images": []
+        },
+        "tags": ["tim-kiem", "ucs"],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q013",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Trong các biểu thức sau đây, hãy cho biết các biểu thức nào luôn đúng? (Có thể chọn nhiều đáp án)",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "(A → B) ↔ (¬B → ¬A)" },
+          { "id": "B", "text": "(A ∨ B) → (B ∨ A)" },
+          { "id": "C", "text": "(A ∨ ¬A) ∧ B" },
+          { "id": "D", "text": "(A → B) ↔ (B → A)" }
+        ],
+        "answer": { "correctChoiceIds": ["A", "B"] },
+        "explanation": {
+          "text": "A luôn đúng: Luật phản đảo (Contraposition) — A→B ≡ ¬B→¬A. B luôn đúng: phép tuyển giao hoán, A∨B ≡ B∨A nên biểu thức kéo theo là hằng đúng. C: (A∨¬A)=True nên True∧B phụ thuộc B — không luôn đúng. D: Nhầm mệnh đề thuận với nghịch; với A=True, B=False: False↔True=False.",
+          "images": []
+        },
+        "tags": ["logic-menh-de", "tauto"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q014",
+        "type": "single_choice",
+        "question": {
+          "text": "Câu nào sau đây là dạng logic vị từ của câu \"Every information technology student needs to know English\"?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "∀x: Student(x, IT) → Need2know(x, English)" },
+          { "id": "B", "text": "∀x: Student(x, IT) ∧ Need2know(x, English)" },
+          { "id": "C", "text": "∀x: Student(x) ∧ Learn(x, IT) ∧ Need2know(x, English)" },
+          { "id": "D", "text": "∀x: Student(x) ∧ Learn(x, IT) → Need2know(x, English)" }
+        ],
+        "answer": { "correctChoiceIds": ["A"] },
+        "explanation": {
+          "text": "\"Mọi sinh viên IT đều cần biết tiếng Anh\": ∀x + → là cấu trúc chuẩn cho \"mọi A đều là B\". Student(x, IT) gom điều kiện gọn vào một vị từ. Đáp án B,C dùng ∧ với ∀ — nghĩa là \"mọi vật đều là sinh viên IT VÀ cần biết tiếng Anh\" — sai. Đáp án D tách ra thành hai vị từ rườm rà và không chuẩn bằng A.",
+          "images": []
+        },
+        "tags": ["logic-vi-tu"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q015",
+        "type": "single_choice",
+        "question": {
+          "text": "Môi trường như thế nào được gọi là bán động (semi-dynamic)?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Môi trường không thay đổi khi thời gian trôi đi" },
+          { "id": "B", "text": "Môi trường bị thay đổi" },
+          { "id": "C", "text": "Môi trường không thay đổi khi thời gian trôi đi, nhưng hiệu năng của tác tử thay đổi" },
+          { "id": "D", "text": "Hiệu năng của tác tử thay đổi" }
+        ],
+        "answer": { "correctChoiceIds": ["C"] },
+        "explanation": {
+          "text": "Semi-dynamic: môi trường vật lý không tự thay đổi trong lúc tác tử suy nghĩ, nhưng điểm hiệu năng (performance score) lại thay đổi theo thời gian. Ví dụ: cờ vua có đồng hồ — bàn cờ không tự di chuyển nhưng thời gian cạn dần. Static = môi trường hoàn toàn không đổi. Dynamic = môi trường thay đổi trong lúc tác tử suy nghĩ.",
+          "images": []
+        },
+        "tags": ["tac-tu", "moi-truong"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q016",
+        "type": "single_choice",
+        "question": {
+          "text": "Tìm kiếm tốt nhất trước (Best-First Search) được triển khai bằng cách sử dụng cấu trúc dữ liệu sau:",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Ngăn xếp (Stack)" },
+          { "id": "B", "text": "Hàng đợi vòng (phần tử cuối được kết nối với phần tử đầu)" },
+          { "id": "C", "text": "Hàng đợi ưu tiên (sắp xếp các phần tử dựa trên giá trị của chúng)" },
+          { "id": "D", "text": "Hàng đợi (Queue)" }
+        ],
+        "answer": { "correctChoiceIds": ["C"] },
+        "explanation": {
+          "text": "Best-First Search cần luôn chọn nút có f(n) tốt nhất → cần Priority Queue (hàng đợi ưu tiên). Stack (LIFO) dùng cho DFS. Queue (FIFO) dùng cho BFS. Hàng đợi vòng chỉ là cài đặt tối ưu bộ nhớ của Queue thông thường.",
+          "images": []
+        },
+        "tags": ["tim-kiem", "best-first"],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q017",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây là KHÔNG CHÍNH XÁC về Naïve Bayes?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Các thuộc tính có vai trò ngang nhau" },
+          { "id": "B", "text": "Các thuộc tính phụ thuộc khi biết thông tin lớp của dữ liệu" },
+          { "id": "C", "text": "Thuộc tính có miền giá trị rời rạc" }
+        ],
+        "answer": { "correctChoiceIds": ["B"] },
+        "explanation": {
+          "text": "Naïve Bayes dựa trên giả định độc lập có điều kiện (Conditional Independence): các thuộc tính HOÀN TOÀN ĐỘC LẬP với nhau khi đã biết nhãn lớp. Nói \"phụ thuộc\" là sai hoàn toàn — đây chính là phần \"naïve\" (ngây thơ) của thuật toán. Các thuộc tính có vai trò ngang nhau (A) và miền giá trị rời rạc (C) là đặc điểm đúng của Naïve Bayes cơ bản.",
+          "images": []
+        },
+        "tags": ["hoc-may", "naive-bayes"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q018",
+        "type": "single_choice",
+        "question": {
+          "text": "Vai trò của hàm tác tử (agent function) là gì?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Ánh xạ từ chuỗi trạng thái môi trường (environment sequence) tới hành động" },
+          { "id": "B", "text": "Hoạt động mà không cần đến sự can thiệp trực tiếp của con người" },
+          { "id": "C", "text": "Ánh xạ từ lịch sử nhận thức (percept sequence) tới hành động" },
+          { "id": "D", "text": "Ánh xạ từ chuỗi đích (goal sequence) tới hành động" }
+        ],
+        "answer": { "correctChoiceIds": ["C"] },
+        "explanation": {
+          "text": "Hàm tác tử: f: P* → A, nhận đầu vào là toàn bộ chuỗi lịch sử nhận thức (percept sequence) và trả về hành động. Không phải trạng thái môi trường (tác tử không biết đầy đủ môi trường). Không phải chuỗi đích (đích là cấu trúc nội bộ). Tính tự chủ (autonomy) là khái niệm khác.",
+          "images": []
+        },
+        "tags": ["tac-tu"],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q019",
+        "type": "single_choice",
+        "question": {
+          "text": "Bài toán tô màu bản đồ nước Úc: các bang WA, NT, SA, Q, NSW, V — hai bang có chung biên giới phải tô màu khác nhau, có 3 màu (đỏ, xanh lá, xanh da trời). SA nối với tất cả 5 bang còn lại; 5 bang còn lại tạo thành chuỗi WA–NT–Q–NSW–V. Xác định số lời giải thỏa mãn ràng buộc:",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "30" },
+          { "id": "B", "text": "6" },
+          { "id": "C", "text": "15" },
+          { "id": "D", "text": "4" }
+        ],
+        "answer": { "correctChoiceIds": ["B"] },
+        "explanation": {
+          "text": "SA nối với tất cả 5 bang còn lại → SA có 3 cách chọn màu. Sau khi chọn màu SA, 5 bang còn lại chỉ còn 2 màu. Chúng tạo chuỗi WA–NT–Q–NSW–V: WA có 2 cách, các bang tiếp theo mỗi bang chỉ có 1 cách (bắt buộc dùng màu còn lại). Tổng: 3 × 2 × 1 × 1 × 1 × 1 = 6 lời giải.",
+          "images": []
+        },
+        "tags": ["csp", "to-mau"],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q020",
+        "type": "single_choice",
+        "question": {
+          "text": "Khoảng cách nào được sử dụng cho dữ liệu kiểu mục (categorical) trong k-NN?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Euclidean Distance" },
+          { "id": "B", "text": "Manhattan Distance" },
+          { "id": "C", "text": "Hamming Distance" }
+        ],
+        "answer": { "correctChoiceIds": ["C"] },
+        "explanation": {
+          "text": "Hamming Distance đếm số vị trí thuộc tính không khớp giữa hai điểm dữ liệu — phù hợp cho categorical data (màu sắc, quốc gia, giới tính...). Euclidean và Manhattan dành cho dữ liệu số liên tục, không áp dụng trực tiếp cho categorical (không thể tính \"Xanh - Đỏ\").",
+          "images": []
+        },
+        "tags": ["hoc-may", "knn"],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q021",
+        "type": "single_choice",
+        "question": {
+          "text": "Biến đổi mệnh đề B ↔ (P → Q) thành dạng chuẩn CNF. Đâu là đáp án đúng?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "B ∨ ¬P ∨ Q; P ∨ B; ¬Q ∨ B ∨ ¬P" },
+          { "id": "B", "text": "B ∨ ¬P ∨ Q; P ∨ B; ¬Q ∨ B" },
+          { "id": "C", "text": "¬B ∨ ¬P ∨ Q; P ∨ B; ¬Q ∨ B" }
+        ],
+        "answer": { "correctChoiceIds": ["C"] },
+        "explanation": {
+          "text": "B ↔ (P→Q) ≡ [B→(¬P∨Q)] ∧ [(¬P∨Q)→B] ≡ (¬B∨¬P∨Q) ∧ [¬(¬P∨Q)∨B] ≡ (¬B∨¬P∨Q) ∧ [(P∧¬Q)∨B]. Phân phối: (P∧¬Q)∨B = (P∨B)∧(¬Q∨B). Kết quả CNF: (¬B∨¬P∨Q) ∧ (P∨B) ∧ (¬Q∨B). Tức: ¬B∨¬P∨Q; P∨B; ¬Q∨B.",
+          "images": []
+        },
+        "tags": ["logic-menh-de", "cnf"],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q022",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong các hệ thống lập luận dựa trên luật (rule-based systems), quy tắc giải quyết xung đột (conflict resolution) là gì?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Khi không có các luật nào có thể áp dụng ở bước suy luận, các ràng buộc đối với các biến xung đột cần được loại bỏ" },
+          { "id": "B", "text": "Một cải tiến hiệu quả hơn đối với phương pháp chứng minh dựa trên phương pháp hợp giải" },
+          { "id": "C", "text": "Để sửa đổi hoặc loại bỏ các luật có thể dẫn đến kết luận mâu thuẫn từ cơ sở trí thức" },
+          { "id": "D", "text": "Khi có nhiều luật có thể được áp dụng ở bước suy diễn, cần phải chọn một trong những luật đó để áp dụng" }
+        ],
+        "answer": { "correctChoiceIds": ["D"] },
+        "explanation": {
+          "text": "Conflict resolution là bước chọn một luật duy nhất để thực thi khi nhiều luật cùng đủ điều kiện kích hoạt (Conflict Set). Các chiến lược: ưu tiên cao nhất, specificity (cụ thể nhất), recency (dữ liệu mới nhất). Không phải về loại bỏ ràng buộc (A), hợp giải logic (B), hay bảo trì KB offline (C).",
+          "images": []
+        },
+        "tags": ["he-luat", "suy-dien"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q023",
+        "type": "single_choice",
+        "question": {
+          "text": "Một mạng ngữ nghĩa (semantic network) cho thấy ...",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Các mối quan hệ cú pháp giữa các khái niệm" },
+          { "id": "B", "text": "Định nghĩa một khái niệm" },
+          { "id": "C", "text": "Mối quan hệ ngữ nghĩa giữa các khái niệm" },
+          { "id": "D", "text": "Ví dụ minh họa về một khái niệm" }
+        ],
+        "answer": { "correctChoiceIds": ["C"] },
+        "explanation": {
+          "text": "Semantic Network là đồ thị có hướng: nút = đối tượng/khái niệm, cạnh = quan hệ ngữ nghĩa (IS-A, HAS-A...). Ví dụ: \"Chim IS-A Động vật\". Cú pháp (A) liên quan ngữ pháp ngôn ngữ. Mạng ngữ nghĩa không chỉ định nghĩa (B) hay ví dụ (D) — mục đích cốt lõi là thể hiện quan hệ ý nghĩa giữa nhiều khái niệm.",
+          "images": []
+        },
+        "tags": ["bieu-dien-tri-thuc", "mang-ngu-nghia"],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q024",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Xét vị từ ∃x: Car(x) ∧ Flat(RightTyre(x)). Phát biểu nào sau đây đúng? (Có thể chọn nhiều đáp án)",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "x là hằng số" },
+          { "id": "B", "text": "x là biến" },
+          { "id": "C", "text": "RightTyre(x) là phần tử (term)" },
+          { "id": "D", "text": "RightTyre(x) là vị từ (predicate)" },
+          { "id": "E", "text": "RightTyre là ký hiệu hàm bậc 1" },
+          { "id": "F", "text": "RightTyre là ký hiệu quan hệ bậc 1" }
+        ],
+        "answer": { "correctChoiceIds": ["B", "C", "E"] },
+        "explanation": {
+          "text": "B đúng: ∃x dùng biến, không dùng hằng số. E đúng: RightTyre nhận x (đối tượng) và trả về đối tượng khác (cái lốp) → là ký hiệu hàm bậc 1 (arity=1). C đúng: RightTyre(x) đại diện cho một đối tượng (cái lốp xe) → là term. A sai: x bị ràng buộc bởi ∃ → là biến. D sai: vị từ trả về True/False, còn RightTyre(x) trả về đối tượng. F sai: Car và Flat mới là predicate.",
+          "images": []
+        },
+        "tags": ["logic-vi-tu"],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q025",
+        "type": "single_choice",
+        "question": {
+          "text": "Hàm đánh giá trong giải thuật tìm kiếm A* là gì?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Chi phí đường đi từ nút bắt đầu đến nút hiện tại + Chi phí ước lượng đến mục tiêu" },
+          { "id": "B", "text": "Chi phí đường đi trung bình từ nút bắt đầu đến nút hiện tại và chi phí ước lượng đến mục tiêu" },
+          { "id": "C", "text": "Chỉ dựa vào chi phí ước lượng ngắn nhất từ nút hiện tại đến nút đích" },
+          { "id": "D", "text": "Chỉ dựa vào chi phí đường đi thực tế từ nút bắt đầu đến nút hiện tại" }
+        ],
+        "answer": { "correctChoiceIds": ["A"] },
+        "explanation": {
+          "text": "A* dùng f(n) = g(n) + h(n). g(n) = chi phí thực tế từ gốc đến n (quá khứ). h(n) = hàm heuristic ước lượng từ n đến đích (tương lai). Kết hợp cả hai giúp A* vừa tối ưu (như UCS) vừa hướng đích nhanh (như Greedy). Chỉ h(n) = Greedy Best-First. Chỉ g(n) = UCS. Dùng trung bình là sai bản chất.",
+          "images": []
+        },
+        "tags": ["tim-kiem", "a-star"],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q026",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Trí tuệ nhân tạo bao gồm các lĩnh vực con nào sau đây? (Có thể chọn nhiều đáp án)",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Khoa học dữ liệu (Data Science)" },
+          { "id": "B", "text": "Học máy (Machine Learning)" },
+          { "id": "C", "text": "Cách mạng công nghiệp 4.0" },
+          { "id": "D", "text": "Học sâu (Deep Learning)" },
+          { "id": "E", "text": "Lý thuyết trò chơi (Game Theory)" }
+        ],
+        "answer": { "correctChoiceIds": ["B", "D", "E"] },
+        "explanation": {
+          "text": "ML là lĩnh vực con cốt lõi của AI. Deep Learning là lĩnh vực con của ML (và do đó của AI). Game Theory cung cấp nền tảng toán học cho multi-agent AI. Data Science là lĩnh vực liên ngành giao thoa với AI nhưng không phải lĩnh vực con của AI. Cách mạng 4.0 là thuật ngữ kinh tế-xã hội, không phải lĩnh vực con của AI.",
+          "images": []
+        },
+        "tags": ["tong-quan-ai"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q027",
+        "type": "single_choice",
+        "question": {
+          "text": "Một công ty viễn thông muốn nhóm các khách hàng vào trong các nhóm phân biệt để đưa ra các dịch vụ phù hợp cho mỗi nhóm. Bài toán được xếp vào loại gì?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Học có giám sát (Supervised learning)" },
+          { "id": "B", "text": "Học không giám sát (Unsupervised learning)" },
+          { "id": "C", "text": "Biểu diễn tri thức (Knowledge representation)" },
+          { "id": "D", "text": "Chuyển đổi dữ liệu (Data transformation)" }
+        ],
+        "answer": { "correctChoiceIds": ["B"] },
+        "explanation": {
+          "text": "Bài toán phân cụm (clustering) khách hàng trên dữ liệu không có nhãn → Học không giám sát. Supervised learning cần nhãn sẵn có. Knowledge representation liên quan đến hệ chuyên gia/mạng ngữ nghĩa. Data transformation chỉ là bước tiền xử lý.",
+          "images": []
+        },
+        "tags": ["hoc-may", "phan-cum"],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q028",
+        "type": "single_choice",
+        "question": {
+          "text": "Phương pháp tìm kiếm quay lui (backtracking search) được áp dụng để giải bài toán ô chữ. Hãy cho biết điều nào sau đây đúng:",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Hàm Select-Unassigned-Variable() quy định thứ tự xem xét các chữ cái (đối với các ô chữ)" },
+          { "id": "B", "text": "Backtracking-Search() là tìm kiếm theo chiều rộng" },
+          { "id": "C", "text": "Hàm Select-Unassigned-Variable() quy định thứ tự xem xét các ô chữ" },
+          { "id": "D", "text": "Hàm Order-Domain-Values() quy định thứ tự xem xét các ô chữ" }
+        ],
+        "answer": { "correctChoiceIds": ["C"] },
+        "explanation": {
+          "text": "Trong CSP ô chữ: Biến (Variable) = các ô chữ (hàng ngang/dọc cần điền từ); Miền giá trị (Domain) = các từ vựng. Select-Unassigned-Variable() chọn biến = chọn ô chữ nào điền trước. Order-Domain-Values() sắp xếp thứ tự các từ để thử điền vào ô đã chọn. Backtracking là DFS (không phải BFS). Đáp án A sai vì chữ cái là giá trị (domain), không phải biến.",
+          "images": []
+        },
+        "tags": ["csp", "backtracking"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q029",
+        "type": "single_choice",
+        "question": {
+          "text": "Phương án nào sau đây là một thành phần căn bản của trí tuệ nhân tạo?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Học (Learning)" },
+          { "id": "B", "text": "Giải đố (Puzzle solving)" },
+          { "id": "C", "text": "Thiết kế (Design)" },
+          { "id": "D", "text": "Huấn luyện (Training)" }
+        ],
+        "answer": { "correctChoiceIds": ["A"] },
+        "explanation": {
+          "text": "Học (Learning) là một trong các thành phần căn bản của AI (cùng với Reasoning, Problem Solving, Perception, Language Understanding). Không có khả năng học, AI chỉ là bộ quy tắc tĩnh không thể thích nghi. Puzzle solving là ứng dụng cụ thể. Design là ứng dụng của AI. Training là phương pháp để đạt được khả năng học — không phải bản thân khả năng đó.",
+          "images": []
+        },
+        "tags": ["tong-quan-ai"],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q030",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho các diễn dịch I1: p=0, q=1, r=1, s=0 và I2: p=1, q=1, r=0, s=0. Xét biểu thức F = ((p ∨ q) ∧ r) → (r ∧ s). Hãy cho biết phát biểu nào dưới đây là chính xác?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Có I1 ⊨ F và I2 ⊭ F" },
+          { "id": "B", "text": "Có I1 ⊨ F và I2 ⊨ F" },
+          { "id": "C", "text": "Có I1 ⊭ F và I2 ⊭ F" },
+          { "id": "D", "text": "Có I1 ⊭ F và I2 ⊨ F" }
+        ],
+        "answer": { "correctChoiceIds": ["D"] },
+        "explanation": {
+          "text": "Với I1 (p=0,q=1,r=1,s=0): vế trái = (0∨1)∧1 = 1; vế phải = r∧s = 1∧0 = 0. Vậy 1→0 = Sai → I1 ⊭ F. Với I2 (p=1,q=1,r=0,s=0): vế trái = (1∨1)∧0 = 0. Mệnh đề kéo theo có vế trái sai → luôn đúng → I2 ⊨ F.",
+          "images": []
+        },
+        "tags": ["logic-menh-de", "dinh-gia"],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q031",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho các biểu thức: F1 = (¬p ∨ q) ∧ (¬q ∨ p); F2 = (¬p ∧ ¬q) ∨ (p ∧ q); F3 = (p ∨ q) → (p ∧ q); G = p ↔ q. Hãy cho biết phát biểu nào dưới đây là chính xác?",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "G tương đương với F2 và F3, không tương đương với F1" },
+          { "id": "B", "text": "G tương đương với F1 và F2, không tương đương với F3" },
+          { "id": "C", "text": "G tương đương với cả F1, F2 và F3" },
+          { "id": "D", "text": "G tương đương với F1 và F3, không tương đương với F2" }
+        ],
+        "answer": { "correctChoiceIds": ["C"] },
+        "explanation": {
+          "text": "p↔q ≡ (p→q)∧(q→p) ≡ (¬p∨q)∧(¬q∨p) = F1. p↔q ≡ (p∧q)∨(¬p∧¬q) = F2. F3 = (p∨q)→(p∧q) ≡ ¬(p∨q)∨(p∧q) ≡ (¬p∧¬q)∨(p∧q) = F2 = G. Vậy F1≡F2≡F3≡G — cả bốn tương đương nhau.",
+          "images": []
+        },
+        "tags": ["logic-menh-de", "tuong-duong"],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q032",
+        "type": "single_choice",
+        "question": {
+          "text": "Hãy chọn phương án phù hợp nhất về đặc điểm môi trường của tác tử quét mã QR:",
+          "images": []
+        },
+        "choices": [
+          { "id": "A", "text": "Quan sát đầy đủ, xác định, phân đoạn, động, rời rạc, tác tử đơn" },
+          { "id": "B", "text": "Quan sát đầy đủ, không xác định, phân đoạn, tĩnh, rời rạc, đa tác tử" },
+          { "id": "C", "text": "Quan sát đầy đủ, xác định, phân đoạn, tĩnh, rời rạc, tác tử đơn" },
+          { "id": "D", "text": "Quan sát được một phần, xác định, liên tiếp, tĩnh, rời rạc, tác tử đơn" }
+        ],
+        "answer": { "correctChoiceIds": ["C"] },
+        "explanation": {
+          "text": "Tác tử quét QR: Fully observable (toàn bộ mã QR trong ảnh đầu vào); Deterministic (cùng ảnh → cùng kết quả); Episodic (mỗi lần quét độc lập); Static (môi trường không đổi trong quá trình xử lý); Discrete (xử lý từng phiên riêng biệt); Single-agent (không có tác tử khác tương tác). Đáp án A sai vì \"động\". B sai vì \"không xác định\" và \"đa tác tử\".",
+          "images": []
+        },
+        "tags": ["tac-tu", "moi-truong"],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}
