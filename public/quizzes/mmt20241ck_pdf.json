@@ -1,0 +1,4925 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "mmt-extra-997ebfe6",
+    "title": "Trắc nghiệm MMT - mmt20241ck.pdf",
+    "description": "Bộ câu hỏi trắc nghiệm tự động trích xuất từ mmt20241ck.pdf. Gồm 127 câu.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Tự động trích xuất từ mmt20241ck.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q000_2f72",
+        "type": "single_choice",
+        "question": {
+          "text": "Một router có 3 cổng ra (interface), hãy chọn các bộ 3 địa chỉ IP dưới đây để gán cho các cổng của router?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "192.168.1.0/24, 192.168.2.0/24, 192.168.3.0/24"
+          },
+          {
+            "id": "B",
+            "text": "192.168.1.1/24, 192.168.1.2/24, 192.168.2.3/24"
+          },
+          {
+            "id": "C",
+            "text": "192.168.1.2/24, 192.168.2.3/24, 192.168.3.3/24"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q001_eb04",
+        "type": "single_choice",
+        "question": {
+          "text": "DNS là viết tắt của gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Domain Name System"
+          },
+          {
+            "id": "B",
+            "text": "Digital Naming Service"
+          },
+          {
+            "id": "C",
+            "text": "Data Network Security"
+          },
+          {
+            "id": "D",
+            "text": "Dynamic Network Service"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q002_31c9",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây là SAI trong hoạt động của phương pháp điều khiển truy nhập đường truyền Sloted Aloha? (Chọn 2 phương án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đồng bộ thời gian giữa các nút mạng"
+          },
+          {
+            "id": "B",
+            "text": "Mỗi nút mạng được phép truyền trong khe thời gian dành riêng cho nút mạng đó"
+          },
+          {
+            "id": "C",
+            "text": "Truyền dữ liệu ngay khi cần"
+          },
+          {
+            "id": "D",
+            "text": "Phát hiện đụng độ và thông báo cho các nút trong mạng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q003_abc0",
+        "type": "single_choice",
+        "question": {
+          "text": "Chọn mạng có thể có topo hình sao? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mạng Wiﬁ"
+          },
+          {
+            "id": "B",
+            "text": "Mạng Ethernet sử dụng switch"
+          },
+          {
+            "id": "C",
+            "text": "Mạng internet"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q004_2f0d",
+        "type": "single_choice",
+        "question": {
+          "text": "Các gói �n TCP nào sau đây được sử dụng để đóng liên kết? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SYN"
+          },
+          {
+            "id": "B",
+            "text": "ACK"
+          },
+          {
+            "id": "C",
+            "text": "FIN"
+          },
+          {
+            "id": "D",
+            "text": "SYN/ACK"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q005_41b3",
+        "type": "single_choice",
+        "question": {
+          "text": "Giao thức TCP có những đặc điểm nào sau đây?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hỗ trợ kiểm soát tắc nghẽn"
+          },
+          {
+            "id": "B",
+            "text": "Không hỗ trợ truyền �n �n cậy"
+          },
+          {
+            "id": "C",
+            "text": "Là giao thức không hướng kết nối"
+          },
+          {
+            "id": "D",
+            "text": "Hỗ trợ truyền dữ liệu nhanh"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q006_7e5f",
+        "type": "single_choice",
+        "question": {
+          "text": "Thiết bị nào dưới đây hoạt động chính ở tầng liên kết dữ liệu trong mô hình OSI (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Repeater"
+          },
+          {
+            "id": "B",
+            "text": "Hub"
+          },
+          {
+            "id": "C",
+            "text": "Router"
+          },
+          {
+            "id": "D",
+            "text": "Switch"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q007_6a73",
+        "type": "single_choice",
+        "question": {
+          "text": "E. Bridge F. Máy �nh Hạn chế của giao thức UDP là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không có cơ chế truyền lại gói �n khi bị mất mát trên đường truyền"
+          },
+          {
+            "id": "B",
+            "text": "Có thể làm quá tải phía nhận"
+          },
+          {
+            "id": "C",
+            "text": "Tắc nghẽn trong mạng xảy ra thường xuyên hơn so với giao thức TCP"
+          },
+          {
+            "id": "D",
+            "text": "Tất cả đáp án trên đều đúng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q008_2e8b",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào là SAI về việc kiểm soát luồng trong TCP",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Một máy dựa vào trường thông �n “receive window” từ gói �n đến để biết có thể gửi thêm tối đa"
+          },
+          {
+            "id": "B",
+            "text": "Khi kích thước của trường thông �n “receive window” bằng 0, máy gửi sẽ không gửi dữ liệu thêm"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q009_53f7",
+        "type": "single_choice",
+        "question": {
+          "text": "nữa",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "Một máy �nh dựa vào trường thông �n “receive window” từ gói �n đến để kiểm soát bộ đệm nhận"
+          },
+          {
+            "id": "D",
+            "text": "Kiểm soát luồng là cơ chế để máy gửi không gửi quá khả năng xử lý của máy nhận"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q010_4c2b",
+        "type": "single_choice",
+        "question": {
+          "text": "Lượng dữ liệu vận chuyển thành công từ nguồn đến đích trong một đơn vị thời gian được gọi là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thông lượng"
+          },
+          {
+            "id": "B",
+            "text": "Băng tần"
+          },
+          {
+            "id": "C",
+            "text": "Độ trễ"
+          },
+          {
+            "id": "D",
+            "text": "Băng thông"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q011_0d93",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu không phải thông báo của giao thức ICMP?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Des�na�on unreachable"
+          },
+          {
+            "id": "B",
+            "text": "Router error"
+          },
+          {
+            "id": "C",
+            "text": "Source quench"
+          },
+          {
+            "id": "D",
+            "text": "Time exceeded"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q012_0604",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho một mạng cục bộ LAN có kết nối với 1 switch có bảng chuyển �ếp MAC như sau. Khi A gửi gói �n với địa chỉ đích là D đến switch thì switch sẽ xử lý thế nào? (Chọn 2 phương án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thêm địa chỉ MAC của A cùng cổng tương ứng (1) vào bảng chuyển �ếp MAC"
+          },
+          {
+            "id": "B",
+            "text": "Cập nhật địa chỉ MAC của D cùng cổng tương ứng (1) vào bảng chuyển �ếp MAC"
+          },
+          {
+            "id": "C",
+            "text": "Gửi gói �n theo cổng số 4 (kết nối đến D)"
+          },
+          {
+            "id": "D",
+            "text": "Gửi gói �n quảng bá đến các cổng từ 1 – 6"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q013_1978",
+        "type": "single_choice",
+        "question": {
+          "text": "E. Gửi gói �n quảng bá đến các cổng từ 2 – 6 Phương pháp chia kênh nào chia dải phổ của kênh truyền thành từng dải tần số khác nhau cho từng người sử dụng chung kênh truyền?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "TDMA"
+          },
+          {
+            "id": "B",
+            "text": "CDMA"
+          },
+          {
+            "id": "C",
+            "text": "FDMA"
+          },
+          {
+            "id": "D",
+            "text": "Các phương pháp khác được đề cập đều đúng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q014_831c",
+        "type": "single_choice",
+        "question": {
+          "text": "Để vận chuyển dữ liệu giữa hai nút mạng, trong trường hợp nào chỉ cần dùng đến chức năng của tầng liên kết dữ liệu? (Chọn 3 đáp án đúng)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hai nút mạng nối trực �ếp với nhau bằng một đường cáp"
+          },
+          {
+            "id": "B",
+            "text": "Hai nút mạng nối với nhau thông qua một router"
+          },
+          {
+            "id": "C",
+            "text": "Hai nút mạng nối với nhau không dây sử dụng chung một access point"
+          },
+          {
+            "id": "D",
+            "text": "Hai nút mạng nối chung vào cùng một switch"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q015_7945",
+        "type": "single_choice",
+        "question": {
+          "text": "Giao thức tầng ứng dụng nào được sử dụng để truyền email?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SNMP"
+          },
+          {
+            "id": "B",
+            "text": "DHCP"
+          },
+          {
+            "id": "C",
+            "text": "FTP"
+          },
+          {
+            "id": "D",
+            "text": "SMTP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q016_be30",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu là hình trạng mạng tất cả các nút kết nối với một thiết bị trung tâm?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hình lưới (Mesh)"
+          },
+          {
+            "id": "B",
+            "text": "Hình trục (Bus)"
+          },
+          {
+            "id": "C",
+            "text": "Hình vòng (Ring)"
+          },
+          {
+            "id": "D",
+            "text": "Hình sao (Star)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q017_f4ea",
+        "type": "single_choice",
+        "question": {
+          "text": "Quan sát bộ định tuyến, quản trị mạng thấy gói �n ở cổng vào được chuyển �ếp tới vài cổng ra, đây là cơ chế hoạt động gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "mul�cast"
+          },
+          {
+            "id": "B",
+            "text": "unicast"
+          },
+          {
+            "id": "C",
+            "text": "broadcast"
+          },
+          {
+            "id": "D",
+            "text": "Các đáp án đều sai"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q018_f50e",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong mạng máy �nh, phương thức truyền dữ liệu Unicast là",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Dữ liệu xuất phát từ 1 máy �nh sẽ đi đến 1 máy �nh khác"
+          },
+          {
+            "id": "B",
+            "text": "Dữ liệu xuất phát từ 1 máy �nh sẽ đi đến tất cả các máy �nh khác trong mạng"
+          },
+          {
+            "id": "C",
+            "text": "Dữ liệu xuất phát từ 1 máy �nh sẽ đi đến một nhóm các máy �nh trong mạng"
+          },
+          {
+            "id": "D",
+            "text": "Dữ liệu xuất phát từ 1 máy �nh sẽ đi đến 1 máy �nh ngẫu nhiên nào đó trong mạng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q019_f853",
+        "type": "single_choice",
+        "question": {
+          "text": "Giao thức FTP sử dụng số hiệu cổng ứng dụng nào? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "20"
+          },
+          {
+            "id": "B",
+            "text": "21"
+          },
+          {
+            "id": "C",
+            "text": "22"
+          },
+          {
+            "id": "D",
+            "text": "25"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q020_64f5",
+        "type": "single_choice",
+        "question": {
+          "text": "E. 53 Ưu điểm của phương pháp CSMA/CD so với Token Passing là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Có cơ chế phát hiện và vãn hồi đụng độ"
+          },
+          {
+            "id": "B",
+            "text": "Xác suất đụng độ thấp hơn"
+          },
+          {
+            "id": "C",
+            "text": "Có cơ chế thiết lập thứ tự ưu �ên truyền"
+          },
+          {
+            "id": "D",
+            "text": "Đơn giản hơn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q021_3b72",
+        "type": "single_choice",
+        "question": {
+          "text": "E. Tất cả các đáp án trên PAT còn được hiểu là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "NAT Fast"
+          },
+          {
+            "id": "B",
+            "text": "NAT Overload"
+          },
+          {
+            "id": "C",
+            "text": "NAT Sta�c"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q022_4e97",
+        "type": "single_choice",
+        "question": {
+          "text": "Dịch vụ Web sử dụng giao thức HTTP có số hiệu cổng ứng dụng �êu chuẩn là bao nhiêu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "20"
+          },
+          {
+            "id": "B",
+            "text": "21"
+          },
+          {
+            "id": "C",
+            "text": "80"
+          },
+          {
+            "id": "D",
+            "text": "25"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q023_178a",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong kiến trúc phân tầng, tại bên nhận, hoạt động nào sau đây có thể được thực hiện trong xử lý ở mỗi tầng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thêm �êu đề mới và chuyển xuống tầng dưới"
+          },
+          {
+            "id": "B",
+            "text": "Bóc tách �êu đề và chuyển phần thân của gói �n lên tầng trên"
+          },
+          {
+            "id": "C",
+            "text": "Phân nhỏ gói �n"
+          },
+          {
+            "id": "D",
+            "text": "Thay thế �êu đề của gói �n bằng �êu đề mới và chuyển lên tầng trên"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q024_ff87",
+        "type": "single_choice",
+        "question": {
+          "text": "Có 6 mạng đang kết nối với nhau sử dụng 5 router, hỏi có bao nhiêu bảng định tuyến được sử dụng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "5"
+          },
+          {
+            "id": "B",
+            "text": "6"
+          },
+          {
+            "id": "C",
+            "text": "1"
+          },
+          {
+            "id": "D",
+            "text": "11"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q025_310c",
+        "type": "single_choice",
+        "question": {
+          "text": "Hoạt động nào sau đây diễn ra ở tầng giao vận?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chuyển �ếp gói �n sang mạng khác"
+          },
+          {
+            "id": "B",
+            "text": "Vận chuyển dữ liệu từ ứng dụng tới ứng dụng"
+          },
+          {
+            "id": "C",
+            "text": "Tìm đường đi tốt nhất để truyền dữ liệu"
+          },
+          {
+            "id": "D",
+            "text": "Chuyển chuỗi bit cần truyền thành �n hiệu"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q026_7978",
+        "type": "single_choice",
+        "question": {
+          "text": "E. Vận chuyển dữ liệu từ nút mạng tới nút mạng trên liên kết vật lý Địa chỉ nào sau đây KHÔNG phải là địa chỉ IP công cộng? (Chọn 3 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "172.20.10.1"
+          },
+          {
+            "id": "B",
+            "text": "31.13.77.35"
+          },
+          {
+            "id": "C",
+            "text": "192.168.10.1"
+          },
+          {
+            "id": "D",
+            "text": "10.20.10.1"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q027_4679",
+        "type": "single_choice",
+        "question": {
+          "text": "E. 142.250.199.78 F. 202.191.57.199 Chọn một đường truyền có thể phát được 220 xung/s (pulse/s), khi áp dụng phương pháp mã hoá NRZ-L, tốc độ dữ liệu sinh ra là bao nhiêu",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "100 Mbps"
+          },
+          {
+            "id": "B",
+            "text": "10 Mbps"
+          },
+          {
+            "id": "C",
+            "text": "0.5 Mbps"
+          },
+          {
+            "id": "D",
+            "text": "1 Mbps"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q028_db24",
+        "type": "single_choice",
+        "question": {
+          "text": "Sự khác biệt chính giữa HTTP/1.0 và HTTP/1.1 liên quan đến kết nối liên tục là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "HTTP/1.0 có hỗ trợ duy trì sử dụng 1 kết nối TCP, trong khi HTTP/1.1 thì không"
+          },
+          {
+            "id": "B",
+            "text": "Cả HTTP/1.0 và HTTP/1.1 đều hỗ trợ duy trì sử dụng 1 kết nối TCP"
+          },
+          {
+            "id": "C",
+            "text": "Cả HTTP/1.0 và HTTP/1.1 đều không hỗ trợ duy trì sử dụng 1 kết nối TCP"
+          },
+          {
+            "id": "D",
+            "text": "HTTP/1.1 có hỗ trợ duy trì sử dụng 1 kết nối TCP, trong khi HTTP/1.0 thì không"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q029_66f3",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu là vai trò của tầng mạng trong mô hình TCP/IP",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Phân giải tên miền thành địa chỉ IP"
+          },
+          {
+            "id": "B",
+            "text": "Định tuyến và chuyển gói �n giữa các mạng"
+          },
+          {
+            "id": "C",
+            "text": "Quản lý �nh trạng kết nối của các máy �nh"
+          },
+          {
+            "id": "D",
+            "text": "Tất cả các đáp án trên đều đúng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q030_9cb3",
+        "type": "single_choice",
+        "question": {
+          "text": "Để có thể yêu cầu phía gửi phát lại dữ liệu khi có lỗi, kỹ thuật nào sau đây có thể được áp dụng? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Dừng và chờ (Stop-and-wait)"
+          },
+          {
+            "id": "B",
+            "text": "Go back N"
+          },
+          {
+            "id": "C",
+            "text": "Checksum"
+          },
+          {
+            "id": "D",
+            "text": "Slowstart"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q031_c62a",
+        "type": "single_choice",
+        "question": {
+          "text": "Nếu có nhiều máy chủ DHCP cùng cấp phát địa chỉ IP trong một mạng thì việc máy trạm được cấp phát địa chỉ IP của máy chủ DHCP nào do cái gì quyết định?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Do dải địa chỉ IP được cấp phát bởi máy chủ DHCP"
+          },
+          {
+            "id": "B",
+            "text": "Do máy trạm quyết định"
+          },
+          {
+            "id": "C",
+            "text": "Do các máy chủ DHCP trao đổi và đưa ra quyết định"
+          },
+          {
+            "id": "D",
+            "text": "Do địa chỉ IP của máy chủ DHCP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q032_a097",
+        "type": "single_choice",
+        "question": {
+          "text": "Hai nút A và B kết nối với nhau, trong đó cổng mạng trên nút A sử dụng �êu chuẩn Fast Ethernet còn cổng mạng trên nút B sử dụng �êu chuẩn Giga Ethernet. Loại cáp nào được sử dụng đáp ứng cả 2 �êu chuẩn này. Cơ chế nào sau đây khiến cho nút B truyền dữ liệu ở tốc độ phù hợp với khả năng xử lý của nút A?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kiểm soát lỗi"
+          },
+          {
+            "id": "B",
+            "text": "Kiểm soát tắc nghẽn"
+          },
+          {
+            "id": "C",
+            "text": "Điều khiển truy nhập đường truyền"
+          },
+          {
+            "id": "D",
+            "text": "Kiểm soát luồng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q033_e448",
+        "type": "single_choice",
+        "question": {
+          "text": "Tại sao giao thức OSPF phân cấp trong các mạng có kích thước lớn? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Để giảm độ phức tạp khi cấu hình các router"
+          },
+          {
+            "id": "B",
+            "text": "Để tăng tốc độ hội tụ"
+          },
+          {
+            "id": "C",
+            "text": "Để giảm lưu lượng thông �n cần trao đổi"
+          },
+          {
+            "id": "D",
+            "text": "Để giảm độ trễ truyền �n"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q034_1dc7",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong một mạng sử dụng định tuyến theo vec-tơ khoảng cách, router A có các hàng xóm là B, C, D với khoảng cách lần lượt là 3, 5, 3. Giả sử A nhận được thông �n đường đi dạng (đích đến, chi phí) từ B là (C, 1) và (E, 5), từ C là (D, 8) và (E, 4), từ D là (E, 4) và (C, 8). Đường đi nào sau đây KHÔNG phải đường đi mà A lựa chọn?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "(D, 3)"
+          },
+          {
+            "id": "B",
+            "text": "(E, 8)"
+          },
+          {
+            "id": "C",
+            "text": "(C, 4)"
+          },
+          {
+            "id": "D",
+            "text": "(B, 3)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q035_3660",
+        "type": "single_choice",
+        "question": {
+          "text": "Mô tả bài toán Hai �ến trình truyền �n bằng giao thức truyền thông �n cậy sử dụng cơ chế stop-and-wait. Biết kích thước ﬁle cần truyền đi là 10000 bytes, kích thước mỗi gói �n (phần payload) là 1000 bytes, giả sử phần header có độ lớn bằng 0. RTT giữa 2 máy là 100ms. Băng thông đường truyền cố định 1 Mbps (megabits per second). Hỏi thời gian để hoàn thành việc truyền hết ﬁle là bao nhiêu? Quy ước: 1Mbps = 103 Kbps = 106 bps (Kết quả �nh bằng ms, chỉ ghi số, không ghi đơn vị hay dấu cách). Tiêu chuẩn Ethernet nào sau đây cho phép truyền dữ liệu với tốc độ nhanh nhất?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "100BASE-T"
+          },
+          {
+            "id": "B",
+            "text": "1000BASE-T"
+          },
+          {
+            "id": "C",
+            "text": "10BASE5"
+          },
+          {
+            "id": "D",
+            "text": "10BASE2"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q036_5f6e",
+        "type": "single_choice",
+        "question": {
+          "text": "s frame = 10000/1000 = 10 t (1frame) = 1000*8/10^6 = 0.008 T = 10 *(0.008+0.1) = 1.08s = 1080ms Mọi gói �n IP có kích thước 4500 bytes với 20-byte �êu đề IP và 40-byte �êu đề TCP được gửi đến bộ định tuyến R. Bộ định tuyến này phải chuyển �ếp gói �n này tới đường truyền có MTU = 600 bytes. Giả thiết chiều dài �êu đề IP trong mọi khung �n đều là 20 bytes. Biết giá trị oﬀset ở phân mảnh đầu �ên là 0, hãy �m giá trị oﬀset ở phân mảnh thứ 3?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "145"
+          },
+          {
+            "id": "B",
+            "text": "216"
+          },
+          {
+            "id": "C",
+            "text": "0"
+          },
+          {
+            "id": "D",
+            "text": "72"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q037_9cf7",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi một nút mạng nhận được yêu cầu gửi gói �n tới một nút khác cùng mạng, nếu chưa biết địa chỉ MAC của nút đích, nó sẽ thực hiện như thế nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Gửi gói �n tới gateway mặc định"
+          },
+          {
+            "id": "B",
+            "text": "Gửi thông điệp ARP Request �m kiếm địa chỉ MAC của nút đích"
+          },
+          {
+            "id": "C",
+            "text": "Từ chối yêu cầu gửi dữ liệu và báo lỗi"
+          },
+          {
+            "id": "D",
+            "text": "Gửi gói �n với địa chỉ quảng bá"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q038_3ada",
+        "type": "single_choice",
+        "question": {
+          "text": "Tầng ứng dụng của mô hình TCP/IP đảm nhận chức năng những tầng nào khi tham chiếu tới mô hình OSI?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tầng ứng dụng, tầng giao vận, tầng mạng"
+          },
+          {
+            "id": "B",
+            "text": "Tầng ứng dụng, tầng trình diễn"
+          },
+          {
+            "id": "C",
+            "text": "Tầng ứng dụng, tầng trình diễn, tầng phiên"
+          },
+          {
+            "id": "D",
+            "text": "Tầng dụng, tầng phiên"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q039_4c73",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu là ưu điểm của Phân giải tên đệ quy so với Phân giải tên tương tác?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tiết kiệm bộ nhớ của các máy chủ tên miền"
+          },
+          {
+            "id": "B",
+            "text": "Tăng tốc phân giải tên miền"
+          },
+          {
+            "id": "C",
+            "text": "Giảm bớt số cặp thông điệp yêu cầu/trả lời giữa máy client và cụm máy chủ tên miền"
+          },
+          {
+            "id": "D",
+            "text": "Tất cả đều đúng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q040_55d3",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi nói về HTTP, thuật ngữ “không trạng thái” (stateless) có nghĩa là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Máy chủ không lưu giữ thông �n về các yêu cầu trước đó của khách hàng"
+          },
+          {
+            "id": "B",
+            "text": "Kết nối giữa máy khách và máy chủ luôn được mã hoá"
+          },
+          {
+            "id": "C",
+            "text": "Máy khách không lưu giữ thông �n về phản hồi của máy chủ"
+          },
+          {
+            "id": "D",
+            "text": "Cả máy khách và máy chủ đều lưu giữ thông �n về nhau"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q041_bc60",
+        "type": "single_choice",
+        "question": {
+          "text": "Chọn mạng mà trong đó �n hiệu lan truyền từ một nút đến nhiều nút? (Chọn 2 đáp án đúng)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mạng có topo hình trục"
+          },
+          {
+            "id": "B",
+            "text": "Mạng wiﬁ"
+          },
+          {
+            "id": "C",
+            "text": "Mạng Ethernet sử dụng switch"
+          },
+          {
+            "id": "D",
+            "text": "Mạng Ethernet sử dụng router"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q042_02e8",
+        "type": "single_choice",
+        "question": {
+          "text": "Hai �ến trình thực hiện truyền �n theo giao thức TCP. Tiến trình gửi đang sử dụng cửa sổ kiểm soát tắc nghẽn (conges�on window) là 11.200 byte và ngưỡng kiểm soát tắc nghẽn (ssthreshold) là 14.000 byte. Tiến trình gửi nhận được 3 gói �n ACK giống nhau, trong đó giá trị Receive Window là 65.535. Giải sử các bên đã thoả thuận 1 MSS = 1.400 byte. Trong lượt �ếp theo, �ến trình gửi có thể gửi tối đa bao nhiêu byte? (Chỉ ghi đáp án số, không kèm đơn vị). Phát biểu nào sau đây là SAI về định tuyến theo trạng thái liên kết?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thông �n trạng thái liên kết được lan truyền cho tất cả các nút trong mạng"
+          },
+          {
+            "id": "B",
+            "text": "Sử dụng thuật toán Bellman-Ford để �m đường đi ngắn nhất"
+          },
+          {
+            "id": "C",
+            "text": "Số lượng bản �n trao đổi tăng nhanh theo số liên kết trong mạng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q043_b293",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi có dữ liệu được đánh dấu là khẩn cấp trong gói �n TCP, cờ (ﬂag) nào sau đây sẽ được kích hoạt?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SYN"
+          },
+          {
+            "id": "B",
+            "text": "RST"
+          },
+          {
+            "id": "C",
+            "text": "URG"
+          },
+          {
+            "id": "D",
+            "text": "FIN"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q044_ec9f",
+        "type": "single_choice",
+        "question": {
+          "text": "Ứng dụng video streaming có thể sử dụng giao thức nào ở tầng giao vận trong quá trình truyền video?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Có thể sử dụng TCP hoặc UDP"
+          },
+          {
+            "id": "B",
+            "text": "UDP"
+          },
+          {
+            "id": "C",
+            "text": "TCP"
+          },
+          {
+            "id": "D",
+            "text": "Có thể không sử dụng giao thức nào trong hai giao thức TCP và UDP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q045_7a12",
+        "type": "single_choice",
+        "question": {
+          "text": "Nhiệm vụ của giao thức ARP là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tìm địa chỉ phần cứng của máy nguồn"
+          },
+          {
+            "id": "B",
+            "text": "Tìm địa chỉ phần cứng của máy đích"
+          },
+          {
+            "id": "C",
+            "text": "TÌm địa chỉ IP của máy gửi"
+          },
+          {
+            "id": "D",
+            "text": "Tìm địa chỉ IP của máy đích"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q046_00ed",
+        "type": "single_choice",
+        "question": {
+          "text": "Các phương pháp nào điều khiển truy cập đường truyền nào sau đây có thể sử dụng trong mạng hình trục? (Chọn 3 phương án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "FDMA"
+          },
+          {
+            "id": "B",
+            "text": "Token bus"
+          },
+          {
+            "id": "C",
+            "text": "CSMA"
+          },
+          {
+            "id": "D",
+            "text": "Sử dụng bảng MAC (forwarding table) và cơ chế tự học của switch"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q047_3779",
+        "type": "single_choice",
+        "question": {
+          "text": "Truyền thông hướng liên kết �n cậy hơn truyền thông không hướng liên kết ở điểm nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Dữ liệu không bị mất"
+          },
+          {
+            "id": "B",
+            "text": "Đảm bảo bên nhận không bị quá tải"
+          },
+          {
+            "id": "C",
+            "text": "Đảm bảo bên nhận sẵn sàng nhận dữ liệu"
+          },
+          {
+            "id": "D",
+            "text": "Dữ liệu luôn đi theo một đường đi xác định"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q048_9e9e",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi phát hiện một gói �n bị lỗi và thực hiện phát lại, kỹ thuật nào đòi hỏi các gói �n phải được đánh số? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Stop-and-wait"
+          },
+          {
+            "id": "B",
+            "text": "Selec�ve Reject"
+          },
+          {
+            "id": "C",
+            "text": "Go back N"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q049_0675",
+        "type": "single_choice",
+        "question": {
+          "text": "Sliding windows kiểm soát luồng bằng cách",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không cho trạm gửi phát dữ liệu cùng lúc với trạm nhận"
+          },
+          {
+            "id": "B",
+            "text": "Không cho trạm gửi phát lượng dữ liệu nhiều hơn vùng đệm của trạm nhận"
+          },
+          {
+            "id": "C",
+            "text": "Không cho trạm gửi phát lượng dữ liệu nhiều hơn vùng đệm còn trống của trạm nhận"
+          },
+          {
+            "id": "D",
+            "text": "Không cho trạm gửi phát lượng dữ liệu nhiều hơn vùng đệm của nó"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q050_29ba",
+        "type": "single_choice",
+        "question": {
+          "text": "Một gói �n IP có kích thước 1000 bytes được gửi đến bộ định tuyến R. Bộ định tuyến này phải chuyển �ếp gói �n này tới một đường truyền có MTU = 100 bytes. Biết kích thước của �êu đề gói �n IP là 20 bytes. Hỏi số phân mảnh của gói �n IP này là bao nhiêu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "10"
+          },
+          {
+            "id": "B",
+            "text": "12"
+          },
+          {
+            "id": "C",
+            "text": "13"
+          },
+          {
+            "id": "D",
+            "text": "50"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q051_bc9e",
+        "type": "single_choice",
+        "question": {
+          "text": "Các yếu tố nào sau đây ảnh hưởng đến trễ khứ hồi (Round Trip Time) trong mạng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Băng thông đường truyền"
+          },
+          {
+            "id": "B",
+            "text": "Tốc độ xử lý của các thiết bị mạng"
+          },
+          {
+            "id": "C",
+            "text": "Tải trên đường truyền"
+          },
+          {
+            "id": "D",
+            "text": "Tốc độ xử lý của nút nhận"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q052_98b9",
+        "type": "single_choice",
+        "question": {
+          "text": "E. Tất cả các yếu tố trên Các khung �n được đánh số từ 1. Trong cơ chế cửa sổ trượt, khi phía gửi nhận được báo nhận cho khung số 5 nghĩa là?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Phía nhận đã nhận được khung �n số 5"
+          },
+          {
+            "id": "B",
+            "text": "Phía nhận đã nhận được tất cả các khung �n từ 1 cho tới 5"
+          },
+          {
+            "id": "C",
+            "text": "Phía nhận chỉ nhận được khung �n 4 và 5"
+          },
+          {
+            "id": "D",
+            "text": "Phía nhận đã nhận được các khung �n 1, 2, 3 và 4"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q053_0250",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào đúng với giao thức định tuyến liên vùng BGP? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Định tuyến BGP ưu �ên chính sách hơn là hiệu năng"
+          },
+          {
+            "id": "B",
+            "text": "Không có cơ chế tự tránh gói �n lặp vòng"
+          },
+          {
+            "id": "C",
+            "text": "Sử dụng giao thức định tuyến path-vector thay vì giao thức định tuyến dạng link-state hay distancevector"
+          },
+          {
+            "id": "D",
+            "text": "Việc lựa chọn đường đi dựa vào �êu chí băng thông để đạt hiệu năng tối đa"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q054_59c7",
+        "type": "single_choice",
+        "question": {
+          "text": "Thông điệp DHCP nào sau đây được server gửi đi trong quá trình cấp phát địa chỉ IP mới? (Chọn 2 đáp án đúng)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "DHCP Discover"
+          },
+          {
+            "id": "B",
+            "text": "DHCP ACK"
+          },
+          {
+            "id": "C",
+            "text": "DHCP Request"
+          },
+          {
+            "id": "D",
+            "text": "DHCP Oﬀer"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q055_bf99",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi nào cần chức năng kiểm soát truy nhập (media access control) trong tầng liên kết dữ liệu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Các nút mạng nối với nhau theo topology loại điểm-đa điểm"
+          },
+          {
+            "id": "B",
+            "text": "Các nút mạng nối với nhau theo topology loại điểm-điểm"
+          },
+          {
+            "id": "C",
+            "text": "Các nút mạng sử dụng địa chỉ MAC"
+          },
+          {
+            "id": "D",
+            "text": "Các nút mạng nối với nhau bởi các nút trung gian"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q056_5cf4",
+        "type": "single_choice",
+        "question": {
+          "text": "Mục đích của trình phân giải tên miền là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Phân giải tên miền thành địa chỉ IP"
+          },
+          {
+            "id": "B",
+            "text": "Quản lý đăng ký tên miền"
+          },
+          {
+            "id": "C",
+            "text": "Để bảo mật thông �n liên lạc trên mạng Internet"
+          },
+          {
+            "id": "D",
+            "text": "Để lưu trữ các trang web"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q057_464e",
+        "type": "single_choice",
+        "question": {
+          "text": "Chức năng chính của Hub trong mạng LAN là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chuyển mạch gói/ khung �n"
+          },
+          {
+            "id": "B",
+            "text": "Chọn đường giữa những thiết bị khác nhau"
+          },
+          {
+            "id": "C",
+            "text": "Quản lý địa chỉ IP"
+          },
+          {
+            "id": "D",
+            "text": "Quảng bá dữ liệu đến tất cả các thiết bị có kết nối đến Hub"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q058_6a6d",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong mạng máy �nh, phương thức truyền dữ liệu Broadcast là?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Dữ liệu xuất phát từ 1 máy �nh sẽ đi đến 1 máy �nh ngẫu nhiên nào đó trong mạng"
+          },
+          {
+            "id": "B",
+            "text": "Dữ liệu xuất phát từ 1 máy �nh sẽ đi đến tất cả các máy �nh khác trong mạng"
+          },
+          {
+            "id": "C",
+            "text": "Dữ liệu xuất phát từ 1 máy �nh sẽ đi đến một nhóm các máy �nh trong mạng"
+          },
+          {
+            "id": "D",
+            "text": "Dữ liệu xuất phát từ 1 máy �nh sẽ đi đến 1 máy �nh khác"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q059_977c",
+        "type": "single_choice",
+        "question": {
+          "text": "Cơ chế kiểm soát đa truy nhập nào được sử dụng cho chuẩn IEEE.802.11 trong mạng LAN không dây?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "CSMA/CD"
+          },
+          {
+            "id": "B",
+            "text": "CSMA/CA"
+          },
+          {
+            "id": "C",
+            "text": "ALOHA"
+          },
+          {
+            "id": "D",
+            "text": "CDMA"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q060_b18a",
+        "type": "single_choice",
+        "question": {
+          "text": "Phương pháp mã đường truyền Manchester sử dụng mấy mức điện áp? Vai trò nào sau đây không phải của tầng mạng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Định địa chỉ logic"
+          },
+          {
+            "id": "B",
+            "text": "Chuyển �ếp gói �n"
+          },
+          {
+            "id": "C",
+            "text": "Sửa lỗi"
+          },
+          {
+            "id": "D",
+            "text": "Định tuyến"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q061_3958",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu là đặc điểm của quá trình chuyển �ếp dữ liệu trên switch và router? Đặc điểm Chuyển dữ liệu tới nút đích trong cùng mạng Chuyển dữ liệu tới nút đích trên một mạng khác Chuyển dữ liệu theo địa chỉ IP Xây dựng bảng chuyển �ếp bằng hoạt động tự học Chuyển dữ liệu theo địa chỉ MAC đích Xây dựng bảng chuyển �ếp bằng hoạt động định tuyến Chọn 1 trong 2 Switch/ Router Switch/ Router Switch/ Router Switch/ Router Switch/ Router Switch/ Router Thiết bị mạng nào hoạt động như là điểm vào và ra của một mạng, tất cả dữ liệu của mạng phải đi qua thiết bị này để có thể sử dụng thông �n định tuyến",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Router"
+          },
+          {
+            "id": "B",
+            "text": "Gateway"
+          },
+          {
+            "id": "C",
+            "text": "Switch"
+          },
+          {
+            "id": "D",
+            "text": "Hub"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q062_8bae",
+        "type": "single_choice",
+        "question": {
+          "text": "Những giao thức nào sau đây điều khiển hoạt động của dịch vụ email? (Chọn 3 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SMTP"
+          },
+          {
+            "id": "B",
+            "text": "POP"
+          },
+          {
+            "id": "C",
+            "text": "IMAP"
+          },
+          {
+            "id": "D",
+            "text": "DNS"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q063_d071",
+        "type": "single_choice",
+        "question": {
+          "text": "E. ICMP Kích thước phần �êu đề của gói �n ICMP là bao nhiêu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "8 bit"
+          },
+          {
+            "id": "B",
+            "text": "8 byte"
+          },
+          {
+            "id": "C",
+            "text": "16 bit"
+          },
+          {
+            "id": "D",
+            "text": "16 byte"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q064_e387",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong các mô tả sau về hoạt động của giao thức điều khiển truy nhập đường truyền Token Passing, câu nào là SAI? (Chọn 2 phương án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chỉ tồn tại duy nhất một thẻ bài trong mạng để xác định quyền đưa dữ liệu lên đường truyền"
+          },
+          {
+            "id": "B",
+            "text": "Một nút mạng muốn truyền dữ liệu nó phải đợi cho tới khi nhận được thẻ bài có trạng thái rỗi"
+          },
+          {
+            "id": "C",
+            "text": "Khi kết thúc truyền dữ liệu, nút nguồn sẽ gửi thông báo về nút đích để xác lập trạng thái cho thẻ bài"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q065_446d",
+        "type": "single_choice",
+        "question": {
+          "text": "là rỗi",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "D",
+            "text": "Sau khi truyền xong dữ liệu, nút mạng sẽ trả thẻ bài về cho trung tâm phân phối thẻ bài"
+          },
+          {
+            "id": "A",
+            "text": "Được sử dụng để thiết lập liên kết"
+          },
+          {
+            "id": "B",
+            "text": "Được ưu �ên đưa vào hàng đợi của router khi chờ chuyển �ếp"
+          },
+          {
+            "id": "C",
+            "text": "Được chuyển tới mọi nút trong miền quảng bá"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q066_dc25",
+        "type": "single_choice",
+        "question": {
+          "text": "E. Được chuyển ngay ra ngoài mạng Internet mà không cần chuyển đổi địa chỉ Có bao nhiêu địa chỉ có thể sử dụng để gán cho các nút mạng trong mạng 204.16.156.32/27?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "5"
+          },
+          {
+            "id": "B",
+            "text": "30"
+          },
+          {
+            "id": "C",
+            "text": "27"
+          },
+          {
+            "id": "D",
+            "text": "32"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q067_df32",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong chu trình trạng thái của TCP, TCP server nếu đang ở trạng thái ESTABLISHED thì sẽ chuyển sang trạng thái nào �ếp theo?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SYN_RCVD"
+          },
+          {
+            "id": "B",
+            "text": "CLOSE_WAIT"
+          },
+          {
+            "id": "C",
+            "text": "CLOSED"
+          },
+          {
+            "id": "D",
+            "text": "LISTEN"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q068_5464",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây là đúng về hoạt động của phương pháp điều khiển truy nhập đường truyền Sloted Aloha? (Chọn 2 phương án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kiểm tra trạng thái đường truyền trước khi gửi dữ liệu"
+          },
+          {
+            "id": "B",
+            "text": "Đồng bộ thời gian giữa các nút"
+          },
+          {
+            "id": "C",
+            "text": "Thuộc nhóm phương pháp điều khiển truy cập ngẫu nhiên"
+          },
+          {
+            "id": "D",
+            "text": "Truyền nhiều khung �n nhất có thể trong một khung thời gian (frame �me)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q069_2af8",
+        "type": "single_choice",
+        "question": {
+          "text": "E. Mỗi nút mạng được phép truyền trong khe thời gian dành riêng cho nút mạng đó F. Phát hiện đụng độ và thông báo cho các nút trong mạng Giao thức định tuyến theo vectơ khoảng cách cập nhật bảng định tuyến như thế nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cập nhật tự động"
+          },
+          {
+            "id": "B",
+            "text": "Sử dụng bảng định tuyến dự phòng"
+          },
+          {
+            "id": "C",
+            "text": "Được cập nhật bởi quản trị mạng"
+          },
+          {
+            "id": "D",
+            "text": "Bằng cách trao đổi thông �n với hàng xóm"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q070_6cea",
+        "type": "single_choice",
+        "question": {
+          "text": "Chức năng chính của Giao thức truyền siêu văn bản (HTTP) trong bối cảnh dịch vụ web là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Để cung cấp liên lạc an toàn giữa máy chủ web và máy khách"
+          },
+          {
+            "id": "B",
+            "text": "Để xác định cấu trúc của các trang web bằng ngôn ngữ đánh dấu"
+          },
+          {
+            "id": "C",
+            "text": "Để quản lý cơ sở dữ liệu và lưu trữ dữ liệu người dùng trên máy chủ web."
+          },
+          {
+            "id": "D",
+            "text": "Để tạo điều kiện thuận lợi cho việc truyền tải các tài liệu siêu văn bản qua Internet"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q071_6913",
+        "type": "single_choice",
+        "question": {
+          "text": "Chọn mạng có thể có topo hình trục star",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mạng Wiﬁ"
+          },
+          {
+            "id": "B",
+            "text": "Mạng Ethernet sử dụng switch"
+          },
+          {
+            "id": "C",
+            "text": "Mạng Internet"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q072_f6d1",
+        "type": "single_choice",
+        "question": {
+          "text": "mesh",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "D",
+            "text": "Không có đáp án đúng"
+          },
+          {
+            "id": "A",
+            "text": "Tầng mạng, phía dưới giao thức IP"
+          },
+          {
+            "id": "B",
+            "text": "Tầng liên kết dữ liệu"
+          },
+          {
+            "id": "C",
+            "text": "Tầng mạng, phía trên giao thức IP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q073_5a9f",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây là đúng về phương pháp điều khiển truy nhập đường truyền Pure Aloha?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thuộc nhóm phương pháp điều khiển truy cập ngẫu nhiên"
+          },
+          {
+            "id": "B",
+            "text": "Kiểm tra trạng thái đường truyền trước khi gửi dữ liệu"
+          },
+          {
+            "id": "C",
+            "text": "Truyền nhiều khung �n nhất có thể trong một khung thời gian (frame �me)"
+          },
+          {
+            "id": "D",
+            "text": "Đồng bộ thời gian giữa các nút"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q074_5974",
+        "type": "single_choice",
+        "question": {
+          "text": "Điều nào sau đây mô tả đúng nhất mục đích của địa chủ URL trong các dịch vụ web?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "URL xác định định dạng và kiểu dáng của trang web"
+          },
+          {
+            "id": "B",
+            "text": "URL là địa chỉ của tài nguyên trên web"
+          },
+          {
+            "id": "C",
+            "text": "URL chỉ định ngôn ngữ lập trình được sử dụng trong phát triển web"
+          },
+          {
+            "id": "D",
+            "text": "URL xác định vị trí thực tế của máy chủ web trên Internet"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q075_f5bb",
+        "type": "single_choice",
+        "question": {
+          "text": "Giao thức nào sau đây nằm ở tầng giao vận? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "IP"
+          },
+          {
+            "id": "B",
+            "text": "TCP"
+          },
+          {
+            "id": "C",
+            "text": "UDP"
+          },
+          {
+            "id": "D",
+            "text": "HTTP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q076_9e9d",
+        "type": "single_choice",
+        "question": {
+          "text": "Phương thức HTTP nào sau đây được sử dụng để truy xuất dữ liệu từ máy chủ?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "POST"
+          },
+          {
+            "id": "B",
+            "text": "PUT"
+          },
+          {
+            "id": "C",
+            "text": "DELETE"
+          },
+          {
+            "id": "D",
+            "text": "GET"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q077_fe18",
+        "type": "single_choice",
+        "question": {
+          "text": "Giao thức DHCP nằm ở tầng nào trong mô hình TCP/IP?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tầng liên kết dữ liệu"
+          },
+          {
+            "id": "B",
+            "text": "Tầng ứng dụng"
+          },
+          {
+            "id": "C",
+            "text": "Tầng liên mạng"
+          },
+          {
+            "id": "D",
+            "text": "Tầng giao vận"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q078_5169",
+        "type": "single_choice",
+        "question": {
+          "text": "Hai nút A và B kết nối với nhau, nút A có tốc độ phát dữ liệu 100 Mbps và nút B có tốc độ xử lý dữ liệu 10 Mbps. Cơ chế nào sau đây khiến cho hai nút có thể truyền dữ liệu cho nhau mà không gây quá tải",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kiểm soát luồng"
+          },
+          {
+            "id": "B",
+            "text": "Điều khiển truy nhập đường truyền"
+          },
+          {
+            "id": "C",
+            "text": "Store and forward"
+          },
+          {
+            "id": "D",
+            "text": "Kiểm soát tắc nghẽn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q079_9509",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi nhận yêu cầu phân giải tên miền hust.edu.vn, máy chủ phân giải tên miền DNS Resolver có một bộ đệm trống và không biết thông �n gì về tên miền này. Thông điệp yêu cầu phân giải tên miền hust.edu.vn được gửi tới máy chủ nào trước �ên?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Máy chủ gốc (root server)"
+          },
+          {
+            "id": "B",
+            "text": "Máy chủ tên miền cấp 1 của zone .vn"
+          },
+          {
+            "id": "C",
+            "text": "Máy chủ tên miền của sub-zone .edu.vn"
+          },
+          {
+            "id": "D",
+            "text": "Máy chủ tên miền của Đại học BKHN"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q080_4a7f",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong hoạt động của giao thức TCP, bên nhận KHÔNG thực hiện hoạt động nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sửa lỗi bit trên gói �n"
+          },
+          {
+            "id": "B",
+            "text": "Gửi báo nhận"
+          },
+          {
+            "id": "C",
+            "text": "Chuyển dữ liệu tới đúng ứng dụng"
+          },
+          {
+            "id": "D",
+            "text": "Đưa các gói �n không đúng thứ tự vào bộ đệm"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q081_aa9b",
+        "type": "single_choice",
+        "question": {
+          "text": "E. Kiểm tra lỗi bit trên gói �n Cơ chế nào được sử dụng để chuyển đổi địa chỉ IP khi chuyển �ếp gói �n IP giữa mạng cục bộ và mạng công cộng",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "NAT"
+          },
+          {
+            "id": "B",
+            "text": "DNS"
+          },
+          {
+            "id": "C",
+            "text": "DHCP"
+          },
+          {
+            "id": "D",
+            "text": "ARP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q082_ba47",
+        "type": "single_choice",
+        "question": {
+          "text": "Đặc điểm của các ứng dụng sử dụng mô hình peer to peer là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Ứng dụng client trao đổi dữ liệu trực �ếp với nhau"
+          },
+          {
+            "id": "B",
+            "text": "Client luôn phải online"
+          },
+          {
+            "id": "C",
+            "text": "Server luôn phải online"
+          },
+          {
+            "id": "D",
+            "text": "Ứng dụng client trao đổi dữ liệu không trực �ếp với nhau"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q083_239e",
+        "type": "single_choice",
+        "question": {
+          "text": "Vấn đề mà kiểm soát đa truy nhập đường truyền (media access control) giải quyết là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Điều khiển hai nút truyền theo thứ tự của giao thức mạng"
+          },
+          {
+            "id": "B",
+            "text": "Điều khiển truyền dữ liệu giữa các nút mạng nối với nhau bằng switch"
+          },
+          {
+            "id": "C",
+            "text": "Điều khiển nút gửi không truyền với tốc độ quá nhanh, làm quá tải nút nhận"
+          },
+          {
+            "id": "D",
+            "text": "Điều khiển việc sử dụng đường truyền chung khi có nhiều nút cùng muốn truyền �n"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q084_5f8e",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong định tuyến theo vector khoảng cách, các bộ định tuyến thực hiện việc gì trong quá trình cập nhật?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trao đổi thông �n về hàng xóm của chúng"
+          },
+          {
+            "id": "B",
+            "text": "Tính toán đường đi ngắn nhất đến đích"
+          },
+          {
+            "id": "C",
+            "text": "Xác định trạm (hop) �ếp theo cho mỗi đích"
+          },
+          {
+            "id": "D",
+            "text": "Gửi toàn bộ bảng định tuyến cho hàng xóm của chúng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q085_1f3b",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong hình trạng (topology) mạng nào sau đây, sự cố xảy ra trên đường truyền vật lý có thể cản trở đến quá trình truyền dữ liệu toàn bộ mạng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hình vòng"
+          },
+          {
+            "id": "B",
+            "text": "Hình lưới"
+          },
+          {
+            "id": "C",
+            "text": "Hình trục"
+          },
+          {
+            "id": "D",
+            "text": "Hình sao"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q086_bcaa",
+        "type": "single_choice",
+        "question": {
+          "text": "Máy A cần gửi dữ liệu cho máy B. Kích thước cửa sổ nhận là 100 bytes và kích thước cửa sổ tắc nghẽn là 150 bytes. Để tránh �nh trạng máy B bị quá tải thì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Lượng dữ liệu gửi từ máy A cần nhỏ hơn 150 bytes"
+          },
+          {
+            "id": "B",
+            "text": "Lượng dữ liệu phản hồi lại từ máy B cần nhỏ hơn 150 bytes"
+          },
+          {
+            "id": "C",
+            "text": "Lượng dữ liệu phản hồi lại từ máy B cần nhỏ hơn 50 bytes"
+          },
+          {
+            "id": "D",
+            "text": "Lượng dữ liệu gửi từ máy A cần nhỏ hơn 100 bytes"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q087_cf54",
+        "type": "single_choice",
+        "question": {
+          "text": "Switch xử lý như thế nào nếu nhận được một gói �n mà địa chỉ MAC nguồn không có trong bảng MAC/CAM?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Huỷ gói �n"
+          },
+          {
+            "id": "B",
+            "text": "Thêm vào bảng MAC/CAM cùng thông �n cổng nhận"
+          },
+          {
+            "id": "C",
+            "text": "Gửi ngược lại nút nguồn"
+          },
+          {
+            "id": "D",
+            "text": "Quảng bá gói �n ra các cổng, trừ cổng nhận"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q088_5c58",
+        "type": "single_choice",
+        "question": {
+          "text": "Địa chỉ 148.37.21.104 thuộc phân lớp nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "B"
+          },
+          {
+            "id": "B",
+            "text": "A"
+          },
+          {
+            "id": "C",
+            "text": "D"
+          },
+          {
+            "id": "D",
+            "text": "E"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q089_f277",
+        "type": "single_choice",
+        "question": {
+          "text": "E. C Giao thức IP không có vai trò nào sau đây?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Định danh các nút mạng"
+          },
+          {
+            "id": "B",
+            "text": "Chuyển �ếp các gói �n trong mạng"
+          },
+          {
+            "id": "C",
+            "text": "Đóng gói dữ liệu"
+          },
+          {
+            "id": "D",
+            "text": "Tìm tuyến đường để gửi dữ liệu từ nguồn tới đích"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q090_246d",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi nào cần phân mảnh gói �n IP trong quá trình truyền?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Phát hiện lỗi trên gói �n"
+          },
+          {
+            "id": "B",
+            "text": "Kích thước gói �n lớn hơn MTU của đường truyền"
+          },
+          {
+            "id": "C",
+            "text": "Kích thước gói �n lớn hơn kích thước còn trống trên bộ đệm của nút nhận"
+          },
+          {
+            "id": "D",
+            "text": "Có tắc nghẽn xảy ra trên đường truyền"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q091_577c",
+        "type": "single_choice",
+        "question": {
+          "text": "Chế độ FTP nào được sử dụng khi máy client khởi tạo cả kết nối điều khiển và dữ liệu đến máy chủ?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chế độ bảo mật"
+          },
+          {
+            "id": "B",
+            "text": "Chế độ nhị phân"
+          },
+          {
+            "id": "C",
+            "text": "Chế độ thụ động"
+          },
+          {
+            "id": "D",
+            "text": "Chế độ chủ động"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q092_b0ed",
+        "type": "single_choice",
+        "question": {
+          "text": "Điều gì mô tả chính xác sự khác biệt chính giữa các truy vấn DNS đệ quy và tương tác?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Truy vấn đệ quy là khi DNS Resolver cần truy vấn nhiều máy chủ tên miền cho đến khi có được địa"
+          },
+          {
+            "id": "B",
+            "text": "Truy vấn đệ quy nhanh hơn truy vấn tương tác do khả năng sử dụng bộ đêm"
+          },
+          {
+            "id": "C",
+            "text": "Truy vấn tương tác là khi DNS Resolver cần truy vấn nhiều máy chủ tên miền cho đến khi có được"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q093_9566",
+        "type": "single_choice",
+        "question": {
+          "text": "địa chỉ IP cần phân giải, trong khi truy vấn đệ quy thì DNS Resolver chỉ truy vấn một máy chủ tên miền duy nhất để có được địa chỉ IP cần phân giải",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "D",
+            "text": "Truy vấn đệ quy và truy vấn tương tác là các thuật ngữ được sử dụng thay thế cho nhau vì chung"
+          },
+          {
+            "id": "A",
+            "text": "6 và 7400"
+          },
+          {
+            "id": "B",
+            "text": "6 và 925"
+          },
+          {
+            "id": "C",
+            "text": "7 và 1110"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q094_edba",
+        "type": "single_choice",
+        "question": {
+          "text": "Kiến trúc mạng là:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cách nối các máy �nh"
+          },
+          {
+            "id": "B",
+            "text": "Là cách nối các máy �nh và tập hợp các quy tắc, quy ước truyền thông"
+          },
+          {
+            "id": "C",
+            "text": "OSI"
+          },
+          {
+            "id": "D",
+            "text": "Hình dạng mạng máy �nh"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q095_dba8",
+        "type": "single_choice",
+        "question": {
+          "text": "Hai máy gửi A và máy nhận B truyền thông sử dụng giao thức tự động truyền lại ARQ Go-back-end với kích thước cửa sổ là 5. A gửi các gói �n đánh số là pk0, pk1, pk2, pk3, pk4 và gói �n pk2 bị lỗi trên đường truyền. Trong các khẳng định sau về giao thức ARQ Go-back-N, (các) khẳng định nào SAI? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Máy nhận gửi lại các ack0, ack1, ack3 và ack4 tương ứng với các gói �n nhận thành công"
+          },
+          {
+            "id": "B",
+            "text": "Máy nhận chỉ gửi lại ack0 và (nhiều lần) ack1"
+          },
+          {
+            "id": "C",
+            "text": "Máy gửi chỉ gửi lại gói �n pk2 bị lỗi"
+          },
+          {
+            "id": "D",
+            "text": "Máy gửi A gửi lại các gói �n pk2, pk3, pk4"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q096_fd1e",
+        "type": "single_choice",
+        "question": {
+          "text": "Thông điệp ARP reply được gửi theo phương thức nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mul�cast"
+          },
+          {
+            "id": "B",
+            "text": "Tất cả đều đúng"
+          },
+          {
+            "id": "C",
+            "text": "Broadcast"
+          },
+          {
+            "id": "D",
+            "text": "Unicast"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q097_09ff",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây là đúng về thẻ bài trong phương pháp truy nhập đường truyền Token Passing? (Chọn 3 phương án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thẻ bài được luân chuyển tuần tự qua các nút mạng"
+          },
+          {
+            "id": "B",
+            "text": "Mỗi nút mạng được phép sử dụng thẻ bài trong một khe thời gian xác định"
+          },
+          {
+            "id": "C",
+            "text": "Thẻ bài được sử dụng để phát hiện đụng độ trong mạng"
+          },
+          {
+            "id": "D",
+            "text": "Cho phép thiết lập mức độ ưu �ên truyền dữ liệu"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q098_d975",
+        "type": "single_choice",
+        "question": {
+          "text": "E. Là một gói �n có khuôn dạng và kích thước xác định Vì sao những ứng dụng như truyền dòng video có xu hướng sử dụng giao thức UDP thay vì TCP? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Giao thức UDP đơn giản hơn cho phép truyền dữ liệu nhanh hơn TCP"
+          },
+          {
+            "id": "B",
+            "text": "Dữ liệu truyền dòng video không cần độ chính xác truyền thông tuyệt đối 100%"
+          },
+          {
+            "id": "C",
+            "text": "Giao thức UDP có thể truyền dữ liệu với băng thông lớn hơn với cùng đường truyền"
+          },
+          {
+            "id": "D",
+            "text": "Giao thức TCP phức tạp hơn nên dễ sinh ra lỗi hơn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q099_3cbb",
+        "type": "single_choice",
+        "question": {
+          "text": "Những mô tả nào sau đây là đúng với chuẩn Ethernet 1000BASE-T? (Chọn 3 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mạng dùng cáp xoắn đôi"
+          },
+          {
+            "id": "B",
+            "text": "Khoảng cách truyền dẫn tối đa là 1000m"
+          },
+          {
+            "id": "C",
+            "text": "Phù hợp với mọi hình trạng mạng"
+          },
+          {
+            "id": "D",
+            "text": "Điều khiển truy nhập đường truyền bằng CSMA/CD"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q100_0736",
+        "type": "single_choice",
+        "question": {
+          "text": "E. Sử dụng đấu nối RJ-45 Tầng liên kết dữ liệu KHÔNG thực hiện chức năng nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Biểu diễn các bit thành �n hiệu"
+          },
+          {
+            "id": "B",
+            "text": "Điều khiển tốc độ truyền dữ liệu giữa 2 nút mạng trên liên kết"
+          },
+          {
+            "id": "C",
+            "text": "Kiểm soát lỗi"
+          },
+          {
+            "id": "D",
+            "text": "Điều khiển truy nhập đường truyền"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q101_ce6e",
+        "type": "single_choice",
+        "question": {
+          "text": "Đặc điểm nào sau đây trong thiết kế của mã Manchester làm cho bên truyền và nhận có thể tự đồng bộ?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mỗi bit được duy trì ở một mức điện áp"
+          },
+          {
+            "id": "B",
+            "text": "Sử dụng 2 mức điện áp +V và -V"
+          },
+          {
+            "id": "C",
+            "text": "Bit 1 được biểu diễn luân phiên bởi 2 xung (pulse) +V và -V"
+          },
+          {
+            "id": "D",
+            "text": "Luôn có chuyển mức điện áp ở giữa thời gian một bit"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q102_13a4",
+        "type": "single_choice",
+        "question": {
+          "text": "Ưu điểm của giao thức UDP so với TCP là gì? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tốc độ truyền nhanh hơn"
+          },
+          {
+            "id": "B",
+            "text": "Đơn giản hơn"
+          },
+          {
+            "id": "C",
+            "text": "Tin cậy hơn"
+          },
+          {
+            "id": "D",
+            "text": "Không gây tắc nghẽn (conges�on) đường truyền"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q103_bd3d",
+        "type": "single_choice",
+        "question": {
+          "text": "Làm thể nào để kiểm tra xem địa chỉ IP của gói �n có nằm trong một mạng cục bộ không?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Gửi bản �n RARP với địa chỉ IP của gói �n"
+          },
+          {
+            "id": "B",
+            "text": "Không có cách nào đúng"
+          },
+          {
+            "id": "C",
+            "text": "Kiểm tra địa chỉ IP và mặt nạ mạng"
+          },
+          {
+            "id": "D",
+            "text": "Gửi gói �n đến Default Gateway"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q104_0605",
+        "type": "single_choice",
+        "question": {
+          "text": "Quá trình định tuyến được thực hiện để làm gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tìm đường đi giữa 2 router"
+          },
+          {
+            "id": "B",
+            "text": "Tìm đường đi tới router mặc định"
+          },
+          {
+            "id": "C",
+            "text": "Tìm đường đi giữa 2 máy �nh trong cùng mạng"
+          },
+          {
+            "id": "D",
+            "text": "Tìm đường đi giữa 2 switch"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q105_adeb",
+        "type": "single_choice",
+        "question": {
+          "text": "Cơ chế tự học của switch được dùng để làm gì",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Giúp chuyển �ếp dữ liệu trong một mạng LAN có topo dạng trục"
+          },
+          {
+            "id": "B",
+            "text": "Giúp chuyển �ếp dữ liệu trong một mạng LAN không dây"
+          },
+          {
+            "id": "C",
+            "text": "Giúp chuyển �ếp dữ liệu trong một mạng LAN có topo dạng điểm-điểm"
+          },
+          {
+            "id": "D",
+            "text": "Giúp chuyển �ếp dữ liệu giữa các mạng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q106_cd8d",
+        "type": "single_choice",
+        "question": {
+          "text": "Ánh xạ các mô tả vào các kỹ thuật tương ứng Mô tả Phía gửi được phép gửi nhiều gói �n mà không cần chờ báo nhận Phía gửi chỉ được phép gửi một gói �n và phải chờ báo nhận Phía gửi phải gửi lại đúng gói �n bị lỗi Phía gửi phải gửi lại một số gói �n gồm cả gói �n không bị lỗi Kỹ thuật (Chọn 1) Cửa sổ trượt – Sliding windows/ Loại bỏ chọn lọc -Selec�ve Reject/ Dừng và chờ - Stop-and-wait/ Go back N Hãy lựa chọn thứ tự của từng tầng trong mô hình OSI khi liệt kê theo thứ tự từ dưới lên (Đáp án lựa chọn là 1-7 cho mỗi tầng, các tầng sẽ được sắp xếp không theo thứ tự) Tầng Tầng ứng dụng (Applica�on Layer) Tầng trình diễn (Presenta�on Layer) Tầng liên kết dữ liệu (Data-link Layer) Tầng vật lý (Physical Layer) Tầng phiên (Session Layer) Tầng giao vận (Transport Layer) Tầng liên mạng (Internetwork Layer) Thứ tự Khi truyền dữ liệu từ máy A đến máy B, giả thiết gói �n đi qua 13 router trong mạng, số cạc mạng gói �n đi qua là bao nhiêu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "1"
+          },
+          {
+            "id": "B",
+            "text": "24"
+          },
+          {
+            "id": "C",
+            "text": "13"
+          },
+          {
+            "id": "D",
+            "text": "28"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q107_7f5a",
+        "type": "single_choice",
+        "question": {
+          "text": "Điểm khác biệt khi triển khai dịch vụ theo mô hình P2P so với mô hình Client-Server là gì? (Chọn 3 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không cần tất cả các nút mạng thành phần phải duy trì kết nối liên tục"
+          },
+          {
+            "id": "B",
+            "text": "Không cần quản lý tài nguyên tập trung"
+          },
+          {
+            "id": "C",
+            "text": "Các nút mạng có thể vừa gửi yêu cầu dịch vụ, vừa cung cấp dịch vụ cho các nút khác"
+          },
+          {
+            "id": "D",
+            "text": "Có điểm thắt nút cổ chai"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q108_84bf",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây là đúng về máy chủ tên miền gốc (root server) trong hệ thống DNS? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Quản lý thông �n các máy chủ tên miền cấp 1 (TLD Server)"
+          },
+          {
+            "id": "B",
+            "text": "Lưu trữ thông �n của toàn bộ tên miền trên Internet"
+          },
+          {
+            "id": "C",
+            "text": "Không trả lời các thông điệp DNS Query truy vấn tên miền"
+          },
+          {
+            "id": "D",
+            "text": "Triển khai ở nhiều vị trí khác nhau trên Internet"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q109_d1d3",
+        "type": "single_choice",
+        "question": {
+          "text": "Bảng MAC/CAM của một switch có nội dung như sau. Switch thực hiện các xử lý nào khi trên cổng e2 nhận được một khung �n có địa chỉ nguồn là 55-55-55-ee-ee-ee và địa chỉ đích là 11-11-11-aa-aa-aa. (Chọn 2 đáp án) ---------Host---------11-11-11-aa-aa-aa 22-22-22-bb-bb-bb 33-33-33-cc-cc-cc 44-44-44-dd-dd-dd ---Interface--e1 e2 e3 e1",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Huỷ khung �n"
+          },
+          {
+            "id": "B",
+            "text": "Gửi khung �n ra cổng e1"
+          },
+          {
+            "id": "C",
+            "text": "Gửi khung �n ra cổng e2"
+          },
+          {
+            "id": "D",
+            "text": "Gửi báo lỗi cho nút nguồn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q110_9dbe",
+        "type": "single_choice",
+        "question": {
+          "text": "E. Gửi khung �n ra tất cả các cổng trừ cổng vào e2 F. Thêm địa chỉ 55-55-55-ee-ee-ee vào bảng MAC/CAM với cổng chuyển �ếp là e2 Đặc điểm của phương pháp CSMA là gì? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Các nút sử dụng đường truyền một cách ngẫu nhiên"
+          },
+          {
+            "id": "B",
+            "text": "Lắng nghe �n hiệu sóng mang (carrier) trên đường truyền trước khi gửi"
+          },
+          {
+            "id": "C",
+            "text": "Các nút sử dụng đường truyền đồng thời, mỗi nút mạng sử dụng một mã để truyền �n"
+          },
+          {
+            "id": "D",
+            "text": "Không có đáp án đúng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q111_1d1c",
+        "type": "single_choice",
+        "question": {
+          "text": "Mã Checksum được sử dụng để làm gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sửa lỗi phát sinh do quá trình truyền dữ liệu"
+          },
+          {
+            "id": "B",
+            "text": "Phát hiện lỗi phát sinh do quá trình truyền dữ liệu"
+          },
+          {
+            "id": "C",
+            "text": "Báo hiệu cho bên gửi dữ liệu rằng dữ liệu có lỗi"
+          },
+          {
+            "id": "D",
+            "text": "Bảo mật cho dữ liệu"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q112_8dfa",
+        "type": "single_choice",
+        "question": {
+          "text": "Trường nào trong �êu đề của gói �n IP được dùng để xác định loại dữ liệu (payload) mà gói �n IP đang vận chuyển?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Type of service"
+          },
+          {
+            "id": "B",
+            "text": "Checksum"
+          },
+          {
+            "id": "C",
+            "text": "Iden�ﬁca�on"
+          },
+          {
+            "id": "D",
+            "text": "Protocol"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q113_ff6a",
+        "type": "single_choice",
+        "question": {
+          "text": "Dữ liệu của một gói �n gửi đi là 101000110111 (dạng nhị phân). Hệ thống sử dụng mã checksum 4-bit để kiểm tra lỗi. Hãy cho biết mã checksum cần được đính kèm với dữ liệu (Chỉ ghi mã checksum dưới dạng nhị phân, không thêm bất cứ kí tự nào) Phát biểu nào sau đây là đúng về các chương trình trên tầng ứng dụng? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sử dụng socket để truyền dữ liệu"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ cần triển khai trên hệ thống đầu cuối"
+          },
+          {
+            "id": "C",
+            "text": "Phải cài đặt các cơ chế để đảm bảo truyền thông �n cậy"
+          },
+          {
+            "id": "D",
+            "text": "Chọn đường đi tốt nhất để truyền dữ liệu"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q114_f3ae",
+        "type": "single_choice",
+        "question": {
+          "text": "Các phương pháp mã hoá như Manchester, NRZ-L, AMI Bipolar được sử dụng để làm gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Biểu diễn dữ liệu thành �n hiệu"
+          },
+          {
+            "id": "B",
+            "text": "Kiểm soát luồng"
+          },
+          {
+            "id": "C",
+            "text": "Kiểm soát lỗi của khi truyền dữ liệu trên đường truyền"
+          },
+          {
+            "id": "D",
+            "text": "Bảo mật cho dữ liệu"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q115_8828",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu là hình trạng mạng sử dụng một đường truyền dùng chung cho mọi nút?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hình sao (Star)"
+          },
+          {
+            "id": "B",
+            "text": "Hình trục (Bus)"
+          },
+          {
+            "id": "C",
+            "text": "Hình lưới (Mesh)"
+          },
+          {
+            "id": "D",
+            "text": "Hình vòng (Ring)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q116_000f",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong hoạt động của giao thức TCP, bên gửi thực hiện hoạt động nào? (Chọn 3 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Yêu cầu thiết lập liên kết trước khi gửi"
+          },
+          {
+            "id": "B",
+            "text": "Chờ báo nhận"
+          },
+          {
+            "id": "C",
+            "text": "Phát lại dữ liệu khi có lỗi"
+          },
+          {
+            "id": "D",
+            "text": "Gửi dữ liệu với tốc độ nhanh nhất"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q117_e0b7",
+        "type": "single_choice",
+        "question": {
+          "text": "Hai �ến trình thực hiện truyền �n theo giao thức TCP. Tiến trình gửi đang sử dụng cửa sổ kiểm soát tắc nghẽn (conges�on window) là 14.000 byte và ngưỡng kiểm soát tắc nghẽn (ssthreshold) là 11.200 byte. Tiến trình gửi nhận được gói �n ACK báo thành công cho các gói �n đã gửi, trong đó giá trị Receive Window là 65.535. Giả sử các bên đã thoả thuận 1 MSS = 1.400 byte. Trong lượt �ếp theo, �ến trình gửi có thể gửi tối đa bao nhiêu byte? (Chỉ ghi đáp án số, không kèm đơn vị). Đâu là ưu điểm của phương pháp chuyển mạch kênh khi so sánh với chuyển mạch gói? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cung cấp chất lượng dịch vụ tốt hơn"
+          },
+          {
+            "id": "B",
+            "text": "Hầu như không có trễ trung gian sau khi kênh truyền được thiết lập"
+          },
+          {
+            "id": "C",
+            "text": "Hiệu quả sử dụng kênh truyền tốt hơn"
+          },
+          {
+            "id": "D",
+            "text": "Giảm chi phí vận hành một hệ thống mạng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q118_3268",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong kỹ thuật Cửa sổ trượt (Sliding windows), phía gửi được phép truyền lượng dữ liệu tối đa là bao nhiêu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bằng kích thước vùng đệm của bên nhận"
+          },
+          {
+            "id": "B",
+            "text": "Một gói �n"
+          },
+          {
+            "id": "C",
+            "text": "Bằng kích thước cửa sổ phát của bên gửi"
+          },
+          {
+            "id": "D",
+            "text": "Bằng kích thước vùng đệm còn trống của bên nhận"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q119_357d",
+        "type": "single_choice",
+        "question": {
+          "text": "Mạng cần cung cấp địa chỉ cho 109 máy cần dùng mặt nạ mạng nào để hạn chế dư thừa địa chỉ ip? (Nhập mặt nạ mạng dạng thập phân, ví dụ: 255.255.255.0) Ánh xạ các phương pháp sau về các loại tương ứng. Phương pháp TDMA FDMA CSMA Token Ring Loại (Chọn 1) Chia kênh/ Truy nhập ngẫu nhiên/ Truy nhập tuần tự Dịch vụ phân giải tên miền đăng ký sử dụng số hiệu cổng dịch vụ là bao nhiêu? Trong hoạt động của giao thức UDP, bên nhận thực hiện những hoạt động nào? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kiểm tra lỗi trên gói �n"
+          },
+          {
+            "id": "B",
+            "text": "Chuyển dữ liệu tới đúng ứng dụng"
+          },
+          {
+            "id": "C",
+            "text": "Đưa các gói �n không đúng thứ tự vào bộ đệm"
+          },
+          {
+            "id": "D",
+            "text": "Gửi báo nhận"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q120_b566",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây là SAI về số hiệu cổng ứng dụng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Được sử dụng để xác định đường đi khi chuyển �ếp gói �n"
+          },
+          {
+            "id": "B",
+            "text": "Các chương trình ứng dụng trên một nút mạng phải đăng ký số hiệu cổng ứng dụng khác nhau"
+          },
+          {
+            "id": "C",
+            "text": "Được sử dụng trong quá trình truyền �n giữa các ứng dụng tại tầng giao vận"
+          },
+          {
+            "id": "D",
+            "text": "Là một số nguyên 16 bit"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q121_da75",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho một mạng có địa chỉ 208.139.245.0/26, hỏi địa chỉ quảng bá của mạng đó là địa chỉ nào? (Nhập địa chỉ IP dạng thập phân, ví dụ: 192.168.1.0) Phát biểu nào sau đây là đúng về giao thức định tuyến (rou�ng protocol) dạng link-state? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Các router trao đổi với nhau thông �n khoảng cách đường đi"
+          },
+          {
+            "id": "B",
+            "text": "Các router trao đổi với nhau thông �n về các liên kết (links)"
+          },
+          {
+            "id": "C",
+            "text": "Mỗi router có thể nhận thông �n từ tất cả các router khác"
+          },
+          {
+            "id": "D",
+            "text": "Các router hợp tác với nhau để �nh toán đường đi"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q122_1bd1",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu là đặc điểm của mạng sử dụng kỹ thuật chuyển mạch kênh (Chọn 3 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thiết lập kênh trước khi truyền"
+          },
+          {
+            "id": "B",
+            "text": "Gói �n được truyền đi ngay"
+          },
+          {
+            "id": "C",
+            "text": "Các gói �n có thể tới đích không đúng thứ tự"
+          },
+          {
+            "id": "D",
+            "text": "Các gói �n trong mỗi kênh truyền giữa 2 nút luôn đi theo tuyến đường giống nhau"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q123_c3ec",
+        "type": "single_choice",
+        "question": {
+          "text": "E. Tài nguyên được cấp phát để dùng riêng trên mỗi kênh truyền giữa 2 nút Khi nhận được một gói �n có TTL = 0, nút mạng báo lỗi bằng thông điệp nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "ICMP Time exceeded"
+          },
+          {
+            "id": "B",
+            "text": "ICMP Des�na�on Network Unknown"
+          },
+          {
+            "id": "C",
+            "text": "ICMP Echo Request"
+          },
+          {
+            "id": "D",
+            "text": "ICMP Echo Reply"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q124_74fd",
+        "type": "single_choice",
+        "question": {
+          "text": "Tầng vật lý thực hiện các chức năng nào sau đây?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đánh số các gói dữ liệu gửi đi"
+          },
+          {
+            "id": "B",
+            "text": "Biểu diễn các bit thành �n hiệu và ngược lại"
+          },
+          {
+            "id": "C",
+            "text": "Đóng gói dữ liệu thành các gói �n"
+          },
+          {
+            "id": "D",
+            "text": "Kiểm tra dữ liệu nhận được có bị lỗi không"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q125_82b3",
+        "type": "single_choice",
+        "question": {
+          "text": "Những thay đổi của giao thức HTTP 1.1 so với HTTP 1.0 là gì? (Chọn 3 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chỉ thiết lập 1 liên kết TCP để truyền nhiều thông điệp khác nhau"
+          },
+          {
+            "id": "B",
+            "text": "Có cơ chế pipeline để tăng tốc độ truyền �n"
+          },
+          {
+            "id": "C",
+            "text": "Bổ sung thêm các phương thức yêu cầu mới cho thông điệp HTTP Request"
+          },
+          {
+            "id": "D",
+            "text": "Sử dụng các cơ chế truyền thông �n cậy để luôn đảm bảo truyền thành công"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q126_1dd6",
+        "type": "single_choice",
+        "question": {
+          "text": "Mạng đang sử dụng địa chỉ 172.29.0.0/16 có thể có bao nhiêu mạng con nếu dùng mặt nạ mạng 255.255.255.192? (Nhập số mạng con, ví dụ: 2) Khi không �m thấy tài nguyên được yêu cầu, máy chủ Web gửi thông điệp HTTP Response với mã trả lời là bao nhiêu? Cho một đường truyền từ A đến B đi qua 3 đoạn kết nối khác nhau có băng thông lần lượt là 5 Mbps, 10 Mbps và 15 Mbps. Giả sử các đường kết nối này chỉ phục vụ cho việc truyền dữ liệu từ A đến B, trễ trên thiết bị không đáng kể, và tỷ lệ lỗi và mất gói �n bằng 0. Hỏi thông lượng trung bình từ A đến B là bao nhiêu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "5 Mbps"
+          },
+          {
+            "id": "B",
+            "text": "10 Mbps"
+          },
+          {
+            "id": "C",
+            "text": "Không thể xác định được"
+          },
+          {
+            "id": "D",
+            "text": "15 Mbps"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

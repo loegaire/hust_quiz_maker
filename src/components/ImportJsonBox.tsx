@@ -36,12 +36,12 @@ export function ImportJsonBox({ onImported }: ImportJsonBoxProps) {
   };
 
   return (
-    <div className="space-y-3 rounded-xl bg-[var(--card)] p-5 shadow-sm">
+    <div className="neo-card space-y-3">
       <textarea
         value={raw}
         onChange={(e) => setRaw(e.target.value)}
         rows={12}
-        className="w-full rounded-lg border border-black/10 p-3 font-mono text-sm"
+        className="neo-input min-h-72 w-full font-mono text-sm"
         placeholder="Paste quiz JSON here"
       />
       <input
@@ -53,15 +53,15 @@ export function ImportJsonBox({ onImported }: ImportJsonBoxProps) {
         }}
       />
       <div className="flex gap-2">
-        <button type="button" onClick={validate} className="rounded bg-[var(--accent)] px-4 py-2 text-white">
+        <button type="button" onClick={validate} className="neo-button">
           Validate
         </button>
-        <button type="button" onClick={() => void save()} disabled={!preview} className="rounded bg-black px-4 py-2 text-white disabled:opacity-40">
+        <button type="button" onClick={() => void save()} disabled={!preview} className="neo-button-secondary disabled:opacity-40">
           Save
         </button>
       </div>
-      {error ? <p className="whitespace-pre-wrap rounded-lg bg-red-50 p-3 text-sm text-red-700">{error}</p> : null}
-      {preview ? <p className="text-sm text-emerald-700">Ready: {preview.quiz.title} ({preview.quiz.questions.length} questions)</p> : null}
+      {error ? <p className="border-4 border-black bg-red-200 p-3 text-sm font-medium text-black shadow-[4px_4px_0_var(--shadow)] whitespace-pre-wrap">{error}</p> : null}
+      {preview ? <p className="border-4 border-black bg-emerald-200 p-3 text-sm font-bold text-black shadow-[4px_4px_0_var(--shadow)]">Ready: {preview.quiz.title} ({preview.quiz.questions.length} questions)</p> : null}
     </div>
   );
 }

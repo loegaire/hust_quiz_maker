@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "ai-extra-0ff5c29a",
+    "title": "Trắc nghiệm AI - Trắc nghiệm tuần 1_ Attempt review.pdf",
+    "description": "Bộ câu hỏi trắc nghiệm tự động trích xuất từ Trắc nghiệm tuần 1_ Attempt review.pdf. Gồm 5 câu.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Tự động trích xuất từ Trắc nghiệm tuần 1_ Attempt review.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q000_b927",
+        "type": "single_choice",
+        "question": {
+          "text": "  Home Courses Support   News  En  Dashboard  My courses  BL-IT3160-168453 - Nhập môn Trí tuệ nhân tạo  Tuần 1  Trắc nghiệm tuần 1 Hide sidebars BL-IT3160-168453 - Nhập môn Trí tuệ nhân tạo Started on State Completed on Time taken Wednesday, 25 February 2026, 10:35 AM Finished Wednesday, 25 February 2026, 10:44 AM 8 mins 1 sec Marks 4.00/5.00 Grade 8.00 out of 10.00 (80%) Question 1 Kiểm tra Turing (Turing test) để trả lời cho câu hỏi nào dưới đây? Complete Mark 0.00 out of 1.00 Select one:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Máy tính có thể suy nghĩ thông minh (như con người) không?"
+          },
+          {
+            "id": "B",
+            "text": "Máy tính có thể suy nghĩ và hành động hợp lý không?"
+          },
+          {
+            "id": "C",
+            "text": "Máy tính có thể suy nghĩ hợp lý không?"
+          },
+          {
+            "id": "D",
+            "text": "Máy tính có thể hành động thông minh (như con người) không?"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q001_5659",
+        "type": "single_choice",
+        "question": {
+          "text": "e. Máy tính có thể hành động hợp lý không? Question 2 Các sự kiện nào sau đây thể hiện sự phát triển trong lĩnh vực trí tuệ nhân tạo giai đoạn Complete 1980-1990? Mark 1.00 out of 1.00 Select one or more:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hệ thống AlphaGo của Google đánh bại kỳ thủ cờ vây hàng đầu"
+          },
+          {
+            "id": "B",
+            "text": "Sự xuất hiện bùng nổ của các hệ chuyên gia"
+          },
+          {
+            "id": "C",
+            "text": "Trí tuệ nhân tạo trở thành một lĩnh vực khoa học"
+          },
+          {
+            "id": "D",
+            "text": "Chương trình cờ vua Samuel"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q002_24c4",
+        "type": "single_choice",
+        "question": {
+          "text": "Question 3 Những thông tin nào dưới đây liên quan đến hệ thống hỏi đáp Watson của IBM được Complete xem là thành tựu phát triển của Trí tuệ nhân tạo? Mark 1.00 out of 1.00 Select one or more:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thu thập thông tin từ hàng triệu trang Web"
+          },
+          {
+            "id": "B",
+            "text": "Khả năng biểu diễn tri thức, giải quyết vấn đề"
+          },
+          {
+            "id": "C",
+            "text": "Khả năng xử lý ngôn ngữ tự nhiên"
+          },
+          {
+            "id": "D",
+            "text": "Hệ thống cơ cấu cơ khí để bấm nút câu hỏi"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q003_4cea",
+        "type": "single_choice",
+        "question": {
+          "text": "Question 4 Chọn các các thành phần cơ bản của trí tuệ nhân tạo: Complete Mark 1.00 out of Select one or more:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Suy diễn (reasoning)"
+          },
+          {
+            "id": "B",
+            "text": "Nghe (listening)"
+          },
+          {
+            "id": "C",
+            "text": "Hiểu ngôn ngữ"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q004_8fcc",
+        "type": "single_choice",
+        "question": {
+          "text": "Hide sidebars",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "D",
+            "text": "Giải trí"
+          },
+          {
+            "id": "A",
+            "text": "Hành động như con người"
+          },
+          {
+            "id": "B",
+            "text": "Hành động hợp lý"
+          },
+          {
+            "id": "C",
+            "text": "Suy nghĩ như con người"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

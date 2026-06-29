@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "ai-giua-ky-20252",
+    "title": "Trí tuệ nhân tạo (AI) - Giữa kì 2025.2 (Đề 1)",
+    "description": "Bộ đề trắc nghiệm IT3160 Nhập môn trí tuệ nhân tạo - Giữa kì 2025.2 (Đề 1, 10 câu trắc nghiệm). Trích xuất từ đề thi gốc, có giải thích chi tiết.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Trích xuất từ PDF 'AI - giữa kì 20252.pdf'. Phần trắc nghiệm gồm 10 câu, phần tự luận không đưa vào quiz vì format không hỗ trợ."
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q001",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong biểu diễn tri thức bằng frame, thủ tục IF-NEEDED được sử dụng khi nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Khi một giá trị được thêm vào slot"
+          },
+          {
+            "id": "B",
+            "text": "Khi cần kiểm tra dữ liệu đầu vào trước khi lưu vào slot"
+          },
+          {
+            "id": "C",
+            "text": "Khi hệ thống muốn xoá một slot khỏi frame"
+          },
+          {
+            "id": "D",
+            "text": "Khi hệ thống cần truy cập giá trị của một slot nhưng chưa có sẵn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D.\n\nTrong cấu trúc frame, các thủ tục gắn vào slot được gọi là 'demon procedures'. Có 4 demon chính:\n- IF-NEEDED: kích hoạt khi hệ thống cần truy cập giá trị của slot mà chưa có sẵn → thực hiện tính toán/suy diễn để sinh giá trị.\n- IF-ADDED: kích hoạt khi một giá trị mới được gán vào slot (dùng để cập nhật các slot liên quan).\n- IF-REMOVED: kích hoạt khi giá trị slot bị xóa.\n- IF-MODIFIED: kích hoạt khi giá trị slot thay đổi.\n\nGiải thích các đáp án sai:\n- A: Mô tả IF-ADDED chứ không phải IF-NEEDED.\n- B: Đây là chức năng của facet 'value-restriction', không phải IF-NEEDED.\n- C: Mô tả IF-REMOVED.\n\nKết luận: IF-NEEDED chỉ kích hoạt khi GIÁ TRỊ slot được YÊU CẦU NHƯNG CHƯA CÓ → đáp án D.",
+          "images": []
+        },
+        "tags": [
+          "bieu-dien-tri-thuc",
+          "frame"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q002",
+        "type": "single_choice",
+        "question": {
+          "text": "Một cánh tay robot trong nhà máy lắp ráp linh kiện. Nếu robot thực hiện cùng một thao tác trong cùng điều kiện thì kết quả luôn giống nhau. Môi trường này được xem là:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Động"
+          },
+          {
+            "id": "B",
+            "text": "Ngẫu nhiên"
+          },
+          {
+            "id": "C",
+            "text": "Quan sát một phần"
+          },
+          {
+            "id": "D",
+            "text": "Xác định"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - Xác định (Deterministic).\n\nĐịnh nghĩa các đặc điểm môi trường tác tử (Russell & Norvig):\n- Xác định (Deterministic) vs. Ngẫu nhiên (Stochastic): Môi trường XÁC ĐỊNH khi trạng thái tiếp theo được quyết định HOÀN TOÀN bởi trạng thái hiện tại và hành động của tác tử. Cùng input → cùng output.\n- Tĩnh (Static) vs. Động (Dynamic): Môi trường có thay đổi khi tác tử đang cân nhắc hay không.\n- Quan sát đầy đủ (Fully observable) vs. Một phần (Partially): Tác tử thấy được toàn bộ trạng thái hay không.\n\nỞ đây: 'cùng thao tác + cùng điều kiện → cùng kết quả' chính là định nghĩa của môi trường XÁC ĐỊNH. Đáp án không phải A (động), không phải B (ngẫu nhiên - vì kết quả tất định), không phải C (quan sát một phần - không liên quan tới đề bài).",
+          "images": []
+        },
+        "tags": [
+          "tac-tu",
+          "moi-truong-tac-tu"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q003",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong hệ PEAS của hệ thống chẩn đoán y khoa bằng AI, \"bệnh nhân và hồ sơ bệnh án\" thuộc nhóm nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sensors"
+          },
+          {
+            "id": "B",
+            "text": "Performance measure"
+          },
+          {
+            "id": "C",
+            "text": "Actuators"
+          },
+          {
+            "id": "D",
+            "text": "Environment"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - Environment.\n\nMô hình PEAS (Performance measure - Environment - Actuators - Sensors) là khung phân tích thiết kế tác tử:\n- Performance measure: tiêu chí đánh giá chất lượng hành động (ví dụ: tỉ lệ chẩn đoán đúng, chi phí điều trị thấp).\n- Environment: bối cảnh mà tác tử hoạt động. Trong y khoa: bệnh nhân, hồ sơ bệnh án, kết quả xét nghiệm, các y bác sĩ khác.\n- Actuators: cơ chế xuất hành động (đưa ra chẩn đoán, đơn thuốc, đề xuất xét nghiệm).\n- Sensors: cơ chế thu nhận thông tin (form nhập triệu chứng, máy quét hình ảnh y khoa).\n\n'Bệnh nhân và hồ sơ bệnh án' là đối tượng/bối cảnh mà hệ thống tác động đến → Environment. Không phải Sensors (đó là kênh thu thông tin), không phải Actuators (đó là kênh xuất), không phải Performance measure (đó là tiêu chí đo).",
+          "images": []
+        },
+        "tags": [
+          "tac-tu",
+          "PEAS"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q004",
+        "type": "single_choice",
+        "question": {
+          "text": "Một chương trình chơi cờ vua với người chơi khác. Trạng thái bàn cờ luôn nhìn thấy đầy đủ và mỗi nước đi đều có kết quả chính xác theo luật. Môi trường này là:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Quan sát một phần, xác định, đơn tác tử"
+          },
+          {
+            "id": "B",
+            "text": "Quan sát một phần, ngẫu nhiên, đa tác tử"
+          },
+          {
+            "id": "C",
+            "text": "Quan sát hoàn toàn, xác định, đa tác tử"
+          },
+          {
+            "id": "D",
+            "text": "Quan sát hoàn toàn, ngẫu nhiên, đơn tác tử"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: C - Quan sát hoàn toàn, xác định, đa tác tử.\n\nPhân tích từng đặc điểm môi trường cờ vua:\n- 'Trạng thái bàn cờ luôn nhìn thấy đầy đủ' → Fully observable (quan sát hoàn toàn). Không bị giấu quân nào.\n- 'Mỗi nước đi đều có kết quả chính xác theo luật' → Deterministic (xác định). Không có yếu tố may rủi.\n- 'Chơi với người chơi khác' → Multi-agent (đa tác tử). Có ít nhất 2 đối thủ tương tác.\n\nCác đáp án sai:\n- A: 'Một phần' sai vì bàn cờ luôn hiển thị; 'đơn tác tử' sai vì có đối thủ.\n- B: 'Một phần' và 'ngẫu nhiên' đều sai.\n- D: 'Ngẫu nhiên' sai, 'đơn tác tử' sai.\n\nCờ vua kinh điển: fully observable + deterministic + multi-agent + sequential + static + discrete.",
+          "images": []
+        },
+        "tags": [
+          "tac-tu",
+          "moi-truong-tac-tu"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q005",
+        "type": "single_choice",
+        "question": {
+          "text": "Một robot hút bụi hoạt động trong căn phòng, có thể cảm nhận toàn bộ vị trí đồ vật và trạng thái sàn nhà tại mọi thời điểm. Tuy nhiên, khi di chuyển, robot có thể bị trượt bánh do mặt sàn ướt. Môi trường của robot thuộc loại nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Quan sát một phần, xác định"
+          },
+          {
+            "id": "B",
+            "text": "Quan sát hoàn toàn, xác định"
+          },
+          {
+            "id": "C",
+            "text": "Quan sát một phần, ngẫu nhiên"
+          },
+          {
+            "id": "D",
+            "text": "Quan sát hoàn toàn, ngẫu nhiên"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - Quan sát hoàn toàn, ngẫu nhiên.\n\nPhân tích:\n- 'Có thể cảm nhận toàn bộ vị trí đồ vật và trạng thái sàn nhà tại mọi thời điểm' → Fully observable (quan sát hoàn toàn). Cảm biến đầy đủ.\n- 'Có thể bị trượt bánh do mặt sàn ướt' → Stochastic (ngẫu nhiên). Cùng hành động 'tiến lên' có thể cho kết quả khác nhau vì yếu tố trượt là không xác định trước.\n\nLưu ý: Nếu môi trường có nhiễu/biến cố ngoài ý muốn (trượt, sai số cảm biến vật lý) thì là Stochastic dù cảm biến quan sát đầy đủ. Cảm biến đầy đủ chỉ nói lên Observability, không nói gì về tính xác định.\n\nCác đáp án sai:\n- A, C: Cảm biến mô tả là 'toàn bộ' nên không phải quan sát một phần.\n- B: Có yếu tố trượt → không thể xác định, loại B.",
+          "images": []
+        },
+        "tags": [
+          "tac-tu",
+          "moi-truong-tac-tu"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q006",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong frame, thủ tục IF-ADDED có vai trò gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Gợi ý giá trị khi truy vấn slot"
+          },
+          {
+            "id": "B",
+            "text": "Tự động thực hiện hành động khi một giá trị mới được gán cho slot"
+          },
+          {
+            "id": "C",
+            "text": "Tự động tạo giá trị khi slot bị bỏ trống"
+          },
+          {
+            "id": "D",
+            "text": "Xác định kiểu dữ liệu hợp lệ cho slot"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B.\n\nIF-ADDED là một trong các demon procedure trong frame, được kích hoạt khi có HÀNH ĐỘNG GÁN GIÁ TRỊ MỚI vào slot. Dùng để:\n- Cập nhật các slot liên quan (cascade update).\n- Bắt đầu suy diễn forward chaining (suy diễn tiến).\n- Gửi thông báo/event tới các frame khác.\n\nVí dụ: Khi gán slot 'tuổi' = 18 cho frame 'Person', IF-ADDED có thể tự động đặt slot 'có-quyền-bầu-cử' = true.\n\nCác đáp án sai:\n- A: Mô tả IF-NEEDED (gợi ý/tính giá trị khi truy vấn slot trống).\n- C: Gần giống IF-NEEDED nhưng IF-ADDED là khi GÁN, không phải khi trống.\n- D: Đây là chức năng của facet (ràng buộc về kiểu giá trị), không phải demon.",
+          "images": []
+        },
+        "tags": [
+          "bieu-dien-tri-thuc",
+          "frame"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q007",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong PEAS của hệ thống ATM thông minh, \"màn hình hiển thị và khe xuất tiền\" thuộc nhóm nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Actuators"
+          },
+          {
+            "id": "B",
+            "text": "Sensors"
+          },
+          {
+            "id": "C",
+            "text": "Performance measure"
+          },
+          {
+            "id": "D",
+            "text": "Environment"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A - Actuators.\n\nActuators trong mô hình PEAS là các thành phần thực hiện HÀNH ĐỘNG XUẤT của tác tử ra môi trường:\n- Màn hình hiển thị: xuất thông tin giao dịch, hướng dẫn → output.\n- Khe xuất tiền: xuất tiền mặt → output vật lý.\n\nCả hai đều là output device → thuộc Actuators.\n\nCác nhóm khác trong PEAS của ATM:\n- Sensors: bàn phím nhập PIN, đầu đọc thẻ, camera giám sát.\n- Environment: khách hàng, mạng ngân hàng, tài khoản người dùng.\n- Performance measure: thời gian giao dịch, tỉ lệ giao dịch thành công, mức độ bảo mật.",
+          "images": []
+        },
+        "tags": [
+          "tac-tu",
+          "PEAS"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q008",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây KHÔNG phải là nhược điểm của frame mà mạng ngữ nghĩa giải quyết được?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Gặp khó khăn khi mở rộng hệ thống tri thức quy mô lớn"
+          },
+          {
+            "id": "B",
+            "text": "Thiếu khả năng mô tả các quan hệ động và liên kết ngữ nghĩa"
+          },
+          {
+            "id": "C",
+            "text": "Dễ gây nhầm lẫn khi biểu diễn các quan hệ phân cấp"
+          },
+          {
+            "id": "D",
+            "text": "Quá phụ thuộc vào cách thiết kế thuộc tính tĩnh"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: C.\n\nFrame có thế mạnh trong biểu diễn QUAN HỆ PHÂN CẤP (is-a, instance-of, kế thừa thuộc tính từ frame cha). Đây KHÔNG phải nhược điểm của frame, ngược lại là điểm mạnh. Vì vậy C KHÔNG phải vấn đề mà mạng ngữ nghĩa cần giải quyết.\n\nCác nhược điểm thật của frame mà mạng ngữ nghĩa hỗ trợ tốt hơn:\n- A (đúng nhược điểm): Frame phức tạp khi mở rộng quy mô lớn vì cấu trúc cứng nhắc, mạng ngữ nghĩa linh hoạt hơn.\n- B (đúng nhược điểm): Frame mô tả tốt thuộc tính tĩnh nhưng yếu trong biểu diễn quan hệ động, liên kết phong phú giữa các khái niệm → mạng ngữ nghĩa biểu diễn nhiều loại quan hệ qua các cạnh có nhãn.\n- D (đúng nhược điểm): Frame quá tập trung vào slot tĩnh; mạng ngữ nghĩa biểu diễn được cả quan hệ động.\n\nCâu hỏi yêu cầu chọn phát biểu KHÔNG phải nhược điểm → C.",
+          "images": []
+        },
+        "tags": [
+          "bieu-dien-tri-thuc",
+          "frame",
+          "mang-ngu-nghia"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q009",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong biểu diễn tri thức bằng khung (frame), câu hỏi nào dưới đây có thể trả lời trực tiếp từ một khung đơn lẻ?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "\"Màu của xe buýt là gì?\""
+          },
+          {
+            "id": "B",
+            "text": "\"Có bao nhiêu xe buýt màu blue?\""
+          },
+          {
+            "id": "C",
+            "text": "Tất cả các đáp án đều đúng"
+          },
+          {
+            "id": "D",
+            "text": "\"Cái gì có màu blue?\""
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A.\n\nMột frame đơn lẻ chứa tập slot=value mô tả MỘT đối tượng cụ thể. Để trả lời:\n- A ('Màu của xe buýt là gì?'): chỉ cần truy cập slot 'màu' của frame 'xe buýt' → trả lời trực tiếp được. ✓\n- B ('Có bao nhiêu xe buýt màu blue?'): cần DUYỆT QUA NHIỀU frame xe buýt và đếm số có slot màu = blue → không thể từ 1 frame đơn lẻ. ✗\n- D ('Cái gì có màu blue?'): cần TÌM KIẾM ngược trong toàn bộ knowledge base xem frame nào có slot màu = blue → không thể từ 1 frame. ✗\n\nFrame đơn lẻ chỉ trả lời được câu hỏi dạng 'slot value của đối tượng X là gì?' theo hướng từ đối tượng → thuộc tính (forward access). Các câu hỏi đếm/tìm kiếm ngược cần duyệt toàn bộ knowledge base.",
+          "images": []
+        },
+        "tags": [
+          "bieu-dien-tri-thuc",
+          "frame"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q010",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong mô hình PEAS của một xe tự lái, yếu tố nào thuộc nhóm Performance measure?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Động cơ và hệ thống phanh"
+          },
+          {
+            "id": "B",
+            "text": "Giảm số vụ va chạm và thời gian di chuyển"
+          },
+          {
+            "id": "C",
+            "text": "Camera và cảm biến lidar"
+          },
+          {
+            "id": "D",
+            "text": "Đường phố và tín hiệu giao thông"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - 'Giảm số vụ va chạm và thời gian di chuyển'.\n\nPhân loại các thành phần xe tự lái theo PEAS:\n- Performance measure (tiêu chí đánh giá): an toàn (số vụ va chạm), tốc độ tới đích (thời gian di chuyển), tiết kiệm nhiên liệu, mức độ thoải mái → B đúng.\n- Environment (môi trường): đường phố, tín hiệu giao thông, phương tiện khác, người đi bộ → D.\n- Actuators (cơ cấu chấp hành): động cơ, hệ thống phanh, vô lăng, đèn xi-nhan → A.\n- Sensors (cảm biến): camera, lidar, radar, GPS, cảm biến tốc độ → C.\n\nPerformance measure phải là TIÊU CHÍ ĐỊNH LƯỢNG/ĐỊNH TÍNH ĐỂ ĐÁNH GIÁ kết quả hành động của tác tử, không phải linh kiện. Chỉ B mô tả tiêu chí đánh giá.",
+          "images": []
+        },
+        "tags": [
+          "tac-tu",
+          "PEAS"
+        ],
+        "difficulty": "easy"
+      }
+    ]
+  }
+}

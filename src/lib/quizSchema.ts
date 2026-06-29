@@ -7,10 +7,11 @@ const imageSchema = z.union([
       id: z.string().min(1).optional(),
       src: z.string().min(1).optional(),
       ascii: z.string().min(1).optional(),
+      svg: z.string().min(1).optional(),
       alt: z.string().optional()
     })
-    .refine((value) => Number(Boolean(value.src)) + Number(Boolean(value.ascii)) === 1, {
-      message: 'Each media item must include exactly one of "src" or "ascii".'
+    .refine((value) => Number(Boolean(value.src)) + Number(Boolean(value.ascii)) + Number(Boolean(value.svg)) === 1, {
+      message: 'Each media item must include exactly one of "src", "ascii", or "svg".'
     })
 ]);
 

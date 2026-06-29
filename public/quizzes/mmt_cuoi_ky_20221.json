@@ -1,0 +1,1643 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "mmt-cuoi-ky-20221",
+    "title": "Mạng máy tính - Cuối kì 20221",
+    "description": "Bộ đề trắc nghiệm IT3080 Mạng máy tính - Cuối kì 20221. Gồm 30+ câu trắc nghiệm trích từ đề thi gốc, có giải thích chi tiết.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Trích xuất từ PDF 'Mạng máy tính - cuối kì 20221.pdf' (đề Final Exam đợt Mar 2023)."
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q001",
+        "type": "fill_gap",
+        "question": {
+          "text": "Cho một mạng có địa chỉ subnet 199.99.94.0/27. Hỏi địa chỉ broadcast của mạng đó là gì? (Nhập địa chỉ IP ở dạng thập phân, ví dụ: 192.168.1.0)",
+          "images": []
+        },
+        "answer": {
+          "acceptedAnswers": [
+            "199.99.94.31"
+          ],
+          "caseSensitive": false,
+          "trimWhitespace": true
+        },
+        "explanation": {
+          "text": "Đáp án: 199.99.94.31.\n\nMạng 199.99.94.0/27 có:\n- 27 bit mạng (network), 5 bit host (32-27=5).\n- Số địa chỉ trong subnet = 2^5 = 32 (từ .0 đến .31).\n- Địa chỉ mạng (network) = 199.99.94.0 (5 bit host = 00000).\n- Địa chỉ broadcast = địa chỉ có toàn bộ 5 bit host bằng 1 = 199.99.94.31 (5 bit host = 11111).\n\nViết theo nhị phân:\n- 199.99.94.0/27 = 11000111.01100011.01011110.000|00000 (3 bit cuối 000 thuộc network, 5 bit cuối 00000 là host).\n- Broadcast = 11000111.01100011.01011110.000|11111 = 199.99.94.31.\n\nLưu ý không nhầm với 199.99.94.32 (đó là địa chỉ mạng của subnet kế tiếp).",
+          "images": []
+        },
+        "tags": [
+          "dia-chi-IP",
+          "subnet",
+          "broadcast"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q002",
+        "type": "fill_gap",
+        "question": {
+          "text": "Nếu một gói tin IP có kích thước 5246 byte được gửi vào một mạng có MTU = 1192 byte, giả sử kích thước header IP là 20 byte, thì lượng dữ liệu trong mảnh IP cuối cùng là bao nhiêu byte? (Nhập số nguyên không kèm đơn vị)",
+          "images": []
+        },
+        "answer": {
+          "acceptedAnswers": [
+            "554"
+          ],
+          "caseSensitive": false,
+          "trimWhitespace": true
+        },
+        "explanation": {
+          "text": "Đáp án: 554 byte.\n\nBước 1: Tính dữ liệu cần phân mảnh.\n- Tổng kích thước gói tin = 5246 byte (bao gồm 20 byte header IP).\n- Dữ liệu cần truyền = 5246 - 20 = 5226 byte.\n\nBước 2: Xác định dữ liệu tối đa trong mỗi mảnh (trừ mảnh cuối).\n- Mỗi mảnh tự nó là một gói tin IP có header 20 byte, tổng kích thước ≤ MTU.\n- Dữ liệu/mảnh ≤ 1192 - 20 = 1172 byte.\n- Theo RFC 791, fragment offset tính theo đơn vị 8 byte, nên dữ liệu của mảnh KHÔNG PHẢI mảnh cuối phải là bội của 8. Lấy bội số lớn nhất của 8 không vượt 1172 = 1168 byte.\n\nBước 3: Tính số mảnh.\n- 5226 / 1168 ≈ 4.47 → cần 5 mảnh.\n- 4 mảnh đầu mỗi mảnh chứa 1168 byte → tổng = 4 × 1168 = 4672 byte.\n- Mảnh cuối chứa: 5226 - 4672 = 554 byte (không cần bội của 8 vì là mảnh cuối, More-Fragment flag = 0).",
+          "images": []
+        },
+        "tags": [
+          "IP",
+          "phan-manh",
+          "MTU"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q003",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây ĐÚNG về giao thức định tuyến link-state? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Các router trao đổi thông tin về khoảng cách (distance) đến các đích"
+          },
+          {
+            "id": "B",
+            "text": "Các router trao đổi thông tin về các liên kết (links)"
+          },
+          {
+            "id": "C",
+            "text": "Mỗi router có thể nhận thông tin từ tất cả các router khác"
+          },
+          {
+            "id": "D",
+            "text": "Các router phối hợp với nhau để tính toán các tuyến đường"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B, C.\n\nLink-state routing (OSPF, IS-IS) hoạt động theo nguyên lý:\n1. Mỗi router THÔNG BÁO trạng thái các LINK trực tiếp kết nối với nó (B đúng).\n2. Thông tin được FLOOD toàn mạng nên mọi router nhận được link-state từ tất cả router khác (C đúng).\n3. Mỗi router TỰ MÌNH chạy thuật toán Dijkstra trên bản đồ topo đầy đủ để tính shortest path. Vì vậy KHÔNG có sự 'phối hợp tính toán' (D sai - đó là distance-vector kiểu Bellman-Ford).\n4. Trao đổi 'khoảng cách' là đặc trưng của distance-vector (RIP, EIGRP), KHÔNG phải link-state (A sai).\n\nSo sánh nhanh:\n- Link-state: trao đổi link, mỗi router thấy toàn cảnh, tính SPT cục bộ.\n- Distance-vector: trao đổi vector khoảng cách, chỉ biết hàng xóm, phối hợp tính dần.",
+          "images": []
+        },
+        "tags": [
+          "routing",
+          "link-state"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q004",
+        "type": "single_choice",
+        "question": {
+          "text": "Mục đích của mã Checksum là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sửa lỗi xảy ra trong quá trình truyền dữ liệu"
+          },
+          {
+            "id": "B",
+            "text": "Báo hiệu cho bên gửi rằng dữ liệu đã bị hỏng"
+          },
+          {
+            "id": "C",
+            "text": "Bảo mật dữ liệu"
+          },
+          {
+            "id": "D",
+            "text": "Phát hiện lỗi xảy ra trong quá trình truyền dữ liệu"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - Phát hiện lỗi.\n\nChecksum là mã PHÁT HIỆN LỖI (Error Detection Code). Bên gửi tính checksum trên payload rồi gửi kèm trong header; bên nhận tính lại và so sánh:\n- Nếu khớp → giả định không có lỗi (xác suất lỗi không phát hiện được khá nhỏ).\n- Nếu không khớp → biết gói tin đã bị lỗi, thường loại bỏ.\n\nKhả năng còn lại:\n- A sai: checksum không sửa lỗi, chỉ phát hiện. Để SỬA cần ECC (Hamming, Reed-Solomon).\n- B sai: checksum không có cơ chế chủ động báo cho bên gửi (báo lỗi là chức năng của ARQ ở tầng cao hơn như TCP).\n- C sai: bảo mật cần mã hóa (AES, RSA), không phải checksum.",
+          "images": []
+        },
+        "tags": [
+          "checksum",
+          "phat-hien-loi"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q005",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Trong các gói tin TCP, gói nào được dùng để ĐÓNG kết nối? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SYN"
+          },
+          {
+            "id": "B",
+            "text": "ACK"
+          },
+          {
+            "id": "C",
+            "text": "FIN"
+          },
+          {
+            "id": "D",
+            "text": "SYN/ACK"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B (ACK) và C (FIN).\n\nQuy trình đóng kết nối TCP (4-way handshake):\n1. A gửi FIN → báo A đã hết dữ liệu.\n2. B gửi ACK → xác nhận đã nhận FIN của A.\n3. B gửi FIN → B cũng hết dữ liệu.\n4. A gửi ACK → xác nhận. Kết nối đóng hoàn toàn.\n\nVậy cả FIN và ACK đều là gói được dùng trong quy trình đóng.\n\nCác đáp án sai:\n- A (SYN) và D (SYN/ACK) thuộc quy trình MỞ kết nối (3-way handshake), không phải đóng.",
+          "images": []
+        },
+        "tags": [
+          "TCP",
+          "ket-noi"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q006",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi mới kết nối vào mạng và yêu cầu một địa chỉ IP mới, client gửi thông điệp DHCP nào ĐẦU TIÊN?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "DHCP Request"
+          },
+          {
+            "id": "B",
+            "text": "DHCP Discover"
+          },
+          {
+            "id": "C",
+            "text": "DHCP Offer"
+          },
+          {
+            "id": "D",
+            "text": "DHCP ACK"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - DHCP Discover.\n\nQuy trình DORA (Discover - Offer - Request - ACK):\n1. Client → broadcast DHCP DISCOVER tìm DHCP server (client chưa có IP, source = 0.0.0.0).\n2. Server → DHCP OFFER chứa IP đề xuất.\n3. Client → DHCP REQUEST chính thức xin IP đó.\n4. Server → DHCP ACK xác nhận, gán lease.\n\nBước đầu tiên là DISCOVER → đáp án B. Các đáp án khác đều xuất hiện ở các bước sau.",
+          "images": []
+        },
+        "tags": [
+          "DHCP",
+          "tang-ung-dung"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q007",
+        "type": "single_choice",
+        "question": {
+          "text": "Các yếu tố nào sau đây ảnh hưởng đến Round Trip Time (RTT) trong mạng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tất cả các yếu tố khác đều đúng"
+          },
+          {
+            "id": "B",
+            "text": "Tốc độ xử lý của nút nhận"
+          },
+          {
+            "id": "C",
+            "text": "Tốc độ xử lý của các thiết bị mạng"
+          },
+          {
+            "id": "D",
+            "text": "Tải trên đường truyền"
+          },
+          {
+            "id": "E",
+            "text": "Băng thông đường truyền"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A - Tất cả các yếu tố đều ảnh hưởng đến RTT.\n\nRTT = tổng các thành phần trễ trên đường đi cả 2 chiều:\n- Trễ xử lý ở đầu cuối (B đúng): CPU client/server xử lý gói tin.\n- Trễ xử lý ở các nút trung gian (C đúng): router/switch tra cứu định tuyến.\n- Trễ hàng đợi tại các nút trung gian (D đúng): khi mạng đông, gói tin đợi trong queue lâu hơn.\n- Trễ truyền tin (E đúng): kích thước gói chia cho băng thông (transmission delay).\n- Trễ lan truyền: khoảng cách vật lý chia tốc độ sóng.\n\nMỗi đáp án B, C, D, E đều mô tả một thành phần ảnh hưởng RTT, nên đáp án bao quát A là đúng.",
+          "images": []
+        },
+        "tags": [
+          "RTT",
+          "tre"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q008",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho một đường truyền có khả năng truyền 2^20 xung/giây. Tốc độ dữ liệu thu được khi dùng mã hóa NRZ-L là bao nhiêu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "100 Mbps"
+          },
+          {
+            "id": "B",
+            "text": "0.5 Mbps"
+          },
+          {
+            "id": "C",
+            "text": "10 Mbps"
+          },
+          {
+            "id": "D",
+            "text": "1 Mbps"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - 1 Mbps.\n\nMã hóa NRZ-L (Non-Return-to-Zero Level): mỗi xung tương ứng 1 bit, không có chuyển trạng thái giữa các bit cùng giá trị.\n→ Số bit/giây = số xung/giây = 2^20.\n\nQuy đổi:\n- 2^10 = 1024 ≈ 10^3 = 1 K\n- 2^20 = (2^10)^2 ≈ 10^6 = 1 M\n→ 2^20 bps ≈ 1 Mbps.\n\nLưu ý: Nếu là mã hóa Manchester thì cần 2 xung cho 1 bit → tốc độ chỉ còn 0.5 Mbps. Còn NRZ-L 1 xung/bit → 1 Mbps.",
+          "images": []
+        },
+        "tags": [
+          "ma-hoa",
+          "tang-vat-ly"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q009",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Trong hoạt động của giao thức TCP, bên gửi thực hiện những việc gì? (Chọn 3 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Yêu cầu thiết lập kết nối trước khi gửi"
+          },
+          {
+            "id": "B",
+            "text": "Chờ tín hiệu báo nhận (ACK)"
+          },
+          {
+            "id": "C",
+            "text": "Truyền lại dữ liệu khi có lỗi"
+          },
+          {
+            "id": "D",
+            "text": "Gửi dữ liệu với tốc độ nhanh nhất"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A, B, C.\n\nTCP là giao thức TIN CẬY, hướng kết nối. Bên gửi:\n- A đúng: 3-way handshake (SYN, SYN/ACK, ACK) thiết lập kết nối trước khi gửi dữ liệu.\n- B đúng: TCP dùng ACK + timeout để đảm bảo gói đến nơi.\n- C đúng: Khi timeout hoặc nhận 3 duplicate ACK, TCP retransmit.\n- D SAI: TCP có cơ chế kiểm soát tắc nghẽn (slow start, congestion avoidance, fast recovery) → KHÔNG gửi nhanh nhất có thể, mà điều tiết theo Cwnd và Rwnd. Việc gửi nhanh nhất là đặc điểm của UDP (không có flow/congestion control).",
+          "images": []
+        },
+        "tags": [
+          "TCP"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q010",
+        "type": "single_choice",
+        "question": {
+          "text": "Vấn đề mà điều khiển truy nhập đường truyền (MAC) giải quyết là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Điều khiển thứ tự truyền giữa 2 nút theo giao thức mạng"
+          },
+          {
+            "id": "B",
+            "text": "Điều khiển truyền dữ liệu giữa các nút mạng kết nối qua switch"
+          },
+          {
+            "id": "C",
+            "text": "Tránh nút gửi truyền quá nhanh gây nghẽn nút nhận"
+          },
+          {
+            "id": "D",
+            "text": "Điều khiển việc sử dụng đường truyền dùng chung khi nhiều nút muốn truyền dữ liệu cùng lúc"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D.\n\nĐiều khiển truy nhập đường truyền (Medium Access Control - MAC) là vấn đề ở tầng liên kết dữ liệu khi nhiều nút mạng dùng CHUNG một đường truyền vật lý (broadcast medium: Ethernet bus, WiFi, vệ tinh...). MAC quyết định nút nào được phát ở thời điểm nào để tránh đụng độ.\n\nCác đáp án sai:\n- A: Điều khiển thứ tự là vai trò của giao thức lớp cao (TCP sequence number).\n- B: Switch kết nối điểm-điểm full-duplex, không cần MAC (không có dùng chung medium).\n- C: Mô tả flow control (cửa sổ TCP), không phải MAC.",
+          "images": []
+        },
+        "tags": [
+          "MAC",
+          "tang-lien-ket-du-lieu"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q011",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Đặc điểm của phương pháp CSMA là gì? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Các nút sử dụng đường truyền một cách ngẫu nhiên"
+          },
+          {
+            "id": "B",
+            "text": "Nghe tín hiệu sóng mang trên đường truyền trước khi truyền"
+          },
+          {
+            "id": "C",
+            "text": "Các nút sử dụng đường truyền đồng thời, mỗi nút dùng mã riêng để truyền"
+          },
+          {
+            "id": "D",
+            "text": "Không có đáp án đúng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A và B.\n\nCSMA = Carrier Sense Multiple Access. Đặc trưng:\n- A đúng: Đây là một kỹ thuật RANDOM ACCESS - nút truyền khi có dữ liệu, không có lịch trước cố định.\n- B đúng: 'Carrier Sense' = trước khi truyền, nút lắng nghe để xem đường truyền có ai đang dùng (có sóng mang) không.\n- C SAI: Mô tả 'Code Division Multiple Access' (CDMA), không phải CSMA. CDMA dùng mã trải phổ để các nút truyền đồng thời.\n- D SAI vì A và B đều đúng.\n\nCSMA là nền tảng của Ethernet (CSMA/CD) và Wi-Fi (CSMA/CA).",
+          "images": []
+        },
+        "tags": [
+          "CSMA",
+          "MAC"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q012",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Trong hoạt động của giao thức UDP, bên nhận thực hiện những việc gì? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kiểm tra lỗi trong gói tin"
+          },
+          {
+            "id": "B",
+            "text": "Chuyển dữ liệu đến đúng ứng dụng"
+          },
+          {
+            "id": "C",
+            "text": "Đặt các gói đến không đúng thứ tự vào bộ đệm"
+          },
+          {
+            "id": "D",
+            "text": "Gửi tín hiệu báo nhận (ACK)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A và B.\n\nUDP là giao thức KHÔNG TIN CẬY, không hướng kết nối. Bên nhận UDP chỉ:\n- A đúng: Kiểm tra checksum trong header UDP để phát hiện lỗi → nếu lỗi thì DROP (không yêu cầu gửi lại).\n- B đúng: Dùng số hiệu cổng đích (destination port) để demultiplexing → chuyển gói lên ứng dụng đúng.\n- C SAI: Sắp xếp lại thứ tự là việc của TCP (dùng sequence number). UDP không quan tâm thứ tự.\n- D SAI: UDP không gửi ACK. Đó là đặc điểm của TCP.",
+          "images": []
+        },
+        "tags": [
+          "UDP"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q013",
+        "type": "single_choice",
+        "question": {
+          "text": "Bảng MAC của một switch có 4 entry: 11-11-11-aa-aa-aa→e1, 22-22-22-bb-bb-bb→e2, 33-33-33-cc-cc-cc→e3, 44-44-44-dd-dd-dd→e1. Switch nhận một frame trên cổng e2 với source=55-55-55-ee-ee-ee và dest=11-11-11-aa-aa-aa. Switch sẽ làm gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Loại bỏ (discard) frame"
+          },
+          {
+            "id": "B",
+            "text": "Gửi frame ra cổng e1"
+          },
+          {
+            "id": "C",
+            "text": "Gửi frame ra cổng e2"
+          },
+          {
+            "id": "D",
+            "text": "Gửi tin báo lỗi tới nút nguồn"
+          },
+          {
+            "id": "E",
+            "text": "Quảng bá ra mọi cổng trừ e2"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B.\n\nXử lý của switch khi nhận frame:\n1. Self-learning: source MAC 55-55-55-ee-ee-ee chưa có trong bảng → thêm entry mới '55-55-55-ee-ee-ee → e2' (vì frame đến trên cổng e2). Đây là cơ chế tự học.\n2. Forwarding: tra dest MAC 11-11-11-aa-aa-aa trong bảng → có entry chỉ cổng e1.\n3. Filter: vì cổng đích (e1) khác cổng nguồn (e2) → forward ra cổng e1. (Nếu cùng cổng thì filter, không gửi).\n\nKhông quảng bá (E sai) vì destination đã có trong bảng. Không discard (A sai) trừ khi dest = source port. Không gửi báo lỗi (D sai) - đó không phải chức năng switch.",
+          "images": []
+        },
+        "tags": [
+          "switch",
+          "MAC-table",
+          "self-learning"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q014",
+        "type": "single_choice",
+        "question": {
+          "text": "Các phương pháp mã hóa Manchester, NRZ-L và AMI Bipolar được dùng để làm gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Biểu diễn dữ liệu thành tín hiệu"
+          },
+          {
+            "id": "B",
+            "text": "Kiểm soát lỗi trong quá trình truyền dữ liệu trên kênh truyền"
+          },
+          {
+            "id": "C",
+            "text": "Bảo mật dữ liệu"
+          },
+          {
+            "id": "D",
+            "text": "Điều khiển luồng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A.\n\nĐây đều là các kỹ thuật MÃ HÓA ĐƯỜNG TRUYỀN (line coding) ở tầng VẬT LÝ. Chúng định nghĩa cách BIỂU DIỄN bit 0/1 thành tín hiệu vật lý (điện áp/xung):\n- NRZ-L: '1' = mức cao, '0' = mức thấp.\n- Manchester: '1' = chuyển từ thấp lên cao tại giữa bit; '0' = chuyển từ cao xuống thấp.\n- AMI Bipolar: '0' = 0V; '1' = xen kẽ +V/-V để cân bằng DC.\n\nKhông liên quan đến phát hiện lỗi (đó là CRC, checksum), bảo mật (mã hóa AES), hay flow control (cửa sổ TCP).",
+          "images": []
+        },
+        "tags": [
+          "ma-hoa",
+          "tang-vat-ly"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q015",
+        "type": "fill_gap",
+        "question": {
+          "text": "Hai tiến trình đang truyền TCP. Bên gửi có Cwnd = 14000 byte, ngưỡng ssthresh = 11200 byte. Bên gửi nhận một ACK báo thành công, với Receive Window = 65535 byte. Giả sử MSS = 1400 byte. Hỏi bên gửi có thể gửi tối đa bao nhiêu byte ở vòng tiếp theo? (chỉ ghi số, không kèm đơn vị)",
+          "images": []
+        },
+        "answer": {
+          "acceptedAnswers": [
+            "15400"
+          ],
+          "caseSensitive": false,
+          "trimWhitespace": true
+        },
+        "explanation": {
+          "text": "Đáp án: 15400 byte.\n\nBước 1: Xác định giai đoạn.\n- Cwnd = 14000 > ssthresh = 11200 → đang ở giai đoạn Congestion Avoidance (tránh tắc nghẽn).\n\nBước 2: Cập nhật Cwnd khi nhận ACK trong Congestion Avoidance.\n- Cwnd mới = Cwnd cũ + MSS = 14000 + 1400 = 15400 byte.\n\nBước 3: Tính cửa sổ gửi.\n- Swnd = min(Cwnd, Rwnd) = min(15400, 65535) = 15400 byte.\n\nVậy bên gửi có thể gửi tối đa 15400 byte.\n\n(Nếu vẫn ở giai đoạn Slow Start với Cwnd < ssthresh, Cwnd sẽ nhân đôi mỗi RTT chứ không phải +MSS.)",
+          "images": []
+        },
+        "tags": [
+          "TCP",
+          "congestion-control"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q016",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây về port number ở tầng ứng dụng là SAI?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Nó được dùng để xác định đường đi khi chuyển tiếp gói tin"
+          },
+          {
+            "id": "B",
+            "text": "Nó là số nguyên 16 bit"
+          },
+          {
+            "id": "C",
+            "text": "Các chương trình ứng dụng khác nhau trên một nút mạng phải đăng ký các port number khác nhau"
+          },
+          {
+            "id": "D",
+            "text": "Nó được dùng trong quá trình truyền thông giữa các ứng dụng ở tầng giao vận"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A (đây là phát biểu SAI).\n\nPort number CHỈ dùng để định danh ứng dụng (process/socket) trên cùng một host, KHÔNG được dùng cho định tuyến (routing). Việc chọn đường đi của gói tin dựa trên ĐỊA CHỈ IP đích (ở tầng mạng), không phải port.\n\nCác đáp án khác đều ĐÚNG:\n- B đúng: Port là 16-bit (0-65535).\n- C đúng: Mỗi ứng dụng phải dùng cặp (IP, port) duy nhất để demultiplexing tại bên nhận.\n- D đúng: Port number nằm trong header TCP/UDP tầng giao vận; được dùng để dispatch lên đúng socket.",
+          "images": []
+        },
+        "tags": [
+          "port",
+          "tang-giao-van"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q017",
+        "type": "single_choice",
+        "question": {
+          "text": "Có 6 mạng kết nối nhau dùng 5 router. Tổng có bao nhiêu bảng định tuyến đang được sử dụng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "6"
+          },
+          {
+            "id": "B",
+            "text": "1"
+          },
+          {
+            "id": "C",
+            "text": "11"
+          },
+          {
+            "id": "D",
+            "text": "5"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - 5.\n\nMỖI router có một bảng định tuyến RIÊNG để quyết định forwarding gói tin. Vì có 5 router → có 5 bảng định tuyến.\n\nLưu ý:\n- Số 'mạng' (6) không liên quan đến số bảng định tuyến (host nói chung không có bảng định tuyến đầy đủ, chỉ có default gateway).\n- Mỗi bảng định tuyến chứa nhiều entry cho các mạng đích khác nhau, không phải mỗi mạng có một bảng.",
+          "images": []
+        },
+        "tags": [
+          "routing",
+          "router"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q018",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong kỹ thuật Sliding Window, lượng dữ liệu tối đa mà bên gửi được phép truyền là bao nhiêu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bằng kích thước bộ đệm của bên nhận"
+          },
+          {
+            "id": "B",
+            "text": "Một gói tin"
+          },
+          {
+            "id": "C",
+            "text": "Bằng kích thước cửa sổ gửi của bên gửi"
+          },
+          {
+            "id": "D",
+            "text": "Bằng phần bộ đệm còn trống của bên nhận"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: C.\n\nTrong Sliding Window, bên gửi có thể gửi liên tiếp nhiều gói tin chưa được ACK miễn là TỔNG kích thước không vượt 'cửa sổ gửi' (Send Window). Cửa sổ gửi là khoảng [base, base+N-1] trong đó N là kích thước cửa sổ.\n\nCác đáp án sai:\n- A (kích thước buffer nhận): Buffer nhận tổng thể không phải giới hạn truyền tức thời. Phần còn trống mới quan trọng.\n- B (1 gói): Đó là Stop-and-Wait, không phải Sliding Window.\n- D (phần còn trống của buffer nhận): Đây thực ra là Rwnd. Trong TCP, cửa sổ gửi = min(Cwnd, Rwnd). Vẫn quy về 'cửa sổ gửi' của bên gửi, nên C tổng quát hơn và đúng hơn cho câu hỏi này.",
+          "images": []
+        },
+        "tags": [
+          "sliding-window"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q019",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Để có thể yêu cầu bên gửi truyền lại dữ liệu khi xảy ra lỗi, có thể áp dụng kỹ thuật nào sau đây? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Stop-and-wait"
+          },
+          {
+            "id": "B",
+            "text": "Go-Back-N"
+          },
+          {
+            "id": "C",
+            "text": "Checksum"
+          },
+          {
+            "id": "D",
+            "text": "Slow Start"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A và B.\n\nStop-and-Wait và Go-Back-N đều là kỹ thuật ARQ (Automatic Repeat reQuest) - có cơ chế ACK + timeout để truyền lại khi lỗi/mất gói:\n- A đúng: Stop-and-Wait: gửi 1 gói, đợi ACK; nếu timeout → retransmit.\n- B đúng: Go-Back-N: gửi cửa sổ N gói, nếu gói thứ k lỗi → truyền lại từ gói k trở đi.\n\nCác đáp án sai:\n- C (Checksum): Chỉ PHÁT HIỆN lỗi, không có cơ chế yêu cầu truyền lại.\n- D (Slow Start): Là cơ chế kiểm soát tắc nghẽn của TCP (tăng dần Cwnd), không phải kỹ thuật truyền lại.",
+          "images": []
+        },
+        "tags": [
+          "ARQ",
+          "Stop-and-Wait",
+          "Go-Back-N"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q020",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho đường truyền từ A đến B đi qua 3 kết nối có băng thông lần lượt 5 Mbps, 10 Mbps, 15 Mbps. Giả sử các kết nối này chỉ dùng truyền dữ liệu từ A đến B, trễ trên thiết bị không đáng kể, tỉ lệ mất gói = 0. Throughput trung bình từ A đến B là?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "10 Mbps"
+          },
+          {
+            "id": "B",
+            "text": "Không thể xác định"
+          },
+          {
+            "id": "C",
+            "text": "15 Mbps"
+          },
+          {
+            "id": "D",
+            "text": "5 Mbps"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - 5 Mbps.\n\nKhi gói tin đi qua chuỗi nhiều liên kết nối tiếp (in series), throughput end-to-end = min(các băng thông) = 'bottleneck link bandwidth'.\n\nỞ đây: min(5, 10, 15) = 5 Mbps. Liên kết 5 Mbps là cổ chai - dù phía sau có 10 hay 15 Mbps cũng không giúp được vì gói tin đến không đủ nhanh.\n\nĐây là kết quả cơ bản của định lý 'pipe' trong mạng: chuỗi pipe nối tiếp có lưu lượng giới hạn bởi đoạn hẹp nhất.",
+          "images": []
+        },
+        "tags": [
+          "throughput",
+          "bottleneck"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q021",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Khác biệt khi triển khai dịch vụ theo mô hình P2P so với Client-Server là gì? (Chọn 3 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không cần tất cả các nút thành phần duy trì kết nối liên tục"
+          },
+          {
+            "id": "B",
+            "text": "Không cần quản lý tài nguyên tập trung"
+          },
+          {
+            "id": "C",
+            "text": "Các nút mạng có thể vừa yêu cầu vừa cung cấp dịch vụ cho nút khác"
+          },
+          {
+            "id": "D",
+            "text": "Có điểm thắt cổ chai"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A, B, C.\n\nĐặc điểm P2P khác Client-Server:\n- A đúng: Nút P2P có thể online/offline tùy ý (intermittent connectivity), khác client-server nơi server phải luôn online.\n- B đúng: Không có trung tâm quản lý; tài nguyên (file, ổ đĩa, CPU) phân tán trên các peer.\n- C đúng: Mỗi peer vừa là client (yêu cầu) vừa là server (cung cấp). Đây là đặc trưng cốt lõi của P2P.\n- D SAI: 'Bottleneck' là nhược điểm của Client-Server (server tập trung), không phải P2P. P2P chia tải nên có khả năng mở rộng tốt.",
+          "images": []
+        },
+        "tags": [
+          "P2P",
+          "Client-Server"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q022",
+        "type": "fill_gap",
+        "question": {
+          "text": "Khi tài nguyên yêu cầu không được tìm thấy, web server gửi HTTP Response với mã trạng thái là bao nhiêu? (chỉ ghi số)",
+          "images": []
+        },
+        "answer": {
+          "acceptedAnswers": [
+            "404"
+          ],
+          "caseSensitive": false,
+          "trimWhitespace": true
+        },
+        "explanation": {
+          "text": "Đáp án: 404.\n\nHTTP 404 Not Found = server hiểu yêu cầu nhưng không tìm thấy tài nguyên ứng với URL.\n\nNhóm mã trạng thái HTTP:\n- 1xx: Informational (100 Continue).\n- 2xx: Success (200 OK, 201 Created).\n- 3xx: Redirection (301 Moved Permanently, 302 Found).\n- 4xx: Client Error (400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found).\n- 5xx: Server Error (500 Internal, 502 Bad Gateway, 503 Service Unavailable).",
+          "images": []
+        },
+        "tags": [
+          "HTTP"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q023",
+        "type": "single_choice",
+        "question": {
+          "text": "Làm thế nào để biết một địa chỉ IP có thuộc mạng cục bộ (cùng subnet) hay không?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không có cách nào đúng"
+          },
+          {
+            "id": "B",
+            "text": "Gửi gói tin tới Default Gateway"
+          },
+          {
+            "id": "C",
+            "text": "Gửi thông điệp RARP với địa chỉ IP của gói tin"
+          },
+          {
+            "id": "D",
+            "text": "So sánh IP và subnet mask"
+          },
+          {
+            "id": "E",
+            "text": "Kiểm tra địa chỉ IP và subnet mask"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - So sánh IP và subnet mask.\n\nThuật toán xác định 'cùng subnet':\n1. AND_bitwise(IP_đích, Subnet_mask) = phần network của IP đích.\n2. AND_bitwise(IP_local, Subnet_mask) = phần network của IP nguồn.\n3. Nếu 2 kết quả bằng nhau → cùng subnet → gửi trực tiếp (ARP).\n4. Nếu khác → khác subnet → gửi qua Default Gateway.\n\nCác đáp án sai:\n- B: Default Gateway chỉ dùng khi khác mạng, không dùng để KIỂM TRA.\n- C: RARP dùng để lấy IP từ MAC (đã lỗi thời, thay bằng DHCP), không liên quan kiểm tra subnet.",
+          "images": []
+        },
+        "tags": [
+          "subnet",
+          "IP"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q024",
+        "type": "fill_gap",
+        "question": {
+          "text": "Dữ liệu của gói tin truyền là 011010100101 (nhị phân). Checksum 4-bit gán cho dữ liệu là gì? (chỉ ghi giá trị nhị phân, không kèm ký tự khác)",
+          "images": []
+        },
+        "answer": {
+          "acceptedAnswers": [
+            "1001"
+          ],
+          "caseSensitive": false,
+          "trimWhitespace": true
+        },
+        "explanation": {
+          "text": "Đáp án: 1001.\n\nChia dữ liệu thành các nhóm 4 bit: 0110, 1010, 0101.\n\nCộng các nhóm bằng phép cộng nhị phân (sum + 1's complement wrap):\n- 0110 + 1010 = 10000 → wrap carry: 0000 + 1 = 0001 ... Hmm let's recompute.\n- 0110 + 1010 = 1.0000 (binary) → 16 trong thập phân. Wrap-around: bit tràn (1) cộng vào tổng → 0000 + 1 = 0001 ... wait\n\nThực tế: 0110+1010 = 16 = 10000. Carry out = 1, sum 4-bit = 0000. Wrap: 0000+1 = 0001.\n0001 + 0101 = 0110.\nChecksum = ~0110 = 1001.\n\nKiểm tra: 0110+1010+0101 = 6+10+5 = 21 = 10101. Wrap (lấy bit 4 cộng lại): 0101+1 = 0110. Lật bit → 1001. Đúng.",
+          "images": []
+        },
+        "tags": [
+          "checksum"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q025",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Lợi thế của chuyển mạch kênh (circuit switching) so với chuyển mạch gói (packet switching) là gì? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đảm bảo chất lượng dịch vụ tốt hơn"
+          },
+          {
+            "id": "B",
+            "text": "Hầu như không có trễ trung gian sau khi kênh được thiết lập"
+          },
+          {
+            "id": "C",
+            "text": "Sử dụng kênh truyền hiệu quả hơn"
+          },
+          {
+            "id": "D",
+            "text": "Giảm chi phí vận hành hệ thống mạng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A và B.\n\nĐặc điểm chuyển mạch kênh (circuit switching):\n- A đúng: Băng thông được dành riêng cho phiên → đảm bảo QoS tốt, tốc độ truyền ổn định, ít jitter.\n- B đúng: Sau khi thiết lập kênh, không có hàng đợi tại các nút trung gian → trễ rất nhỏ.\n- C SAI: Chuyển mạch gói SỬ DỤNG đường truyền HIỆU QUẢ HƠN do statistical multiplexing - khi không có dữ liệu thì băng thông được dùng cho phiên khác. Circuit switching lãng phí khi kênh idle.\n- D SAI: Circuit switching tốn nhiều thiết bị chuyên dụng, chi phí vận hành CAO hơn.",
+          "images": []
+        },
+        "tags": [
+          "circuit-switching",
+          "packet-switching"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q026",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong kiến trúc phân tầng (OSI/TCP-IP), tại bên nhận, thao tác nào sau đây có thể được thực hiện trong xử lý tại MỖI tầng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thêm header mới rồi chuyển xuống tầng dưới"
+          },
+          {
+            "id": "B",
+            "text": "Bỏ header, lấy phần body chuyển lên tầng trên"
+          },
+          {
+            "id": "C",
+            "text": "Phân mảnh gói tin"
+          },
+          {
+            "id": "D",
+            "text": "Thay header cũ bằng header mới rồi chuyển lên tầng trên"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B.\n\nQuy trình DECAPSULATION (de-encapsulation) tại bên nhận:\n- Mỗi tầng nhận PDU từ tầng dưới chuyển lên.\n- Tách header riêng (xử lý header để biết PDU cần gửi tới ứng dụng/giao thức nào ở tầng cao hơn).\n- Body (payload) được chuyển lên tầng trên xử lý tiếp.\n\nCác đáp án sai:\n- A: 'Thêm header' là encapsulation - đó là việc của bên GỬI, không phải bên NHẬN.\n- C: Phân mảnh thường chỉ xảy ra ở bên gửi hoặc router (khi MTU không đủ), không phải bên nhận.\n- D: Header không được 'thay thế' giữa các tầng; mỗi tầng có header của riêng nó, được lột ra khi đi lên.",
+          "images": []
+        },
+        "tags": [
+          "mo-hinh-phan-tang",
+          "OSI",
+          "encapsulation"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q027",
+        "type": "fill_gap",
+        "question": {
+          "text": "Số hiệu cổng dịch vụ dùng cho phân giải tên miền (DNS) là bao nhiêu? (chỉ ghi số)",
+          "images": []
+        },
+        "answer": {
+          "acceptedAnswers": [
+            "53"
+          ],
+          "caseSensitive": false,
+          "trimWhitespace": true
+        },
+        "explanation": {
+          "text": "Đáp án: 53.\n\nDNS chạy trên cả UDP và TCP cổng 53:\n- UDP 53: dùng cho query/response thông thường (đa số trường hợp, payload ngắn).\n- TCP 53: dùng cho zone transfer (giữa các DNS server) hoặc khi response > 512 byte.\n\nMột số port well-known phổ biến:\n- 20/21 FTP, 22 SSH, 23 Telnet, 25 SMTP, 53 DNS, 80 HTTP, 110 POP3, 143 IMAP, 443 HTTPS, 25 SMTP, 67/68 DHCP.",
+          "images": []
+        },
+        "tags": [
+          "DNS",
+          "port"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q028",
+        "type": "single_choice",
+        "question": {
+          "text": "Mục đích của quá trình định tuyến là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tìm đường giữa 2 router"
+          },
+          {
+            "id": "B",
+            "text": "Tìm đường giữa 2 switch"
+          },
+          {
+            "id": "C",
+            "text": "Tìm đường tới router default gateway"
+          },
+          {
+            "id": "D",
+            "text": "Tìm đường giữa 2 máy tính trong cùng mạng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A.\n\nĐịnh tuyến (routing) hoạt động ở tầng MẠNG, chịu trách nhiệm tìm đường đi tốt nhất giữa các ROUTER trên Internet (xa hơn: giữa 2 mạng khác nhau).\n\n- A đúng: Định tuyến tính tuyến đường từ router nguồn → router đích.\n- B sai: Switch hoạt động tầng 2 (data-link), không cần định tuyến.\n- C sai: 'Tới default gateway' là việc của subnet matching ở host, không phải định tuyến trên mạng diện rộng.\n- D sai: Trong cùng một mạng, hai máy giao tiếp trực tiếp qua MAC (switching), không cần routing.",
+          "images": []
+        },
+        "tags": [
+          "routing"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q029",
+        "type": "single_choice",
+        "question": {
+          "text": "Trường nào trong header IP packet được dùng để xác định loại dữ liệu (giao thức tầng trên) mà gói IP đang mang?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Protocol"
+          },
+          {
+            "id": "B",
+            "text": "Type of Service"
+          },
+          {
+            "id": "C",
+            "text": "Identification"
+          },
+          {
+            "id": "D",
+            "text": "Checksum"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A - Protocol.\n\nTrường 'Protocol' (8 bit) trong header IPv4 cho biết payload là giao thức tầng trên nào → giúp demultiplexing:\n- 1 = ICMP\n- 6 = TCP\n- 17 = UDP\n- 89 = OSPF\n- 50/51 = IPsec ESP/AH\n\nCác trường khác:\n- Type of Service (TOS / DSCP): chất lượng dịch vụ.\n- Identification: ID gói để ráp các mảnh phân mảnh.\n- Checksum: phát hiện lỗi của header.",
+          "images": []
+        },
+        "tags": [
+          "IP-header"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q030",
+        "type": "fill_gap",
+        "question": {
+          "text": "Mạng 172.18.0.0/16 chia thành các subnet với netmask 255.255.255.0. Hỏi có thể tạo bao nhiêu subnet?",
+          "images": []
+        },
+        "answer": {
+          "acceptedAnswers": [
+            "256"
+          ],
+          "caseSensitive": false,
+          "trimWhitespace": true
+        },
+        "explanation": {
+          "text": "Đáp án: 256.\n\n- Mạng ban đầu: 172.18.0.0/16, prefix dài 16 bit.\n- Netmask mới: 255.255.255.0 = /24, prefix dài 24 bit.\n- Số bit dùng để tạo subnet = 24 - 16 = 8 bit.\n- Số subnet = 2^8 = 256.\n\nVí dụ các subnet: 172.18.0.0/24, 172.18.1.0/24, …, 172.18.255.0/24.",
+          "images": []
+        },
+        "tags": [
+          "subnet"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q031",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Đặc điểm của mạng dùng phương pháp chuyển mạch kênh là gì? (Chọn 3 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kênh được thiết lập trước khi truyền"
+          },
+          {
+            "id": "B",
+            "text": "Gói tin được truyền ngay lập tức"
+          },
+          {
+            "id": "C",
+            "text": "Các gói tin có thể đến đích không đúng thứ tự"
+          },
+          {
+            "id": "D",
+            "text": "Các gói trong cùng phiên giữa 2 nút luôn đi cùng đường"
+          },
+          {
+            "id": "E",
+            "text": "Tài nguyên được cấp riêng cho mỗi phiên giữa 2 nút"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D",
+            "E",
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A, D, E.\n\nChuyển mạch kênh (circuit switching):\n- A đúng: Phải có giai đoạn 'thiết lập cuộc gọi' để dành kênh trước khi truyền dữ liệu.\n- D đúng: Tất cả dữ liệu trong phiên đi theo CÙNG một đường đã thiết lập.\n- E đúng: Băng thông/khe thời gian dành riêng (dedicated) cho phiên - không chia sẻ với phiên khác.\n\nCác đáp án sai:\n- B: Không thể truyền ngay - phải chờ kênh được thiết lập trước.\n- C: Do tất cả gói cùng đường, gói luôn ĐẾN ĐÚNG THỨ TỰ. Out-of-order là đặc trưng của packet switching.",
+          "images": []
+        },
+        "tags": [
+          "circuit-switching"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q032",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Lợi thế của UDP so với TCP là (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tốc độ truyền nhanh hơn"
+          },
+          {
+            "id": "B",
+            "text": "Đơn giản hơn"
+          },
+          {
+            "id": "C",
+            "text": "Tin cậy hơn"
+          },
+          {
+            "id": "D",
+            "text": "Không gây tắc nghẽn đường truyền"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A và B.\n\nUDP đơn giản và nhanh hơn TCP:\n- A đúng: UDP không có handshake, không có ACK/retransmit, không có congestion control → gửi ngay lập tức, tốc độ cao hơn.\n- B đúng: Header UDP chỉ 8 byte (4 trường: src port, dest port, length, checksum) - rất đơn giản so với TCP 20-60 byte với nhiều trường.\n- C SAI: TCP TIN CẬY hơn UDP (UDP không đảm bảo gói đến nơi và đúng thứ tự).\n- D SAI: UDP CÓ thể gây tắc nghẽn vì không có congestion control. TCP mới là giao thức có cơ chế tránh tắc nghẽn.",
+          "images": []
+        },
+        "tags": [
+          "UDP",
+          "TCP"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q033",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Giao thức nào sau đây thuộc tầng giao vận (transport)? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "IP"
+          },
+          {
+            "id": "B",
+            "text": "TCP"
+          },
+          {
+            "id": "C",
+            "text": "UDP"
+          },
+          {
+            "id": "D",
+            "text": "HTTP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B (TCP) và C (UDP).\n\nPhân tầng các giao thức phổ biến:\n- Tầng ứng dụng: HTTP, HTTPS, DNS, FTP, SMTP, IMAP, POP3, DHCP, Telnet, SSH.\n- Tầng giao vận: TCP, UDP, SCTP, QUIC.\n- Tầng mạng: IP (IPv4/IPv6), ICMP, IGMP, ARP, OSPF, BGP, RIP.\n- Tầng liên kết dữ liệu: Ethernet, PPP, MAC, ARP.\n- Tầng vật lý: 10BASE-T, fiber, Wi-Fi PHY.\n\nA (IP) thuộc tầng mạng. D (HTTP) thuộc tầng ứng dụng.",
+          "images": []
+        },
+        "tags": [
+          "mo-hinh-phan-tang",
+          "TCP",
+          "UDP"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q034",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi truyền dữ liệu từ máy A đến máy B, gói tin đi qua 13 router. Hỏi gói tin đi qua bao nhiêu chặng/đoạn mạng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "24"
+          },
+          {
+            "id": "B",
+            "text": "1"
+          },
+          {
+            "id": "C",
+            "text": "13"
+          },
+          {
+            "id": "D",
+            "text": "14"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - 14.\n\nKhi có 13 router giữa A và B:\n[A] — đoạn 1 — [R1] — đoạn 2 — [R2] — … — [R13] — đoạn 14 — [B]\n\nVới N router trung gian, gói tin sẽ đi qua N+1 đoạn mạng (link). N=13 → 14 đoạn.\n\nLưu ý: 'hop count' đôi khi đếm số router (=13), còn 'số đoạn mạng/segment' đếm số link giữa các thiết bị (=14).",
+          "images": []
+        },
+        "tags": [
+          "routing",
+          "hop"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q035",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi nhận một gói tin có TTL=0, nút mạng báo lỗi bằng thông điệp nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "ICMP Echo Request"
+          },
+          {
+            "id": "B",
+            "text": "ICMP Echo Reply"
+          },
+          {
+            "id": "C",
+            "text": "ICMP Destination Network Unknown"
+          },
+          {
+            "id": "D",
+            "text": "ICMP Time Exceeded"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - ICMP Time Exceeded.\n\nTTL (Time To Live) là 8-bit trong header IPv4, giảm 1 mỗi khi qua router. Khi TTL về 0 mà chưa tới đích:\n- Router DROP gói.\n- Gửi ICMP Type 11 'Time Exceeded' về source.\n\nĐây là cơ chế giúp tránh loop định tuyến và là cơ sở để 'traceroute' hoạt động (gửi packet với TTL tăng dần 1, 2, 3, … để phát hiện từng router trên đường).\n\nCác loại khác:\n- ICMP Echo Request (8) / Echo Reply (0): dùng cho ping.\n- ICMP Destination Unreachable (3): khi không tới được đích.",
+          "images": []
+        },
+        "tags": [
+          "ICMP",
+          "TTL"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q036",
+        "type": "single_choice",
+        "question": {
+          "text": "Mục đích của cơ chế tự học (self-learning) của switch là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Để chuyển dữ liệu trong topology bus LAN"
+          },
+          {
+            "id": "B",
+            "text": "Để chuyển dữ liệu trong WLAN"
+          },
+          {
+            "id": "C",
+            "text": "Để chuyển dữ liệu giữa các mạng (network)"
+          },
+          {
+            "id": "D",
+            "text": "Để chuyển dữ liệu trong topology điểm-điểm LAN"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - Switched LAN (mạng LAN điểm-điểm có chuyển mạch).\n\nSwitch tự học (self-learning) hoạt động trong môi trường SWITCHED LAN nơi mỗi host kết nối điểm-điểm với switch. Cơ chế:\n1. Khi frame đến, switch ghi nhớ source MAC + port nguồn vào MAC table.\n2. Khi cần forward, switch tra cứu MAC table để biết port nào dẫn tới đích.\n3. Nếu không có entry → flood ra mọi port trừ cổng đến.\n\nBus LAN truyền thống không có switch (dùng CSMA/CD trên đường dùng chung). WLAN dùng AP, không phải switch tự học theo nghĩa truyền thống. Routing mới là chuyển giữa các mạng.",
+          "images": []
+        },
+        "tags": [
+          "switch",
+          "self-learning",
+          "LAN"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q037",
+        "type": "single_choice",
+        "question": {
+          "text": "Tầng Vật lý (Physical) trong mô hình OSI thực hiện chức năng gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kiểm tra dữ liệu nhận có lỗi không"
+          },
+          {
+            "id": "B",
+            "text": "Đánh số các gói tin gửi đi"
+          },
+          {
+            "id": "C",
+            "text": "Đóng gói dữ liệu thành các gói (packets)"
+          },
+          {
+            "id": "D",
+            "text": "Biểu diễn bit thành tín hiệu và ngược lại"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - Biểu diễn bit thành tín hiệu và ngược lại.\n\nChức năng tầng Vật lý (OSI Layer 1):\n- Mã hóa bit thành tín hiệu điện/quang/sóng vô tuyến tại bên gửi.\n- Giải mã tín hiệu thành bit tại bên nhận.\n- Định nghĩa đặc tả vật lý của cáp/đầu nối, mức điện áp, tần số.\n\nCác chức năng sai vị trí:\n- A (kiểm tra lỗi): Tầng liên kết dữ liệu (CRC/checksum).\n- B (đánh số gói): Tầng giao vận (TCP sequence number).\n- C (đóng gói thành packet): Tầng mạng (IP packet).",
+          "images": []
+        },
+        "tags": [
+          "OSI",
+          "tang-vat-ly"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q038",
+        "type": "single_choice",
+        "question": {
+          "text": "Topology nào sử dụng đường truyền dùng chung cho tất cả các nút?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Star topology"
+          },
+          {
+            "id": "B",
+            "text": "Ring topology"
+          },
+          {
+            "id": "C",
+            "text": "Mesh topology"
+          },
+          {
+            "id": "D",
+            "text": "Bus topology"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - Bus topology.\n\nBus topology: tất cả các nút mạng kết nối vào MỘT đường truyền chính (bus). Mọi tín hiệu được lan truyền tới tất cả các nút → cần cơ chế MAC như CSMA/CD để tránh đụng độ.\n\nCác topology khác:\n- Star: tất cả nút kết nối tới hub/switch trung tâm. Không dùng chung đường truyền giữa các nút.\n- Ring: các nút kết nối thành vòng tròn (point-to-point), truyền theo chiều.\n- Mesh: mỗi cặp nút có liên kết riêng (full mesh) hoặc một số kết nối phụ.",
+          "images": []
+        },
+        "tags": [
+          "topology"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q039",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Phát biểu nào đúng về ứng dụng ở tầng ứng dụng (application)? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sử dụng socket để truyền dữ liệu"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ cần được triển khai trên các end-system"
+          },
+          {
+            "id": "C",
+            "text": "Phải tự cài cơ chế đảm bảo truyền tin cậy"
+          },
+          {
+            "id": "D",
+            "text": "Chọn đường đi tốt nhất để truyền dữ liệu"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A và B.\n\nỨng dụng tầng ứng dụng:\n- A đúng: Dùng API socket để giao tiếp với tầng giao vận (TCP/UDP).\n- B đúng: Chỉ chạy trên END SYSTEMS (client + server), không chạy trên router/switch ở giữa. Đây là nguyên lý 'end-to-end' của Internet.\n- C SAI: Tin cậy là trách nhiệm của TẦNG GIAO VẬN (TCP). Ứng dụng có thể tin cậy nó.\n- D SAI: Chọn đường (routing) là trách nhiệm của TẦNG MẠNG.",
+          "images": []
+        },
+        "tags": [
+          "tang-ung-dung",
+          "socket"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q040",
+        "type": "fill_gap",
+        "question": {
+          "text": "Cần gán địa chỉ cho 103 máy. Để giảm thiểu lãng phí địa chỉ, nên dùng netmask nào? (nhập dạng thập phân, ví dụ: 255.255.255.0)",
+          "images": []
+        },
+        "answer": {
+          "acceptedAnswers": [
+            "255.255.255.128"
+          ],
+          "caseSensitive": false,
+          "trimWhitespace": true
+        },
+        "explanation": {
+          "text": "Đáp án: 255.255.255.128.\n\nCần ít nhất 103 host + 2 địa chỉ đặc biệt (network và broadcast) → cần ít nhất 105 địa chỉ.\n\nTìm số bit host (h):\n- 2^h - 2 ≥ 103 (trừ network và broadcast).\n- 2^6 - 2 = 62 < 103 → không đủ.\n- 2^7 - 2 = 126 ≥ 103 → đủ. Vậy h = 7 bit host.\n\nNetmask = /32 - 7 = /25 → trong dạng thập phân: 255.255.255.128.\n\n(255.255.255.128 = 11111111.11111111.11111111.10000000 = 25 bit '1' = /25).",
+          "images": []
+        },
+        "tags": [
+          "subnet",
+          "netmask"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q041",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Thay đổi của HTTP 1.1 so với HTTP 1.0 là: (Chọn 3 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thiết lập kết nối bền (persistent) để gửi nhiều request/response trên cùng một kết nối TCP"
+          },
+          {
+            "id": "B",
+            "text": "Đưa vào cơ chế pipelining để tăng tốc độ truyền dữ liệu"
+          },
+          {
+            "id": "C",
+            "text": "Thêm method mới cho HTTP Request"
+          },
+          {
+            "id": "D",
+            "text": "Dùng cơ chế truyền tin cậy để đảm bảo gói đến nơi"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A, B, C.\n\nCải tiến HTTP/1.1 so với HTTP/1.0:\n- A đúng: 'Keep-Alive' / 'Connection: keep-alive' mặc định → một TCP connection phục vụ nhiều request, giảm overhead handshake.\n- B đúng: Pipelining cho phép gửi nhiều request mà không đợi response từng cái.\n- C đúng: Thêm các method mới như OPTIONS, PUT, DELETE, TRACE, CONNECT (HTTP/1.0 chỉ có GET, HEAD, POST).\n\nD SAI: Cả HTTP/1.0 và HTTP/1.1 đều dùng TCP (đã tin cậy sẵn ở tầng dưới), không phải HTTP/1.1 tự đưa vào cơ chế tin cậy.",
+          "images": []
+        },
+        "tags": [
+          "HTTP"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q042",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Phát biểu nào ĐÚNG về root server trong DNS? (Chọn 2 đáp án)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Quản lý thông tin của các TLD server (top-level domain)"
+          },
+          {
+            "id": "B",
+            "text": "Lưu trữ thông tin của tất cả các domain trên Internet"
+          },
+          {
+            "id": "C",
+            "text": "Không phản hồi DNS Query truy vấn domain name"
+          },
+          {
+            "id": "D",
+            "text": "Được triển khai ở nhiều vị trí khác nhau trên Internet"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D",
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A và D.\n\nDNS root servers:\n- A đúng: Root server trả về thông tin về TLD server (.com, .net, .vn, .org, …). Đây là tầng cao nhất của hệ thống phân giải tên miền.\n- D đúng: Có 13 'logical' root servers (A → M), nhưng mỗi cái thực ra triển khai dạng anycast - nhân bản tại hàng trăm location trên thế giới để tăng độ sẵn sàng và giảm trễ.\n\nCác đáp án sai:\n- B SAI: Root KHÔNG lưu thông tin chi tiết tất cả domain (việc đó của TLD và authoritative servers). Root chỉ biết TLD nameserver.\n- C SAI: Root server CÓ phản hồi DNS Query - đó là chức năng cốt lõi của nó, chỉ có điều nó refer xuống TLD chứ không trả lời IP đích trực tiếp.",
+          "images": []
+        },
+        "tags": [
+          "DNS",
+          "root-server"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q043",
+        "type": "single_choice",
+        "question": {
+          "text": "Một cặp truyền dữ liệu dùng TCP. Cwnd = 21000 byte, ssthresh = 16800 byte, Rwnd = 16800 byte. Nếu xảy ra timeout, lượng dữ liệu tối đa bên gửi có thể gửi là bao nhiêu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "1 MSS"
+          },
+          {
+            "id": "B",
+            "text": "16800 byte"
+          },
+          {
+            "id": "C",
+            "text": "21000 byte"
+          },
+          {
+            "id": "D",
+            "text": "21000 + 1 MSS byte"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A - 1 MSS.\n\nKhi TCP phát hiện TIMEOUT, đây được coi là dấu hiệu mất gói nghiêm trọng (mạng tắc nghẽn nặng):\n1. ssthresh = max(Cwnd/2, 2*MSS) (giảm còn một nửa).\n2. Cwnd = 1 MSS (reset về tối thiểu).\n3. Quay lại giai đoạn SLOW START.\n\nCửa sổ gửi sau timeout = min(Cwnd, Rwnd) = min(1 MSS, 16800) = 1 MSS.\n\nKhác với '3 duplicate ACK' (fast retransmit/recovery) - trường hợp đó dùng cơ chế Fast Recovery: Cwnd giảm còn ssthresh + 3*MSS chứ không phải reset về 1 MSS.",
+          "images": []
+        },
+        "tags": [
+          "TCP",
+          "timeout",
+          "congestion-control"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

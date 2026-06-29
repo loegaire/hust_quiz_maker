@@ -1,0 +1,1063 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "ai-trac-nghiem-tuan-1-5",
+    "title": "Trí tuệ nhân tạo (AI) - Trắc nghiệm tuần 1 & 5",
+    "description": "Câu hỏi trắc nghiệm AI tuần 1 (Giới thiệu, Tác tử) và tuần 5 (Tìm kiếm thỏa mãn ràng buộc). Bao gồm 10 câu trích xuất từ bài kiểm tra trên BKElearning và các câu bổ sung về CSP, PEAS, môi trường tác tử.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Trích xuất từ 'Trắc nghiệm tuần 1_ Attempt review.pdf' và 'Trắc nghiệm tuần 5_ Attempt review.pdf' (BL-IT3160-168453 - Nhập môn Trí tuệ nhân tạo, HUST). Bổ sung thêm câu hỏi về CSP, tác tử, môi trường."
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q001",
+        "type": "single_choice",
+        "question": {
+          "text": "Kiểm tra Turing (Turing test) để trả lời cho câu hỏi nào dưới đây?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Máy tính có thể suy nghĩ thông minh (như con người) không?"
+          },
+          {
+            "id": "B",
+            "text": "Máy tính có thể suy nghĩ và hành động hợp lý không?"
+          },
+          {
+            "id": "C",
+            "text": "Máy tính có thể suy nghĩ hợp lý không?"
+          },
+          {
+            "id": "D",
+            "text": "Máy tính có thể hành động thông minh (như con người) không?"
+          },
+          {
+            "id": "E",
+            "text": "Máy tính có thể hành động hợp lý không?"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - Máy tính có thể hành động thông minh (như con người) không?\n\nKiểm tra Turing (1950) được thiết kế để trả lời câu hỏi: 'Máy tính có thể HÀNH ĐỘNG thông minh như con người không?' — thuộc trường phái 'Acting humanly' (hành động giống người).\n\nCách thức Turing test:\n- Một người thẩm vấn (interrogator) giao tiếp qua văn bản với 2 đối tượng: 1 người thật và 1 máy tính.\n- Nếu thẩm vấn viên KHÔNG PHÂN BIỆT ĐƯỢC đâu là máy, đâu là người → máy đã vượt qua bài test.\n- Quan trọng: test đánh giá HÀNH ĐỘNG (output/phản hồi), KHÔNG đánh giá quá trình suy nghĩ bên trong.\n\n4 trường phái AI (Russell & Norvig):\n1. Thinking humanly (suy nghĩ giống người) — cognitive modeling\n2. Thinking rationally (suy nghĩ hợp lý) — logic-based\n3. Acting humanly (hành động giống người) — Turing test ← ĐÂY\n4. Acting rationally (hành động hợp lý) — rational agent\n\nCác đáp án sai:\n- A: 'Suy nghĩ thông minh' → Thinking humanly, không phải Turing test.\n- B, C, E: Liên quan đến 'hợp lý' (rationally), Turing test đánh giá 'giống người' (humanly), không phải 'hợp lý'.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "turing-test",
+          "lich-su-ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q002",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Các sự kiện nào sau đây thể hiện sự phát triển trong lĩnh vực trí tuệ nhân tạo giai đoạn 1980-1990?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hệ thống AlphaGo của Google đánh bại kỳ thủ cờ vây hàng đầu"
+          },
+          {
+            "id": "B",
+            "text": "Sự xuất hiện bùng nổ của các hệ chuyên gia"
+          },
+          {
+            "id": "C",
+            "text": "Trí tuệ nhân tạo trở thành một lĩnh vực khoa học"
+          },
+          {
+            "id": "D",
+            "text": "Chương trình cờ vua Samuel"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - Sự xuất hiện bùng nổ của các hệ chuyên gia.\n\nCác mốc lịch sử AI theo giai đoạn:\n\n• 1943-1956 (Giai đoạn hình thành): Mô hình neuron McCulloch-Pitts (1943), Alan Turing đề xuất Turing test (1950), hội nghị Dartmouth (1956) — AI chính thức trở thành lĩnh vực khoa học → C thuộc giai đoạn này.\n\n• 1952-1969 (Thời kỳ lạc quan): Chương trình cờ vua Samuel (1952-1967), GPS, LISP → D thuộc giai đoạn này.\n\n• 1980-1990 (Hệ chuyên gia bùng nổ): R1/XCON (1982, tiết kiệm 40 triệu USD/năm cho DEC), MYCIN, DENDRAL. Ngành công nghiệp AI đạt hàng tỷ USD. Đây là 'AI boom' nhờ hệ chuyên gia (expert systems) → B đúng.\n\n• 2010s-nay (Deep Learning): AlphaGo đánh bại Lee Sedol (2016) → A thuộc giai đoạn này, KHÔNG phải 1980-1990.\n\nKết luận: Chỉ B đúng cho giai đoạn 1980-1990.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "lich-su-ai"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q003",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Những thông tin nào dưới đây liên quan đến hệ thống hỏi đáp Watson của IBM được xem là thành tựu phát triển của Trí tuệ nhân tạo?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thu thập thông tin từ hàng triệu trang Web"
+          },
+          {
+            "id": "B",
+            "text": "Khả năng biểu diễn tri thức, giải quyết vấn đề"
+          },
+          {
+            "id": "C",
+            "text": "Khả năng xử lý ngôn ngữ tự nhiên"
+          },
+          {
+            "id": "D",
+            "text": "Hệ thống cơ cấu cơ khí để bấm nút câu hỏi"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A, B, C.\n\nIBM Watson (2011) nổi tiếng khi chiến thắng chương trình Jeopardy!, thể hiện nhiều thành tựu AI:\n\n✅ A - Thu thập thông tin từ hàng triệu trang Web: Watson được huấn luyện trên 200 triệu trang nội dung, bao gồm toàn bộ Wikipedia. Đây là thành tựu về xử lý và lưu trữ dữ liệu lớn (Big Data + Information Retrieval).\n\n✅ B - Khả năng biểu diễn tri thức, giải quyết vấn đề: Watson sử dụng nhiều thuật toán AI (machine learning, NLP, knowledge representation) để phân tích câu hỏi, tìm kiếm tri thức, đánh giá độ tin cậy và đưa ra câu trả lời → thành tựu AI.\n\n✅ C - Khả năng xử lý ngôn ngữ tự nhiên (NLP): Watson phải hiểu câu hỏi tiếng Anh tự nhiên với cách chơi chữ, ẩn dụ, mỉa mai → NLP là thành phần cốt lõi.\n\n❌ D - Hệ thống cơ cấu cơ khí để bấm nút: Watson hoạt động hoàn toàn bằng phần mềm, sử dụng tín hiệu điện tử để 'bấm nút'. Không có cơ cấu CƠ KHÍ nào, và dù có thì đây cũng không phải thành tựu AI mà là kỹ thuật cơ khí đơn thuần.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "lich-su-ai",
+          "nlp"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q004",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Chọn các thành phần cơ bản của trí tuệ nhân tạo:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Suy diễn (reasoning)"
+          },
+          {
+            "id": "B",
+            "text": "Nghe (listening)"
+          },
+          {
+            "id": "C",
+            "text": "Hiểu ngôn ngữ"
+          },
+          {
+            "id": "D",
+            "text": "Giải trí"
+          },
+          {
+            "id": "E",
+            "text": "Học tập (learning)"
+          },
+          {
+            "id": "F",
+            "text": "Biểu diễn tri thức"
+          },
+          {
+            "id": "G",
+            "text": "Nói (talking)"
+          },
+          {
+            "id": "H",
+            "text": "Chạy (running)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "C",
+            "E",
+            "F"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A (Suy diễn), C (Hiểu ngôn ngữ), E (Học tập), F (Biểu diễn tri thức).\n\nCác thành phần cơ bản của AI theo Russell & Norvig và các giáo trình chuẩn:\n\n✅ A - Suy diễn (Reasoning): Khả năng suy luận logic, đưa ra kết luận từ các tiền đề → thành phần cốt lõi.\n✅ C - Hiểu ngôn ngữ (Natural Language Understanding): Xử lý ngôn ngữ tự nhiên (NLP) để giao tiếp, hiểu văn bản → thành phần quan trọng.\n✅ E - Học tập (Learning/Machine Learning): Khả năng cải thiện hiệu suất qua kinh nghiệm/dữ liệu → thành phần nền tảng.\n✅ F - Biểu diễn tri thức (Knowledge Representation): Lưu trữ và tổ chức tri thức để máy sử dụng → thành phần cơ bản.\n\nCác đáp án sai:\n❌ B - Nghe (listening): Đây là chức năng vật lý/cảm biến, không phải thành phần AI cơ bản (speech recognition là ứng dụng, không phải thành phần nền tảng).\n❌ D - Giải trí: Không liên quan đến AI.\n❌ G - Nói (talking): Tương tự B, là chức năng output vật lý.\n❌ H - Chạy (running): Hoạt động vật lý, không phải thành phần AI.\n\nLưu ý: Ngoài 4 thành phần trên, AI còn có các thành phần khác như: nhận dạng mẫu (pattern recognition), lập kế hoạch (planning), thị giác máy tính (computer vision).",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "thanh-phan-ai"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q005",
+        "type": "single_choice",
+        "question": {
+          "text": "Mục đích khi phát triển một tác tử hợp lý là làm cho máy:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hành động như con người"
+          },
+          {
+            "id": "B",
+            "text": "Hành động hợp lý"
+          },
+          {
+            "id": "C",
+            "text": "Suy nghĩ như con người"
+          },
+          {
+            "id": "D",
+            "text": "Suy nghĩ hợp lý"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - Hành động hợp lý (Acting rationally).\n\nTrong 4 trường phái AI:\n1. Thinking humanly — mô phỏng quá trình tư duy con người (cognitive science)\n2. Thinking rationally — suy luận logic hình thức (logic-based AI)\n3. Acting humanly — hành động giống người (Turing test)\n4. Acting rationally — hành động hợp lý (rational agent) ← ĐÂY\n\nTác tử hợp lý (Rational agent) là trường phái AI hiện đại được ưa chuộng nhất:\n- Mục tiêu: Máy luôn chọn hành động TỐT NHẤT (maximize expected performance measure) dựa trên tri thức hiện có.\n- KHÔNG cần suy nghĩ giống con người (có thể dùng phương pháp khác con người nhưng vẫn đạt kết quả tốt).\n- KHÔNG cần hành động giống con người (hành động hợp lý có thể KHÁC cách con người hành động).\n- KHÔNG chỉ suy nghĩ hợp lý (suy nghĩ hợp lý là cần thiết nhưng chưa đủ — cần HÀNH ĐỘNG dựa trên suy nghĩ đó).\n\nĐịnh nghĩa chính xác: Rational agent = agent that acts so as to achieve the best outcome or, when there is uncertainty, the best expected outcome.\n\nVì vậy đáp án là B, không phải D (suy nghĩ hợp lý chỉ là phương tiện, hành động hợp lý mới là mục đích).",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "tac-tu",
+          "rational-agent"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q006",
+        "type": "single_choice",
+        "question": {
+          "text": "Xét cây tìm kiếm Minimax với các giá trị ước lượng của mỗi nút. Các nút con được xét theo thứ tự từ trái sang phải. Khi chạy giải thuật Minimax sử dụng cắt tỉa Alpha-Beta, điều nào sau đây ĐÚNG về cắt tỉa Alpha-Beta?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Alpha-Beta pruning luôn cắt tỉa ít nhất 50% cây tìm kiếm"
+          },
+          {
+            "id": "B",
+            "text": "Cắt tỉa Beta xảy ra tại nút MIN khi giá trị nút ≤ Alpha của nút cha MAX"
+          },
+          {
+            "id": "C",
+            "text": "Cắt tỉa Alpha xảy ra tại nút MAX khi giá trị nút ≥ Beta của nút cha MIN"
+          },
+          {
+            "id": "D",
+            "text": "Cả B và C đều đúng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - Cả B và C đều đúng.\n\nCắt tỉa Alpha-Beta là kỹ thuật tối ưu hóa Minimax, loại bỏ các nhánh không cần thiết mà KHÔNG thay đổi kết quả cuối cùng.\n\nHai loại cắt tỉa:\n\n1. Cắt tỉa Beta (Beta cutoff) — tại nút MIN:\n   - Điều kiện: v(n) ≤ α (giá trị nút MIN ≤ Alpha của nút cha MAX)\n   - Lý do: Nút cha MAX đã có lựa chọn tốt hơn (≥ α), nên nút MIN này cho giá trị nhỏ hơn → MAX sẽ không chọn → cắt.\n   - Ví dụ: MAX có α = 5, nút MIN đang xét trả về giá trị 3 → 3 ≤ 5 → cắt các nhánh còn lại.\n\n2. Cắt tỉa Alpha (Alpha cutoff) — tại nút MAX:\n   - Điều kiện: v(n) ≥ β (giá trị nút MAX ≥ Beta của nút cha MIN)\n   - Lý do: Nút cha MIN đã có lựa chọn tốt hơn (≤ β), nên nút MAX này cho giá trị lớn hơn → MIN sẽ không chọn → cắt.\n   - Ví dụ: MIN có β = 4, nút MAX đang xét trả về giá trị 7 → 7 ≥ 4 → cắt.\n\nĐáp án A sai: Số nhánh bị cắt phụ thuộc vào THỨ TỰ duyệt nút. Trường hợp tốt nhất (nước đi tốt được duyệt trước) cắt ~50%, trường hợp xấu nhất có thể không cắt gì.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "minimax",
+          "alpha-beta",
+          "tim-kiem-doi-khang"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q007",
+        "type": "single_choice",
+        "question": {
+          "text": "Giả sử v(n) thể hiện giá trị ước lượng của nút n. Trong quá trình tìm kiếm của giải thuật Alpha-Beta Pruning, nút n có thể thuộc đường đi dẫn đến lời giải nếu ...",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "v(n) < Alpha"
+          },
+          {
+            "id": "B",
+            "text": "v(n) > Beta"
+          },
+          {
+            "id": "C",
+            "text": "Alpha ≥ v(n) ≥ Beta"
+          },
+          {
+            "id": "D",
+            "text": "Alpha ≤ v(n) ≤ Beta"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: D - Alpha ≤ v(n) ≤ Beta.\n\nTrong giải thuật Alpha-Beta Pruning:\n- Alpha (α): giá trị TỐT NHẤT (lớn nhất) mà MAX đã tìm được trên đường đi hiện tại. MAX sẽ không chấp nhận giá trị nào nhỏ hơn α.\n- Beta (β): giá trị TỐT NHẤT (nhỏ nhất) mà MIN đã tìm được trên đường đi hiện tại. MIN sẽ không chấp nhận giá trị nào lớn hơn β.\n\nĐể nút n có thể thuộc đường đi lời giải, giá trị v(n) phải nằm trong 'cửa sổ' [α, β]:\n- α ≤ v(n): MAX chấp nhận (≥ giá trị tốt nhất hiện tại của MAX).\n- v(n) ≤ β: MIN chấp nhận (≤ giá trị tốt nhất hiện tại của MIN).\n\nNếu vi phạm:\n- v(n) < α → MAX đã có lựa chọn tốt hơn → nút n bị BỎ QUA (Beta cutoff).\n- v(n) > β → MIN đã có lựa chọn tốt hơn → nút n bị BỎ QUA (Alpha cutoff).\n\nCác đáp án sai:\n- A (v(n) < Alpha): Nút bị cắt tỉa, MAX không quan tâm.\n- B (v(n) > Beta): Nút bị cắt tỉa, MIN không quan tâm.\n- C (Alpha ≥ v(n) ≥ Beta): Chỉ có nghĩa khi α ≥ β, lúc đó cửa sổ đã đóng → không có lời giải khả thi.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "alpha-beta",
+          "tim-kiem-doi-khang"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q008",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thuật tìm kiếm MiniMax có sử dụng cắt tỉa Alpha-Beta tìm được các nước đi (moves) có chất lượng tốt hơn là không sử dụng cắt tỉa.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "True"
+          },
+          {
+            "id": "B",
+            "text": "False"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - False.\n\nĐây là một hiểu lầm phổ biến. Alpha-Beta Pruning KHÔNG tìm được nước đi tốt hơn Minimax thuần:\n\n• Minimax thuần (không cắt tỉa): duyệt TOÀN BỘ cây trò chơi → tìm được nước đi TỐI ƯU.\n• Minimax + Alpha-Beta: cắt bỏ các nhánh KHÔNG ẢNH HƯỞNG đến quyết định cuối cùng → tìm được CÙNG nước đi tối ưu nhưng NHANH HƠN.\n\nKết luận quan trọng:\n- Alpha-Beta trả về KẾT QUẢ GIỐNG HỆT Minimax.\n- Ưu điểm duy nhất: GIẢM THỜI GIAN/SỐ NÚT cần duyệt.\n- Trường hợp tốt nhất: giảm từ O(b^d) xuống O(b^(d/2)) → cho phép tìm kiếm SÂU GẤP ĐÔI trong cùng thời gian.\n- KHÔNG BAO GIỜ thay đổi chất lượng nước đi.\n\nVí dụ: Nếu Minimax thuần chọn nước đi X, thì Alpha-Beta cũng chọn X, nhưng chỉ duyệt ít nút hơn để đi đến quyết định đó.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "minimax",
+          "alpha-beta",
+          "tim-kiem-doi-khang"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q009",
+        "type": "single_choice",
+        "question": {
+          "text": "Một giải thuật tìm kiếm muốn đảm bảo tính hoàn chỉnh (complete) và tối ưu (optimal) thì phải xét tất cả các đường đi dẫn đến nút đích.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "True"
+          },
+          {
+            "id": "B",
+            "text": "False"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - False.\n\nPhát biểu này SAI vì:\n\n1. Tính hoàn chỉnh (Completeness): Giải thuật TÌM ĐƯỢC lời giải nếu lời giải tồn tại. KHÔNG yêu cầu phải xét TẤT CẢ đường đi — chỉ cần tìm được MỘT đường đi đến đích.\n\n2. Tính tối ưu (Optimality): Giải thuật tìm được lời giải TỐT NHẤT. CÓ THỂ đạt được mà KHÔNG cần xét tất cả đường đi, nhờ:\n   - A* search: dùng heuristic admissible để loại bỏ các đường đi chắc chắn không tối ưu mà KHÔNG cần duyệt hết.\n   - Branch and Bound: cắt nhánh kém hơn lời giải tốt nhất hiện tại.\n   - Alpha-Beta pruning: cắt bỏ nhánh không ảnh hưởng kết quả mà vẫn tối ưu.\n\nVí dụ cụ thể: A* với heuristic admissible (h(n) ≤ h*(n)) đảm bảo cả completeness VÀ optimality, nhưng KHÔNG xét tất cả đường đi — nó bỏ qua các đường đi có f(n) > f* (chi phí lời giải tối ưu).\n\nKết luận: Complete + Optimal ≠ Phải xét tất cả đường đi. Các kỹ thuật thông minh cho phép 'cắt tỉa' an toàn.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "tim-kiem",
+          "completeness",
+          "optimality"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q010",
+        "type": "single_choice",
+        "question": {
+          "text": "Các giá trị của tìm kiếm alpha-beta được cập nhật ở đâu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không câu trả lời nào (ở trên/dưới) là đúng"
+          },
+          {
+            "id": "B",
+            "text": "Tại trạng thái ban đầu"
+          },
+          {
+            "id": "C",
+            "text": "Trong quá trình tìm kiếm"
+          },
+          {
+            "id": "D",
+            "text": "Tại trạng thái cuối cùng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: C - Trong quá trình tìm kiếm.\n\nGiá trị Alpha và Beta được khởi tạo và CẬP NHẬT LIÊN TỤC trong quá trình duyệt cây:\n\n1. Khởi tạo ban đầu: α = -∞, β = +∞ (cửa sổ mở hoàn toàn).\n\n2. Trong quá trình duyệt DFS:\n   - Khi MAX tìm được giá trị tốt hơn → CẬP NHẬT α = max(α, v(child)).\n   - Khi MIN tìm được giá trị tốt hơn → CẬP NHẬT β = min(β, v(child)).\n   - Nếu α ≥ β → CẮT TỈA (pruning) các nhánh còn lại.\n\n3. Giá trị α, β được TRUYỀN XUỐNG (pass down) cho các nút con và CẬP NHẬT NGƯỢC (back up) khi quay lui.\n\nCác đáp án sai:\n- B (Tại trạng thái ban đầu): Chỉ KHỞI TẠO tại trạng thái ban đầu, việc cập nhật diễn ra suốt quá trình.\n- D (Tại trạng thái cuối cùng): Sai — cập nhật diễn ra LIÊN TỤC, không chỉ ở cuối.\n- A: Đáp án C đúng nên A sai.\n\nTóm lại: α, β là giá trị ĐỘNG, được cập nhật mỗi khi thuật toán duyệt đến một nút mới trong cây tìm kiếm.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "alpha-beta",
+          "tim-kiem-doi-khang"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q011",
+        "type": "single_choice",
+        "question": {
+          "text": "Bài toán thỏa mãn ràng buộc (CSP) được đặc tả bởi những thành phần nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tập biến (variables), tập miền giá trị (domains), tập ràng buộc (constraints)"
+          },
+          {
+            "id": "B",
+            "text": "Trạng thái khởi đầu, hàm kế thừa, kiểm tra đích"
+          },
+          {
+            "id": "C",
+            "text": "Tập biến (variables), hàm heuristic, tập ràng buộc (constraints)"
+          },
+          {
+            "id": "D",
+            "text": "Tập trạng thái, tập hành động, hàm chi phí"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A - Tập biến (variables), tập miền giá trị (domains), tập ràng buộc (constraints).\n\nCSP (Constraint Satisfaction Problem) gồm 3 thành phần cơ bản:\n\n1. X = {X₁, X₂, ..., Xₙ} — Tập biến (Variables):\n   Các biến cần được gán giá trị.\n   Ví dụ: Tô màu bản đồ → mỗi vùng là một biến.\n\n2. D = {D₁, D₂, ..., Dₙ} — Tập miền giá trị (Domains):\n   Mỗi biến Xᵢ có miền giá trị Dᵢ chứa các giá trị hợp lệ.\n   Ví dụ: Dᵢ = {đỏ, xanh lá, xanh dương}.\n\n3. C = {C₁, C₂, ..., Cₘ} — Tập ràng buộc (Constraints):\n   Các điều kiện mà phép gán giá trị phải thỏa mãn.\n   Ví dụ: WA ≠ NT (2 vùng liền kề phải khác màu).\n\nPhân biệt:\n- B mô tả bài toán tìm kiếm tổng quát (search problem).\n- C sai vì hàm heuristic không phải thành phần định nghĩa CSP (nó là công cụ giải).\n- D mô tả bài toán tìm kiếm có chi phí (cost-based search).\n\nLời giải CSP: Một phép gán {X₁ = v₁, ..., Xₙ = vₙ} sao cho tất cả ràng buộc đều được thỏa mãn. Gọi là phép gán hoàn chỉnh nhất quán (complete, consistent assignment).",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "csp",
+          "tim-kiem"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q012",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong giải thuật Backtracking Search cho CSP, kỹ thuật Forward Checking có tác dụng gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kiểm tra tính nhất quán của tất cả các cặp biến trong toàn bộ bài toán"
+          },
+          {
+            "id": "B",
+            "text": "Sau khi gán giá trị cho biến X, loại bỏ các giá trị không nhất quán khỏi miền của các biến chưa gán liên kết với X"
+          },
+          {
+            "id": "C",
+            "text": "Sắp xếp lại thứ tự các biến theo miền giá trị nhỏ nhất"
+          },
+          {
+            "id": "D",
+            "text": "Quay lui ngay lập tức khi phát hiện bất kỳ ràng buộc nào bị vi phạm"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - Sau khi gán giá trị cho biến X, loại bỏ các giá trị không nhất quán khỏi miền của các biến chưa gán liên kết với X.\n\nForward Checking (FC) là kỹ thuật suy luận (inference) cơ bản trong Backtracking CSP:\n\nCách hoạt động:\n1. Khi gán X = v, xét TẤT CẢ biến Y chưa gán mà có ràng buộc với X.\n2. Với mỗi Y, xóa khỏi domain(Y) các giá trị KHÔNG TƯƠNG THÍCH với X = v.\n3. Nếu domain(Y) trở thành RỖNG → phát hiện thất bại sớm (early failure detection) → QUAY LUI ngay.\n\nVí dụ tô màu bản đồ:\n- Gán WA = đỏ → xóa 'đỏ' khỏi domain(NT) và domain(SA) (vì WA liền kề NT, SA).\n- Nếu domain(SA) = {} → fail → backtrack.\n\nCác đáp án sai:\n- A: Mô tả AC-3 (Arc Consistency), kiểm tra tất cả cặp biến, FC chỉ kiểm tra biến liên kết với biến vừa gán.\n- C: Mô tả MRV heuristic (Minimum Remaining Values), là kỹ thuật chọn biến, không phải FC.\n- D: Mô tả backtracking đơn thuần, FC đi xa hơn bằng cách LOẠI TRỪ giá trị không hợp lệ trước khi gán.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "csp",
+          "forward-checking",
+          "backtracking"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q013",
+        "type": "single_choice",
+        "question": {
+          "text": "Thuật toán AC-3 (Arc Consistency 3) kiểm tra tính nhất quán cung giữa các cặp biến trong CSP. Độ phức tạp thời gian của AC-3 là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "O(n²d³) với n là số biến, d là kích thước miền giá trị lớn nhất"
+          },
+          {
+            "id": "B",
+            "text": "O(ed³) với e là số cung (arcs), d là kích thước miền giá trị lớn nhất"
+          },
+          {
+            "id": "C",
+            "text": "O(n·d²)"
+          },
+          {
+            "id": "D",
+            "text": "O(d^n) với d là kích thước miền, n là số biến"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - O(ed³) với e là số cung (arcs), d là kích thước miền giá trị lớn nhất.\n\nPhân tích độ phức tạp AC-3:\n\nAC-3 duy trì một hàng đợi (queue) các cung (Xi, Xj) cần kiểm tra:\n\n1. Số cung ban đầu: e cung (mỗi ràng buộc nhị phân tạo 2 cung).\n2. Mỗi cung (Xi, Xj) có thể được thêm lại vào queue tối đa d lần (mỗi lần domain(Xi) bị thu nhỏ 1 phần tử → tổng cộng d lần).\n3. Mỗi lần kiểm tra cung (Xi, Xj): với mỗi giá trị trong domain(Xi), phải kiểm tra xem có giá trị nào trong domain(Xj) thỏa mãn → O(d²).\n\nTổng: O(e × d × d²) = O(ed³).\n\nCác đáp án sai:\n- A: O(n²d³) gần đúng nhưng không chính xác — phụ thuộc vào số cung e chứ không phải n².\n- C: O(n·d²) quá nhỏ, thiếu yếu tố số cung.\n- D: O(d^n) là độ phức tạp của brute-force (vét cạn), không phải AC-3.\n\nLưu ý: AC-3 là preprocessing, có thể không giải được CSP hoàn toàn nhưng giảm đáng kể domain → giúp backtracking nhanh hơn.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "csp",
+          "ac-3",
+          "do-phuc-tap"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q014",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong CSP, heuristic MRV (Minimum Remaining Values) chọn biến tiếp theo để gán giá trị dựa trên tiêu chí nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chọn biến có NHIỀU giá trị hợp lệ nhất trong miền giá trị hiện tại"
+          },
+          {
+            "id": "B",
+            "text": "Chọn biến có ÍT giá trị hợp lệ nhất trong miền giá trị hiện tại"
+          },
+          {
+            "id": "C",
+            "text": "Chọn biến xuất hiện trong nhiều ràng buộc nhất"
+          },
+          {
+            "id": "D",
+            "text": "Chọn biến được khai báo đầu tiên trong bài toán"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - Chọn biến có ÍT giá trị hợp lệ nhất trong miền giá trị hiện tại.\n\nMRV (Minimum Remaining Values) — còn gọi là 'most constrained variable' hoặc 'fail-first' heuristic:\n\nNguyên tắc: Chọn biến có domain nhỏ nhất (ít giá trị hợp lệ còn lại nhất) để gán trước.\n\nTại sao 'fail-first' lại tốt?\n- Nếu biến X chỉ còn 1 giá trị hợp lệ → gán ngay, giảm branching factor.\n- Nếu biến X có domain rỗng → phát hiện thất bại SỚM NHẤT, tránh duyệt sâu vô ích.\n- Trực giác: Giải quyết biến khó trước → nếu fail thì fail sớm → giảm số nút duyệt tổng thể.\n\nVí dụ tô màu bản đồ Úc:\n- Sau khi gán WA = đỏ, SA chỉ còn {xanh dương} (1 giá trị) → MRV chọn SA tiếp.\n- NT còn {xanh lá, xanh dương} (2 giá trị) → MRV không ưu tiên.\n\nCác đáp án sai:\n- A: Ngược lại MRV — đây sẽ là 'fail-last' strategy, kém hiệu quả hơn.\n- C: Mô tả Degree heuristic (chọn biến tham gia nhiều ràng buộc nhất với biến chưa gán), dùng khi MRV hòa.\n- D: Không dùng heuristic nào, chỉ theo thứ tự khai báo → kém hiệu quả.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "csp",
+          "mrv",
+          "heuristic"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q015",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong CSP, heuristic LCV (Least Constraining Value) chọn giá trị để gán cho biến dựa trên tiêu chí nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chọn giá trị loại bỏ NHIỀU giá trị nhất khỏi miền của các biến lân cận"
+          },
+          {
+            "id": "B",
+            "text": "Chọn giá trị loại bỏ ÍT giá trị nhất khỏi miền của các biến lân cận"
+          },
+          {
+            "id": "C",
+            "text": "Chọn giá trị nhỏ nhất trong miền giá trị"
+          },
+          {
+            "id": "D",
+            "text": "Chọn giá trị ngẫu nhiên từ miền giá trị"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - Chọn giá trị loại bỏ ÍT giá trị nhất khỏi miền của các biến lân cận.\n\nLCV (Least Constraining Value) — heuristic chọn GIÁ TRỊ (khác MRV chọn BIẾN):\n\nNguyên tắc: Gán giá trị nào gây ÍT ẢNH HƯỞNG NHẤT đến các biến chưa gán → giữ lại nhiều lựa chọn nhất cho tương lai.\n\nTriết lý đối lập với MRV:\n- MRV (chọn biến): fail-first — chọn biến khó nhất trước.\n- LCV (chọn giá trị): succeed-first — chọn giá trị dễ thành công nhất.\n\nLý do: Khi đã chọn biến (bằng MRV), ta muốn TỐI ĐA HÓA khả năng tìm được lời giải → chọn giá trị ít gây xung đột nhất.\n\nVí dụ tô màu:\n- Gán màu cho SA. Nếu chọn 'xanh' → loại bỏ 'xanh' khỏi 5 biến lân cận (ảnh hưởng lớn). Nếu chọn 'đỏ' → chỉ loại bỏ 'đỏ' khỏi 3 biến (ảnh hưởng ít hơn). → LCV chọn 'đỏ'.\n\nCác đáp án sai:\n- A: Ngược lại LCV — đây là 'most constraining value', gây nhiều xung đột.\n- C, D: Không dùng thông tin về ràng buộc → kém hiệu quả.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "csp",
+          "lcv",
+          "heuristic"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q016",
+        "type": "single_choice",
+        "question": {
+          "text": "Xét bài toán tô màu bản đồ nước Úc với 3 màu: đỏ (R), xanh lá (G), xanh dương (B). Có 7 vùng: WA, NT, SA, Q, NSW, V, T. Bài toán này có bao nhiêu ràng buộc?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "7 ràng buộc"
+          },
+          {
+            "id": "B",
+            "text": "9 ràng buộc"
+          },
+          {
+            "id": "C",
+            "text": "21 ràng buộc"
+          },
+          {
+            "id": "D",
+            "text": "42 ràng buộc"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - 9 ràng buộc.\n\nBản đồ nước Úc có các cặp vùng liền kề (mỗi cặp tạo 1 ràng buộc ≠):\n\n1. WA ≠ NT\n2. WA ≠ SA\n3. NT ≠ SA\n4. NT ≠ Q\n5. SA ≠ Q\n6. SA ≠ NSW\n7. SA ≠ V\n8. Q ≠ NSW\n9. NSW ≠ V\n\nTasmania (T) là đảo, KHÔNG liền kề vùng nào → không có ràng buộc.\n\nTổng cộng: 9 ràng buộc nhị phân (binary constraints).\n\nLưu ý quan trọng:\n- Mỗi ràng buộc nhị phân tạo 2 CUNG (arcs) trong constraint graph: (WA, NT) và (NT, WA) → tổng 18 arcs.\n- Số ràng buộc ≠ số arcs: 9 constraints = 18 arcs.\n- Đây là ví dụ kinh điển trong sách Russell & Norvig, chương CSP.\n\nCác đáp án sai:\n- A (7): Có thể nhầm bằng số vùng.\n- C (21): C(7,2) = 21 nếu tất cả vùng đều liền kề — sai vì không phải mọi cặp đều liền kề.\n- D (42): 21 × 2 (đếm cả 2 chiều) — sai lý do tương tự.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "csp",
+          "to-mau-ban-do"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q017",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong CSP, một cung (Xi, Xj) được gọi là nhất quán cung (arc consistent) khi nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Khi tất cả giá trị trong domain(Xi) đều thỏa mãn ràng buộc với ít nhất một giá trị trong domain(Xj)"
+          },
+          {
+            "id": "B",
+            "text": "Khi Xi và Xj có cùng domain"
+          },
+          {
+            "id": "C",
+            "text": "Khi Xi đã được gán giá trị"
+          },
+          {
+            "id": "D",
+            "text": "Khi không có ràng buộc giữa Xi và Xj"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A - Khi tất cả giá trị trong domain(Xi) đều thỏa mãn ràng buộc với ít nhất một giá trị trong domain(Xj).\n\nĐịnh nghĩa Arc Consistency:\nCung (Xi, Xj) là arc consistent nếu và chỉ nếu: ∀ giá trị a ∈ domain(Xi), ∃ giá trị b ∈ domain(Xj) sao cho (a, b) thỏa mãn ràng buộc giữa Xi và Xj.\n\nNói cách khác: Mọi giá trị của Xi đều có 'bạn đồng hành' hợp lệ trong Xj.\n\nVí dụ:\n- Xi: domain = {1, 2, 3}, Xj: domain = {1, 2, 3}\n- Ràng buộc: Xi < Xj\n- Xi = 1 → có Xj = 2 hoặc 3 ✓\n- Xi = 2 → có Xj = 3 ✓\n- Xi = 3 → KHÔNG có Xj nào > 3 ✗ → cung KHÔNG nhất quán → loại 3 khỏi domain(Xi)\n\nSau khi loại: domain(Xi) = {1, 2} → cung (Xi, Xj) trở thành arc consistent.\n\nCác đáp án sai:\n- B: Cùng domain không liên quan đến arc consistency.\n- C: Arc consistency áp dụng cho biến CHƯA gán (kiểm tra domain).\n- D: Nếu không có ràng buộc thì không cần kiểm tra — khái niệm arc consistency chỉ có ý nghĩa khi CÓ ràng buộc.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "csp",
+          "arc-consistency"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q018",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong bài toán CSP, Backtracking search khác Depth-First Search (DFS) thông thường ở điểm nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Backtracking chỉ xét phép gán cho MỘT biến tại mỗi mức của cây tìm kiếm"
+          },
+          {
+            "id": "B",
+            "text": "Backtracking luôn sử dụng heuristic để dẫn đường"
+          },
+          {
+            "id": "C",
+            "text": "Backtracking duyệt theo chiều rộng thay vì chiều sâu"
+          },
+          {
+            "id": "D",
+            "text": "Backtracking không bao giờ quay lui"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A - Backtracking chỉ xét phép gán cho MỘT biến tại mỗi mức của cây tìm kiếm.\n\nĐặc điểm quan trọng nhất của Backtracking CSP so với DFS thông thường:\n\nDFS thông thường (naive):\n- Tại mỗi nút, có thể gán giá trị cho BẤT KỲ biến nào chưa gán.\n- Tạo ra branching factor rất lớn: n! × dⁿ (n biến, d giá trị mỗi biến).\n\nBacktracking CSP:\n- Tại mỗi mức, chỉ xét phép gán cho MỘT biến cố định.\n- Branching factor chỉ là d (số giá trị trong domain).\n- Cây tìm kiếm có n mức, mỗi mức branching factor = d → dⁿ nút lá.\n\nĐiểm mấu chốt: Vì CSP có tính chất HOÁN VỊ (commutativity) — thứ tự gán biến không ảnh hưởng kết quả (gán X=1 rồi Y=2 giống Y=2 rồi X=1), nên chỉ cần xét 1 biến mỗi mức.\n\nCác đáp án sai:\n- B: Backtracking CÓ THỂ dùng heuristic (MRV, LCV) nhưng KHÔNG bắt buộc.\n- C: Backtracking vẫn là DFS (chiều sâu), không phải BFS.\n- D: 'Backtracking' theo nghĩa đen là 'quay lui' — nó luôn quay lui khi gặp bế tắc.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "csp",
+          "backtracking",
+          "dfs"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q019",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho bài toán CSP với 4 biến X₁, X₂, X₃, X₄, mỗi biến có domain {1, 2, 3}. Ràng buộc: X₁ ≠ X₂, X₂ ≠ X₃, X₃ ≠ X₄, X₁ ≠ X₄. Sau khi gán X₁ = 1 và áp dụng Forward Checking, domain của X₂ và X₄ sẽ là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "domain(X₂) = {2, 3}, domain(X₄) = {2, 3}"
+          },
+          {
+            "id": "B",
+            "text": "domain(X₂) = {1, 2, 3}, domain(X₄) = {1, 2, 3}"
+          },
+          {
+            "id": "C",
+            "text": "domain(X₂) = {2, 3}, domain(X₄) = {1, 2, 3}"
+          },
+          {
+            "id": "D",
+            "text": "domain(X₂) = {1}, domain(X₄) = {1}"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A - domain(X₂) = {2, 3}, domain(X₄) = {2, 3}.\n\nÁp dụng Forward Checking sau khi gán X₁ = 1:\n\nForward Checking kiểm tra TẤT CẢ biến chưa gán có ràng buộc với X₁:\n\n1. Ràng buộc X₁ ≠ X₂ (X₂ liên kết với X₁):\n   - X₁ = 1 → loại giá trị 1 khỏi domain(X₂)\n   - domain(X₂): {1, 2, 3} → {2, 3} ✓\n\n2. Ràng buộc X₁ ≠ X₄ (X₄ liên kết với X₁):\n   - X₁ = 1 → loại giá trị 1 khỏi domain(X₄)\n   - domain(X₄): {1, 2, 3} → {2, 3} ✓\n\n3. X₃ KHÔNG có ràng buộc trực tiếp với X₁ (chỉ có X₂ ≠ X₃ và X₃ ≠ X₄):\n   - Forward Checking KHÔNG cập nhật domain(X₃) ở bước này!\n   - domain(X₃) vẫn = {1, 2, 3}\n\nLưu ý quan trọng: Forward Checking chỉ kiểm tra biến CÓ RÀNG BUỘC TRỰC TIẾP với biến vừa gán. Nó KHÔNG lan truyền (propagate) sang các biến gián tiếp — đây là điểm khác biệt với AC-3.\n\nCác đáp án sai:\n- B: Không áp dụng FC → domain không thay đổi.\n- C: Thiếu cập nhật X₄ (X₁ ≠ X₄ là ràng buộc trực tiếp).\n- D: Không có lý do giữ lại chỉ giá trị 1.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "csp",
+          "forward-checking"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q020",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong mô tả PEAS của một hệ thống nhận dạng giọng nói (voice assistant như Siri), thành phần Sensors là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Loa phát âm thanh, màn hình hiển thị"
+          },
+          {
+            "id": "B",
+            "text": "Micro thu âm thanh, kết nối mạng Internet"
+          },
+          {
+            "id": "C",
+            "text": "Độ chính xác nhận dạng, thời gian phản hồi"
+          },
+          {
+            "id": "D",
+            "text": "Người dùng, tiếng ồn môi trường"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - Micro thu âm thanh, kết nối mạng Internet.\n\nPhân tích PEAS cho hệ thống nhận dạng giọng nói (Siri/Google Assistant):\n\n• Performance measure (P): Độ chính xác nhận dạng, thời gian phản hồi, mức độ hài lòng người dùng → C mô tả P.\n\n• Environment (E): Người dùng, tiếng ồn môi trường, ngữ cảnh hội thoại, các dịch vụ bên ngoài → D mô tả E.\n\n• Actuators (A): Loa phát âm thanh, màn hình hiển thị kết quả, gọi API dịch vụ → A mô tả Actuators.\n\n• Sensors (S): Micro (thu âm thanh từ người dùng), kết nối mạng (nhận dữ liệu từ Internet, server), cảm biến cử chỉ (nếu có) → B mô tả Sensors. ✓\n\nGiải thích chi tiết:\n- Micro: là cảm biến ĐẦU VÀO chính, thu nhận sóng âm → chuyển thành tín hiệu số → xử lý NLP.\n- Kết nối mạng: cũng là kênh ĐẦU VÀO — Siri gửi audio lên cloud để xử lý, nhận kết quả về → đây là sensor thu thông tin từ môi trường mạng.\n\nQuy tắc phân biệt Sensor vs Actuator: Sensor = INPUT (thu thông tin), Actuator = OUTPUT (thực hiện hành động).",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "tac-tu",
+          "PEAS"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q021",
+        "type": "single_choice",
+        "question": {
+          "text": "Môi trường nào sau đây là môi trường LIÊN TỤC (continuous)?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trò chơi cờ vua"
+          },
+          {
+            "id": "B",
+            "text": "Xe tự lái trên đường phố"
+          },
+          {
+            "id": "C",
+            "text": "Trò chơi ô chữ (crossword)"
+          },
+          {
+            "id": "D",
+            "text": "Trò chơi Sudoku"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - Xe tự lái trên đường phố.\n\nMôi trường rời rạc (Discrete) vs. Liên tục (Continuous):\n\n• Rời rạc: Số lượng trạng thái/hành động/thời gian là HỮU HẠN, ĐẾM ĐƯỢC.\n  - Cờ vua: 64 ô, 32 quân, số nước đi hữu hạn → DISCRETE.\n  - Ô chữ: số ô và chữ cái hữu hạn → DISCRETE.\n  - Sudoku: 81 ô, mỗi ô chứa số 1-9 → DISCRETE.\n\n• Liên tục: Trạng thái/hành động là giá trị THỰC, vô hạn, không đếm được.\n  - Xe tự lái: tốc độ (0-200 km/h, liên tục), góc lái (0-360°, liên tục), vị trí GPS (tọa độ thực), thời gian liên tục → CONTINUOUS. ✓\n\nXe tự lái là ví dụ điển hình cho môi trường liên tục vì:\n- Vị trí: (x, y) ∈ ℝ²\n- Tốc độ: v ∈ ℝ⁺\n- Góc lái: θ ∈ [0, 2π]\n- Thời gian: t ∈ ℝ⁺\n- Hình ảnh camera: ma trận pixel giá trị liên tục (0-255 cho mỗi kênh RGB)\n\nCác đáp án A, C, D đều là trò chơi bảng/logic với trạng thái rời rạc.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "tac-tu",
+          "moi-truong-tac-tu"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q022",
+        "type": "single_choice",
+        "question": {
+          "text": "Tác tử phản xạ đơn giản (Simple reflex agent) quyết định hành động dựa trên yếu tố nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Nhận thức hiện tại (current percept) thông qua các luật if-then"
+          },
+          {
+            "id": "B",
+            "text": "Toàn bộ lịch sử nhận thức (percept history)"
+          },
+          {
+            "id": "C",
+            "text": "Mô hình nội bộ về trạng thái môi trường"
+          },
+          {
+            "id": "D",
+            "text": "Mục tiêu cần đạt được và lập kế hoạch"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A - Nhận thức hiện tại (current percept) thông qua các luật if-then.\n\n4 loại tác tử theo Russell & Norvig (từ đơn giản đến phức tạp):\n\n1. Simple reflex agent (tác tử phản xạ đơn giản): ← ĐÂY\n   - Chỉ dựa trên NHẬN THỨC HIỆN TẠI, không nhớ quá khứ.\n   - Sử dụng quy tắc condition-action (if-then rules).\n   - Ví dụ: 'Nếu xe phía trước phanh → phanh theo'.\n   - Hạn chế: Không hoạt động tốt trong môi trường partially observable.\n\n2. Model-based reflex agent: Duy trì MÔ HÌNH NỘI BỘ (internal state) về thế giới → C.\n\n3. Goal-based agent: Có MỤC TIÊU rõ ràng, tìm chuỗi hành động đạt mục tiêu → D.\n\n4. Utility-based agent: Có hàm utility đánh giá 'mức độ hạnh phúc', chọn hành động maximize utility.\n\nĐáp án B mô tả agent function tổng quát f: P* → A (ánh xạ từ chuỗi nhận thức sang hành động), nhưng simple reflex agent chỉ dùng nhận thức HIỆN TẠI, không dùng toàn bộ lịch sử.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "tac-tu",
+          "simple-reflex"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q023",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong CSP, kỹ thuật nào sau đây mạnh hơn Forward Checking về khả năng phát hiện mâu thuẫn sớm?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Backtracking đơn thuần (chronological backtracking)"
+          },
+          {
+            "id": "B",
+            "text": "MAC (Maintaining Arc Consistency)"
+          },
+          {
+            "id": "C",
+            "text": "Depth-First Search thông thường"
+          },
+          {
+            "id": "D",
+            "text": "Generate and Test"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - MAC (Maintaining Arc Consistency).\n\nSo sánh các mức độ suy luận (inference) trong CSP, từ yếu đến mạnh:\n\n1. Không suy luận (No inference): Chỉ kiểm tra ràng buộc SAU KHI gán → phát hiện mâu thuẫn muộn.\n   - Generate and Test: Tạo phép gán hoàn chỉnh rồi kiểm tra.\n   - Backtracking đơn thuần: Kiểm tra tại mỗi bước gán nhưng không look-ahead.\n\n2. Forward Checking (FC): Sau khi gán X = v, loại bỏ giá trị không hợp lệ từ domain các biến LIÊN KẾ TRỰC TIẾP với X. KHÔNG lan truyền tiếp.\n\n3. MAC (Maintaining Arc Consistency): Sau khi gán X = v, chạy AC-3 trên TOÀN BỘ mạng ràng buộc → LAN TRUYỀN ảnh hưởng xa hơn FC.\n\nVí dụ: Gán X₁ = R. FC chỉ cập nhật domain(X₂), domain(X₄) (biến liền kề X₁). MAC tiếp tục kiểm tra: domain(X₂) thay đổi → kiểm tra cung (X₃, X₂) → có thể loại thêm giá trị khỏi domain(X₃) → phát hiện mâu thuẫn SỚM HƠN.\n\nKết luận: MAC ⊃ FC ⊃ No inference. MAC mạnh nhất về khả năng phát hiện mâu thuẫn sớm, nhưng tốn chi phí tính toán hơn.\n\nCác đáp án sai: A, C, D đều yếu hơn FC, không mạnh hơn.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "csp",
+          "mac",
+          "arc-consistency",
+          "forward-checking"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q024",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong bài toán CSP, tìm kiếm cục bộ (local search) cho CSP sử dụng heuristic Min-Conflicts. Heuristic này hoạt động như thế nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chọn giá trị mới cho biến sao cho SỐ RÀNG BUỘC BỊ VI PHẠM là nhỏ nhất"
+          },
+          {
+            "id": "B",
+            "text": "Chọn biến có domain nhỏ nhất để gán trước"
+          },
+          {
+            "id": "C",
+            "text": "Loại bỏ giá trị không nhất quán khỏi domain"
+          },
+          {
+            "id": "D",
+            "text": "Quay lui đến biến gây ra xung đột gần nhất"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: A - Chọn giá trị mới cho biến sao cho SỐ RÀNG BUỘC BỊ VI PHẠM là nhỏ nhất.\n\nMin-Conflicts là heuristic cho tìm kiếm cục bộ (local search) CSP:\n\nThuật toán Min-Conflicts:\n1. Bắt đầu với một phép gán HOÀN CHỈNH NGẪU NHIÊN (có thể vi phạm ràng buộc).\n2. Lặp lại cho đến khi không còn xung đột:\n   a. Chọn NGẪU NHIÊN một biến đang bị xung đột.\n   b. Gán cho biến đó giá trị TỐI THIỂU HÓA số ràng buộc bị vi phạm (min-conflicts).\n3. Nếu hết xung đột → lời giải.\n\nƯu điểm:\n- Rất hiệu quả cho bài toán n-queens: giải n = 1,000,000 trong ~50 bước!\n- Phù hợp với bài toán có nhiều lời giải phân bố đều.\n\nNhược điểm:\n- Không đảm bảo complete (có thể kẹt ở local minimum).\n- Phụ thuộc vào phép gán ban đầu.\n\nCác đáp án sai:\n- B: Mô tả MRV heuristic (cho backtracking, không phải local search).\n- C: Mô tả AC-3/Forward Checking.\n- D: Mô tả Backjumping (intelligent backtracking).",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "csp",
+          "min-conflicts",
+          "local-search"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q025",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây ĐÚNG về mối quan hệ giữa tác tử (agent) và môi trường (environment)?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tác tử chỉ có thể quan sát môi trường mà không thể tác động lên nó"
+          },
+          {
+            "id": "B",
+            "text": "Tác tử nhận thức (percept) từ môi trường qua sensors và tác động lên môi trường qua actuators"
+          },
+          {
+            "id": "C",
+            "text": "Môi trường luôn thay đổi độc lập với hành động của tác tử"
+          },
+          {
+            "id": "D",
+            "text": "Tác tử không cần biết thông tin về môi trường để hoạt động"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng: B - Tác tử nhận thức (percept) từ môi trường qua sensors và tác động lên môi trường qua actuators.\n\nMô hình tương tác tác tử - môi trường (Russell & Norvig, Chapter 2):\n\n┌─────────────┐       percepts        ┌───────────────┐\n│             │ ◄──── (sensors) ─────  │               │\n│   AGENT     │                        │  ENVIRONMENT  │\n│             │ ────(actuators) ────►   │               │\n└─────────────┘       actions          └───────────────┘\n\nChu trình:\n1. Môi trường → Sensors → Percept (nhận thức) → Agent function\n2. Agent function → Action → Actuators → Tác động lên Environment\n3. Environment thay đổi → quay lại bước 1.\n\nAgent function: f: P* → A (ánh xạ từ chuỗi nhận thức sang hành động).\nAgent program: hiện thực hóa agent function trên phần cứng/phần mềm cụ thể.\n\nCác đáp án sai:\n- A: Sai — tác tử CÓ thể tác động lên môi trường (qua actuators).\n- C: Sai — trong môi trường tĩnh (static), môi trường KHÔNG đổi khi agent đang suy nghĩ. Và hành động của agent thường THAY ĐỔI môi trường.\n- D: Sai — agent CẦN thông tin từ sensors để ra quyết định.",
+          "images": []
+        },
+        "tags": [
+          "ai",
+          "tac-tu",
+          "moi-truong-tac-tu"
+        ],
+        "difficulty": "easy"
+      }
+    ]
+  }
+}

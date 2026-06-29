@@ -1,0 +1,11 @@
+import json
+
+d = json.load(open("/home/thinh/proj/Hust_quiz/public/quizzes/ktlt_on_tap_tong_hop.json"))
+qs = d["quiz"]["questions"][60:90]
+for q in qs:
+    print(f"ID: {q['id']}")
+    print(f"Q: {q['question']['text'].strip()}")
+    for c in q['choices']:
+        print(f"  {c['id']}: {c['text'].strip()}")
+    print(f"Ans: {q['answer']['correctChoiceIds']}")
+    print("---")

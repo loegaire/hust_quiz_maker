@@ -11,18 +11,18 @@ const links = [
 export function AppLayout() {
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-10 border-b border-black/5 bg-[var(--card)]/90 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-          <Link to="/" className="font-display text-xl font-bold text-[var(--accent)]">
+      <header className="sticky top-0 z-10 border-b-4 border-black bg-[var(--card)]">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3">
+          <Link to="/" className="font-display text-xl font-black text-black">
             HUST Quiz
           </Link>
-          <nav className="flex gap-2 text-sm">
+          <nav className="flex flex-wrap gap-2 text-sm">
             {links.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
                 className={({ isActive }) =>
-                  `rounded-full px-3 py-1 ${isActive ? 'bg-[var(--accent)] text-white' : 'bg-[var(--accent-soft)] text-[var(--ink)]'}`
+                  `border-2 border-black px-3 py-1 font-bold shadow-[2px_2px_0_var(--shadow)] ${isActive ? 'bg-[var(--accent)] text-black' : 'bg-[var(--accent-soft)] text-black'}`
                 }
               >
                 {link.label}

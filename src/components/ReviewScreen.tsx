@@ -26,7 +26,7 @@ export function ReviewScreen({ questions, answers }: ReviewScreenProps) {
         if (!answer) return null;
 
         return (
-          <article key={question.id} className="rounded-xl bg-[var(--card)] p-4 shadow-sm">
+          <article key={question.id} className="neo-card">
             <ContentBlockView content={question.question} textClassName="font-semibold" />
             <p className={`mt-1 text-sm ${answer.isCorrect ? 'text-emerald-700' : 'text-red-700'}`}>
               {answer.isCorrect ? 'Correct' : 'Incorrect'}

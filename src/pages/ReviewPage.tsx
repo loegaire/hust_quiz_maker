@@ -39,7 +39,7 @@ export function ReviewPage() {
       <section className="space-y-3">
         <h1 className="font-display text-3xl">Attempts</h1>
         {attempts.map((a) => (
-          <Link key={a.id} to={`/review?attemptId=${a.id}`} className="block rounded-xl bg-[var(--card)] p-4 shadow-sm hover:shadow">
+          <Link key={a.id} to={`/review?attemptId=${a.id}`} className="neo-card block transition hover:translate-x-1 hover:translate-y-1">
             <p className="font-semibold">Quiz ID: {a.quizId}</p>
             <p className="text-sm text-[var(--muted)]">{new Date(a.startedAt).toLocaleString()} · Score {a.score}/{a.totalQuestions}</p>
           </Link>

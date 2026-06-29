@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "ai-extra-7c674004",
+    "title": "Trắc nghiệm AI - Trắc nghiệm tuần 5_ Attempt review.pdf",
+    "description": "Bộ câu hỏi trắc nghiệm tự động trích xuất từ Trắc nghiệm tuần 5_ Attempt review.pdf. Gồm 3 câu.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Tự động trích xuất từ Trắc nghiệm tuần 5_ Attempt review.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q000_5de9",
+        "type": "single_choice",
+        "question": {
+          "text": "  Home Courses Support News    En  Dashboard  My courses  BL-IT3160-168453 - Nhập môn Trí tuệ nhân tạo  Tuần 5  Trắc nghiệm tuần 5 Hide sidebars BL-IT3160-168453 - Nhập môn Trí tuệ nhân tạo Started on State Completed on Time taken Wednesday, 25 March 2026, 8:21 AM Finished Wednesday, 25 March 2026, 8:22 AM 1 min 37 secs Marks 5.00/5.00 Grade 10.00 out of 10.00 (100%) Question 1 Complete Mark 1.00 out of 1.00 Xét cây tìm kiếm sau đây với các giá tri ̣ ước lượng của mỗi nút được xác đi ̣nh khi chạy giải thuật tìm kiếm Minimax. Các nút con (của một nút khác) được xét theo thứ tự từ trái sang phải. Hãy xác đi ̣nh nút nào ở hàng dưới cùng bi ̣ cắt tỉa khi chạy giải thuật Minimax sử dụng cắt tỉa Alpha-Beta: Select one:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Nút 2"
+          },
+          {
+            "id": "B",
+            "text": "Nút 4"
+          },
+          {
+            "id": "C",
+            "text": "Nút 3"
+          },
+          {
+            "id": "D",
+            "text": "Nút 5"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q001_56bb",
+        "type": "single_choice",
+        "question": {
+          "text": "Question 2 Giả sử v(n) thể hiện giá tri ̣ ước lượng của nút n. Trong quá trình tìm kiếm của giải thuật Complete Alpha-Beta Pruning, nút n có thể thuộc đường đi dẫn đến lời giải nếu ... Mark 1.00 out of 1.00 Select one:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "v(n) < Alpha"
+          },
+          {
+            "id": "B",
+            "text": "v(n) > Beta"
+          },
+          {
+            "id": "C",
+            "text": "Alpha ≥ v(n) ≥ Beta"
+          },
+          {
+            "id": "D",
+            "text": "Alpha ≤ v(n) ≤ Beta"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q002_2df5",
+        "type": "single_choice",
+        "question": {
+          "text": "Question 3 Giải thuật tìm kiếm MiniMax có sử dụng cắt tỉa Alpha-Beta tìm được các nước đi (moves) Complete có chất lượng tốt hơn là không sử dụng cắt tỉa. Mark 1.00 out of 1.00 Select one: True Hide sidebars False Question 4 Một giải thuật tìm kiếm muốn đảm bảo tính hoàn chỉnh (complete) và tối ưu (optimal) thì Complete phải xét tất cả các đường đi dẫn đến nút đích. Mark 1.00 out of 1.00 Select one: True False Question 5 Các giá tri ̣ của tìm kiếm alpha-beta được cập nhật ở đâu? Complete Mark 1.00 out of Select one: 1.00",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không câu trả lời nào (ở trên/dưới) là đúng"
+          },
+          {
+            "id": "B",
+            "text": "Tại trạng thái ban đầu"
+          },
+          {
+            "id": "C",
+            "text": "Trong quá trình tìm kiếm"
+          },
+          {
+            "id": "D",
+            "text": "Tại trạng thái cuối cùng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

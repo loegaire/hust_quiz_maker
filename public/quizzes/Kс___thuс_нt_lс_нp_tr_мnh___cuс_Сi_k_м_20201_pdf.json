@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "ktlt-84310bde",
+    "title": "Trắc nghiệm KTLT - Kс╗╣ thuс║нt lс║нp tr├мnh - cuс╗Сi k├м 20201.pdf",
+    "description": "Bộ câu hỏi trắc nghiệm tự động trích xuất từ Kс╗╣ thuс║нt lс║нp tr├мnh - cuс╗Сi k├м 20201.pdf. Gồm 6 câu hỏi.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Tự động trích xuất từ Kс╗╣ thuс║нt lс║нp tr├мnh - cuс╗Сi k├м 20201.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q000_b932",
+        "type": "single_choice",
+        "question": {
+          "text": "ĐỀ THI HỌC KỲ 1 NĂM HỌC 2020-2021 BỘ MÔN CÔNG NGHỆ PHẦN MỀM Thời gian: 90 phút Ngày thi: 12/01/2021 Mã học phần: IT3040 Tên học phần: Kĩ thuật lập trình Họ và tên sinh viên:………………………………………………………………………. Mã số sinh viên:…………………… …………………… Mã lớp: …………………… Đề 1 ĐỀ THI CUỐI KỲ MÔN: IT3040 - Kỹ thuật lập trình (20201) (Thời gian: 90 phút. Không sử dụng tài liệu, điện thoại – Nộp đề kèm bài làm) Câu 1. (2.0 điểm) Theo em, kỹ thuật Template function có thể kết hợp vào đa năng hóa toán tử ( operator overloading) được không ? nếu được thì có lợi ích ích gì ? Hãy minh họa bằng 1 ví dụ cụ thể là đa năng hóa toán tử + cho số phức Câu 2 (2.0đ) Khi định nghĩa phép toán cộng ma trận cho cấu trúc MATRIX được định nghĩa như sau : typedef struct { int Row,Col ; float ** Data ; } MATRIX ; một sinh viên nhận thấy, nếu thực hiện biểu thức C=A+B ; một vài lần thì kết quả OK, nhưng nếu biểu thức đó nằm trong 1 vòng lặp lớn ( hàng ngàn lần) thì kết quả không còn đúng, thậm trí khi tăng số lần lặp, chương trình còn bị lỗi run-time, mặc dù các hàm cấp phát bộ nhớ, định nghĩa toán tử cộng ma trận SV đã làm rất chuẩn. Em hãy cho biết tại sao và đưa ra giải pháp ! MATRIX operator +( MATRIX A, MATRIX B) { MATRIX temp; temp.Row=A.Row; temp.Col=A.col; AllocMatrix(temp); /* Phần cộng ma trận ……………*/ return temp; } Câu 3. (1.0 điểm) Tinh chỉnh để nâng cao hiệu năng của chương trình sau: void findK(float b, float *a, int n) { int i = 0, found = 0; while ((!found) && (i<n)) { float x = log(b)/log(2); if (a[i] == x) found = 1; else i++; } if (found) do_something; } Câu 4. (2.0 điểm) một sv xây dựng chức năng sắp xếp sinh viên theo thứ tự kiểu việt nam ( theo tên rồi mới đến họ và tên lót) từ 1 danh sách họ và tên sinh viên của lớp như sau // #include …. int i,j,k,n=0; char ds[500][30], tg[30]; void bosung(); void sapxep(); void inds(); Trang 1/4 int main() { // hàm main } int NamePos(char *ht) { i=strlen(ht)-1; while (ht[i]==' ' && i> -1) i--; while (ht[i]!=' ' && i> -1) i--; return i+1; } void sapxep() { for(i=0;i<n-1;i++) { k=i; for(j=i+1;j<n;j++) if (strcmp(ds[k]+NamePos(ds[k]), ds[j]+NamePos(ds[j])) >0) k=j; else if (strcmp(ds[k]+NamePos(ds[k]), ds[j]+NamePos(ds[j])) ==0) if (strcmp(ds[k],ds[j]) >0) k=j; if (k!=i) { strcpy(tg,ds[i]); strcpy(ds[i],ds[j]); strcpy(ds[j],tg); } } printf(\"\\n Danh sach da duoc sap xep !!!\"); getch(); } Hãy tìm và sửa lại lỗi của các đoạn code trên ! Câu 5. (2.0 điểm) Cho cấu trúc danh sách liên kết đôi như sau: struct Node { int data; Node *next, *prev; }; Hãy viết hàm đảo ngược danh sách : Node* reverse(Node* head) {...}",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sử dụng đệ quy (1 điểm)"
+          },
+          {
+            "id": "B",
+            "text": "Không sử dụng đệ quy (1 điểm)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ktlt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q001_9b34",
+        "type": "single_choice",
+        "question": {
+          "text": "(1.0 điểm) (a) (0.5 điểm) Hãy cho biết sự khác nhau của hai cách khai báo giá trị: 'x' và \"x\". Hãy mô tả cách biểu diễn trong bộ nhớ của cả hai giá trị. (b) Cho đoạn chương trình sau đây, hãy tìm ra ít nhất hai lỗi sai trong chương trình (0.5 điểm cho mỗi lỗi sai) và sửa lại chương trình cho đúng (0.5 điểm). int main(void) { char *s = \"abcde\"; int len = strlen(s); for (int i = 0; i <= len; i++) s[i] += 1; return printf(\"'%s' is %d characters long\\n\", ++s, strlen(s)); } Trang 2/4 ĐỀ THI HỌC KỲ 1 NĂM HỌC 2020-2021 BỘ MÔN CÔNG NGHỆ PHẦN MỀM Thời gian: 90 phút Ngày thi: 12/01/2021 Mã học phần: IT3040 Tên học phần: Kĩ thuật lập trình Họ và tên sinh viên:………………………………………………………………………. Mã số sinh viên:…………………… …………………… Mã lớp: …………………… Đề 2 ĐỀ THI CUỐI KỲ MÔN: IT3040 - Kỹ thuật lập trình (20201) (Thời gian: 90 phút. Không sử dụng tài liệu, điện thoại – Nộp đề kèm bài làm) Câu 1. (2.0 điểm) một sv xây dựng chức năng sắp xếp sinh viên theo thứ tự kiểu việt nam ( theo tên rồi mới đến họ và tên lót) từ 1 danh sách họ và tên sinh viên của lớp như sau // #include …. int i,j,k,n=0; char ds[500][30], tg[30]; void bosung(); void sapxep(); void inds(); int main() { // hàm main } char * Name(char *ht) { i=strlen(ht)-1; while (ht[i]==' ') i--; while (ht[i]!=' ') i--; return ht+i+1; } void sapxep() { for(i=0;i<n-1;i++) { k=i; for(j=i+1;j<n;j++) if (strcmp(Name(ds[k]),Name(ds[j])) >0) k=j; else if (strcmp(Name(ds[k]),Name(ds[j])) ==0) if (strcmp(ds[k],ds[j]) >0) k=j; if (k!=i) { strcpy(tg,ds[i]); strcpy(ds[i],ds[j]); strcpy(ds[j],tg); } } printf(\"\\n Danh sach da duoc sap xep !!!\"); getch(); } Hãy tìm và sửa lại lỗi của các đoạn code trên ! Câu 2. (2.0đ) Khi định nghĩa phép toán cộng ma trận cho cấu trúc MATRIX được định nghĩa như sau : typedef struct { int Row,Col ; float ** Data ; } MATRIX ; Trang 3/4 một sinh viên nhận thấy, nếu thực hiện biểu thức C=A+B ; một vài lần thì kết quả OK, nhưng nếu biểu thức đó nằm trong 1 vòng lặp lớn ( hàng ngàn lần) thì kết quả không còn đúng, thậm trí khi tăng số lần lặp, chương trình còn bị lỗi run-time, mặc dù các hàm cấp phát bộ nhớ, định nghĩa toán tử cộng ma trận SV đã làm rất chuẩn. Em hãy cho biết tại sao và đưa ra giải pháp ! MATRIX operator +( MATRIX A, MATRIX B) { MATRIX temp; temp.Row=A.Row; temp.Col=A.col; AllocMatrix(temp); /* Phần cộng ma trận ……………*/ return temp; } Câu 3. (1.0 điểm) Tinh chỉnh để nâng cao hiệu năng của đoạn code sau: void findK(float b, float *a, int n) { int i = 0, found = 0; float x; for(;i<n;i++) { x = log(b)/log(2); if (a[i] == x) found = 1; i++; } if (found) do_something; } Câu 4 (2.0 điểm) Theo em, kỹ thuật Template function có thể kết hợp vào đa năng hóa toán tử ( operator overloading) được không ? nếu được thì có lợi ích ích gì ? Hãy minh họa bằng 1 ví dụ cụ thể là đa năng hóa toán tử - cho số phức Câu 5. (2.0 điểm) Cho cấu trúc danh sách liên kết đôi như sau: struct Node { int data; Node *next, *prev; }; Hãy viết hàm đảo ngược danh sách : Node* reverse(Node* head) {...}",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sử dụng đệ quy (1 điểm)"
+          },
+          {
+            "id": "B",
+            "text": "Không sử dụng đệ quy (1 điểm)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ktlt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q002_88f7",
+        "type": "single_choice",
+        "question": {
+          "text": "(1.0 điểm) (a) (0.5 điểm) Hãy cho biết sự khác nhau của hai cách khai báo giá trị: 'x' và \"x\". Hãy mô tả cách biểu diễn trong bộ nhớ của cả hai giá trị. (b) Cho đoạn chương trình sau đây, hãy tìm ra ít nhất hai lỗi sai trong chương trình (0.5 điểm cho mỗi lỗi sai) và sửa lại chương trình cho đúng (0.5 điểm). int main(void) { char *s = \"abcde\"; int len = strlen(s); for (int i = 0; i <= len; i++) s[i] += 1; return printf(\"'%s' is %d characters long\\n\", ++s, strlen(s)); } Trang 4/4 ĐỀ THI HỌC KỲ 1 NĂM HỌC 2020-2021 BỘ MÔN CÔNG NGHỆ PHẦN MỀM Thời gian: 90 phút Ngày thi: 12/01/2021 Mã học phần: IT3040 Tên học phần: Kĩ thuật lập trình Họ và tên sinh viên:………………………………………………………………………. Mã số sinh viên:…………………… …………………… Mã lớp: …………………… ĐỀ SỐ 3 (Không sử dụng tài liệu, điện thoại – Nộp đề kèm bài làm) Câu 1. (2.0 điểm) (a) (0.5 điểm) Hãy cho biết sự khác nhau của hai cách khai báo giá trị: 'x' và \"x\". Hãy mô tả cách biểu diễn trong bộ nhớ của cả hai giá trị. (b) (1.5 điểm) Cho đoạn chương trình sau đây, hãy tìm ra ít nhất hai lỗi sai trong chương trình (0.5 điểm cho mỗi lỗi sai) và sửa lại chương trình cho đúng (0.5 điểm). int main(void) { char *s = \"abcde\"; int len = strlen(s); for (int i = 0; i <= len; i++) s[i] += 1; return printf(\"'%s' is %d characters long\\n\", ++s, strlen(s)); } Câu 2. (2.0 điểm) Một sinh viên xây dựng chức năng sắp xếp theo thứ tự kiểu việt nam (theo tên rồi mới đến họ và tên lót) từ một danh sách họ và tên sinh viên của lớp như sau: // #include …. int i,j,n=0; char ds[500][30], tg[30]; void bosung(); void sapxep(); void inds(); int main() { // hàm main } int NamePos(char *ht) { i=strlen(ht)-1; while (ht[i]==' ' && i> -1) i--; while (ht[i]!=' ' && i> -1) i--; return i+1; } void sapxep() { int i,j,k; for(i=0;i<n-1;i++) { k=i; for(j=i+1;j<n;j++) if (strcmp(ds[k]+NamePos(ds[k]), ds[j]+NamePos(ds[j])) >0) k=j; else if (strcmp(ds[k]+NamePos(ds[k]), ds[j]+NamePos(ds[j])) ==0) if (strcmp(ds[k],ds[j]) >0) k=j; if (k!=i) { strcpy(tg,ds[i]); strcpy(ds[i],ds[k]); strcpy(ds[k],tg); } Trang 1/2 } printf(\"\\n Danh sach da duoc sap xep !!!\"); getch(); } Các hàm khác trong chương trình đều chuẩn nhưng khi in thì kết quả không được như ý, danh sách chỗ thì sắp xếp được, chỗ thì không. Hãy tìm ra lỗi trong chương trình và chỉ ra lỗi là loại gì (compiler, runtime). Câu 3. (1.0 điểm) Tinh chỉnh để nâng cao hiệu năng của chương trình sau: void findK(float b, float *a, int n) { int i = 0, found = 0; while ((!found) && (i<n)) { float x = log(b)/log(2); if (a[i] == x) found = 1; else i++; } if (found) do_something; } Câu 4. (2.0 điểm) Khi định nghĩa phép toán cộng ma trận (sử dụng operator overloading) cho cấu trúc Matrix được định nghĩa như sau : typedef struct { int row, col ; float ** Data ; } Matrix ; một sinh viên nhận thấy, nếu thực hiện biểu thức C=A+B ; một vài lần thì kết quả OK, nhưng nếu biểu thức đó nằm trong 1 vòng lặp lớn ( hàng ngàn lần) thì kết quả không còn đúng, thậm trí khi tăng số lần lặp, chương trình còn bị lỗi run-time, mặc dù các hàm cấp phát bộ nhớ, định nghĩa toán tử cộng ma trận SV đã làm rất chuẩn. Em hãy cho biết tại sao (0.5đ) và đưa ra giải pháp (1.5đ). Matrix operator +( Matrix a, Matrix b) { Matrix temp; temp.row = a.row; temp.col = a.col; allocMatrix(temp); /* Phần cộng ma trận ……………*/ return temp; } Câu 5. (1.0 điểm) Cho cấu trúc danh sách liên kết như sau: struct Node { int data; Node *next;}; Hãy viết hàm đảo ngược danh sách : Node* reverse(Node* head) {...}",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sử dụng đệ quy (0.5 điểm)"
+          },
+          {
+            "id": "B",
+            "text": "Không sử dụng đệ quy (0.5 điểm)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ktlt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q003_7817",
+        "type": "single_choice",
+        "question": {
+          "text": "(2.0 điểm) Theo bạn, kỹ thuật Template function có thể kết hợp vào đa năng hoá toán tử (operator overloading) được không? Nếu được thì có lợi ích gì? Hãy minh hoạ bằng 1 ví dụ cụ thể liên quan đến đa năng hoá toán tử cho số phức. struct Complex{ int real, img; } ----------- HẾT ---------Trang 2/2 ĐỀ THI HỌC KỲ 1 NĂM HỌC 2020-2021 BỘ MÔN CÔNG NGHỆ PHẦN MỀM Thời gian: 90 phút Ngày thi: 12/01/2021 Mã học phần: IT3040 Tên học phần: Kĩ thuật lập trình Họ và tên sinh viên:………………………………………………………………………. Mã số sinh viên:…………………… …………………… Mã lớp: …………………… ĐỀ SỐ 4 (Không sử dụng tài liệu, điện thoại – Nộp đề kèm bài làm) Câu 1. (2.0 điểm) Theo bạn, kỹ thuật Template function có thể kết hợp vào đa năng hoá toán tử (operator overloading) được không? Nếu được thì có lợi ích gì? Hãy minh hoạ bằng 1 ví dụ cụ thể liên quan đến đa năng hoá toán tử cho số phức. struct Complex{ int real, img; } Câu 2. (2.0 điểm) (a) (1.0 điểm) Hãy cho biết sự khác nhau giữa con trỏ (pointer) trong C/C++ và tham chiếu (refererence) trong C++ (gợi ý, so sánh về các mặt: định nghĩa, khởi tạo (initialization), gán (assignment/re-assignment), địa chỉ trong bộ nhớ (memory address), phép toán) (b) Cho đoạn chương trình sau đây: void swap(int x, int y) { int temp = x; x = y; y = temp; } int main(int argc, char** argv) { int x = 0; int y = 1; swap(x, y); assert(x==1); return 0; } (i) Hãy cho biết vai trò của câu lệnh assert và tại sao chương trình khi thực thi sẽ phát sinh failure với câu lệnh assert. (0.5 điểm) (ii) Hãy sửa lại chương trình trên theo hai cách, dùng C và dùng C++ (0.5 điểm) Câu 3. (2.0 điểm) Hãy sửa lại đoạn chương trình sau đây cho đúng kết hợp tinh chỉnh code: (1.0 điểm) typedef struct point {double x, y, z;} Point; int find_max_x_argument(int n, Point *elems){ double max = 0; int max_index = 0; for (int i = 0; i < n; i++) if (max < elems[i].x){ max_index = i; max = elems[i].x; } return max_index; }",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "B",
+            "text": "Có một mảng các phần tử là các số nguyên biết rằng các phần tử trong mảng sẽ rơi vào một trong bốn"
+          },
+          {
+            "id": "A",
+            "text": "Vì sao trong ngôn ngữ lập trình C, không cho phép gán hai mảng nhưng lại có thể gán 2 biến kiểu"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ktlt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q004_fdf3",
+        "type": "single_choice",
+        "question": {
+          "text": "struct có phần tử là các mảng? (0.5đ)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "B",
+            "text": "Một sinh viên cài đặt phép * cho hai mảng như sau:"
+          },
+          {
+            "id": "A",
+            "text": "data = new float [n];"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ktlt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q005_3fd9",
+        "type": "single_choice",
+        "question": {
+          "text": "} Array operator * (Array a, Array b) { Array temp; temp.n = a.n; newArray(temp); for (int i = 0; i < n; i++) temp.data[i] = a.data[i]*b.data[i]; return temp; } void main() { Array a, b, c; //Gỉa sử đã có khởi tạo và nhập dữ liệu cho hai mảng a, b for (int i = 0; i < 10000; i++) c = a * b; } Hãy dự đoán vấn đề gì có thể xảy ra với đoạn chương trình này? (0.5 điểm) Cài đặt giải pháp khắc phục vấn đề trên (1.0 điểm) Câu 5. (1.0 điểm) Cho cấu trúc danh sách liên kết như sau: struct Node { int data; Node *next; }; Hãy viết hàm đảo ngược danh sách : Node* reverse(Node* head) {...}",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sử dụng đệ quy (0.5 điểm)"
+          },
+          {
+            "id": "B",
+            "text": "Không sử dụng đệ quy (0.5 điểm)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ktlt"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

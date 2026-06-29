@@ -22,7 +22,7 @@ export function LibraryPage() {
       <h1 className="font-display text-3xl">Quiz Library</h1>
       <div className="grid gap-3">
         {quizzes.map((quiz) => (
-          <article key={quiz.id} className="rounded-xl bg-[var(--card)] p-4 shadow-sm">
+          <article key={quiz.id} className="neo-card">
             <div className="flex items-start justify-between gap-3">
               <div>
                 <h2 className="font-semibold">{quiz.title}</h2>
@@ -30,11 +30,11 @@ export function LibraryPage() {
                 <p className="mt-1 text-xs text-[var(--muted)]">{quiz.questionCount} questions · {quiz.sourceType.replace('_', ' ')}</p>
               </div>
               <div className="flex gap-2">
-                <Link to={`/quiz/${quiz.id}`} className="rounded bg-[var(--accent)] px-3 py-1 text-sm text-white">
+                <Link to={`/quiz/${quiz.id}`} className="neo-button px-3 py-1 text-sm">
                   Start
                 </Link>
                 {quiz.sourceType === 'imported' && (
-                  <button type="button" onClick={() => void deleteQuiz(quiz.id)} className="rounded bg-red-600 px-3 py-1 text-sm text-white">
+                  <button type="button" onClick={() => void deleteQuiz(quiz.id)} className="neo-button-danger px-3 py-1 text-sm">
                     Delete
                   </button>
                 )}

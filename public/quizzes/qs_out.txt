@@ -1,0 +1,318 @@
+ID: q061
+Q: **Chẩn đoán bằng GDB và phân tích Memory.** Khi dùng GDB để gỡ lỗi một chương trình C bị Segmentation fault (core dumped), bạn in giá trị của con trỏ gây lỗi ra màn hình và thấy nó KHÔNG PHẢI là NULL, đồng thời địa chỉ hệ thập lục phân của nó nhìn rất hợp lệ (thuộc vùng User Space). Lời giải thích tinh vi và có xác suất đúng cao nhất cho hiện tượng này là gì?
+  A: Đây chắc chắn là do bo mạch chủ của máy tính đã bị hỏng hóc một vài sector trên RAM vật lý, làm cho việc đọc dữ liệu tại địa chỉ đó trả về các bit thông tin sai lệch hoàn toàn dẫn đến lỗi phần cứng không thể tránh khỏi
+  B: Hệ điều hành đã quyết định chủ động thu hồi toàn bộ vùng nhớ của tiến trình do hệ thống đang rơi vào trạng thái cạn kiệt tài nguyên vật lý, từ đó thiết lập một cơ chế từ chối truy cập tuyệt đối đối với tất cả các thao tác gọi hàm
+  C: Trình biên dịch đã thực hiện một chuỗi các thao tác tối ưu hóa mã nguồn vô cùng cực đoan, dẫn đến việc xóa bỏ hoàn toàn biến con trỏ này khỏi bộ nhớ cache L1 của CPU khiến cho bộ vi xử lý không thể nhận diện được vùng nhớ
+  D: Đó là một "dangling pointer" (con trỏ lửng lơ), trỏ tới một vùng nhớ trên heap đã được lệnh free() giải phóng nhưng lập trình viên quên gán lại thành NULL.
+Ans: ['D']
+---
+ID: q062
+Q: ```cpp
+Hàm trả về mảng cục bộ : float* normalizeData(float input[], int size) {
+  float temp[size];  // Mảng cục bộ     for(...) temp[i] = input[i] * 0.5;
+                     // return temp; } | Câu hỏi: Đánh giá chính xác nhất?
+```
+  A: Vi phạm quản lý Stack.
+  B: Lỗi phân rã mảng gây cắt xén dữ liệu
+  C: Trình biên dịch tự đẩy mảng sang Heap gây rò rỉ bộ nhớ
+  D: Hợp lệ vì mảng nằm trong phân vùng tĩnh
+  E: Xung đột vi kiến trúc gây nhiễu thanh ghi
+Ans: ['A']
+---
+ID: q063
+Q: Hàm void processSensor(int& data).
+```cpp
+Có câu lệnh gọi : processSensor(5);
+hoặc processSensor(x + 10);
+.
+```
+Câu hỏi: Đánh giá hành vi chương trình?
+  A: Chạy tối ưu nhất O(1) nhờ Liên kết sớm
+  B: Tràn bộ nhớ Stack do biến tạm không có hàm hủy
+  C: Lỗi biên dịch.
+  D: Trình biên dịch tự động chuyển int& thành const int
+  E: Hành vi không xác định do sửa đổi vùng nhớ chỉ đọc
+Ans: ['C']
+---
+ID: q064
+Q: Kỹ sư dùng lệnh gdb để kiểm tra biến temp trong hàm sau nhưng hệ thống báo "optimized out" (đã bị tối ưu hóa bỏ đi):
+```cpp
+void compute() {
+  int temp = 0;
+
+  for (int i = 0; i < 1000; i++)
+    temp += i;
+```
+// temp không được return hay in ra màn hình
+```cpp
+}
+```
+Tại sao trình gỡ lỗi lại từ chối cung cấp giá trị của biến temp?
+  A: Việc sử dụng vòng lặp để tính toán một biểu thức vô nghĩa sẽ khiến cho trình gỡ lỗi GDB bị tràn bộ nhớ đệm nội bộ, dẫn đến việc nó hiển thị thông tin sai lệch về toàn bộ các tiến trình đang hoạt động song song trên máy chủ vật lý
+  B: Khi dịch với cờ tối ưu (-O2 hoặc -O3), compiler nhận ra temp tính xong không sinh ra tác dụng phụ (no side-effects) nên đã gỡ bỏ hoàn toàn logic này để tiết kiệm CPU.
+  C: Bộ vi xử lý hiện đại sẽ tự động đóng băng luồng thực thi của chương trình ngay tại vị trí khởi tạo biến trung gian nhằm chờ đợi lập trình viên cung cấp thêm các chỉ thị rõ ràng về việc định tuyến dữ liệu ra các cổng ngoại vi, gây ra hiện tượng treo máy giả
+  D: Hệ thống phân tích mã tĩnh (Static Analyzer) sẽ lập tức ngăn chặn quá trình dịch mã nguồn và ném ra một cảnh báo lỗi ở mức độ cao nhất, yêu cầu kỹ sư phần mềm phải thiết kế lại toàn bộ cấu trúc thuật toán theo đúng tiêu chuẩn thiết kế hướng đối tượng nghiêm ngặt
+Ans: ['B']
+---
+ID: q065
+Q: Để truy vết chính xác file và dòng code gây lỗi mà không làm giảm tốc độ thực thi của sản phẩm cuối, lập trình viên C/C++ nên sử dụng các macro đặc biệt nào?
+  A: **FILE** và **LINE.**
+  B: **DEBUG_FILE** và **DEBUG_LINE**
+  C: Sử dụng macro **STACK_TRACE** kết hợp với tính năng tự động ghi log lỗi vào file của trình biên dịch
+  D: Kích hoạt cờ debug của trình biên dịch để tự động sinh ra mã nguồn máy đính kèm tất cả các thông tin chi tiết về từng hàm và từng biến cục bộ
+Ans: ['A']
+---
+ID: q066
+Q: Điểm khác biệt bản chất nào giải thích khả năng "viết một lần, chạy mọi nơi" của Python so với C++?
+  A: Trình biên dịch C++ xóa mọi thông tin phần cứng đi
+  B: Ngôn ngữ C++ sở hữu kiến trúc cổ điển yêu cầu người lập trình phải tự tay viết lại thư viện bằng hợp ngữ (Assembly) cho từng loại vi mạch chuyên biệt mỗi khi mang phần mềm sang nền tảng mới
+  C: Python được dịch thành Bytecode độc lập và chạy trên Máy ảo, trong khi C++ biên dịch thẳng ra mã máy vật lý gắn chặt với kiến trúc và OS cụ thể.
+  D: C++ chạy trên một CPU
+Ans: ['C']
+---
+ID: q067
+Q: Tại sao việc thêm một ký tự khoảng trắng vào file Header (.h) có thể khiến dự án tốn 30 phút biên dịch, nhưng sửa đổi logic cốt lõi trong file Source (.cpp) chỉ mất vài giây?
+  A: Các file Header .h có cơ chế bảo mật nghiêm ngặt của hệ điều hành, yêu cầu biên dịch viên quét toàn bộ mã nguồn và ổ cứng tìm virus trước khi tối ưu hóa lại bộ nhớ đệm hệ thống
+  B: Vì C++ lỗi thời
+  C: Sửa file .cpp thì quá trình biên dịch chậm hơn file Header
+  D: File Header bị sửa sẽ buộc trình biên dịch phải dịch lại một loạt các file .cpp khác.
+Ans: ['D']
+---
+ID: q068
+Q: Giá trị của res là bao nhiêu? int a = 1, b = 2;		int res = a & b == 0; |
+  A: 1
+  B: 0
+  C: 2
+  D: Lỗi cú pháp
+Ans: ['B']
+---
+ID: q069
+Q: Cơ chế "Liên kết trễ" (Dynamic/Late Binding) thông qua hàm ảo (Virtual Function) trong C++ gây suy giảm tốc độ thực thi ở cấp độ CPU chủ yếu do điểm nghẽn nào?
+  A: CPU phải tiến hành sao chép toàn bộ không gian bộ nhớ từ lớp cha sang lớp con tương ứng mỗi khi gọi hàm đa hình trong môi trường đa luồng
+  B: Việc dùng lệnh nhảy gián tiếp thông qua bảng vtable làm suy giảm hiệu quả của bộ Dự đoán rẽ nhánh (Branch Prediction).
+  C: Bộ thu gom rác (Garbage Collector) bị buộc phải tạm dừng tất cả các luồng đang chạy (Stop-the-world)
+  D: Trình biên dịch bắt buộc phải đình chỉ thực thi của các luống song song khác
+Ans: ['B']
+---
+ID: q070
+Q: ```cpp
+Khi biên dịch với cờ tối ưu - 03, đoạn mã kiểm tra an toàn int check = *ptr;
+if (ptr == nullptr)
+  reboot();
+sẽ bị trình biên dịch loại bỏ như thế nào ?
+```
+  A: Do ptr đã được giải tham chiếu thành công ở trên, trình biên dịch suy luận rằng con trỏ này không thể mang giá trị nullptr, từ đó xóa bỏ khối lệnh if bên dưới
+  B: Hệ điều hành tự động khóa biến này thành một vòng lặp vô hạn
+  C: Trình tối ưu hóa chuyển đổi hàm reboot thành một tiến trình chạy ngầm (Daemon)
+  D: Khối lệnh if bị xóa hoàn toàn vì được xem là đoạn mã không bao giờ thực thi tới (Dead Code).
+Ans: ['D']
+---
+ID: q071
+Q: Wrapper function (safe_malloc) dùng để:
+  A: Tăng tốc chương trình
+  B: Giảm code
+  C: Bẫy lỗi tập trung
+  D: Tránh dùng malloc
+Ans: ['C']
+---
+ID: q072
+Q: **"Cái bẫy" của hàm Assert trong môi trường Production**
+Một lập trình viên lão luyện sử dụng lệnh assert(++i == limit); để kiểm tra ranh giới của một bộ đệm trong quá trình phát triển. Khi phần mềm được biên dịch và đóng gói để phát hành cho khách hàng (sử dụng cờ -DNDEBUG), một thảm họa hệ thống xảy ra. Nguyên nhân cốt lõi về mặt kỹ thuật ở đây là gì?
+  A: Biến i sẽ không bao giờ được tăng giá trị lên trong phiên bản release, dẫn đến việc vòng lặp bị mất kiểm soát, gây ra lỗi logic nghiêm trọng hoặc lặp vô hạn.
+  B: Trình biên dịch C++ hiện đại sẽ tự động kích hoạt một cơ chế văng lỗi (throw exception) trong quá trình biên dịch phiên bản release vì nó phát hiện ra có một phép toán làm thay đổi trạng thái bị đặt sai vị trí bên trong hàm kiểm tra
+  C: Hàm assert trong bản release vẫn tiếp tục đánh giá biểu thức bên trong một cách âm thầm để đảm bảo tính an toàn dữ liệu bộ nhớ, nhưng nó sẽ từ chối việc dừng chương trình lại ngay lập tức nếu điều kiện trả về giá trị false
+  D: Hệ điều hành tại máy khách sẽ từ chối cấp phát không gian bộ nhớ cho tiến trình này bởi vì nó nhận diện ra một tập lệnh có chứa các macro tiền xử lý chưa được tối ưu hóa cho môi trường vận hành thực tế tại hệ thống cuối
+Ans: ['A']
+---
+ID: q073
+Q: Vì sao một hàm đệ quy thường tốn tài nguyên hơn một vòng lặp while tương đương?
+  A: Do phải tạo và khôi phục stack frame cho từng lời gọi.
+  B: Do CPU luôn phải dịch lại toàn bộ mã nguồn của hàm đệ quy trước khi chạy mỗi lần gọi, rồi kiểm tra lại cú pháp và cấp phát lại toàn bộ chương trình trong bộ nhớ chính
+  C: Do vòng lặp while không cần kiểm tra điều kiện lặp
+  D: Do đệ quy bắt buộc dùng heap thay cho stack
+Ans: ['A']
+---
+ID: q074
+Q: Theo quy tắc "Strict Aliasing" trong C/C++, khi biên dịch ở mức tối ưu -03, trình biên dịch dựa vào giả định nào dưới đây để tối ưu hóa mã, đôi khi dẫn đến sai lệch kết quả?
+  A: Trình biên dịch giả định ngầm rằng các con trỏ mang kiểu dữ liệu khác nhau sẽ không bao giờ ghi đè lên cùng một địa chỉ bộ nhớ vật lý
+  B: Tự động sao chép chéo toàn bộ dữ liệu nội bộ giữa các hàm
+  C: Mọi con trỏ void* đều luôn bị cưỡng chế trỏ vào phân vùng Data
+  D: Giả định các kiểu dữ liệu khác nhau độc lập hoàn toàn và không trỏ cùng vào một địa chỉ.
+Ans: ['D']
+---
+ID: q075
+Q: Nhóm thiết kế bài test gửi các chuỗi JSON dị hình dạng vào một API chuẩn RESTful của công ty để xem máy chủ phản hồi mã lỗi HTTP thế nào. Tuy nhiên, họ lại dùng chính tài liệu kiến trúc CSDL nội bộ và kiến thức về cơ chế cache Redis (vốn chỉ Developer mới có) để cố tình tạo ra các chuỗi JSON vượt qua được vòng xác thực đầu vào nhưng đánh sập tầng dữ liệu bên trong. Phương pháp kiểm thử này thuộc loại hình nào?
+  A: White-box testing tại mức độ tích hợp toàn hệ thống, bởi kĩ sư QA đã buộc phải biên dịch ngược mã nguồn của dịch vụ để trích xuất các câu lệnh truy vấn dữ liệu tĩnh phục vụ cho việc giả lập môi trường cơ sở dữ liệu trên bộ nhớ máy cục bộ
+  B: Black-box testing thuần túy theo định nghĩa chuẩn của IEEE, do người kiểm thử chỉ giao tiếp với hệ thống thông qua các điểm cuối mạng (network endpoints) công khai và phân tích các phản hồi HTTP theo giao thức chuẩn mà không trực tiếp dùng công cụ như gdb can thiệp vào
+  C: Grey-box testing, bởi nó kết hợp phương thức tương tác hộp đen ở mặt ngoài giao diện mạng, nhưng lại khai thác trực tiếp các đặc tả kiến trúc nội bộ của hệ thống (hộp trắng) để thiết kế luồng dữ liệu mang tính sát thương cao nhất.
+  D: Structural testing mở rộng, được thực hiện chủ yếu bởi các lập trình viên nhằm xác minh mọi đường dẫn logic (logical paths) nội tại của mã nguồn bằng cách viết các script tự động sinh hàng triệu chuỗi dữ liệu đầu vào ngẫu nhiên và theo dõi độ bao phủ lệnh
+Ans: ['C']
+---
+ID: q076
+Q: Cho đoạn code sau. Hãy cho biết kết quả đầu ra của chương trình: #include <bits/stdc++.h> using namespace std; int main(){     int x = 5;     auto sum = [](int a, int b){         auto res = [x](int c){             return x * c;         };         return (a + b) * res(10);     };     cout << sum(5, 3);  return 0; } |
+  A: 400
+  B: Compile Error
+  C: Runtime Error
+  D: Hành vi không xác định
+Ans: ['B']
+---
+ID: q077
+Q: ```cpp
+Khi tối ưu hóa cấp phát mảng 2 chiều kích thước rất lớn(R x C),
+    một chuyên gia quyết định từ bỏ
+    "Cách 2"(dùng mảng con trỏ int** mt = new int*[R];) để chuyển sang
+    "Cách 1"(trải phẳng thành mảng 1 chiều int* mt = new int[R * C];)
+        .
+```
+Lý do mang lại sự chênh lệch hiệu năng khi duyệt mảng tuần tự là gì?
+  A: Công thức i * C + j chỉ dùng lệnh số học trên thanh ghi, loại bỏ được độ trễ chu kỳ do phải giải tham chiếu con trỏ cấp 2 hai lần như lệnh mt[i][j]
+  B: Trình biên dịch có thể dễ dàng nhận dạng vòng lặp lồng nhau trên mảng 1 chiều để áp dụng kỹ thuật kết hợp vòng lặp, loại bỏ hoàn toàn lệnh nhảy có điều kiện làm chậm Pipeline
+  C: Cách 1 đảm bảo toàn bộ ma trận được cấp phát thành một khối nhớ liên tục, khai thác tối đa nguyên lý địa phương để giảm thiểu hiện tượng CPU Cache Miss.
+  D: Cách 1 chỉ thực hiện một lời gọi cấp phát động new[] duy nhất vào Heap, qua đó giải quyết triệt để vấn đề rò rỉ bộ nhớ nếu lập trình viên quên dọn dẹp biến
+Ans: ['C']
+---
+ID: q078
+Q: Để khắc phục lỗi "Multiple Definition" khi muốn chia sẻ một biến số nguyên x giữa nhiều file .cpp thông qua file header, cách làm nào sau đây là đúng chuẩn?
+  A: Thêm chỉ thị #pragma once vào dòng đầu tiên của file header chứa biến x
+  B: Sử dụng từ khóa static trước khai báo int x = 10; trong file header
+  C: Chuyển kiểu khai báo của biến x sang định dạng hằng số hỏa táng const int x
+  D: Khai báo extern int x; ở header và định nghĩa int x = 10; trong một file nguồn.
+Ans: ['D']
+---
+ID: q079
+Q: Kỹ thuật "Early Return" giúp giải quyết trực tiếp vấn đề nào sau đây?
+  A: Giảm thiểu số lượng các biến cục bộ được khởi tạo trong hàm
+  B: Giảm bớt các cấu trúc điều kiện lồng nhau.
+  C: Tăng tốc độ truy xuất dữ liệu từ bộ nhớ cache của hệ thống
+  D: Tự động hóa việc giải phóng bộ nhớ khi xảy ra lỗi logic
+Ans: ['B']
+---
+ID: q080
+Q: Kỹ sư chạy thử nghiệm cấu trúc đồ thị luồng (Control Flow Graph) cho một module cấp thấp và nhận thấy giá trị của biến x thay đổi một cách bất khả thi, dù không có bất kì con trỏ nào trực tiếp trỏ đến nó. Đâu là lý do?
+```cpp
+int arr[5];
+int x = 10;
+for (int i = 0; i <= 5; ++i) {
+  arr[i] = 0;
+}
+```
+  A: Việc ghi đè ngoài mảng (Buffer Overrun) tại arr[5] đã ghi đè trực tiếp lên vùng nhớ của biến x nằm ngay kề cạnh trên Stack frame.
+  B: Sự bất đồng bộ trong quá trình tinh chỉnh mã nguồn (Refinement) đã khiến cho bộ đệm L2 Cache nội bộ nhầm lẫn giữa định nghĩa của một biến nguyên thủy vô hướng và một mảng cấp phát tĩnh, qua đó gộp chung cả hai vào cùng một dòng cache (Cache Line) và gây ra hiện tượng ghi đè chéo khi có lệnh rẽ nhánh
+  C: Khi áp dụng phương pháp kiểm thử hộp trắng (White-box Testing) để phân tích dòng dữ liệu, kĩ sư QA đã sử dụng một công cụ đo lường độ bao phủ (Coverage Tool) tự động chèn thêm mã theo dõi (instrumentation code) phá vỡ hoàn toàn sơ đồ bố trí vùng nhớ mặc định của các biến toàn cục
+  D: Khối lệnh khởi tạo đã vấp phải giới hạn về ngưỡng kích thước của thanh ghi dời (Shift Register) trong ALU, khiến cho toán tử gán chỉ có thể hoàn thiện thao tác trên các vùng địa chỉ được dóng hàng theo ranh giới 8-byte, và xả toàn bộ dữ liệu thừa đè lên không gian lưu trữ tĩnh của tiến trình khác
+Ans: ['A']
+---
+ID: q081
+Q: Xét đoạn mã C++ sau. Giả sử chương trình được biên dịch và chạy trên kiến trúc x86
+```cpp
+int a[5] = {10, 20, 30, 40, 50};
+
+int *ptr = (int *)(&a + 1);
+int result = *(a + 1) + *(ptr - 1);
+```
+Giá trị của biến result là bao nhiêu?
+  A: 70
+  B: 30
+  C: 60
+  D: Một giá trị rác do lỗi Out-of-bounds.
+Ans: ['A']
+---
+ID: q082
+Q: ```cpp
+int *p;
+*p = 5;
+```
+Điều gì xảy ra?
+  A: p trỏ tới vùng nhớ chứa 5
+  B: Báo lỗi khi biên dịch
+  C: Hành vi không xác định.
+  D: p tự động cấp phát bộ nhớ
+Ans: ['C']
+---
+ID: q083
+Q: ```cpp
+Phát biểu nào đúng ? (Giả sử đã using namespace std;) void f(int a[]) {
+  cout << sizeof(a);
+}
+```
+Phát biểu nào đúng?
+  A: In ra kích thước cả mảng
+  B: In ra số phần tử
+  C: Báo lỗi biên dịch
+  D: In ra kích thước con trỏ.
+Ans: ['D']
+---
+ID: q084
+Q: Mục đích chính của việc sử dụng Include Guards trong file Header là:
+  A: Tăng tốc độ tìm kiếm file của hệ điều hành và bộ nhớ đệm
+  B: Ngăn chặn lỗi định nghĩa lặp khi file được chèn nhiều lần.
+  C: Thực hiện mã hóa nội dung để bảo mật mã nguồn bên trong
+  D: Thông báo cho trình biên dịch đây là file định nghĩa lớp
+Ans: ['B']
+---
+ID: q085
+Q: "Duff's Device" là một kỹ thuật nổi tiếng dùng để tối ưu hóa điều gì?
+  A: Quản lý bộ nhớ phân mảnh
+  B: Giải thuật sắp xếp nhanh.
+  C: Giải mã vòng lặp.
+  D: Tính toán số thực trên CPU không có FPU.
+Ans: ['C']
+---
+ID: q086
+Q: Tại sao đoạn mã có điều kiện if với dữ liệu đã được sắp xếp thường chạy nhanh hơn dữ liệu ngẫu nhiên trên CPU hiện đại?
+  A: CPU dự đoán nhánh chính xác hơn
+  B: Vì if biến thành phép toán O(1)
+  C: Vì RAM tự động nén dữ liệu đã sắp xếp
+  D: Vì compiler bỏ hoàn toàn câu lệnh if
+Ans: ['A']
+---
+ID: q087
+Q: Trong ngôn ngữ C/C++ (chuẩn ISO), điều gì xảy ra khi thực thi đoạn mã sau:
+```cpp
+float f = 3.14f;
+
+int *p = (int *)&f;
+
+int val = *p;
+```
+  A: Biến val sẽ nhận giá trị phần nguyên của f, tức là 3
+  B: Biến val sẽ chứa chính xác biểu diễn nhị phân IEEE 754 của số 3.14 một cách an toàn
+  C: Gây ra lỗi biên dịch (Compilation Error) vì không thể ép kiểu con trỏ khác loại
+  D: Hành vi không xác định (Undefined Behavior) do vi phạm quy tắc Strict Aliasing.
+Ans: ['D']
+---
+ID: q088
+Q: Trong C++11 trở đi, "Move Semantics" cải thiện hiệu suất bằng cách nào?
+  A: Thực hiện sao chép song song các luồng dữ liệu thông qua các đơn vị xử lý đồ họa
+  B: Chuyển quyền sở hữu tài nguyên thay vì sao chép, giúp tiết kiệm chi phí cấp phát.
+  C: Tự động phát hiện và giải phóng các vùng nhớ bị rò rỉ trong quá trình thực thi
+  D: Tối thiểu hóa kích thước tệp thực thi cuối cùng bằng cách nén các cấu trúc dữ liệu
+Ans: ['B']
+---
+ID: q089
+Q: ```cpp
+Xét hàm sau : int& getRef() {
+  int x = 42;
+  return x;
+}
+.Đoạn mã này chứa lỗi nghiêm trọng gì ?
+```
+  A: Tham chiếu trỏ đến biến cục bộ đã bị hủy. Việc truy cập nó là Hành vi Không Xác Định (UB).
+  B: Xảy ra lỗi biên dịch ngay lập tức vì hàm được khai báo trả về kiểu tham chiếu (int&) nhưng x chỉ là một biến nguyên thủy (int) thông thường
+  C: Giá trị 42 sẽ được sao chép vào vùng nhớ tĩnh an toàn (Static Storage), do đó việc truy cập tham chiếu này sau đó vẫn diễn ra bình thường
+  D: Trình biên dịch tự động tối ưu bằng cách tạo ra một biến static nhằm kéo dài vòng đời cho vùng nhớ và ngăn ngừa các lỗi hỏng bộ nhớ hệ thống
+Ans: ['A']
+---
+ID: q090
+Q: ```cpp
+Các container liên kết có thứ tự như std::set hoặc std::map sử dụng biểu thức
+    nào để xác định hai
+    khóa(key)
+a và b là tương đương(equivalence) ?
+```
+  A: Sử dụng trực tiếp toán tử operator== đã được lập trình viên định nghĩa trước đó.
+  B: Biểu thức a == b && b == a
+  C: Biểu thức !(a < b) && !(b < a)
+  D: Hệ thống sẽ so sánh toàn bộ các bit bộ nhớ của hai đối tượng thông qua hàm hệ thống để đảm bảo tính đồng nhất tuyệt đối trên cấu trúc cây đỏ đen
+Ans: ['C']
+---

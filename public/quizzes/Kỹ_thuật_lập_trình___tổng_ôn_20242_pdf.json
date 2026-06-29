@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "ktlt-tong-on-20242-transcribed",
+    "title": "KTLT Tổng ôn 20242 (Đã OCR)",
+    "description": "Bộ câu hỏi trắc nghiệm KTLT được bóc tách từ file Kỹ thuật lập trình - tổng ôn 20242.pdf bằng AI OCR.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Trích xuất ảnh từ Kỹ thuật lập trình - tổng ôn 20242.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q_ktlt_tongon_1",
+        "type": "single_choice",
+        "question": {
+          "text": "Kết quả sau khi chạy chương trình C++ sau là:\n```cpp\n#include <iostream>\n#define MAX(x, y) ((x) > (y) ? (x) : (y))\nusing namespace std;\nint main() {\n    int a = 0;\n    int b = 1;\n    int c = MAX(a++, b--);\n    cout << c;\n    return 0;\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "1"
+          },
+          {
+            "id": "B",
+            "text": "Chương trình có lỗi"
+          },
+          {
+            "id": "C",
+            "text": "2"
+          },
+          {
+            "id": "D",
+            "text": "3"
+          },
+          {
+            "id": "E",
+            "text": "0"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "E"
+          ]
+        },
+        "explanation": {
+          "text": "Macro mở rộng thành: `((a++) > (b--) ? (a++) : (b--))`. So sánh `0 > 1` là sai. Sau so sánh, `a=1`, `b=0`. Biểu thức trả về `(b--)`, giá trị lúc này của b là 0. Do đó c = 0.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "macro"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q_ktlt_tongon_2",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho biết kết quả khi chạy chương trình C sau:\n```c\n#include<stdio.h>\nint f(int a, int b) {\n    return b+a;\n}\nint main() {\n    int j,i[5] = {10,12,14,16,18}, *p,*q;\n    p=i; q=p;\n    *q= f(i[0], *p++);\n    printf(\"%d %d \\n\", *p, *q);\n    return 0;\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "12 10"
+          },
+          {
+            "id": "B",
+            "text": "10 12"
+          },
+          {
+            "id": "C",
+            "text": "20 12"
+          },
+          {
+            "id": "D",
+            "text": "12 20"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Hàm `f` nhận 2 đối số. C đánh giá đối số từ phải qua trái (thường gặp): `*p++` lấy giá trị `10` và tăng `p` trỏ tới `12`. Khi đó `i[0]` vẫn là `10`. `f(10, 10)` trả về `20` và gán cho `*q` (chính là `i[0]`). Cuối cùng `*p` là `12` và `*q` là `20`.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "pointer"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q_ktlt_tongon_3",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho biết dòng kết quả thứ 3 khi chạy chương trình sau:\n```cpp\n#include<iostream>\nusing namespace std;\ntemplate <typename T>\nT maxval(T x, T y){\n    static int count=0;\n    cout << ++count << \", \";\n    return (x > y) ? x : y;\n}\nint main() {\n    int i = maxval(3, 7);\n    cout << i << endl;\n    double d = maxval(6.34, 18.523);\n    cout << d << endl;\n    d = maxval(16.34, 28.523);\n    cout << d << endl;\n    // ...\n    return 0;\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "28.523"
+          },
+          {
+            "id": "B",
+            "text": "Chương trình có lỗi"
+          },
+          {
+            "id": "C",
+            "text": "3, 28.523"
+          },
+          {
+            "id": "D",
+            "text": "Không xác định"
+          },
+          {
+            "id": "E",
+            "text": "2, 28.523"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "E"
+          ]
+        },
+        "explanation": {
+          "text": "Mỗi kiểu được khởi tạo một phiên bản hàm template riêng với `count` riêng. Ở dòng in thứ 3, hàm `maxval<double>` được gọi lần thứ 2 (lần 1 là 6.34 và 18.523). Do đó `count` của kiểu double tăng lên 2. Kết quả là `2, 28.523`.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "template"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q_ktlt_tongon_4",
+        "type": "single_choice",
+        "question": {
+          "text": "Kết quả sau khi chạy chương trình C++ sau là:\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    char s[6]=\"xyz\";\n    char * const ptr2 = s;\n    s[1] = 'Y';\n    *(ptr2+1) += 1;\n    ptr2 += 1;\n    cout << ptr2;\n    return 0;\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Zz"
+          },
+          {
+            "id": "B",
+            "text": "Lỗi ở dòng số 6"
+          },
+          {
+            "id": "C",
+            "text": "Lỗi ở dòng số 7"
+          },
+          {
+            "id": "D",
+            "text": "Lỗi ở dòng số 5"
+          },
+          {
+            "id": "E",
+            "text": "Lỗi ở dòng số 8 (dòng ptr2 += 1;)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "E"
+          ]
+        },
+        "explanation": {
+          "text": "Con trỏ `ptr2` được khai báo là hằng con trỏ (`char * const`), nghĩa là địa chỉ mà nó trỏ tới không thể thay đổi. Câu lệnh `ptr2 += 1` cố gắng thay đổi địa chỉ này nên sẽ gây lỗi biên dịch.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "const",
+          "pointer"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

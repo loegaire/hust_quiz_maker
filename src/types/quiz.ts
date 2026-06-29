@@ -13,7 +13,13 @@ export interface QuizAsciiAsset {
   alt?: string;
 }
 
-export type QuizMedia = QuizImageAsset | QuizAsciiAsset;
+export interface QuizSvgAsset {
+  id: string;
+  svg: string;
+  alt?: string;
+}
+
+export type QuizMedia = QuizImageAsset | QuizAsciiAsset | QuizSvgAsset;
 
 export interface ContentBlock {
   text: string;

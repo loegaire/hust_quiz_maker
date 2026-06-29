@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "database-extra-6554d6c3",
+    "title": "DATABASE - Database - giс╗пa k├м c├┤ Trinh.pdf",
+    "description": "Không thể trích xuất do file là Ảnh scan (cần OCR).",
+    "language": "vi",
+    "source": {
+      "type": "placeholder",
+      "notes": "Placeholder cho Database - giс╗пa k├м c├┤ Trinh.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q_placeholder",
+        "type": "single_choice",
+        "question": {
+          "text": "File Database - giс╗пa k├м c├┤ Trinh.pdf là Ảnh scan (cần OCR). Bạn hãy dùng OCR.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đã hiểu"
+          },
+          {
+            "id": "E906",
+            "text": "Lựa chọn ảo"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "database"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

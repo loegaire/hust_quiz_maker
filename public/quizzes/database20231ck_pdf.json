@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "database-extra-a1d9bd5f",
+    "title": "DATABASE - database20231ck.pdf",
+    "description": "Không thể trích xuất do file là Ảnh scan (cần OCR).",
+    "language": "vi",
+    "source": {
+      "type": "placeholder",
+      "notes": "Placeholder cho database20231ck.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q_placeholder",
+        "type": "single_choice",
+        "question": {
+          "text": "File database20231ck.pdf là Ảnh scan (cần OCR). Bạn hãy dùng OCR.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đã hiểu"
+          },
+          {
+            "id": "3F4A",
+            "text": "Lựa chọn ảo"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "database"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

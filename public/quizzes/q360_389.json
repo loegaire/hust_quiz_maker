@@ -1,0 +1,1139 @@
+[
+  {
+    "id": "q361",
+    "type": "single_choice",
+    "question": {
+      "text": "Phát biểu nào sau đây là đúng nhất với câu lệnh for của C/C++?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "for là câu lệnh điều khiển lặp của C/C++ với cú pháp for(nhóm khởi tạo; nhóm điều kiện; nhóm sau lặp) thân vòng lặp (có thể là 1 lệnh hoặc 1 khối lệnh). Cả ba nhóm trong cặp () có thể có, có thể không có nhưng bắt buộc phải có 2 dấu ; để ngăn cách các nhóm. Nếu trong các nhóm có nhiều hơn 1 biểu thức thì các biểu thức cách nhau bằng dấu phẩy và nếu nhóm điều kiện có nhiều hơn 1 biểu thức thì tất cả các biểu thức đúng thì thân vòng lặp được thực hiện, nếu 1 trong các biểu thức điều kiện sai thì thoát khỏi for."
+      },
+      {
+        "id": "B",
+        "text": "for là câu lệnh điều khiển lặp của C/C++ với cú pháp for(nhóm khởi tạo; nhóm điều kiện; nhóm sau lặp) thân vòng lặp (có thể là 1 lệnh hoặc 1 khối lệnh). Hai nhóm khởi tạo và sau lặp trong cặp () có thể có, có thể không có nhưng bắt buộc phải có biểu thức điều kiện để xác định có lặp hay không và 2 dấu ; để ngăn cách các nhóm."
+      },
+      {
+        "id": "C",
+        "text": "for là câu lệnh điều khiển lặp của C/C++ với cú pháp for(nhóm khởi tạo; nhóm điều kiện; nhóm sau lặp) thân vòng lặp (có thể là 1 lệnh hoặc 1 khối lệnh). Cả ba nhóm trong cặp () có thể có, có thể không có nhưng bắt buộc phải có 2 dấu ; để ngăn cách các nhóm."
+      },
+      {
+        "id": "D",
+        "text": "for là câu lệnh điều khiển lặp của C/C++ với cú pháp for(nhóm khởi tạo; nhóm điều kiện; nhóm sau lặp) thân vòng lặp (có thể là 1 lệnh hoặc 1 khối lệnh). Cả ba nhóm trong cặp () có thể có, có thể không có nhưng bắt buộc phải có 2 dấu ; để ngăn cách các nhóm. Nếu trong các nhóm có nhiều hơn 1 biểu thức thì các biểu thức cách nhau bằng dấu phẩy và nếu nhóm điều kiện có nhiều hơn 1 biểu thức thì tính đúng sai phụ thuộc biểu thức cuối cùng."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Cú pháp của for là for(khởi tạo; điều kiện; sau lặp). Cả ba có thể vắng mặt nhưng bắt buộc phải có 2 dấu chấm phẩy. Nhiều biểu thức ngăn cách nhau bằng dấu phẩy (toán tử phẩy). Nếu nhóm điều kiện chứa toán tử phẩy, tính đúng sai của cả nhóm phụ thuộc hoàn toàn vào biểu thức cuối cùng.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q362",
+    "type": "fill_gap",
+    "question": {
+      "text": "Con trỏ p được khai báo như sau:\n```cpp\nint *p;\n```\nGiả sử sau khi khai báo, con trỏ p có địa chỉ trong bộ nhớ là 219. Hỏi địa chỉ mới của p là bao nhiêu sau khi thực hiện tiếp câu lệnh sau:\n```cpp\np += 8\n```",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "251"
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "Con trỏ p trỏ tới kiểu int (thường là 4 bytes). Khi thực hiện p += 8, địa chỉ lưu trong p tăng lên 8 * sizeof(int) = 8 * 4 = 32 bytes. Địa chỉ mới là 219 + 32 = 251.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q363",
+    "type": "multiple_choice",
+    "question": {
+      "text": "```cpp\nvector<int> numbers = {10, 20, 30, 40};\n```\nHãy cho biết (những) đoạn code nào dưới đây sẽ bị lỗi?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "numbers.shrink_to_fit(4);"
+      },
+      {
+        "id": "B",
+        "text": "auto it = numbers.end();"
+      },
+      {
+        "id": "C",
+        "text": "numbers[3] = 45;"
+      },
+      {
+        "id": "D",
+        "text": "numbers.front() = 15;"
+      },
+      {
+        "id": "E",
+        "text": "numbers.resize(1, 2);"
+      },
+      {
+        "id": "F",
+        "text": "int x = numbers.at(4);"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A",
+        "F"
+      ]
+    },
+    "explanation": {
+      "text": "- Phương án A lỗi biên dịch vì hàm shrink_to_fit() không nhận tham số đầu vào.\n```cpp\n- Phương án F lỗi thời gian chạy (throws std::out_of_range) vì index 4 vượt quá số phần tử của vector (0 đến 3).\n```",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q364",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho biết dòng kết quả khi chạy chương trình sau:\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n  int z = 1, x = 0;\n  int k, y = 2;\n  auto func = [&, y] mutable(int a) { z += y-- + ++a; };\n  func(10);\n  cout << z << \" , \" << y << endl;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "13, 2"
+      },
+      {
+        "id": "B",
+        "text": "Chương trình có lỗi"
+      },
+      {
+        "id": "C",
+        "text": "1, 2"
+      },
+      {
+        "id": "D",
+        "text": "14 , 1"
+      },
+      {
+        "id": "E",
+        "text": "14, 2"
+      },
+      {
+        "id": "F",
+        "text": "Không xác định"
+      },
+      {
+        "id": "G",
+        "text": "13, 1"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Theo đáp án đánh dấu trên đề thi trắc nghiệm, câu trả lời là 'Chương trình có lỗi'.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q365",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho khai báo char *s1, s2[10], *s3; Nhóm lệnh nào sau đây là đúng?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "s3 = s2; gets(s1);"
+      },
+      {
+        "id": "B",
+        "text": "s1 = \"xzy\"; s3 = s1; s3[0] = 'H';"
+      },
+      {
+        "id": "C",
+        "text": "s1 = \"DHBK Hanoi\"; s2 = s1;"
+      },
+      {
+        "id": "D",
+        "text": "s1 = \"DHBK Hanoi\"; s3 = s2;"
+      },
+      {
+        "id": "E",
+        "text": "strcpy(s2, \"Ha noi\"); strcat(s1, s2);"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "- A lỗi vì s1 chưa được cấp phát vùng nhớ mà đã gọi gets(s1).\n- B lỗi vì s1 trỏ tới một hằng chuỗi nằm trong phân vùng read-only, việc cố tình ghi s3[0] = 'H' sẽ gây lỗi sập chương trình (segfault).\n- C lỗi vì s2 là tên mảng (hằng con trỏ), không thể nhận phép gán s2 = s1.\n- E lỗi vì s1 chưa được khởi tạo và cấp phát vùng nhớ để strcat.\n- D hoàn toàn đúng vì gán địa chỉ chuỗi hằng cho s1 và gán con trỏ s3 trỏ tới mảng s2.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q366",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho biết hàm C++ nào sau đây dùng để tái cấp phát bộ nhớ động cho mảng 3 chiều có bảo lưu dữ liệu cũ cần thiết trong kích thước mới?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "```cpp\nint realloc3D(float ***Mc, int mo, int ro, int co, int mn, int rn, int cn) {\n  float ***M = new float **[mn];\n  if (M) {\n    for (int k = 0; k < mn; k++) {\n      M[k] = new float *[rn];\n      if (!M[k])\n        return 0;\n      for (int i = 0; i < rn; i++) {\n        M[k][i] = new float[cn];\n        if (!M[k][i])\n          return 0;\n        for (int j = 0; j < cn; j++)\n          M[k][i][j] = (k < mo && i < ro && j < co) ? Mc[k][i][j] : 0;\n      }\n    }\n    for (int k = 0; k < mo; k++) {\n      for (int i = 0; i < ro; i++)\n        delete[] Mc[k][i];\n      delete[] Mc[k];\n    }\n    delete[] Mc;\n    Mc = M;\n    mo = mn;\n    ro = rn;\n    co = cn;\n    return 1;\n  } else\n    return 0;\n}\n```"
+      },
+      {
+        "id": "B",
+        "text": "```cpp\nint realloc3D(float ***&Mc, int mo, int ro, int co, int mn, int rn, int cn) {\n  float ***M = new float **[mn];\n  if (M) {\n    for (int k = 0; k < mn; k++) {\n      M[k] = new float *[rn];\n      if (!M[k])\n        return 0;\n      for (int i = 0; i < rn; i++) {\n        M[k][i] = new float[cn];\n        if (!M[k][i])\n          return 0;\n        for (int j = 0; j < cn; j++)\n          M[k][i][j] = (k < mo && i < ro && j < co) ? Mc[k][i][j] : 0;\n      }\n    }\n    for (int k = 0; k < mo; k++) {\n      for (int i = 0; i < ro; i++)\n        delete[] Mc[k][i];\n      delete[] Mc[k];\n    }\n    delete[] Mc;\n    Mc = M;\n    return 1;\n  } else\n    return 0;\n}\n```"
+      },
+      {
+        "id": "C",
+        "text": "```cpp\nint realloc3D(float ***Mc, int mo, int ro, int co, int mn, int rn, int cn) {\n  float ***M = new float **[mn];\n  if (M) {\n    for (int k = 0; k < mn; k++) {\n      M[k] = new float *[rn];\n      if (!M[k])\n        return 0;\n      for (int i = 0; i < rn; i++) {\n        M[k][i] = new float[cn];\n        if (!M[k][i])\n          return 0;\n        for (int j = 0; j < cn; j++)\n          if (M[k][i][j])\n            return 0;\n      }\n    }\n    for (int k = 0; k < mo; k++) {\n      for (int i = 0; i < ro; i++)\n        delete[] Mc[k][i];\n      delete[] Mc[k];\n    }\n    delete[] Mc;\n    Mc = M;\n    return 1;\n  } else\n    return 0;\n}\n```"
+      },
+      {
+        "id": "D",
+        "text": "Test chèn ảnh"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Để thay đổi thực sự con trỏ Mc trong hàm gọi (caller), tham số Mc phải được truyền theo tham chiếu (float ***&Mc). Nếu chỉ truyền float ***Mc (tham trị) thì việc gán Mc = M ở cuối hàm chỉ có tác dụng cục bộ, dẫn đến rò rỉ bộ nhớ và con trỏ ở hàm gọi vẫn trỏ vào vùng nhớ cũ đã bị xóa.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q367",
+    "type": "single_choice",
+    "question": {
+      "text": "Đâu không phải là một trình biên dịch của ngôn ngữ C++?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Clang"
+      },
+      {
+        "id": "B",
+        "text": "Watcom C/C++"
+      },
+      {
+        "id": "C",
+        "text": "MS Visual C++"
+      },
+      {
+        "id": "D",
+        "text": "GNU GCC"
+      },
+      {
+        "id": "E",
+        "text": "Cython"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "E"
+      ]
+    },
+    "explanation": {
+      "text": "Cython là một ngôn ngữ lập trình tối ưu hóa giúp viết các extension cho Python bằng cú pháp tương tự Python kết hợp kiểu dữ liệu tĩnh của C/C++, chứ bản thân nó không phải là một trình biên dịch chuẩn cho ngôn ngữ C++.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q368",
+    "type": "single_choice",
+    "question": {
+      "text": "!!! Kết quả sau khi chạy chương trình C++ sau là:\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n  int a = 6, b = 12;\n  int *p = &a, *q = &b;\n  ++a = ~a + ~~b;\n  p--;\n  *p-- = a + ~2;\n  cout << a << \" , \" << b;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "1, 4"
+      },
+      {
+        "id": "B",
+        "text": "Chương trình có lỗi, không có kết quả"
+      },
+      {
+        "id": "C",
+        "text": "4, 1"
+      },
+      {
+        "id": "D",
+        "text": "6, 4"
+      },
+      {
+        "id": "E",
+        "text": "6, 1"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Theo kết quả ghi nhận từ bài kiểm tra, đáp án in ra là '4, 1'.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q369",
+    "type": "single_choice",
+    "question": {
+      "text": "Phương thức nào sau đây của vector không làm mất hiệu lực con trỏ trỏ tới phần tử thứ hai của 1 vector được khởi tạo có 4 phần tử?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "resize"
+      },
+      {
+        "id": "B",
+        "text": "insert"
+      },
+      {
+        "id": "C",
+        "text": "push_back"
+      },
+      {
+        "id": "D",
+        "text": "pop_back"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "pop_back xóa phần tử cuối cùng của vector (phần tử thứ 4). Do không làm thay đổi vị trí hay phân bổ lại vùng nhớ của các phần tử trước đó, nên con trỏ trỏ tới phần tử thứ hai vẫn hoàn toàn hợp lệ. Các phương thức còn lại (resize, insert, push_back) đều có thể kích hoạt quá trình tái cấp phát bộ nhớ (reallocation) làm vô hiệu hóa tất cả các con trỏ hiện tại trỏ vào vector.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q370",
+    "type": "single_choice",
+    "question": {
+      "text": "Hỏi đoạn chương trình sau in ra kết quả gì?\n```cpp\nc int x, y, *p, *q;\nx = 5;\ny = 10;\np = q = &x;\n*p = *q = y;\nprintf(\"x=%d y=%d \\n\", x, y);\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "x = 5 y = 10"
+      },
+      {
+        "id": "B",
+        "text": "x = 5 y = 5"
+      },
+      {
+        "id": "C",
+        "text": "x = 10 y = 5"
+      },
+      {
+        "id": "D",
+        "text": "x = 10 y = 10"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Ban đầu x = 5, y = 10. Con trỏ p và q cùng trỏ tới địa chỉ của x. Phép gán *p = *q = y gán giá trị của y (10) cho vùng nhớ mà q trỏ đến (x), sau đó gán giá trị của vùng nhớ đó cho vùng nhớ mà p trỏ đến (cũng là x). Kết quả là x nhận giá trị 10, y vẫn giữ nguyên 10.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q371",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho biết kết quả khi biên dịch và thực thi chương trình sau:\n```cpp\n#include <iostream>\nusing namespace std;\nint func(int a = 10, int b) {\n  int c;\n  c = a + b;\n  return c;\n}\nint main() {\n  cout << func(10);\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "10"
+      },
+      {
+        "id": "B",
+        "text": "20"
+      },
+      {
+        "id": "C",
+        "text": "Lỗi biên dịch chương trình"
+      },
+      {
+        "id": "D",
+        "text": "0"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Quy tắc C++ bắt buộc các tham số có giá trị ngầm định (default arguments) phải được đặt ở vị trí cuối cùng bên phải trong danh sách tham số hàm. Trong khai báo hàm func(int a = 10, int b), tham số b ở bên phải của a nhưng không có giá trị ngầm định, điều này vi phạm quy tắc cú pháp và dẫn đến lỗi biên dịch.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q372",
+    "type": "single_choice",
+    "question": {
+      "text": "Chọn đáp án đúng nhất trong các phát biểu sau",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Trong C/C++, vế trái của 1 phép toán có thể là một biến hoặc 1 biểu thức"
+      },
+      {
+        "id": "B",
+        "text": "Trong C/C++, vế trái của 1 phép toán có thể là một biến hoặc 1 biểu thức hay hàm đặc biệt"
+      },
+      {
+        "id": "C",
+        "text": "Trong C/C++, vế trái của 1 phép toán có thể là một biến, 1 biểu thức hoặc một hàm bất kỳ"
+      },
+      {
+        "id": "D",
+        "text": "Trong C/C++, vế trái của 1 phép toán là một biến"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Vế trái của phép gán trong C/C++ bắt buộc phải là một lvalue. Một lvalue có thể là một biến đơn, một biểu thức sinh ra lvalue (như phép giải con trỏ *p, truy cập phần tử mảng a[i]), hoặc hàm trả về một tham chiếu (hàm đặc biệt).",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q373",
+    "type": "single_choice",
+    "question": {
+      "text": "Khi bạn gọi v.clear(), điều gì xảy ra với bộ nhớ của vector?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Thu nhỏ giá trị capacity cho bằng giá trị size."
+      },
+      {
+        "id": "B",
+        "text": "Lỗi biên dịch."
+      },
+      {
+        "id": "C",
+        "text": "size trở thành 0, capacity giữ nguyên."
+      },
+      {
+        "id": "D",
+        "text": "Cả size và capacity đều giữ nguyên, dữ liệu bị ghi đè bằng 0."
+      },
+      {
+        "id": "E",
+        "text": "size trở thành 0, capacity trở thành 0."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "```cpp\nHàm clear() của std::vector xóa toàn bộ các phần tử hiện tại của vector, đưa size về bằng 0, tuy nhiên vùng nhớ đệm đã cấp phát vẫn được giữ lại để tái sử dụng, do đó capacity giữ nguyên không đổi.\n```",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q374",
+    "type": "fill_gap",
+    "question": {
+      "text": "(TỰ LUẬN) Tối ưu hóa hàm tìm kiếm sau:\n```cpp\nint search(int M[], int k, int n) {\n  int pos = -1;\n  for (int i = 0; i < n; i++) {\n    if (!(i % 2) && M[i] == 4 * k * k && !(n % 2)) {\n      pos = i;\n      break;\n    } else if (i % 2 && M[i] == k * k / 16 && n % 2) {\n      pos = i;\n      break;\n    }\n  }\n  return pos;\n}\n```",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "Di chuyển điều kiện n%2 ra ngoài vòng lặp (loop unswitching), tăng bước nhảy i lên 2 (i += 2) và tính trước biểu thức so sánh ngoài vòng lặp."
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "Hàm tối ưu hóa đề xuất:\n```cpp\nint search(int M[], int k, int n) {\n    if (n % 2 == 0) {\n        int target = 4 * k * k;\n        for (int i = 0; i < n; i += 2) {\n            if (M[i] == target) return i;\n        }\n    } else {\n        int target = k * k / 16;\n        for (int i = 1; i < n; i += 2) {\n            if (M[i] == target) return i;\n        }\n    }\n    return -1;\n}\n```\nCác tối ưu chính:\n1. Di chuyển các điều kiện vòng lặp bất biến `n%2` ra ngoài (Loop Unswitching).\n2. Giảm số vòng lặp bằng cách nhảy 2 đơn vị `i += 2`.\n3. Tính trước biểu thức không đổi `4*k*k` và `k*k/16` ngoài vòng lặp.\n4. Thoát hàm sớm khi tìm thấy kết quả thay vì gán biến và dùng break.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q375",
+    "type": "single_choice",
+    "question": {
+      "text": "Trong cú pháp của lambda, toán tử nào sau đây được sử dụng để bắt tất cả các biến bên ngoài truy cập bằng tham trị?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Để trống []"
+      },
+      {
+        "id": "B",
+        "text": "&"
+      },
+      {
+        "id": "C",
+        "text": "=="
+      },
+      {
+        "id": "D",
+        "text": "*"
+      },
+      {
+        "id": "E",
+        "text": "&&"
+      },
+      {
+        "id": "F",
+        "text": "="
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "F"
+      ]
+    },
+    "explanation": {
+      "text": "Trong biểu thức lambda C++, sử dụng capture-default là '=' (ví dụ `[=]`) nghĩa là tất cả các biến tự do xuất hiện trong lambda sẽ được bắt bằng giá trị (tham trị). Ngược lại, sử dụng '&' (ví dụ `[&]`) sẽ bắt bằng tham chiếu.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q376",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho biết kết quả sau khi chạy chương trình C++ sau:\n```cpp\n#include \"iostream\"\nusing namespace std;\ntypedef struct {\n  int Tu;\n  int Mau;\n} PS;\n\nPS operator+=(PS &p1, PS p2) {\n  p1.Tu = p1.Tu * p2.Mau + p2.Tu * p1.Mau;\n  p1.Mau *= p2.Mau;\n  return p1;\n}\n\ntemplate <typename T>\nPS operator+=(PS &p1, T p2) {\n  p1.Tu += p2 * p1.Mau;\n  return p1;\n}\n\nint main() {\n  PS p1 = {3, 4}, p2 = {2, 3};\n  float x = 2.6;\n  p1 += p2;\n  p2 += x;\n  cout << \"p1 = \" << p1.Tu << \"/\" << p1.Mau << \" Va p2 = \" << p2.Tu << \"/\"\n       << p2.Mau << endl;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "p1 = 17/12 Va p2 = 9.8/3"
+      },
+      {
+        "id": "B",
+        "text": "p1 = 17/12 Va p2 = 9/3"
+      },
+      {
+        "id": "C",
+        "text": "p1 = 17/12 Va p2 = 10/3"
+      },
+      {
+        "id": "D",
+        "text": "Chương trình có lỗi, không có kết quả"
+      },
+      {
+        "id": "E",
+        "text": "p1 = 17/12 Va p2 = 8/3"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "1. p1 += p2 gọi operator+= nhận hai PS. p1.Tu = 3*3 + 2*4 = 17, p1.Mau = 4*3 = 12. Vậy p1 = 17/12.\n2. p2 += x gọi template operator+= với T là float. p2.Tu += x * p2.Mau = 2 + 2.6 * 3 = 2 + 7.8 = 9.8. Tuy nhiên do p2.Tu kiểu int nên kết quả bị ép kiểu và trích bỏ phần thập phân còn 9. Vậy p2.Tu = 9, p2.Mau = 3. p2 = 9/3.\nDo đó kết quả in ra là 'p1 = 17/12 Va p2 = 9/3'.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q377",
+    "type": "fill_gap",
+    "question": {
+      "text": "Kết quả in ra của mã nguồn C++ này là gì? (Nếu mã bị lỗi thì điền -1)\n```cpp\n#include \"iostream\"\nusing namespace std;\nint main() {\n  auto sum = [](auto v1, auto v2) {\n    static int C = 0;\n    cout << ++C << \": \" << v1 + v2 << \" - \";\n  };\n  sum(10, 20);\n  sum(15, 25);\n  sum(1.2, 2.3);\n  sum(2, 3);\n  sum(4.0, 5.5);\n  sum(3, 5);\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "1: 30 - 2: 40 - 1: 3.5 - 3: 5 - 2: 9.5 - 4: 8 -"
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "Do generic lambda (từ C++14) sinh ra các phiên bản nạp chồng (overloads) toán tử gọi khác nhau cho mỗi cặp kiểu dữ liệu thực truyền vào, biến static C sẽ tồn tại riêng biệt cho mỗi kiểu nạp chồng đó:\n- Nạp chồng (int, int): được gọi 4 lần (lần 1, 2, 4, 6) -> in ra lần lượt các số C: 1, 2, 3, 4.\n- Nạp chồng (double, double): được gọi 2 lần (lần 3, 5) -> in ra lần lượt các số C: 1, 2.\nKết quả in ra chuỗi tích lũy là '1: 30 - 2: 40 - 1: 3.5 - 3: 5 - 2: 9.5 - 4: 8 - '.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q378",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho biết kết quả khi chạy chương trình C sau\n```cpp\nc\n#include <stdio.h>\n    int\n    f(int a, int b) {\n  return b + a;\n}\n\nint main() {\n  int i = 10, *p;\n  p = &i;\n  i = f(i, --*p);\n  printf(\"%d\\n\", i);\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Chương trình có lỗi"
+      },
+      {
+        "id": "B",
+        "text": "19"
+      },
+      {
+        "id": "C",
+        "text": "18"
+      },
+      {
+        "id": "D",
+        "text": "20"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Theo khóa đáp án trên đề thi trắc nghiệm, kết quả in ra là 18. (Điều này tương ứng với việc đối số thứ hai '--*p' được tính trước, làm i giảm xuống 9, sau đó đối số thứ nhất 'i' được lấy giá trị mới là 9, kết quả hàm trả về 9 + 9 = 18).",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q379",
+    "type": "single_choice",
+    "question": {
+      "text": "Giả sử bạn cần cấp phát động cho một mảng arr có kích thước mxn với m hàng và n cột. Hãy chọn đoạn chương trình thực hiện đúng việc cấp phát trong các đoạn chương trình sau đây.",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "int **arr; arr = new int*[n]; for (int i = 0; i < m; i++) arr[i] = new int[m];"
+      },
+      {
+        "id": "B",
+        "text": "int *arr; arr = new int[n]; for (int i = 0; i < m; i++) arr[i] = new int[m];"
+      },
+      {
+        "id": "C",
+        "text": "int **arr; arr = new int*[m]; for (int i = 0; i < m; i++) arr[i] = new int[n];"
+      },
+      {
+        "id": "D",
+        "text": "int *arr; arr = new int[m]; for (int i = 0; i < n; i++) arr[i] = new int[n];"
+      },
+      {
+        "id": "E",
+        "text": "int **arr; arr = new int*[n]; for (int i = 0; i < n; i++) arr[i] = new int*[m];"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Để cấp phát động mảng hai chiều m hàng và n cột trong C++:\n```cpp\n1. Khởi tạo mảng các con trỏ cấp 1 có kích thước m đại diện cho các hàng: `arr = new int*[m];`\n2. Duyệt qua m hàng và cấp phát cho mỗi hàng một mảng số nguyên có kích thước n đại diện cho cột: `arr[i] = new int[n];`\n```",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q380",
+    "type": "fill_gap",
+    "question": {
+      "text": "Pascal, Java, Prolog, Lisp (1, 2, 3, 4)\nHướng chức năng, Hướng đối tượng, Mệnh lệnh, Hướng logic (A, B, C, D)\nChỉ ra những ngôn ngữ lập trình tương ứng với mô thức lập trình nào theo thứ tự 1234 (ví dụ đáp án: ABCD)",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "CBDA"
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "- Pascal là ngôn ngữ lập trình theo mô thức mệnh lệnh (C - Mệnh lệnh).\n- Java là ngôn ngữ lập trình theo mô thức hướng đối tượng (B - Hướng đối tượng).\n- Prolog là ngôn ngữ lập trình theo mô thức hướng logic (D - Hướng logic).\n- Lisp là ngôn ngữ lập trình theo mô thức hướng chức năng (A - Hướng chức năng).\nTheo thứ tự 1-2-3-4 ta ghép được chuỗi 'CBDA'.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q381",
+    "type": "fill_gap",
+    "question": {
+      "text": "Cho biết kết quả in ra của mã nguồn C++ sau?\n```cpp\n#include <stdio.h>\n#include <string.h>\n\nchar s[] = \"CNTT&TT\";\n\nvoid func(int n) {\n  if (n >= 0) {\n    printf(\"%c\", s[n]);\n    func(n - 1);\n    printf(\"%c\", s[n]);\n  }\n}\n\nint main() {\n  func(strlen(s) - 1);\n}\n```",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "TT&TTNCCNTT&TT"
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "Độ dài chuỗi s là 7. Trong main gọi func(6).\nVới mỗi mức đệ quy n từ 6 giảm dần về 0, kí tự s[n] được in ra trước, sau đó gọi đệ quy mức thấp hơn, và in lại s[n] sau khi đệ quy quay lui.\nKết quả in ra là chuỗi đối xứng dạng s[6]s[5]...s[0]s[0]...s[5]s[6] -> 'TT&TTNCCNTT&TT'.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q382",
+    "type": "fill_gap",
+    "question": {
+      "text": "(TỰ LUẬN) Hãy tinh chỉnh đoạn mã lệnh sau:\n```cpp\nfor (int i = 0; i < 10000; i++) {\n  if (x % 3)\n    j = i * 10 + x;\n  else\n    j = i * 5 + x;\n  c += a[j] * a[j] + 5 * a[j] + 6;\n}\n```",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "Đưa câu lệnh điều kiện x % 3 ra ngoài vòng lặp (loop unswitching), tối ưu phép nhân i * 10 và i * 5 bằng phép cộng tích lũy j += 10 hoặc j += 5 (strength reduction), và dùng biến tạm val = a[j] để giảm truy cập mảng."
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "Đoạn mã tối ưu hóa:\n```cpp\nif (x % 3) {\n    for (int i = 0, j = x; i < 10000; i++, j += 10) {\n        int val = a[j];\n        c += val * val + 5 * val + 6;\n    }\n} else {\n    for (int i = 0, j = x; i < 10000; i++, j += 5) {\n        int val = a[j];\n        c += val * val + 5 * val + 6;\n    }\n}\n```\nCác tối ưu chính:\n1. Loop Unswitching: Tách điều kiện `if (x % 3)` bất biến ra ngoài vòng lặp.\n2. Strength Reduction: Thay phép nhân `i * 10` và `i * 5` bằng việc cộng tích lũy `j += 10` hoặc `j += 5`.\n3. Local Cache: Gán `val = a[j]` để giảm số lần truy cập bộ nhớ mảng.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q383",
+    "type": "single_choice",
+    "question": {
+      "text": "Chọn kết quả đúng sau khi chạy chương trình sau :\n```cpp\nc\n#include <stdio.h>\n    int\n    main() {\n  char buffer[8];\n  int *p = (int *)(buffer + 1);\n  *p = 10;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Có lỗi"
+      },
+      {
+        "id": "B",
+        "text": "Chương trình chạy bình thường, kết quả luôn đúng"
+      },
+      {
+        "id": "C",
+        "text": "Undefined Behavior"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Việc chuyển đổi một con trỏ kiểu char sang con trỏ kiểu int* mà không đảm bảo căn lề (alignment) của bộ nhớ của kiểu đích (buffer + 1 không chia hết cho 4 trên hầu hết các nền tảng) và cố gắng dereference nó (*p = 10) gây ra hành vi không xác định (Undefined Behavior) do vi phạm ràng buộc căn lề.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q384",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho biết kết quả khi chạy chương trình C sau:\n\n```cpp\n#include <stdio.h>\nint f(int a, int b) {\n  return b + a;\n}\n\nint main() {\n  int i = 10, *p;\n  p = &i;\n  i = f(i--, (*p)--);\n  printf(\"%d\\n\", i);\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "18"
+      },
+      {
+        "id": "B",
+        "text": "Chương trình có lỗi"
+      },
+      {
+        "id": "C",
+        "text": "20"
+      },
+      {
+        "id": "D",
+        "text": "19"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q385",
+    "type": "single_choice",
+    "question": {
+      "text": "Các kỹ thuật viết code hiệu quả là:",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Các kỹ thuật xây dựng thuật toán tối ưu"
+      },
+      {
+        "id": "B",
+        "text": "Các kỹ thuật làm tăng tốc độ thực hiện chương trình"
+      },
+      {
+        "id": "C",
+        "text": "Các kỹ thuật khử đệ quy"
+      },
+      {
+        "id": "D",
+        "text": "Các kỹ thuật trình bày chương trình sao cho đơn giản, rõ ràng, dễ hiểu"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q386",
+    "type": "fill_gap",
+    "question": {
+      "text": "77.Giả sử hàm f được định nghĩa như sau:\n```cpp\ntemplate <typename T>\nT f(T a, T &b) {\n  b++;\n  a++;\n  return a * b;\n}\n```\nHỏi đoạn chương trình sau in ra kết quả gì lên màn hình:\n\n```cpp\nint a = 1, b = 1;\nfloat c = 4.0, d = 5.0;\nprintf(\"%d %.0f\", f(f(a, b), b), f(c, d));\n```\nYêu cầu ghi chính xác kết quả, không thừa không thiếu ký tự nào kể cả dấu cách.",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "15 30"
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q387",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho khai báo: int M[][]= {1,2,3}; Hãy lựa chọn kết luận đúng:",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "M là mảng 1 chiều có kích thước = 3 và giá trị các phần tử tương ứng là 1,2 và 3"
+      },
+      {
+        "id": "B",
+        "text": "Có lỗi syntax vì trình dịch không xác định được kích thước mảng"
+      },
+      {
+        "id": "C",
+        "text": "M là mảng 2 chiều có kích thước 1 x 3 và giá trị các phần tử tương ứng là 1,2,3"
+      },
+      {
+        "id": "D",
+        "text": "M là mảng 2 chiều có kích thước 3 x 1 và giá trị các phần tử tương ứng là 1,2,3"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q388",
+    "type": "single_choice",
+    "question": {
+      "text": "Khai báo nguyên mẫu hàm (prototype) nào sau đây là không hợp lệ trong C++?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "int (*func)(int, int);"
+      },
+      {
+        "id": "B",
+        "text": "int & func(int , int );"
+      },
+      {
+        "id": "C",
+        "text": "int & func (int &, int &);"
+      },
+      {
+        "id": "D",
+        "text": "int * func (int *, int *);"
+      },
+      {
+        "id": "E",
+        "text": "int func(int x, int y);"
+      },
+      {
+        "id": "F",
+        "text": "int * func(int, int);"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q389",
+    "type": "single_choice",
+    "question": {
+      "text": "Kết quả của biến v sau chuỗi lệnh này là gì? vector<int> v = {1, 2, 3}; v.assign(2, 99);",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "{99, 99}"
+      },
+      {
+        "id": "B",
+        "text": "{1, 2, 3, 99, 99}"
+      },
+      {
+        "id": "C",
+        "text": "{99, 99, 3}"
+      },
+      {
+        "id": "D",
+        "text": "{1, 2, 99}"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q390",
+    "type": "fill_gap",
+    "question": {
+      "text": "76.Giả sử hai hàm func1 và func2 được định nghĩa như sau:\n\n```cpp\nint func2(int);\nint func1(int n) {\n  if (n < 1)\n    return 0;\n  return 2 * func2(n - 1);\n}\nint func2(int n) {\n  if (n < 1)\n    return 1;\n  return 1 + func1(n - 1);\n}\n```\nHỏi câu lệnh sau in kết quả gì ra màn hình?\n`Printf(\"%d %d\", func1(3), func2(3));`\nKết quả thực hiện chương trình sau là gì? Yêu cầu ghi chính xác kết quả, không thừa không thiếu ký tự nào kể cả dấu cách.",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "6 3"
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  }
+]

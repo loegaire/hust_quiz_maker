@@ -128,22 +128,29 @@ function buildResponse(question: QuizQuestion, partial: { selectedChoiceIds?: st
   };
 }
 
-function getResponseStatus(response: DraftResponse | undefined) {
+function getResponseStatus(response: DraftResponse | undefined, revealCorrectness: boolean) {
   if (!response || !response.answered) {
     return {
       label: 'Unanswered',
-      className: 'bg-slate-100 text-slate-700'
+      className: 'bg-white text-black'
+    };
+  }
+
+  if (!revealCorrectness) {
+    return {
+      label: 'Answered',
+      className: 'bg-[var(--accent-blue)] text-black'
     };
   }
 
   return response.isCorrect
     ? {
         label: 'Correct',
-        className: 'bg-emerald-100 text-emerald-800'
+        className: 'bg-emerald-300 text-black'
       }
     : {
         label: 'Incorrect',
-        className: 'bg-red-100 text-red-800'
+        className: 'bg-red-300 text-black'
       };
 }
 
@@ -205,7 +212,8 @@ export function QuizPlayer({
   const orderedQuestions = useMemo(() => (session ? hydrateQuestions(session, questions) : []), [questions, session]);
   const currentQuestion = session ? orderedQuestions[session.currentIndex] : undefined;
   const currentResponse = currentQuestion ? session?.responses[currentQuestion.id] : undefined;
-  const currentStatus = getResponseStatus(currentResponse);
+  const revealCorrectness = session?.mode === 'practice';
+  const currentStatus = getResponseStatus(currentResponse, revealCorrectness);
 
   const answeredCount = session ? Object.values(session.responses).filter((response) => response.answered).length : 0;
   const liveScore = session
@@ -353,20 +361,20 @@ export function QuizPlayer({
 
   if (!session) {
     return (
-      <section className="space-y-4 rounded-xl bg-[var(--card)] p-5 shadow-sm">
+      <section className="neo-card space-y-4">
         <div className="space-y-3">
           <h1 className="font-display text-2xl">{quiz.title}</h1>
           {quiz.description ? <p>{quiz.description}</p> : null}
         </div>
 
         {pendingDraft ? (
-          <div className="rounded-xl border border-[var(--accent)]/20 bg-[var(--accent-soft)] p-4">
+          <div className="neo-panel">
             <p className="font-semibold">Unfinished session found</p>
             <p className="mt-1 text-sm text-[var(--muted)]">
               Last updated {new Date(pendingDraft.updatedAt).toLocaleString()} · {pendingDraft.mode} mode
             </p>
             <div className="mt-3 flex flex-wrap gap-2">
-              <button type="button" onClick={() => setSession(pendingDraft)} className="rounded bg-[var(--accent)] px-4 py-2 text-white">
+              <button type="button" onClick={() => setSession(pendingDraft)} className="neo-button">
                 Resume
               </button>
               <button
@@ -374,7 +382,7 @@ export function QuizPlayer({
                 onClick={() => {
                   void discardDraft();
                 }}
-                className="rounded bg-black px-4 py-2 text-white"
+                className="neo-button-secondary"
               >
                 Discard Draft
               </button>
@@ -385,7 +393,7 @@ export function QuizPlayer({
         <div className="grid gap-3 md:grid-cols-2">
           <label className="flex items-center gap-2">
             Mode
-            <select value={mode} onChange={(event) => setMode(event.target.value as 'practice' | 'exam')} className="rounded border px-2 py-1">
+            <select value={mode} onChange={(event) => setMode(event.target.value as 'practice' | 'exam')} className="neo-input">
               <option value="practice">Practice</option>
               <option value="exam">Exam</option>
             </select>
@@ -402,18 +410,18 @@ export function QuizPlayer({
                 max={300}
                 value={timeLimitMin}
                 onChange={(event) => setTimeLimitMin(Number(event.target.value) || 1)}
-                className="w-20 rounded border px-2 py-1"
+                className="neo-input w-24"
               />
             </label>
           ) : null}
         </div>
 
         <div className="flex flex-wrap gap-2">
-          <button type="button" onClick={() => void startNewQuiz()} className="rounded bg-[var(--accent)] px-4 py-2 text-white">
+          <button type="button" onClick={() => void startNewQuiz()} className="neo-button">
             {pendingDraft ? 'Start New Quiz' : 'Start Quiz'}
           </button>
           {pendingDraft ? (
-            <button type="button" onClick={() => setSession(pendingDraft)} className="rounded bg-black px-4 py-2 text-white">
+            <button type="button" onClick={() => setSession(pendingDraft)} className="neo-button-secondary">
               Resume Existing
             </button>
           ) : null}
@@ -432,15 +440,15 @@ export function QuizPlayer({
   return (
     <section className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_18rem]">
       <div className="space-y-4">
-        <div className="rounded-xl bg-[var(--card)] p-4 shadow-sm">
+        <div className="neo-card p-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex flex-wrap items-center gap-2 text-sm">
-              <span className="rounded-full bg-black/10 px-3 py-1 font-medium">
+              <span className="neo-pill">
                 Question {session.currentIndex + 1} / {orderedQuestions.length}
               </span>
-              <span className="rounded-full bg-black/10 px-3 py-1">Answered {answeredCount}</span>
-              <span className="rounded-full bg-black/10 px-3 py-1">Live score {liveScore}</span>
-              <span className={`rounded-full px-3 py-1 ${currentStatus.className}`}>{currentStatus.label}</span>
+              <span className="neo-pill">Answered {answeredCount}</span>
+              {session.mode === 'practice' ? <span className="neo-pill">Live score {liveScore}</span> : null}
+              <span className={`neo-pill ${currentStatus.className}`}>{currentStatus.label}</span>
             </div>
             <Timer remainingMs={remainingMs} />
           </div>
@@ -472,8 +480,8 @@ export function QuizPlayer({
           }
         />
 
-        {hasAnswer(responseForCurrent) ? (
-          <div className={`rounded-xl p-4 text-sm ${responseForCurrent?.isCorrect ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'}`}>
+        {session.mode === 'practice' && hasAnswer(responseForCurrent) ? (
+          <div className={`neo-card text-sm ${responseForCurrent?.isCorrect ? 'bg-emerald-300 text-black' : 'bg-red-300 text-black'}`}>
             <p className="font-semibold">Current grading: {responseForCurrent?.isCorrect ? 'Correct' : 'Incorrect'}</p>
             {showExplanation ? (
               <div className="mt-3">
@@ -488,7 +496,7 @@ export function QuizPlayer({
             type="button"
             onClick={() => updateCurrentIndex(session.currentIndex - 1)}
             disabled={session.currentIndex === 0}
-            className="rounded bg-black px-4 py-2 text-white disabled:opacity-40"
+            className="neo-button-secondary disabled:opacity-40"
           >
             Previous
           </button>
@@ -496,11 +504,11 @@ export function QuizPlayer({
             type="button"
             onClick={() => updateCurrentIndex(session.currentIndex + 1)}
             disabled={session.currentIndex >= orderedQuestions.length - 1}
-            className="rounded bg-[var(--accent)] px-4 py-2 text-white disabled:opacity-40"
+            className="neo-button disabled:opacity-40"
           >
             Next
           </button>
-          <button type="button" onClick={() => void finishQuiz()} className="rounded bg-emerald-700 px-4 py-2 text-white">
+          <button type="button" onClick={() => void finishQuiz()} className="neo-button bg-emerald-300">
             Finish Quiz
           </button>
         </div>
@@ -511,6 +519,7 @@ export function QuizPlayer({
         total={orderedQuestions.length}
         responses={session.responses}
         questionIds={orderedQuestions.map((question) => question.id)}
+        revealCorrectness={session.mode === 'practice'}
         onJump={updateCurrentIndex}
       />
     </section>

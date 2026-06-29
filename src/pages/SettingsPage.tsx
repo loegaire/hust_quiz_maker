@@ -65,7 +65,7 @@ export function SettingsPage() {
   return (
     <section className="space-y-4">
       <h1 className="font-display text-3xl">Settings</h1>
-      <div className="space-y-2 rounded-xl bg-[var(--card)] p-5 shadow-sm">
+      <div className="neo-card space-y-2">
         {(
           [
             ['shuffleQuestions', 'Shuffle questions by default'],
@@ -86,9 +86,9 @@ export function SettingsPage() {
         ))}
       </div>
 
-      <div className="space-y-2 rounded-xl bg-[var(--card)] p-5 shadow-sm">
+      <div className="neo-card space-y-2">
         <h2 className="font-semibold">Backup</h2>
-        <button type="button" className="rounded bg-[var(--accent)] px-3 py-2 text-white" onClick={() => void doExport()}>
+        <button type="button" className="neo-button" onClick={() => void doExport()}>
           Export backup
         </button>
         <label className="block">
@@ -104,7 +104,7 @@ export function SettingsPage() {
         </label>
       </div>
 
-      <button type="button" className="rounded bg-red-700 px-3 py-2 text-white" onClick={() => void clearData()}>
+      <button type="button" className="neo-button-danger" onClick={() => void clearData()}>
         Clear local quiz and progress data
       </button>
     </section>

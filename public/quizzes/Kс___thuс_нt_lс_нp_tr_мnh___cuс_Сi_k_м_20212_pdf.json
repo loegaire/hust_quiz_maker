@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "ktlt-10c0198e",
+    "title": "KTLT - Kс╗╣ thuс║нt lс║нp tr├мnh - cuс╗Сi k├м 20212.pdf",
+    "description": "Không thể trích xuất tự động do file là Tự luận / Không đúng format trắc nghiệm. Vui lòng sử dụng công cụ OCR hoặc nhập tay.",
+    "language": "vi",
+    "source": {
+      "type": "placeholder",
+      "notes": "Placeholder cho Kс╗╣ thuс║нt lс║нp tr├мnh - cuс╗Сi k├м 20212.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q_placeholder",
+        "type": "single_choice",
+        "question": {
+          "text": "File Kс╗╣ thuс║нt lс║нp tr├мnh - cuс╗Сi k├м 20212.pdf là Tự luận / Không đúng format trắc nghiệm. Bạn hãy dùng OCR để lấy nội dung.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đã hiểu"
+          },
+          {
+            "id": "14AB",
+            "text": "Lựa chọn ảo"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ktlt"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

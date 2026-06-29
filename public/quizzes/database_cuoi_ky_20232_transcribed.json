@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "database-cuoi-ky-20232-transcribed",
+    "title": "Database - Cuối kì 20232 (Đã xử lý ảnh scan)",
+    "description": "Một số câu hỏi trắc nghiệm IT3090 Cơ sở dữ liệu được AI tự động nhận diện từ file ảnh scan PDF cuối kì 20232.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Trích xuất ảnh từ Database - cuối kì 20232.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q_db_1",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong mô hình cơ sở dữ liệu 3 tầng (kiến trúc ANSI-SPARC), gồm có ba mức: mức trong (lưu trữ), mức khái niệm (logic) và mức ngoài (các khung nhìn). Điều khẳng định nào sau đây là đúng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hầu hết người dùng cơ sở dữ liệu không bao giờ xem sơ đồ trong (không cần)"
+          },
+          {
+            "id": "B",
+            "text": "Người quản trị cơ sở dữ liệu, người thiết kế cơ sở dữ liệu và người dùng cuối thường chỉ xử lý ở mức khung nhìn bên ngoài"
+          },
+          {
+            "id": "C",
+            "text": "Người thiết kế cơ sở dữ liệu thường chỉ xử lý với sơ đồ trong"
+          },
+          {
+            "id": "D",
+            "text": "Người dùng cuối thông thường, không phải là chuyên gia CNTT thường chỉ xử lý ở mức khái niệm"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Hầu hết người dùng (end-users) chỉ tiếp xúc ở mức ngoài (External level/Views). Sơ đồ trong (Internal schema) quy định cách lưu trữ vật lý trên đĩa cứng, thường chỉ DBA (Database Administrator) hoặc hệ quản trị CSDL mới cần quan tâm đến mức này.",
+          "images": []
+        },
+        "tags": [
+          "database",
+          "architecture"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q_db_2",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho cơ sở dữ liệu gồm các bảng sau (Khóa chính in đậm gạch chân):\nAcc(AccID, Password, AccID_parent)\nObject(ObjectID, name, type, AccID)\nPermission(AccID, ObjectID, type, expired_date)\n\nCho biết kết quả của câu lệnh sau:\nDELETE FROM Acc WHERE NOT EXISTS (SELECT * FROM Permission p WHERE Acc.AccID = p.AccID);",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Xóa các tài khoản (trên bảng Acc) mà chưa được trao quyền trên đối tượng (Object) nào."
+          },
+          {
+            "id": "B",
+            "text": "Không bao giờ có bản ghi nào được xóa"
+          },
+          {
+            "id": "C",
+            "text": "Xóa các tài khoản (trên bảng Acc) mà đã được trao quyền trên 1 đối tượng (Object) nào đó"
+          },
+          {
+            "id": "D",
+            "text": "Lỗi cú pháp"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Câu truy vấn con `SELECT * FROM Permission p WHERE Acc.AccID = p.AccID` kiểm tra xem tài khoản hiện tại có bất kỳ bản ghi phân quyền nào trong bảng Permission hay không. Mệnh đề `NOT EXISTS` sẽ trả về True nếu tài khoản đó chưa có bất kỳ quyền nào. Do đó, câu lệnh DELETE sẽ xóa các tài khoản chưa được phân quyền.",
+          "images": []
+        },
+        "tags": [
+          "database",
+          "sql"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q_db_3",
+        "type": "single_choice",
+        "question": {
+          "text": "Sử dụng khung nhìn (view) có ưu điểm nào? Chọn 1 phương án phù hợp nhất:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bảo mật, đơn giản, nhất quán"
+          },
+          {
+            "id": "B",
+            "text": "Bảo mật, đơn giản, nhất quán, tăng hiệu năng"
+          },
+          {
+            "id": "C",
+            "text": "Đơn giản, nhất quán"
+          },
+          {
+            "id": "D",
+            "text": "Bảo mật, đơn giản"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "View không lưu trữ dữ liệu thực (trừ materialized view), nên nó KHÔNG tăng hiệu năng (đôi khi còn giảm vì phải tính toán lại mỗi khi query). Tuy nhiên, nó giúp che giấu dữ liệu nhạy cảm (bảo mật), làm đơn giản hóa truy vấn phức tạp (đơn giản), và cung cấp giao diện chuẩn thống nhất (nhất quán).",
+          "images": []
+        },
+        "tags": [
+          "database",
+          "view"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q_db_4",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào dưới đây là ĐÚNG về khóa ngoại?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Khóa ngoại của một bảng có thể tham chiếu đến khóa chính của chính bảng đó."
+          },
+          {
+            "id": "B",
+            "text": "Khóa ngoại luôn tham gia vào khóa chính."
+          },
+          {
+            "id": "C",
+            "text": "Một bảng chỉ có nhiều nhất 1 khóa ngoại."
+          },
+          {
+            "id": "D",
+            "text": "Một bảng luôn có ít nhất 1 khóa ngoại."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Khóa ngoại hoàn toàn có thể tham chiếu đến khóa chính của chính bảng chứa nó (self-referencing foreign key). Ví dụ: Bảng Employee có khóa chính EmployeeID và khóa ngoại ManagerID tham chiếu tới EmployeeID để biểu diễn quan hệ nhân viên - quản lý.",
+          "images": []
+        },
+        "tags": [
+          "database",
+          "foreign-key"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q_db_5",
+        "type": "single_choice",
+        "question": {
+          "text": "Đảm bảo tính không thể chia cắt là tính chất nào của một giao dịch?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tính nguyên tố"
+          },
+          {
+            "id": "B",
+            "text": "Tính bền vững"
+          },
+          {
+            "id": "C",
+            "text": "Tính nhất quán"
+          },
+          {
+            "id": "D",
+            "text": "Tính cách ly"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Tính không thể chia cắt (All or nothing) tương ứng với Tính nguyên tố (Atomicity) trong bộ thuộc tính ACID của giao dịch. Nó đảm bảo mọi thao tác trong giao dịch hoặc là đều thành công hoàn toàn, hoặc là không có thao tác nào được áp dụng (rollback).",
+          "images": []
+        },
+        "tags": [
+          "database",
+          "transaction"
+        ],
+        "difficulty": "easy"
+      }
+    ]
+  }
+}

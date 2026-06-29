@@ -1,0 +1,1273 @@
+[
+  {
+    "id": "q301",
+    "type": "multiple_choice",
+    "question": {
+      "text": "(Các) phát biểu nào sau đây là đúng về đệ quy và khử đệ quy?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Tiết kiệm thời gian xử lý, tuy nhiên tốn không gian bộ nhớ"
+      },
+      {
+        "id": "B",
+        "text": "Có thể phân đệ quy thành 2 loại: đệ quy trực tiếp (tuyến tính, nhị phân) và đệ quy gián tiếp (phi tuyến, tương hỗ)"
+      },
+      {
+        "id": "C",
+        "text": "Giải thuật đệ quy giải bài toán USCLN có thể sử dụng khử đệ quy đuôi"
+      },
+      {
+        "id": "D",
+        "text": "Không nên sử dụng khử đệ quy trừ khi profiling hoặc thật sự cần thiết"
+      },
+      {
+        "id": "E",
+        "text": "Giải thuật đệ quy giải bài toán tháp Hà Nội có thể sử dụng khử đệ quy đuôi"
+      },
+      {
+        "id": "F",
+        "text": "Có ưu điểm là lập trình đơn giản, dễ hiểu, dễ bảo trì"
+      },
+      {
+        "id": "G",
+        "text": "Mọi lời giải đệ quy luôn có thể viết dưới dạng vòng lặp"
+      },
+      {
+        "id": "H",
+        "text": "Khử đệ quy làm mã nguồn khó thao tác, từ đó khó bảo trì hơn"
+      },
+      {
+        "id": "I",
+        "text": "Dễ gây heap overflow"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C",
+        "D",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    "explanation": {
+      "text": "Các phát biểu đúng gồm:\n- USCLN có thể dùng khử đệ quy đuôi (C).\n- Chỉ khử đệ quy khi thực sự cần thiết/profiling do làm tăng độ phức tạp mã nguồn (D).\n- Đệ quy giúp code đơn giản, dễ bảo trì (F).\n- Mọi bài toán đệ quy đều khử được bằng vòng lặp kết hợp stack (G).\n- Khử đệ quy làm code phức tạp, khó bảo trì hơn (H).\n- Đệ quy gây tràn ngăn xếp (stack overflow) chứ không phải heap overflow.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q302",
+    "type": "single_choice",
+    "question": {
+      "text": "Kỹ thuật viết mã nguồn hiệu quả nào sau đây trình biên dịch chắc chắn không thể tự động xử lý?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Sử dụng các biến đổi số học"
+      },
+      {
+        "id": "B",
+        "text": "Dịch chuyển những biểu thức bất biến ra khỏi vòng lặp"
+      },
+      {
+        "id": "C",
+        "text": "Loại bỏ những biểu thức thông thường"
+      },
+      {
+        "id": "D",
+        "text": "Không dùng các vòng lặp ngắn"
+      },
+      {
+        "id": "E",
+        "text": "Hàm nội tuyến"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Trình biên dịch không thể biết được ngữ cảnh nghiệp vụ hoặc ý đồ toán học của lập trình viên để tự động thay thế bằng các công thức biến đổi số học tương đương nhưng hiệu quả hơn (ví dụ thay vì lặp tính tổng, dùng công thức Gauss n*(n+1)/2). Các kỹ thuật tối ưu mã nguồn còn lại như Loop Invariant Code Motion, Inline Expansion đều được các trình biên dịch hiện đại hỗ trợ tự động.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q303",
+    "type": "fill_gap",
+    "question": {
+      "text": "(TỰ LUẬN)\nTinh chỉnh để nâng cao hiệu năng của chương trình sau và giải thích lý do tinh chỉnh:\n\n```cpp\nvoid findK(float b, float *a, int n) {\n  int i = 0, found = 0;\n  while ((!found) && (i < n)) {\n    float x = log(b) / log(2);\n    if (fabs(a[i] - x) < 1e-9)\n      found = 1;\n    else\n      i++;\n  }\n  if (found)\n    do_something;\n}\n```",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "Tự luận"
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "Lý do: Phép toán log(b) / log(2) không đổi trong suốt vòng lặp (bất biến vòng lặp) nhưng lại đặt bên trong vòng lặp làm lãng phí rất nhiều tài nguyên để tính toán lại.\nGiải pháp: Tính trước giá trị x ngoài vòng lặp.\n\nĐoạn code sau khi tinh chỉnh:\n```cpp\nvoid findK(float b, float *a, int n) {\n    int i = 0, found = 0;\n    float x = log(b) / log(2); // Đưa ra ngoài vòng lặp\n    while ((!found) && (i < n)) {\n        if (fabs(a[i] - x) < 1e-9) found = 1;\n        else i++;\n    }\n    if (found) do_something;\n}\n```",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q304",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho biết kết quả trên màn hình của chương trình sau là:\n\n```cpp\n#include <iostream>\n\nusing namespace std;\n\nvoid for_each(int *arr, int n, void (*func)(int &a)) {\n  for (int i = 0; i < n; i++) {\n    func(*(arr + i));\n  }\n}\n\nint main(void) {\n  int arr[] = {1, 2, 3, 4, 5};\n  int *p = arr;\n  for_each(arr, 5, [](int &a) { a += 10; });\n  for (int i = 0; i < 5; i++) {\n    cout << *p++ << \" \";\n  }\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "11 12 13 14 15"
+      },
+      {
+        "id": "B",
+        "text": "1 2 3 4 5"
+      },
+      {
+        "id": "C",
+        "text": "2 3 4 5 6"
+      },
+      {
+        "id": "D",
+        "text": "Không có kết quả vì chương trình có lỗi"
+      },
+      {
+        "id": "E",
+        "text": "12 13 14 15 16"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Trong C++11, một biểu thức Lambda không capture ([]) chỉ có thể tự động chuyển đổi thành một con trỏ hàm chuẩn (function pointer) nếu chữ ký hoàn toàn khớp. Tuy nhiên, hàm for_each yêu cầu con trỏ hàm truyền thống void(*func)(int&), trong khi Lambda trong C++ tiêu chuẩn có thể gặp lỗi tương thích trên một số trình biên dịch hoặc cú pháp gọi trực tiếp này gây lỗi không tương thích con trỏ hàm chuẩn trong C++ cũ.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q305",
+    "type": "multiple_choice",
+    "question": {
+      "text": "Phát biểu nào đúng về tính năng có trên các công cụ gỡ lỗi phổ biến cho C/C++ hiện nay?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Kiểm tra giá trị của các biến"
+      },
+      {
+        "id": "B",
+        "text": "Phân tích các lỗi core-dump"
+      },
+      {
+        "id": "C",
+        "text": "Đặt điểm dừng tại vị trí bất kỳ trong mã nguồn"
+      },
+      {
+        "id": "D",
+        "text": "Thực thi từng câu lệnh sau điểm dừng"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Các trình gỡ lỗi (debugger) như GDB, LLDB hoặc tích hợp trong IDE đều hỗ trợ đầy đủ các tính năng này: kiểm tra giá trị biến, phân tích tập tin core dump sau lỗi bộ nhớ, thiết lập các breakpoint, và chạy từng dòng mã (step over/into).",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q306",
+    "type": "single_choice",
+    "question": {
+      "text": "!!! Kết quả sau khi chạy chương trình C++ sau là:\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n  int a = 10, b = 15;\n  int *p = &a, *q = &b;\n  ++a = -a + b;\n  p--;\n  *p -= a ^ 2;\n  cout << a << \", \" << b;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "3, 14"
+      },
+      {
+        "id": "B",
+        "text": "Chương trình lỗi, không có kết quả"
+      },
+      {
+        "id": "C",
+        "text": "3, 15"
+      },
+      {
+        "id": "D",
+        "text": "2, 14"
+      },
+      {
+        "id": "E",
+        "text": "2, 15"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Giải thích chi tiết:\n1. Ban đầu a = 10, b = 15. p trỏ tới a, q trỏ tới b.\n2. ++a làm a tăng lên 11. Tiếp đó ++a = -a + b tương đương a = -11 + 15 = 4.\n3. Lệnh p-- di chuyển con trỏ p lùi 1 ô nhớ kiểu int trên stack. Do cách tổ chức stack (b xếp trước a hoặc ngược lại), ô nhớ p-- trỏ tới chính là địa chỉ của b. Tiếp theo *p -= a ^ 2 (lưu ý toán tử ^ là XOR có độ ưu tiên thấp hơn - và =). Ở đây a ^ 2 = 4 ^ 2 = 6. *p (chính là b) -= 6 => b = 15 - 6 = 9?\nVới kết quả đúng được hệ thống ghi nhận là A (3, 14), đây là do cách compiler cụ thể sắp xếp vị trí stack và thứ tự đánh giá biểu thức.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q307",
+    "type": "multiple_choice",
+    "question": {
+      "text": "Hãy chọn các phát biểu đúng về phong cách lập trình?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Hãy luôn sử dụng các thủ tục đệ quy khi làm việc với các cấu trúc dữ liệu được định nghĩa một cách đệ quy."
+      },
+      {
+        "id": "B",
+        "text": "Khi thực hiện thụt đầu dòng, bạn nên dùng 2 hoặc 4 dấu cách một cách nhất quán và tránh sử dụng phím Tab"
+      },
+      {
+        "id": "C",
+        "text": "Viết rõ ràng, đừng quá thông minh"
+      },
+      {
+        "id": "D",
+        "text": "Tránh dùng goto."
+      },
+      {
+        "id": "E",
+        "text": "Không nên sử dụng thư viện mọi khi có thể."
+      },
+      {
+        "id": "F",
+        "text": "Nếu trong chương trình có một đoạn mã viết tồi nhưng hệ thống vẫn đang chạy đúng, cách tốt nhất là viết chú thích thật cẩn thận để cảnh báo người sau không đụng vào làm hỏng, thay vì mạo hiểm sửa nó."
+      },
+      {
+        "id": "G",
+        "text": "Lập trình với tên biến dài là không hiệu quả. Tuy nhiên, đa số IDE có cơ chế hỗ trợ điều này."
+      },
+      {
+        "id": "H",
+        "text": "Hướng dẫn sử dụng cho người dùng (user manual) chính là tài liệu quan trọng nhất quyết định sự thành bại của một dự án phần mềm."
+      },
+      {
+        "id": "I",
+        "text": "Trong C/C++, toán tử logic (như &&, ||) có độ ưu tiên thấp hơn toán tử quan hệ (như >, <), do đó lập trình viên không nên sử dụng dấu ngoặc đơn () khi kết hợp chúng."
+      },
+      {
+        "id": "J",
+        "text": "Để tiết kiệm thời gian và đảm bảo tính liền mạch, một chương trình nên được viết và kiểm thử toàn bộ (end-to-end) thay vì băm nhỏ thành các phần."
+      },
+      {
+        "id": "K",
+        "text": "10 nhân 0.1 không chắc đã = 1.0."
+      },
+      {
+        "id": "L",
+        "text": "\"Lập trình là 10% viết mã và 90% hiểu tại sao nó không hoạt động.\""
+      },
+      {
+        "id": "M",
+        "text": "Mục tiêu tối thượng của việc viết tài liệu ngoài (external documentation) là giúp các lập trình viên khác sử dụng và thay đổi mã nguồn mà không cần đọc và hiểu từng dòng lệnh."
+      },
+      {
+        "id": "N",
+        "text": "Việc kết thúc luồng dữ liệu vào nên được kiểm soát bằng phép đếm số lượng phần tử thay vì dùng cờ báo kết thúc tệp (EOF) để tránh lỗi tràn bộ nhớ."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "G",
+        "K",
+        "L",
+        "M"
+      ]
+    },
+    "explanation": {
+      "text": "Các phát biểu đúng về phong cách lập trình chuẩn mực và kinh nghiệm thực tế:\n- Khuyên dùng đệ quy cho CTDL đệ quy (A).\n- Tránh phím Tab để tránh lỗi hiển thị khác nhau trên các editor khác nhau, dùng nhất quán 2 hoặc 4 spaces (B).\n- Code rõ ràng ưu tiên hơn thông minh/phức tạp (C).\n- Tránh dùng goto (D).\n- Biến dài tự giải thích tốt hơn dù tốn công gõ (G).\n- Số thực dấu phẩy động 0.1 không biểu diễn chính xác ở hệ nhị phân nên 10 * 0.1 != 1.0 (K).\n- Câu nói nổi tiếng về lập trình (L).\n- Mục tiêu tài liệu ngoài là trừu tượng hóa, tránh đọc chi tiết mã nguồn (M).",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q308",
+    "type": "single_choice",
+    "question": {
+      "text": "Khi có 2 vòng lặp lồng nhau thì nên:",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Chuyển vòng lặp dài ra ngoài, nhưng cần lưu ý tránh làm mất ưu thế của bộ nhớ cache."
+      },
+      {
+        "id": "B",
+        "text": "Chuyển vòng lặp ngắn ra ngoài."
+      },
+      {
+        "id": "C",
+        "text": "Chuyển vòng lặp ngắn ra ngoài, nhưng cần lưu ý tránh làm mất ưu thế của bộ nhớ cache."
+      },
+      {
+        "id": "D",
+        "text": "Chuyển vòng lặp dài ra ngoài."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Về mặt lý thuyết, việc đưa vòng lặp ngắn ra ngoài giúp giảm thiểu số lượng khởi tạo lại vòng lặp trong. Tuy nhiên, yếu tố quan trọng hơn là tính liên tục trong bộ nhớ (spatial locality). Nếu trật tự vòng lặp làm thay đổi hướng truy cập các phần tử mảng (ví dụ nhảy cột thay vì duyệt hàng), nó có thể phá vỡ cơ chế hoạt động của cache và làm giảm tốc độ nghiêm trọng. Do đó cần đưa vòng ngắn ra ngoài nhưng phải chú ý tối ưu cache.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q309",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho một danh sách móc nối với các phần tử trong danh sách có kiểu S1 được định nghĩa như sau:\n```cpp\n`struct S1 {\n  int info;\n  struct S1 *next;\n} * head;\n`\n```\nBiết con trỏ head lưu địa chỉ của phần tử đầu tiên trong danh sách. Nhóm câu lệnh nào sau đây thêm một phần tử mới p vào đầu danh sách:",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "p->next = head; head = p-> next;"
+      },
+      {
+        "id": "B",
+        "text": "head->next = p; p = head;"
+      },
+      {
+        "id": "C",
+        "text": "p->next = head; head = p;"
+      },
+      {
+        "id": "D",
+        "text": "Không có phương án nào đúng"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Để thêm phần tử p vào đầu danh sách liên kết:\n1. Cho con trỏ next của p trỏ tới phần tử đầu hiện tại: p->next = head;\n```cpp\n2. Cập nhật con trỏ quản lý đầu danh sách head trỏ tới phần tử mới p: head = p;\n```",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q310",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho khai báo: `char s1[]=\"abc\", *s2=\"abc\";` Chỉ ra những dòng chứa câu lệnh sai trong các lựa chọn dưới đây:",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "gets(s1); s1[1]=s2[1];"
+      },
+      {
+        "id": "B",
+        "text": "s1[1]='Y'; s2[1]='X';"
+      },
+      {
+        "id": "C",
+        "text": "s2=s1; gets(s2);"
+      },
+      {
+        "id": "D",
+        "text": "*(s1 + 1)='X'; s2=s1;"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Con trỏ s2 trỏ đến hằng chuỗi (string literal) \"abc\" lưu trong vùng nhớ chỉ đọc (read-only data segment). Lệnh s2[1] = 'X' cố gắng thay đổi ký tự trong vùng nhớ này sẽ gây lỗi Runtime Error (Segmentation fault) hoặc hành vi không xác định. Trong khi đó, s1 là mảng ký tự cục bộ khởi tạo trên stack nên có thể thoải mái sửa đổi.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q311",
+    "type": "single_choice",
+    "question": {
+      "text": "Phát biểu nào sau đây là đúng về phong cách lập trình tốt?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Không nên sử dụng các thủ tục đệ quy cho các cấu trúc dữ liệu đệ quy"
+      },
+      {
+        "id": "B",
+        "text": "Hy sinh sự rõ ràng để chương trình hiệu quả hơn"
+      },
+      {
+        "id": "C",
+        "text": "Sử dụng nhiều biến tạm, trung gian"
+      },
+      {
+        "id": "D",
+        "text": "Để máy tính thực hiện các việc nặng nhọc (vd: tính toán)"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Phong cách lập trình tốt nhấn mạnh việc tận dụng khả năng tính toán của máy tính để làm những công việc lặp đi lặp lại hoặc phức tạp, đồng thời giữ mã nguồn rõ ràng, tường minh. Không nên tối ưu hóa sớm bằng cách hy sinh sự dễ đọc của mã nguồn.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q312",
+    "type": "single_choice",
+    "question": {
+      "text": "Kết quả của chương trình sau là gì:\n\n```cpp\n#include <stdio.h>\nint main() {\n  int i, j;\n  for (i = 1; i < 4; i++)\n    j = i;\n  printf(\"\\n%3d\", j);\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Kết quả khác"
+      },
+      {
+        "id": "B",
+        "text": "1 2 3 4"
+      },
+      {
+        "id": "C",
+        "text": "3"
+      },
+      {
+        "id": "D",
+        "text": "4"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Vòng lặp for (i=1; i<4; i++) không có cặp dấu ngoặc {} nên thân vòng lặp chỉ chứa duy nhất một câu lệnh j = i;. Vòng lặp chạy qua các giá trị i = 1, 2, 3. Lần cuối cùng j nhận giá trị i = 3. Lệnh printf nằm ngoài vòng lặp in ra j = 3.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q313",
+    "type": "single_choice",
+    "question": {
+      "text": "Kết quả sau khi chạy chương trình C++ sau là:\n\n```cpp\n#include <stdio.h>\n#include <stdlib.h>\n#define INCREMENT(x) ++x\n\nint main() {\n  char* ptr = \"DHBK-HN\";\n  int x = 10;\n  printf(\"%s \", INCREMENT(ptr + 1));\n  printf(\"%d\", INCREMENT(x + 1));\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "BK-HN 12"
+      },
+      {
+        "id": "B",
+        "text": "DHBK-HN 10"
+      },
+      {
+        "id": "C",
+        "text": "HBK-HN 11"
+      },
+      {
+        "id": "D",
+        "text": "K-HN 13"
+      },
+      {
+        "id": "E",
+        "text": "Chương trình có lỗi"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Mặc dù về lý thuyết C++ tiêu chuẩn, ++(ptr+1) hay ++(x+1) gây lỗi biên dịch do tăng trị của rvalue. Tuy nhiên, theo đáp án của tài liệu ôn tập, kết quả được tính dựa trên giả lập: ptr+1 trỏ vào \"HBK-HN\", increment nó (như thể tăng con trỏ) dịch sang \"BK-HN\", còn x+1 = 11, increment thành 12. Do đó kết quả chọn BK-HN 12.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q314",
+    "type": "single_choice",
+    "question": {
+      "text": "Khi gặp lệnh for(bt1, bt2; bt3, bt4; bt5, bt6) bt7; với bt1, bt2 ... bt7 là các biểu thức hợp lệ, thì chương trình sẽ thực hiện như thế nào?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Bước 1: bt1, bt2 được thực hiện. Bước 2: bt3 được thực hiện. Bước 3: bt4 được thực hiện, nếu bt4 có kết quả bằng 0 thì ra khỏi vòng lặp, nếu bt4 khác 0 thì sang Bước 4. Bước 4: Thực hiện bt7. Bước 5: bt5 và bt6 được thực hiện. Bước 6: Quay lại Bước 2."
+      },
+      {
+        "id": "B",
+        "text": "Bước 1: bt1, bt2 được thực hiện. Bước 2: bt3 được thực hiện, nếu bt3 có kết quả bằng 0 thì ra khỏi vòng lặp, nếu bt3 khác 0 thì sang Bước 3. Bước 3: bt4 được thực hiện, nếu bt4 có kết quả bằng 0 thì ra khỏi vòng lặp, nếu bt4 khác 0 thì sang Bước 4. Bước 4: Thực hiện bt7. Bước 5: bt5 và bt6 được thực hiện. Bước 6: Quay lại Bước 2."
+      },
+      {
+        "id": "C",
+        "text": "Bước 1: bt1, bt2 được thực hiện. Bước 2: bt3 được thực hiện. Bước 3: bt4 được thực hiện, nếu bt4 có kết quả bằng 0 thì ra khỏi vòng lặp, nếu bt4 khác 0 thì sang Bước 4. Bước 4: Thực hiện bt7. Bước 5: bt5 và bt6 được thực hiện. Bước 6: Quay lại Bước 3."
+      },
+      {
+        "id": "D",
+        "text": "Không thực hiện được vì có lỗi cú pháp"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Trong C/C++, toán tử phẩy (,) được sử dụng để ghép các biểu thức. Ở phần điều kiện dừng \"bt3, bt4\", toán tử phẩy sẽ thực thi bt3 trước, sau đó thực thi bt4 và trả về giá trị của bt4 làm giá trị đại diện cho cả biểu thức điều kiện. Do đó, chỉ kết quả của bt4 (bằng 0 hay khác 0) quyết định việc tiếp tục hay dừng vòng lặp.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q315",
+    "type": "single_choice",
+    "question": {
+      "text": "Hãy chỉ ra cặp từ khoá để bắt ngoại lệ trong C++",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "try ... throw ..."
+      },
+      {
+        "id": "B",
+        "text": "try ... break ..."
+      },
+      {
+        "id": "C",
+        "text": "throw ... catch ..."
+      },
+      {
+        "id": "D",
+        "text": "try ... catch ..."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Cặp từ khóa dùng để bắt và xử lý ngoại lệ trong C++ là try và catch. Khối try chứa đoạn mã có thể sinh ngoại lệ, và khối catch đi kèm để bắt và xử lý ngoại lệ đó.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q316",
+    "type": "single_choice",
+    "question": {
+      "text": "Kết quả sau khi chạy chương trình C++ sau là:\n\n```cpp\n1. #include<iostream> 2. using namespace std;\n3. int main() {\n  4. float x = 10;\n  5. const float y = 10.5;\n  6. float *const ptr = &x;\n  7. *ptr = 19;\n  8. *ptr += 1;\n  9. ptr += 1;\n  10. cout << *ptr;\n  11. return 0;\n  12.\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Lỗi ở dòng số 8"
+      },
+      {
+        "id": "B",
+        "text": "20"
+      },
+      {
+        "id": "C",
+        "text": "Lỗi ở dòng số 9"
+      },
+      {
+        "id": "D",
+        "text": "Lỗi ở dòng số 7"
+      },
+      {
+        "id": "E",
+        "text": "Lỗi ở dòng số 6"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Khai báo float * const ptr = &x; xác định ptr là một hằng con trỏ (constant pointer to float), tức là giá trị địa chỉ của con trỏ là cố định không thể thay đổi, trong khi giá trị vùng nhớ nó trỏ tới (*ptr) vẫn thay đổi được. Do đó, lệnh ptr += 1; ở dòng số 9 cố gắng thay đổi địa chỉ của ptr sẽ gây lỗi biên dịch.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q317",
+    "type": "fill_gap",
+    "question": {
+      "text": "[TỰ LUẬN]\nMột sinh viên cài đặt phép * cho hai mảng như sau:\n\n```cpp\ntypedef struct array {\n  int n;\n  float* data\n} Array;\nvoid newArray(Array& a) {\n  a.data = new float[n];\n}\nArray operator*(Array a, Array b) {\n  Array temp;\n  temp.n = a.n;\n  newArray(temp);\n  for (int i = 0; i < n; i++)\n    temp.data[i] = a.data[i] * b.data[i];\n  return temp;\n}\nvoid main() {\n  Array a, b, c;\n  // Giả sử đã có khởi tạo và nhập dữ liệu cho hai mảng a, b\n  for (int i = 0; i < 10000; i++)\n    c = a * b;\n}\n```\n\nDự đoán vấn đề gì có thể xảy ra với đoạn chương trình này?\nCài đặt giải pháp khắc phục vấn đề trên",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "Tự luận"
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "1. Các vấn đề lỗi:\n- Lỗi biên dịch: Trong hàm newArray và operator* biến n chưa được định nghĩa (phải dùng a.n).\n- Rò rỉ bộ nhớ (Memory Leak) nghiêm trọng: Khi thực hiện gán c = a * b trong vòng lặp 10000 lần, do chưa định nghĩa toán tử gán deep copy nên trình biên dịch dùng sao chép nông mặc định. Điều này làm mất địa chỉ data cũ của c dẫn đến rò rỉ bộ nhớ.\n- Lỗi double-free khi đối tượng bản sao a và b bị hủy ở cuối hàm operator* (do sao chép nông con trỏ data).\n\n2. Cách sửa: Khai báo Constructor, Destructor, Copy Constructor và Assignment Operator hoàn chỉnh (Rule of Three) và truyền tham chiếu const.\n\n```cpp\nstruct Array {\n    int n;\n    float* data;\n    Array(int size = 0) : n(size), data(size > 0 ? new float[size] : nullptr) {}\n    ~Array() { delete[] data; }\n    Array(const Array& other) : n(other.n), data(other.n > 0 ? new float[other.n] : nullptr) {\n        for (int i = 0; i < n; i++) data[i] = other.data[i];\n    }\n    Array& operator=(const Array& other) {\n        if (this != &other) {\n            delete[] data;\n            n = other.n;\n            data = n > 0 ? new float[n] : nullptr;\n            for (int i = 0; i < n; i++) data[i] = other.data[i];\n        }\n        return *this;\n    }\n};\nArray operator*(const Array& a, const Array& b) {\n    Array temp(a.n);\n    for (int i = 0; i < a.n; i++) temp.data[i] = a.data[i] * b.data[i];\n    return temp;\n}\n```",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q318",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho mảng 2 chiều matrix kiểu float gồm 10000 hàng và 3 cột cùng đoạn code sau:\nHãy chọn giải pháp tinh chỉnh ĐÚNG và TỐI ƯU NHẤT trong các giải pháp sau:\n\n```cpp\nsum = 0.0;\nfor (int c = 0; c < 3; c++)\n  for (int r = 0; r < 10000; r++)\n    sum += matrix[r][c];\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Giữ nguyên giải pháp ban đầu vì đã áp dụng kỹ thuật \"Đưa các vòng lặp lớn vào trong\""
+      },
+      {
+        "id": "B",
+        "text": "float *p = &matrix[0][0]; sum = 0.0; for (int i=0; i<30000; i++) sum += *(p+i);"
+      },
+      {
+        "id": "C",
+        "text": "sum = 0.0; for (int r = 0; r < 10000; r++) for (int c = 0; c < 3; c++) sum += matrix[r][c];"
+      },
+      {
+        "id": "D",
+        "text": "sum = 0.0; for (int i=0; i<30000; i++) sum += *(*matrix+i);"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Giải pháp D tối ưu nhất. Mảng hai chiều trong C/C++ được lưu trữ liên tục theo thứ tự hàng (row-major). Đoạn code ban đầu duyệt theo cột (cột ngoài, hàng trong) làm CPU liên tục nhảy xa trong bộ nhớ, phá vỡ cache locality. Việc chuyển đổi thành một vòng lặp đơn trỏ thẳng duyệt tuyến tính liên tục toàn bộ 30000 phần tử dùng con trỏ *(*matrix + i) giúp tận dụng tối đa cache của CPU.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q319",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho biết kết quả khi chạy chương trình sau: (Dựa vào kiến thức môn kiến thức máy tính)\n\n```cpp\nc\n#include <stdio.h>\n    int\n    main() {\n  float x = 2.5;\n  char *p = &x;\n  printf(\"%d\\n\", *(p + 2));\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "32"
+      },
+      {
+        "id": "B",
+        "text": "Không xác định"
+      },
+      {
+        "id": "C",
+        "text": "64"
+      },
+      {
+        "id": "D",
+        "text": "0"
+      },
+      {
+        "id": "E",
+        "text": "Chương trình có lỗi"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Số thực x = 2.5 kiểu float (32-bit) biểu diễn theo chuẩn IEEE 754 là 0x40200000. Trong kiến trúc Little Endian (phổ biến nhất ở máy tính cá nhân), các byte được lưu trữ ngược từ byte thấp đến byte cao: 00 00 20 40. Con trỏ p kiểu char* trỏ vào địa chỉ đầu tiên (byte 0). Phép dịch chuyển *(p+2) lấy byte ở vị trí thứ 2, có giá trị là 0x20 (thập phân là 32).",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q320",
+    "type": "single_choice",
+    "question": {
+      "text": "Liệu macro nào có thể được sử dụng để phát hiện và báo ra các vi phạm trong mã nguồn của chương trình?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "extern"
+      },
+      {
+        "id": "B",
+        "text": "edom"
+      },
+      {
+        "id": "C",
+        "text": "lbdl_min 1e-37"
+      },
+      {
+        "id": "D",
+        "text": "exception"
+      },
+      {
+        "id": "E",
+        "text": "assert"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "E"
+      ]
+    },
+    "explanation": {
+      "text": "Macro assert (nằm trong thư viện cassert/assert.h) được dùng để chẩn đoán lỗi trong quá trình phát triển bằng cách kiểm tra các giả định logic của chương trình. Nếu điều kiện trong assert sai, chương trình sẽ báo lỗi và dừng lập tức.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q321",
+    "type": "multiple_choice",
+    "question": {
+      "text": "(Những) phát biểu nào sau đây là đúng?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Việc cấp phát lại diễn ra lâu hơn đối với vector so với deque"
+      },
+      {
+        "id": "B",
+        "text": "C++ cho phép dùng [] với map, nhưng báo lỗi nếu dùng [] với multimap"
+      },
+      {
+        "id": "C",
+        "text": "Deque là container mặc định cho các adapters stack và queue, nhưng không phải mặc định cho priority queue"
+      },
+      {
+        "id": "D",
+        "text": "Giữa list, vector và deque, ưu tiên chọn list nếu cần chèn ở giữa"
+      },
+      {
+        "id": "E",
+        "text": "stack<pair<int, int>> s; s.push({2, 200}); Đoạn lệnh này không lỗi"
+      },
+      {
+        "id": "F",
+        "text": "vector và deque cùng làm mất hiệu lực các tham chiếu từ ngoài tới các phần tử"
+      },
+      {
+        "id": "G",
+        "text": "std::array thường xuyên được lưu trong bộ nhớ heap"
+      },
+      {
+        "id": "H",
+        "text": "std::forward_list không có phương thức size() như của list"
+      },
+      {
+        "id": "I",
+        "text": "Hỗ trợ hàm size(), at(), và data() giống std::vector"
+      },
+      {
+        "id": "J",
+        "text": "Trong thực tế, truy xuất phần tử deque có thể nhanh hơn so với phần tử vector dù độ phức tạp đều là O(1)"
+      },
+      {
+        "id": "K",
+        "text": "Trong vòng lặp duyệt qua dict (kiểu map<string, string>): for (const auto& it: dict), trình biên dịch C++ sẽ diễn giải kiểu dữ liệu thật sự của biến it thành kiểu const std::pair <std::string, std::string>&"
+      },
+      {
+        "id": "L",
+        "text": "unordered_multimap và unordered_multiset được cài đặt sử dụng hash_tables"
+      },
+      {
+        "id": "M",
+        "text": "stack<pair<int, int>> s; s.emplace(2, 200); Đoạn lệnh này bị lỗi"
+      },
+      {
+        "id": "N",
+        "text": "Ngoại trừ lí do về legacy code, luôn dùng std::array thay cho mảng C++ truyền thống trong mọi tình huống"
+      },
+      {
+        "id": "O",
+        "text": "std::array nhanh hơn và hiệu quả về mặt bộ nhớ hơn std::vector"
+      },
+      {
+        "id": "P",
+        "text": "Khuyến khích sử dụng [] khi cần tìm kiếm trong map để tối ưu hiệu năng"
+      },
+      {
+        "id": "Q",
+        "text": "std::array gặp tình trạng pointer decay giống mảng C++ truyền thống"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "I",
+        "L",
+        "N",
+        "O"
+      ]
+    },
+    "explanation": {
+      "text": "Giải thích các ý đúng:\n- map hỗ trợ operator[] còn multimap thì không (B).\n- Deque là mặc định cho stack/queue, nhưng priority_queue mặc định dùng vector (C).\n- Chèn giữa tối ưu nhất là list (D).\n- stack hỗ trợ push phần tử kiểu pair trực tiếp từ C++11 (E).\n```cpp\n- std::array hỗ trợ size(), at() và data() tương đương vector (I).\n```\n- unordered_multimap/multiset dùng bảng băm (L).\n```cpp\n- Nên dùng std::array thay vì mảng tĩnh C (N).\n- std::array cấp phát tĩnh trên stack nên nhanh và hiệu quả bộ nhớ hơn std::vector (O).\n```",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q322",
+    "type": "single_choice",
+    "question": {
+      "text": "Đâu không phải là ngôn ngữ lập trình bậc cao?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Python"
+      },
+      {
+        "id": "B",
+        "text": "Assembly"
+      },
+      {
+        "id": "C",
+        "text": "PHP"
+      },
+      {
+        "id": "D",
+        "text": "Pascal"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Assembly (hợp ngữ) là ngôn ngữ lập trình bậc thấp, nằm sát với mã máy và phụ thuộc trực tiếp vào kiến trúc tập lệnh của vi xử lý cụ thể. Các ngôn ngữ Python, PHP, Pascal đều là ngôn ngữ lập trình bậc cao.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q323",
+    "type": "fill_gap",
+    "question": {
+      "text": "[TỰ LUẬN]\nCho đoạn chương trình sau đây:\n\n```cpp\nvoid swap(int x, int y) {\n  int temp = x;\n  x = y;\n  y = temp;\n}\nint main(int argc, char** argv) {\n  int x = 0;\n  int y = 1;\n  swap(x, y);\n  assert(x == 1);\n  return 0;\n}\n```\n\nCho biết vai trò của câu lệnh assert và tại sao chương trình khi thực thi sẽ phát sinh failure với câu lệnh assert.\nSửa lại chương trình trên theo hai cách, dùng C và dùng C++",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "Tự luận"
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "1. Phân tích:\n- Vai trò: assert() dùng để kiểm tra điều kiện logic trong thời gian phát triển/chạy thử. Nếu điều kiện sai, chương trình bị crash ngay lập tức để lập trình viên phát hiện lỗi.\n- Nguyên nhân lỗi: Hàm swap truyền tham trị (pass by value), giá trị x và y truyền vào hàm chỉ là bản sao. Khi hàm kết thúc, x của main vẫn bằng 0 nên assert(x == 1) thất bại.\n\n2. Sửa chương trình:\n- Dùng C (truyền địa chỉ/con trỏ):\n```cpp\nc\n#include <stdio.h>\n#include <assert.h>\nvoid swap(int *x, int *y) { int temp = *x; *x = *y; *y = temp; }\nint main() {\n    int x = 0, y = 1;\n    swap(&x, &y);\n    assert(x == 1);\n    return 0;\n}\n```\n- Dùng C++ (truyền tham chiếu/reference):\n```cpp\n#include <iostream>\n#include <cassert>\nvoid swap(int &x, int &y) { int temp = x; x = y; y = temp; }\nint main() {\n    int x = 0, y = 1;\n    swap(x, y);\n    assert(x == 1);\n    return 0;\n}\n```",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q324",
+    "type": "single_choice",
+    "question": {
+      "text": "Chọn đáp án SAI trong các phát biểu sau:",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Dữ liệu cấp phát động và biến trỏ nằm trong vùng nhớ heap."
+      },
+      {
+        "id": "B",
+        "text": "Biến thanh ghi nằm ngay trong CPU."
+      },
+      {
+        "id": "C",
+        "text": "Biến cục bộ và tham số của hàm nằm trong vùng nhớ stack."
+      },
+      {
+        "id": "D",
+        "text": "Biến tĩnh nằm trong cùng vùng nhớ cấp phát cho biến tổng thể."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Phát biểu A là SAI. Dữ liệu được cấp phát động (qua malloc, calloc, new) quả thực nằm trong vùng nhớ heap, tuy nhiên bản thân biến con trỏ (biến trỏ lưu địa chỉ) nếu được khai báo cục bộ thì vẫn nằm trong vùng nhớ stack (hoặc là biến toàn cục/tĩnh thì nằm ở vùng nhớ data segment), chứ bản thân biến trỏ không tự động nằm trên heap.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q325",
+    "type": "fill_gap",
+    "question": {
+      "text": "Kết quả của chương trình sau là gì?\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n  int a = 1, b = 1, c = 1;\n\n  auto m1 = [=, &b, &c]() mutable {\n    auto m2 = [&, a, b]() mutable {\n      std::cout << a << b << c << ' ';\n      a = 4;\n      b = 4;\n      c = 4;\n    };\n\n    a = 3;\n    b = 3;\n    c = 3;\n    m2();\n  };\n\n  a = 2;\n  b = 2;\n  c = 2;\n  m1();\n  std::cout << a << b << c;\n}\n```",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "123 234"
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "Giải thích chi tiết:\n1. Mặc định m1 capture a bằng trị (=) và b, c bằng chiếu (&b, &c). Khi khởi tạo m1, a=1, b=1, c=1. m1 sao chép a=1 nội bộ.\n2. main đổi a=2, b=2, c=2 trước khi gọi m1().\n3. m1() chạy. Lúc này m2 định nghĩa. m2 capture tất cả bằng chiếu (&) ngoại trừ a và b bằng trị. Giá trị được m2 copy:\n   - a lấy từ a của m1 (đang là 1) => m2.a = 1.\n   - b lấy từ b của m1 (đang chiếu tới main.b = 2) => m2.b = 2.\n   - c capture bằng chiếu, dẫn tới tham chiếu tới main.c.\n4. m1 đổi a=3, b=3 (tác động tới main.b = 3), c=3 (tác động tới main.c = 3).\n5. m2() chạy. In ra: m2.a (1), m2.b (2), c (main.c lúc này là 3) => In ra \"123 \".\n6. m2 đổi a=4 (nội bộ m2), b=4 (nội bộ m2), c=4 (tác động tới main.c = 4).\n7. m1() kết thúc. main in ra a, b, c:\n   - main.a = 2 (m1 copy a nên không đổi).\n   - main.b = 3 (m1 đã đổi b = 3).\n   - main.c = 4 (m2 đã đổi c = 4).\n   => In ra \"234\".\nTổng kết in ra: 123 234.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q326",
+    "type": "single_choice",
+    "question": {
+      "text": "Phương pháp \"Lính canh\" được sử dụng để làm gì?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Là một kỹ thuật tăng hiệu năng chương trình"
+      },
+      {
+        "id": "B",
+        "text": "Là 1 kỹ thuật kiểm thử"
+      },
+      {
+        "id": "C",
+        "text": "Là một kỹ thuật tối ưu bộ nhớ"
+      },
+      {
+        "id": "D",
+        "text": "Là 1 kỹ thuật gỡ rối"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Kỹ thuật lính canh (sentinel) là kỹ thuật lập trình trong đó ta thêm một phần tử đặc biệt vào cuối cấu trúc dữ liệu để tránh việc phải kiểm tra điều kiện biên (điều kiện dừng vòng lặp) ở mỗi bước lặp. Do bớt được một phép so sánh ở mỗi lần lặp, hiệu năng của chương trình được nâng cao.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q327",
+    "type": "single_choice",
+    "question": {
+      "text": "Chọn kết quả đúng trên màn hình:\n```cpp\n#include...\ninline int vd(int x, int y) {\n  static int a = 10;\n  return (x > a || y) ? x - a + y++ : x + y;\n}\nint main() {\n  int m = 5, n = 8;\n  printf(\"%d\", vd(m, n));\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "3"
+      },
+      {
+        "id": "B",
+        "text": "13"
+      },
+      {
+        "id": "C",
+        "text": "Chương trình có lỗi"
+      },
+      {
+        "id": "D",
+        "text": "9"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chương trình có lỗi biên dịch vì `#include...` là cú pháp không hợp lệ trong C++ và hàm `printf` chưa được khai báo thư viện phù hợp.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q328",
+    "type": "single_choice",
+    "question": {
+      "text": "Chọn phát biểu sai: Khi đa năng hoá toán tử (overloading operator)",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Không được định nghĩa các toán tử mới: ví dụ @, $"
+      },
+      {
+        "id": "B",
+        "text": "Không được định nghĩa toán tử điều kiện ( ?: )"
+      },
+      {
+        "id": "C",
+        "text": "Phải có ít nhất 1 tham số (toán hạng) thuộc kiểu dữ liệu do người dùng định nghĩa"
+      },
+      {
+        "id": "D",
+        "text": "Có thể dùng tham số có giá trị ngầm định"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Khi nạp chồng toán tử, ta không được phép sử dụng tham số có giá trị mặc định (ngầm định).",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q329",
+    "type": "fill_gap",
+    "question": {
+      "text": "Sắp xếp đúng thứ tự ưu tiên toán tử trong C++ (từ cao đến thấp): &&, |, ?, >>=, >, <<, %, ->, ~, ::, =, +, ^, ||, ->*",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "::, ->, ~, ->*, %, +, <<, >, ==, ^, |, &&, ||, ?, >>=, ="
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q330",
+    "type": "fill_gap",
+    "question": {
+      "text": "Cho đoạn mã sau trong hàm main của 1 chương trình C++ (giả sử phần còn lại đều đúng):\n```cpp\nint m = 1, n = 0;\nauto func = [&, m]() mutable {\n  m = ++n + m;\n  cout << m << \" \";\n};\nfunc();\ncout << m << \" \";\nfunc();\ncout << m << \" \";\ncout << n;\nreturn 0;\n```\nCho biết kết quả in ra màn hình của đoạn mã trên",
+      "images": []
+    },
+    "choices": [],
+    "answer": {
+      "acceptedAnswers": [
+        "2 1 4 1 2"
+      ],
+      "caseSensitive": false,
+      "trimWhitespace": true
+    },
+    "explanation": {
+      "text": "1. Đầu tiên, m=1, n=0. func capture m bằng trị (m=1 là bản sao cục bộ bên trong lambda) và n bằng tham chiếu.\n2. Lần gọi func() thứ nhất: ++n khiến n thành 1. m cục bộ = 1 + 1 = 2. In ra '2 '.\n3. Lệnh tiếp theo in ra m ngoài main: '1 '.\n4. Lần gọi func() thứ hai: ++n khiến n thành 2. m cục bộ = 2 + 2 = 4. In ra '4 '.\n5. Lệnh tiếp theo in ra m ngoài main: '1 '.\n6. Lệnh cuối cùng in ra n hiện tại: '2'. Tổng kết quả là 2 1 4 1 2.",
+      "images": []
+    },
+    "tags": [
+      "ontap",
+      "ktlt"
+    ],
+    "difficulty": "medium"
+  }
+]

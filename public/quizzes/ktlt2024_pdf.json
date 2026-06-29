@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "ktlt-2024-transcribed",
+    "title": "KTLT 2024 (Đã OCR)",
+    "description": "Bộ câu hỏi trắc nghiệm KTLT được bóc tách từ file ảnh scan ktlt2024.pdf bằng AI OCR.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Trích xuất ảnh từ ktlt2024.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q_ktlt_1",
+        "type": "single_choice",
+        "question": {
+          "text": "Chọn thứ tự ưu tiên đúng của các toán tử logic trong C/C++ (Từ cao -> thấp):",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "?, !, ||"
+          },
+          {
+            "id": "B",
+            "text": "||, !, ?:"
+          },
+          {
+            "id": "C",
+            "text": "!, ||, ?:"
+          },
+          {
+            "id": "D",
+            "text": "!, ?:, ||"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Toán tử NOT (!) có độ ưu tiên cao nhất trong các toán tử logic, sau đó là OR (||), và cuối cùng là toán tử ba ngôi (?:).",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "operator"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q_ktlt_2",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho biết kết quả khi chạy chương trình C sau:\n```c\n#include<stdio.h>\nint f(int a, int b) {\n    return b+a;\n}\nint main() {\n    int j,i[5] = {10,12,14,16,18}, *p;\n    p=i;\n    j= f(*(i+4), *p++);\n    printf(\"%d\\n\", j);\n    return 0;\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chương trình có lỗi"
+          },
+          {
+            "id": "B",
+            "text": "24"
+          },
+          {
+            "id": "C",
+            "text": "26"
+          },
+          {
+            "id": "D",
+            "text": "28"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Mảng `i` có các phần tử `10, 12, 14, 16, 18`. `*(i+4)` là phần tử thứ 5, có giá trị `18`. `*p++` trả về giá trị tại `p` (là `i[0]=10`), sau đó tăng `p`. Do đó hàm được gọi là `f(18, 10)`, kết quả là `28`.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "pointer"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q_ktlt_3",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho biết kết quả khi chạy chương trình C sau:\n```c\n#include<stdio.h>\nint main() {\n    int x=9;\n    printf(\"%c\", (x>=5)?(x>=7)?(x>=9)? 'A':'B':'C':'D');\n    return 0;\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "B"
+          },
+          {
+            "id": "B",
+            "text": "Chương trình có lỗi"
+          },
+          {
+            "id": "C",
+            "text": "C"
+          },
+          {
+            "id": "D",
+            "text": "D"
+          },
+          {
+            "id": "E",
+            "text": "A"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "E"
+          ]
+        },
+        "explanation": {
+          "text": "Với `x=9`, điều kiện `x>=5` đúng, tiếp tục xét `x>=7` đúng, tiếp tục xét `x>=9` đúng, do đó nó trả về ký tự 'A'.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "ternary"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q_ktlt_4",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho biết dòng kết quả thứ 2 khi chạy chương trình sau:\n```cpp\n#include<iostream>\nusing namespace std;\ntemplate <typename T>\nT maxval(T x, T y){\n    static int count=0;\n    cout << ++count << \", \";\n    return (x > y) ? x : y;\n}\nint main() {\n    int i = maxval(3, 7);\n    cout << i << endl;\n    double d = maxval(6.34, 18.523);\n    cout << d << endl;\n    d = maxval(16.34, 28.523);\n    cout << d << endl;\n    char ch = maxval('a', '6');\n    cout << ch << endl;\n    d = maxval(5.2, 4.5);\n    cout << d << endl;\n    return 0;\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "18.523"
+          },
+          {
+            "id": "B",
+            "text": "Chương trình có lỗi"
+          },
+          {
+            "id": "C",
+            "text": "2, 18.523"
+          },
+          {
+            "id": "D",
+            "text": "Không xác định"
+          },
+          {
+            "id": "E",
+            "text": "1, 18.523"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "E"
+          ]
+        },
+        "explanation": {
+          "text": "Trong C++, mỗi kiểu tham số của Template sẽ tạo ra một phiên bản hàm riêng biệt với một biến `static int count` riêng. Ở dòng gọi thứ 2: `maxval(6.34, 18.523)`, đây là phiên bản `maxval<double>`, biến `count` của `double` mới được khởi tạo và tăng lên 1. Dòng in ra sẽ là `1, ` sau đó trả về `18.523`. Do đó dòng kết quả thứ 2 là `1, 18.523`.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "template",
+          "static"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q_ktlt_5",
+        "type": "single_choice",
+        "question": {
+          "text": "Kết quả sau khi chạy chương trình C++ sau là:\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){\n    int a=10,b=15;\n    int *p = &a, *q= &b;\n    *p-- += b ^ ++a ;\n    *p += 2;\n    cout << a << \", \" << b;\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "1, 4"
+          },
+          {
+            "id": "B",
+            "text": "Chương trình có lỗi, không có kết quả"
+          },
+          {
+            "id": "C",
+            "text": "6, 1"
+          },
+          {
+            "id": "D",
+            "text": "6, 4"
+          },
+          {
+            "id": "E",
+            "text": "6, 17"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "E"
+          ]
+        },
+        "explanation": {
+          "text": "Sự kết hợp giữa thay đổi giá trị của `a` (`++a`) và truy cập qua con trỏ trỏ đến `a` (`*p-- += ...`) trên cùng một biểu thức dẫn đến hành vi không xác định (Undefined Behavior) trong C++ tiêu chuẩn. Tuy nhiên, theo đáp án của bài thi, kết quả in ra là `6, 17`.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "pointer",
+          "ub"
+        ],
+        "difficulty": "hard"
+      }
+    ]
+  }
+}

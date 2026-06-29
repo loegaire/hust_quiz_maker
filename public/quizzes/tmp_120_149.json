@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "q121",
+    "type": "single_choice",
+    "question": {
+      "text": "Một ngôn ngữ được thiết kế theo hướng **Problem-oriented** nhưng vẫn cung cấp khả năng thao tác con trỏ và bit (như C++) thì tính chất \"Cấp cao\" của nó chủ yếu dựa trên:",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Cú pháp gần giống ngôn ngữ tự nhiên và cấu trúc rẽ nhánh phức tạp"
+      },
+      {
+        "id": "B",
+        "text": "Khả năng tương thích mã nguồn trên nhiều kiến trúc CPU khác nhau"
+      },
+      {
+        "id": "C",
+        "text": "Việc cung cấp các kiểu dữ liệu trừu tượng hóa khỏi cấu trúc phần cứng."
+      },
+      {
+        "id": "D",
+        "text": "Tốc độ biên dịch mã nguồn nhanh tương đương với các ngôn ngữ cấp thấp"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q122",
+    "type": "single_choice",
+    "question": {
+      "text": "Về mối quan hệ giữa hình thức thể hiện (cú pháp) và ý nghĩa logic (ngữ nghĩa), nhận định nào sau đây phản ánh đúng thực tế lập trình?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Hai đoạn mã có cấu trúc điều khiển khác biệt hoàn toàn không thể tương đương ngữ nghĩa"
+      },
+      {
+        "id": "B",
+        "text": "Ngữ nghĩa của chương trình luôn bị giới hạn bởi các ký hiệu hình thức quy định trong cú pháp"
+      },
+      {
+        "id": "C",
+        "text": "Các chương trình giống hệt nhau về mặt cú pháp bắt buộc phải có chung một kết quả đầu ra"
+      },
+      {
+        "id": "D",
+        "text": "Một bộ cú pháp duy nhất có thể tương ứng với nhiều ngữ nghĩa khác nhau tùy vào ngữ cảnh."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q123",
+    "type": "single_choice",
+    "question": {
+      "text": "Xét xem kết quả của đoạn mã dưới đây là gì:\n```cpp\nint x = 10;\n\nint *p = &x;\n\nprintf(\"%d\", *(&x));\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "10"
+      },
+      {
+        "id": "B",
+        "text": "Địa chỉ của x"
+      },
+      {
+        "id": "C",
+        "text": "Giá trị không xác định vì dereference lồng nhau"
+      },
+      {
+        "id": "D",
+        "text": "Lỗi biên dịch vì &x không thể dereference"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q124",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho khai báo int a[30]; và int *pa = &a[0];. Khẳng định nào sau đây mô tả đúng nhất sự khác biệt cốt lõi về mặt kỹ thuật giữa hai định danh a và pa?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Tên biến pa luôn trỏ cố định vào một vùng nhớ duy nhất do hệ điều hành chỉ định, trong khi tên mảng a có thể thay đổi địa chỉ động thông qua toán tử lặp a++"
+      },
+      {
+        "id": "B",
+        "text": "Tên mảng a bản chất là một hằng địa chỉ không thể tham gia vào các lệnh gán hoặc toán tử tăng giảm, trong khi pa là biến con trỏ có quyền dịch chuyển ô nhớ."
+      },
+      {
+        "id": "C",
+        "text": "Tên biến pa chỉ có khả năng lưu trữ giá trị của phần tử đầu tiên trong mảng, trong khi tên mảng a bắt buộc phải lưu trữ toàn bộ cấu trúc địa chỉ của 30 phần tử"
+      },
+      {
+        "id": "D",
+        "text": "Tên mảng a bắt buộc phải được giải phóng bằng từ khóa delete[] khi kết thúc hàm, trong khi biến con trỏ pa sẽ được hệ thống thu hồi bộ nhớ hoàn toàn tự động"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q125",
+    "type": "single_choice",
+    "question": {
+      "text": "Đoạn code sau in ra gì???\n```cpp\n#include <iostream>\nint main() {\n  int R = 3, C = 4;\n\n  int **mt = new int *[R];\n  int *temp = new int[R * C];\n  for (int i = 0; i < R; ++i) {\n    mt[i] = temp;\n\n    temp += C;\n  }\n  for (int i = 0; i < R * C; ++i) {\n    mt[0][i] = i * 2;\n  }\n  int *ptr = mt[1] + 2;\n  std::cout << *ptr << \" \" << mt[2][-1] << std::endl;\n  delete[] mt[0];\n\n  delete[] mt;\n\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "12 14"
+      },
+      {
+        "id": "B",
+        "text": "Lỗi thực thi (Segmentation Fault) do cố gắng truy cập mảng với chỉ số âm mt[2][-1]"
+      },
+      {
+        "id": "C",
+        "text": "12 7"
+      },
+      {
+        "id": "D",
+        "text": "Lỗi biên dịch do không thể dùng 1 vòng lặp mt[0][i] để khởi tạo cho mảng 2 chiều"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q126",
+    "type": "single_choice",
+    "question": {
+      "text": "Một trong những ưu điểm quan trọng nhất của việc sử dụng mảng các con trỏ thay vì dùng mảng tĩnh 2 chiều khi xử lý tập hợp đối tượng kích thước lớn (như xâu ký tự, cấu trúc) là gì?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Cho phép cơ chế quản lý bộ nhớ linh hoạt hơn thông qua đặc tính tự động giải phóng tài nguyên khi biến tham chiếu không còn tồn tại trong phạm vi sử dụng"
+      },
+      {
+        "id": "B",
+        "text": "Tăng tính khả chuyển của chương trình giữa các môi trường thực thi khác nhau nhờ cách tổ chức dữ liệu độc lập với bố cục bộ nhớ vật lý"
+      },
+      {
+        "id": "C",
+        "text": "Đảm bảo cấu trúc dữ liệu được bố trí liên tiếp trong không gian nhớ, từ đó tối ưu hóa hiệu năng truy xuất tuần tự"
+      },
+      {
+        "id": "D",
+        "text": "Giúp thao tác tổ chức lại tập hợp phần tử trở nên hiệu quả hơn vì chỉ cần điều chỉnh các tham chiếu thay vì di chuyển toàn bộ nội dung dữ liệu."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q127",
+    "type": "single_choice",
+    "question": {
+      "text": "Tại sao lỗi \"Chia cho số không\" (Division by zero) thường không bị phát hiện ở bước biên dịch (Build) mà chỉ gây lỗi khi chương trình đang chạy?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Trình biên dịch ưu tiên kiểm tra cấu trúc câu lệnh hơn là các giá trị số học"
+      },
+      {
+        "id": "B",
+        "text": "Các toán tử toán học được thực thi trực tiếp bởi CPU thay vì trình biên dịch"
+      },
+      {
+        "id": "C",
+        "text": "Giá trị của số chia thường chỉ được xác định cụ thể trong quá trình thực thi."
+      },
+      {
+        "id": "D",
+        "text": "Hệ điều hành ngăn cản trình biên dịch truy cập vào các đơn vị tính toán của ALU"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q128",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho biết giá trị của x, y, z sau khi thực hiện đoạn mã dưới đây\n```cpp\nint a[] = {10, 20, 30, 40, 50};\n\nint *p = a;\nint x = *p++;\n\nint y = *++p;\n\nint z = ++*p;\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "x = 10; y = 20; z = 30"
+      },
+      {
+        "id": "B",
+        "text": "x = 10; y = 30; z = 31\\."
+      },
+      {
+        "id": "C",
+        "text": "x = 20; y = 30; z = 31"
+      },
+      {
+        "id": "D",
+        "text": "x = 10; y = 30; z = 30"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q129",
+    "type": "single_choice",
+    "question": {
+      "text": "Với dòng lệnh:\n```cpp\nMyFunc() = 20;\n```\nVề mặt kỹ thuật, điều kiện bắt buộc nào của hàm MyFunc giúp cú pháp này hợp lệ trong C++?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Hàm phải được khai báo là một con trỏ hàm"
+      },
+      {
+        "id": "B",
+        "text": "Hàm phải có từ khóa auto ở kiểu trả về"
+      },
+      {
+        "id": "C",
+        "text": "Hàm không được chứa bất kỳ tham số nào trong cặp ngoặc đơn"
+      },
+      {
+        "id": "D",
+        "text": "Hàm phải có kiểu trả về là một tham chiếu, ví dụ int&."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q130",
+    "type": "single_choice",
+    "question": {
+      "text": "Tại sao một lời gọi hàm trả về tham chiếu (ví dụ: MyFunc() = 20;) lại có thể đứng ở vế trái của phép gán?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Lời gọi hàm lúc này sẽ tự động sinh ra một biến toàn cục tạm thời ẩn danh để lưu trữ giá trị 20, sau đó sao chép nó vào biến cục bộ của hàm thông qua cơ chế con trỏ"
+      },
+      {
+        "id": "B",
+        "text": "Nó ép kiểu trực tiếp biểu thức trả về thành một hằng số"
+      },
+      {
+        "id": "C",
+        "text": "Kiểu trả về tham chiếu đã biến lời gọi hàm từ một giá trị thuần túy (r-value) thành một biểu thức định vị (l-value) đại diện cho vùng nhớ."
+      },
+      {
+        "id": "D",
+        "text": "Hàm tự động biến thành macro"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q131",
+    "type": "single_choice",
+    "question": {
+      "text": "Tại sao toán tử :: (scope resolution) không thể overload?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Vì nó là toán tử một ngôi"
+      },
+      {
+        "id": "B",
+        "text": "Vì nó hoạt động tại compile-time."
+      },
+      {
+        "id": "C",
+        "text": "Vì C++ committee không muốn"
+      },
+      {
+        "id": "D",
+        "text": "Vì nó chỉ dùng với namespace và class"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q132",
+    "type": "single_choice",
+    "question": {
+      "text": "Đánh giá tính hiệu quả của hai phương pháp tìm kiếm tuyến tính sau. Giả sử mảng arr có sức chứa N+1 và target luôn được chèn ở cuối mảng trong đoạn 2\\.\n\n```cpp\n*  // Đoạn mã 1* bool found = false; for (int i = 0; i < N; i++) {     if\n   // (arr[i] == target) {         found = true;      break;      } } | *//Đoạn\n   // mã 2* arr[N] = target;  int i = 0; while (arr[i] != target) i++; bool\n   // found = (i < N);\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Đoạn 2 thực thi hiệu quả hơn do loại bỏ được lệnh kiểm tra điều kiện biên i < N ở mỗi vòng lặp."
+      },
+      {
+        "id": "B",
+        "text": "Đoạn 1 thực thi nhanh hơn vì vòng lặp for luôn được trình biên dịch tối ưu hóa tốt hơn vòng lặp while"
+      },
+      {
+        "id": "C",
+        "text": "Đoạn 2 tốn bộ nhớ dư thừa và lệnh gán arr[N] = target khiến nó chậm hơn đáng kể"
+      },
+      {
+        "id": "D",
+        "text": "Hai đoạn có tốc độ tương đương vì số lượng phép so sánh == và != thực hiện trên mảng là hoàn toàn giống nhau"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q133",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho đoạn chương trình C++ sau đây. Kết quả in ra màn hình là gì?\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n  int A[3][4] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};\n\n  int(*p)[4] = A;\n  int *q = (int *)(p + 1);\n\n  q += 2;\n\n  int result = *(*(p + 2) - 1) + *q;\n  cout << result;\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "14"
+      },
+      {
+        "id": "B",
+        "text": "16"
+      },
+      {
+        "id": "C",
+        "text": "Giá trị rác do truy cập ngoài mảng"
+      },
+      {
+        "id": "D",
+        "text": "15"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q134",
+    "type": "single_choice",
+    "question": {
+      "text": "Tại sao đệ quy đuôi thường dễ chuyển sang vòng lặp while hơn các dạng đệ quy khác?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Vì lời gọi đệ quy là thao tác cuối, không còn việc phải làm sau khi nó trả về."
+      },
+      {
+        "id": "B",
+        "text": "Vì trình biên dịch luôn biến mọi hàm đệ quy thành mã máy giống hệt mã của interpreter, đồng thời loại bỏ hoàn toàn mọi phép kiểm tra điều kiện, mọi phép gán biến và mọi thao tác cập nhật tham số trong chương trình"
+      },
+      {
+        "id": "C",
+        "text": "Vì đệ quy đuôi không cần điều kiện dừng"
+      },
+      {
+        "id": "D",
+        "text": "Vì đệ quy đuôi luôn chạy trên heap"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q135",
+    "type": "single_choice",
+    "question": {
+      "text": "Tại sao lời gọi hàm x = sum(x, --*ptr) bị coi là Hành vi không xác định (Undefined Behavior) trong C/C++?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Trình biên dịch luôn ưu tiên thực hiện phép tính trừ trước khi tính tổng, làm sai lệch logic hoàn toàn so với các ngôn ngữ lập trình khác trên mọi hệ điều hành"
+      },
+      {
+        "id": "B",
+        "text": "Vì nó gây tràn bộ nhớ đệm lập tức"
+      },
+      {
+        "id": "C",
+        "text": "Do thứ tự thực hiện đánh giá các đối số trong hàm không được chuẩn C/C++ xác định rõ ràng."
+      },
+      {
+        "id": "D",
+        "text": "Hệ thống sẽ không cho phép vì hàm sum không được hỗ trợ chính thức trong chuẩn"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q136",
+    "type": "single_choice",
+    "question": {
+      "text": "Khi định nghĩa một hàm template <typename T>, tính khái quát hóa thực chất tác động ở tầng nào?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Template tự động ép mọi kiểu về int"
+      },
+      {
+        "id": "B",
+        "text": "Template chủ yếu khái quát hóa cấu trúc cú pháp. Ý nghĩa thực sự của thuật toán hoàn toàn phụ thuộc vào việc các kiểu dữ liệu cụ thể có cung cấp ngữ nghĩa toán tử hợp lý hay không."
+      },
+      {
+        "id": "C",
+        "text": "Tính năng template của C++ là một công cụ vạn năng có thể tự động suy luận và viết lại toàn bộ mã nguồn của thuật toán sao cho phù hợp với cấu trúc phần cứng của máy tính, đảm bảo chương trình luôn chạy đúng mà không cần đến toán tử"
+      },
+      {
+        "id": "D",
+        "text": "Nó chỉ khái quát hóa được các kiểu dữ liệu số học cơ bản"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q137",
+    "type": "single_choice",
+    "question": {
+      "text": "Khẳng định nào sau đây diễn tả đúng bản chất nhất về việc nạp chồng toán tử (operator overloading) trong C++?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Ngôn ngữ chỉ cho phép thay đổi ngữ nghĩa (semantics) gắn với toán tử thông qua hàm nạp chồng, còn bộ phân tích cú pháp (parser) vẫn đánh giá vị trí và độ ưu tiên toán tử theo đúng luật gốc."
+      },
+      {
+        "id": "B",
+        "text": "C++ thực chất cung cấp cho lập trình viên toàn quyền truy cập sâu để thay đổi tất cả các quy tắc ưu tiên toán tử, tính kết hợp, và thậm chí cả ký hiệu nhận diện, biến mã nguồn thành một dạng ngôn ngữ hoàn toàn khác biệt so với chuẩn ban đầu"
+      },
+      {
+        "id": "C",
+        "text": "Lập trình viên có thể tạo ra các ký hiệu toán tử mới hoàn toàn"
+      },
+      {
+        "id": "D",
+        "text": "Toán tử sẽ bị biến thành con trỏ"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q138",
+    "type": "single_choice",
+    "question": {
+      "text": "Tại sao C++ bắt buộc tham số ngầm định (default arguments) phải được đặt liên tục từ phải sang trái?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Để lập trình viên gõ code nhanh hơn"
+      },
+      {
+        "id": "B",
+        "text": "Để chuẩn hóa thứ tự truyền tham chiếu trong bộ nhớ"
+      },
+      {
+        "id": "C",
+        "text": "Điều này giúp trình biên dịch C++ tự động khởi tạo các biến rác bằng giá trị không mặc định để tránh các lỗi bảo mật nguy hiểm liên quan đến tràn bộ đệm khi chạy chương trình"
+      },
+      {
+        "id": "D",
+        "text": "Đây là điều kiện bắt buộc để bài toán ánh xạ đối số giữ được tính đơn trị, giúp trình biên dịch luôn xác định được duy nhất đối số nào bị thiếu."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q139",
+    "type": "single_choice",
+    "question": {
+      "text": "Về bản chất, sự khác biệt giữa việc truyền con trỏ (C) và truyền tham chiếu (C++) để thay đổi biến bên ngoài là gì?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Trình biên dịch C++ luôn tối ưu hóa tham chiếu thành macro"
+      },
+      {
+        "id": "B",
+        "text": "Con trỏ chiếm dụng bộ nhớ trên heap để lưu trữ địa chỉ của các đối tượng khác nhau, còn tham chiếu thì hoàn toàn không bao giờ chiếm dụng bất kỳ không gian bộ nhớ vật lý nào trên hệ thống do nó chỉ là khái niệm ảo"
+      },
+      {
+        "id": "C",
+        "text": "Tham chiếu là một bí danh gắn chặt với đối tượng gốc và không cần giải tham chiếu tường minh, trong khi con trỏ là một biến độc lập lưu trữ địa chỉ."
+      },
+      {
+        "id": "D",
+        "text": "Khác biệt duy nhất là tham chiếu an toàn tuyệt đối và không gây lỗi bộ nhớ"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q140",
+    "type": "single_choice",
+    "question": {
+      "text": "Trong lập trình hệ thống cấp thấp (như nhân OS hay Driver), tại sao các kỹ sư thường ưu tiên thiết kế các Interface hoặc Callback bằng \"Con trỏ hàm\" (Function Pointer) thay vì dùng cơ chế \"Hàm ảo\" (Virtual Function) của C++ OOP?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Vì các trình biên dịch hệ thống hiện đại thường tự động loại bỏ hoàn toàn các lớp (class) của C++ trong quá trình tối ưu hóa mã nguồn, khiến cho các hàm ảo không thể thực thi được trên thực tế nếu không có sự can thiệp thủ công từ lập trình viên"
+      },
+      {
+        "id": "B",
+        "text": "Vì hàm ảo đòi hỏi chi phí ngầm để tra cứu bảng v-table và truyền con trỏ this, gây khó khăn cho việc kiểm soát chính xác số lượng lệnh (instruction) và bố cục bộ nhớ."
+      },
+      {
+        "id": "C",
+        "text": "C++ cấm sử dụng tính năng đa hình ở cấp độ nhân hệ điều hành"
+      },
+      {
+        "id": "D",
+        "text": "Do con trỏ hàm được CPU xử lý đa luồng tốt hơn, giúp tránh hiện tượng thắt cổ chai khi hệ thống nhận hàng triệu tín hiệu ngắt (interrupt) cùng một lúc"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q141",
+    "type": "single_choice",
+    "question": {
+      "text": "Xét sự kết hợp giữa con trỏ hàm và cơ chế truyền tham số:\n```cpp\nvoid increment(int x) {\n  x++;\n}\nvoid apply(int* arr, int n, void (*func)(int)) {\n  for (int i = 0; i < n; i++)\n    func(arr[i]);\n}\nint main() {\n  int arr[] = {1, 2, 3};\n\n  apply(arr, 3, increment);\n  std::cout << arr[0];\n}\n```\nMàn hình in ra giá trị gì?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "Một giá trị rác"
+      },
+      {
+        "id": "D",
+        "text": "Lỗi biên dịch do sai chữ ký hàm"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q142",
+    "type": "single_choice",
+    "question": {
+      "text": "```cpp\nƯu điểm lớn nhất của tính \"bất biến\"(immutable)trong mô thức Hướng chức năng so\n    với biến số trong mô thức Hướng mệnh lệnh là gì\n    ?\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Tiết kiệm dung lượng bộ nhớ RAM nhờ việc không phải khởi tạo lại các biến"
+      },
+      {
+        "id": "B",
+        "text": "Tăng tốc độ thực thi của chương trình thông qua các vòng lặp đơn giản"
+      },
+      {
+        "id": "C",
+        "text": "Đảm bảo an toàn dữ liệu trong các hệ thống chạy song song, đa luồng."
+      },
+      {
+        "id": "D",
+        "text": "Cho phép trình biên dịch tự động tối ưu hóa mã nguồn sang mã máy nhanh hơn"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q143",
+    "type": "single_choice",
+    "question": {
+      "text": "Hãy cho biết kết quả của đoạn code sau:\n```cpp\n#include <iostream>\nusing namespace std;\n#define SQR(x) x* x\nint main() {\n  cout << SQR(3 + 1);\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "7"
+      },
+      {
+        "id": "B",
+        "text": "16"
+      },
+      {
+        "id": "C",
+        "text": "13"
+      },
+      {
+        "id": "D",
+        "text": "12"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q144",
+    "type": "single_choice",
+    "question": {
+      "text": "```cpp\nCùng là lỗi quản lý bộ nhớ, tại sao \"quên delete\" chỉ gây rò rỉ ngầm từ từ,\n    trong khi \"delete 2 lần\" lại thường làm crash chương trình ngay lập tức ?\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Quên giải phóng khiến CPU từ chối cấp phát thêm bộ nhớ vật lý, trong khi giải phóng hai lần kích hoạt cơ chế dọn rác tự động của ngôn ngữ C++ để dọn dẹp bộ nhớ"
+      },
+      {
+        "id": "B",
+        "text": "Quên giải phóng chỉ làm rò rỉ vùng nhớ hợp lệ, còn giải phóng hai lần trực tiếp phá hỏng cấu trúc dữ liệu quản lý Heap của Runtime."
+      },
+      {
+        "id": "C",
+        "text": "Lỗi giải phóng hai lần bị hệ điều hành chặn lại ngay lập tức"
+      },
+      {
+        "id": "D",
+        "text": "Ngôn ngữ C++ có cơ chế dọn rác"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q145",
+    "type": "single_choice",
+    "question": {
+      "text": "Kết quả của chương trình là:\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n  int a = 1, b = 2;\n\n  auto func = [=, &a]() mutable {\n    a += 10;\n    b += 10;\n    return a + b;\n        \n  };\n  int c = func();\n\n  cout << a << \", \" << b << \", \" << c;\n\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Lỗi biên dịch vì không thể dùng mutable khi đã có biến được bắt bằng tham chiếu &a."
+      },
+      {
+        "id": "B",
+        "text": "11, 12, 23"
+      },
+      {
+        "id": "C",
+        "text": "1, 2, 23"
+      },
+      {
+        "id": "D",
+        "text": "11, 2, 23"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q146",
+    "type": "single_choice",
+    "question": {
+      "text": "Hãy xác định chuỗi in ra màn hình:\n```cpp\n#include <iostream>\nusing namespace std;\ntemplate <typename T>\nvoid print(T x) {\n  cout << \"T\";\n}\nvoid print(int x) {\n  cout << \"I\";\n}\nint main() {\n      print(5);\n\n      print<>(5);\n\n     print(5.5);\n\n      return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "I T T"
+      },
+      {
+        "id": "B",
+        "text": "I I T"
+      },
+      {
+        "id": "C",
+        "text": "T T T"
+      },
+      {
+        "id": "D",
+        "text": "T I T"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q147",
+    "type": "single_choice",
+    "question": {
+      "text": "Bạn đọc một đoạn mã thao tác với mảng con trỏ ký tự. Mã in ra chuỗi gì?\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n  const char *arr[] = {\"C++\", \"Python\", \"Java\", \"Go\"};\n  const char **p = arr;\n  p++;\n\n  cout << *p + 1;\n\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Python"
+      },
+      {
+        "id": "B",
+        "text": "Java"
+      },
+      {
+        "id": "C",
+        "text": "ython"
+      },
+      {
+        "id": "D",
+        "text": "Lỗi Runtime vì không thể thực hiện phép cộng (+1) vào một giá trị hằng chuỗi"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q148",
+    "type": "single_choice",
+    "question": {
+      "text": "So sánh kết quả in ra của việc sử dụng Macro và Inline Function trong đoạn mã sau:\n```cpp\n#include <iostream>\nusing namespace std;\n#define SQR(x) x* x\ninline int sqr_inline(int x) {\n  return x * x;\n}\nint main() {\n  int a = 3, b = 3;\n\n  int res1 = SQR(a + 1);\n  int res2 = sqr_inline(b + 1);\n  cout << res1 << \", \" << res2;\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "7, 7"
+      },
+      {
+        "id": "B",
+        "text": "7, 16"
+      },
+      {
+        "id": "C",
+        "text": "16, 16"
+      },
+      {
+        "id": "D",
+        "text": "Lỗi biên dịch do macro SQR thiếu dấu ngoặc."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q149",
+    "type": "single_choice",
+    "question": {
+      "text": "Khi chuyển đổi mảng 2 chiều thành mảng 1 chiều để tăng tốc độ truy xuất, lập trình viên thường tính toán vị trí phần tử qua công thức index = i * MAX_COL + j. Kỹ thuật nào sau đây giúp tối ưu hóa biểu thức này ở mức độ phần cứng tốt nhất?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Khai báo MAX_COL dưới dạng một biến static toàn cục nhằm loại bỏ hoàn toàn chi phí truyền tham số qua ngăn xếp mỗi khi hàm truy xuất mảng được hệ thống gọi"
+      },
+      {
+        "id": "B",
+        "text": "Chọn MAX_COL là một số nguyên tố lớn để giảm thiểu tối đa hiện tượng đụng độ (collision) khi hệ thống đưa các khối dữ liệu từ RAM lên bộ nhớ đệm L1 của CPU"
+      },
+      {
+        "id": "C",
+        "text": "Thay đổi linh hoạt giá trị MAX_COL tại thời điểm chạy (runtime) dựa trên tổng dung lượng bộ nhớ khả dụng của hệ thống để tránh tình trạng tràn bộ nhớ heap"
+      },
+      {
+        "id": "D",
+        "text": "Cố định MAX_COL là một lũy thừa của 2 để trình biên dịch có thể tự động chuyển phép nhân thành phép toán dịch bit siêu tốc."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q150",
+    "type": "single_choice",
+    "question": {
+      "text": "Lập trình viên muốn xây dựng một đoạn mã tối ưu để giới hạn giá trị của một hàm nội suy sử dụng mảng tĩnh, bằng cách sử dụng Macro thay vì hàm thông thường để tiết kiệm overhead. Xét đoạn mã C++ sau:\n```cpp\n#include <iostream>\nint step = 0;\nfloat fetch_data() {\n  return ++step * 0.2f;\n}\n#define CLAMP_MACRO(val, min, max) \\\n  ((val) < (min) ? (min) : ((val) > (max) ? (max) : (val)))\nint main() {\n  float res = CLAMP_MACRO(fetch_data(), 0.0f, 0.5f);\n  std::cout << \"res = \" << res << \", step = \" << step;\n\n  return 0;\n}\n```\nKết quả in ra màn hình của chương trình trên là gì?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "res = 0.6, step = 3"
+      },
+      {
+        "id": "B",
+        "text": "res = 0.5, step = 3"
+      },
+      {
+        "id": "C",
+        "text": "res = 0.4, step = 2"
+      },
+      {
+        "id": "D",
+        "text": "res = 0.2, step = 1"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  }
+]

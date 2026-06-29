@@ -1,0 +1,882 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "ktlt-baitap-20242",
+    "title": "Kỹ thuật lập trình (KTLT) - Bài tập trắc nghiệm 20242",
+    "description": "Bộ câu hỏi trắc nghiệm Kỹ thuật lập trình C/C++. Bao gồm các câu hỏi về con trỏ, bộ nhớ, cú pháp C++, và các bẫy phổ biến.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Tổng hợp từ baitap.md và questions.md - Bài tập KTLT 20242"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q001",
+        "type": "single_choice",
+        "question": {
+          "text": "Chương trình sau đây in ra gì?\n```cpp\n#include <iostream>\n#include <utility>\n\nstruct X {\n    X() { std::cout << \"1\"; }\n    X(X &) { std::cout << \"2\"; }\n    X(const X &) { std::cout << \"3\"; }\n    X(X &&) { std::cout << \"4\"; }\n    ~X() { std::cout << \"5\"; }\n};\n\nstruct Y {\n    mutable X x;\n    Y() = default;\n    Y(const Y &) = default;\n};\n\nint main() {\n    Y y1;\n    Y y2 = std::move(y1);\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "1255"
+          },
+          {
+            "id": "B",
+            "text": "1355"
+          },
+          {
+            "id": "C",
+            "text": "1245"
+          },
+          {
+            "id": "D",
+            "text": "2341"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: A (1255)**\n\n**Phân tích từng bước:**\n\n1. **In ra `1`:** Khi khai báo `Y y1;`, constructor mặc định của `Y` được gọi, kéo theo constructor mặc định `X()` được gọi để khởi tạo thành viên `x`. → In **1**.\n\n2. **In ra `2`:** Khi thực hiện `Y y2 = std::move(y1);`, `std::move` ép `y1` thành rvalue. Tuy nhiên, struct `Y` đã khai báo tường minh copy constructor `Y(const Y &) = default;`. Theo quy tắc C++, khi bạn tự khai báo copy constructor, trình biên dịch **không** tự động sinh move constructor. Do đó, copy constructor của `Y` được gọi.\n\n   Bên trong copy constructor `Y(const Y&)`, tham số là `const Y&`, nhưng thành viên `x` được khai báo `mutable`. Từ khóa `mutable` \"vô hiệu hóa\" tính `const` của đối tượng chứa nó — nên `x` vẫn là non-const lvalue.\n\n   Overload resolution sẽ chọn `X(X&)` thay vì `X(const X&)` vì không cần chuyển đổi const. → In **2**.\n\n3. **In ra `55`:** Khi `main()` kết thúc, `y2` bị hủy trước (LIFO), rồi đến `y1`. Mỗi lần hủy gọi `~X()`. → In **55**.\n\n**Kiến thức quan trọng:**\n- `mutable` cho phép thay đổi thành viên ngay cả trong đối tượng `const`.\n- Khai báo copy constructor sẽ ngăn trình biên dịch tự sinh move constructor.\n- Overload resolution ưu tiên match chính xác hơn (non-const ref > const ref).",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "cpp",
+          "mutable",
+          "move-semantics",
+          "copy-constructor"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q002",
+        "type": "single_choice",
+        "question": {
+          "text": "Biểu thức `3[\"abcdef\"]` trong C/C++ sẽ trả về kết quả gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Lỗi cú pháp"
+          },
+          {
+            "id": "B",
+            "text": "c"
+          },
+          {
+            "id": "C",
+            "text": "d"
+          },
+          {
+            "id": "D",
+            "text": "Lỗi tràn bộ nhớ (Segmentation fault)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: C (`d`)**\n\nTrong C/C++, toán tử truy cập mảng `a[i]` được trình biên dịch chuyển thành `*(a + i)`. Do phép cộng có tính giao hoán, `*(a + i)` hoàn toàn tương đương `*(i + a)`, hay viết lại là `i[a]`.\n\nVì vậy `3[\"abcdef\"]` = `*(3 + \"abcdef\")` = `*(\"abcdef\" + 3)` = `\"abcdef\"[3]` = `'d'`.\n\nChuỗi `\"abcdef\"` có các ký tự: index 0='a', 1='b', 2='c', **3='d'**, 4='e', 5='f'.\n\n**Mẹo nhớ:** Đây là một \"trick\" kinh điển trong các kỳ thi C/C++. Cú pháp trông kỳ lạ nhưng hoàn toàn hợp lệ theo tiêu chuẩn ngôn ngữ.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "cpp",
+          "syntax",
+          "con-tro",
+          "array-subscript"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q003",
+        "type": "single_choice",
+        "question": {
+          "text": "Kiểu dữ liệu chuẩn xác được trả về từ phép trừ hai con trỏ (ví dụ `ptr1 - ptr2`) là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "int"
+          },
+          {
+            "id": "B",
+            "text": "unsigned int"
+          },
+          {
+            "id": "C",
+            "text": "size_t"
+          },
+          {
+            "id": "D",
+            "text": "ptrdiff_t"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: D (`ptrdiff_t`)**\n\nPhép trừ hai con trỏ không trả về `int` hay `unsigned int` thông thường, mà trả về kiểu `ptrdiff_t` (được định nghĩa trong `<cstddef>` hoặc `<stddef.h>`).\n\n**Tại sao không phải `int`?** Vì trên các hệ thống 64-bit, khoảng cách giữa hai con trỏ có thể vượt quá phạm vi biểu diễn của `int` (thường chỉ 4 bytes). `ptrdiff_t` là kiểu số nguyên **có dấu** (signed), phụ thuộc vào nền tảng, đảm bảo đủ lớn để chứa khoảng cách giữa hai con trỏ bất kỳ.\n\n**Tại sao không phải `size_t`?** `size_t` là kiểu **không dấu** (unsigned), dùng cho kích thước. Vì kết quả phép trừ con trỏ có thể **âm** (khi `ptr1 < ptr2`), nên cần kiểu có dấu → `ptrdiff_t`.\n\n**Trên hệ thống phổ biến:** `ptrdiff_t` thường là `long` (64-bit) hoặc `int` (32-bit).",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "cpp",
+          "con-tro",
+          "ptrdiff_t",
+          "kieu-du-lieu"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q004",
+        "type": "single_choice",
+        "question": {
+          "text": "Theo chuẩn C++ hiện đại (từ C++98), khi toán tử `new` thất bại trong việc cấp phát bộ nhớ (và không dùng cú pháp đặc biệt nào thêm), điều gì sẽ thực sự xảy ra?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trả về NULL"
+          },
+          {
+            "id": "B",
+            "text": "Trả về nullptr"
+          },
+          {
+            "id": "C",
+            "text": "Ném ngoại lệ std::bad_alloc"
+          },
+          {
+            "id": "D",
+            "text": "Gọi hàm abort()"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: C (Ném ngoại lệ `std::bad_alloc`)**\n\nTài liệu học thuật cũ hoặc tài liệu C cũ thường cho rằng `new` trả về `NULL` khi hết bộ nhớ. Đây là hành vi của C (`malloc` trả về `NULL`), nhưng **không đúng** với C++ hiện đại.\n\nTheo chuẩn C++ (từ C++98 trở đi), toán tử `new` mặc định sẽ **ném ngoại lệ `std::bad_alloc`** khi không thể cấp phát bộ nhớ.\n\n**Cách ép `new` trả về `nullptr` thay vì ném exception:**\n```cpp\nint *p = new (std::nothrow) int[1000000000];\nif (p == nullptr) {\n    // Xử lý lỗi\n}\n```\n\nCú pháp `new (std::nothrow)` là placement new với tham số `std::nothrow`, yêu cầu trình biên dịch trả về `nullptr` thay vì ném exception.\n\n**Lưu ý:** `NULL` (macro C) và `nullptr` (C++11) về bản chất khác nhau. `nullptr` là kiểu `std::nullptr_t`, an toàn hơn `NULL` (thường là `0` hoặc `(void*)0`).",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "cpp",
+          "bo-nho",
+          "new",
+          "exception",
+          "bad_alloc"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q005",
+        "type": "single_choice",
+        "question": {
+          "text": "Kích thước của cấu trúc `struct { char a; int b; char c; }` trên một hệ thống 32-bit mặc định thường là bao nhiêu byte?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "6"
+          },
+          {
+            "id": "B",
+            "text": "8"
+          },
+          {
+            "id": "C",
+            "text": "10"
+          },
+          {
+            "id": "D",
+            "text": "12"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: D (12 bytes)**\n\nTrình biên dịch không xếp các thành viên nằm sát nhau trong bộ nhớ mà chèn thêm các byte rỗng (**padding**) để đảm bảo **alignment** (căn chỉnh) — giúp CPU truy xuất RAM nhanh hơn.\n\n**Bố cục bộ nhớ chi tiết:**\n```\nOffset 0: char a    (1 byte)\nOffset 1-3:          (3 bytes padding — để int b bắt đầu ở offset chia hết cho 4)\nOffset 4-7: int b    (4 bytes)\nOffset 8: char c     (1 byte)\nOffset 9-11:         (3 bytes padding — để kích thước tổng chia hết cho alignment lớn nhất = 4)\n```\nTổng: **1 + 3 + 4 + 1 + 3 = 12 bytes**\n\n**Tại sao cần padding cuối?** Alignment của struct phải bằng alignment lớn nhất trong các thành viên (`int` = 4). Kích thước struct phải chia hết cho 4 → 9 bytes làm tròn lên 12.\n\n**Mẹo tối ưu:** Sắp xếp lại thành viên theo kích thước giảm dần sẽ giảm padding:\n```c\nstruct { int b; char a; char c; }  // Chỉ 8 bytes!\n```",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "struct",
+          "padding",
+          "alignment",
+          "bo-nho"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q006",
+        "type": "single_choice",
+        "question": {
+          "text": "Lỗi `Multiple definition of...` xuất hiện ở giai đoạn nào của chu trình dịch?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Preprocessing (Tiền xử lý)"
+          },
+          {
+            "id": "B",
+            "text": "Compiling (Biên dịch)"
+          },
+          {
+            "id": "C",
+            "text": "Assembling (Dịch hợp ngữ)"
+          },
+          {
+            "id": "D",
+            "text": "Linking (Liên kết)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: D (Linking — Liên kết)**\n\n**Chu trình dịch C/C++ gồm 4 giai đoạn:**\n1. **Preprocessing:** Xử lý `#include`, `#define`, `#ifdef`... → tạo ra file `.i`\n2. **Compiling:** Dịch mã C/C++ thành Assembly → tạo ra file `.s`\n3. **Assembling:** Dịch Assembly thành mã máy → tạo ra file Object `.o` / `.obj`\n4. **Linking:** Gom các file Object thành file thực thi `.exe` / binary\n\nTrình biên dịch (Compiler) chỉ nhìn thấy từng file `.cpp` **độc lập** — nó không biết file khác có định nghĩa gì. Chỉ đến giai đoạn **Linking**, khi Linker gom tất cả file Object lại, nó mới phát hiện ra hai file cùng định nghĩa một hàm/biến toàn cục → vi phạm luật **ODR (One Definition Rule)** → báo lỗi `Multiple definition of...`.\n\n**Ví dụ gây lỗi:** Đặt định nghĩa hàm trong file `.h` mà không dùng `inline`, rồi `#include` file đó vào 2 file `.cpp` khác nhau.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "cpp",
+          "compiler",
+          "linker",
+          "odr"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q007",
+        "type": "single_choice",
+        "question": {
+          "text": "Nếu thực hiện phép toán `p + 1` trên một con trỏ `void *p`, điều gì sẽ xảy ra?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Địa chỉ tăng thêm 1 byte"
+          },
+          {
+            "id": "B",
+            "text": "Địa chỉ tăng thêm 4 bytes (hoặc 8 bytes tùy hệ điều hành)"
+          },
+          {
+            "id": "C",
+            "text": "Trình biên dịch báo lỗi vi phạm tiêu chuẩn (Standard Violation)"
+          },
+          {
+            "id": "D",
+            "text": "Undefined Behavior (Hành vi không xác định)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: C (Lỗi biên dịch — vi phạm tiêu chuẩn)**\n\nTheo chuẩn ISO C và C++, bạn **không thể** thực hiện toán tử số học (arithmetic) trên con trỏ `void*` vì trình biên dịch không biết kích thước của kiểu dữ liệu mà nó trỏ tới.\n\nKhi bạn viết `p + 1`, trình biên dịch cần biết \"1\" tương đương bao nhiêu byte để dịch chuyển con trỏ. Với `int*`, 1 = 4 bytes; với `char*`, 1 = 1 byte. Nhưng `void` không có kích thước → không thể tính toán.\n\n**⚠️ Lưu ý quan trọng về GCC:**\nNếu bạn dùng **GCC compiler**, nó có một **extension** (phần mở rộng không chuẩn) tự cho phép `void*` hoạt động giống `char*` (tăng 1 byte). Code sẽ biên dịch được trên GCC nhưng **vi phạm chuẩn C++ quốc tế** và sẽ **lỗi** trên các compiler khác như MSVC hoặc Clang ở chế độ strict.\n\n**Cách đúng:** Ép kiểu trước khi tính toán:\n```cpp\nvoid *p = ...;\nchar *q = (char*)p + 1;  // Tăng 1 byte\nint *r = (int*)p + 1;    // Tăng 4 bytes\n```",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "con-tro",
+          "void-pointer",
+          "cpp",
+          "syntax"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q008",
+        "type": "single_choice",
+        "question": {
+          "text": "Đoạn code sau in ra kết quả gì trên hệ điều hành 64-bit?\n```cpp\nvoid tinh_toan(int arr[100]) {\n    printf(\"%lu\", sizeof(arr));\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "400"
+          },
+          {
+            "id": "B",
+            "text": "100"
+          },
+          {
+            "id": "C",
+            "text": "8"
+          },
+          {
+            "id": "D",
+            "text": "Lỗi biên dịch"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: C (8)**\n\nĐây là bẫy kinh điển về **array decay** (suy biến mảng) trong C/C++.\n\nKhi bạn truyền mảng vào hàm, dù khai báo tham số là `int arr[100]`, `int arr[50]`, hay thậm chí `int arr[999]`, trình biên dịch đều **âm thầm chuyển** thành `int *arr` — tức là một **con trỏ**.\n\nCon số `100` trong `int arr[100]` hoàn toàn bị **bỏ qua** — nó chỉ mang tính chất gợi ý cho người đọc code, không có ý nghĩa thực tế với compiler.\n\n`sizeof(arr)` trong hàm thực chất là `sizeof(int*)` = **8 bytes** trên kiến trúc 64-bit (vì con trỏ trên hệ 64-bit luôn chiếm 8 bytes).\n\n**Cách lấy kích thước mảng thực sự:**\n- Truyền kích thước mảng như tham số riêng: `void tinh_toan(int arr[], int size)`\n- Dùng template (C++): `template<size_t N> void f(int (&arr)[N])`\n- Dùng `std::array<int, 100>` (C++11+)",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "con-tro",
+          "array-decay",
+          "sizeof",
+          "bo-nho"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q009",
+        "type": "single_choice",
+        "question": {
+          "text": "Kết quả của biểu thức sau là gì?\n```cpp\nint a[5];\nint *p1 = &a[1];\nint *p2 = &a[4];\nint dist = (char*)p2 - (char*)p1;\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "3"
+          },
+          {
+            "id": "B",
+            "text": "12"
+          },
+          {
+            "id": "C",
+            "text": "4"
+          },
+          {
+            "id": "D",
+            "text": "Hành vi không xác định (Undefined Behavior)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: B (12)**\n\n**Phân tích từng bước:**\n\n1. `p1` trỏ đến `a[1]`, `p2` trỏ đến `a[4]`.\n2. Khoảng cách giữa chúng: `a[4] - a[1]` = **3 phần tử `int`**.\n3. Nếu tính `p2 - p1` (phép trừ con trỏ `int*`), kết quả sẽ là **3** (đơn vị: phần tử).\n4. **Nhưng** code ép kiểu cả hai sang `char*` trước khi trừ.\n\nKhi ép sang `char*`, phép trừ tính khoảng cách theo đơn vị **byte** (vì `sizeof(char)` = 1).\n\nMỗi `int` chiếm **4 bytes**, nên:\n```\ndist = 3 phần tử × 4 bytes/phần tử = 12 bytes\n```\n\n**Tóm lại:**\n- `int*` trừ `int*` → đơn vị: số phần tử `int`\n- `char*` trừ `char*` → đơn vị: số byte\n\nĐây là lý do kỹ thuật ép con trỏ sang `char*` rất phổ biến khi cần làm việc ở mức byte (ví dụ: `memcpy`, serialize dữ liệu).",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "con-tro",
+          "pointer-arithmetic",
+          "type-casting",
+          "bo-nho"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q010",
+        "type": "single_choice",
+        "question": {
+          "text": "Đoạn code sau dùng để kiểm tra điều gì?\n```cpp\nint x = 1;\nchar *p = (char*)&x;\nif (*p == 1) { /* ... */ }\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kích thước của thanh ghi (Register size)"
+          },
+          {
+            "id": "B",
+            "text": "Hiện tượng phân mảnh bộ nhớ (Memory Fragmentation)"
+          },
+          {
+            "id": "C",
+            "text": "Thứ tự byte Little-Endian"
+          },
+          {
+            "id": "D",
+            "text": "Tốc độ đệm Cache (Cache Hit/Miss)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: C (Kiểm tra thứ tự byte Little-Endian)**\n\nSố nguyên `int x = 1` chiếm 4 bytes. Biểu diễn dưới dạng hex:\n```\n00 00 00 01\n```\n\nCâu hỏi là: byte `01` (byte ít quan trọng nhất — Least Significant Byte) nằm ở đâu trong bộ nhớ?\n\n- **Little-Endian** (Intel/AMD): Byte nhỏ nhất nằm ở **địa chỉ thấp nhất**\n  → Bộ nhớ: `01 00 00 00`\n- **Big-Endian** (SPARC, một số ARM): Byte lớn nhất nằm ở địa chỉ thấp nhất\n  → Bộ nhớ: `00 00 00 01`\n\nCon trỏ `char *p` trỏ đến byte đầu tiên (địa chỉ thấp nhất) của `x`. Nếu `*p == 1`, nghĩa là byte `01` nằm ở đầu → hệ thống dùng **Little-Endian**.\n\n**Ứng dụng thực tế:** Kiểm tra endianness rất quan trọng khi:\n- Gửi/nhận dữ liệu qua mạng (network byte order = Big-Endian)\n- Đọc/ghi file nhị phân cross-platform\n- Lập trình embedded/firmware",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "con-tro",
+          "endianness",
+          "bo-nho",
+          "little-endian"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q011",
+        "type": "single_choice",
+        "question": {
+          "text": "Điểm khác biệt giữa việc `delete` hai con trỏ sau là gì?\n```cpp\nint *p1;                 \nint *p2 = nullptr;       \ndelete p1;\ndelete p2;\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cả hai đều crash chương trình"
+          },
+          {
+            "id": "B",
+            "text": "delete p1 an toàn, delete p2 crash"
+          },
+          {
+            "id": "C",
+            "text": "Cả hai đều phớt lờ lệnh xóa một cách an toàn"
+          },
+          {
+            "id": "D",
+            "text": "delete p1 gây Undefined Behavior, delete p2 an toàn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: D (`delete p1` → UB, `delete p2` → an toàn)**\n\n**`delete p2` (p2 = nullptr) — AN TOÀN:**\nTheo chuẩn C++, xóa một con trỏ `nullptr` là thao tác **no-op** (không làm gì). Trình biên dịch tự động kiểm tra và bỏ qua. Bạn có thể gọi `delete nullptr;` bao nhiêu lần cũng được.\n\n**`delete p1` (chưa khởi tạo) — NGUY HIỂM:**\n`p1` là biến cục bộ (local variable) chưa được khởi tạo, nên nó chứa **giá trị rác** (garbage value) — một địa chỉ ngẫu nhiên nào đó trong bộ nhớ. Khi gọi `delete p1`, bạn đang yêu cầu hệ thống giải phóng một vùng nhớ mà chương trình **không sở hữu**. Đây là **Undefined Behavior**, có thể:\n- Crash ngay lập tức (Segmentation Fault)\n- Gây **memory corruption** âm thầm (nguy hiểm hơn vì khó debug)\n- \"Chạy bình thường\" trên máy bạn nhưng crash trên máy khác\n\n**Bài học:** LUÔN khởi tạo con trỏ = `nullptr` khi khai báo:\n```cpp\nint *p = nullptr;  // Thay vì: int *p;\n```",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "con-tro",
+          "bo-nho",
+          "delete",
+          "undefined-behavior"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q012",
+        "type": "single_choice",
+        "question": {
+          "text": "Khai báo `int * const ptr;` mang ý nghĩa gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "ptr trỏ tới một hằng số nguyên (không thể đổi giá trị ô nhớ)"
+          },
+          {
+            "id": "B",
+            "text": "ptr là một hằng con trỏ (không thể trỏ đi nơi khác)"
+          },
+          {
+            "id": "C",
+            "text": "Cả địa chỉ và giá trị trỏ tới đều không thể thay đổi"
+          },
+          {
+            "id": "D",
+            "text": "Lỗi cú pháp do thiếu khởi tạo"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: B (ptr là hằng con trỏ — không thể trỏ đi nơi khác)**\n\n**Quy tắc đọc khai báo con trỏ — từ PHẢI sang TRÁI:**\n\n`int * const ptr` → đọc: `ptr` là `const` `*` (pointer) tới `int`\n→ \"ptr là một hằng con trỏ trỏ tới int\"\n\n**So sánh các cách khai báo:**\n\n| Khai báo | Đọc | Ý nghĩa |\n|---|---|---|\n| `int *ptr` | pointer to int | Con trỏ bình thường |\n| `int * const ptr` | **const** pointer to int | Không đổi được địa chỉ, đổi được giá trị |\n| `const int *ptr` | pointer to **const** int | Đổi được địa chỉ, không đổi được giá trị |\n| `const int * const ptr` | **const** pointer to **const** int | Không đổi được gì cả |\n\n**Ví dụ:**\n```cpp\nint a = 5, b = 10;\nint * const ptr = &a;\n*ptr = 20;    // ✅ OK — thay đổi giá trị\nptr = &b;     // ❌ LỖI — không thể đổi địa chỉ\n```\n\n**Mẹo nhớ:** `const` đứng bên nào thì bên đó bị \"khóa\". `const` sau `*` → khóa con trỏ. `const` trước `*` → khóa giá trị.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "con-tro",
+          "const",
+          "cpp",
+          "syntax"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q013",
+        "type": "single_choice",
+        "question": {
+          "text": "Điều gì sẽ xảy ra khi thực thi đoạn mã sau?\n```c\nint *p = (int*)malloc(10 * sizeof(int));\nfree(p + 1);\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Giải phóng bộ nhớ từ phần tử thứ 2 trở đi"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ giải phóng đúng phần tử đầu tiên"
+          },
+          {
+            "id": "C",
+            "text": "Lỗi rò rỉ bộ nhớ (Memory Leak)"
+          },
+          {
+            "id": "D",
+            "text": "Hành vi không xác định / Crash chương trình"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: D (Undefined Behavior / Crash)**\n\nHàm `free()` (và `delete` trong C++) yêu cầu truyền vào **chính xác** địa chỉ gốc đã được trả về từ hàm cấp phát (`malloc`/`calloc`/`realloc`/`new`).\n\n**Tại sao?** Khi `malloc` cấp phát bộ nhớ, nó lưu thông tin quản lý (metadata) ngay **trước** vùng nhớ trả về — bao gồm kích thước block, trạng thái, liên kết với block khác... Khi `free(p)` được gọi, nó sẽ đọc metadata ở vị trí `p - metadata_size`.\n\nNếu bạn gọi `free(p + 1)`, hàm `free` sẽ đọc metadata ở vị trí **sai** (giữa vùng dữ liệu của bạn), dẫn đến:\n- **Heap corruption:** Phá hỏng cấu trúc quản lý heap\n- **Segmentation Fault:** Crash ngay lập tức\n- **Silent corruption:** Chương trình chạy tiếp nhưng dữ liệu bị hỏng (khó debug nhất)\n\n**Quy tắc vàng:** `free()` chỉ nhận con trỏ từ `malloc()`. `delete` chỉ nhận con trỏ từ `new`. Không bao giờ dịch chuyển con trỏ trước khi giải phóng.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "con-tro",
+          "bo-nho",
+          "malloc",
+          "free",
+          "heap"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q014",
+        "type": "single_choice",
+        "question": {
+          "text": "Kết quả của đoạn mã này là gì?\n```c\nchar *s = \"Hello\";\ns[0] = 'h';\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chuỗi biến thành \"hello\""
+          },
+          {
+            "id": "B",
+            "text": "Lỗi biên dịch (Compilation Error)"
+          },
+          {
+            "id": "C",
+            "text": "Lỗi thực thi (Segmentation Fault)"
+          },
+          {
+            "id": "D",
+            "text": "Ký tự 'h' bị bỏ qua, chuỗi giữ nguyên \"Hello\""
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: C (Segmentation Fault — lỗi thực thi)**\n\nTrong C/C++, chuỗi hằng (string literals) như `\"Hello\"` được lưu ở phân vùng bộ nhớ **chỉ đọc** (`.rodata segment` — Read-Only Data). Con trỏ `char *s` chỉ **trỏ tới** vùng nhớ này, không tạo bản sao.\n\nKhi bạn thực hiện `s[0] = 'h'`, bạn đang cố **ghi đè** lên vùng nhớ chỉ đọc. Hệ điều hành phát hiện vi phạm quyền truy cập (access violation) và **ngắt chương trình** ngay lập tức → Segmentation Fault.\n\n**Cách sửa đúng:**\n```c\n// Cách 1: Dùng mảng (tạo bản sao trên stack)\nchar s[] = \"Hello\";   // s nằm trên stack, có thể ghi\ns[0] = 'h';           // ✅ OK\n\n// Cách 2: Cấp phát động\nchar *s = strdup(\"Hello\");  // Tạo bản sao trên heap\ns[0] = 'h';                 // ✅ OK\nfree(s);                     // Nhớ giải phóng\n```\n\n**Lưu ý:** Trong C++, chuẩn C++11 trở đi **cấm** gán string literal cho `char*` (phải dùng `const char*`). Nhiều compiler hiện đại sẽ cảnh báo hoặc báo lỗi.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "con-tro",
+          "string-literal",
+          "bo-nho",
+          "segfault"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q015",
+        "type": "single_choice",
+        "question": {
+          "text": "Toán tử phẩy (Comma Operator) hoạt động thế nào trong tình huống này?\n```c\nint a = 10, b = 20;\nint *p = (&a, &b);\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Lỗi cú pháp do không thể gán hai địa chỉ"
+          },
+          {
+            "id": "B",
+            "text": "p trỏ tới a"
+          },
+          {
+            "id": "C",
+            "text": "p trỏ tới b"
+          },
+          {
+            "id": "D",
+            "text": "p trở thành con trỏ hoang (Dangling pointer)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: C (p trỏ tới b)**\n\nToán tử phẩy (Comma Operator `,`) trong C/C++ hoạt động theo quy tắc:\n1. **Tính biểu thức bên trái** (`&a`) → lấy địa chỉ của `a`\n2. **Bỏ qua kết quả** bên trái\n3. **Tính biểu thức bên phải** (`&b`) → lấy địa chỉ của `b`\n4. **Trả về kết quả bên phải** làm giá trị cuối cùng\n\nDo đó: `(&a, &b)` trả về `&b`, nên `p = &b` → `p` trỏ tới `b`.\n\n**⚠️ Phân biệt hai loại dấu phẩy:**\n- **Comma Operator:** `(expr1, expr2)` — tính cả hai, trả về expr2\n- **Comma Separator:** `int a = 10, b = 20;` — phân tách khai báo (không phải toán tử)\n\n**Ứng dụng thực tế:** Comma operator hay được dùng trong vòng `for`:\n```c\nfor (int i = 0, j = 10; i < j; i++, j--)\n//                                ^^^^ Comma operator\n```\n\n**Bẫy phổ biến:** Gọi hàm `f(a, b)` — dấu `,` ở đây là separator (phân tách tham số), KHÔNG phải comma operator.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "cpp",
+          "syntax",
+          "comma-operator",
+          "con-tro"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q016",
+        "type": "single_choice",
+        "question": {
+          "text": "In ra giá trị của `*p` sẽ cho kết quả gì?\n```c\nfloat f = 3.14f;\nint *p = (int*)&f;\nprintf(\"%d\", *p);\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "3"
+          },
+          {
+            "id": "B",
+            "text": "3.14"
+          },
+          {
+            "id": "C",
+            "text": "Địa chỉ bộ nhớ của biến f"
+          },
+          {
+            "id": "D",
+            "text": "Một số rất lớn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: D (Một số rất lớn)**\n\nĐây là bẫy kinh điển về **type punning** (ép kiểu con trỏ).\n\nKhi bạn ép `float*` sang `int*` và đọc giá trị, CPU **không** thực hiện phép chuyển đổi toán học nào. Nó đọc **nguyên xi chuỗi bit** của số `3.14f` (theo chuẩn IEEE 754) và diễn giải chuỗi bit đó như một số nguyên `int`.\n\n**Biểu diễn IEEE 754 của 3.14f:**\n```\nDấu: 0\nExponent: 10000000 (128)\nMantissa: 10010001111010111000011\n→ Hex: 0x4048F5C3\n→ Decimal (khi đọc như int): 1,078,523,331\n```\n\nKết quả in ra: **1078523331** — một số \"vô nghĩa\" ở hệ thập phân.\n\n**Cách chuyển đổi đúng:**\n```c\nfloat f = 3.14f;\nint n = (int)f;           // ✅ Chuyển đổi toán học: n = 3\nprintf(\"%d\", n);          // In ra: 3\n```\n\n**Lưu ý:** Theo chuẩn C++ strict aliasing rule, việc đọc `float` thông qua `int*` thực ra là **Undefined Behavior**. Cách an toàn để type punning là dùng `memcpy` hoặc `std::bit_cast` (C++20).",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "con-tro",
+          "type-punning",
+          "ieee754",
+          "bo-nho"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q017",
+        "type": "single_choice",
+        "question": {
+          "text": "(Dành cho C99) Sau khi chạy đoạn mã dưới đây, giá trị của `n` là bao nhiêu?\n```c\nint n = 5;\nsize_t sz = sizeof(int[n++]);\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "5"
+          },
+          {
+            "id": "B",
+            "text": "6"
+          },
+          {
+            "id": "C",
+            "text": "Không xác định (Undefined)"
+          },
+          {
+            "id": "D",
+            "text": "Lỗi biên dịch do sizeof không nhận biểu thức động"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: B (n = 6)**\n\nĐây là một trong những ngoại lệ **dị biệt nhất** của ngôn ngữ C.\n\n**Quy tắc thông thường:** Toán tử `sizeof` hoạt động ở **compile-time** (thời điểm biên dịch) và **không bao giờ** thực thi biểu thức bên trong. Ví dụ:\n```c\nint n = 5;\nsizeof(n++);  // n vẫn = 5, n++ KHÔNG được thực thi\n```\n\n**Ngoại lệ — VLA (Variable Length Arrays):**\nC99 giới thiệu VLA — mảng có kích thước xác định tại runtime. Khi `sizeof` nhận một VLA type, nó **buộc phải chạy ở runtime** vì kích thước phụ thuộc vào biến.\n\nTrong `sizeof(int[n++])`:\n- `int[n++]` là một VLA type (kích thước = `n` tại runtime)\n- `sizeof` buộc phải **thực thi** `n++` để biết kích thước mảng\n- `n++` tăng `n` từ 5 lên **6** (post-increment: dùng 5 trước, rồi tăng)\n- `sz` = `5 * sizeof(int)` = 20 bytes\n- Sau câu lệnh: `n` = **6**\n\n**Lưu ý quan trọng:**\n- VLA chỉ có trong **C99/C11** (tùy chọn trong C11). **C++ không hỗ trợ VLA** theo chuẩn (một số compiler hỗ trợ như extension).\n- Đây là lý do nhiều lập trình viên **tránh dùng VLA** vì hành vi gây nhầm lẫn.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "cpp",
+          "vla",
+          "sizeof",
+          "c99"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q018",
+        "type": "single_choice",
+        "question": {
+          "text": "Theo chuẩn C++23, chương trình sau in ra kết quả gì?\n```cpp\n#include <iostream>\nint main() {\n    int i = 1;\n    int& j;\n    j = i;\n    std::cout << j;\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "1"
+          },
+          {
+            "id": "B",
+            "text": "0"
+          },
+          {
+            "id": "C",
+            "text": "Lỗi biên dịch (Compilation Error)"
+          },
+          {
+            "id": "D",
+            "text": "Hành vi không xác định (Undefined Behavior)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: C (Lỗi biên dịch)**\n\nTrong C++ (bao gồm cả C++23), **tham chiếu (reference)** có hai quy tắc bắt buộc:\n\n**1. Phải được khởi tạo ngay khi khai báo:**\nTham chiếu không phải là biến độc lập có vùng nhớ riêng — nó chỉ là một **\"bí danh\" (alias)** cho một đối tượng đã tồn tại. Trình biên dịch cần biết ngay lập tức nó tham chiếu đến đối tượng nào.\n\n```cpp\nint i = 1;\nint& j;      // ❌ LỖI: tham chiếu chưa khởi tạo\nint& j = i;  // ✅ OK: j là alias của i\n```\n\n**2. Không thể thay đổi đối tượng tham chiếu:**\nSau khi đã gắn `j` với `i`, bạn **không thể** làm cho `j` tham chiếu sang biến khác. Mọi phép gán sau đó (`j = ...`) thực chất là gán giá trị vào biến mà `j` đang đại diện.\n\n```cpp\nint i = 1, k = 2;\nint& j = i;  // j gắn với i\nj = k;       // KHÔNG phải gắn j với k, mà là gán i = k (i trở thành 2)\n```\n\n**So sánh với con trỏ:**\n- Con trỏ có thể khai báo mà không khởi tạo: `int *p;` (hợp lệ, dù nguy hiểm)\n- Con trỏ có thể trỏ sang đối tượng khác: `p = &k;`\n- Tham chiếu không có hai khả năng trên.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "cpp",
+          "reference",
+          "syntax",
+          "compilation-error"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q019",
+        "type": "single_choice",
+        "question": {
+          "text": "Theo chuẩn C++23, chương trình sau in ra kết quả gì?\n```cpp\n#include <iostream>\n\nint main() {\n    int n = 3;\n    int i = 0;\n\n    switch (n % 2) {\n    case 0:\n    do {\n    ++i;\n    case 1: ++i;\n    } while (--n > 0);\n    }\n\n    std::cout << i;\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "3"
+          },
+          {
+            "id": "B",
+            "text": "4"
+          },
+          {
+            "id": "C",
+            "text": "5"
+          },
+          {
+            "id": "D",
+            "text": "Lỗi biên dịch"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: C (5)**\n\nĐoạn code này là biến thể của **Duff's Device** — một kỹ thuật tối ưu hóa nổi tiếng (và gây tranh cãi) trong C/C++.\n\nDù trông kỳ lạ khi `case 1:` nằm **bên trong** vòng `do-while`, đây vẫn là code C++ hợp lệ. Theo chuẩn C++, nhãn `case` có thể xuất hiện ở bất kỳ đâu bên trong khối `switch`, kể cả trong vòng lặp lồng bên trong.\n\n**Truy vết từng bước (n=3, n%2=1):**\n\n`n % 2 = 3 % 2 = 1` → nhảy vào `case 1:`\n\n| Bước | Hành động | i | n | Điều kiện |\n|------|-----------|---|---|----------|\n| 1 | Nhảy vào `case 1:`, `++i` | 1 | 3 | - |\n| 2 | `--n > 0` → n=2, true | 1 | 2 | Tiếp tục loop |\n| 3 | Đầu do: `++i` | 2 | 2 | - |\n| 4 | `case 1:` (bị bỏ qua khi loop): `++i` | 3 | 2 | - |\n| 5 | `--n > 0` → n=1, true | 3 | 1 | Tiếp tục loop |\n| 6 | Đầu do: `++i` | 4 | 1 | - |\n| 7 | `case 1:`: `++i` | 5 | 1 | - |\n| 8 | `--n > 0` → n=0, false | 5 | 0 | Thoát loop |\n\nKết quả: `i = 5`.\n\n**Duff's Device** ban đầu được Tom Duff phát minh năm 1983 tại Lucasfilm để tối ưu hóa việc copy bộ nhớ bằng cách \"unroll\" vòng lặp (loop unrolling) kết hợp với fall-through của switch.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "cpp",
+          "duffs-device",
+          "switch",
+          "syntax"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q020",
+        "type": "single_choice",
+        "question": {
+          "text": "Theo chuẩn C++23, chương trình sau in ra kết quả gì?\n```cpp\n#include <iostream>\n\nstruct S {\n    int one;\n    int two;\n    int three;\n};\n\nint main() {\n    S s{1, 2};\n    std::cout << s.one;\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "1"
+          },
+          {
+            "id": "B",
+            "text": "0"
+          },
+          {
+            "id": "C",
+            "text": "Giá trị rác (Undefined)"
+          },
+          {
+            "id": "D",
+            "text": "Lỗi biên dịch"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "**Đáp án: A (1)**\n\nTrong C++, bạn được phép cung cấp **ít hơn** số initializer so với số thành viên của struct/class, miễn là struct/class đó là một **aggregate**.\n\n**Aggregate là gì?** Theo chuẩn C++ (§[dcl.init.aggr]¶1), aggregate là mảng hoặc class thỏa mãn:\n- Không có user-declared hoặc inherited constructors\n- Không có private/protected data members trực tiếp\n- Không có private/protected base classes trực tiếp  \n- Không có virtual functions hoặc virtual base classes\n\n`struct S` thỏa mãn tất cả → là aggregate.\n\n**Quy tắc khởi tạo aggregate (§[dcl.init.aggr]¶5):**\nCác phần tử **không được khởi tạo tường minh** sẽ:\n1. Dùng default member initializer nếu có\n2. Nếu không, được copy-initialized từ `{}` (empty initializer list) → giá trị **0** cho kiểu số\n3. Nếu là reference → chương trình ill-formed\n\nVới `S s{1, 2}`:\n- `s.one = 1` ✅\n- `s.two = 2` ✅  \n- `s.three = 0` (zero-initialized từ empty initializer list)\n\nIn `s.one` → **1**.\n\n**Lưu ý:** Đây không phải \"giá trị rác\". C++ đảm bảo zero-initialization cho các thành viên còn thiếu trong aggregate initialization. GCC và Clang cần flag `-Wextra` để cảnh báo về trường hợp này.",
+          "images": []
+        },
+        "tags": [
+          "ktlt",
+          "cpp",
+          "aggregate",
+          "struct",
+          "initialization"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

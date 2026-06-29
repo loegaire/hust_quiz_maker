@@ -1,0 +1,443 @@
+--- Q330 (ID: q331) ---
+Text: [TỰ LUẬN]
+Ngữ cảnh: Một lập trình viên xây dựng hệ thống quản lý kho hàng cơ bản bằng C. Để tiết kiệm thời gian, người này quyết định sử dụng calloc để cấp phát mảng.
+Yêu cầu: Hãy đọc kỹ đoạn mã nguồn dưới đây.
+1. Chương trình này khi chạy có bị lỗi (crash) không? Tại sao?
+2. Hãy chỉ ra toàn bộ các lỗi tiềm ẩn trong đoạn code (giải thích rõ cơ chế gây lỗi trong bộ nhớ).
+3. Viết lại đoạn chương trình để khắc phục triệt để các vấn đề trên.
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+typedef struct {
+  int product_code;
+  char* product_name;
+  int stock_count;
+} Product;
+// Khởi tạo danh sách bằng calloc với hy vọng mọi thứ được reset an toàn
+Product* create_product_list(int size) {
+  return (Product*)calloc(size, sizeof(Product));
+}
+// Cập nhật thông tin và nối thêm chuỗi vào tên sản phẩm
+void update_product(Product* p, int code, const char* name, int added_stock) {
+  p->product_code = code;
+  p->stock_count += added_stock;
+  // Tính độ dài mới. Trình biên dịch sẽ tính: chiều dài cũ + chiều dài mới + 1
+  int new_len = strlen(p->product_name) + strlen(name) + 1;
+  // Nới rộng vùng nhớ để chứa tên mới
+  p->product_name = (char*)realloc(p->product_name, new_len);
+  // Nối chuỗi
+  strcat(p->product_name, name);
+}
+int main() {
+  int n = 2;
+  Product* inventory = create_product_list(n);
+  // Nạp dữ liệu
+  update_product(&inventory[0], 101, "Laptop Dell", 50);
+  update_product(&inventory[1], 102, "Chuot Logitech", 200);
+  printf("\n--- KHO HANG ---\n");
+  for (int i = 0; i < n; i++) {
+    printf("Ma: %d, Ten: %s, Ton kho: %d\n", inventory[i].product_code,
+           inventory[i].product_name, inventory[i].stock_count);
+  }
+  // Dọn dẹp
+  free(inventory);
+  return 0;
+}
+```
+Choices:
+Answer: {'acceptedAnswers': ["1. Chương trình bị crash vì p->product_name ban đầu là NULL (do calloc reset struct về 0), dẫn đến gọi strlen(p->product_name) gây ra lỗi SegFault.\n2. Các lỗi tiềm ẩn: realloc có thể trả về NULL khi hết bộ nhớ làm mất con trỏ gốc; realloc không tự khởi tạo vùng nhớ mới dẫn đến chứa rác; strcat trên vùng nhớ chứa rác gây hành vi không xác định; rò rỉ bộ nhớ do free(inventory) nhưng chưa free(product_name) của từng phần tử.\n3. Cách khắc phục: Khởi tạo product_name là chuỗi rỗng bằng malloc(1) và gán '\\0', kiểm tra con trỏ sau khi realloc, giải phóng product_name trước khi free inventory."], 'caseSensitive': False, 'trimWhitespace': True}
+
+--- Q331 (ID: q332) ---
+Text: [TỰ LUẬN]
+Cho đoạn chương trình sau đây, tìm ra ít nhất hai lỗi sai trong chương trình và sửa lại chương trình cho đúng
+```cpp
+int main(void) {
+  char *s = "abcde";
+  int len = strlen(s);
+  for (int i = 0; i <= len; i++) {
+    s[i] += 1;
+    return printf("'%s' is %d characters long\n", ++s, strlen(s));
+  }
+}
+```
+Choices:
+Answer: {'acceptedAnswers': ['1. s trỏ tới hằng chuỗi nằm trong vùng nhớ read-only, việc ghi đè s[i] += 1 gây SegFault. Khắc phục: Dùng char s[] = "abcde".\n2. Phép toán ++s thay đổi con trỏ s, không thể thực hiện nếu s khai báo dạng mảng hằng con trỏ. Khắc phục: Dùng con trỏ phụ hoặc chỉ in.\n3. s[i] += 1 tại i = len làm thay đổi kí tự kết thúc chuỗi \'\\0\' thành \'\\1\', gây mất kí tự kết thúc chuỗi.\n4. Lệnh return trong vòng lặp kết thúc chương trình ngay lập tức ở lần lặp đầu tiên.'], 'caseSensitive': False, 'trimWhitespace': True}
+
+--- Q332 (ID: q333) ---
+Text: Chọn đáp án SAI: khi truy cập tới phần tử ở hàng i cột j của mảng 2 chiều M, ta có thể viết:
+Choices:
+Answer: ['C']
+
+--- Q333 (ID: q334) ---
+Text: [TỰ LUẬN]
+Khi định nghĩa phép toán cộng ma trận cho cấu trúc MATRIX được định nghĩa như sau:
+```cpp
+typedef struct {
+  int Row, Col;
+  float **Data;
+} MATRIX;
+```
+một sinh viên nhận thấy, nếu thực hiện biểu thức C=A+B; một vài lần thì kết quả OK, nhưng nếu biểu thức đó nằm trong 1 vòng lặp lớn (hàng ngàn lần) thì kết quả không còn đúng, thậm chí khi tăng số lần lặp, chương trình còn bị lỗi run-time, mặc dù các hàm cấp phát bộ nhớ, định nghĩa toán tử cộng ma trận SV đã làm rất chuẩn.
+
+Em hãy cho biết tại sao và đưa ra giải pháp?
+```cpp
+MATRIX operator+(MATRIX A, MATRIX B) {
+  MATRIX temp;
+  temp.Row = A.Row;
+  temp.Col = A.Col;
+
+  AllocMatrix(temp);
+
+  /* Phần cộng ma trận ............... */
+
+  return temp;
+}
+```
+Choices:
+Answer: {'acceptedAnswers': ['Nguyên nhân: Phép toán cộng ma trận tạo ra một đối tượng tạm thời temp chứa dữ liệu động được cấp phát qua AllocMatrix(temp). Khi gán C = A + B, vùng nhớ động của đối tượng tạm thời này không được giải phóng tự động (do C++ không tự giải phóng trừ khi có hàm hủy (destructor) dọn dẹp bộ nhớ động float** Data). Việc gọi liên tiếp trong vòng lặp gây rò rỉ bộ nhớ nghiêm trọng (memory leak) dẫn đến lỗi run-time do cạn kiệt bộ nhớ.\nGiải pháp: Định nghĩa hàm hủy ~MATRIX() để giải phóng float** Data, hoặc viết hàm gán sâu (deep copy) / toán tử gán operator= cho struct MATRIX, hoặc giải phóng thủ công các đối tượng tạm thời.'], 'caseSensitive': False, 'trimWhitespace': True}
+
+--- Q334 (ID: q335) ---
+Text: Cho đoạn code:
+```cpp
+int f3(int *p, int n, int k) {
+  int s;
+  if (k < n) {
+    if (Biểu thức kiểm tra)
+      return 0;
+    else {
+      s = f3(p, n, k + 1);
+      if (!s)
+        return 0;
+    }
+  }
+  return 1;
+}
+int main() {
+  int n = 8, i, m[8] = {9, 3, 6, 7, 7, 6, 3, 9};
+  // ...
+  if (f3(m, n - 1, 0))
+    printf("\nMang doi xung");
+  else
+    printf("\nMang khong doi xung");
+}
+```
+Biết rằng f3 có nhiệm vụ kiểm tra xem mảng có đối xứng hay không, nếu có thì trả về 1, ngược lại thì trả về 0 (ví dụ 3,6,6,3 sẽ trả về 1 và 3,6,5,6,7 sẽ trả về 0).
+Đoạn mã cần điền vào Biểu thức kiểm tra sẽ là:
+Choices:
+Answer: ['C']
+
+--- Q335 (ID: q336) ---
+Text: Nếu bạn có `vector<int> v = {10, 20, 30, 40};`. Kết quả của lệnh `vector<int> sub(v.begin() + 1, v.end() - 1);` là gì?
+Choices:
+Answer: ['A']
+
+--- Q336 (ID: q337) ---
+Text: Trường hợp nào nên dùng vector thay vì dùng deque?
+Choices:
+Answer: ['B']
+
+--- Q337 (ID: q338) ---
+Text: Phát biểu nào sau đây là sai về xử lý ngoại lệ?
+Choices:
+Answer: ['D']
+
+--- Q338 (ID: q339) ---
+Text: Kết quả in ra của mã nguồn C++ dưới đây là gì?
+```cpp
+#include <iostream>
+using namespace std;
+
+#define SQUARE(x) x* x
+int main() {
+  int a = SQUARE(1 + 2);
+  cout << a << endl;
+}
+```
+Choices:
+Answer: {'acceptedAnswers': ['5'], 'caseSensitive': False, 'trimWhitespace': True}
+
+--- Q339 (ID: q340) ---
+Text: Cho biết kết quả hiển thị ra màn hình sau khi thực hiện chương trình sau:
+```cpp
+#include <iostream>
+using namespace std;
+int x = 0;
+void myfunc() {
+  int x = 5;
+}
+int main() {
+  myfunc();
+  cout << x << ' ';
+  x++;
+  myfunc();
+  cout << x << ' ';
+  return 0;
+}
+```
+Choices:
+Answer: ['A']
+
+--- Q340 (ID: q341) ---
+Text: Hàm nào dưới đây yêu cầu chương trình phải thoát ngay lập tức bất chấp sự đúng sai của điều kiện?
+Choices:
+Answer: ['A']
+
+--- Q341 (ID: q342) ---
+Text: Cho biết dòng kết quả cuối cùng khi chạy chương trình sau:
+```cpp
+#include <iostream>
+using namespace std;
+template <typename T>
+T maxval(T x, T y) {
+  static int count = 0;
+  cout << ++count << ", ";
+  return (x > y) ? x : y;
+}
+int main() {
+  int i = maxval(3, 7);
+  cout << i << endl;
+  double d = maxval(6.34, 18.523);
+  cout << d << endl;
+  d = maxval(16.34, 28.523);
+  cout << d << endl;
+  char ch = maxval('a', '6');
+  cout << ch << endl;
+  d = maxval(5.2, 4.5);
+  cout << d << endl;
+  return 0;
+}
+```
+Choices:
+Answer: ['D']
+
+--- Q342 (ID: q343) ---
+Text: Trong các phép toán sau đây, phép toán nào có tốc độ chậm thứ hai so với các phép toán khác?
+Choices:
+Answer: ['D']
+
+--- Q343 (ID: q344) ---
+Text: (TỰ LUẬN) Hàm sau để lấy ra 1 TỪ (word) kể từ vị trí i trong xâu s với độ dài L, biết rằng các TỪ cách nhau bằng các dấu cách ' ', dấu '\t', dấu ',' (gọi chung là dấu trắng) và trong xâu s giữa các từ có thể có nhiều dấu trắng. Hãy tinh chỉnh và giải thích lý do.
+```cpp
+int GetWord(char *s, char *wrd, int i, int L) {
+  int pos = 0;
+  while (i < L &&
+         ((s[i] == '\t') || (s[i] == ' ') || (s[i] == '.') || (s[i] == ',')))
+    i++;
+  while (i < L &&
+         ((s[i] != '\t') && (s[i] != ' ') && (s[i] != '.') && (s[i] != ',')))
+    word[pos++] = s[i++];
+  word[pos] = '\0';
+  return pos;
+}
+```
+Choices:
+Answer: {'acceptedAnswers': ["Lỗi chính: 1. Tham số truyền vào là wrd nhưng trong thân hàm lại dùng word. Phải sửa thành wrd[pos++] và wrd[pos]. 2. Cần thêm điều kiện kiểm tra kí tự kết thúc chuỗi s[i] != '\\0' trong các vòng lặp while để tránh đọc vượt quá độ dài chuỗi thực tế."], 'caseSensitive': False, 'trimWhitespace': True}
+
+--- Q344 (ID: q345) ---
+Text: Kết quả in ra là:
+```cpp
+#include <cstring>
+#include <iostream>
+using namespace std;
+
+void f(char s[], char kt);
+void f1(char s[], int i);
+
+int main() {
+  char s[] =
+      "aabccaba";  // Đổi char *s thành mảng để tránh UB khi sửa hằng chuỗi
+  f(s, 'a');
+  cout << s;
+}
+void f(char s[], char kt) {
+  int i = 0;
+  while (*(s + i) != '\0') {
+    if (*(s + i) == kt) {
+      f1(s, i);
+      i--;
+    }
+    i++;
+  }
+}
+void f1(char s[], int vt) {
+  for (int i = vt; i < strlen(s); i++)
+    s[i] = s[i + 1];
+}
+```
+Choices:
+Answer: ['B']
+
+--- Q345 (ID: q346) ---
+Text: Giả sử ma trận hai chiều arr được khai báo như sau: `int a[1000][1000];` Xét hai số nguyên i, j (0 <= i, j <= n). Các chỉ số hàng và cột được đánh số từ 0. Hãy chỉ ra câu lệnh đúng để in ra giá trị phần tử hàng i cột j của ma trận. Nếu có nhiều đáp án đúng, hãy chọn tất cả các các đáp án đúng. Chọn ít nhất một đáp án sai sẽ không được điểm.
+Choices:
+Answer: ['A', 'B']
+
+--- Q346 (ID: q347) ---
+Text: Xét thủ tục đệ quy phi tuyến P có dạng:
+```cpp
+pascal P(X) ≡ if C (X) then D(X) else begin A(X);
+P(f(X));
+B(X);
+P(g(X));
+end;
+```
+Trong đó: X là biến; C(X) là biểu thức logic; A(X), B(X), D(X) là các thao tác không đệ quy; f(X), g(X) là các hàm biến đổi X. Để khử đệ quy thủ tục trên bằng ngăn xếp (Stack), giải thuật lập trình nào dưới đây là ĐÚNG?
+Choices:
+Answer: ['D']
+
+--- Q347 (ID: q348) ---
+Text: Cho biết kết quả hiển thị ra màn hình sau khi thực hiện chương trình sau:
+```cpp
+c
+#include <stdio.h>
+
+    void
+    ktra(int *a, int *b, int c) {
+  *((*a + 1 == 1) ? b : a) = *a ? *b : c;
+}
+
+int main() {
+  int a = 1, b = 2, c = 0;
+  ktra(&b, &c, a);
+  printf("%d, %d, %d\n", a, b, c);
+}
+```
+Choices:
+Answer: ['B']
+
+--- Q348 (ID: q349) ---
+Text: Khi nói đến các khái niệm:
+(a) các dòng nhập chuẩn nói chung và nó thường là từ bàn phím;
+(b) các dòng xuất chuẩn nói chung và nó thường là xuất ra màn hình;
+(c) dòng xuất lỗi chuẩn nói chung và nó cũng thường xuất trực tiếp ra màn hình.
+Chúng ta đang đề cập lần lượt đến:
+Choices:
+Answer: ['C']
+
+--- Q349 (ID: q350) ---
+Text: Hãy chỉ ra câu lệnh giải phóng bộ nhớ mảng arr đúng?
+Choices:
+Answer: ['E']
+
+--- Q350 (ID: q351) ---
+Text: Kết quả sau khi chạy chương trình C++ dưới đây là
+```cpp
+#include <iostream>
+using namespace std;
+int main() {
+  int a = 10, b = 15;
+  int *p = &a, *q = &b;
+  *p-- += b ^ ++*a;
+  *p += 2;
+  cout << a << ", " << b;
+}
+```
+Choices:
+Answer: ['C']
+
+--- Q351 (ID: q352) ---
+Text: Chọn các phát biểu đúng?
+Choices:
+Answer: ['A', 'C', 'D']
+
+--- Q352 (ID: q353) ---
+Text: Giá trị của các phần tử của mảng A sau khi thực hiện đoạn lệnh dưới đây là:
+```cpp
+int A[] = {2, 5, 6, 1};
+int *p = A + 1;
+*p--;
+*p += 2;
+p += 2;
+*p += 2;
+```
+Choices:
+Answer: ['A']
+
+--- Q353 (ID: q354) ---
+Text: 64.Kết quả đầu ra của chương trình sau là gì?
+```cpp
+#include <assert.h>
+#include <stdio.h>
+int main() {
+  int n = 12;
+  char str[50] = "";
+  assert(n >= 10);
+  printf("output: %d\n", n);
+
+  assert(str != NULL);
+  printf("output: %s\n", str);
+}
+```
+Choices:
+Answer: ['C']
+
+--- Q354 (ID: q355) ---
+Text: Cho chương trình sau:
+```cpp
+#include <iostream>
+using namespace std;
+void func(int x, bool state = false) {
+  if (state == true) {
+    cout << "State: true, x = " << x / 2;
+  } else {
+    cout << "State: false, x = " << x;
+  }
+}
+int main() {
+  func(120);
+  return 0;
+}
+```
+Choices:
+Answer: ['A']
+
+--- Q355 (ID: q356) ---
+Text: Để hiển thị fileName và lineNumber của một file mã nguồn C bất kỳ và một dòng bất kỳ, ta dùng các macro nào sau đây:
+Choices:
+Answer: ['D']
+
+--- Q356 (ID: q357) ---
+Text: Phát biểu nào dưới đây là chính xác về phong cách lập trình:
+Choices:
+Answer: ['A']
+
+--- Q357 (ID: q358) ---
+Text: Cho dãy arr như sau:
+```cpp
+int arr[3][3] = {{7, 8, 9}, {10, 13, 15}, {2, 7, 8}};
+```
+Thực hiện câu lệnh sau với dãy:
+```cpp
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 3; j++) {
+    *(*(arr + i) + j) = *(*(arr + j) + i) + 10;
+  }
+}
+```
+Dãy arr thu được sẽ có giá trị như thế nào?
+Choices:
+Answer: ['E']
+
+--- Q358 (ID: q359) ---
+Text: Chọn các phát biểu đúng về các kỹ thuật viết mã nguồn hiệu quả trong C/C++:
+Choices:
+Answer: ['B', 'C', 'D', 'H', 'I', 'K']
+
+--- Q359 (ID: q360) ---
+Text: Xét hai hàm sau:
+```cpp
+void myst(int a, int *b) {
+  a *= *b;
+  *b = 2 + a;
+}
+void test() {
+  int u = 2, v = 3;
+  myst(u, &v);
+  cout << u << " " << v << endl;
+}
+```
+Cái gì được in ra nếu gọi test()?
+Choices:
+Answer: ['E']
+

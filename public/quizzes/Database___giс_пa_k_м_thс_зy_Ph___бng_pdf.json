@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "database-extra-04e56575",
+    "title": "Trắc nghiệm DATABASE - Database - giс╗пa k├м thс║зy Ph╞░╞бng.pdf",
+    "description": "Bộ câu hỏi trắc nghiệm tự động trích xuất từ Database - giс╗пa k├м thс║зy Ph╞░╞бng.pdf. Gồm 2 câu.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Tự động trích xuất từ Database - giс╗пa k├м thс║зy Ph╞░╞бng.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q000_e7c6",
+        "type": "single_choice",
+        "question": {
+          "text": "BÀI KIỂM TRA SỐ 1 CƠ SỞ DỮ LIỆU – HỌC KỲ 20202 Ngày 03/06/2021 Thời gian: 45 phút Cho CSDL gồm các quan hệ sau: MonHoc( MaMH, TenMH, SoTC) DangKy(MaMH, MaSV, Diem) SinhVien(MaSV, TenSV, GioiTinh, QueQuan) 1. Dùng câu lệnh SQL tạo các bảng trên với đầy đủ khóa chính, khóa ngoà i 2. Hãy biểu diễn các yêu cầu sau bằng biểu thức đại số quan hệ và SQL",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cho biết tên môn học có mã 'IT3090'’"
+          },
+          {
+            "id": "B",
+            "text": "Liệt kê tên các môn học mà sinh viên có tên 'Tăng Mạnh Đạt' đạt điểm lớn hơn 8."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "database"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q001_d767",
+        "type": "single_choice",
+        "question": {
+          "text": "Biểu diễn các yêu cầu sau bằng SQL",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "Có bao nhiêu sinh viên giới tính là 'nữ' học môn có mã 'IT3090'"
+          },
+          {
+            "id": "D",
+            "text": "Tính điểm trung bình của sinh viên có mã '20192020'"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "database"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

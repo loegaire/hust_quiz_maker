@@ -1,0 +1,1654 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "ai-851a05f4",
+    "title": "Trắc nghiệm AI - AI - cuс╗Сi k├м 20241.pdf",
+    "description": "Bộ câu hỏi trắc nghiệm tự động trích xuất từ AI - cuс╗Сi k├м 20241.pdf. Gồm 46 câu hỏi.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Tự động trích xuất từ AI - cuс╗Сi k├м 20241.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q000_44ce",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho hai diễn dịch I1 và I2 với giá trị: I1 (p) = 0, I1 (q) = 1, I1 (r) = 1, I1 (s) = 0, I2 (p) = 1, I2 (q) = 1, I2 (r) = 0, I2 (s) = 0. Cho công thức F = (p ∨ q) ∧ r \u0001 → (r ∧ s). Hỏi phát biểu nào dưới đây là chính xác?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Có I1 ̸|= F và I2 ̸|= F"
+          },
+          {
+            "id": "B",
+            "text": "Có I1 |= F và I2 |= F"
+          },
+          {
+            "id": "C",
+            "text": "Có I1 |= F và I2 ̸|= F"
+          },
+          {
+            "id": "D",
+            "text": "Có I1 ̸|= F và I2 |= F"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q001_7029",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích 1. Xét diễn dịch I1 p ∨ q = 0 ∨ 1 = 1, (p ∨ q) ∧ r = 1 ∧ 1 = 1, r ∧ s = 1 ∧ 0 = 0, \u0001 (p ∨ q) ∧ r → (r ∧ s) = 1 → 0 = 0. Vì kết quả là 0, nên I1 ̸|= F . 2. Xét diễn dịch I2 p ∨ q = 1 ∨ 1 = 1, (p ∨ q) ∧ r = 1 ∧ 0 = 0, r ∧ s = 0 ∧ 0 = 0, 0→0=1 (vì “false \u0019 . . . ” luôn đúng). Vì kết quả là 1, nên I2 |= F . Đáp án đúng: D Câu 2: Cho các công thức mệnh đề với biến p, q: F1 := (¬p ∨ q) ∧ (¬q ∨ p), F2 := (¬p ∧ ¬q) ∨ (p ∧ q), F3 := (p ∨ q) → (p ∧ q), G := p ↔ q. Hãy cho biết phát biểu nào dưới đây là chính xác? 1",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "G tương đương với F2 và F3 , không tương đương với F1 ."
+          },
+          {
+            "id": "B",
+            "text": "G tương đương với F1 và F2 , không tương đương với F3 ."
+          },
+          {
+            "id": "C",
+            "text": "G tương đương với F1 , F2 và F3 ."
+          },
+          {
+            "id": "D",
+            "text": "G tương đương với F1 và F3 , không tương đương với F2 ."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q002_103c",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Ta lập bảng chân lý cho các công thức: p q F1 F2 F3 G 0 0 1 1 0 1 0 1 1 0 0 1 1 0 0 1 0→0=1 1→0=0 1→0=0 1→1=1 1 0 0 1  F , F và F cho cùng giá trị với G tại mọi cặp (p, q), nên F ≡ G, F ≡ G và F ≡ G. 1 2 3 1 2 Đáp án đúng: C Câu 3: Hãy chọn phương án phù hợp nhất về đặc điểm môi trường của tác tử quét mã QR:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Quan sát đầy đủ, xác định, phân đoạn, động, rời rạc, tác tử đơn"
+          },
+          {
+            "id": "B",
+            "text": "Quan sát đầy đủ, không xác định, phân đoạn, tĩnh, rời rạc, đa tác tử"
+          },
+          {
+            "id": "C",
+            "text": "Quan sát đầy đủ, xác định, phân đoạn, tĩnh, rời rạc, tác tử đơn"
+          },
+          {
+            "id": "D",
+            "text": "Quan sát được một phần, xác định, liên tiếp, tĩnh, rời rạc, tác tử đơn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q003_4190",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Môi trường quét mã QR có các đặc điểm sau:  Quan sát đầy đủ : cảm biến (camera) có thể thu thập toàn bộ thông tin mã.  Xác định: với cùng một mã, hành động quét luôn cho kết quả duy nhất.  Phân đoạn: tác tử quét từng khung hình / từng lần đọc.  Tĩnh: môi trường không thay đổi trong quá trình xử lý.  Rời rạc: dữ liệu được chia thành các ô pixel hoặc khung riêng biệt.  Tác tử đơn: chỉ một tác tử (thiết bị) thực hiện nhiệm vụ. Đáp án đúng: C 2 3 Câu 4: Cho tập biểu thức Σ= \b (b ∨ d) ∧ c, b → (a ∨ d), (c ∧ d) → f, (c ∧ f ) → (h ∧ k) . Hãy lựa chọn tập GT trong số các phương án dưới đây, để khi áp dụng phương pháp Hợp giải với Σ thì có thể chứng minh được k:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "GT = {b}"
+          },
+          {
+            "id": "B",
+            "text": "GT = {a}"
+          },
+          {
+            "id": "C",
+            "text": "GT = {c}"
+          },
+          {
+            "id": "D",
+            "text": "GT = {d}"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q004_5c35",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích 1. Chuyển đổi Σ sang dạng CNF và thêm GT Cho \b Σ = (b ∨ d) ∧ c, b → (a ∨ d), (c ∧ d) → f, (c ∧ f ) → (h ∧ k) , ta tách về các clause (CNF) như sau: (1) b ∨ d, (2) c, (3) ¬b ∨ a ∨ d, (4) ¬c ∨ ¬d ∨ f, (5) ¬c ∨ ¬f ∨ h, (6) ¬c ∨ ¬f ∨ k. Thêm giả thiết GT = {d} dưới dạng unit clause: (7)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "D",
+            "text": "Lựa chọn trống"
+          },
+          {
+            "id": "A",
+            "text": "∀y ∃x Quiz (y) → (Student(x) ∨ Got100 (x, y)) “Với mọi câu đố y, có một sinh viên nhận được 100"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q005_315c",
+        "type": "single_choice",
+        "question": {
+          "text": "từ câu đố đó.” \u0001",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "B",
+            "text": "∀y ∃x Quiz (y) → (Student(x) ∧ Got100 (x, y)) “Với mọi câu đố y, có một sinh viên nhận được 100"
+          },
+          {
+            "id": "C",
+            "text": "∃x ∃y Student(x) ∧ Quiz (y) ∧ Got100 (x, y) “Có một số sinh viên nhận được 100 trên một số câu"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q006_5217",
+        "type": "single_choice",
+        "question": {
+          "text": "đố.” \u0001",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "D",
+            "text": "∀x ∀y (Student(x) ∧ Quiz (y)) → Got100 (x, y) “Mọi sinh viên nhận được 100 trên mọi câu đố.”"
+          },
+          {
+            "id": "A",
+            "text": "Tìm kiếm rộng (BFS) và Tìm kiếm sâu dần (IDS) thỏa mãn tính hoàn chỉnh"
+          },
+          {
+            "id": "B",
+            "text": "Tìm kiếm rộng (BFS) thỏa mãn tính hoàn chỉnh"
+          },
+          {
+            "id": "C",
+            "text": "Tìm kiếm rộng (BFS) và Tìm kiếm sâu (DFS) thỏa mãn tính hoàn chỉnh"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q007_c008",
+        "type": "single_choice",
+        "question": {
+          "text": "4 Giải thích  BFS (Breadth–First Search) luôn khám phá theo lớp độ sâu tăng dần và do đó sẽ tìm được lời giải nếu tồn tại trong không gian trạng thái hữu hạn ⇒ hoàn chỉnh.  IDS (Iterative Deepening Search) lặp lại DFS với giới hạn độ sâu tăng dần, vì thế cũng đảm bảo khám phá mọi nút ở hoặc dưới độ sâu lời giải ⇒ hoàn chỉnh.  DFS (Depth–First Search) có thể sa lầy vào một nhánh vô tận và không quay lại để kiểm tra các nhánh khác ⇒ không hoàn chỉnh. Đáp án đúng: A Câu 7: Cho dãy ký tự ban đầu ABAB, có thể chuyển đổi dãy bằng cách thay thế AB → CB, BA → C, BB → B, Cx → x (với x là một dãy ký tự khác rỗng). Đích là dãy ký tự B. Ước lượng chi phí từ dãy hiện tại đến đích bằng độ dài hiện tại trừ 1. Hỏi lời giải nào sẽ thu được khi áp dụng thuật toán Greedy best-first với hàm đánh giá g(n) là chi phí từ nút hiện tại đến đích?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "ABAB → ABCE → ABE → CEB → EB → B"
+          },
+          {
+            "id": "B",
+            "text": "ABAB → ACB → AB → CB → B"
+          },
+          {
+            "id": "C",
+            "text": "ABAB → ABCE → CEBE → CBE → EB → B"
+          },
+          {
+            "id": "D",
+            "text": "ABAB → CEAB → CAB → BCE → BE → B"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q008_59d2",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích  Greedy best-first luôn chọn nút con có chi phí g(n) nhỏ nhất (tức độ dài dãy càng ngắn càng tốt).  Từ ABAB (độ dài 4, chi phí 3) sinh hai nhánh: – Thay AB → CB: CBAB (độ dài 4, chi phí 3). – Thay BA → C: ACB (độ dài 3, chi phí 2).  Chọn ACB tiếp (chi phí 2 nhỏ hơn 3): C x→x AB→CB C x→x ACB −−−−→ AB −−−−−−→ CB −−−−→ B  Do đó đường đi ứng với phương án B là: ABAB → ACB → AB → CB → B. Đáp án đúng: B 5 Câu 8: Đại dịch Covid-19 là một đại dịch bệnh truyền nhiễm với tác nhân là virus SARS-CoV-2 và các biến thể của nó, khởi nguồn vào tháng 12 năm 2019. Tại sao vai trò của Trí tuệ nhân tạo mờ nhạt trong việc giúp con người phát hiện và chống chọi với đại dịch này?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bác sĩ Lý Văn Lượng, người phát hiện và cảnh báo Covid-19, không phải là người làm về Trí tuệ"
+          },
+          {
+            "id": "B",
+            "text": "Các phương pháp của Trí tuệ nhân tạo cần đến kinh nghiệm, tri thức của con người, hoặc các mẫu"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q009_9fd3",
+        "type": "single_choice",
+        "question": {
+          "text": "dữ liệu tin cậy ... để phân tích, xử lý, là những thứ chưa có trong thời điểm đầu dịch.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "Trí tuệ nhân tạo có thể làm mọi thứ, trừ trường hợp này."
+          },
+          {
+            "id": "D",
+            "text": "Trí tuệ nhân tạo chưa đủ khả năng xử lý vấn đề có quy mô toàn cầu như vậy."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q010_0f2d",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích  Các phương pháp AI, nhất là học máy, phụ thuộc vào tập dữ liệu lớn và đa dạng để huấn luyện mô hình—những dữ liệu chính xác về triệu chứng, xét nghiệm, di truyền virus. . . chưa kịp thu thập trong giai đoạn đầu.  Việc phát hiện và cảnh báo ban đầu chủ yếu dựa vào quan sát lâm sàng, kinh nghiệm của bác sĩ (như Bác sĩ Lý Văn Lượng), chưa có cơ sở dữ liệu đầy đủ để AI áp dụng.  Các đáp án A, C, D đều miêu tả không đúng: – A chỉ nêu tên người mà không giải thích tính chất của AI. – C và D là những khẳng định quá chung chung hoặc sai lệch về năng lực AI. Đáp án đúng: B Câu 9: Cho tập các phần tử trên không gian hai chiều, đã được gán nhãn vào lớp C1 hoặc C2 : C1 = {(1, 1), (2, 6), (3, 4), (4, 2), (4, 8), (5, 5), (7, 1), (7, 4)}, C2 = {(5, 4), (6, 3), (6, 4), (6, 6), (6, 7), (7, 3), (8, 8)}. Thực hiện phân lớp bằng phương pháp k-láng giềng gần (k-NN) với khoảng cách Euclid. Hỏi phần tử (4, 4) được phân vào lớp nào khi xét k = 3, k = 9, k = 15?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "C1, C1, C1"
+          },
+          {
+            "id": "B",
+            "text": "C1, C1, C2"
+          },
+          {
+            "id": "C",
+            "text": "C2, C2, C1"
+          },
+          {
+            "id": "D",
+            "text": "C1, C2, C2"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q011_e20f",
+        "type": "single_choice",
+        "question": {
+          "text": "6 Giải thích Tính khoảng cách từ (4, 4) đến từng điểm rồi xếp tăng dần: Điểm Khoảng cách (3, 4) 1 (5, 4) 1 (5, 5) 2 (4, 2) 4 (6, 4) 4 (6, 3) 5 (2, 6) 8 (6, 6) 8 (7, 4) 9 (7, 3) 10 (6, 7) 13 (4, 8) 16 (1, 1) 18 18 (7, 1) 32 (8, 8) 2 Lớp C1 C2 C1 C1 C2 C2 C1 C2 C1 C2 C2 C1 C1 C1 C2  Với k = 3: 3 láng giềng gần nhất là (3, 4), (5, 4), (5, 5) ⇒ hai C , một C ⇒ phân vào C .  Với k = 9: 9 láng giềng gần nhất chứa 5 điểm C và 4 điểm C ⇒ phân vào C .  Với k = 15: 15 láng giềng gần nhất bao gồm cả 8 điểm C và 7 điểm C ⇒ phân vào C . 1 1 2 2 1 1 1 2 Đáp án đúng: A Câu 10: Cho tập biểu thức \b Σ = (a ∨ b) ∧ c, b → (a ∨ d), (a ∧ c) → f, (c ∧ f ) → (h ∧ k) . Hãy cho biết trong các tập biểu thức dưới đây, tập biểu thức nào tương đương với Σ?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "{ a, b, c, b → d, b → a, a ∧ c → f, c ∧ f → h, c ∧ f → k}"
+          },
+          {
+            "id": "B",
+            "text": "{ a ∨ b, c, ¬b ∨ a ∨ d, ¬a ∨ ¬c ∨ f, ¬c ∨ ¬f ∨ h, ¬c ∨ ¬f ∨ k}"
+          },
+          {
+            "id": "C",
+            "text": "{ c ∨ a ∨ b, ¬b ∨ a ∨ d, ¬a ∨ ¬c ∨ f, ¬c ∨ ¬f ∨ h, ¬c ∨ ¬f ∨ k}"
+          },
+          {
+            "id": "D",
+            "text": "{ a, b, c → d, ¬b ∨ a ∨ d, ¬c ∨ ¬f ∨ h, ¬c ∨ ¬f ∨ k}"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q012_91e5",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích  Để viết Σ ở dạng CNF ta tách mỗi công thức: (a ∨ b) ∧ c ≡ { a ∨ b, c}, b → (a ∨ d) ≡ {¬b ∨ a ∨ d}, (a ∧ c) → f ≡ {¬a ∨ ¬c ∨ f }, (c ∧ f ) → (h ∧ k) ≡ {¬c ∨ ¬f ∨ h, ¬c ∨ ¬f ∨ k}. 7 1  Kết hợp lại ta được đúng sáu clause trong đáp án B.  Các tập A, C, D đều khác thiếu hoặc biến đổi sai một trong các clause trên. Đáp án đúng: B Câu 11: \u0001 Cho biểu thức ∀x ∃y : Like(x, y) . Hỏi biểu thức nào dưới đây tương đương với nó? \u0001",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "∃y ∀x : Like(x, y)"
+          },
+          {
+            "id": "B",
+            "text": "∀y ∃x : Like(x, y)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q013_38fa",
+        "type": "single_choice",
+        "question": {
+          "text": "\u0001",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "¬ ∀x (∃y : ¬Like(x, y) )"
+          },
+          {
+            "id": "D",
+            "text": "¬ ∃x (∀y : ¬Like(x, y))"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q014_fc07",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Áp dụng luật De Morgan cho lượng từ và phủ định: \u0001 ∀x ∃y P (x, y) ≡ ¬∃x ¬ ∃y P (x, y) ≡ ¬∃x ∀y ¬P (x, y). \u0001 Do đó biểu thức tương đương là ¬ ∃x ∀y : ¬Like(x, y) . Đáp án đúng: D Câu 12: Hãy chọn phương án đúng nhất về các cấu trúc được bổ sung thêm cho cú pháp của logic vị từ so với logic mệnh đề:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Ví dụ, biến, hàm, hằng, diễn dịch"
+          },
+          {
+            "id": "B",
+            "text": "Vị từ, biến, hằng, hàm, lượng tử"
+          },
+          {
+            "id": "C",
+            "text": "Vị từ, biến, lượng từ, hằng, phép gán trị"
+          },
+          {
+            "id": "D",
+            "text": "Tập thành tố, vị từ, lượng tử, biến, hằng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q015_21a4",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích  Logic mệnh đề chỉ dùng biến và các phép kết hợp (AND, OR, NOT, \u0019,. . . ).  Logic vị từ mở rộng cú pháp bằng cách thêm: – Vị từ (predicates) để biểu diễn quan hệ giữa các đối tượng. – Hằng (constants) để chỉ các đối tượng cụ thể. – Biến (variables) làm tham số cho vị từ. – Hàm (functions) để tạo đối tượng từ đối tượng. – Lượng tử (quantifiers) ∀, ∃ để diễn đạt “với mọi” và “tồn tại”.  Các cấu trúc như “diễn dịch”, “phép gán trị”, “ví dụ” hay “tập thành tố” không phải thành phần cú pháp cơ bản của logic vị từ. Đáp án đúng: B 8 Câu 13: Cho không gian trạng thái của bài toán có các tham số:  b là hệ số phân nhánh tối đa của cây tìm kiếm;  d là độ sâu của lời giải có chi phí thấp nhất (giả sử chi phí của mỗi lần chuyển trạng thái là 1);  m là độ sâu tối đa của không gian trạng thái (giới hạn độ sâu của cây). Độ phức tạp về bộ nhớ của các phương pháp tìm kiếm Tìm kiếm rộng (BFS), Tìm kiếm sâu (DFS) và Tìm kiếm sâu dần (IDS) theo thứ tự tương ứng là:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "O(bm ), O(d + 1), O(bd)"
+          },
+          {
+            "id": "B",
+            "text": "O(bd+1 ), O(bd), O(bdm)"
+          },
+          {
+            "id": "C",
+            "text": "O(bd), O(bd+1 ), O(bdm)"
+          },
+          {
+            "id": "D",
+            "text": "O(bd+1 ), O(bd), O(bd m)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q016_9d67",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích  BFS phải lưu toàn bộ frontier đến chiều sâu tối đa m ⇒ không gian lưu trữ O(b ).  DFS chỉ lưu ngăn xếp đường dẫn từ gốc xuống đến độ sâu d (nghĩa là d + 1 nút) ⇒ O(d + 1).  IDS là lặp DFS đến độ sâu d, nên bộ nhớ cũng chỉ dùng cho đệ quy độ sâu d và các nút con tại m mỗi mức ⇒ O(bd). Đáp án đúng: A Câu 14: Phương pháp tìm kiếm A* thỏa mãn tính hoàn chỉnh trong trường hợp:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Luôn thỏa mãn tính hoàn chỉnh."
+          },
+          {
+            "id": "B",
+            "text": "Khi không gian trạng thái là hữu hạn."
+          },
+          {
+            "id": "C",
+            "text": "Khi không gian trạng thái là hữu hạn và có cơ chế tránh việc xét (lặp) lại các trạng thái."
+          },
+          {
+            "id": "D",
+            "text": "Khi có cơ chế tránh việc xét (lặp) lại các trạng thái."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q017_eebe",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích A* chỉ đảm bảo tìm được lời giải nếu:  Không gian trạng thái không quá lớn (tốt nhất là hữu hạn), và  Thuật toán có thể phát hiện và loại bỏ các trạng thái đã xét trước (duplicate detection) để tránh lặp vô hạn trên cùng một đường đi. Nếu chỉ có một trong hai điều kiện thì A* vẫn có thể không dừng hoặc không tìm ra lời giải đúng. Đáp án đúng: C 9 Câu 15: Khái niệm “Trí tuệ nhân tạo” được chính thức thừa nhận tại một hội nghị diễn ra vào năm nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "1943"
+          },
+          {
+            "id": "B",
+            "text": "1956"
+          },
+          {
+            "id": "C",
+            "text": "1965"
+          },
+          {
+            "id": "D",
+            "text": "1960"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q018_0bbb",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Khái niệm “Artificial Intelligence” lần đầu được đề xuất bởi John McCarthy cùng các đồng sự tại Hội nghị Dartmouth tổ chức vào mùa hè năm 1956. Hội nghị này được coi là cột mốc khai sinh lĩnh vực Trí tuệ nhân tạo. Đáp án đúng: B Câu 16: Hãy chọn phương án phù hợp nhất về Tác tử phản xạ đơn giản:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tác tử chọn hành động đem lại lợi ích lớn hơn."
+          },
+          {
+            "id": "B",
+            "text": "Tác tử hành động theo một quy tắc có điều kiện phù hợp với trạng thái hiện thời của môi trường."
+          },
+          {
+            "id": "C",
+            "text": "Tác tử chỉ ghi một tập các mục tiêu và chọn hành động cho phép đạt được đến mục tiêu."
+          },
+          {
+            "id": "D",
+            "text": "Tác tử sử dụng một mô hình nội bộ để giám sát trạng thái hiện tại của môi trường."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q019_0302",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Tác tử phản xạ đơn giản hoạt động dựa trên các quy tắc điều kiện–hành động (condition–action rules), nghĩa là với mỗi trạng thái quan sát được, nó tra bảng quy tắc và thực thi hành động tương ứng ngay lập tức, mà không dùng nội bộ quá khứ hay mục tiêu phức tạp. Đáp án đúng: B Câu 17: Hãy cho biết mệnh đề thuộc logic vị từ, trong trường hợp nào thì ta có nghĩa (đúng hoặc sai) của F ?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mọi biến có trong F đều được gán giá trị hằng."
+          },
+          {
+            "id": "B",
+            "text": "Biểu thức F đã được biến đổi về một dạng chuẩn nào đó."
+          },
+          {
+            "id": "C",
+            "text": "Mọi biến có trong F đều được gán giá trị hằng và có diễn dịch xác định cho các hằng số."
+          },
+          {
+            "id": "D",
+            "text": "Biểu thức F không chứa lượng từ."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q020_a63e",
+        "type": "single_choice",
+        "question": {
+          "text": "10 Giải thích Một công thức trong logic vị từ chỉ có thể được đánh giá là đúng hoặc sai khi nó không còn biến tự do tức là biến đã trở thành ground term hoặc đã bị ràng buộc bởi lượng từ (∀ hoặc ∃).  Đáp án A chỉ gán hằng nhưng chưa có lượng từ  Đáp án B và D không đảm bảo loại bỏ hết biến tự do Đáp án đúng: C Câu 18: Những lĩnh vực khoa học nào đóng vai trò nền tảng của trí tuệ nhân tạo? (chọn phương án trả lời phù hợp nhất)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Toán học (biểu diễn hình thức, lý thuyết tính toán, tối ưu), Vật lý (vật chất, tính toán chuyển"
+          },
+          {
+            "id": "B",
+            "text": "Logic (chẩn lý, suy luận), Toán học (biểu diễn hình thức, lý thuyết tính toán, tối ưu), Kinh tế (hàm"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q021_4908",
+        "type": "single_choice",
+        "question": {
+          "text": "tiện ích, lý thuyết ra quyết định)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "Toán học (biểu diễn hình thức, lý thuyết tính toán, tối ưu), Vật lý (vật chất, tính toán chuyển"
+          },
+          {
+            "id": "D",
+            "text": "Logic (chẩn lý, suy luận), Toán học (biểu diễn hình thức, lý thuyết tính toán, tối ưu), Vật lý (vật"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q022_b18e",
+        "type": "single_choice",
+        "question": {
+          "text": "chất, tính toán chuyển động) Giải thích Trí tuệ nhân tạo phát triển trên ba trụ cột chính:  Logic cho suy luận và chứng minh.  Toán học (tối ưu, đại số tuyến tính, lý thuyết tính toán) cho mô hình hóa và phân tích.  Kinh tế (lý thuyết quyết định, hàm tiện ích) để đánh giá và lựa chọn hành động. Đáp án đúng: B Câu 19: Một công ty viễn thông muốn nhóm các khách hàng trong cơ sở dữ liệu thành các nhóm phân biệt để đưa ra các dịch vụ phù hợp cho mỗi nhóm. Bài toán được xếp vào loại gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chuyển đổi dữ liệu (Data transformation)"
+          },
+          {
+            "id": "B",
+            "text": "Biểu diễn tri thức (Knowledge representation)"
+          },
+          {
+            "id": "C",
+            "text": "Học có giám sát (Supervised learning)"
+          },
+          {
+            "id": "D",
+            "text": "Học không giám sát (Unsupervised learning)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q023_b723",
+        "type": "single_choice",
+        "question": {
+          "text": "11 Giải thích Phân nhóm khách hàng dựa trên đặc trưng của họ mà không có nhãn trước là bài toán phân cụm, thuộc về học không giám sát. Các phương án khác:  Học có giám sát cần tập dữ liệu đã gán nhãn.  Học bán giám sát chỉ khả thi khi có một số nhãn ban đầu.  Học tăng cường liên quan đến tác nhân và phần thưởng, không phù hợp ở đây.  Chuyển đổi dữ liệu và biểu diễn tri thức là tiền xử lý hoặc lưu trữ, không trực tiếp “nhóm” khách hàng. Đáp án đúng: D Câu 20: Giải quyết vấn đề bằng tìm kiếm trên không gian trạng thái của bài toán là:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tìm chuỗi các trạng thái mà không quay lại trạng thái đã xét"
+          },
+          {
+            "id": "B",
+            "text": "Tìm chuỗi các trạng thái cho phép đạt đến hành động mong muốn"
+          },
+          {
+            "id": "C",
+            "text": "Tìm chuỗi các hành động cho phép đạt đến trạng thái mong muốn"
+          },
+          {
+            "id": "D",
+            "text": "Tìm chuỗi các hành động mà không thực hiện lại hành động đã áp dụng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q024_d968",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Khi giải quyết vấn đề bằng tìm kiếm trong không gian trạng thái, ta quan tâm đến việc xác định một chuỗi hành động từ trạng thái ban đầu đến trạng thái mục tiêu. Mỗi hành động chuyển đổi trạng thái hiện tại theo quy tắc của bài toán, và tìm kiếm trả về dãy hành động đó. Đáp án đúng: C Câu 21: Cho dãy ký tự ban đầu ACABEB, có thể chuyển đổi dãy bằng cách thay thế AB → BA, BB → C, CA → E, Ex → x (x là một dãy ký tự khác rỗng). Đích là ký tự E. Hỏi số lần chuyển đổi tối thiểu để biến dãy ban đầu thành E là bao nhiêu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "10"
+          },
+          {
+            "id": "B",
+            "text": "9"
+          },
+          {
+            "id": "C",
+            "text": "7"
+          },
+          {
+            "id": "D",
+            "text": "8"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q025_3192",
+        "type": "single_choice",
+        "question": {
+          "text": "12 Giải thích Một cách ngắn nhất (7 bước) từ ACABEB đến E như sau: CA→E 1. ACABEB −−−−−→ AEBEB, Ex→x 2. AEBEB −−−−−→ ABEB \u0001 loại EBEB , AB→BA 3. ABEB −−−−−−→ BAEB, Ex→x 4. BAEB −−−−−→ BAB \u0001 loại EB , AB→BA 5. BAB −−−−−−→ BBA, BB→C 6. BBA −−−−−→ CA, CA→E 7. CA −−−−−→ E. Mỗi mũi tên là một lần thay thế, tổng cộng 7 lần. Đáp án đúng: C Câu 22: Giải thuật tìm kiếm nào sau đây là hoàn chỉnh?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Các giải thuật tìm kiếm cục bộ"
+          },
+          {
+            "id": "B",
+            "text": "Tìm kiếm sâu dần (Iterative deepening search)"
+          },
+          {
+            "id": "C",
+            "text": "Tìm kiếm giới hạn độ sâu (Depth–limited search)"
+          },
+          {
+            "id": "D",
+            "text": "Tìm kiếm theo chiều sâu (Depth–first search)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q026_3fa4",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Một thuật toán tìm kiếm được gọi là hoàn chỉnh nếu nó luôn tìm ra lời giải khi có tồn tại.  Iterative Deepening Search (IDS) kết hợp ưu điểm của DFS và BFS: lặp lại DFS với giới hạn độ sâu tăng dần, đảm bảo khám phá mọi nút ở tầng thấp trước khi lên tầng cao ⇒ hoàn chỉnh.  Depth–limited Search chỉ tìm đến một độ sâu cố định và có thể bỏ qua lời giải ở sâu hơn ⇒ không hoàn chỉnh nếu lời giải sâu hơn giới hạn.  Depth–first Search có thể sa lầy vào một nhánh vô tận mà không quay lại ⇒ không hoàn chỉnh.  Local search chỉ di chuyển trong không gian trạng thái theo heuristic và không đảm bảo khám phá toàn diện ⇒ không hoàn chỉnh. Đáp án đúng: B 13 Câu 23: Cho tam giác ABC, ký hiệu A, B, C là các góc tương ứng tại các đỉnh của tam giác, ký hiệu a là cạnh BC, b là cạnh AC, và c là cạnh AB. (Ký hiệu x ∧ y ∧ z → t là khi biết x, biết y, biết z thì có thể tính được t. Tương tự, ký hiệu x ∧ y → t là khi biết x, biết y thì có thể tính được t.) Cho cơ sở tri thức về tam giác ABC như sau: \u001a \u001b a ∧ b ∧ C → c, B ∧ C → A, b ∧ c ∧ A → a, C ∧ A → B, Σ= c ∧ a ∧ B → b, a ∧ b ∧ c → C, A ∧ B → C, a∧b∧c → B Hãy cho biết với tập giả thiết (GT) và kết luận (KL) như ở dưới đây, bài toán nào giải được khi áp dụng cơ sở tri thức Σ ?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "GT = {a, A, B, C},"
+          },
+          {
+            "id": "B",
+            "text": "GT = {a, B, b},"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q027_4874",
+        "type": "single_choice",
+        "question": {
+          "text": "KL = {c}",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "GT = {a, B, C},"
+          },
+          {
+            "id": "D",
+            "text": "GT = {a, A, B, b},"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q028_f3a9",
+        "type": "single_choice",
+        "question": {
+          "text": "KL = {c} Giải thích Từ GT = {a, A, B, b}: A∧B → C =⇒ C, a∧b∧C → c =⇒ c. sau đó Vậy với GT này ta có thể suy ra c, tức chứng minh được KL. Đáp án đúng: D Câu 24: Cho biểu thức \u0001 ¬P (x) ∧ Q(x, y) → R(x). Khi chuyển về dạng chuẩn hội (CNF) sẽ được kết quả nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "¬P (x) ∨ ¬Q(x, y) ∨ R(x)"
+          },
+          {
+            "id": "B",
+            "text": "¬P (x) ∧ ¬Q(x, y) ∨ R(x)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q029_4d02",
+        "type": "single_choice",
+        "question": {
+          "text": "\u0001",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "P (x) ∧ ¬Q(x, y) ∨ R(x)"
+          },
+          {
+            "id": "D",
+            "text": "P (x) ∨ ¬Q(x, y) ∨ R(x)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q030_4088",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Áp dụng (A → B) ≡ ¬A ∨ B, với A ≡ ¬P (x) ∧ Q(x, y), B ≡ R(x). Ta có \u0001 ¬ ¬P ∧ Q ∨ R ≡ \u0001 ¬¬P ∨ ¬Q ∨ R ≡ P ∨ ¬Q ∨ R, đây là một clause, tức dạng CNF duy nhất P (x) ∨ ¬Q(x, y) ∨ R(x). Đáp án đúng: D 14 Câu 25: Hành vi của tác tử có thể được mô tả tốt nhất bằng:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chuỗi các cảm nhận"
+          },
+          {
+            "id": "B",
+            "text": "Bộ phận cảm biến và bộ phận hành động"
+          },
+          {
+            "id": "C",
+            "text": "Hàm tác tử"
+          },
+          {
+            "id": "D",
+            "text": "Môi trường mà tác tử đang thực hiện"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q031_311b",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Hàm tác tử (agent function) là ánh xạ từ tập các chuỗi cảm nhận (percepts) sang tập các hành động, chính là mô tả đầy đủ và chính xác nhất về hành vi của tác tử. Các lựa chọn còn lại chỉ nêu thành phần hoặc môi trường, không biểu diễn nguyên tắc ra quyết định. Đáp án đúng: C Câu 26: Phát biểu nào không chính xác về Overfitting (quá khớp)?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Vấn đề Overfitting ảnh hưởng đến khả năng khái quát hóa (generalization) của hệ thống."
+          },
+          {
+            "id": "B",
+            "text": "Hàm A được gọi là Overfitting nếu tồn tại hàm g có thể tối ưu hơn A đối với tập thử nghiệm, nhưng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q032_ebb9",
+        "type": "single_choice",
+        "question": {
+          "text": "g tốt hơn A đối với tập huấn luyện.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "Hàm A được gọi là Overfitting nếu tồn tại hàm g mà g có thể tối ưu hơn A đối với tập huấn luyện,"
+          },
+          {
+            "id": "D",
+            "text": "Nguyên nhân gây ra Overfitting do hàm g quá phức tạp, hoặc, có nhiễu trong tập huấn luyện (do"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q033_6d37",
+        "type": "single_choice",
+        "question": {
+          "text": "quá trình thu thập/xây dựng tập dữ liệu), hoặc số lượng các ví dụ quá nhỏ, không đại diện cho toàn bộ tập (phân bố) của các ví dụ của bài toán học. Giải thích  Overfitting là hiện tượng mô hình hoạt động quá tốt trên tập huấn luyện nhưng kém khả năng khái quát trên dữ liệu mới.  Đáp án B sai vì nó mô tả ngược: nói “g tốt hơn trên tập thử nghiệm nhưng lại thua trên huấn luyện”, không phản ánh khái niệm Overfitting. Đáp án đúng: B Câu 27: Cho diễn dịch I với I(p) = 0, I(q) = 1, I(r) = 1, I(s) = 0. Cho hai công thức F = (p ∨ q) ∧ r \u0001 → (r ∧ s), \u0001 \u0001 G = (p ∧ r) → s ∧ (q ∧ r) → s . Hãy cho biết phát biểu nào dưới đây không đúng? 15",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "F = G"
+          },
+          {
+            "id": "B",
+            "text": "F |= G"
+          },
+          {
+            "id": "C",
+            "text": "Cả hai công thức F và G đều không đúng với diễn dịch I."
+          },
+          {
+            "id": "D",
+            "text": "Cả hai công thức F và G đều đúng với diễn dịch I."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q034_6e6d",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Dưới diễn dịch I: p ∨ q = 0 ∨ 1 = 1, (p ∨ q) ∧ r = 1 ∧ 1 = 1, p ∧ r = 0 ∧ 1 = 0 ⇒ (p ∧ r) → s = 1, r ∧ s = 1 ∧ 0 = 0 =⇒ F = 1 → 0 = 0. q ∧ r = 1 ∧ 1 = 1 ⇒ (q ∧ r) → s = 0 =⇒ G = 1 → 0 = 0. - A: ta thấy F và G đều có giá trị 0 tại diễn dịch I, nên A đúng. - C và D: ta thấy F và G đều không đúng (0) tại I, nên C đúng và D sai. - Về F |= G: không có mô hình nào thỏa F = 1 nhưng G = 0, nên B cũng đúng. Đáp án đúng: D Câu 28: Cho dãy ký tự ban đầu ACABEB, có thể chuyển đổi dãy bằng cách thay thế AB → BA, BB → C, CA → E, Ex → x (x là một dãy ký tự). Cần chuyển đổi về dãy ký tự đích là E. Hãy cho biết trong các hành động thay thế đầu tiên, hành động nào sẽ không đem lại kết quả (các lần thay thế tiếp theo của đường đi này không thể đưa về đích)?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thay thế CA bằng E"
+          },
+          {
+            "id": "B",
+            "text": "Thay thế AB bằng BA"
+          },
+          {
+            "id": "C",
+            "text": "Thay thế Ex bằng x (với x là một dãy ký tự)"
+          },
+          {
+            "id": "D",
+            "text": "Thay thế BB bằng C"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q035_8c37",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Trên đường đi tối ưu từ ACABEB đến E, ta cần từng bước tạo hoặc bảo toàn ký tự E cuối cùng mà không thể mất nó:  Nếu thay CA → E, ta tạo ra một ký tự E – tiến gần đích.  Nếu thay AB → BA hay BB → C, ta chỉ hoán vị hoặc rút gọn “B” mà không phá hủy E.  Nhưng nếu ngay bước đầu ta áp dụng Ey → y, tức là xóa ký tự E (cùng dãy y), thì ta sẽ không còn E nào để hướng tới đích và không thể phục hồi ký tự này về sau. Vì vậy lựa chọn của phép thay Ey → y sẽ ngăn cản mọi đường đi tiếp theo đạt tới E. Đáp án đúng: C 16 Câu 29: Robot lau nhà chứng tỏ điều gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Máy móc có thể hành động (thông minh) như con người"
+          },
+          {
+            "id": "B",
+            "text": "Máy móc có thể suy nghĩ (thông minh) như con người"
+          },
+          {
+            "id": "C",
+            "text": "Máy móc có thể hành động một cách hợp lý"
+          },
+          {
+            "id": "D",
+            "text": "Máy móc có thể suy nghĩ một cách hợp lý"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q036_d9aa",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Robot lau nhà tự động lựa chọn hành động quét, lau dọn dựa trên cảm nhận môi trường (vị trí chướng ngại, mức độ bẩn,. . . ) với mục tiêu tối ưu hiệu quả làm sạch—đó chính là hành động một cách hợp lý theo định nghĩa của tác tử hợp lý (rational agent). Đáp án đúng: C Câu 30: Hãy chọn phương án đúng biểu diễn câu “Nam có ít nhất hai chị gái” bằng logic vị từ: \u0001",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "∃x, y ChiGai(x, Nam) ∧ ChiGai(y, Nam) → (x ̸= y)"
+          },
+          {
+            "id": "B",
+            "text": "∀x, y ChiGai(x, Nam) ∧ ChiGai(y, Nam) ∧ (x ̸= y)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q037_ecb3",
+        "type": "single_choice",
+        "question": {
+          "text": "\u0001",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "∃x, y ChiGai(x, Nam) ∧ ChiGai(y, Nam) ∧ (x ̸= y)"
+          },
+          {
+            "id": "D",
+            "text": "∀x, y ChiGai(x, Nam) ∧ ChiGai(y, Nam) → (x ̸= y)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q038_5455",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Câu “Nam có ít nhất hai chị gái” yêu cầu tồn tại hai cá thể khác nhau x và y sao cho cả hai đều là chị gái của Nam. - Dạng đúng phải dùng ∃x, y và phép và (∧) để đảm bảo cả hai điều kiện cùng đúng, đồng thời x ̸= y để đảm bảo không trùng. - Các lựa chọn dùng → (implication) hoặc ∀ không diễn đạt “ít nhất hai” mà dễ thành “mọi cặp” hoặc “nếu có thì. . . ” sai ngữ nghĩa. Đáp án đúng: C Câu 31: Phương pháp cắt tỉa α–β trong bài toán trò chơi đối kháng là:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "MAX bỏ qua những giá trị lớn hơn α, MIN bỏ qua những giá trị nhỏ hơn β."
+          },
+          {
+            "id": "B",
+            "text": "MAX bỏ qua những giá trị nhỏ hơn α, MIN bỏ qua những giá trị lớn hơn β."
+          },
+          {
+            "id": "C",
+            "text": "Phương pháp xác định bằng việc xét giá trị MIN/MAX đối với mỗi nút trong cây biểu diễn trò chơi."
+          },
+          {
+            "id": "D",
+            "text": "Chiến lược của MAX bị ảnh hưởng (phụ thuộc) vào các nước đi của MIN và ngược lại."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q039_562d",
+        "type": "single_choice",
+        "question": {
+          "text": "17 Giải thích Trong cắt tỉa α–β:  α là ngưỡng dưới (lower bound) mà MAX có thể đảm bảo; bất cứ nhánh nào trả về giá trị nhỏ hơn α ở nút MAX đều bị loại (prune).  β là ngưỡng trên (upper bound) mà MIN có thể đảm bảo; bất cứ nhánh nào trả về giá trị lớn hơn β ở nút MIN đều bị loại. Như vậy MAX bỏ qua các giá trị nhỏ hơn α, MIN bỏ qua các giá trị lớn hơn β. Đáp án đúng: B Câu 32: Các tiêu chí đánh giá một phương pháp tìm kiếm gồm có:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tính hoàn chỉnh, độ phức tạp về thời gian, độ phức tạp về bộ nhớ, tính dừng"
+          },
+          {
+            "id": "B",
+            "text": "Tính hoàn chỉnh, tính tối ưu, tính dừng, độ phức tạp về thời gian"
+          },
+          {
+            "id": "C",
+            "text": "Tính hoàn chỉnh, độ phức tạp về thời gian, độ phức tạp về bộ nhớ, tính tối ưu"
+          },
+          {
+            "id": "D",
+            "text": "Tính hoàn chỉnh, tính tối ưu, tính dừng, độ phức tạp về bộ nhớ"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q040_4151",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thích Bốn tiêu chí chính để đánh giá một phương pháp tìm kiếm là:  Tính hoàn chỉnh (Completeness): luôn tìm được lời giải nếu có tồn tại.  Tính tối ưu (Optimality): tìm được lời giải có chi phí tốt nhất.  Độ phức tạp về thời gian (Time Complexity): số nút được sinh hoặc thao tác cần thiết.  Độ phức tạp về bộ nhớ (Space Complexity): dung lượng lưu trữ cần cho quá trình tìm kiếm. Đáp án đúng: C Câu 33: Cho các biểu thức F = (p → q) ∧ (q → p), G = (¬p ∧ ¬q) ∨ (p ∧ q). Hãy cho biết phát biểu nào dưới đây là chính xác?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "F ở dạng chuẩn hội (CNF)"
+          },
+          {
+            "id": "B",
+            "text": "F ở dạng chuẩn tuyển (DNF)"
+          },
+          {
+            "id": "C",
+            "text": "F và G tương đương"
+          },
+          {
+            "id": "D",
+            "text": "G ở dạng chuẩn hội (CNF)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q041_7ec8",
+        "type": "single_choice",
+        "question": {
+          "text": "18 Giải thích  F = (p → q) ∧ (q → p) chưa ở dạng một tích các clause, phải có bước chuyển đổi thành F = (¬p ∨ q) ∧ (¬q ∨ p) ⇒ chưa ở dạng CNF.  G = (¬p ∧ ¬q) ∨ (p ∧ q) đã ở dạng một tổng của tích ⇒ là DNF.  Cả hai đều đúng khi p và q cùng giá trị (0,0 hoặc 1,1) và sai khi khác nhau ⇒ F ≡ G. P 0 0 1 1 Q 0 1 0 1 F = (P → Q) ∧ (Q → P ) G = (¬P ∧ ¬Q) ∨ (P ∧ Q) 1 1 0 0 0 0 1 1 Đáp án đúng: C Câu 34: Phát biểu nào dưới đây không đúng với bài toán Thỏa mãn Ràng buộc (CSP)?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bài toán lập thời khóa biểu là một ví dụ về bài toán Thỏa mãn Ràng buộc."
+          },
+          {
+            "id": "B",
+            "text": "Phương pháp tìm kiếm quay lui giống như tìm kiếm theo chiều rộng (BFS) với mỗi nút tương ứng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q042_3d9b",
+        "type": "single_choice",
+        "question": {
+          "text": "với một phép gán giá trị cho một biến.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "Phương pháp tìm kiếm quay lui khác với phương pháp kiểm thử, chỉ gán giá trị cho một biến tại"
+          },
+          {
+            "id": "D",
+            "text": "Một lời giải (solution) của bài toán Thỏa mãn Ràng buộc là một phép gán đầy đủ các giá trị của"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q043_cebb",
+        "type": "single_choice",
+        "question": {
+          "text": "các biến sao cho thoả mãn tất cả các ràng buộc. Giải thích  (A) đúng: lập thời khóa biểu là ví dụ kinh điển của CSP.  (C) đúng: backtracking gán từng biến một, khác với phương pháp generate-and-test (kiểm thử lũy tiến) tạo toàn bộ gán trước rồi kiểm tra.  (D) đúng: solution phải gán đầy đủ và thỏa hết ràng buộc.  (B) sai, vì backtracking thực chất là DFS (gán đến giới hạn rồi quay lui), không phải BFS. Đáp án đúng: B Câu 35: Viết câu sau dưới dạng logic vị từ: “For every a, if a is a poet, then a is a writer.” \u0001 \u0001",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "∃x : P oet(x) → W riter(x) ∧ ∀x : P oet(x) → W riter(x)"
+          },
+          {
+            "id": "B",
+            "text": "∀x : P oet(x) → W riter(x)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q044_eab3",
+        "type": "single_choice",
+        "question": {
+          "text": "\u0001 \u0001",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "∃x : P oet(x) → W riter(x) ∨ ∀x : P oet(x) → W riter(x)"
+          },
+          {
+            "id": "D",
+            "text": "∃x : P oet(x) → W riter(x)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q045_2da5",
+        "type": "single_choice",
+        "question": {
+          "text": "19 Giải thích  B đúng vì câu gốc nói “với mỗi a (∀x), nếu a là poet thì a là writer” chính là ∀x (P oet(x) → W riter(x)).  A sai vì buộc cả “tồn tại” và “mọi” cùng lúc (∃ thừa so với ∀).  C sai vì nối “∃” và “∀” bằng “∨” chẳng diễn đạt được “mọi a . . . ”.  D sai vì chỉ yêu cầu có ít nhất một a thỏa, trong khi câu gốc là với mọi a. Đáp án đúng: B Câu 36: Trong phép tính chữ cái dưới đây: TWO + TWO FOU R Mỗi chữ cái khác nhau được thay bởi một chữ số khác nhau. “TWO” là một số có ba chữ số, “FOUR” là một số có bốn chữ số. Phương pháp tìm kiếm lời giải thực hiện theo hai bước:  Bước 1: Thay thế cho các chữ cái F, O, R, thoả mãn các ràng buộc ở cột đơn vị và phép mang.  Bước 2: Thay thế cho các chữ cái còn lại để tìm ra lời giải hoàn chỉnh. Hỏi có bao nhiêu phương án thay thế chữ cái ở Bước 1?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "9"
+          },
+          {
+            "id": "B",
+            "text": "8"
+          },
+          {
+            "id": "C",
+            "text": "7"
+          },
+          {
+            "id": "D",
+            "text": "6"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

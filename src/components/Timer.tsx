@@ -11,5 +11,5 @@ export function Timer({ remainingMs }: TimerProps) {
     .padStart(2, '0');
   const seconds = (totalSeconds % 60).toString().padStart(2, '0');
 
-  return <div className="rounded bg-black/10 px-3 py-1 text-sm font-medium">Time: {minutes}:{seconds}</div>;
+  return <div className="neo-pill text-sm">Time: {minutes}:{seconds}</div>;
 }

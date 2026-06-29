@@ -1,0 +1,1210 @@
+[
+  {
+    "id": "q181",
+    "type": "single_choice",
+    "question": {
+      "text": "Hiện tượng gì sẽ xảy ra khi biên dịch và chạy chương trình?\n```cpp\n#include <iostream>\nusing namespace std;\nvoid process(int* ptr) {\n  cout << \"Pointer version\";\n}\nvoid process(int arr[10]) {\n  cout << \"Array version\";\n}\nint main() {\n  int* myPtr = new int[10];\n  process(myPtr);\n  delete[] myPtr;\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "In ra \"Pointer version\""
+      },
+      {
+        "id": "B",
+        "text": "In ra \"Array version\""
+      },
+      {
+        "id": "C",
+        "text": "Lỗi biên dịch do trình biên dịch không thể quyết định gọi hàm nào (Ambiguity)"
+      },
+      {
+        "id": "D",
+        "text": "Lỗi biên dịch do định nghĩa lại hàm (Redefinition of function)."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q182",
+    "type": "single_choice",
+    "question": {
+      "text": "Để viết một hàm đệ quy (ví dụ tính Giai thừa) bằng lambda trong C++11 (không dùng Generic Lambda của C++14), cách viết nào sau đây là chuẩn xác nhất để tránh lỗi \"Sử dụng biến chưa khởi tạo\" (Use of uninitialized variable)?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "auto fact = [&fact](int n) { return n <= 1 ? 1 : n * fact(n - 1); };"
+      },
+      {
+        "id": "B",
+        "text": "std::function<int(int)> fact = [fact](int n) { return n <= 1 ? 1 : n * fact(n - 1); };"
+      },
+      {
+        "id": "C",
+        "text": "std::function<int(int)> fact = [&fact](int n) { return n <= 1 ? 1 : n * fact(n - 1); };"
+      },
+      {
+        "id": "D",
+        "text": "auto fact = [=](int n) { return n <= 1 ? 1 : n * fact(n - 1); };"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q183",
+    "type": "single_choice",
+    "question": {
+      "text": "```cpp\nTại sao trình biên dịch gần như mù tịt và không thể cứu bạn khỏi lỗi giải tham\n    chiếu một con trỏ sau khi đã gọi lệnh delete(Dangling pointer)\n    ?\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Lệnh delete luôn tự động gán con trỏ về giá trị nullptr ngay lập tức, làm cho mọi thao tác giải tham chiếu tiếp theo bị hệ điều hành chủ động chặn lại và báo lỗi"
+      },
+      {
+        "id": "B",
+        "text": "Việc cấp phát và giải phóng diễn ra lúc chạy (runtime), trình biên dịch (compile-time) không thể theo dõi luồng này nên không thể phát hiện lỗi."
+      },
+      {
+        "id": "C",
+        "text": "Trình biên dịch xóa luôn biến con trỏ khỏi Stack sau khi gọi delete"
+      },
+      {
+        "id": "D",
+        "text": "Hệ điều hành khóa quyền truy cập con trỏ"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q184",
+    "type": "single_choice",
+    "question": {
+      "text": "Để tính tổng doanh thu của hàng triệu đơn hàng (n=1,000,000), sinh viên áp dụng nguyên tắc \"Loại bỏ vòng lặp\" trong Chương 4 bằng cách chuyển từ đoạn code 1 sang đoạn code 2:\n```cpp\nĐoạn 1 : for (int i = m; i <= m + n; i++) sum += i;\n(Thời gian chạy O(n)) Đoạn 2 : int sum = (m + m + n) * n / 2;\n(Đã được tinh chỉnh thành O(1))\n```\nCâu hỏi: Khi chạy Đoạn 2 trên hệ thống 32-bit (với n = 1.000.000 và m = 10), kết quả in ra là một số âm. Đâu là đánh giá chính xác nhất về hiện tượng này dựa trên tư duy tối ưu hóa?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Hiện tượng \"tràn số âm thầm\" (Silent overflow) do phép nhân vượt quá giới hạn của kiểu int; Tối ưu hóa thuật toán (O(1)) là đúng đắn nhưng trong trường hợp này lại không có kiểu dữ liệu phù hợp."
+      },
+      {
+        "id": "B",
+        "text": "Vi phạm quy tắc \"Liên kết sớm\" (Early Binding). Phép chia / 2 kích hoạt cơ chế ép kiểu ngầm định của C++, đẩy kết quả trung gian lên thanh ghi dưới dạng số thực double để tránh sai số. Tuy nhiên, khi gán ngược lại cho biến sum, hiện tượng \"Khởi tạo thu hẹp\" (Narrowing Conversion) đã chặt cụt bit dữ liệu, làm đảo bit dấu thành số âm"
+      },
+      {
+        "id": "C",
+        "text": "Trình biên dịch C++ đã áp dụng sai cơ chế \"Thực thi suy đoán\" (Speculative Execution). Do không còn vòng lặp để duy trì \"Bất biến chương trình\" (Loop Invariant), thanh ghi CPU đã đọc nhầm một vùng nhớ rác chưa được làm sạch trên Cache trước khi biểu thức thực sự hoàn tất chu kỳ tính toán"
+      },
+      {
+        "id": "D",
+        "text": "Xảy ra lỗi \"Tràn ngăn xếp\" (Stack Overflow) cục bộ. Mặc dù độ phức tạp thời gian là O(1), nhưng kết quả của biểu thức trung gian (m + m + n) * n sinh ra một khối dữ liệu khổng lồ lấn át vùng nhớ Stack của hàm main, khiến hệ điều hành ghi đè tràn sang vùng mã lệnh (Text segment) sinh ra giá trị rác"
+      },
+      {
+        "id": "E",
+        "text": "Tối ưu hóa thất bại do không \"Khai thác hiệu quả phần cứng\". Thuật toán O(n) tận dụng rất tốt bộ nhớ đệm nhờ nguyên lý Pipelining (luồng lệnh tuần tự). Thuật toán O(1) ép CPU xử lý một khối lượng tính toán số học khổng lồ trong cùng 1 chu kỳ đồng hồ (Clock cycle) gây ra hiện tượng bế tắc ALU, đảo ngược bit bộ nhớ"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q185",
+    "type": "single_choice",
+    "question": {
+      "text": "Khi sắp xếp danh sách 10 triệu sinh viên (mỗi tên tối đa 100 ký tự), độ phức tạp của thao tác hoán đổi (swap) khi dùng mảng 2 chiều (char ds[][]) so với mảng con trỏ (char *ptr[]) là bao nhiêu và tại sao?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "CPU luôn tự động tối ưu hóa mọi thao tác hoán đổi thành O(1) ở cấp độ phần cứng"
+      },
+      {
+        "id": "B",
+        "text": "Mảng 2 chiều tốn O(1), mảng con trỏ tốn O(L) do phải tốn thêm thời gian để CPU giải tham chiếu con trỏ trong RAM"
+      },
+      {
+        "id": "C",
+        "text": "Dùng mảng 2 chiều tốn O(L) để sao chép chuỗi, còn con trỏ tốn O(1)."
+      },
+      {
+        "id": "D",
+        "text": "Cả mảng 2 chiều và mảng con trỏ đều có độ phức tạp hoán đổi là O(L) nếu không dùng hệ điều hành Linux 64-bit, nhưng trên Windows thì mảng con trỏ sẽ được ưu tiên chuyển thành O(1) nhờ cơ chế phân trang bộ nhớ ảo đặc biệt của hệ thống Microsoft"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q186",
+    "type": "single_choice",
+    "question": {
+      "text": "Kết quả đúng của chương trình này là:\n```cpp\n#include <iostream>\n```\n\n## #include <utility>\n\n```cpp\n##using namespace std;\n\n##void tag(int&) {\n  cout << \"L\";\n}\n\n##void tag(int&&) {\n  cout << \"R\";\n}\n```\n\n## template<typename T>\n\n```cpp\n##void wrap(T&& x) {\n  tag(x);\n  tag(std::forward<T>(x));\n  cout << ' ';\n}\n\n##int main() {\n  int a = 0;\n  wrap(a);\n  wrap(0);\n  return 0;\n}\n```\n\n##",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "LL RL"
+      },
+      {
+        "id": "B",
+        "text": "LL LR"
+      },
+      {
+        "id": "C",
+        "text": "LR LR"
+      },
+      {
+        "id": "D",
+        "text": "LR RR"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q187",
+    "type": "single_choice",
+    "question": {
+      "text": "Theo quy ước phổ biến về đặt tên, các biến bắt đầu bằng chữ cái n (ví dụ: n, numLetters) thường ngụ ý kiểu dữ liệu hoặc mục đích gì?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Chỉ các đối tượng (objects) hoặc con trỏ rỗng (null pointers)"
+      },
+      {
+        "id": "B",
+        "text": "Chỉ các chỉ số (index) lồng nhau trong cấu trúc mảng nhiều chiều"
+      },
+      {
+        "id": "C",
+        "text": "Chỉ các số thực hoặc tọa độ không gian"
+      },
+      {
+        "id": "D",
+        "text": "Chỉ các số tự nhiên (số đếm, số lượng)."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q188",
+    "type": "single_choice",
+    "question": {
+      "text": "```cpp\nNếu bạn ném một đối tượng mảng(ví dụ\n                               : throw int[10];),\n    khối catch nào sẽ bắt được nó ?\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "catch(int[10])"
+      },
+      {
+        "id": "B",
+        "text": "catch(int*)"
+      },
+      {
+        "id": "C",
+        "text": "catch(int&)"
+      },
+      {
+        "id": "D",
+        "text": "Không thể ném một mảng, lỗi biên dịch"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q189",
+    "type": "single_choice",
+    "question": {
+      "text": "```cpp\nCó thể ném ngoại lệ thuộc kiểu std::string hay kiểu nguyên thủy như int trong\n    C++ không\n    ?\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Không, chỉ được ném các lớp kế thừa từ std::exception"
+      },
+      {
+        "id": "B",
+        "text": "Chỉ ném được con trỏ"
+      },
+      {
+        "id": "C",
+        "text": "Chỉ ném được kiểu nguyên thủy, không ném được đối tượng"
+      },
+      {
+        "id": "D",
+        "text": "Có, C++ cho phép ném mọi kiểu dữ liệu (có thể copy/move)."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q190",
+    "type": "single_choice",
+    "question": {
+      "text": "Đoạn mã C++ sau dùng để tính tổng ma trận:\n```cpp\nint matrix[1000][1000];\nlong long sum = 0;\nfor (int j = 0; j < 1000; ++j) {\n  for (int i = 0; i < 1000; ++i) {\n    sum += matrix[i][j];\n  }\n}\n```\nKhi chạy qua công cụ Profiling, hàm này bị đánh giá là \"thảm họa hiệu năng\". Vấn đề cốt lõi liên quan đến kiến trúc máy tính ở đây là gì?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Mã này bị chậm thảm hại do duyệt mảng theo cột (Col-major). Trong C++, mảng đa chiều lưu trữ theo hàng (Row-major), việc nhảy qua lại giữa các hàng làm triệt tiêu hoàn toàn hiệu quả của CPU Cache (gây ra Cache Miss liên tục)."
+      },
+      {
+        "id": "B",
+        "text": "Việc sử dụng các biến đếm số nguyên tiêu chuẩn bên trong một cấu trúc vòng lặp lồng nhau sẽ vô tình kích hoạt hệ thống bảo vệ chống tràn ngăn xếp (Stack Overflow Protection) của hệ điều hành, làm suy giảm tốc độ xử lý xuống hàng nghìn lần so với việc dùng con trỏ"
+      },
+      {
+        "id": "C",
+        "text": "Trình biên dịch sẽ phát hiện ra sự thiếu tối ưu trong logic này và chủ động thiết lập một cơ chế đa luồng bí mật (implicit multithreading) để phân chia ma trận thành hàng triệu khối nhỏ, giúp cho việc tính tổng diễn ra với tốc độ ánh sáng mà không cần lập trình viên can thiệp"
+      },
+      {
+        "id": "D",
+        "text": "Nguyên nhân chính khiến cho đoạn mã lệnh này bị đánh giá thấp về mặt hiệu suất là do nó không áp dụng các kĩ thuật kiểm thử đột biến cao cấp nhằm đánh giá khả năng chịu tải của các thanh ghi vật lý bên trong lõi vi xử lý khi làm việc với lượng dữ liệu khổng lồ"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q191",
+    "type": "single_choice",
+    "question": {
+      "text": "Đoạn mã kiểm tra điều kiện sau đây gặp sự cố sụt giảm hiệu năng cực kỳ nghiêm trọng (chạy chậm gấp 10 lần) khi dữ liệu mảng data chứa các con số hoàn toàn ngẫu nhiên, thay vì dữ liệu đã được sắp xếp. Nguyên nhân gốc rễ ở cấp độ kiến trúc là gì?\n```cpp\nlong long sum = 0;\nfor (int i = 0; i < N; ++i) {\n  if (data[i] >= 128) {\n    sum += data[i];\n  }\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Việc xáo trộn mảng dữ liệu ngẫu nhiên đã vô tình khởi tạo ra các tập hợp khóa (Mutex Locks) ảo trên băng thông truy xuất RAM, khiến cho hệ thống đường truyền nội bộ (Front-side Bus) bị tắc nghẽn và phải thực hiện quá trình phản hồi tín hiệu trễ (Latency Backoff) liên tục để gỡ rối các khối lệnh chồng chéo"
+      },
+      {
+        "id": "B",
+        "text": "Quá trình kiểm tra độ bao phủ mã (Test Coverage) đối với luồng dữ liệu ngẫu nhiên đã tạo ra hàng triệu bài test (Test Cases) siêu vi tàng hình, làm phình to bộ nhớ heap nội tại của vi xử lý và gây ra các độ trễ thu gom rác đa luồng không thể đo lường bằng Profiler thông thường"
+      },
+      {
+        "id": "C",
+        "text": "Sự gián đoạn nghiêm trọng trong cơ chế suy đoán nhánh (Branch Prediction) của CPU: khi dữ liệu ngẫu nhiên, CPU liên tục đoán sai luồng rẽ của cấu trúc if và phải xóa bỏ toàn bộ hàng đợi lệnh (Pipeline Flush) để tính toán lại từ đầu."
+      },
+      {
+        "id": "D",
+        "text": "Hệ thống định tuyến dữ liệu hộp xám (Grey-box Routing) của trình biên dịch phát hiện ra tập giá trị biên vượt mức cho phép của thanh ghi SIMD (Single Instruction Multiple Data), buộc hệ thống phải quay lại chế độ xử lý đa chu kỳ cực kỳ chậm chạp chuyên dùng cho máy tính thế hệ cũ"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q192",
+    "type": "single_choice",
+    "question": {
+      "text": "Kết quả in ra từ Dòng",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "đến Dòng E là gì?\n#include <iostream>\ntemplate<typename T>\nvoid process(T t) {    std::cout << \"Primary template: \" << t << std::endl;\t}\ntemplate<>\tvoid process<int>(int t) {   std::cout << \"Specialization for int: \" << t << std::endl;   }\nvoid process(int t) {\t    std::cout << \"Ordinary function: \" << t << std::endl;\t}\nvoid process(double t) {\t    std::cout << \"Ordinary double: \" << t << std::endl;\t}\nint main() {\nprocess(42);        // Dòng A\nprocess<>(42);      // Dòng"
+      },
+      {
+        "id": "B",
+        "text": "process<int>(42);   // Dòng"
+      },
+      {
+        "id": "C",
+        "text": "process(3.14);      // Dòng"
+      },
+      {
+        "id": "D",
+        "text": "process<double>(3.14); // Dòng"
+      },
+      {
+        "id": "E",
+        "text": "return 0;\t}\nA. A: Ordinary, B: Primary, C: Specialization, D: Ordinary double, E: Primary\nB  A: Ordinary function, B: Specialization, C: Specialization, D: Ordinary double, E: Primary template\nC. A: Specialization, B: Ordinary, C: Specialization, D: Ordinary double, E: Primary\nD. A: Ordinary, B: Specialization, C: Specialization, D: Ordinary double, E: Ordinary double"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q193",
+    "type": "single_choice",
+    "question": {
+      "text": "Phân tích đoạn code sau liên quan đến từ khóa auto. Kiểu dữ liệu của biến x và y sẽ lần lượt là gì?\n```cpp\nint a = 5;\nauto x = a;\n\nauto &y = a;\n\nx++;\n\ny++;\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Cả hai đều là tham chiếu int int&"
+      },
+      {
+        "id": "B",
+        "text": "Cả hai đều là giá trị int int"
+      },
+      {
+        "id": "C",
+        "text": "x là int, y là int& (tham chiếu)."
+      },
+      {
+        "id": "D",
+        "text": "Lỗi biên dịch ở dòng auto &y = a;"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q194",
+    "type": "single_choice",
+    "question": {
+      "text": "Cho đoạn code sau. Hãy cho biết kết quả đầu ra của chương trình:\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nint add(int a, int b) {\n  return a + b;\n}\nint sub(int a, int b) {\n  return a - b;\n}\nint multiply(int a, int b) {\n  return a * b;\n}\nint main() {\n  vector<function<int(int, int)>> funcs = {add, sub, multiply};\n  cout << funcs[0](5, 5);\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Compile Error"
+      },
+      {
+        "id": "B",
+        "text": "Runtime Error"
+      },
+      {
+        "id": "C",
+        "text": "Hành vi không xác định"
+      },
+      {
+        "id": "D",
+        "text": "10"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q195",
+    "type": "single_choice",
+    "question": {
+      "text": "Kết quả đầu ra của chương trình là:\n```cpp\n#include <string.h>\n\n#include <iostream>\nusing namespace std;\nint main() {\n  char str[] = \"HUST\";\n  char *p = \"SOICT\";\n  str[0] = 'B';\n\n  // p[0] = 'A';\n  cout << str << \" \";\n\n  p = str;\n\n  p[1] = 'A';\n  cout << str << endl;\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "BUST BAST"
+      },
+      {
+        "id": "B",
+        "text": "BUST BUST"
+      },
+      {
+        "id": "C",
+        "text": "HUST SOICT"
+      },
+      {
+        "id": "D",
+        "text": "Lỗi Runtime tại dòng p[1] = 'A'"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q196",
+    "type": "single_choice",
+    "question": {
+      "text": "Kết quả của chương trình dưới đây?\n```cpp\n#include <iostream>\nusing namespace std;\nint ***f() {\n  static int a = 1, b = 2;\n  static int *arr[2] = {&a, &b};\n  static int **p = arr;\n  return &p;\n}\nint main() {\n  cout << (*(*f() + 1))[0];\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "rác"
+      },
+      {
+        "id": "D",
+        "text": "compile error"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q197",
+    "type": "single_choice",
+    "question": {
+      "text": "```cpp\nPhân vùng tương đương(Equivalence Partitioning) nâng cao\n    : Bạn cần viết Black\n      -\n      Box Test cho hàm xác thực C++\n    : bool validateHex(const std::string& input);\n.Hàm chỉ trả về true nếu chuỗi có độ dài đúng 4 ký tự và chỉ chứa ký tự\n    Hexadecimal hợp lệ(0 - 9, a - f, A - F)\n        .Phương án thiết kế test case nào sau đây áp dụng kỹ thuật Phân vùng\n    tương đương chuẩn xác và tiết kiệm nhất\n    ?\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Kỹ sư kiểm thử hộp đen xuất sắc sẽ chỉ tập trung vào việc đưa các đoạn mã độc hại dạng SQL Injection hoặc Cross-site Scripting vào tham số đầu vào nhằm phá vỡ kiến trúc bảo mật của hàm xác thực, thay vì phí thời gian xác nhận các quy luật định dạng cơ bản thông thường"
+      },
+      {
+        "id": "B",
+        "text": "Bắt buộc phải áp dụng kiểm thử kiệt sức (exhaustive testing) bằng cách chạy một vòng lặp nhét toàn bộ các ký tự thuộc bảng mã ASCII vào hàm, vì bất kỳ phương pháp chia vùng nào cũng tiềm ẩn rủi ro bỏ sót các trường hợp mã số đặc biệt được lưu trữ cứng trong nhân hệ thống"
+      },
+      {
+        "id": "C",
+        "text": "Test các vùng: Độ dài đúng + Ký tự chuẩn (\"1aF9\"); Độ dài sai (\"123\", \"12345\"); Chứa ký tự ngoài phạm vi (\"1xG2\"); Chứa ký tự rỗng hoặc khoảng trắng (\" 12 \")."
+      },
+      {
+        "id": "D",
+        "text": "Việc sử dụng kỹ thuật hộp đen cho trường hợp này là cực kỳ thiếu chuyên nghiệp, bởi vì nó không thể thâm nhập vào các nhánh điều kiện ẩn bên trong hàm để kiểm chứng xem liệu thuật toán có sử dụng phép toán logic bitwise phức tạp nhằm giải mã chuỗi hay không"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q198",
+    "type": "single_choice",
+    "question": {
+      "text": "Bạn có thời gian kiểm thử rất hạn chế. Nên ưu tiên kiểm thử phần nào?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Tính năng mới thêm"
+      },
+      {
+        "id": "B",
+        "text": "Thành phần quan trọng"
+      },
+      {
+        "id": "C",
+        "text": "Khu vực dễ lỗi"
+      },
+      {
+        "id": "D",
+        "text": "Phần có rủi ro cao."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q199",
+    "type": "single_choice",
+    "question": {
+      "text": "Trong môi trường Development, chương trình chạy hoàn hảo. Khi build ở chế độ Release (-O3), hàm initialize() bị bỏ qua hoàn toàn và hệ thống không khởi tạo thành công. Lỗi do đâu?\n```cpp\nint system_state = 0;\nvoid initialize() {\n  assert(++system_state == 1);\n```\n// Tiếp tục khởi tạo...\n```cpp\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Việc thay đổi trạng thái (side-effect) được đặt bên trong hàm assert(), vốn sẽ bị trình biên dịch loại bỏ hoàn toàn khi kích hoạt macro NDEBUG trong chế độ Release."
+      },
+      {
+        "id": "B",
+        "text": "Quá trình Tinh chỉnh mã nguồn (Optimization) của GCC đã đánh giá biến system_state là một biến độc lập không chia sẻ với các module ngoại vi, qua đó kích hoạt cơ chế Dead Code Elimination (DCE) quét sạch toàn bộ nhánh logic rẽ nhánh có chứa các lệnh gán tĩnh nhằm giảm thiểu kích thước tối đa của tệp nhị phân cuối cùng"
+      },
+      {
+        "id": "C",
+        "text": "Khái niệm Gỡ lỗi (Debugging) bằng cách sử dụng các hàm kiểm tra ràng buộc đã vô tình tạo ra sự xung đột không gian tên (Namespace Collision) với thư viện hệ thống cục bộ, buộc bộ liên kết (Linker) phải vô hiệu hóa mã lệnh khởi tạo để bảo toàn tính nguyên vẹn cho vùng nhớ dữ liệu tĩnh của hạt nhân"
+      },
+      {
+        "id": "D",
+        "text": "Tại mức độ kiểm thử System (System Testing), kĩ sư đã không nhận ra rằng phép toán tiền tố ++ (Prefix Increment) trên nền tảng kiến trúc RISC-V đòi hỏi một chu kì đồng hồ phụ trội, khiến cho bộ dự đoán rẽ nhánh bị lệch nhịp thời gian thực và tự ý bỏ lọt khối lệnh rẽ nhánh quan trọng nhất"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q200",
+    "type": "single_choice",
+    "question": {
+      "text": "Giá trị của x sau khi thực thi đoạn mã dưới đây?\n```cpp\nunsigned int a = 10;\n\nint b = -20;\n\nauto x = a + b;\nif (a + b > 0)\n  printf(\"Lon hon 0\");\nelse\n  printf(\"Nho hon 0\");\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "In ra \"Nho hon 0\""
+      },
+      {
+        "id": "B",
+        "text": "In ra \"Lon hon 0”."
+      },
+      {
+        "id": "C",
+        "text": "Lỗi biên dịch"
+      },
+      {
+        "id": "D",
+        "text": "Lỗi Runtime"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q201",
+    "type": "single_choice",
+    "question": {
+      "text": "Xét đoạn mã in ra kích thước của mảng dưới đây. Giả sử chương trình biên dịch trên hệ thống 64-bit (con trỏ chiếm 8 bytes, int chiếm 4 bytes). Kết quả in ra là gì?\n```cpp\n#include <iostream>\nusing namespace std;\nvoid printSize(int arr[10]) {\n      cout << sizeof(arr) << \" \";\n}\nint main() {\n      int A[10];\n      cout << sizeof(A) << \" \";\n      printSize(A);\n      return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "40 40"
+      },
+      {
+        "id": "B",
+        "text": "40 8"
+      },
+      {
+        "id": "C",
+        "text": "8 8"
+      },
+      {
+        "id": "D",
+        "text": "Lỗi biên dịch do hàm printSize truyền mảng tĩnh sai cú pháp."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q202",
+    "type": "single_choice",
+    "question": {
+      "text": "Việc ghi dữ liệu qua int* nhưng lại cố tình đọc lại qua float* tại cùng một địa chỉ (Type Punning) đặc biệt nguy hiểm vì lý do kỹ thuật nào?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Việc này cực kỳ an toàn nếu bạn chắc chắn rằng kiến trúc CPU đang sử dụng hỗ trợ việc chuyển đổi tự động giữa mã bù hai và chuẩn số thực IEEE 754"
+      },
+      {
+        "id": "B",
+        "text": "Trình biên dịch sẽ tự động đổi dữ liệu vùng nhớ sang số thực float"
+      },
+      {
+        "id": "C",
+        "text": "CPU không thể đọc chéo các kiểu dữ liệu"
+      },
+      {
+        "id": "D",
+        "text": "Nó vi phạm Strict Aliasing, khiến trình biên dịch tối ưu hóa sai lệch do giả định hai con trỏ không trỏ cùng chỗ."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q203",
+    "type": "single_choice",
+    "question": {
+      "text": "Giả sử p và q là hai con trỏ cùng kiểu đang trỏ vào các phần tử khác nhau trong cùng một mảng. Phép toán nào sau đây là **KHÔNG được phép** trong C/C++?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "p + q"
+      },
+      {
+        "id": "B",
+        "text": "p = q"
+      },
+      {
+        "id": "C",
+        "text": "p - q"
+      },
+      {
+        "id": "D",
+        "text": "p > q"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q204",
+    "type": "single_choice",
+    "question": {
+      "text": "Kết quả của đoạn mã dưới đây là gì?\n```cpp\n#include <iostream>\n#include <memory>\n#include <vector>\nstruct Widget {\n  Widget(int a, int b) {\n    std::cout << \"Direct \";\n  }\n  Widget(std::initializer_list<int> list) {\n    std::cout << \"List \";\n  }\n};\nint main() {\n  auto p1 = std::unique_ptr<Widget>(new Widget{1, 2});\n  auto p2 = std::make_unique<Widget>(1, 2);\n\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Xuất ra: List List"
+      },
+      {
+        "id": "B",
+        "text": "Xuất ra: Direct Direct"
+      },
+      {
+        "id": "C",
+        "text": "Xuất ra: List Direct"
+      },
+      {
+        "id": "D",
+        "text": "Xuất ra: Direct List"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q205",
+    "type": "single_choice",
+    "question": {
+      "text": "Bản chất lỗi của việc trả về tham chiếu tới biến cục bộ trong một hàm là gì?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Tuổi thọ của biến cục bộ đã kết thúc, nên tham chiếu lúc này thực chất là một con trỏ lơ lửng (dangling pointer) trỏ vào vùng nhớ rác."
+      },
+      {
+        "id": "B",
+        "text": "Lỗi do không dùng từ khóa static"
+      },
+      {
+        "id": "C",
+        "text": "Biến cục bộ được tự động chuyển lên vùng nhớ heap nhưng hệ thống không biết cách giải phóng nó nên tạo ra rò rỉ bộ nhớ nghiêm trọng dẫn đến sập chương trình ngay lập tức"
+      },
+      {
+        "id": "D",
+        "text": "Tham chiếu không thể trỏ tới bất kỳ vùng nhớ stack nào theo chuẩn C++"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q206",
+    "type": "single_choice",
+    "question": {
+      "text": "Giả sử không bật các cờ tối ưu (như -O2 hoặc -O3 trong GCC)\n```cpp\n#include <iostream>\nusing namespace std;\ntemplate <typename T>\nT maxVal(T a, T b) {\n  return (a > b) ? a : b;\n}\nint main() {\n  maxVal(3, 7);\n         // (1)\n      maxVal(3.5, 2.5);\n                           // (2)\n      maxVal<int>(5, 10);  // (3)\n  maxVal(3, 7);\n         // (4) lần thứ hai\n}\n```\nTrình biên dịch sẽ sinh ra bao nhiêu bản sao (instances) khác nhau của hàm maxVal trong file object cuối cùng?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "1 bản sao duy nhất"
+      },
+      {
+        "id": "B",
+        "text": "3 bản sao: cho lần gọi (1), (2), (3) là khác nhau"
+      },
+      {
+        "id": "C",
+        "text": "4 bản sao: cho mỗi lần gọi là một bản sao riêng"
+      },
+      {
+        "id": "D",
+        "text": "2 bản sao: một cho int, một cho double."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "D"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q207",
+    "type": "single_choice",
+    "question": {
+      "text": "Đoạn code sau in ra kết quả gì?\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n  cout << \"Hello World\" + 6 << endl;\n  return 0;\n}\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Hello World6"
+      },
+      {
+        "id": "B",
+        "text": "Lỗi biên dịch"
+      },
+      {
+        "id": "C",
+        "text": "World"
+      },
+      {
+        "id": "D",
+        "text": "Giá trị rác"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q208",
+    "type": "single_choice",
+    "question": {
+      "text": "Điểm khác biệt cốt lõi về cơ chế thực thi giữa Interpreter và Compiler khi xử lý một vòng lặp 1000 lần là gì?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Interpreter chuyển đổi vòng lặp thành mã máy một lần rồi thực thi 1000 lần."
+      },
+      {
+        "id": "B",
+        "text": "Interpreter phải giải mã và thực hiện logic của các câu lệnh bên trong vòng lặp 1000 lần."
+      },
+      {
+        "id": "C",
+        "text": "Compiler bỏ qua việc kiểm tra cú pháp bên trong vòng lặp để ưu tiên tốc độ thực thi."
+      },
+      {
+        "id": "D",
+        "text": "Compiler tạo ra một chương trình ảo để mô phỏng lại các hành vi của vòng lặp đó."
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "B"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q209",
+    "type": "single_choice",
+    "question": {
+      "text": "Tại sao trong các hệ thống đòi hỏi độ an toàn cao (safety-critical), người ta thường tránh sử dụng Interpreter cho các tác vụ thời gian thực?",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Vì khó dự đoán thời điểm hoàn thành (determinism)."
+      },
+      {
+        "id": "B",
+        "text": "Vì Interpreter không thể phát hiện được lỗi cú pháp của mã nguồn"
+      },
+      {
+        "id": "C",
+        "text": "Vì Interpreter bắt buộc phải có kết nối Internet để tra cứu ngữ nghĩa của lệnh"
+      },
+      {
+        "id": "D",
+        "text": "Vì Interpreter chỉ có thể chạy được trên các CPU đời cũ"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "A"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q210",
+    "type": "single_choice",
+    "question": {
+      "text": "```cpp\nTrong các chuẩn C++ hiện đại(từ C++ 98 trở đi), nếu không đủ bộ nhớ,\n    toán tử new mặc định sẽ phản ứng như thế nào ?\n```",
+      "images": []
+    },
+    "choices": [
+      {
+        "id": "A",
+        "text": "Trả về con trỏ NULL (hoặc nullptr)"
+      },
+      {
+        "id": "B",
+        "text": "Crash chương trình"
+      },
+      {
+        "id": "C",
+        "text": "Ném exception std::bad_alloc."
+      },
+      {
+        "id": "D",
+        "text": "Im lặng bỏ qua"
+      }
+    ],
+    "answer": {
+      "correctChoiceIds": [
+        "C"
+      ]
+    },
+    "explanation": {
+      "text": "Chưa có giải thích.",
+      "images": []
+    },
+    "tags": [
+      "ktlt",
+      "giua-ky"
+    ],
+    "difficulty": "medium"
+  }
+]

@@ -15,7 +15,7 @@ interface QuestionCardProps {
 
 export function QuestionCard({ question, selectedChoiceIds, textAnswer, locked, onSelectChoice, onTextAnswer }: QuestionCardProps) {
   return (
-    <article className="space-y-4 rounded-xl bg-[var(--card)] p-5 shadow-sm">
+    <article className="neo-card min-w-0 space-y-4">
       <div>
         <ContentBlockView content={question.question} textClassName="text-lg font-semibold" />
         {question.tags?.length ? <p className="mt-1 text-xs text-[var(--muted)]">Tags: {question.tags.join(', ')}</p> : null}

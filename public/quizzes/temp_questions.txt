@@ -1,0 +1,120 @@
+Index 270, ID: q271
+Question: {'text': '} Array operator * (Array a, Array b) { Array temp; temp.n = a.n; newArray(temp); for (int i = 0; i < n; i++) temp.data[i] = a.data[i]*b.data[i]; return temp; } void main() { Array a, b, c; //Gỉa sử đã có khởi tạo và nhập dữ liệu cho hai mảng a, b for (int i = 0; i < 10000; i++) c = a * b; } Hãy dự đoán vấn đề gì có thể xảy ra với đoạn chương trình này? (0.5 điểm) Cài đặt giải pháp khắc phục vấn đề trên (1.0 điểm) Câu 5. (1.0 điểm) Cho cấu trúc danh sách liên kết như sau: struct Node { int data; Node *next; }; Hãy viết hàm đảo ngược danh sách : Node* reverse(Node* head) {...}', 'images': []}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+Index 271, ID: q272
+Question: {'text': 'Các khai báo hàm nào dưới đây là hợp lệ:', 'images': []}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+Index 272, ID: q273
+Question: {'text': 'Đoạn chương trình sau đây trả về kết quả như thế nào?\n```cpp\n#include <stdio.h>\nint main() {\n  char s[] = "256";\n  printf("%d", *s);\n}\n```', 'images': []}
+Answer: {'correctChoiceIds': ['B']}
+----------------------------------------
+Index 273, ID: q274
+Question: {'text': 'Kết quả chương trình sau là gì\n```cpp\n#include <stdio.h>\nvoid hoanvi(int *px, int *py) {\n  int *z;\n  z = px;\n  px = py;\n  py = z;\n}\nint main() {\n  int a = 15, b = 21;\n  hoanvi(&a, &b);\n  printf("%d %d", a, b);\n  return 0;\n}\n```', 'images': []}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+Index 274, ID: q275
+Question: {'text': 'Đoạn chương trình sau đây trả về kết quả như thế nào?\n```cpp\n#include <stdio.h>\nint main() {\n  int i = 3, *j, k;\n  j = &i;\n  printf("%d\\n", i * *j * i++ * j);\n  return 0;\n}\n```', 'images': []}
+Answer: {'correctChoiceIds': ['D']}
+----------------------------------------
+Index 275, ID: q276
+Question: {'text': '[TỰ LUẬN]\nMột sinh viên xây dựng chức năng sắp xếp sinh viên theo thứ tự kiểu Việt Nam (theo tên rồi mới đến họ và tên lót) từ 1 danh sách họ và tên sinh viên của lớp như sau:\n\n```cpp\n// #include ...\nint i, j, k, n = 0;\nchar ds[500][30], tg[30];\nvoid bosung();\nvoid sapxep();\nvoid inds();\n\nint main() {\n  // hàm main\n}\n\nint NamePos(char *ht) {\n  i = strlen(ht) - 1;\n  while (ht[i] == \' \' && i > -1)\n    i--;\n  while (ht[i] != \' \' && i > -1)\n    i--;\n  return i + 1;\n}\n\nvoid sapxep() {\n  for (i = 0; i < n - 1; i++) {\n    k = i;\n    for (j = i + 1; j < n; j++)\n      if (strcmp(ds[k] + NamePos(ds[k]), ds[j] + NamePos(ds[j])) > 0)\n        k = j;\n      else if (strcmp(ds[k] + NamePos(ds[k]), ds[j] + NamePos(ds[j])) == 0)\n        if (strcmp(ds[k], ds[j]) > 0)\n          k = j;\n    if (k != i) {\n      strcpy(tg, ds[i]);\n      strcpy(ds[i], ds[j]);\n      strcpy(ds[j], tg);\n    }\n  }\n  printf("\\n Danh sach da duoc sap xep !!!");\n  getch();\n}\n```\n\nTìm và sửa lại lỗi của đoạn code trên', 'images': []}
+Answer: {'acceptedAnswers': ['Tự luận'], 'caseSensitive': False, 'trimWhitespace': True}
+----------------------------------------
+Index 276, ID: q277
+Question: {'text': 'Cho biết kết quả khi chạy chương trình sau trong C/C++?\n(Chọn hai đáp án, nếu cả hai tình huống đều tương ứng 1 phương án thì chỉ chọn phương án đó)\n```cpp\n#include <stdio.h>\nint main() {\n  float i = 10, *j;\n  void *k;\n  k = &i;\n  j = k;\n  printf("%.2f\\n", *k);\n  return 0;\n}\n```', 'images': []}
+Answer: {'correctChoiceIds': ['C', 'E']}
+----------------------------------------
+Index 277, ID: q278
+Question: {'text': 'Điều nào sau đây là ĐÚNG với tinh chỉnh mã nguồn:', 'images': []}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+Index 278, ID: q279
+Question: {'text': 'Kết quả sau khi chạy chương trình C++ sau là:\n```cpp\n#include <stdio.h>\n#include <stdlib.h>\n#define INCREMENT(x) ++x\n\nint main() {\n  char* ptr = "DHBK-HN";\n  int x = 10;\n  printf("%s ", 1 + INCREMENT(ptr + 1));\n  printf("%d", 1 + INCREMENT(x + 1));\n  return 0;\n}\n```', 'images': []}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+Index 279, ID: q280
+Question: {'text': 'Chọn thứ tự ưu tiên đúng của các toán tử trong C/C++ (Từ cao -> thấp):', 'images': []}
+Answer: {'correctChoiceIds': ['B']}
+----------------------------------------
+Index 280, ID: q281
+Question: {'text': 'Chọn thứ tự ưu tiên đúng của các toán tử logic trong C/C++ (từ cao đến thấp)', 'images': []}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+Index 281, ID: q282
+Question: {'text': 'Đâu không phải là một mô thức lập trình? Hãy chọn tất cả các đáp án đúng.', 'images': []}
+Answer: {'correctChoiceIds': ['A', 'B', 'G']}
+----------------------------------------
+Index 282, ID: q283
+Question: {'text': 'Đâu là tệp mô tả các đối tượng luồng vào ra chuẩn cin, cout, cerr và clog của C++?', 'images': []}
+Answer: {'correctChoiceIds': ['D']}
+----------------------------------------
+Index 283, ID: q284
+Question: {'text': '(TỰ LUẬN)\nLời gọi hàm capitalize(book) trong hàm main làm chương trình bị lỗi. Yêu cầu SV:\n(a) Đó là lỗi Compile, Link, hay lỗi thực thi (Runtime), giải thích nguyên nhân gây nên lỗi.\n(b) Sửa lại chương trình để chạy cho đúng.\n(c) Bài học rút ra là gì?\n\n```cpp\n#include <iostream>\n\nstruct Book {\n  char *name;\n};\n\nvoid capitalize(Book &b) {\n  if (b.name[0] >= \'a\' && b.name[0] <= \'z\') {\n    b.name[0] = b.name[0] + (\'A\' - \'a\');\n  }\n}\n\nint main() {\n  char *c = "ky thuat lap trinh";\n\n  struct Book book;\n  book.name = c;\n\n  capitalize(book);\n\n  std::cout << book.name << std::endl;\n\n  return 0;\n}\n```', 'images': []}
+Answer: {'acceptedAnswers': ['Tự luận'], 'caseSensitive': False, 'trimWhitespace': True}
+----------------------------------------
+Index 284, ID: q285
+Question: {'text': '93. Giả sử hàm print được định nghĩa như sau:\n```cpp\nvoid print(int test) {\n  if (test < 1)\n    return;\n  cout << test << " ";  // in một dấu cách sau giá trị test\n  print(test - 1);\n  cout << test << " ";  // in một dấu cách sau giá trị test\n  return;\n}\n```\nHỏi câu lệnh sau sẽ in ra kết quả gì ra màn hình?\n`print(3);`\nYêu cầu ghi chính xác kết quả, không thừa không thiếu ký tự nào kể cả dấu cách.', 'images': []}
+Answer: {'acceptedAnswers': ['3 2 1 1 2 3'], 'caseSensitive': False, 'trimWhitespace': True}
+----------------------------------------
+Index 285, ID: q286
+Question: {'text': 'Trong các hành động, quyết định kiến trúc và thói quen lập trình dưới đây, đâu là những phương pháp tuân thủ đúng chuẩn nguyên tắc Lập trình phòng ngừa?', 'images': []}
+Answer: {'correctChoiceIds': ['B', 'F', 'I', 'K', 'O', 'P', 'R']}
+----------------------------------------
+Index 286, ID: q287
+Question: {'text': 'Kết quả sau khi chạy chương trình C++ sau là:\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n  int a = 15, b = 10;\n  int *p = &a, *q = &b;\n  *p++ += b ^ ~a--;\n  p = q;\n  *p += 2;\n  cout << a << ", " << b;\n}\n```', 'images': []}
+Answer: {'correctChoiceIds': ['B']}
+----------------------------------------
+Index 287, ID: q288
+Question: {'text': 'Khi truy cập lần lượt các phần tử của mảng hai chiều kích thước 30x30, cách nào thường đem lại hiệu quả tốt hơn về tốc độ?', 'images': []}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+Index 288, ID: q289
+Question: {'text': '70. Cho biết kết quả hiển thị ra màn hình sau khi thực hiện chương trình sau:\n```cpp\n#include <iostream>\nusing namespace std;\nvoid myprint(int a) {\n  cout << a << " ";\n}\nvoid myprint(int a, int b = 5) {\n  cout << a << " " << b;\n}\nint main() {\n  myprint(5);\n  return 0;\n}\n```', 'images': []}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+Index 289, ID: q290
+Question: {'text': 'Kỹ thuật lính canh có thể áp dụng cho:', 'images': []}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+Index 290, ID: q291
+Question: {'text': 'Cho biết dòng kết quả khi chạy chương trình sau:\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n  int z = 1, x = 0;\n  int k, y = 2;\n  auto func = [&, y](int a) mutable { z += y-- + ++a; };\n  func(10);\n  cout << z << " , " << y << endl;\n}\n```', 'images': []}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+Index 291, ID: q292
+Question: {'text': 'Cho khai báo int M[2][3]; với i, j là các số nguyên đã có giá trị hợp lệ. Các lệnh nào sau đây có thể sai?', 'images': []}
+Answer: {'correctChoiceIds': ['B', 'F']}
+----------------------------------------
+Index 292, ID: q293
+Question: {'text': 'Lệnh numbers.reserve(1); sẽ có tác dụng gì nếu numbers.capacity() hiện tại đang là 100?', 'images': []}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+Index 293, ID: q294
+Question: {'text': 'Thư viện nào giúp chương trình dừng lại ngay lập tức khi vi phạm một điều kiện nào đó?', 'images': []}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+Index 294, ID: q295
+Question: {'text': 'Phương pháp nào không được dùng để khử đệ quy?', 'images': []}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+Index 295, ID: q296
+Question: {'text': '69. Cho biết kết quả in ra màn hình khi thực thi chương trình sau:\n```cpp\n#include <iostream>\nusing namespace std;\nint calc(int a, int b, int c = 1) {\n  return (a * b * c);\n}\nfloat calc(float a, float b, float c = 1.0) {\n  return (a / b / c);\n}\nint main() {\n  int x = 5, y = 1;\n  float n = 5.0, m = 2.0;\n  cout << calc(x, y, 2) << "\\t";\n  cout << calc(n, m);\n  return 0;\n}\n```', 'images': []}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+Index 296, ID: q297
+Question: {'text': '[TỰ LUẬN]\nSửa lại đoạn chương trình sau đây cho đúng kết hợp tinh chỉnh mã nguồn\n\n```cpp\ntypedef struct point {\n  double x, y, z;\n} Point;\nint find_max_a_argument(int n, Point *elems) {\n  double max = 0;\n  int max_index = 0;\n  for (int i = 0; i < n; i++)\n    if (max < elems[i].x) {\n      max_index = i;\n      max = elems[i].x;\n    }\n  return max_index;\n}\n```', 'images': []}
+Answer: {'acceptedAnswers': ['Tự luận'], 'caseSensitive': False, 'trimWhitespace': True}
+----------------------------------------
+Index 297, ID: q298
+Question: {'text': "(TỰ LUẬN)\nTheo thống kê, kết quả xếp loại học sinh của 1 trường PTTH hàng năm có 60% HS đạt điểm trung bình (C), 20% đạt điểm khá (B), 8% xếp loại giỏi (A) và 12% xếp loại kém (D). Đoạn code để đếm số HS mỗi loại. Hãy tinh chỉnh và giải thích lý do:\n........\n```cpp\nfor (int i = 0; i < sohs; i++) {\n```\n    switch(HS[i].XL) {\n```cpp\ncase 'A':\n  Gioi++;\n  break;\ncase 'B':\n  Kha++;\n  break;\ncase 'C':\n  TB++;\n  break;\ndefault:\n  Kem++;\n  }\n  }\n```\n", 'images': []}
+Answer: {'acceptedAnswers': ['Tự luận'], 'caseSensitive': False, 'trimWhitespace': True}
+----------------------------------------
+Index 298, ID: q299
+Question: {'text': 'Trong các cách đặt tên biến sau, cách nào đặt tên biến hợp lý nhất?', 'images': []}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+Index 299, ID: q300
+Question: {'text': 'Trong ngôn ngữ C, điều gì xảy ra khi bạn truyền trực tiếp tên của một mảng làm đối số cho một hàm?', 'images': []}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------

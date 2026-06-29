@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "mmt-1255ad3d",
+    "title": "Trắc nghiệm MMT - Mс║бng m├бy t├нnh - cuс╗Сi k├м 20181.pdf",
+    "description": "Bộ câu hỏi trắc nghiệm tự động trích xuất từ Mс║бng m├бy t├нnh - cuс╗Сi k├м 20181.pdf. Gồm 10 câu hỏi.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Tự động trích xuất từ Mс║бng m├бy t├нnh - cuс╗Сi k├м 20181.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q000_db6f",
+        "type": "single_choice",
+        "question": {
+          "text": "ĐỀ THI IT3080 MẠNG MÁY TÍNH – HỌC KỲ 20181 ĐỀ 1 Câu 1. Giải thích ngắn gọn nguyên lý của các phương pháp điều khiển truy nhập đường truyền CSMA(Carrier Sense Multipe Access).(0.25 điểm) Tại sao có đụng độ xảy ra trong các phương pháp này?(0.25 điểm) Trong phương pháp CSMA/CD, các bên xử lý như thế nào khi phát hiện đụng độ?(0.5 điểm) Câu 2. Sau một khoảng thời gian quan sát quá trình 2 máy A, B sử dụng giao thức TCP để trao đổi dữ liệu, người ta thu được các gói tin có thông số như sơ đồ bên. Trong đó #ACK là ACK Number và #SEQ là Sequence Number trong phần tiêu đề của các gói tin.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Các giá trị x, y z là bao nhiêu?(0.75 điểm)"
+          },
+          {
+            "id": "B",
+            "text": "Tổng kích thước dữ liệu hai bên đã trao đổi thành công"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q001_6fb0",
+        "type": "single_choice",
+        "question": {
+          "text": "trong thời gian quan sát là bao nhiêu byte (không kể kích thước phần tiêu đề của gói tin)?(0.25 điểm) Câu 3. Tại sao trong quá trình chuyển tiếp, gói tin IP có thể bị phân mảnh?(0.25 điểm) Giải thích cách thức các mảnh này được hợp lại thành gói tin ban đầu?(0.75 điểm) Câu 4. Vẽ mô hình phân tầng TCP/IP và đặt các giao thức sau vào đúng tầng: CSMA/CD, DNS, HTTP, IP, RIP, TCP, UDP Câu 5. Mạng sau sử dụng hình trạng (topology) nào?(0.25 điểm) Nêu tên các loại thiết bị trung tâm và tên chuẩn LAN có thể sử dụng(0.75 điểm) Câu 6. Bảng MAC Table của một Switch có nội dung như sau: Host Interface aa-aa-aa-11-11-11 Fa0/1 bb-bb-bb-22-22-22 Fa0/1 cc-cc-cc-33-33-33 Fa0/2 Giải thích xử lý của switch khi nhận được các gói tin Ethernet sau: Gói tin 1: Địa chỉ nguồn = dd-dd-dd-44-44-44, Địa chỉ đích = bb-bb-bb-22-22-22 (0.5 điểm) Gói tin 2: Địa chỉ nguồn = aa-aa-aa-11-11-11, Địa chỉ đích = ee-ee-ee-55-55-55 (0.5 điểm) Câu 7. Vẽ biểu diễn của xung tín hiệu trong điều chế Manchester và Manchester vi sai cho chuỗi bit 0111 0010 Câu 8. Cho sơ đồ một mạng máy tính như hình vẽ bên. Cổng E0 của bộ định tuyến R có địa chỉ IP 192.168.1.161 /27",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Địa chỉ trên thuộc phân lớp nào?(0.25 điểm)"
+          },
+          {
+            "id": "B",
+            "text": "Mạng có địa chỉ là bao nhiêu?(0.25 điểm)"
+          },
+          {
+            "id": "C",
+            "text": "Hãy cho biết địa chỉ IP có thể gán cho mỗi nút mạng sau?(0.5 điểm)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q002_8e0b",
+        "type": "single_choice",
+        "question": {
+          "text": "Vẽ sơ đồ quá trình thiết lập liên kết TCP và giải thích các bước thực hiện (1 điểm) Câu 10. Trình bày khái niệm Round Trip Time? (0.25 điểm) Liệt kê các yếu tố ảnh hưởng tới Round Trip Time (0.75 điểm) Câu 11. Giả sử trên liên kết TCP đã được thiết lập, bên nhận luôn sử dụng cửa sổ nhận có kích thước 16800 byte. Tại thời điểm quan sát, bên gửi sử dụng cửa sổ kiểm soát tắc nghẽn có kích thước 21000 byte, ngưỡng kiểm soát tắc nghẽn là 16800 byte.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Nếu bên gửi nhận được gói tin ACK báo thành công, nó có thể gửi lượng dữ liệu có kích"
+          },
+          {
+            "id": "B",
+            "text": "Nếu bên gửi xảy ra time-out, nó có thể gửi lượng dữ liệu có kích thước tối đa là bao"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q003_6086",
+        "type": "single_choice",
+        "question": {
+          "text": "nhiêu? Hãy giải thích. Câu 12. Alice truy cập vào tài khoản email alice@gmail.com qua trình duyệt Web và gửi một email tới địa chỉ của Bob là bob@yahoo.com. Bob sử dụng phần mềm email client Microsoft Outlook để nhận thư. Điền tên các giao thức cần thiết của tầng ứng dụng trong kịch bản truyền thông trên vào hình vẽ dưới đây. Câu 13. Cho sơ đồ mạng và địa chỉ của các mạng và router như sau: Giả sử chi phí của mỗi tuyến đường là số chặng. Hoàn thành thông tin các tuyến đường sau trong bảng định tuyến của R4 Mạng đích Cổng chuyển tiếp Chặng kế tiếp Chi phí (Destination) (Outgoing Port) (Next hop) (Cost) 1.0.0.0 /8 2.2.0.0 /16 3.3.3.0 /25 ĐÁP ÁN ĐỀ THI IT3080 MẠNG MÁY TÍNH – HỌC KỲ 20181 ĐỀ 1 Lưu ý: Nếu sinh viên làm trên 10 câu, chỉ chấm 10 câu đầu tiên Câu 1. Giải thích ngắn gọn nguyên lý của các phương pháp điều khiển truy nhập đường truyền CSMA(Carrier Sense Multipe Access).(0.25 điểm) Trả lời: Nguyên lý “nghe trước khi nói”: Cảm nhận năng lượng sóng mang trên đường truyền. Nếu tồn tại sóng mang thì đường truyền đang bận. Ngược lại, đường truyền rỗi và có thể truy nhập. Tại sao có đụng độ xảy ra trong các phương pháp này?(0.25 điểm) Trả lời: Tín hiệu mất một khoảng thời gian mới lan truyền khắp đường truyền nên trong thời gian này. Các nút trong mạng có thể chưa cảm nhận được năng lượng sóng mang nên cho rằng đường truyền rỗi, sẽ truy nhập đường truyền. Trong phương pháp CSMA/CD, các bên xử lý như thế nào khi phát hiện đụng độ?(0.5 điểm) Khi nút mạng đang truyền khung tin đầu tiên phát hiện đụng độ, nó truyền tín hiệu JAM lên đường truyền để duy trì đụng độ cho các nút khác cảm nhận được. Nếu số lần thử truyền lại đã vượt quá một giá trị tối đa nào đó, nút mạng sẽ báo lỗi truyền. Khi các nút mạng cảm nhận được đụng độ xảy ra, chúng tính toán khoảng thời gian back-off và không truy nhập đường truyền trong thời gian này để chờ đụng độ được vãn hồi. Câu 2. Sau một khoảng thời gian quan sát quá trình 2 máy A, B sử dụng giao thức TCP để trao đổi dữ liệu, người ta thu được các gói tin có thông số như sơ đồ bên. Trong đó #ACK là ACK Number và #SEQ là Sequence Number trong phần tiêu đề của các gói tin.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Các giá trị x, y z là bao nhiêu?(0.75 điểm)"
+          },
+          {
+            "id": "B",
+            "text": "Tổng kích thước dữ liệu hai bên đã trao đổi thành công"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q004_6031",
+        "type": "single_choice",
+        "question": {
+          "text": "trong thời gian quan sát là bao nhiêu byte (không kể kích thước phần tiêu đề của gói tin)?(0.25 điểm) Trả lời: (6400-1700) + (3200-1300) + (6400-6400) = 6600 Gói tin cuối chưa xác định đã truyền thành công hay chưa do trong thời gian quan sát không thấy có gói tin báo nhận. Câu 3. Tại sao trong quá trình chuyển tiếp, gói tin IP có thể bị phân mảnh?(0.25 điểm) Trả lời: Do gói tin IP được chuyển tiếp có kích thước lớn hơn giá trị MTU của đường truyền trên chặng tiếp theo Giải thích cách thức các mảnh này được hợp lại thành gói tin ban đầu?(0.75 điểm) - Các mảnh được hợp lại tại nút đích.Nút đích dựa trên trường Identification để tìm kiếm các mảnh của cùng 1 gói tin. - Trường Flag được sử dụng để xác định đã nhận được mảnh cuối hay chưa. - Trường Offset được sử dụng để sắp xếp và ghép các mảnh theo thứ tự. Câu 4. Vẽ mô hình phân tầng TCP/IP và đặt các giao thức sau vào đúng tầng: CSMA/CD, DNS, HTTP, IP, RIP, TCP, UDP Trả lời: Vẽ đúng mô hình: 0.5 điểm Điền đúng các giao thức: 0.5 điểm Nếu vẽ mô hình TCP/IP với 5 tầng Tầng ứng dụng Tầng giao vận Tầng mạng (liên mạng) Tầng liên kết dữ liệu Tầng vật lý DNS, HTTP TCP, UDP IP, RIP CSMA/CD Nếu vẽ mô hình TCP/IP với 4 tầng Tầng ứng dụng Tầng giao vận Tầng mạng (liên mạng) Tầng truy nhập mạng DNS, HTTP TCP, UDP IP, RIP CSMA/CD Câu 5. Mạng sau sử dụng hình trạng (topology) nào?(0.25 điểm) Trả lời: Mạng hình sao Nêu tên các loại thiết bị trung tâm và tên chuẩn LAN có thể sử dụng(0.75 điểm) - Tên các loại thiết bị trung tâm: Hub, Switch, Router (0.25 điểm) - Tên chuẩn LAN có thể sử dụng(nêu 1 trong số sau): 10BASE-T, 10BASE-F, 100BASE-T, 100BASE-TX, 100BASE-FX, 1000BASE-T (0.5 điểm) Câu 6. Bảng MAC Table của một Switch có nội dung như sau: Host Interface aa-aa-aa-11-11-11 Fa0/1 bb-bb-bb-22-22-22 Fa0/1 cc-cc-cc-33-33-33 Fa0/2 Giải thích xử lý của switch khi nhận được các gói tin Ethernet sau: Gói tin 1: Địa chỉ nguồn = dd-dd-dd-44-44-44, Địa chỉ đích = bb-bb-bb-22-22-22 (0.5 điểm) - Do địa chỉ nguồn không xuất hiện trên bảng MAC Table, theo cơ chế tự học, switch bổ sung địa chỉ này vào. - Tìm kiếm cổng chuyển tiếp theo địa chỉ đích trong bảng MAC, switch chuyển gói tin ra cổng FA0/1 Gói tin 2: Địa chỉ nguồn = aa-aa-aa-11-11-11, Địa chỉ đích = ee-ee-ee-55-55-55 (0.5 điểm) - Do địa chỉ đích không tồn tại trong bảng MAC Table, switch quảng bá gói tin ra tất cả các cổng, trừ cổn nhận được gói tin Câu 7. Vẽ biểu diễn của xung tín hiệu trong điều chế Manchester và Manchester vi sai cho chuỗi bit 0111 0010 Trả lời: 0 1 1 1 0 0 1 0 Manchester Manchester vi sai hoặc Câu 8. Cho sơ đồ một mạng máy tính như hình vẽ bên. Cổng E0 của bộ định tuyến R có địa chỉ IP 192.168.1.161 /27",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Địa chỉ trên thuộc phân lớp nào?(0.25 điểm)"
+          },
+          {
+            "id": "B",
+            "text": "Mạng có địa chỉ là bao nhiêu?(0.25 điểm)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q005_1625",
+        "type": "single_choice",
+        "question": {
+          "text": "Trả lời : 192.168.1.160 /27",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "Hãy cho biết địa chỉ IP có thể gán cho mỗi nút mạng sau?(0.5 điểm)"
+          },
+          {
+            "id": "A",
+            "text": "Nếu bên gửi nhận được gói tin ACK báo thành công, nó có thể gửi lượng dữ liệu có kích thước"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q006_e653",
+        "type": "single_choice",
+        "question": {
+          "text": "tối đa là bao nhiêu? Hãy giải thích. (0.5 điểm) Cửa sổ kiểm soát tắc nghẽn Cwnd = 21000, ngưỡng ssthres = 16800  đang ở giai đoạn tránh tắc nghẽn. Khi nhận được ACK ở thời điểm này này Cwnd = Cwnd + MSS = 21000 + MSS Cửa sổ nhận Rwnd = 16800 Cửa sổ gửi Swnd = min {Cwnd, Rwnd} = 16800 byte Bên gửi có thể gửi liên tiếp 16800 byte",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "B",
+            "text": "Nếu bên gửi xảy ra time-out, nó có thể gửi lượng dữ liệu có kích thước tối đa là bao nhiêu? Hãy"
+          },
+          {
+            "id": "A",
+            "text": "Địa chỉ trên thuộc phân lớp nào?(0.25 điểm)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q007_14e7",
+        "type": "single_choice",
+        "question": {
+          "text": "Trả lời: Lớp C",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "B",
+            "text": "Mạng có địa chỉ là bao nhiêu?(0.25 điểm)"
+          },
+          {
+            "id": "C",
+            "text": "Hãy cho biết địa chỉ IP có thể gán cho mỗi nút mạng sau?(0.5 điểm)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q008_a56d",
+        "type": "single_choice",
+        "question": {
+          "text": "Trả lời: Đáp án có thể là các địa chỉ bất kỳ từ 192.168.1.97 đến 192.168.1.126. Địa chỉ của các máy tính không được trùng nhau. Ví dụ: PC1: 192.168.1.98 PC2: 192.168.1.99 PC3: 192.168.1.100 Câu 2. Bảng MAC Table của một Switch có nội dung như sau: Host Interface aa-aa-aa-11-11-11 Fa0/2 bb-bb-bb-22-22-22 Fa0/1 cc-cc-cc-33-33-33 Fa0/1 Giải thích xử lý của switch khi nhận được các gói tin Ethernet sau: Gói tin 1: Địa chỉ nguồn = bb-bb-bb-22-22-22, Địa chỉ đích = ee-ee-ee-55-55-55 (0.5 điểm) Trả lời: Do địa chỉ đích không tồn tại trong bảng MAC Table, switch quảng bá gói tin ra tất cả các cổng, trừ cổn nhận được gói tin Gói tin 1: Địa chỉ nguồn = dd-dd-dd-44-44-44, Địa chỉ đích = cc-cc-cc-33-33-33 (0.5 điểm) Trả lời: - Do địa chỉ nguồn không xuất hiện trên bảng MAC Table, theo cơ chế tự học, switch bổ sung địa chỉ này vào. - Tìm kiếm cổng chuyển tiếp theo địa chỉ đích trong bảng MAC, switch chuyển gói tin ra cổng Fa0/1 Câu 3. Vẽ sơ đồ quá trình thiết lập liên kết TCP và giải thích các bước thực hiện (1 điểm) Trả lời: - Bước 1: Bên A gửi một gói tin TCP có cờ SYN được bật để yêu cầu thiết lập kết nối. Gói tin này có giá trị Sequence number ngẫu nhiên và không mang theo dữ liệu. - Bước 2: Nếu bên B chấp nhận thiết lập kết nối, gửi lại gói tin TCP có 2 cờ là SYN và ACK được bật. Gói tin này có giá trị Sequence number ngẫu nhiên và không mang theo dữ liệu. - Bước 3: Bên A gửi lại gói tin TCP có cờ ACK được bật. Gói tin này có thể mang theo dữ liệu mà muốn gửi cho B. Câu 4 Vẽ biểu diễn của xung tín hiệu trong điều chế Manchester và Manchester vi sai cho chuỗi bit 0100 1110 Trả lời: 0 1 0 0 1 1 1 Manchester 0 Manchester vi sai hoặc Câu 5. Giải thích ngắn gọn nguyên lý của các phương pháp điều khiển truy nhập đường truyền CSMA(Carrier Sense Multipe Access).(0.25 điểm) Trả lời: Nguyên lý “nghe trước khi nói”: Cảm nhận năng lượng sóng mang trên đường truyền. Nếu tồn tại sóng mang thì đường truyền đang bận. Ngược lại, đường truyền rỗi và có thể truy nhập. Tại sao có đụng độ xảy ra trong các phương pháp này?(0.25 điểm) Trả lời: Tín hiệu mất một khoảng thời gian mới lan truyền khắp đường truyền nên trong thời gian này. Các nút trong mạng có thể chưa cảm nhận được năng lượng sóng mang nên cho rằng đường truyền rỗi, sẽ truy nhập đường truyền. Trong phương pháp CSMA/CD, các bên xử lý như thế nào khi phát hiện đụng độ?(0.5 điểm) Khi nút mạng đang truyền khung tin đầu tiên phát hiện đụng độ, nó truyền tín hiệu JAM lên đường truyền để duy trì đụng độ cho các nút khác cảm nhận được. Nếu số lần thử truyền lại đã vượt quá một giá trị tối đa nào đó, nút mạng sẽ báo lỗi truyền. Khi các nút mạng cảm nhận được đụng độ xảy ra, chúng tính toán khoảng thời gian back-off và không truy nhập đường truyền trong thời gian này để chờ đụng độ được vãn hồi. Câu 6. Vẽ mô hình phân tầng TCP/IP và đặt các giao thức sau vào đúng tầng: CSMA/CD, DNS, HTTP, IP, RIP, TCP, UDP Trả lời: Vẽ đúng mô hình: 0.5 điểm Điền đúng các giao thức: 0.5 điểm Nếu vẽ mô hình TCP/IP với 5 tầng Tầng ứng dụng Tầng giao vận Tầng mạng (liên mạng) Tầng liên kết dữ liệu Tầng vật lý DNS, HTTP TCP, UDP IP, RIP CSMA/CD Nếu vẽ mô hình TCP/IP với 4 tầng Tầng ứng dụng Tầng giao vận Tầng mạng (liên mạng) Tầng truy nhập mạng DNS, HTTP TCP, UDP IP, RIP CSMA/CD Câu 7. Sau một khoảng thời gian quan sát quá trình 2 máy A, B sử dụng giao thức TCP để trao đổi dữ liệu, người ta thu được các gói tin có thông số như sơ đồ bên. Trong đó #ACK là ACK Number và #SEQ là Sequence Number trong phần tiêu đề của các gói tin.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Các giá trị x, y z là bao nhiêu?"
+          },
+          {
+            "id": "B",
+            "text": "Tổng kích thước dữ liệu hai bên đã trao đổi thành công trong thời"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q009_c485",
+        "type": "single_choice",
+        "question": {
+          "text": "gian quan sát là bao nhiêu byte (không kể kích thước phần tiêu đề của gói tin)? Trả lời : (5800-3700) + (7700 - 2800) + (5800-5800) = 7000 byte Gói tin cuối chưa xác định đã truyền thành công hay chưa do trong thời gian quan sát không thấy có gói tin báo nhận. Câu 8. Mạng sau sử dụng hình trạng (topology) nào?(0.25 điểm) Trả lời: Mạng hình sao Nêu tên các loại thiết bị trung tâm và tên chuẩn LAN có thể sử dụng(0.75 điểm) - Tên các loại thiết bị trung tâm: Hub, Switch, Router (0.25 điểm) - Tên chuẩn LAN có thể sử dụng(nêu 1 trong số sau): 10BASE-T, 10BASE-F, 100BASE-T, 100BASETX, 100BASE-FX, 1000BASE-T (0.5 điểm) Câu 9. Alice truy cập vào tài khoản email alice@gmail.com qua trình duyệt Web và gửi một email tới địa chỉ của Bob là bob@yahoo.com. Bob sử dụng phần mềm email client Microsoft Outlook để nhận thư. Điền tên các giao thức cần thiết của tầng ứng dụng trong kịch bản truyền thông trên vào hình vẽ dưới đây. Trả lời: Câu 10. Giả sử trên liên kết TCP đã được thiết lập, bên nhận luôn sử dụng cửa sổ nhận có kích thước 21000 byte. Tại thời điểm quan sát, bên gửi sử dụng cửa sổ kiểm soát tắc nghẽn có kích thước 28000 byte, ngưỡng kiểm soát tắc nghẽn là 21000 byte.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Nếu bên gửi nhận được gói tin ACK báo thành công, nó có thể gửi lượng dữ liệu có kích thước tối đa"
+          },
+          {
+            "id": "B",
+            "text": "Nếu bên gửi xảy ra time-out, nó có thể gửi lượng dữ liệu có kích thước tối đa là bao nhiêu? Hãy giải"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

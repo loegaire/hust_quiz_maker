@@ -11,7 +11,7 @@ export function FillGapQuestion({ value, onChange, disabled }: FillGapQuestionPr
       value={value}
       onChange={(e) => onChange(e.target.value)}
       disabled={disabled}
-      className="w-full rounded-lg border border-black/10 px-4 py-3"
+      className="neo-input w-full"
       placeholder="Type your answer"
     />
   );

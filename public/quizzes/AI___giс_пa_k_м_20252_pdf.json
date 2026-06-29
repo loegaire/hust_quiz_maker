@@ -1,0 +1,862 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "ai-69e5043e",
+    "title": "Trắc nghiệm AI - AI - giс╗пa k├м 20252.pdf",
+    "description": "Bộ câu hỏi trắc nghiệm tự động trích xuất từ AI - giс╗пa k├м 20252.pdf. Gồm 22 câu hỏi.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Tự động trích xuất từ AI - giс╗пa k├м 20252.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q000_0347",
+        "type": "single_choice",
+        "question": {
+          "text": "ĐẠI HỌC BÁCH KHOA HÀ NỘI TRƯỜNG CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG Họ và tên sinh viên: . . . . . . . . . . . . . . . . ĐỀ KIỂM TRA GIỮA KỲ 2025.2 Học phần: Nhập môn trí tuệ nhân tạo Mã học phần: IT3160 STT: . . . . . . . . . . . . Mã lớp học: . . . . . . . . . . . . . . . . . . . . . . . . . . . . Thời gian làm bài: 90 phút Tổng điểm bài thi MSSV: . . . . . . . . . . . . Họ tên và chữ ký của cán bộ chấm thi Họ tên và chữ ký của cán bộ coi thi Mã đề thi: 1 (Đề gồm 14 câu) Chú ý: • Sinh viên được phép sử dụng mọi tài liệu trên giấy khi làm bài thi. • Sinh viên không được phép sử dụng các thiết bị điện tử khi làm bài thi. PHẦN 1. TRẮC NGHIỆM Câu 1: Trong biểu diễn tri thức bằng frame, thủ tục IF-NEEDED được sử dụng khi nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Khi một giá trị được thêm vào slot"
+          },
+          {
+            "id": "B",
+            "text": "Khi cần kiểm tra dữ liệu đầu vào trước khi lưu vào slot"
+          },
+          {
+            "id": "C",
+            "text": "Khi hệ thống muốn xoá một slot khỏi frame"
+          },
+          {
+            "id": "D",
+            "text": "Khi hệ thống cần truy cập giá trị của một slot nhưng chưa có sẵn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q001_f1ba",
+        "type": "single_choice",
+        "question": {
+          "text": "Một cánh tay robot trong nhà máy lắp ráp linh kiện. Nếu robot thực hiện cùng một thao tác trong cùng điều kiện thì kết quả luôn giống nhau. Môi trường này được xem là",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Động"
+          },
+          {
+            "id": "B",
+            "text": "Ngẫu nhiên"
+          },
+          {
+            "id": "C",
+            "text": "Quan sát một phần"
+          },
+          {
+            "id": "D",
+            "text": "Xác định"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q002_1663",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong hệ PEAS của hệ thống chẩn đoán y khoa bằng AI, \"bệnh nhân và hồ sơ bệnh án\" thuộc nhóm nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sensors"
+          },
+          {
+            "id": "B",
+            "text": "Performance measure"
+          },
+          {
+            "id": "C",
+            "text": "Actuators"
+          },
+          {
+            "id": "D",
+            "text": "Environment"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q003_a873",
+        "type": "single_choice",
+        "question": {
+          "text": "Một chương trình chơi cờ vua với người chơi khác. Trạng thái bàn cờ luôn nhìn thấy đầy đủ và mỗi nước đi đều có kết quả chính xác theo luật. Môi trường này là",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Quan sát một phần, xác định, đơn tác tử"
+          },
+          {
+            "id": "B",
+            "text": "Quan sát một phần, ngẫu nhiên, đa tác tử"
+          },
+          {
+            "id": "C",
+            "text": "Quan sát hoàn toàn, xác định, đa tác tử"
+          },
+          {
+            "id": "D",
+            "text": "Quan sát hoàn toàn, ngẫu nhiên, đơn tác tử"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q004_33b1",
+        "type": "single_choice",
+        "question": {
+          "text": "Một robot hút bụi hoạt động trong căn phòng, có thể cảm nhận toàn bộ vị trí đồ vật và trạng thái sàn nhà tại mọi thời điểm. Tuy nhiên, khi di chuyển, robot có thể bị trượt bánh do mặt sàn ướt. Môi trường của robot thuộc loại nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Quan sát một phần, xác định"
+          },
+          {
+            "id": "B",
+            "text": "Quan sát hoàn toàn, xác định"
+          },
+          {
+            "id": "C",
+            "text": "Quan sát một phần, ngẫu nhiên"
+          },
+          {
+            "id": "D",
+            "text": "Quan sát hoàn toàn, ngẫu nhiên"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q005_b556",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong frame, thủ tục IF-ADDED có vai trò gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Gợi ý giá trị khi truy vấn slot"
+          },
+          {
+            "id": "B",
+            "text": "Tự động thực hiện hành động khi một giá trị mới được gán cho slot"
+          },
+          {
+            "id": "C",
+            "text": "Tự động tạo giá trị khi slot bị bỏ trống"
+          },
+          {
+            "id": "D",
+            "text": "Xác định kiểu dữ liệu hợp lệ cho slot"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q006_a060",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong PEAS của hệ thống ATM thông minh, \"màn hình hiển thị và khe xuất tiền\" thuộc nhóm nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Actuators"
+          },
+          {
+            "id": "B",
+            "text": "Sensors"
+          },
+          {
+            "id": "C",
+            "text": "Performance measure"
+          },
+          {
+            "id": "D",
+            "text": "Environment"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q007_e816",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây KHÔNG phải là nhược điểm của frame mà mạng ngữ nghĩa giải quyết được? 1 ĐẠI HỌC BÁCH KHOA HÀ NỘI TRƯỜNG CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Gặp khó khăn khi mở rộng hệ thống tri thức quy mô lớn"
+          },
+          {
+            "id": "B",
+            "text": "Thiếu khả năng mô tả các quan hệ động và liên kết ngữ nghĩa"
+          },
+          {
+            "id": "C",
+            "text": "Dễ gây nhầm lẫn khi biểu diễn các quan hệ phân cấp"
+          },
+          {
+            "id": "D",
+            "text": "Quá phụ thuộc vào cách thiết kế thuộc tính tĩnh"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q008_4942",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong biểu diễn tri thức bằng khung, câu hỏi nào dưới đây có thể trả lời trực tiếp từ một khung đơn lẻ?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "\"Màu của xe buýt là gì?\""
+          },
+          {
+            "id": "B",
+            "text": "\"Có bao nhiêu xe buýt màu blue?\""
+          },
+          {
+            "id": "C",
+            "text": "Tất cả các đáp án đều đúng"
+          },
+          {
+            "id": "D",
+            "text": "\"Cái gì có màu blue?\""
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q009_08d4",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong mô hình PEAS của một xe tự lái, yếu tố nào thuộc nhóm Performance measure?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Động cơ và hệ thống phanh"
+          },
+          {
+            "id": "B",
+            "text": "Giảm số vụ va chạm và thời gian di chuyển"
+          },
+          {
+            "id": "C",
+            "text": "Camera và cảm biến lidar"
+          },
+          {
+            "id": "D",
+            "text": "Đường phố và tín hiệu giao thông"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q010_df26",
+        "type": "single_choice",
+        "question": {
+          "text": "PHẦN 2. TỰ LUẬN Câu 1: Xét cây tìm kiếm như trong hình vẽ Các trạng thái màu ghi là các trạng thái đích. Các mũi tên là các dịch chuyển có thể giữa các trạng thái. Giá trị số trên một mũi tên là chi phí dịch chuyển. Lưu ý các dịch chuyển là có hướng; ví dụ, A → B là dịch chuyển hợp lệ, nhưng B → A không phải là một dịch chuyển hợp lệ. Giá trị số thể hiện trong một hình thoi là giá trị ước lượng chi phí (tối thiểu) di chuyển từ trạng thái đó đến trạng thái đích. Với các trạng thái có cùng giá trị ước lượng, thì ưu tiên xét theo thứ tự trong bảng chữ cái Cho biết đường đi trả về của các giải thuật tìm kiếm sau:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tìm kiếm rộng (BFS)"
+          },
+          {
+            "id": "B",
+            "text": "Tìm kiếm cực tiểu (UCS)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q011_7024",
+        "type": "single_choice",
+        "question": {
+          "text": "Hãy sử dụng bảng chân lý, cho biết câu sau là True hay False (yêu cầu vẽ bảng): (Smoke → Fire) → (¬Smoke → ¬Fire) Câu 3: Chuyển các câu sau sang logic vị từ: 1. \"Every student who studies Artificial Intelligence likes programming\" 2. \"There exists a teacher who teaches every student in class A\" Câu 4: Amy, Betty, Cindy và Diane đến cửa hàng hải sản để ăn trưa. Mỗi người trong họ đã gọi 1 món cá. Mỗi món cá chỉ có 1 màu: đỏ hoặc xanh. Bồi bàn đã báo lại rằng: – Phát biểu 1: Trong 3 người Amy, Cindy và Diane, có 2 người gọi món cá màu đỏ – Phát biểu 2: Amy và Betty có món cá khác màu – Phát biểu 3: Betty và Cindy có món cá khác màu – Phát biểu 4: Cindy và Diane có món cá khác màu 1. Biểu diễn các Phát biểu 1, 2, 3, 4 trên dưới dạng logic định đề với các ký hiệu định đề như sau: A: Amy gọi món cá màu đỏ; B: Betty gọi món cá màu đỏ; C: Cindy gọi món cá màu đỏ; D: Diane gọi món cá màu đỏ 2. Chuyển các phát biểu trên về dạng chuẩn CNF (Yêu cầu viết rõ từng bước biến đổi) 2 ĐẠI HỌC BÁCH KHOA HÀ NỘI TRƯỜNG CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG Họ và tên sinh viên: . . . . . . . . . . . . . . . . ĐỀ KIỂM TRA GIỮA KỲ 2025.2 Học phần: Nhập môn trí tuệ nhân tạo Mã học phần: IT3160 STT: . . . . . . . . . . . . Mã lớp học: . . . . . . . . . . . . . . . . . . . . . . . . . . . . Thời gian làm bài: 90 phút Tổng điểm bài thi MSSV: . . . . . . . . . . . . Họ tên và chữ ký của cán bộ chấm thi Họ tên và chữ ký của cán bộ coi thi Mã đề thi: 2 (Đề gồm 14 câu) Chú ý: • Sinh viên được phép sử dụng mọi tài liệu trên giấy khi làm bài thi. • Sinh viên không được phép sử dụng các thiết bị điện tử khi làm bài thi. PHẦN 1. TRẮC NGHIỆM Câu 1: Một chương trình chơi cờ vua với người chơi khác. Trạng thái bàn cờ luôn nhìn thấy đầy đủ và mỗi nước đi đều có kết quả chính xác theo luật. Môi trường này là",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Quan sát một phần, ngẫu nhiên, đa tác tử"
+          },
+          {
+            "id": "B",
+            "text": "Quan sát một phần, xác định, đơn tác tử"
+          },
+          {
+            "id": "C",
+            "text": "Quan sát hoàn toàn, xác định, đa tác tử"
+          },
+          {
+            "id": "D",
+            "text": "Quan sát hoàn toàn, ngẫu nhiên, đơn tác tử"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q012_213a",
+        "type": "single_choice",
+        "question": {
+          "text": "Một robot hút bụi hoạt động trong căn phòng, có thể cảm nhận toàn bộ vị trí đồ vật và trạng thái sàn nhà tại mọi thời điểm. Tuy nhiên, khi di chuyển, robot có thể bị trượt bánh do mặt sàn ướt. Môi trường của robot thuộc loại nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Quan sát hoàn toàn, xác định"
+          },
+          {
+            "id": "B",
+            "text": "Quan sát một phần, ngẫu nhiên"
+          },
+          {
+            "id": "C",
+            "text": "Quan sát một phần, xác định"
+          },
+          {
+            "id": "D",
+            "text": "Quan sát hoàn toàn, ngẫu nhiên"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q013_67ec",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong biểu diễn tri thức bằng khung, câu hỏi nào dưới đây có thể trả lời trực tiếp từ một khung đơn lẻ?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "\"Màu của xe buýt là gì?\""
+          },
+          {
+            "id": "B",
+            "text": "\"Có bao nhiêu xe buýt màu blue?\""
+          },
+          {
+            "id": "C",
+            "text": "Tất cả các đáp án đều đúng"
+          },
+          {
+            "id": "D",
+            "text": "\"Cái gì có màu blue?\""
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q014_334a",
+        "type": "single_choice",
+        "question": {
+          "text": "Một cánh tay robot trong nhà máy lắp ráp linh kiện. Nếu robot thực hiện cùng một thao tác trong cùng điều kiện thì kết quả luôn giống nhau. Môi trường này được xem là",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Ngẫu nhiên"
+          },
+          {
+            "id": "B",
+            "text": "Xác định"
+          },
+          {
+            "id": "C",
+            "text": "Động"
+          },
+          {
+            "id": "D",
+            "text": "Quan sát một phần"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q015_cfc5",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong biểu diễn tri thức bằng frame, thủ tục IF-NEEDED được sử dụng khi nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Khi một giá trị được thêm vào slot"
+          },
+          {
+            "id": "B",
+            "text": "Khi cần kiểm tra dữ liệu đầu vào trước khi lưu vào slot"
+          },
+          {
+            "id": "C",
+            "text": "Khi hệ thống muốn xoá một slot khỏi frame"
+          },
+          {
+            "id": "D",
+            "text": "Khi hệ thống cần truy cập giá trị của một slot nhưng chưa có sẵn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q016_336d",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong frame, thủ tục IF-ADDED có vai trò gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tự động tạo giá trị khi slot bị bỏ trống"
+          },
+          {
+            "id": "B",
+            "text": "Tự động thực hiện hành động khi một giá trị mới được gán cho slot"
+          },
+          {
+            "id": "C",
+            "text": "Gợi ý giá trị khi truy vấn slot"
+          },
+          {
+            "id": "D",
+            "text": "Xác định kiểu dữ liệu hợp lệ cho slot"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q017_4e20",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong mô hình PEAS của một xe tự lái, yếu tố nào thuộc nhóm Performance measure?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đường phố và tín hiệu giao thông"
+          },
+          {
+            "id": "B",
+            "text": "Giảm số vụ va chạm và thời gian di chuyển"
+          },
+          {
+            "id": "C",
+            "text": "Camera và cảm biến lidar"
+          },
+          {
+            "id": "D",
+            "text": "Động cơ và hệ thống phanh"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q018_37d1",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong PEAS của hệ thống ATM thông minh, \"màn hình hiển thị và khe xuất tiền\" thuộc nhóm nào? 1 ĐẠI HỌC BÁCH KHOA HÀ NỘI",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Actuators"
+          },
+          {
+            "id": "B",
+            "text": "Performance measure"
+          },
+          {
+            "id": "C",
+            "text": "Environment"
+          },
+          {
+            "id": "D",
+            "text": "Sensors"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q019_cfbb",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây KHÔNG phải là nhược điểm của frame mà mạng ngữ nghĩa giải quyết được?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Dễ gây nhầm lẫn khi biểu diễn các quan hệ phân cấp"
+          },
+          {
+            "id": "B",
+            "text": "Quá phụ thuộc vào cách thiết kế thuộc tính tĩnh"
+          },
+          {
+            "id": "C",
+            "text": "Gặp khó khăn khi mở rộng hệ thống tri thức quy mô lớn"
+          },
+          {
+            "id": "D",
+            "text": "Thiếu khả năng mô tả các quan hệ động và liên kết ngữ nghĩa"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q020_9b04",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong hệ PEAS của hệ thống chẩn đoán y khoa bằng AI, \"bệnh nhân và hồ sơ bệnh án\" thuộc nhóm nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Actuators"
+          },
+          {
+            "id": "B",
+            "text": "Performance measure"
+          },
+          {
+            "id": "C",
+            "text": "Environment"
+          },
+          {
+            "id": "D",
+            "text": "Sensors"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q021_3c17",
+        "type": "single_choice",
+        "question": {
+          "text": "PHẦN 2. TỰ LUẬN Câu 1: Xét cây tìm kiếm như trong hình vẽ Các trạng thái màu ghi là các trạng thái đích. Các mũi tên là các dịch chuyển có thể giữa các trạng thái. Giá trị số trên một mũi tên là chi phí dịch chuyển. Lưu ý các dịch chuyển là có hướng; ví dụ, A → B là dịch chuyển hợp lệ, nhưng B → A không phải là một dịch chuyển hợp lệ. Giá trị số thể hiện trong một hình thoi là giá trị ước lượng chi phí (tối thiểu) di chuyển từ trạng thái đó đến trạng thái đích. Với các trạng thái có cùng giá trị ước lượng, thì ưu tiên xét theo thứ tự trong bảng chữ cái Cho biết đường đi trả về của các giải thuật tìm kiếm sau:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tìm kiếm sâu theo nhánh bên trái trước (DFS)"
+          },
+          {
+            "id": "B",
+            "text": "Tìm kiếm cực tiểu với tri thức bổ sung (A*)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "ai"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

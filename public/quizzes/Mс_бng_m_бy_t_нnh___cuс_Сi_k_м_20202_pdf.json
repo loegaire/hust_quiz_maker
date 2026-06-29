@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "mmt-3b548059",
+    "title": "Trắc nghiệm MMT - Mс║бng m├бy t├нnh - cuс╗Сi k├м 20202.pdf",
+    "description": "Bộ câu hỏi trắc nghiệm tự động trích xuất từ Mс║бng m├бy t├нnh - cuс╗Сi k├м 20202.pdf. Gồm 4 câu hỏi.",
+    "language": "vi",
+    "source": {
+      "type": "extracted_from_pdf",
+      "notes": "Tự động trích xuất từ Mс║бng m├бy t├нnh - cuс╗Сi k├м 20202.pdf"
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q000_27e6",
+        "type": "single_choice",
+        "question": {
+          "text": "ĐỀ THI CUỐI KỲ MÔN: IT3080 – Mạng Máy Tính (20202) (Thời gian: 60 phút – Được phép sử dụng tài liệu) Câu 1.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Các cách phân loại mạng được thực hiện căn cứ vào những yếu tố nào?"
+          },
+          {
+            "id": "B",
+            "text": "Với từng phương pháp phân loại, nêu rõ ưu nhược điểm và phạm vi ứng dụng của các loại?"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q001_c2b1",
+        "type": "single_choice",
+        "question": {
+          "text": "Nội dung câu hỏi bị trống do lỗi trích xuất.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Phân tích và so sánh bản chất hai phương pháp đa truy cập TDMA và FDMA?"
+          },
+          {
+            "id": "B",
+            "text": "Tại sao đa truy cập trong đường dây cáp đồng lại cần sử dụng phương pháp CSMA/CD và còn trong mạng không dây"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q002_cc33",
+        "type": "single_choice",
+        "question": {
+          "text": "lại sử dụng CSMA/CA?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "C",
+            "text": "Tại sao đa truy cập Slotted ALOHA có hiệu suất truyền thành công cao hơn ALOHA?"
+          },
+          {
+            "id": "A",
+            "text": "Lựa chọn trống"
+          },
+          {
+            "id": "B",
+            "text": "Lựa chọn trống"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q003_eaf5",
+        "type": "single_choice",
+        "question": {
+          "text": "Giai đoạn Slow start bắt đầu tại những lượt gửi nào điểm nào? Đoạn nào biểu diễn giai đoạn tránh tắc nghẽn? Tại lượt gửi nào, phía gửi xẩy ra timeout? Câu 4. Hãy phân tích và so sánh ưu nhược điểm của hai giao thức TCP và UDP? Câu 5. Tại một router của Internet có cấu trúc Input-Buffer với kích thước 3 đầu vào và 3 đầu ra, hãy nêu rõ các bước mà router cần thực hiện kèm vẽ hình minh hoạ khi một IP packet đến tại đầu vào số 1 và cần ra ở đầu ra số 3? Câu 6. Các gói dữ liệu có độ dài n bytes được truyền qua một kênh truyền có lỗi với tốc độ truyền 4kbps với thời gian trễ là 20ms theo phương thức truyền Stop and Wait. Bản tin báo nhận có dộ dài 1 byte. Để hiệu suất kênh truyền đạt được ít nhất là 50% thì độ dài của gói là bao nhiêu? Câu 7. Một người sử dụng trình duyệt web để gửi yêu cầu truy cập vào trang web www.hust.edu.vn, hãy liệt kê các giao thức đã được sử dụng theo thứ tự của mô hình phân tầng OSI? Câu 8. Trình bày nguyên lý đóng gói dữ liệu trong kiến trúc phân tầng của mô hình TCP từ tầng (N=3, IP) xuống tầng (N=2, Ethernet IEEE 802.3). Nếu so sánh với mô hình OSI thì PDU(3), SDU(2), PCI(2), PDU(2) tương ứng với các trường nào của khung Ethernet IEEE 802.3? Câu 9. So sánh hai mô hình phân lớp OSI và TCP/IP? Câu 10. Hãy trả lời các câu hỏi sau:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Lựa chọn trống"
+          },
+          {
+            "id": "B",
+            "text": "Lựa chọn trống"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Chưa có giải thích.",
+          "images": []
+        },
+        "tags": [
+          "mmt"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

@@ -18,31 +18,80 @@
       {
         "id": "q001",
         "type": "single_choice",
-        "question": { "text": "Which protocol resolves domain names to IP addresses?", "images": [] },
+        "question": {
+          "text": "Which protocol resolves domain names to IP addresses?",
+          "images": []
+        },
         "choices": [
-          { "id": "A", "text": "HTTP" },
-          { "id": "B", "text": "DNS" },
-          { "id": "C", "text": "FTP" },
-          { "id": "D", "text": "SMTP" }
+          {
+            "id": "A",
+            "text": "HTTP"
+          },
+          {
+            "id": "B",
+            "text": "DNS"
+          },
+          {
+            "id": "C",
+            "text": "FTP"
+          },
+          {
+            "id": "D",
+            "text": "SMTP"
+          }
         ],
-        "answer": { "correctChoiceIds": ["B"] },
-        "explanation": { "text": "DNS resolves human-readable names to IP addresses.", "images": [] },
-        "tags": ["networking"],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "DNS resolves human-readable names to IP addresses.",
+          "images": []
+        },
+        "tags": [
+          "networking"
+        ],
         "difficulty": "easy"
       },
       {
         "id": "q002",
         "type": "multiple_choice",
-        "question": { "text": "Which are transport layer protocols?", "images": [] },
+        "question": {
+          "text": "Which are transport layer protocols?",
+          "images": []
+        },
         "choices": [
-          { "id": "A", "text": "TCP" },
-          { "id": "B", "text": "UDP" },
-          { "id": "C", "text": "IP" },
-          { "id": "D", "text": "Ethernet" }
+          {
+            "id": "A",
+            "text": "TCP"
+          },
+          {
+            "id": "B",
+            "text": "UDP"
+          },
+          {
+            "id": "C",
+            "text": "IP"
+          },
+          {
+            "id": "D",
+            "text": "Ethernet"
+          }
         ],
-        "answer": { "correctChoiceIds": ["A", "B"] },
-        "explanation": { "text": "TCP and UDP are transport-layer protocols.", "images": [] },
-        "tags": ["networking"],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "TCP and UDP are transport-layer protocols.",
+          "images": []
+        },
+        "tags": [
+          "networking"
+        ],
         "difficulty": "medium"
       }
     ]

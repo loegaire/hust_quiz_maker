@@ -1,7 +1,7 @@
 import type { QuizPackFile } from '../types/quiz';
 
 function normalizeMedia(
-  items: Array<string | { id?: string; src?: string; ascii?: string; alt?: string }>
+  items: Array<string | { id?: string; src?: string; ascii?: string; svg?: string; alt?: string }>
 ) {
   return items.map((item, index) => {
     if (typeof item === 'string') {
@@ -15,6 +15,14 @@ function normalizeMedia(
       return {
         id: item.id ?? `img-${index + 1}`,
         src: item.src,
+        alt: item.alt
+      };
+    }
+
+    if (item.svg) {
+      return {
+        id: item.id ?? `svg-${index + 1}`,
+        svg: item.svg,
         alt: item.alt
       };
     }

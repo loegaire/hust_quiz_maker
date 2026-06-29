@@ -1,31 +1,201 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap');
 @import 'katex/dist/katex.min.css';
+@import 'highlight.js/styles/github-dark.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --bg: #f4f1ea;
-  --card: #fffdf8;
-  --ink: #182018;
-  --muted: #5f665f;
-  --accent: #214e34;
-  --accent-soft: #d8eadf;
+  --bg: #f7f248;
+  --card: #fffdf2;
+  --ink: #0b0b0b;
+  --muted: #3f3f46;
+  --accent: #ff4d00;
+  --accent-soft: #74f2ce;
+  --accent-blue: #39a0ff;
+  --accent-pink: #ff79c6;
+  --border: #0b0b0b;
+  --shadow: #0b0b0b;
 }
 
 .dark {
-  --bg: #131614;
-  --card: #1d241f;
-  --ink: #e6f1e9;
-  --muted: #a1b0a5;
-  --accent: #89d6a6;
-  --accent-soft: #254434;
+  --bg: #101010;
+  --card: #f8f4df;
+  --ink: #0b0b0b;
+  --muted: #3f3f46;
+  --accent: #ff6b35;
+  --accent-soft: #6ee7b7;
+  --accent-blue: #60a5fa;
+  --accent-pink: #f472b6;
+  --border: #0b0b0b;
+  --shadow: #f7f248;
 }
 
 body {
   margin: 0;
-  background: radial-gradient(circle at 15% 0%, #d8eadf 0%, var(--bg) 45%);
+  background:
+    linear-gradient(90deg, rgba(11, 11, 11, 0.09) 1px, transparent 1px),
+    linear-gradient(rgba(11, 11, 11, 0.09) 1px, transparent 1px),
+    var(--bg);
+  background-size: 28px 28px;
   color: var(--ink);
   font-family: 'IBM Plex Sans', sans-serif;
+}
+
+@layer components {
+  .neo-card {
+    @apply border-4 border-black bg-[var(--card)] p-5 shadow-[8px_8px_0_var(--shadow)];
+    border-radius: 6px;
+  }
+
+  .neo-panel {
+    @apply border-4 border-black bg-[var(--accent-soft)] p-4 shadow-[6px_6px_0_var(--shadow)];
+    border-radius: 6px;
+  }
+
+  .neo-button {
+    @apply border-4 border-black bg-[var(--accent)] px-4 py-2 font-display font-bold text-black shadow-[4px_4px_0_var(--shadow)] transition;
+    border-radius: 4px;
+  }
+
+  .neo-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--shadow);
+  }
+
+  .neo-button:disabled {
+    @apply cursor-not-allowed opacity-45;
+    transform: none;
+  }
+
+  .neo-button-secondary {
+    @apply border-4 border-black bg-[var(--accent-blue)] px-4 py-2 font-display font-bold text-black shadow-[4px_4px_0_var(--shadow)] transition;
+    border-radius: 4px;
+  }
+
+  .neo-button-danger {
+    @apply border-4 border-black bg-red-400 px-4 py-2 font-display font-bold text-black shadow-[4px_4px_0_var(--shadow)] transition;
+    border-radius: 4px;
+  }
+
+  .neo-input {
+    @apply border-4 border-black bg-white px-3 py-2 text-black shadow-[3px_3px_0_var(--shadow)];
+    border-radius: 4px;
+  }
+
+  .neo-pill {
+    @apply border-2 border-black bg-white px-3 py-1 font-bold text-black;
+    border-radius: 999px;
+  }
+}
+
+.rich-text {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.rich-text > * + * {
+  margin-top: 0.75rem;
+}
+
+.rich-text h1,
+.rich-text h2,
+.rich-text h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.15;
+}
+
+.rich-text h1 {
+  font-size: 1.5rem;
+}
+
+.rich-text h2 {
+  font-size: 1.25rem;
+}
+
+.rich-text h3 {
+  font-size: 1.1rem;
+}
+
+.rich-text ul,
+.rich-text ol {
+  padding-left: 1.25rem;
+}
+
+.rich-text ul {
+  list-style: disc;
+}
+
+.rich-text ol {
+  list-style: decimal;
+}
+
+.rich-text blockquote {
+  border-left: 6px solid var(--border);
+  background: var(--accent-soft);
+  padding: 0.75rem 1rem;
+}
+
+.rich-text :not(pre) > code {
+  border: 2px solid var(--border);
+  background: #fff176;
+  padding: 0.05rem 0.3rem;
+  font-weight: 700;
+}
+
+.rich-text pre {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 4px solid var(--border);
+  background: #111827;
+  color: #f9fafb;
+  padding: 1rem;
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+
+.rich-text pre code {
+  white-space: pre;
+}
+
+.rich-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 4px solid var(--border);
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+
+.rich-text table {
+  min-width: 36rem;
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.rich-text th,
+.rich-text td {
+  border: 2px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+}
+
+.rich-text th {
+  background: var(--accent-blue);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.rich-text img {
+  max-width: 100%;
+  height: auto;
+}
+
+.rich-text .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.rich-text .katex {
+  max-width: 100%;
 }

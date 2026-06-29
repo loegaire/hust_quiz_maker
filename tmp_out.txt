@@ -1,0 +1,272 @@
+ID: q151
+Question: {'text': 'C6D252: Trong chuẩn C++, tại sao hành vi gọi đệ quy hàm main() lại bị xem là không hợp lệ (III-formed), khác với ngôn ngữ C khi điều này vẫn được cho phép?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'C++ coi đây là vi phạm vì main gắn với cơ chế quản lý vòng đời đối tượng tĩnh (RAII), trong khi C chỉ đơn thuần tạo một khung gọi hàm mới'}
+  1: {'id': 'B', 'text': 'C++ cấm hoàn toàn vì main là điểm bắt đầu khởi tạo RAII.'}
+  2: {'id': 'C', 'text': 'Ngôn ngữ C dùng Frame Pointer ảo để tự dọn dẹp Stack đệ quy an toàn mà không cần lập trình viên can thiệp'}
+  3: {'id': 'D', 'text': 'Trình biên dịch C++ tự động chuyển đệ quy này thành vòng lặp vô hạn ở mức mã máy để chống tràn bộ đệm'}
+Answer: {'correctChoiceIds': ['B']}
+----------------------------------------
+ID: q152
+Question: {'text': 'Xét comparator chỉ so sánh theo thành phần first. Phát biểu nào đúng?\n\n### struct Cmp {\n\n###    bool operator()(const pair<int,int>& a,\n\n###                    const pair<int,int>& b) const {\n\n```cpp\n## #return a.first < b.first;\n```\n\n###    }\n\n```cpp\n## #\n}\n;\n\n## #set<pair<int, int>, Cmp> s;\n\ns.insert({1, 100});\n\ns.insert({1, 200});\n\n## #s.insert({2, 300});\ns.insert({2, 400});\n\ns.insert({1, 500});\n```\n\n###', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 's.size() == 5, và s.find({1,999}) == s.end()'}
+  1: {'id': 'B', 'text': 's.size() == 3, và s.find({1,999}) != s.end()'}
+  2: {'id': 'C', 'text': 's.size() == 2, và s.find({1,999}) != s.end()'}
+  3: {'id': 'D', 'text': 's.size() == 2, và s.find({1,999}) == s.end()'}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+ID: q153
+Question: {'text': 'Khái niệm "Strong Exception Safety Guarantee" (Đảm bảo an toàn ngoại lệ mạnh) có nghĩa là gì?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Hàm cam kết sẽ không bao giờ ném ra ngoại lệ (No-throw guarantee)'}
+  1: {'id': 'B', 'text': 'Nếu ngoại lệ xảy ra, tài nguyên không bị rò rỉ và chương trình vẫn ở trạng thái hợp lệ, nhưng trạng thái có thể bị thay đổi so với ban đầu'}
+  2: {'id': 'C', 'text': 'Nếu ngoại lệ xảy ra, chương trình sẽ tự động gọi lại hàm đó một lần nữa'}
+  3: {'id': 'D', 'text': 'Nếu hàm thất bại vì ngoại lệ, trạng thái của chương trình sẽ được khôi phục hoàn toàn về y như trước khi gọi hàm (Commit-or-rollback).'}
+Answer: {'correctChoiceIds': ['D']}
+----------------------------------------
+ID: q154
+Question: {'text': '**Tại sao việc ép kiểu bằng reinterpret_cast bị coi là "nguy hiểm nhất" so với các loại ép kiểu khác trong C++?**', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Nó là toán tử cho phép ép kiểu giữa các con trỏ không có quan hệ kế thừa hoặc giữa con trỏ và số nguyên.'}
+  1: {'id': 'B', 'text': 'Nó là toán tử duy nhất có khả năng loại bỏ thuộc tính const của biến gốc để ghi đè dữ liệu trong bộ nhớ'}
+  2: {'id': 'C', 'text': 'Nó thực hiện kiểm tra tính hợp lệ của vùng nhớ tại thời điểm thực thi (runtime) trước khi chuyển đổi kiểu'}
+  3: {'id': 'D', 'text': 'Nó tự động chuyển đổi cấu trúc dữ liệu của đối tượng nguồn để tương thích hoàn toàn với kiểu dữ liệu đích'}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+ID: q155
+Question: {'text': '**Định hướng kiểm thử dựa trên rủi ro (Risk-Based Testing)** Do deadline ra mắt sản phẩm chỉ còn 2 ngày, trưởng phòng QA tuyên bố "Chúng ta không thể test hết, hãy áp dụng Risk-based testing". Hành động thực thi nào dưới đây minh chứng ứng viên thực sự hiểu cốt lõi của phương pháp này, thay vì chỉ là sự "cắt xén" khối lượng công việc?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Tiến hành loại bỏ ngay lập tức thời gian kiểm tra từng tính năng riêng lẻ bằng cách gộp tất cả chúng lại vào chung một luồng thao tác duy nhất trên diện rộng, qua đó làm đẹp báo cáo và mang lại cảm giác rằng hệ thống đã hoàn thiện sơ bộ'}
+  1: {'id': 'B', 'text': 'Bỏ qua hoàn toàn việc xác minh các tính năng về giao diện hiển thị đồ họa và tập trung tối đa thời gian, nguồn lực nhân sự để viết lại toàn bộ các bộ kịch bản tự động hóa (automation test scripts) phục vụ cho lớp nghiệp vụ backend của ứng dụng'}
+  2: {'id': 'C', 'text': 'Đánh giá tính năng dựa trên hai trục "Mức độ thiệt hại nếu lỗi" và "Xác suất xảy ra lỗi", sau đó chỉ thực thi các test case có điểm số rủi ro cao nhất cho tới khi hết hạn deadline.'}
+  3: {'id': 'D', 'text': 'Đệ trình yêu cầu lên ban giám đốc để nhanh chóng ký hợp đồng thuê thêm một lực lượng kiểm thử viên bên ngoài (outsourcing) làm việc liên tục cả ngày lẫn đêm nhằm cố gắng đạt được mức độ bao phủ mã nguồn tối đa một trăm phần trăm cho dự án'}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+ID: q156
+Question: {'text': 'Đoạn mã C++ sau được dùng để xóa các số chẵn khỏi một vector trong hệ thống xử lý dữ liệu thời gian thực. Tuy nhiên, chương trình thỉnh thoảng bị Crash (Segmentation Fault) một cách ngẫu nhiên. Nguyên nhân cốt lõi là gì?\n```cpp\nvoid filterData(std::vector<int>& v) {\n  for (auto it = v.begin(); it != v.end(); ++it) {\n    if (*it % 2 == 0) {\n      v.erase(it);\n    }\n  }\n}\n```', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Trình quản lý cấp phát bộ nhớ động (Dynamic Memory Allocator) của thư viện chuẩn STL đã bị phân mảnh nghiêm trọng do việc gọi hàm erase liên tục trong một vòng lặp có mật độ cao, dẫn đến việc hệ điều hành từ chối cấp phát thêm trang bộ nhớ (Page Fault) và cưỡng chế thu hồi tài nguyên của tiến trình thông qua tín hiệu SIGKILL từ Kernel'}
+  1: {'id': 'B', 'text': 'Việc xóa phần tử đã làm mất hiệu lực của iterator hiện tại, khiến thao tác ++it ở bước lặp tiếp theo truy cập vào vùng nhớ rác.'}
+  2: {'id': 'C', 'text': 'Lỗi tràn bộ đệm (Buffer Overflow) xảy ra trong cơ chế Branch Prediction của CPU khi vi xử lý cố gắng dự đoán trước luồng rẽ nhánh của điều kiện if (*it % 2 == 0) nhưng không thể đồng bộ hóa kịp thời khối lệnh L1 Cache với thanh ghi con trỏ lệnh (Instruction Pointer) do cấu trúc dữ liệu bị dịch chuyển liên tục'}
+  3: {'id': 'D', 'text': 'Biến tham chiếu &v truyền vào hàm bị giới hạn bởi phạm vi vòng đời (Scope Lifetime) của luồng thực thi gọi nó, khiến cho cơ chế tối ưu hóa Return Value Optimization (RVO) của trình biên dịch C++ sinh ra các bản sao ngầm (implicit copies) đè lên vùng nhớ nguyên thủy của đối tượng vector gốc ban đầu'}
+Answer: {'correctChoiceIds': ['B']}
+----------------------------------------
+ID: q157
+Question: {'text': 'Đọc hiểu khai báo C++ phức tạp: int *(*ptr)[10];. Nếu ta viết (*ptr)[1], kiểu dữ liệu trả về sẽ là gì?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Là kiểu int, vì ta truy xuất vào phần tử thứ 1 của mảng các số nguyên'}
+  1: {'id': 'B', 'text': 'Là một con trỏ hàm, sẵn sàng nhận tham số là số nguyên'}
+  2: {'id': 'C', 'text': 'Báo lỗi cú pháp vì không thể kết hợp toán tử giải tham chiếu * và toán tử chỉ mục [] cùng lúc'}
+  3: {'id': 'D', 'text': 'Là kiểu int*, vì ptr là con trỏ trỏ đến một mảng gồm 10 con trỏ số nguyên.'}
+Answer: {'correctChoiceIds': ['D']}
+----------------------------------------
+ID: q158
+Question: {'text': 'Một Function Template (khuôn mẫu hàm) như maxval hoạt động hiệu quả vì:', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Nó cho phép bỏ qua hoàn toàn việc kiểm tra kiểu dữ liệu của tham số'}
+  1: {'id': 'B', 'text': 'Nó chuyển đổi mọi giá trị thành xâu ký tự trước khi thực hiện so sánh'}
+  2: {'id': 'C', 'text': 'Trình biên dịch tự động sinh ra các phiên bản hàm cụ thể.'}
+  3: {'id': 'D', 'text': 'Nó chỉ chạy trên các hệ điều hành 64-bit hỗ trợ khái quát hóa'}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+ID: q159
+Question: {'text': 'Nếu quy trình phát triển phần mềm bỏ qua bước thiết kế nhưng vẫn đạt phần mềm hoạt động đúng, kết luận nào hợp lý nhất?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Quy trình phát triển bị vi phạm'}
+  1: {'id': 'B', 'text': 'Thiết kế đã tồn tại dưới dạng ngầm.'}
+  2: {'id': 'C', 'text': 'Kiểm thử thay thế thiết kế'}
+  3: {'id': 'D', 'text': 'Phần mềm không thể bảo trì'}
+Answer: {'correctChoiceIds': ['B']}
+----------------------------------------
+ID: q160
+Question: {'text': 'Cho đoạn code sau, phát biểu nào **đúng**? (Được phép chọn nhiều đáp án)\n```cpp\nint *p = (int *)malloc(sizeof(int));\n\ndelete p;\n```', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Undefined behavior.'}
+  1: {'id': 'B', 'text': 'Bị crash'}
+  2: {'id': 'C', 'text': 'Có thể chạy nhưng sai chuẩn'}
+  3: {'id': 'D', 'text': 'Destructor của int sẽ được gọi'}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+ID: q161
+Question: {'text': 'Cho đoạn mã: float x = 2.5; void *p = &x;. Nếu muốn thay đổi giá trị của x thành 5.5 thông qua p, cách tiếp cận nào dưới đây tuân thủ đúng quy chuẩn cấp thấp của bộ nhớ máy tính?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Con trỏ void có tính năng tự động thích ứng kiểu (Auto-casting), do đó trình biên dịch sẽ tự nội suy độ rộng 4 byte và cho phép gán thẳng *p = 5.5;'}
+  1: {'id': 'B', 'text': 'Lập trình viên có thể gán trực tiếp *p = 5.5; bởi vì ngay từ lúc khởi tạo, con trỏ p đã được gắn kết thành công với một địa chỉ số thực hợp lệ'}
+  2: {'id': 'C', 'text': 'Cấu trúc con trỏ vô kiểu được sinh ra để độc quyền quản lý bộ nhớ động, do đó tuyệt đối không được phép thao tác ghi đè lên các biến tĩnh thông thường'}
+  3: {'id': 'D', 'text': 'Bắt buộc phải thực hiện ép kiểu con trỏ một cách tường minh thành định dạng (float*) trước khi áp dụng toán tử tham chiếu ngược * để ghi dữ liệu.'}
+Answer: {'correctChoiceIds': ['D']}
+----------------------------------------
+ID: q162
+Question: {'text': 'Cho đoạn mã C++ dưới đây, tại sao hàm này KHÔNG hoán đổi được giá trị của hai biến truyền vào?\n```cpp\nvoid swap(void *a, void *b, int size) {\n  void *temp = malloc(size);\n\n  memcpy(temp, a, size);\n\n  a = b;     // Dòng X\n  b = temp;  // Dòng Y\n  free(temp);\n}\n```', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Do lỗi "Pass by value" của con trỏ.'}
+  1: {'id': 'B', 'text': 'Do không thể gán hai con trỏ void*'}
+  2: {'id': 'C', 'text': 'Do hàm memcpy thực hiện sai kích thước'}
+  3: {'id': 'D', 'text': 'Do vùng nhớ temp chưa được giải phóng'}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+ID: q163
+Question: {'text': 'Đoạn mã sau in ra gì?\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n  int A[] = {10, 20, 30, 40, 50};\n\n  int *p = (int *)(&A + 1);\n  cout << *(p - 2);\n  \xa0\xa0\xa0\xa0return 0;\n}\n```', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': '20'}
+  1: {'id': 'B', 'text': '50'}
+  2: {'id': 'C', 'text': '40'}
+  3: {'id': 'D', 'text': 'Lỗi phân mảnh bộ nhớ (Segmentation fault)'}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+ID: q164
+Question: {'text': 'Một lập trình viên muốn tiết kiệm dung lượng bộ nhớ nên đã quyết định đa năng hóa toán tử cộng (+) cho hai biến kiểu int thông thường, nhằm mục đích ép phép toán này thực hiện logic của phép trừ. Hệ thống C++ sẽ xử lý ý đồ này theo nguyên tắc nào?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Trình biên dịch sẽ tự động ưu tiên nạp chồng toán tử mới và ghi đè lên thư viện lõi để linh hoạt điều chỉnh logic hệ thống theo mong muốn thiết kế của người phát triển'}
+  1: {'id': 'B', 'text': 'C++ nghiêm cấm tuyệt đối việc định nghĩa lại chức năng của toán tử khi các toán hạng tham gia đều là các kiểu dữ liệu nguyên thủy đã có sẵn của ngôn ngữ.'}
+  2: {'id': 'C', 'text': 'Hệ thống cho phép thực thi hành động này nếu lập trình viên sử dụng thêm từ khóa auto để hệ điều hành tự động nội suy ra cơ chế cấp phát vùng nhớ tạm thời thích hợp'}
+  3: {'id': 'D', 'text': 'Việc định nghĩa lại toán tử trên kiểu nguyên thủy đòi hỏi lập trình viên phải khai báo bổ sung các tham số ngầm định để tránh xung đột luồng xử lý với các hàm hệ thống'}
+  4: {'id': 'E', 'text': 'Hệ điều hành sẽ âm thầm thu gom rác bộ nhớ của toán tử cũ và thay thế bằng logic mới nhằm tối ưu hóa khả năng biên dịch động của mô thức lập trình hướng đối tượng'}
+  5: {'id': 'F', 'text': 'Ngôn ngữ C++ chấp nhận sự thay đổi này nhưng bắt buộc phải đi kèm biểu thức lambda nặc danh để gói gọn phạm vi ảnh hưởng của phép trừ bên trong một không gian cục bộ'}
+Answer: {'correctChoiceIds': ['B']}
+----------------------------------------
+ID: q165
+Question: {'text': 'Giả sử kích thước của kiểu int là 4 byte và con trỏ trên hệ điều hành 64-bit là 8 byte. Kết quả in ra là gì?\n```cpp\n#include <iostream>\nusing namespace std;\nvoid printSize(int arr[10]) {\n  cout << sizeof(arr) << " ";\n}\nint main() {\n  int myArr[10];\n  cout << sizeof(myArr) << " ";\n  printSize(myArr);\n  return 0;\n}\n```', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': '40 40'}
+  1: {'id': 'B', 'text': '8 8'}
+  2: {'id': 'C', 'text': '40 4'}
+  3: {'id': 'D', 'text': '40 8'}
+Answer: {'correctChoiceIds': ['D']}
+----------------------------------------
+ID: q166
+Question: {'text': 'Output/hành vi của đoạn code sau là gì?\n```cpp\nint *p = (int *)malloc(sizeof(int));\n\nint *q = p;\n\n*p = 42;\n\nfree(p);\nprintf("%d\\\\n", *q);\n*  // (A)*\n    free(q);\n*  // (B)*\n```', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Cả (A) và (B) đều là Undefined Behavior'}
+  1: {'id': 'B', 'text': 'In ra 42 rồi crash ở (B) — double free'}
+  2: {'id': 'C', 'text': 'In ra 42 bình thường — q vẫn trỏ tới vùng nhớ đó'}
+  3: {'id': 'D', 'text': 'Crash ngay tại (A) — vùng nhớ đã được free'}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+ID: q167
+Question: {'text': 'Trong ngữ cảnh một lớp (class) tự quản lý bộ nhớ động (như String tự viết), khi nạp chồng toán tử gán =, nguyên mẫu hàm nào dưới đây là chuẩn mực nhất để cho phép gán liên tiếp dạng a = b = c;?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'void operator=(const MyClass& obj);'}
+  1: {'id': 'B', 'text': 'MyClass* operator=(const MyClass& obj);'}
+  2: {'id': 'C', 'text': 'MyClass& operator=(const MyClass& obj);'}
+  3: {'id': 'D', 'text': 'MyClass operator=(MyClass* obj);'}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+ID: q168
+Question: {'text': 'Đoạn code sau in ra kết quả gì?\n```cpp\n#include <iostream>\nusing namespace std;\nclass Base {\n```\npublic:\n```cpp\nBase() {\n  identify();\n}\nvirtual void identify() {\n  cout << "I am Base! ";\n}\n}\n;\nclass Derived : public Base {\n```\npublic:\n```cpp\nvoid identify() override {\n  cout << "I am Derived! ";\n}\n}\n;\n\nint main() {\n  Derived obj;\n\n  return 0;\n}\n```', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'I am Derived!'}
+  1: {'id': 'B', 'text': 'I am Base!'}
+  2: {'id': 'C', 'text': 'I am Base! I am Derived!'}
+  3: {'id': 'D', 'text': 'Lỗi Segmentation Fault'}
+Answer: {'correctChoiceIds': ['B']}
+----------------------------------------
+ID: q169
+Question: {'text': 'Một sinh viên viết lambda [x]() { x++; } và bị trình biên dịch báo lỗi vì x chỉ được quyền đọc. Để lambda có thể sửa đổi bản sao của x bên trong nó mà vẫn tuân thủ đúng trật tự cú pháp của C++, sinh viên đó phải sửa lại như thế nào?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': '[x]() mutable { x++; }'}
+  1: {'id': 'B', 'text': 'mutable [x]() { x++; }'}
+  2: {'id': 'C', 'text': '[x] mutable () { x++; }'}
+  3: {'id': 'D', 'text': '[x]() -> mutable { x++; }'}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+ID: q170
+Question: {'text': 'Toán tử nào dưới đây CÓ THỂ được đa năng hóa (overloaded) trong C++?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Toán tử định phạm vi (::)'}
+  1: {'id': 'B', 'text': 'Toán tử truy cập trường của struct (.)'}
+  2: {'id': 'C', 'text': 'Toán tử cộng (+).'}
+  3: {'id': 'D', 'text': 'Toán tử điều kiện (?:)'}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+ID: q171
+Question: {'text': 'Điều kiện nào CẦN THIẾT để một biểu thức Lambda có thể thay đổi được giá trị của những biến mà nó bắt giữ theo giá trị (capture by value) ở bên trong phần thân của nó?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Không thể thay đổi. Biến bắt giữ theo giá trị là bất biến (constant) trong mọi trường hợp'}
+  1: {'id': 'B', 'text': 'Lambda đó phải được gán vào một con trỏ hàm (function pointer)'}
+  2: {'id': 'C', 'text': 'Lambda đó phải khai báo kiểu trả về rõ ràng với cú pháp -> type'}
+  3: {'id': 'D', 'text': 'Lambda đó phải sử dụng từ khóa mutable trong định nghĩa.'}
+Answer: {'correctChoiceIds': ['D']}
+----------------------------------------
+ID: q172
+Question: {'text': 'Đoạn code sau in ra gì???\n```cpp\n#include <stdio.h>\n#define SQUARE(x) x* x\nint main() {\n  int a = 5;\n\n  int b = SQUARE(a + 1);\n  printf("%d", b);\n  return 0;\n}\n```', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': '36'}
+  1: {'id': 'B', 'text': '11'}
+  2: {'id': 'C', 'text': '21'}
+  3: {'id': 'D', 'text': 'Lỗi biên dịch'}
+Answer: {'correctChoiceIds': ['B']}
+----------------------------------------
+ID: q173
+Question: {'text': 'với đoạn mã sau, điều gì đúng?\n```cpp\nint x = 10;\n\nprintf("%d", &x);\n```', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Hoạt động bình thường vì &x tự động ép kiểu sang int'}
+  1: {'id': 'B', 'text': 'In ra địa chỉ dạng thập phân do %d hiểu mọi dữ liệu số'}
+  2: {'id': 'C', 'text': 'Trình biên dịch sẽ luôn báo lỗi và không cho chạy'}
+  3: {'id': 'D', 'text': 'Undefined behavior.'}
+Answer: {'correctChoiceIds': ['D']}
+----------------------------------------
+ID: q174
+Question: {'text': 'C2D252: Xét đoạn mã sau, phát biểu nào đúng nhất?\n```cpp\nint x = 10;\n\nprintf("%p", &x);\n```', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': '%p in ra giá trị của x ở hệ 16 vì địa chỉ thực chất là biểu diễn nhị phân của giá trị'}
+  1: {'id': 'B', 'text': '%p luôn in ra 8 byte vì kiến trúc hiện đại đều 64-bit'}
+  2: {'id': 'C', 'text': '%p in ra địa chỉ của biến x; hành vi là đúng chuẩn nếu đối số có kiểu void*.'}
+  3: {'id': 'D', 'text': '%p in ra địa chỉ dạng thập phân nếu hệ điều hành cấu hình như vậy'}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+ID: q175
+Question: {'text': 'Xét về bản chất lý thuyết, dù là Compiler hay Interpreter thì vai trò quan trọng nhất của chúng là gì?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Đóng vai trò là một thành phần trung gian của hệ điều hành để quản lý tài nguyên.'}
+  1: {'id': 'B', 'text': 'Tối ưu hóa hiệu suất để mã nguồn tiệm cận với tốc độ xử lý của phần cứng máy tính'}
+  2: {'id': 'C', 'text': 'Thực thi các thuật toán biến đổi chuỗi ký hiệu dựa trên một tập quy tắc ngôn ngữ đã định'}
+  3: {'id': 'D', 'text': 'Chuyển đổi các mô thức lập trình cấp cao về dạng lập trình hướng đối tượng hoặc thủ tục'}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+ID: q176
+Question: {'text': 'Trong kiến trúc Von Neumann, yếu tố nào đóng vai trò là "biến trạng thái" tối thiểu để xác định vị trí thực thi, nhưng chưa đủ để xác định toàn bộ ngữ cảnh (Context) của tiến trình?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Instruction Register (IR)'}
+  1: {'id': 'B', 'text': 'Program Counter (PC).'}
+  2: {'id': 'C', 'text': 'Accumulator (AC)'}
+  3: {'id': 'D', 'text': 'Memory Address Register (MAR)'}
+Answer: {'correctChoiceIds': ['B']}
+----------------------------------------
+ID: q177
+Question: {'text': 'Cho:\n```cpp\nint x = 10;\nint *p = &x;\n```\nBiểu thức nào **luôn luôn** có cùng giá trị?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': '&p và &x'}
+  1: {'id': 'B', 'text': '*p và &x'}
+  2: {'id': 'C', 'text': 'p và *x'}
+  3: {'id': 'D', 'text': 'p và &x.'}
+Answer: {'correctChoiceIds': ['D']}
+----------------------------------------
+ID: q178
+Question: {'text': 'Cho đoạn mã nguồn sau trong một chương trình C++:\n```cpp\n#define PI 3.14;\n#define SQUARE(x) x* x\ndouble calculateArea(double r) {\n  return PI * SQUARE(r);\n}\n```\nKhi biên dịch đoạn mã này, trình biên dịch sẽ báo lỗi. Nguyên nhân chính xác là gì?', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': 'Lỗi cú pháp tại dòng return vì PI là một hằng số thực'}
+  1: {'id': 'B', 'text': 'Lỗi thiếu dấu ngoặc đơn trong định nghĩa SQUARE(x)'}
+  2: {'id': 'C', 'text': 'Trình biên dịch báo lỗi tại dòng return.'}
+  3: {'id': 'D', 'text': 'Lỗi định nghĩa chồng lấn (Macro overlap) giữa PI và SQUARE'}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------
+ID: q179
+Question: {'text': 'Đoạn code sau in ra kết quả gì?\n```cpp\n#include <iostream>\n#include <vector>\nusing namespace std;\nint main() {\n  vector<bool> v = {true, false, true};\n  auto val = v[0];\n  v[0] = false;\n  cout << val << endl;\n  return 0;\n}\n```', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': '1'}
+  1: {'id': 'B', 'text': '0'}
+  2: {'id': 'C', 'text': 'Lỗi biên dịch'}
+  3: {'id': 'D', 'text': 'Lỗi runtime'}
+Answer: {'correctChoiceIds': ['A']}
+----------------------------------------
+ID: q180
+Question: {'text': 'Đoạn code sau in ra kết quả gì?\n```cpp\n#include <iostream>\n#define MULTIPLY(a, B.a* b\nusing namespace std;\nint main() {\n  cout << MULTIPLY(2 + 3, 4) << endl;\n  return 0;\n}\n```', 'images': []}
+Choices:
+  0: {'id': 'A', 'text': '20'}
+  1: {'id': 'B', 'text': '14'}
+  2: {'id': 'C', 'text': 'Lỗi biên dịch'}
+  3: {'id': 'D', 'text': '9'}
+Answer: {'correctChoiceIds': ['C']}
+----------------------------------------

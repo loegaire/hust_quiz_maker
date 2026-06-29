@@ -13,8 +13,8 @@ export function ChoiceButton({ content, selected, onClick, disabled }: ChoiceBut
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`w-full rounded-lg border px-4 py-3 text-left transition ${
-        selected ? 'border-[var(--accent)] bg-[var(--accent-soft)]' : 'border-black/10 bg-white/50 hover:border-[var(--accent)]'
+      className={`w-full border-4 border-black px-4 py-3 text-left font-medium shadow-[4px_4px_0_var(--shadow)] transition ${
+        selected ? 'bg-[var(--accent-soft)]' : 'bg-white hover:bg-[var(--accent-pink)]'
       } ${disabled ? 'cursor-not-allowed opacity-60' : ''}`}
     >
       {content}

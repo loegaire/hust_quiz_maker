@@ -18,25 +18,64 @@
       {
         "id": "q001",
         "type": "single_choice",
-        "question": { "text": "Which SQL keyword removes duplicate rows?", "images": [] },
+        "question": {
+          "text": "Which SQL keyword removes duplicate rows?",
+          "images": []
+        },
         "choices": [
-          { "id": "A", "text": "WHERE" },
-          { "id": "B", "text": "DISTINCT" },
-          { "id": "C", "text": "GROUP" },
-          { "id": "D", "text": "ORDER" }
+          {
+            "id": "A",
+            "text": "WHERE"
+          },
+          {
+            "id": "B",
+            "text": "DISTINCT"
+          },
+          {
+            "id": "C",
+            "text": "GROUP"
+          },
+          {
+            "id": "D",
+            "text": "ORDER"
+          }
         ],
-        "answer": { "correctChoiceIds": ["B"] },
-        "explanation": { "text": "DISTINCT filters duplicates in query results.", "images": [] },
-        "tags": ["sql", "database"],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "DISTINCT filters duplicates in query results.",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "database"
+        ],
         "difficulty": "easy"
       },
       {
         "id": "q003",
         "type": "fill_gap",
-        "question": { "text": "The SQL keyword used to remove duplicate rows is ____.", "images": [] },
-        "answer": { "acceptedAnswers": ["DISTINCT"], "caseSensitive": false, "trimWhitespace": true },
-        "explanation": { "text": "DISTINCT returns only unique rows.", "images": [] },
-        "tags": ["sql"],
+        "question": {
+          "text": "The SQL keyword used to remove duplicate rows is ____.",
+          "images": []
+        },
+        "answer": {
+          "acceptedAnswers": [
+            "DISTINCT"
+          ],
+          "caseSensitive": false,
+          "trimWhitespace": true
+        },
+        "explanation": {
+          "text": "DISTINCT returns only unique rows.",
+          "images": []
+        },
+        "tags": [
+          "sql"
+        ],
         "difficulty": "easy"
       }
     ]
