@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { parseQuizJson, saveImportedQuiz } from '../lib/importQuiz';
 
+function quizAssetPath(path: string) {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+}
+
 export function HomePage() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
@@ -10,23 +14,33 @@ export function HomePage() {
     try {
       setLoading(true);
       setMessage('Loading index...');
-      const res = await fetch('/quizzes/index.json');
+      const res = await fetch(quizAssetPath('quizzes/index.json'));
+      if (!res.ok) {
+        throw new Error(`Could not load quiz index (${res.status})`);
+      }
       const files: string[] = await res.json();
       
       let loaded = 0;
+      let failed = 0;
       for (const file of files) {
         setMessage(`Importing ${file}... (${loaded}/${files.length})`);
-        const qRes = await fetch(`/quizzes/${file}`);
+        const qRes = await fetch(quizAssetPath(`quizzes/${encodeURIComponent(file)}`));
+        if (!qRes.ok) {
+          failed++;
+          console.error(`Failed to fetch ${file}: ${qRes.status}`);
+          continue;
+        }
         const text = await qRes.text();
         try {
           const parsed = parseQuizJson(text);
           await saveImportedQuiz(parsed);
           loaded++;
         } catch (e) {
+          failed++;
           console.error(`Failed to import ${file}:`, e);
         }
       }
-      setMessage(`Successfully loaded ${loaded} exams! Go to Open Library to view them.`);
+      setMessage(`Loaded ${loaded} exams${failed ? `, ${failed} failed` : ''}. Go to Open Library to view them.`);
     } catch (e) {
       console.error(e);
       setMessage('Error loading exams.');
