@@ -3,11 +3,11 @@
   "quiz": {
     "id": "database-it3090-trac-nghiem-de-thi-tong-hop",
     "title": "IT3090 Cơ sở dữ liệu - Trắc nghiệm đề thi tổng hợp có giải thích nguồn slide",
-    "description": "Bộ câu hỏi được trích từ các file đề thi trắc nghiệm rõ đọc được. Các câu tự luận/thực hành và câu ảnh quá mờ hoặc không tìm được nguồn đối chiếu trong slide đã được loại khỏi bản import này để ưu tiên độ chính xác.",
+    "description": "Bộ câu hỏi được trích từ các file đề thi trắc nghiệm rõ đọc được. Các câu tự luận/thực hành và câu ảnh quá mờ hoặc không tìm được nguồn đối chiếu trong slide đã được loại khỏi bản import này để ưu tiên độ chính xác.\n\nBản mở rộng: rà thủ công thêm các ảnh đề, không dùng OCR; chỉ đưa vào các câu có thể đọc chắc và có nguồn slide để giải thích.",
     "language": "vi",
     "source": {
       "type": "merged-exam-slides",
-      "notes": "Đề nguồn: các PDF Database cuối kỳ/giữa kỳ đã tải lên; nguồn lý thuyết đối chiếu: csdl_ly_thuyet_tieng_anh.zip."
+      "notes": "Đề nguồn: các PDF Database cuối kỳ/giữa kỳ đã tải lên; nguồn lý thuyết đối chiếu: csdl_ly_thuyet_tieng_anh.zip.\nExpanded manual image review pass: no OCR; duplicates and ambiguous/no-slide-source pages skipped."
     },
     "settings": {
       "shuffleQuestions": false,
@@ -2156,6 +2156,1569 @@
           "select"
         ],
         "difficulty": "easy"
+      },
+      {
+        "id": "q053",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 28]\n\nCSDL gồm:\n\n```text\nNhanVien(NV, HoTen, NamSinh)\nDuAn(DA, TenDA, KinhPhi)\nThamGia(NV, DA, MucLuong)\n```\n\nCho câu lệnh SQL:\n\n```sql\nSELECT NV, HoTen\nFROM NhanVien, ThamGia\nWHERE NhanVien.NV = ThamGia.NV AND DA = 'P01'\nINTERSECT\nSELECT NV, HoTen\nFROM NhanVien, ThamGia\nWHERE NhanVien.NV = ThamGia.NV AND DA = 'P02';\n```\n\nNhận định nào đúng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Câu truy vấn đưa ra danh sách nhân viên đã tham gia ít nhất 1 trong hai dự án có mã 'P01', 'P02'."
+          },
+          {
+            "id": "B",
+            "text": "Câu truy vấn luôn cho kết quả rỗng."
+          },
+          {
+            "id": "C",
+            "text": "Lỗi cú pháp."
+          },
+          {
+            "id": "D",
+            "text": "Câu truy vấn đưa ra danh sách nhân viên đã tham gia cả hai dự án có mã 'P01' và 'P02'."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\n`INTERSECT` lấy phần giao của hai kết quả truy vấn. Truy vấn thứ nhất lấy các nhân viên tham gia dự án `P01`, truy vấn thứ hai lấy các nhân viên tham gia dự án `P02`; phần giao chính là những nhân viên xuất hiện trong **cả hai** tập, tức đã tham gia đồng thời `P01` và `P02`. Phương án A là ý nghĩa của `UNION`, không phải `INTERSECT`. Nguồn slide: `05_structured_query_language - part 2.pdf`, mục **Union, Intersection and Difference of Queries** (`UNION`, `INTERSECT`, `EXCEPT`).",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "set-operators"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q054",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 33]\n\nVới các bảng có ràng buộc khóa chính, khóa ngoại đầy đủ:\n\n```text\nNhanVien(NV, HoTen, NamSinh)\nDuAn(DA, TenDA, KinhPhi)\nThamGia(NV, DA, MucLuong)   -- (NV, DA) là khóa chính; NV và DA là khóa ngoại\n```\n\nPhương án nào đảm bảo luôn xóa được nhân viên có tên là `Nguyễn Văn A`?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "DELETE FROM NhanVien WHERE HoTen = 'Nguyễn Văn A';"
+          },
+          {
+            "id": "B",
+            "text": "DELETE * FROM ThamGia WHERE MaNV IN (SELECT MaNV FROM NhanVien WHERE HoTen = 'Nguyễn Văn A');\nDELETE * FROM NhanVien WHERE HoTen = 'Nguyễn Văn A';"
+          },
+          {
+            "id": "C",
+            "text": "DELETE * FROM NhanVien WHERE HoTen = 'Nguyễn Văn A';"
+          },
+          {
+            "id": "D",
+            "text": "DELETE FROM ThamGia WHERE MaNV IN (SELECT MaNV FROM NhanVien WHERE HoTen = 'Nguyễn Văn A');\nDELETE FROM NhanVien WHERE HoTen = 'Nguyễn Văn A';"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\n`ThamGia.NV` là khóa ngoại tham chiếu `NhanVien.NV`. Nếu xóa trực tiếp ở `NhanVien` khi nhân viên còn dòng tham gia dự án thì vi phạm toàn vẹn tham chiếu. Cần xóa các dòng con trong `ThamGia` trước, rồi mới xóa dòng cha trong `NhanVien`. Ngoài ra, cú pháp xóa chuẩn là `DELETE FROM <table> ...`, không phải `DELETE * FROM ...`, nên B và C sai cú pháp. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `DELETE FROM`), và `13_Constraints_and_Triggers.pdf`, phần ràng buộc khóa ngoại/toàn vẹn tham chiếu.",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "foreign-key",
+          "delete"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q055",
+        "type": "multiple_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 36]\n\nCho lược đồ quan hệ `R(A,B,C,D,E,G,H,I)` và tập phụ thuộc hàm:\n\n```text\nF = { BG→E, I→H, BC→IH, A→CD }\n```\n\nCác phụ thuộc hàm nào sau đây **KHÔNG** suy diễn được từ F?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "G→E"
+          },
+          {
+            "id": "B",
+            "text": "B→I"
+          },
+          {
+            "id": "C",
+            "text": "C→I"
+          },
+          {
+            "id": "D",
+            "text": "BGC→I"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A, B, C**.\n\nKiểm tra bằng bao đóng:\n\n- `G+ = {G}` nên không suy ra được `E`; vì vậy `G→E` sai.\n- `B+ = {B}` nên không suy ra được `I`; vì vậy `B→I` sai.\n- `C+ = {C}` nên không suy ra được `I`; vì vậy `C→I` sai.\n- Với `BGC`, ta có đủ `B` và `C`, dùng `BC→IH` suy ra `I` và `H`; vì vậy `BGC→I` suy diễn được.\n\nNguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (bao đóng thuộc tính và tiêu chuẩn `X→Y` khi `Y⊆X+`).",
+          "images": []
+        },
+        "tags": [
+          "functional-dependency",
+          "closure"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q056",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 39]\n\nCho các quan hệ:\n\n```text\nSinhvien(MaSV, HotenSV, Gioitinh, QueQuan, Malop)\nLop(Malop, Tenlop, Khoa)\nDangky(MaSV, MaMH, Hocky, Diem)\nMonhoc(MaMH, TenMH, soTinChi)\n```\n\nXét truy vấn:\n\n```sql\nSELECT s.*\nFROM Sinhvien s, Dangky d\nWHERE s.MaSV = d.MaSV\n  AND Malop = 'NN01'\n  AND TenMH = 'Database';\n```\n\nNhận định nào đúng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Câu truy vấn đưa ra thông tin sinh viên thuộc lớp có mã số 'NN01' mà đã từng đăng ký môn Database."
+          },
+          {
+            "id": "B",
+            "text": "Câu truy vấn không thực thi được."
+          },
+          {
+            "id": "C",
+            "text": "Câu truy vấn đưa ra thông tin sinh viên cùng điểm số của sinh viên thuộc lớp có mã số 'NN01' mà đã từng đăng ký môn Database."
+          },
+          {
+            "id": "D",
+            "text": "Câu lệnh vẫn được thực thi nhưng kết quả khác hai phương án được đưa ra trong đáp án."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nĐiều kiện `TenMH = 'Database'` dùng thuộc tính `TenMH`, nhưng trong mệnh đề `FROM` chỉ có `Sinhvien s` và `Dangky d`. Thuộc tính `TenMH` nằm ở bảng `Monhoc`, không nằm trong hai bảng đang được truy vấn, nên câu lệnh bị lỗi tên cột/thuộc tính không xác định. Muốn truy vấn đúng cần đưa `Monhoc` vào `FROM` hoặc dùng `JOIN` với điều kiện `d.MaMH = Monhoc.MaMH`. Nguồn slide: `04_structured_query_language.pdf`, tr. 30–33 (cấu trúc `SELECT ... FROM ... WHERE ...`; thuộc tính dùng trong `SELECT/WHERE` phải thuộc các quan hệ tham gia truy vấn).",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "select",
+          "join"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q057",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 44]\n\nCho CSDL:\n\n```text\nKhachhang(MaKH, Hoten, Sodienthoai, Coquan)\nNhachothue(MaN, Diachi, Giathue, Tenchunha)\nHopdong(MaN, MaKH, Ngaybatdau, Ngayketthuc)\n```\n\nCần tạo khung nhìn `KH(Ma, Hovaten, Dienthoai)` chứa mã, họ tên và điện thoại của các khách hàng thuê nhà có giá thuê trên 50 triệu đồng. Câu lệnh nào đúng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "CREATE VIEW KH(Ma, Hovaten, Dienthoai) AS SELECT MaKH, Hoten, Sodienthoai FROM Khachhang WHERE MaKH IN (SELECT MaKH FROM Hopdong, Nhachothue WHERE Hopdong.MaN = Nhachothue.MaN AND Giathue > 50);"
+          },
+          {
+            "id": "B",
+            "text": "CREATE VIEW KH(Ma, Hovaten, Dienthoai) AS SELECT MaKH, Hoten, Sodienthoai FROM Khachhang WHERE MaKH IN (SELECT MaKH FROM Hopdong, Nhachothue WHERE Giathue > 50);"
+          },
+          {
+            "id": "C",
+            "text": "CREATE VIEW KH(MaKH, Hoten, Sodienthoai) FROM Khachhang WHERE MaKH IN (SELECT MaKH FROM Hopdong, Nhachothue WHERE Hopdong.MaN = Nhachothue.MaN AND Giathue > 50);"
+          },
+          {
+            "id": "D",
+            "text": "CREATE VIEW KH(Ma, Hovaten, Dienthoai) SELECT MaKH, Hoten, Sodienthoai FROM Khachhang WHERE MaKH IN (SELECT MaKH FROM Hopdong, Nhachothue WHERE Hopdong.MaN = Nhachothue.MaN AND Giathue > 50);"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nMột khung nhìn phải được khai báo theo mẫu `CREATE VIEW <tên view> AS <query>`. Phương án A có đủ `CREATE VIEW ... AS SELECT ...` và trong truy vấn con có điều kiện nối `Hopdong.MaN = Nhachothue.MaN`, nên chỉ lấy khách hàng có hợp đồng thuê đúng căn nhà có `Giathue > 50`. B thiếu điều kiện nối giữa hợp đồng và nhà cho thuê nên tạo tích Descartes sai nghĩa; C và D sai cú pháp vì thiếu `AS SELECT` đúng vị trí. Nguồn slide: `05_structured_query_language - part 2.pdf`, phần **Views** (`CREATE VIEW <name> AS <query>`), và `04_structured_query_language.pdf`, phần `SELECT/FROM/WHERE`.",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "view"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q058",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 46]\n\nCho CSDL:\n\n```text\nNhanVien(NV, HoTen, NamSinh)\nDuAn(DA, TenDA, KinhPhi)\nThamGia(NV, DA, MucLuong)   -- (NV, DA) là khóa chính; NV và DA là khóa ngoại\n```\n\nCâu lệnh SQL nào đưa ra `HoTen` nhân viên làm việc tại dự án có tên là `007`?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT HoTen FROM NhanVien, DuAn, ThamGia WHERE NhanVien.NV = ThamGia.NV AND DuAn.DA = ThamGia.DA AND TenDA = '007';"
+          },
+          {
+            "id": "B",
+            "text": "SELECT HoTen FROM NhanVien, DuAn, ThamGia WHERE NhanVien.NV = ThamGia.NV, DuAn.DA = ThamGia.DA AND TenDA = '007';"
+          },
+          {
+            "id": "C",
+            "text": "SELECT HoTen FROM NhanVien, DuAn, ThamGia WHERE TenDA = '007';"
+          },
+          {
+            "id": "D",
+            "text": "SELECT HoTen FROM NhanVien, ThamGia WHERE NhanVien.NV = ThamGia.NV AND DuAn.DA = ThamGia.DA AND TenDA = '007';"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nĐể lấy nhân viên của một dự án theo tên dự án, cần nối đủ ba bảng: `NhanVien` nối `ThamGia` qua `NV`, rồi `ThamGia` nối `DuAn` qua `DA`, sau đó lọc `TenDA = '007'`. B sai cú pháp vì dùng dấu phẩy trong mệnh đề `WHERE`; C thiếu điều kiện nối nên tạo tích Descartes; D tham chiếu `DuAn.DA` và `TenDA` nhưng không đưa bảng `DuAn` vào `FROM`. Nguồn slide: `04_structured_query_language.pdf`, tr. 30–33 (truy vấn `SELECT/FROM/WHERE` và điều kiện nối trong `WHERE`).",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "join"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q059",
+        "type": "multiple_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 49]\n\nTrong một trigger, nhận định nào sau đây đúng về biến `NEW` và `OLD`?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`NEW` được sử dụng để chọn bản ghi, trong khi `OLD` được sử dụng để chèn bản ghi."
+          },
+          {
+            "id": "B",
+            "text": "`NEW` đại diện cho bản ghi sau sửa đổi dữ liệu, trong khi `OLD` đại diện cho bản ghi trước sửa đổi."
+          },
+          {
+            "id": "C",
+            "text": "`NEW` chỉ áp dụng trong trigger `AFTER`, trong khi `OLD` được sử dụng trong trigger `BEFORE`."
+          },
+          {
+            "id": "D",
+            "text": "`NEW` và `OLD` là hai biến có cùng cấu trúc với cấu trúc của bảng/view có sự kiện kích hoạt trigger."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B",
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B, D**.\n\nTrong trigger, hệ quản trị CSDL cung cấp biến/bảng đặc biệt để tham chiếu dữ liệu trước và sau sự kiện. `OLD` biểu diễn giá trị cũ trước khi sửa/xóa, còn `NEW` biểu diễn giá trị mới sau khi chèn/sửa. Vì chúng đại diện cho bản ghi của bảng/view kích hoạt trigger, cấu trúc thuộc tính của chúng tương ứng với cấu trúc bảng/view đó. A sai vì `NEW/OLD` không phải thao tác chọn/chèn; C sai vì `NEW/OLD` không được phân chia đơn giản theo `AFTER/BEFORE` như vậy. Nguồn slide: `13_Constraints_and_Triggers.pdf`, phần **Triggers** và cú pháp `REFERENCING {NEW | OLD} {ROW | TABLE}`.",
+          "images": []
+        },
+        "tags": [
+          "trigger"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q060",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 51]\n\nTrong mô hình cơ sở dữ liệu 3 tầng khi trừu tượng hóa dữ liệu, gồm mức trong/vật lý, mức khái niệm/logic và mức ngoài/các khung nhìn. Điều khẳng định nào sau đây đúng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Người dùng cuối thông thường, không phải chuyên gia CNTT, thường chỉ xử lý ở mức khái niệm."
+          },
+          {
+            "id": "B",
+            "text": "Người quản trị CSDL, người thiết kế CSDL và người dùng cuối thường chỉ xử lý ở mức khung nhìn bên ngoài."
+          },
+          {
+            "id": "C",
+            "text": "Hầu hết người dùng cơ sở dữ liệu không bao giờ xem sơ đồ trong vì không cần."
+          },
+          {
+            "id": "D",
+            "text": "Người thiết kế cơ sở dữ liệu thường chỉ xử lý với sơ đồ trong."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nKiến trúc ba mức tách cách người dùng nhìn dữ liệu khỏi cách dữ liệu được lưu vật lý. Người dùng cuối thường làm việc qua mức ngoài/khung nhìn; nhà thiết kế và DBA quan tâm nhiều hơn đến mức khái niệm và mức trong. Mức trong mô tả lưu trữ vật lý nên đa số người dùng ứng dụng không cần và không bao giờ nhìn thấy. Nguồn slide: `01_02_Introduction_RDB.pdf`, phần **Three-schema architecture**: external level/view, conceptual schema và internal schema.",
+          "images": []
+        },
+        "tags": [
+          "intro",
+          "three-schema"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q061",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 53]\n\nKhi một bảng đã được tạo, nếu muốn bổ sung thêm cột hoặc loại bỏ cột cho bảng đó thì câu lệnh bắt đầu với từ khóa nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "ALTER TABLE"
+          },
+          {
+            "id": "B",
+            "text": "DROP COLUMN"
+          },
+          {
+            "id": "C",
+            "text": "ADD COLUMN"
+          },
+          {
+            "id": "D",
+            "text": "ALTER COLUMN"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nSau khi bảng đã tồn tại, thao tác thay đổi cấu trúc bảng dùng lệnh `ALTER TABLE`. Các cụm như `ADD COLUMN`, `DROP COLUMN`, `ALTER COLUMN` là phần con của lệnh tùy hệ quản trị, nhưng câu lệnh đầy đủ vẫn bắt đầu bằng `ALTER TABLE`. Nguồn slide: `04_structured_query_language.pdf`, phần tổng quan DDL: `CREATE TABLE` dùng để tạo bảng, `ALTER TABLE` dùng để sửa cấu trúc bảng, thêm/xóa/sửa cột hoặc ràng buộc.",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "ddl"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q062",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 58]\n\nHãy cho biết nhận định đúng về khung nhìn (`View`).",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không thể cập nhật giá trị cho bản ghi trong khung nhìn."
+          },
+          {
+            "id": "B",
+            "text": "Có thể sử dụng trigger để cập nhật giá trị của các bản ghi trong khung nhìn."
+          },
+          {
+            "id": "C",
+            "text": "Không thể định nghĩa khung nhìn thông qua một khung nhìn khác."
+          },
+          {
+            "id": "D",
+            "text": "Khung nhìn sẽ không còn tồn tại trong CSDL sau khi người dùng đóng kết nối."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nView là quan hệ ảo được định nghĩa bởi một truy vấn. Không phải view nào cũng tự cập nhật được, nhưng hệ quản trị có thể dùng `INSTEAD OF` trigger để diễn giải thao tác cập nhật trên view thành thao tác cập nhật trên các bảng gốc. Do đó A quá tuyệt đối. C sai vì view có thể được định nghĩa dựa trên truy vấn, trong đó có thể tham chiếu view khác tùy hệ quản trị. D sai vì view là đối tượng CSDL, không tự mất khi đóng kết nối. Nguồn slide: `05_structured_query_language - part 2.pdf`, phần **Views** và **Updatable views: Views and INSTEAD OF trigger**; `13_Constraints_and_Triggers.pdf`, phần trigger.",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "view",
+          "trigger"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q063",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 4, Câu hỏi 5]\n\nCho lược đồ quan hệ `R(A, B, C)` với tập phụ thuộc hàm `F = {A→B, B→C}`. R ở dạng chuẩn cao nhất nào trong các lựa chọn sau?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "3"
+          },
+          {
+            "id": "B",
+            "text": "1"
+          },
+          {
+            "id": "C",
+            "text": "2"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C — dạng chuẩn 2NF**.\n\nTừ `A→B` và `B→C`, khóa của R là `A` vì `A+ = {A,B,C}`. Khóa chỉ gồm một thuộc tính nên không thể có phụ thuộc bộ phận của thuộc tính không khóa vào một phần của khóa; vì vậy R đạt 2NF. Tuy nhiên `B→C` là phụ thuộc bắc cầu từ khóa `A` đến `C` qua `B`; `B` không phải siêu khóa và `C` không phải thuộc tính khóa, nên R không đạt 3NF. Nguồn slide: `08_Normalization.pdf`, tr. 15–17 (1NF, 2NF, 3NF; 3NF loại bỏ phụ thuộc bắc cầu của thuộc tính không khóa).",
+          "images": []
+        },
+        "tags": [
+          "normalization"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q064",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 6, Câu hỏi 7]\n\nCâu lệnh nào sau đây bị sai?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "DELETE FROM tblSinhVien WHERE masv = '20122003';"
+          },
+          {
+            "id": "B",
+            "text": "INSERT INTO tblSinhVien (masv, tenSV) VALUE ('20122003', 'Nguyen Van A');"
+          },
+          {
+            "id": "C",
+            "text": "SELECT tenSV AS TenSinhVien FROM tblSinhVien;"
+          },
+          {
+            "id": "D",
+            "text": "UPDATE tblSinhVien SET tenSV = 'Nguyen Van A' WHERE masv = '20122003';"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nCú pháp chèn dữ liệu chuẩn trong slide là `INSERT INTO <table>[(<columns>)] VALUES(<values>);` với từ khóa **`VALUES`**. Phương án B dùng `VALUE` nên sai cú pháp trong ngữ cảnh cú pháp của môn học. A, C, D lần lượt là các dạng hợp lệ của `DELETE`, `SELECT ... AS ...` và `UPDATE ... SET ... WHERE ...`. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT INTO ... VALUES`, `DELETE FROM`, `UPDATE`).",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "insert"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q065",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 8, Câu hỏi 16]\n\nTrong các mô hình tổ chức bộ nhớ sau, mô hình nào phải quét toàn bộ tệp để tìm kiếm một bản ghi?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tổ chức tệp chỉ dẫn"
+          },
+          {
+            "id": "B",
+            "text": "Tổ chức tệp băm"
+          },
+          {
+            "id": "C",
+            "text": "Cây cân bằng"
+          },
+          {
+            "id": "D",
+            "text": "Tổ chức tệp đống"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nTệp đống (`heap file`) là tệp không có thứ tự vật lý theo khóa tìm kiếm. Nếu không có chỉ mục/hàm băm hỗ trợ, muốn tìm một bản ghi theo điều kiện bất kỳ thì phải quét tuần tự các trang/bản ghi cho đến khi gặp bản ghi cần tìm, trong trường hợp xấu là toàn bộ tệp. Tệp chỉ dẫn, tệp băm hoặc cây cân bằng đều là cấu trúc hỗ trợ truy cập nhanh hơn cho kiểu điều kiện phù hợp. Nguồn slide: `10_storage_index.pdf`, phần **Heap file / Files of Unordered Records**, và phần **Index data structures**: B+-tree index, hash index.",
+          "images": []
+        },
+        "tags": [
+          "storage",
+          "index"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q066",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 8, Câu hỏi 17]\n\nCho lược đồ quan hệ `R(U,F)` với `U = {A,B,C,D,E}` và:\n\n```text\nF = { AB→CD, E→C, D→CE, A→E }\n```\n\nTính `(AD)+`.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "EC"
+          },
+          {
+            "id": "B",
+            "text": "ABD"
+          },
+          {
+            "id": "C",
+            "text": "ACED"
+          },
+          {
+            "id": "D",
+            "text": "ACE"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nBắt đầu với `{A,D}`. Từ `A→E`, thêm `E`. Từ `D→CE`, thêm `C` và `E` (E đã có). Từ `E→C` không thêm gì mới. Không có phụ thuộc nào suy ra `B` vì `AB→CD` cần có cả `A` và `B` ở vế trái. Do đó `(AD)+ = {A,C,D,E}`. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (thuật toán tính bao đóng thuộc tính).",
+          "images": []
+        },
+        "tags": [
+          "functional-dependency",
+          "closure"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q067",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 9, Câu hỏi 18]\n\nCho bảng `Student(Id, Name, Address)`. Sinh viên có `Id = '20155041'` chuyển đến sống tại địa chỉ `Hawai`. Chọn câu lệnh cập nhật dữ liệu thích hợp.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "UPDATE Student SET Address = 'Hawai' WHERE Id = '20155041';"
+          },
+          {
+            "id": "B",
+            "text": "UPDATEStudent SET Address = 'Hawai' WHERE Id = '20155041';"
+          },
+          {
+            "id": "C",
+            "text": "UPDATE Student.Address SET Address = 'Hawai' WHERE Id = '20155041';"
+          },
+          {
+            "id": "D",
+            "text": "UPDATE * SET Address = 'Hawai' WHERE Id = '20155041';"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nCú pháp cập nhật là `UPDATE <table> SET <attribute> = <value> WHERE <condition>`. Phương án A đúng đầy đủ: cập nhật bảng `Student`, gán `Address` và giới hạn đúng bản ghi bằng `WHERE Id = ...`. B thiếu khoảng trắng giữa `UPDATE` và tên bảng; C đặt tên bảng sai thành `Student.Address`; D dùng `UPDATE *`, không phải cú pháp SQL. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `UPDATE ... SET ... WHERE ...`).",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "update"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q068",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 10, Câu hỏi 22]\n\nPhát biểu nào sau đây là đúng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không là khóa tối thiểu của r nếu K là một khóa của r và bất kỳ tập con thực sự nào của K đều không phải là khóa của r."
+          },
+          {
+            "id": "B",
+            "text": "Một quan hệ chỉ được có 1 khóa tối thiểu."
+          },
+          {
+            "id": "C",
+            "text": "Tất cả các phương án lựa chọn khác đều sai."
+          },
+          {
+            "id": "D",
+            "text": "Một quan hệ có thể có nhiều khóa tối thiểu."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nMột quan hệ có thể có nhiều khóa tối thiểu, thường gọi là nhiều khóa ứng viên. Mỗi khóa tối thiểu đều xác định được toàn bộ thuộc tính và không có tập con thực sự nào của nó vẫn là khóa. Vì vậy B sai do giới hạn chỉ một khóa; A diễn đạt ngược bản chất tối thiểu; C sai vì D đúng. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 21–24 (khóa tối thiểu/candidate key và thuật toán tìm khóa).",
+          "images": []
+        },
+        "tags": [
+          "functional-dependency",
+          "keys"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q069",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 10, Câu hỏi 23]\n\nTìm phủ tối thiểu của tập phụ thuộc hàm:\n\n```text\nF = { A→BC, A→B, B→C, AB→C }\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "A→BC"
+          },
+          {
+            "id": "B",
+            "text": "A→B, AB→C"
+          },
+          {
+            "id": "C",
+            "text": "AB→C"
+          },
+          {
+            "id": "D",
+            "text": "A→B, B→C"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nTách `A→BC` thành `A→B` và `A→C`. Phụ thuộc `A→C` là dư vì từ `A→B` và `B→C` suy ra `A→C` theo bắc cầu. Phụ thuộc `AB→C` cũng dư vì chỉ cần `B→C` đã đủ suy ra C, nên thuộc tính A ở vế trái không cần thiết và toàn phụ thuộc này không cần giữ. Phủ tối thiểu còn `{A→B, B→C}`. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 29–30 (thuật toán phủ tối thiểu: tách vế phải, loại thuộc tính thừa và phụ thuộc dư thừa).",
+          "images": []
+        },
+        "tags": [
+          "functional-dependency",
+          "minimal-cover"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q070",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 11, Câu hỏi 24]\n\nCho các bảng:\n\n```text\nAcc(AccID, Password, AccID_parent)\nObject(ObjectID, name, type, AccID)\nPermission(AccID, ObjectID, type, expired_date)\n```\n\n`AccID_parent` là khóa ngoại tham chiếu đến `AccID` trong chính bảng `Acc`. Câu lệnh nào tạo ràng buộc khóa ngoại này đúng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "ALTER TABLE Object ADD CONSTRAINT fk_acc FOREIGN KEY (AccID) REFERENCES Acc(AccID_parent);"
+          },
+          {
+            "id": "B",
+            "text": "ALTER TABLE Acc ADD CONSTRAINT fk_acc FOREIGN KEY (AccID) REFERENCES Acc(AccID_parent);"
+          },
+          {
+            "id": "C",
+            "text": "ALTER TABLE Object ADD CONSTRAINT fk_acc FOREIGN KEY (AccID_parent) REFERENCES Acc(AccID);"
+          },
+          {
+            "id": "D",
+            "text": "ALTER TABLE Acc ADD CONSTRAINT fk_acc FOREIGN KEY (AccID_parent) REFERENCES Acc(AccID);"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nKhóa ngoại cần đặt trên bảng chứa thuộc tính `AccID_parent`, tức bảng `Acc`, và thuộc tính đó tham chiếu đến khóa chính `AccID` cũng trong bảng `Acc`. Đây là khóa ngoại tự tham chiếu. A và C đặt ràng buộc trên bảng `Object`, sai bảng; B dùng cột khóa ngoại là `AccID` và tham chiếu ngược về `AccID_parent`, sai chiều. Nguồn slide: `13_Constraints_and_Triggers.pdf`, phần ràng buộc khóa ngoại với cú pháp `FOREIGN KEY (...) REFERENCES ...`; `01_02_Introduction_RDB.pdf`, phần khóa ngoại có thể tham chiếu khóa ứng viên của cùng hoặc quan hệ khác.",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "foreign-key"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q071",
+        "type": "multiple_choice",
+        "question": {
+          "text": "[Database - cuối kì 20202.pdf, trang 14]\n\nCho lược đồ quan hệ `R(ABEIJGH)` và tập phụ thuộc hàm:\n\n```text\nF = { AB→E, AC→J, BH→I, B→G, GA→HB }\n```\n\nCó thể suy ra những phụ thuộc hàm nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "ABG→EHI"
+          },
+          {
+            "id": "B",
+            "text": "AB→EHIC"
+          },
+          {
+            "id": "C",
+            "text": "AB→EI"
+          },
+          {
+            "id": "D",
+            "text": "B→GE"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A, C**.\n\nTính bao đóng:\n\n- Với `ABG`, ta có `AB→E`. Từ `G` và `A`, dùng `GA→HB`, suy ra `H` và `B`. Có `B,H` nên dùng `BH→I`. Do đó `ABG→EHI` đúng.\n- Với `AB`, đầu tiên `AB→E`, `B→G`; có `G,A` nên suy ra `H,B`; có `B,H` suy ra `I`. Vì vậy `AB→EI` đúng.\n- `AB→EHIC` sai vì không suy ra được `C`.\n- `B→GE` sai vì từ `B` chỉ suy ra `G`, không suy ra được `E`.\n\nNguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (bao đóng thuộc tính và suy diễn phụ thuộc hàm).",
+          "images": []
+        },
+        "tags": [
+          "functional-dependency",
+          "closure"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q072",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20202.pdf, trang 17]\n\nĐể tạo một bảng, dùng câu lệnh nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "CREATE TABLE"
+          },
+          {
+            "id": "B",
+            "text": "CREAT TABLE"
+          },
+          {
+            "id": "C",
+            "text": "ALTER TABLE"
+          },
+          {
+            "id": "D",
+            "text": "SELECT TABLE"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\n`CREATE TABLE` là câu lệnh DDL dùng để định nghĩa/tạo một bảng mới trong CSDL. `ALTER TABLE` dùng để sửa cấu trúc bảng đã có; `SELECT TABLE` không phải cú pháp tạo bảng; `CREAT TABLE` sai chính tả từ khóa `CREATE`. Nguồn slide: `04_structured_query_language.pdf`, phần tổng quan SQL statement: `CREATE TABLE` định nghĩa bảng, `ALTER TABLE` sửa cấu trúc bảng.",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "ddl"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q073",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20202.pdf, trang 21]\n\nLược đồ `R(A,B,C)`, `F = {A→B, B→C, C→A}` được tách thành `R1(AB), R2(BC)`. Phép tách này có tính chất gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bảo toàn tập phụ thuộc hàm"
+          },
+          {
+            "id": "B",
+            "text": "Bảo toàn tập phụ thuộc hàm và không làm mất mát thông tin"
+          },
+          {
+            "id": "C",
+            "text": "Làm mất mát thông tin"
+          },
+          {
+            "id": "D",
+            "text": "Không bảo toàn tập phụ thuộc hàm"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nPhép tách là không mất mát thông tin vì `R1∩R2 = {B}` và `B→C`, tức giao `{B}` xác định các thuộc tính còn lại của `R2`. Tuy nhiên không bảo toàn đầy đủ phụ thuộc hàm: chiếu F lên `R1(AB)` giữ được `A→B`; chiếu lên `R2(BC)` giữ được `B→C`; nhưng phụ thuộc `C→A` không nằm trọn trong mảnh nào và không suy ra được chỉ từ các phụ thuộc chiếu này. Vì vậy tính chất đúng trong các lựa chọn là **không bảo toàn tập phụ thuộc hàm**. Nguồn slide: `08_Normalization.pdf`, tr. 19–23 (phân rã, lossless join và bảo toàn phụ thuộc hàm).",
+          "images": []
+        },
+        "tags": [
+          "normalization",
+          "decomposition"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q074",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20202.pdf, trang 22]\n\nChọn câu truy vấn `SELECT` trả về tất cả các mặt hàng mà tên **chứa** chuỗi ký tự `choco`. Ghi chú: dấu `%` thay cho một chuỗi ký tự bất kỳ, dấu `_` thay cho một ký tự bất kỳ.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT * FROM items WHERE name LIKE 'choco%';"
+          },
+          {
+            "id": "B",
+            "text": "SELECT * FROM items WHERE name LIKE '%choco%';"
+          },
+          {
+            "id": "C",
+            "text": "SELECT * FROM items WHERE name = '%choco%';"
+          },
+          {
+            "id": "D",
+            "text": "SELECT * FROM items WHERE name LIKE '_choco_';"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nMẫu `'%choco%'` nghĩa là có thể có bất kỳ chuỗi nào trước `choco` và bất kỳ chuỗi nào sau `choco`, nên khớp các tên **chứa** chuỗi này ở mọi vị trí. `choco%` chỉ khớp tên bắt đầu bằng `choco`; `_choco_` yêu cầu đúng một ký tự trước và sau; còn `=` không diễn giải `%` như ký tự đại diện. Nguồn slide: `04_structured_query_language.pdf`, tr. 30–33 (mệnh đề `WHERE`, toán tử `LIKE`, `%` và `_`).",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "like"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q075",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 5, Câu 21]\n\nCho `R(ABCDE)`, `F = {AB→E, BC→D, A→C}`. Có thể suy ra phụ thuộc hàm nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "AB→D"
+          },
+          {
+            "id": "B",
+            "text": "C→E"
+          },
+          {
+            "id": "C",
+            "text": "B→A"
+          },
+          {
+            "id": "D",
+            "text": "D→A"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nTừ `AB`, dùng `A→C` suy ra `C`; khi đã có `B` và `C`, dùng `BC→D` suy ra `D`. Do đó `AB→D` đúng. Các lựa chọn còn lại không suy ra được vì không có chuỗi phụ thuộc nào bắt đầu từ riêng `C`, `B` hoặc `D` để sinh ra vế phải tương ứng. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (bao đóng thuộc tính và suy diễn phụ thuộc hàm).",
+          "images": []
+        },
+        "tags": [
+          "functional-dependency",
+          "closure"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q076",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 5, Câu 22]\n\nCho các quan hệ:\n\n```text\nr(A,B,C) = {(1,2,5), (2,3,5), (3,4,6)}\ns(D,E,C) = {(7,8,5), (9,10,5), (7,8,6)}\nt(D,E) = {(7,8), (9,10)}\n```\n\nKết quả của `(r * s) ÷ t` là gì? (`*` là nối tự nhiên.)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "(A,B,C) = (1,2,5)"
+          },
+          {
+            "id": "B",
+            "text": "(A,B,C) = (3,4,6)"
+          },
+          {
+            "id": "C",
+            "text": "(A,B,C) = (1,2,5), (2,3,5)"
+          },
+          {
+            "id": "D",
+            "text": "(A,B,C) = (1,2,5), (2,3,5), (3,4,6)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nNối tự nhiên `r * s` nối trên thuộc tính chung `C`. Với `C=5`, hai dòng của r là `(1,2,5)` và `(2,3,5)` ghép được với cả hai dòng của s có `(D,E)=(7,8)` và `(9,10)`. Với `C=6`, dòng `(3,4,6)` chỉ ghép được với `(D,E)=(7,8)`, thiếu `(9,10)`. Phép chia cho `t(D,E)` giữ các bộ `(A,B,C)` sao cho với **mọi** `(D,E)` trong t đều có bộ tương ứng trong kết quả nối. Vì vậy chỉ có `(1,2,5)` và `(2,3,5)`. Nguồn slide: `03_Relational_Algebra.pdf`, phần natural join và division.",
+          "images": []
+        },
+        "tags": [
+          "relational-algebra",
+          "division"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q077",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 5, Câu 23]\n\nQuan hệ `MedicalVisit(patientID, name, addr, date, time, doctorID, doctorName, note)` có tập phụ thuộc hàm:\n\n```text\npatientID → name, addr\ndoctorID → doctorName\npatientID, date, time → doctorID, note\n```\n\nTập lược đồ nào đạt 3NF hợp lý nhất?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không tách, vẫn ở dạng 3NF"
+          },
+          {
+            "id": "B",
+            "text": "Visit(patientID, date, time, doctorID, note); Patient(patientID, name, addr); Doctor(doctorID, doctorName)"
+          },
+          {
+            "id": "C",
+            "text": "Patient(patientID, name, addr, date, time); Doctor(doctorID, doctorName, note)"
+          },
+          {
+            "id": "D",
+            "text": "Visit(patientID, date, time, doctorID, doctorName, note); Patient(patientID, name, addr)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nMỗi nhóm phụ thuộc nên được tách vào quan hệ mà vế trái là khóa của quan hệ đó: `Patient(patientID, name, addr)` cho `patientID→name,addr`; `Doctor(doctorID, doctorName)` cho `doctorID→doctorName`; và `Visit(patientID,date,time,doctorID,note)` cho thông tin mỗi lần khám, trong đó `(patientID,date,time)` xác định bác sĩ và ghi chú. Cách này loại phụ thuộc bắc cầu/không đúng khóa như `doctorID→doctorName` ra khỏi quan hệ Visit, nên phù hợp 3NF. Nguồn slide: `08_Normalization.pdf`, tr. 17 (3NF) và tr. 19–23 (phân rã bảo toàn phụ thuộc, lossless join/3NF synthesis).",
+          "images": []
+        },
+        "tags": [
+          "normalization",
+          "3nf"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q078",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 5, Câu 24]\n\nCho `R(ABCDEF)`, `G = {AB→C, C→B, ABD→E, F→A}` và các lược đồ con:\n\n```text\nr1(BC), r2(AC), r3(ABDE), r4(ABDF)\n```\n\nPhép tách nào không mất mát thông tin?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "r1, r3"
+          },
+          {
+            "id": "B",
+            "text": "r2, r3"
+          },
+          {
+            "id": "C",
+            "text": "r1, r2, r3, r4"
+          },
+          {
+            "id": "D",
+            "text": "r1, r2, r3"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nCác lựa chọn A, B, D đều không chứa đủ thuộc tính `F` của quan hệ gốc nên không thể là phép tách đầy đủ của `R(ABCDEF)`. Với `r1,r2,r3,r4`, ta có thể nối không mất mát theo từng bước: `r1(BC)` và `r2(AC)` giao ở `C`, mà `C→B`; nối tiếp với `r3(ABDE)` giao đủ `AB`, mà `AB→C`; rồi nối với `r4(ABDF)` giao `ABD`, mà `ABD→E`. Do đó các mảnh có thể tái tạo quan hệ gốc. Nguồn slide: `08_Normalization.pdf`, tr. 19–23 (tiêu chí phân rã lossless join).",
+          "images": []
+        },
+        "tags": [
+          "normalization",
+          "lossless-join"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q079",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 5, Câu 25]\n\nKhẳng định đúng về 2NF là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trong 2NF, mọi thuộc tính không khóa phụ thuộc đầy đủ vào khóa chính."
+          },
+          {
+            "id": "B",
+            "text": "Trong 2NF, tồn tại thuộc tính không khóa phụ thuộc bộ phận vào khóa chính."
+          },
+          {
+            "id": "C",
+            "text": "Trong 2NF, không có phụ thuộc bắc cầu."
+          },
+          {
+            "id": "D",
+            "text": "2NF mạnh hơn BCNF."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\n2NF dựa trên khái niệm phụ thuộc hàm đầy đủ: mọi thuộc tính không khóa phải phụ thuộc đầy đủ vào toàn bộ khóa, không phụ thuộc vào một phần của khóa ghép. B mô tả chính điều 2NF cấm. C là đặc trưng hướng đến 3NF, không phải điều kiện của 2NF. D sai vì BCNF mạnh hơn 3NF và chắc chắn mạnh hơn 2NF. Nguồn slide: `08_Normalization.pdf`, tr. 16–17 (2NF dựa trên full functional dependency; 3NF loại phụ thuộc bắc cầu).",
+          "images": []
+        },
+        "tags": [
+          "normalization",
+          "2nf"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q080",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 5, Câu 26]\n\nCho `R(A,B,C,D,E)`, `F = {AB→E, E→C, AC→D, D→B}`. Tập khóa tối thiểu của R là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "{AB, AC}"
+          },
+          {
+            "id": "B",
+            "text": "{AB, AC, AD}"
+          },
+          {
+            "id": "C",
+            "text": "{AB, AC, AD, AE}"
+          },
+          {
+            "id": "D",
+            "text": "{AC, AE}"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nKhông có phụ thuộc nào sinh ra `A`, nên mọi khóa phải chứa `A`. Kiểm tra các cặp chứa A:\n\n- `AB+`: có `AB→E`, `E→C`, `AC→D`, nên đủ `A,B,C,D,E`.\n- `AC+`: có `AC→D`, `D→B`, rồi `AB→E`, đủ toàn bộ.\n- `AD+`: có `D→B`, rồi `AB→E`, `E→C`, đủ toàn bộ.\n- `AE+`: có `E→C`, `AC→D`, `D→B`, đủ toàn bộ.\n\nKhông cặp nào bỏ được thuộc tính vì `A` bắt buộc và một thuộc tính còn lại là cần để khởi động chuỗi suy diễn. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (bao đóng), tr. 21–24 (khóa tối thiểu).",
+          "images": []
+        },
+        "tags": [
+          "functional-dependency",
+          "keys"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q081",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 27]\n\nMột trigger `AFTER INSERT` trên bảng `SinhVien` chèn vào `AuditLog(Action, MaSV, NewDiemTB)` bằng dữ liệu từ bảng đặc biệt `inserted`. Sau đó chạy:\n\n```sql\nINSERT INTO dbo.SinhVien(MaSV, HoTen, DiemTB)\nVALUES ('SV0004', N'Phạm Dũng', 9.10);\n```\n\nNhận định nào đúng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trigger chỉ chạy nếu `INSERT` 1 dòng; nếu `INSERT` nhiều dòng thì không chạy."
+          },
+          {
+            "id": "B",
+            "text": "Trigger chạy trước `INSERT` nên `inserted` sẽ rỗng."
+          },
+          {
+            "id": "C",
+            "text": "Trigger chạy sau `INSERT` và sẽ thêm 1 dòng vào `AuditLog` với `Action='INSERT'`, `MaSV='SV0004'`, `NewDiemTB=9.10`."
+          },
+          {
+            "id": "D",
+            "text": "Trigger tạo đúng 1 dòng log nhưng `MaSV` sẽ `NULL` vì không truy cập được `inserted`."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nTrigger được khai báo `AFTER INSERT`, nên nó chạy sau khi thao tác chèn vào `SinhVien` xảy ra. Bảng/biến đặc biệt chứa dữ liệu mới (`inserted`, tương ứng ý tưởng `NEW` trong slide trigger) có cùng cấu trúc dữ liệu mới được chèn, nên truy vấn `SELECT 'INSERT', i.MaSV, i.DiemTB FROM inserted i` lấy đúng `SV0004` và `9.10` để ghi log. A sai vì trigger dạng câu lệnh phải xử lý được cả nhiều dòng; B sai về thời điểm; D sai vì có thể truy cập dữ liệu mới. Nguồn slide: `13_Constraints_and_Triggers.pdf`, phần **Triggers**: trigger kích hoạt khi có `INSERT/UPDATE/DELETE`, có biến/bảng đặc biệt để tham chiếu dữ liệu mới/cũ.",
+          "images": []
+        },
+        "tags": [
+          "trigger",
+          "sql-server"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q082",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 28]\n\nCâu lệnh nào để người dùng `uA` có thể xem dữ liệu bảng `KhachHang`, và `uA` được phép cấp lại quyền đó cho người dùng khác?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "GRANT SELECT KhachHang TO uA;"
+          },
+          {
+            "id": "B",
+            "text": "GRANT VIEW ON KhachHang TO uA WITH GRANT OPTION;"
+          },
+          {
+            "id": "C",
+            "text": "GRANT SELECT ON KhachHang TO PUBLIC;"
+          },
+          {
+            "id": "D",
+            "text": "GRANT SELECT ON KhachHang TO uA WITH GRANT OPTION;"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nCú pháp cấp quyền là `GRANT <privilege list> ON <database element> TO <user list> [WITH GRANT OPTION]`. Quyền xem dữ liệu bảng là `SELECT`; đối tượng là `KhachHang`; người nhận là `uA`; và muốn `uA` được cấp tiếp quyền đó cho người khác thì cần `WITH GRANT OPTION`. Nguồn slide: `13_Security.pdf`, phần **Granting privileges**: cú pháp `GRANT ... ON ... TO ... [WITH GRANT OPTION]`.",
+          "images": []
+        },
+        "tags": [
+          "security",
+          "grant"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q083",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 30]\n\nNgười dùng `u1` từng được cấp quyền `SELECT` trên bảng `KhachHang` với tùy chọn `WITH GRANT OPTION`, và đã cấp quyền này lại cho người khác. Lệnh nào thu hồi quyền `SELECT` từ `u1` và từ các người dùng khác mà `u1` đã cấp quyền?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "REVOKE SELECT ON KhachHang FROM u1 WITH GRANT OPTION;"
+          },
+          {
+            "id": "B",
+            "text": "DENY SELECT ON KhachHang TO u1;"
+          },
+          {
+            "id": "C",
+            "text": "REVOKE SELECT ON KhachHang FROM u1 CASCADE;"
+          },
+          {
+            "id": "D",
+            "text": "REMOVE SELECT ON KhachHang FROM u1;"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\n`REVOKE` dùng để thu hồi quyền. Tùy chọn `CASCADE` làm quyền được cấp dây chuyền nhờ quyền của `u1` cũng bị thu hồi theo. A không đúng cú pháp thu hồi theo slide và không thể hiện thu hồi dây chuyền; B là `DENY` không phải cú pháp chuẩn trong slide; D dùng `REMOVE`, không phải lệnh SQL cấp/thu hồi quyền. Nguồn slide: `13_Security.pdf`, phần **Revoking privileges**: `REVOKE <privilege list> ON <database element> FROM <user list> [CASCADE|RESTRICT]` và ý nghĩa `CASCADE`.",
+          "images": []
+        },
+        "tags": [
+          "security",
+          "revoke"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q084",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 31]\n\nCho `R(U)` với `U = {A,B,C,D,E,G,H}` và:\n\n```text\nF = { AB→CD, ABC→GH, AD→EG }\n```\n\nTập phụ thuộc hàm nào dưới đây **không đúng** là suy diễn được từ F?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "{AB→C, AB→D, AB→G, AB→H}"
+          },
+          {
+            "id": "B",
+            "text": "{AB→D, AB→G, AD→E, AD→G}"
+          },
+          {
+            "id": "C",
+            "text": "{AD→A, AD→D, AD→E, AD→G}"
+          },
+          {
+            "id": "D",
+            "text": "{B→G, AB→H, AD→G, AD→H}"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nVới `AB`, dùng `AB→CD` suy ra `C,D`; khi có `A,B,C`, dùng `ABC→GH` suy ra `G,H`, nên các phụ thuộc trong A và một phần B là đúng. `AD→E,G` có sẵn; `AD→A` và `AD→D` là phụ thuộc tầm thường. Riêng phương án D chứa `B→G`, nhưng từ riêng `B` không có phụ thuộc nào áp dụng để sinh thêm thuộc tính; D còn chứa `AD→H`, cũng không suy ra được từ `AD→EG`. Vì vậy D là tập không đúng. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (bao đóng thuộc tính và suy diễn phụ thuộc hàm; phụ thuộc tầm thường).",
+          "images": []
+        },
+        "tags": [
+          "functional-dependency",
+          "closure"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q085",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 32]\n\nCho `R(U)` với `U = {A,B,C,D,E}` và:\n\n```text\nF = { AB→C, BC→D, CD→B, BD→A, AD→E }\n```\n\nTập thuộc tính nào dưới đây **không phải** là khóa của R?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "AB"
+          },
+          {
+            "id": "B",
+            "text": "BC"
+          },
+          {
+            "id": "C",
+            "text": "CD"
+          },
+          {
+            "id": "D",
+            "text": "AD"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nKiểm tra bao đóng:\n\n- `AB+`: có `C`, rồi `BC→D`, rồi `AD→E`, đủ `{A,B,C,D,E}`.\n- `BC+`: có `D`, rồi `BD→A`, rồi `AD→E`, đủ toàn bộ.\n- `CD+`: có `B`, rồi `BD→A`, rồi `AD→E`, đủ toàn bộ.\n- `AD+`: chỉ có `A,D,E`; không có cách suy ra `B` hoặc `C`, nên không phải khóa.\n\nNguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (bao đóng), tr. 21–24 (khóa tối thiểu/siêu khóa).",
+          "images": []
+        },
+        "tags": [
+          "functional-dependency",
+          "keys"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q086",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 33]\n\nCho `R(U)` với `U = {A,B,C,D,E,G}` và:\n\n```text\nF = { AC→BD, ACD→EG, AD→EG }\n```\n\nTập phụ thuộc hàm nào dưới đây có thể suy diễn ra từ F?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "G1 = {ACE→BD, ACD→EG, AD→EG}"
+          },
+          {
+            "id": "B",
+            "text": "G2 = {AC→BDE, AD→EG}"
+          },
+          {
+            "id": "C",
+            "text": "G3 = {AC→BD, ACD→EG, ABD→EG}"
+          },
+          {
+            "id": "D",
+            "text": "G4 = {AC→BDE, ABD→EG}"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nTừ `AC→BD`, bắt đầu với `AC` ta suy ra `B,D`. Khi có `A,C,D`, dùng `ACD→EG` hoặc dùng `AD→EG` để suy ra thêm `E,G`. Vì vậy chắc chắn suy ra được `AC→BDE` (thậm chí còn suy ra được G) và `AD→EG` là phụ thuộc đã có. Các lựa chọn chứa `ABD→EG` không suy ra được vì từ `ABD` không có `C`, và không có phụ thuộc nào sinh `C`. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (bao đóng thuộc tính, suy diễn bằng Armstrong/bao đóng).",
+          "images": []
+        },
+        "tags": [
+          "functional-dependency",
+          "closure"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q087",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 34]\n\nCho `R(U)` với `U = {A,B,C,D,E,G,H}` và:\n\n```text\nF = { AC→BD, ACD→EG, AD→EG }\n```\n\nTập thuộc tính nào dưới đây là khóa tối thiểu của R?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "ACD"
+          },
+          {
+            "id": "B",
+            "text": "ACDH"
+          },
+          {
+            "id": "C",
+            "text": "ACH"
+          },
+          {
+            "id": "D",
+            "text": "BDEG"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nThuộc tính `H` không xuất hiện ở vế phải của phụ thuộc nào, nên mọi khóa phải chứa `H`. Với `ACH`, từ `AC→BD` suy ra `B,D`; khi có `A,C,D`, dùng `ACD→EG` suy ra `E,G`. Kết hợp với `H` ban đầu, ta có toàn bộ `A,B,C,D,E,G,H`, nên `ACH` là siêu khóa. Nó tối thiểu vì bỏ `H` thì không thể suy ra H; bỏ `A` hoặc `C` thì không kích hoạt được `AC→BD`. `ACDH` không tối thiểu do D thừa; `ACD` thiếu H; `BDEG` không suy ra được A,C,H. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 21–24 (khóa tối thiểu và kiểm tra bằng bao đóng thuộc tính).",
+          "images": []
+        },
+        "tags": [
+          "functional-dependency",
+          "keys"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q088",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 7, Câu 36]\n\nCho CSDL:\n\n```text\nNhanVien(MaNV, TenNV, Luong, MaPhong)\nPhongBan(MaPhong, TenPhong)\n```\n\nTạo view hiển thị nhân viên có `Luong > 30` và tên phòng. Câu lệnh nào đúng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "CREATE VIEW V AS SELECT TenNV, Luong, TenPhong FROM NhanVien, PhongBan WHERE Luong > 30;"
+          },
+          {
+            "id": "B",
+            "text": "CREATE VIEW V AS SELECT TenNV, Luong, TenPhong FROM NhanVien JOIN PhongBan ON NhanVien.MaPhong = PhongBan.MaPhong WHERE Luong > 30;"
+          },
+          {
+            "id": "C",
+            "text": "CREATE VIEW V AS SELECT TenNV, Luong FROM NhanVien WHERE Luong > 30;"
+          },
+          {
+            "id": "D",
+            "text": "CREATE VIEW V AS SELECT * FROM NhanVien WHERE Luong > 30;"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nView cần hiển thị `TenPhong`, thuộc bảng `PhongBan`, nên phải nối `NhanVien` với `PhongBan` qua khóa `MaPhong`. Phương án B có đúng cú pháp `CREATE VIEW ... AS SELECT ...` và đúng điều kiện `JOIN ... ON NhanVien.MaPhong = PhongBan.MaPhong`, sau đó lọc `Luong > 30`. A thiếu điều kiện nối nên tạo tích Descartes; C và D không lấy được `TenPhong`. Nguồn slide: `05_structured_query_language - part 2.pdf`, phần **Views**; `04_structured_query_language.pdf`, phần `JOIN`/`SELECT FROM WHERE`.",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "view",
+          "join"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q089",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 7, Câu 38]\n\nBảng `R(A1,A2,A3)` rất lớn. Truy vấn thường xuyên:\n\n```sql\nSELECT * FROM R WHERE A3 BETWEEN 100 AND 200;\n```\n\nChọn giải pháp hợp lý nhất.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đánh index B-tree trên A3"
+          },
+          {
+            "id": "B",
+            "text": "Đánh index hash trên A3"
+          },
+          {
+            "id": "C",
+            "text": "Không đánh index, dùng heap file"
+          },
+          {
+            "id": "D",
+            "text": "Chỉ đánh index khóa chính (A1,A2)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nĐiều kiện `BETWEEN 100 AND 200` là truy vấn khoảng trên thuộc tính `A3`. B-tree/B+-tree duy trì thứ tự khóa nên rất phù hợp cho truy vấn khoảng: tìm điểm bắt đầu rồi quét liên tiếp các khóa trong khoảng. Hash index chủ yếu phù hợp truy vấn bằng (`=`), không tối ưu cho khoảng. Heap file buộc quét nhiều dòng; index trên khóa chính `(A1,A2)` không trực tiếp hỗ trợ điều kiện trên `A3`. Nguồn slide: `10_storage_index.pdf`, phần **Index data structures**: B+-tree index, hash index; phần heap file/unordered records.",
+          "images": []
+        },
+        "tags": [
+          "storage",
+          "index"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q090",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 7, Câu 39]\n\nPhát biểu nào sau đây đúng nhất về `clustered index` trong SQL Server?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Một bảng có thể có nhiều `clustered index` nếu nhiều cột có index."
+          },
+          {
+            "id": "B",
+            "text": "`Clustered index` quyết định thứ tự lưu trữ vật lý của các dòng dữ liệu trong bảng theo key."
+          },
+          {
+            "id": "C",
+            "text": "`Clustered index` chỉ là cấu trúc logic, không liên quan vật lý lưu trữ."
+          },
+          {
+            "id": "D",
+            "text": "`Clustered index` chỉ được tạo trên khóa chính."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nClustered index sắp xếp/tổ chức các dòng dữ liệu theo khóa của index, nên nó gắn với thứ tự lưu trữ vật lý hoặc thứ tự logic-vật lý của dữ liệu trong bảng. Vì dữ liệu chỉ có thể được tổ chức theo một thứ tự chính, một bảng thường chỉ có một clustered index. Nó không bắt buộc chỉ nằm trên khóa chính; khóa chính có thể là clustered hoặc non-clustered tùy thiết kế. Nguồn slide: `10_storage_index.pdf`, phần **Clustered vs. Non-clustered index**.",
+          "images": []
+        },
+        "tags": [
+          "storage",
+          "index"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q091",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20232.pdf, trang 1]\n\nCho các quan hệ:\n\n```text\nAcc(AccID, password, AccID_parent)\nObject(ObjectID, name, type, AccID)\nPermission(AccID, ObjectID, type, expired_date)\n```\n\nXét câu lệnh:\n\n```sql\nDELETE FROM Acc\nWHERE NOT EXISTS (\n  SELECT * FROM Permission p\n  WHERE Acc.AccID = p.AccID\n);\n```\n\nKết quả/tác động của câu lệnh là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Xóa các tài khoản trong bảng `Acc` mà chưa được trao quyền trên bất kỳ đối tượng (`Object`) nào."
+          },
+          {
+            "id": "B",
+            "text": "Không bao giờ có bản ghi nào được xóa."
+          },
+          {
+            "id": "C",
+            "text": "Xóa các tài khoản trong bảng `Acc` mà đã được trao quyền trên ít nhất một đối tượng."
+          },
+          {
+            "id": "D",
+            "text": "Lỗi cú pháp."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\n`NOT EXISTS` kiểm tra không tồn tại dòng nào trong truy vấn con. Với mỗi tài khoản `Acc`, truy vấn con tìm các dòng `Permission` có cùng `AccID`. Nếu không tìm thấy dòng nào, nghĩa là tài khoản đó chưa có quyền nào trên đối tượng nào, điều kiện `NOT EXISTS` đúng và dòng trong `Acc` bị xóa. Câu lệnh đúng cú pháp `DELETE FROM ... WHERE ...`. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–33 (cú pháp `DELETE FROM`, `WHERE`, truy vấn con/điều kiện tồn tại); `13_Security.pdf`, phần quyền trên database elements như bảng/view.",
+          "images": []
+        },
+        "tags": [
+          "sql",
+          "delete",
+          "subquery"
+        ],
+        "difficulty": "medium"
       }
     ]
   }
