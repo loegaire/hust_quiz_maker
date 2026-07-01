@@ -1,0 +1,2162 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "database-it3090-trac-nghiem-de-thi-tong-hop",
+    "title": "IT3090 Cơ sở dữ liệu - Trắc nghiệm đề thi tổng hợp có giải thích nguồn slide",
+    "description": "Bộ câu hỏi được trích từ các file đề thi trắc nghiệm rõ đọc được. Các câu tự luận/thực hành và câu ảnh quá mờ hoặc không tìm được nguồn đối chiếu trong slide đã được loại khỏi bản import này để ưu tiên độ chính xác.",
+    "language": "vi",
+    "source": {
+      "type": "merged-exam-slides",
+      "notes": "Đề nguồn: các PDF Database cuối kỳ/giữa kỳ đã tải lên; nguồn lý thuyết đối chiếu: csdl_ly_thuyet_tieng_anh.zip."
+    },
+    "settings": {
+      "shuffleQuestions": false,
+      "shuffleChoices": false,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "q001",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 1]\n\nCho U = {A, B, C, D, E, F} và F = {A→B, C→D, CD→EF}. Phủ tối thiểu của F là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "{A→B, C→E, C→F}"
+          },
+          {
+            "id": "B",
+            "text": "{A→B, C→D, C→EF}"
+          },
+          {
+            "id": "C",
+            "text": "{A→B, C→D, CD→E, CD→F}"
+          },
+          {
+            "id": "D",
+            "text": "{A→B, C→D, C→E, C→F}"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nLàm phủ tối thiểu theo đúng thuật toán:\n\n1. Tách vế phải nhiều thuộc tính: `CD→EF` thành `CD→E` và `CD→F`.\n2. Kiểm tra thuộc tính thừa ở vế trái. Vì đã có `C→D`, từ riêng `C` ta suy ra được `D`; do đó trong `CD→E` và `CD→F`, thuộc tính `D` ở vế trái là thừa. Hai phụ thuộc này rút còn `C→E` và `C→F`.\n3. Không bỏ được `C→D`, `C→E`, `C→F` hay `A→B` mà vẫn giữ tương đương.\n\nVì vậy phủ tối thiểu là `{A→B, C→D, C→E, C→F}`. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 29–30 (định nghĩa và thuật toán phủ tối thiểu: mỗi FD có vế phải đơn thuộc tính; thử loại thuộc tính thừa ở vế trái; thử loại FD dư thừa).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "functional-dependency",
+          "minimal-cover"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q002",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 2]\n\nCSDL có các quan hệ:\n\n```text\nNhanVien(MaNV, TenNV, DiaChi, NamSinh, MaPh, MaCV)\nPhong(MaPh, TenPh, DiaChi, Tel)\nCongViec(MaCV, TenCV, Cap, KinhPhi)\n```\n\nChọn SQL để đưa ra tên các phòng **không có một nhân viên nào có địa chỉ ở Hà Nội**.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT TenPh FROM Phong WHERE MaPh NOT IN (SELECT MaPh FROM NhanVien WHERE DiaChi 'Hà Nội')"
+          },
+          {
+            "id": "B",
+            "text": "SELECT TenPh FROM Phong WHERE MaPh IN (SELECT MaPh FROM NhanVien WHERE DiaChi = 'Hà Nội')"
+          },
+          {
+            "id": "C",
+            "text": "SELECT TenPh FROM Phong WHERE MaPh NOT IN (SELECT MaPh FROM NhanVien WHERE DiaChi = 'Hà Nội')"
+          },
+          {
+            "id": "D",
+            "text": "SELECT TenPh FROM Phong NATURAL JOIN NhanVien WHERE DiaChi = 'Hà Nội'"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nTa cần loại các phòng mà `MaPh` xuất hiện trong tập nhân viên ở Hà Nội. Truy vấn con:\n\n```sql\nSELECT MaPh FROM NhanVien WHERE DiaChi = 'Hà Nội'\n```\n\ntrả về các phòng **có** nhân viên Hà Nội. Vì đề yêu cầu phòng **không có** nhân viên nào như vậy, truy vấn ngoài phải dùng `NOT IN`. Phương án B làm ngược yêu cầu; D là join nên chỉ lấy các phòng có nhân viên Hà Nội; A sai cú pháp vì thiếu toán tử so sánh `=`. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "sql",
+          "subquery",
+          "not-in"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q003",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 3]\n\nX là một khóa tối thiểu của lược đồ quan hệ S = ⟨U, F⟩ khi và chỉ khi điều kiện nào đúng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "(X→U) ∈ F⁺ và với mọi Z ⊂ X: (Z→U) ∈ F⁺"
+          },
+          {
+            "id": "B",
+            "text": "(X→U) ∈ F⁺ và với mọi Z ⊂ X: (Z→U) ∉ F⁺"
+          },
+          {
+            "id": "C",
+            "text": "Với mọi Z ⊂ X: (Z→U) ∈ F⁺"
+          },
+          {
+            "id": "D",
+            "text": "(X→U) ∈ F⁺"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nMột khóa tối thiểu phải thỏa **hai phần**:\n\n- **Tính xác định toàn bộ thuộc tính**: `X→U` thuộc `F⁺`, hay tương đương `X⁺ = U`. Khi đó X là siêu khóa.\n- **Tính tối thiểu**: không có tập con thực sự nào `Z ⊂ X` vẫn xác định được toàn bộ U. Nếu có `Z→U`, X không còn tối thiểu.\n\nDo đó điều kiện đầy đủ là `(X→U)∈F⁺` và `∀Z⊂X: (Z→U)∉F⁺`. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (bao đóng thuộc tính và tiêu chuẩn suy diễn `X→Y` khi `Y⊆X+`), tr. 21–24 (định nghĩa/thuật toán khóa tối thiểu).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "functional-dependency",
+          "candidate-key"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q004",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 4]\n\nPhát biểu nào dưới đây **không chính xác** về khóa chính (primary key) của một bảng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Khóa chính có thể có nhiều hơn 1 thuộc tính."
+          },
+          {
+            "id": "B",
+            "text": "Trong 1 bảng có thể có nhiều hơn 1 khóa chính."
+          },
+          {
+            "id": "C",
+            "text": "Hai bản ghi bất kỳ không được có giá trị trên khóa chính trùng nhau."
+          },
+          {
+            "id": "D",
+            "text": "Bảng có thể không cần khóa chính."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nMột primary key có thể là **khóa ghép** gồm nhiều thuộc tính, nên A đúng. Giá trị khóa chính phải phân biệt giữa các bộ và không được NULL, nên C đúng. Tuy nhiên về ràng buộc `PRIMARY KEY`, một quan hệ/bảng chỉ được khai báo **một** primary key; primary key đó có thể gồm một hoặc nhiều cột. Vì vậy phát biểu “một bảng có thể có nhiều hơn 1 khóa chính” là sai. Nguồn slide: `01_02_Introduction_RDB.pdf`, tr. 47–49 (khóa là một hoặc một tập thuộc tính; candidate key, primary key, foreign key), và `04_structured_query_language.pdf`, tr. 17 (một quan hệ chỉ có một primary key).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "key",
+          "primary-key"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q005",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 5]\n\nCâu lệnh phân quyền:\n\n```sql\nGRANT x ON y TO z WITH GRANT OPTION;\n```\n\nPhát biểu nào đúng về `x`, `y`, `z`?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "x là một hoặc nhiều thao tác, y là một hoặc nhiều đối tượng, z là một hoặc một nhóm người sử dụng."
+          },
+          {
+            "id": "B",
+            "text": "x là một hoặc nhiều đối tượng, y là một hoặc nhiều thao tác, z là một hoặc một nhóm người sử dụng."
+          },
+          {
+            "id": "C",
+            "text": "x là một hoặc nhiều thao tác, y là một hoặc một nhóm người sử dụng, z là một hoặc nhiều đối tượng."
+          },
+          {
+            "id": "D",
+            "text": "x là một hoặc một nhóm người sử dụng, y là một hoặc nhiều thao tác, z là một hoặc nhiều đối tượng."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nCú pháp slide ghi rõ:\n\n```sql\nGRANT <privilege list> ON <database element> TO <user list> [WITH GRANT OPTION];\n```\n\nVì vậy `x` là danh sách quyền/thao tác như `SELECT`, `INSERT`, `UPDATE`; `y` là phần tử CSDL như bảng hoặc view; `z` là danh sách user/nhóm user. `WITH GRANT OPTION` cho phép người nhận quyền cấp tiếp quyền đó cho người khác. Nguồn slide: `05_structured_query_language - part 2.pdf`, tr. 53–54 hoặc `13_Security.pdf`, tr. 17–18 (cú pháp `GRANT <privilege list> ON <database element> TO <user list> [WITH GRANT OPTION]`).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "security",
+          "grant"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q006",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 6]\n\nCho R(A,B,C,D,E,G,H) và tập phụ thuộc hàm:\n\n```text\nF = {AB→C, D→EG, C→A, BE→C, ACD→B, CE→AG, BC→D, CG→BD, G→H}\n```\n\nTính `(BE)+`.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "BDEGH"
+          },
+          {
+            "id": "B",
+            "text": "ABCDEH"
+          },
+          {
+            "id": "C",
+            "text": "ACDGH"
+          },
+          {
+            "id": "D",
+            "text": "ABCDEGH"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nTính bao đóng:\n\n- Bắt đầu: `(BE)+ = {B,E}`.\n- `BE→C` nên thêm `C`.\n- `C→A` nên thêm `A`.\n- Có `B,C` nên dùng `BC→D`, thêm `D`.\n- `D→EG` thêm `G` (E đã có).\n- `G→H` thêm `H`.\n\nKết quả thu được `{A,B,C,D,E,G,H}`, tức toàn bộ thuộc tính của R. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (bao đóng thuộc tính và tiêu chuẩn suy diễn `X→Y` khi `Y⊆X+`), tr. 21–24 (định nghĩa/thuật toán khóa tối thiểu).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "functional-dependency",
+          "closure"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q007",
+        "type": "multiple_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 7]\n\nTrong mô hình thực thể–liên kết (ER), các thuộc tính có thể là những loại nào? Chọn tất cả phương án phù hợp.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thuộc tính tổng hợp."
+          },
+          {
+            "id": "B",
+            "text": "Thuộc tính suy diễn, tính toán được từ thuộc tính khác."
+          },
+          {
+            "id": "C",
+            "text": "Thuộc tính tham chiếu đến thực thể khác."
+          },
+          {
+            "id": "D",
+            "text": "Thuộc tính phức/composite."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B",
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B và D** theo cách gọi trong đề.\n\nSlide ER liệt kê các kiểu thuộc tính chính: simple/atomic, composite, multivalued và stored/derived. “Thuộc tính suy diễn” chính là **derived attribute**, ví dụ tuổi suy ra từ ngày sinh. “Thuộc tính phức/composite” là thuộc tính có thể tách thành các phần nhỏ hơn, ví dụ họ tên tách thành họ, tên đệm, tên. “Thuộc tính tham chiếu đến thực thể khác” không phải loại thuộc tính ER chuẩn; tham chiếu sang thực thể khác được biểu diễn bằng **relationship** hoặc bằng khóa ngoại ở mô hình quan hệ. Nguồn slide: `06_entity_relationship_model.pdf`, tr. 11–13 (thuộc tính đơn, tổng hợp/composite, đa trị, suy diễn/derived), tr. 28 (ánh xạ thuộc tính đa trị).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "er-model",
+          "attributes"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q008",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 8–9]\n\nCho câu lệnh SQL:\n\n```sql\nSELECT TenSV\nFROM Sinhvien\nWHERE MaSV IN (\n  SELECT MaSV\n  FROM Dangky\n  GROUP BY MaSV\n  HAVING COUNT(MaMH) >= 0\n);\n```\n\nNhận định nào đúng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đưa ra TenSV đăng ký ít nhất 1 môn học."
+          },
+          {
+            "id": "B",
+            "text": "Đưa ra TenSV không đăng ký môn học nào."
+          },
+          {
+            "id": "C",
+            "text": "Câu lệnh sai cú pháp."
+          },
+          {
+            "id": "D",
+            "text": "Câu lệnh đưa ra danh sách TenSV của tất cả sinh viên."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nTruy vấn con nhóm các bản ghi trong `Dangky` theo `MaSV`. Một sinh viên chỉ xuất hiện trong kết quả `GROUP BY MaSV` nếu sinh viên đó có **ít nhất một** bản ghi đăng ký. Điều kiện `HAVING COUNT(MaMH) >= 0` luôn đúng với mọi nhóm đã tồn tại, nên nó không lọc thêm gì. Vì vậy `IN (...)` chọn các sinh viên có ít nhất một bản ghi trong `Dangky`. Nguồn slide: `05_structured_query_language - part 2.pdf`, tr. 28–33 (`COUNT`, hàm kết tập, `GROUP BY`; thuộc tính trong `SELECT` phải là thuộc tính nhóm hoặc biểu thức kết tập), tr. 37–38 (`DISTINCT`).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "sql",
+          "group-by",
+          "having"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q009",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 10]\n\nCho lược đồ `Hoc(ma_sv, ma_lop, hoc_ky, diemthi)`. Xét câu lệnh:\n\n```sql\nUPDATE Hoc\nSET diemthi = 0\nWHERE NOT (NULL = 1);\n```\n\nTác động đúng của câu lệnh là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trường `diemthi` của bản ghi đầu tiên bị cập nhật thành 0."
+          },
+          {
+            "id": "B",
+            "text": "Trường `diemthi` của tất cả bản ghi bị cập nhật thành 0."
+          },
+          {
+            "id": "C",
+            "text": "Không bản ghi nào bị thay đổi."
+          },
+          {
+            "id": "D",
+            "text": "Trường `diemthi` của bản ghi cuối cùng bị cập nhật thành 0."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nTrong SQL, phép so sánh với `NULL` bằng các toán tử như `=`, `<>`, `<`, `>` không cho TRUE/FALSE trực tiếp mà cho giá trị logic **UNKNOWN**. Vì vậy `NULL = 1` là UNKNOWN. `NOT UNKNOWN` vẫn là UNKNOWN theo logic ba giá trị của SQL. Mệnh đề `WHERE` chỉ chọn các bộ mà điều kiện có giá trị **TRUE**, không chọn FALSE hoặc UNKNOWN. Do đó không có hàng nào thỏa điều kiện và không hàng nào bị cập nhật.\n\nLưu ý: nếu trong ảnh đề có đánh dấu khác, đáp án này được chọn theo đúng lý thuyết trong slide SQL về `NULL` và `WHERE`. Nguồn slide: `04_structured_query_language.pdf`, tr. 36–37 (`NULL` so sánh cho giá trị `UNKNOWN`; mệnh đề `WHERE` chỉ lấy các bộ có điều kiện TRUE).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "sql",
+          "null",
+          "update"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q010",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 13]\n\nPhát biểu nào dưới đây là đúng về trigger?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trigger được thực thi ở phía ứng dụng client."
+          },
+          {
+            "id": "B",
+            "text": "Các xử lý trong trigger không làm thay đổi dữ liệu ở các bảng."
+          },
+          {
+            "id": "C",
+            "text": "Trigger được gọi tường minh bởi người phát triển hệ thống."
+          },
+          {
+            "id": "D",
+            "text": "Trigger được tự động kích hoạt khi có sự kiện xảy ra."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nTrigger là cơ chế phía DBMS. Theo mô hình ECA, trigger gắn với một **event** như `INSERT`, `DELETE`, `UPDATE`; khi event xảy ra và điều kiện thỏa, DBMS tự chạy phần **action** của trigger. Action có thể gồm một hoặc nhiều câu lệnh SQL nên hoàn toàn có thể thay đổi dữ liệu. Vì vậy trigger không phải thủ tục do client gọi tường minh. Nguồn slide: `13_Constraints_and_Triggers.pdf`, tr. 7 và 23–32 (trigger chỉ chạy khi sự kiện xác định xảy ra; mô hình Event–Condition–Action; event INSERT/DELETE/UPDATE; action là các câu lệnh SQL).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "trigger"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q011",
+        "type": "multiple_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 14–15]\n\nGiả sử bảng được tạo như sau:\n\n```sql\nCREATE TABLE sinhvien(\n  MSSV char(8) NOT NULL PRIMARY KEY,\n  Hoten varchar(50) NOT NULL,\n  Gioitinh boolean NOT NULL\n);\n```\n\nNhững câu lệnh nào dưới đây **chắc chắn không** thêm thành công bản ghi vào bảng trên?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "INSERT INTO sinhvien VALUES ('20220101', 'Nguyen Van An', 1);"
+          },
+          {
+            "id": "B",
+            "text": "INSERT INTO sinhvien(MSSV, Hoten) VALUES ('20220101', 'Nguyen Van An');"
+          },
+          {
+            "id": "C",
+            "text": "INSERT INTO sinhvien(MSSV, Gioitinh, Hoten) VALUES ('20220101', 2, 'Nguyen Van An');"
+          },
+          {
+            "id": "D",
+            "text": "INSERT INTO sinhvien(Hoten, MSSV, Gioitinh) VALUES ('N.V.An', '20220101', true);"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B",
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B và C**.\n\n- B chỉ cung cấp `MSSV` và `Hoten`, bỏ qua `Gioitinh`. Vì `Gioitinh` được khai báo `NOT NULL` và không có `DEFAULT`, bản ghi không hợp lệ.\n- C gán `2` cho cột kiểu boolean. Theo miền giá trị boolean thông thường, giá trị hợp lệ là TRUE/FALSE hoặc 1/0 tùy DBMS; `2` không thuộc miền.\n- A cung cấp đủ 3 cột theo đúng thứ tự. D chỉ định rõ danh sách cột nên thứ tự trong `VALUES` đi theo danh sách đó, không cần trùng thứ tự khai báo ban đầu.\n\nSlide SQL nêu `NOT NULL` nghĩa là thuộc tính bắt buộc có giá trị; slide về domain constraints nêu thuộc tính bị ràng buộc bởi miền giá trị cụ thể. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`). Nguồn bổ sung: `01_02_Introduction_RDB.pdf`, tr. 50 (domain constraints).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "sql",
+          "insert",
+          "constraints"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q012",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 17]\n\nThứ tự đúng khi viết các mệnh đề trong một câu truy vấn SQL là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT, GROUP BY, HAVING, FROM, ORDER BY"
+          },
+          {
+            "id": "B",
+            "text": "SELECT, GROUP BY, HAVING, WHERE, ORDER BY"
+          },
+          {
+            "id": "C",
+            "text": "SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY"
+          },
+          {
+            "id": "D",
+            "text": "SELECT, FROM, GROUP BY, HAVING, WHERE, ORDER BY"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nKhuôn dạng tổng quát của câu `SELECT` trong slide là: `SELECT ... FROM ... [WHERE ...] [GROUP BY ...] [HAVING ...] ... [ORDER BY ...]`. Vì vậy thứ tự viết đúng là `SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY`. Nguồn slide: `05_structured_query_language - part 2.pdf`, tr. 10 (khuôn dạng đầy đủ của `SELECT`: `FROM`, `WHERE`, `GROUP BY`, `HAVING`, `ORDER BY`).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "sql",
+          "select-order"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q013",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 18]\n\nCho R(A,B,C,D,E), F = {AB→E, B→C, ABC→D, A→C}. Giả sử các thuộc tính đều chỉ nhận giá trị nguyên tố/atomic. Dạng chuẩn cao nhất của R là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "3NF"
+          },
+          {
+            "id": "B",
+            "text": "2NF"
+          },
+          {
+            "id": "C",
+            "text": "Không đạt chuẩn 1"
+          },
+          {
+            "id": "D",
+            "text": "1NF"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D — 1NF**.\n\nVì mọi thuộc tính đều atomic nên R đạt 1NF. Khóa ứng viên là `AB`: từ `AB` suy ra `E`, có `B→C` nên có C, rồi `ABC→D`, vậy `AB+ = ABCDE`. Tuy nhiên có phụ thuộc `A→C` và `B→C`, trong đó `A` hoặc `B` là **tập con thực sự của khóa ghép AB** mà lại xác định thuộc tính không khóa `C`. Đây là phụ thuộc bộ phận, vi phạm 2NF. Vì không đạt 2NF nên không thể đạt 3NF. Nguồn slide: `08_Normalization.pdf`, tr. 15–17 (1NF, 2NF, 3NF), tr. 19–23 (tính chất phân rã: bảo toàn thuộc tính/phụ thuộc, lossless join, thuật toán 3NF).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "normalization",
+          "2nf"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q014",
+        "type": "multiple_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 19 và 25]\n\nCho các quan hệ:\n\n```text\nKhachHang(IdKH, HoTen, DiaChi)\nMatHang(IdMH, TenHang, ChungLoai, GiaBan)\nDatHang(IDDonHang, IdKH, IdMH, NgayMua, SoLuong)\n```\n\nCâu SQL nào đưa ra **tổng số khách hàng khác nhau** mua hàng trong ngày `31/05/2017`?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT COUNT(IdKH) FROM KhachHang WHERE IdKH IN (SELECT IdKH FROM DatHang WHERE NgayMua = '31/05/2017');"
+          },
+          {
+            "id": "B",
+            "text": "SELECT COUNT(IdKH) FROM DatHang WHERE NgayMua = '31/05/2017';"
+          },
+          {
+            "id": "C",
+            "text": "SELECT MAX(IdKH) FROM DatHang WHERE NgayMua = '31/05/2017';"
+          },
+          {
+            "id": "D",
+            "text": "SELECT COUNT(IdMH) FROM DatHang WHERE NgayMua = '31/05/2017';"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nĐề hỏi số **khách hàng khác nhau**, không phải số dòng đặt hàng hay số mặt hàng. Mỗi khách có thể đặt nhiều mặt hàng trong cùng ngày nên đếm trực tiếp `COUNT(IdKH)` trên `DatHang` có thể đếm trùng. Phương án A đếm các dòng trong `KhachHang` có `IdKH` thuộc tập khách đã mua trong ngày; vì `IdKH` trong `KhachHang` là khóa nên mỗi khách chỉ được đếm một lần. Một cách tương đương thường dùng là `COUNT(DISTINCT IdKH)` trên `DatHang`. Nguồn slide: `05_structured_query_language - part 2.pdf`, tr. 28–33 (`COUNT`, hàm kết tập, `GROUP BY`; thuộc tính trong `SELECT` phải là thuộc tính nhóm hoặc biểu thức kết tập), tr. 37–38 (`DISTINCT`).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "sql",
+          "distinct",
+          "count"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q015",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 20]\n\nCho R(A,B,C,D,E), F = {AB→D, C→B, CB→E, E→D}. Phân rã R thành R1(ABC), R2(CBE), R3(DE) thỏa tiêu chí nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bảo toàn thông tin, bảo toàn tập phụ thuộc hàm."
+          },
+          {
+            "id": "B",
+            "text": "Không bảo toàn thông tin, bảo toàn tập phụ thuộc hàm."
+          },
+          {
+            "id": "C",
+            "text": "Không bảo toàn thông tin, không bảo toàn tập phụ thuộc hàm."
+          },
+          {
+            "id": "D",
+            "text": "Bảo toàn thông tin, không bảo toàn tập phụ thuộc hàm."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D — bảo toàn thông tin, không bảo toàn tập phụ thuộc hàm**.\n\nKiểm tra nối không mất mát có thể làm theo cách ghép từng bước:\n\n1. R2(CBE) và R3(DE) giao nhau ở E. Vì có `E→D`, giao `E` xác định phần còn lại của R3, nên nối R2 với R3 là lossless.\n2. Gọi kết quả ghép là R23(BCDE). R1(ABC) giao với R23 ở `BC`. Từ `CB→E` và `E→D`, ta có `BC→BCDE`, tức giao `BC` xác định toàn bộ R23, nên nối tiếp với R1 vẫn lossless.\n\nTuy nhiên phụ thuộc `AB→D` không được bảo toàn trực tiếp trong các mảnh: R1 chỉ chứa A,B,C; R2 chứa B,C,E; R3 chứa D,E. Từ các phụ thuộc chiếu trên từng mảnh, bắt đầu với AB ta không suy ra được C/E/D, nên không suy ra được `AB→D`. Vì vậy phân rã bảo toàn thông tin nhưng không bảo toàn toàn bộ tập phụ thuộc hàm. Nguồn slide: `08_Normalization.pdf`, tr. 19–23 (tính chất phân rã: bảo toàn thuộc tính/phụ thuộc, lossless join, thuật toán 3NF).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "normalization",
+          "decomposition"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q016",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20231.pdf, trang 23]\n\nChọn truy vấn `SELECT` trả về tất cả các mặt hàng mà tên bắt đầu bằng chuỗi ký tự `'choco'`. Biết `%` thay cho một chuỗi ký tự bất kỳ, `_` thay cho một ký tự bất kỳ.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT * FROM items WHERE name LIKE 'choco%';"
+          },
+          {
+            "id": "B",
+            "text": "SELECT * FROM items WHERE name LIKE 'choco_';"
+          },
+          {
+            "id": "C",
+            "text": "SELECT * FROM items WHERE name = 'choco%';"
+          },
+          {
+            "id": "D",
+            "text": "SELECT * FROM items WHERE name LIKE '%choco%';"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\n`LIKE 'choco%'` nghĩa là chuỗi phải bắt đầu bằng `choco`, sau đó `%` cho phép có thêm bất kỳ chuỗi ký tự nào. `LIKE 'choco_'` chỉ cho phép đúng một ký tự sau `choco`; `name = 'choco%'` so sánh với chuỗi chứa ký tự `%` theo nghĩa thường; `LIKE '%choco%'` tìm `choco` ở bất kỳ vị trí nào, không bắt buộc bắt đầu. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "20231",
+          "sql",
+          "like"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q017",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 1, Câu 1]\n\nCho CSDL:\n\n```text\nKhoa(MaKhoa, TenKhoa)\nLop(MaLop, TenLop, MaKhoa)\nSinhVien(MaSV, HoTen, NgaySinh, MaLop)\nDangKy(MaSV, MaMH, HocKy, NamHoc, Diem)\n```\n\nChọn câu SQL đúng để cập nhật mã lớp từ `'IT01A1'` sang `'IT01A2'` cho sinh viên có mã `'SV001'`.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "UPDATE Lop SET MaLop = 'IT01A2' WHERE MaSV = 'SV001';"
+          },
+          {
+            "id": "B",
+            "text": "UPDATE SinhVien SET Lop = 'IT01A2' WHERE MaSV = 'SV001';"
+          },
+          {
+            "id": "C",
+            "text": "UPDATE SinhVien sv JOIN Lop l ON sv.MaLop = l.MaLop SET sv.MaLop='IT01A2' WHERE sv.MaSV='SV001';"
+          },
+          {
+            "id": "D",
+            "text": "UPDATE SinhVien SET MaLop = 'IT01A2' WHERE MaSV = 'SV001';"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nThuộc tính cần thay đổi là `MaLop` của bản ghi trong bảng `SinhVien`, không phải khóa của bảng `Lop`. Cú pháp `UPDATE` đúng là `UPDATE <table> SET <col>=<expr> WHERE <condition>`. Do đó phải cập nhật `SinhVien.MaLop` với điều kiện `MaSV='SV001'`. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "sql",
+          "update"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q018",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 1, Câu 2]\n\nChọn câu SQL đúng để liệt kê mã sinh viên và họ tên các sinh viên thuộc khoa có tên `N'CNTT'`.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT sv.MaSV, sv.HoTen FROM SinhVien sv JOIN Khoa k ON sv.MaKhoa = k.MaKhoa WHERE k.TenKhoa=N'CNTT';"
+          },
+          {
+            "id": "B",
+            "text": "SELECT sv.MaSV, sv.HoTen FROM SinhVien sv JOIN Lop l ON sv.MaLop = l.MaLop JOIN Khoa k ON l.MaKhoa = k.MaKhoa WHERE k.TenKhoa=N'CNTT';"
+          },
+          {
+            "id": "C",
+            "text": "SELECT MaSV, HoTen FROM SinhVien WHERE MaKhoa IN (SELECT MaKhoa FROM Khoa WHERE TenKhoa=N'CNTT');"
+          },
+          {
+            "id": "D",
+            "text": "SELECT sv.MaSV, sv.HoTen FROM Khoa k JOIN DangKy dk ON k.MaKhoa = dk.MaKhoa JOIN SinhVien sv ON dk.MaSV = sv.MaSV WHERE k.TenKhoa=N'CNTT';"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nTrong lược đồ, `SinhVien` không có `MaKhoa`; sinh viên thuộc lớp qua `SinhVien.MaLop`, và lớp thuộc khoa qua `Lop.MaKhoa`. Vì vậy đường nối đúng là:\n\n```text\nSinhVien → Lop → Khoa\n```\n\nPhương án B dùng đúng hai điều kiện join này rồi lọc `TenKhoa=N'CNTT'`. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "sql",
+          "join"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q019",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 1, Câu 3]\n\nChọn câu lệnh đúng để xóa sinh viên `'SV001'` mà không vi phạm khóa ngoại, giả sử bảng `DangKy` có thể đang chứa bản ghi của sinh viên này và không dùng `ON DELETE CASCADE`.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "DELETE FROM SinhVien WHERE MaSV = 'SV001';"
+          },
+          {
+            "id": "B",
+            "text": "DELETE FROM DangKy WHERE MaSV = 'SV001';"
+          },
+          {
+            "id": "C",
+            "text": "DELETE SinhVien FROM SinhVien JOIN DangKy dk ON SinhVien.MaSV = dk.MaSV WHERE SinhVien.MaSV='SV001';"
+          },
+          {
+            "id": "D",
+            "text": "DELETE FROM DangKy WHERE MaSV = 'SV001'; DELETE FROM SinhVien WHERE MaSV = 'SV001';"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\n`DangKy.MaSV` là khóa ngoại tham chiếu `SinhVien.MaSV`. Nếu còn bản ghi con trong `DangKy`, xóa trực tiếp bản ghi cha ở `SinhVien` sẽ vi phạm ràng buộc tham chiếu khi không có `ON DELETE CASCADE`. Cách an toàn là xóa các bản ghi con trước, rồi xóa bản ghi cha. Nguồn slide: `01_02_Introduction_RDB.pdf`, tr. 49, 52 (foreign key là một/tập thuộc tính tham chiếu khóa ứng viên của cùng hoặc quan hệ khác), `04_structured_query_language.pdf`, tr. 20–21 (cú pháp và hành vi khóa ngoại).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "sql",
+          "delete",
+          "foreign-key"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q020",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 2, Câu 4]\n\nChọn câu SQL đúng để đếm số sinh viên của từng khoa, trả về `(MaKhoa, TenKhoa, SoSV)`.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT k.MaKhoa, k.TenKhoa, COUNT(*) AS SoSV FROM Khoa k JOIN SinhVien sv ON k.MaKhoa = sv.MaKhoa GROUP BY k.MaKhoa, k.TenKhoa;"
+          },
+          {
+            "id": "B",
+            "text": "SELECT k.MaKhoa, k.TenKhoa, COUNT(*) AS SoSV FROM Khoa k JOIN Lop l ON l.MaKhoa = k.MaKhoa JOIN SinhVien sv ON sv.MaLop = l.MaLop GROUP BY k.MaKhoa, k.TenKhoa;"
+          },
+          {
+            "id": "C",
+            "text": "SELECT k.MaKhoa, k.TenKhoa, COUNT(sv.MaSV) AS SoSV FROM Khoa k, Lop l, SinhVien sv WHERE k.MaKhoa = sv.MaKhoa AND sv.MaLop = l.MaLop GROUP BY k.MaKhoa;"
+          },
+          {
+            "id": "D",
+            "text": "SELECT MaKhoa, TenKhoa, COUNT(MaSV) AS SoSV FROM Khoa GROUP BY MaKhoa, TenKhoa;"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nĐường liên kết đúng là `Khoa` → `Lop` → `SinhVien`. Khi dùng `COUNT(*)` theo từng khoa, các cột không kết tập trong `SELECT` (`k.MaKhoa`, `k.TenKhoa`) phải xuất hiện trong `GROUP BY`. Phương án B thỏa cả hai yêu cầu. Nguồn slide: `05_structured_query_language - part 2.pdf`, tr. 28–33 (`COUNT`, hàm kết tập, `GROUP BY`; thuộc tính trong `SELECT` phải là thuộc tính nhóm hoặc biểu thức kết tập), tr. 37–38 (`DISTINCT`).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "sql",
+          "group-by",
+          "join"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q021",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 2, Câu 5]\n\nChọn câu SQL đúng để liệt kê `MaSV`, `HoTen` của sinh viên **chưa đăng ký môn nào** (không có bản ghi trong `DangKy`).",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT sv.MaSV, sv.HoTen FROM SinhVien sv WHERE sv.MaSV NOT IN (SELECT MaSV FROM DangKy);"
+          },
+          {
+            "id": "B",
+            "text": "SELECT sv.MaSV, sv.HoTen FROM SinhVien sv JOIN DangKy dk ON sv.MaSV = dk.MaSV WHERE dk.MaSV IS NULL;"
+          },
+          {
+            "id": "C",
+            "text": "SELECT sv.MaSV, sv.HoTen FROM SinhVien sv WHERE EXISTS (SELECT 1 FROM DangKy dk WHERE dk.MaSV = sv.MaSV);"
+          },
+          {
+            "id": "D",
+            "text": "SELECT sv.MaSV, sv.HoTen FROM DangKy dk RIGHT JOIN SinhVien sv ON dk.MaSV = sv.MaSV WHERE dk.MaSV <> NULL;"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nCần lấy sinh viên có `MaSV` không xuất hiện trong `DangKy`, nên dùng phản điều kiện `NOT IN` với tập mã sinh viên đã đăng ký. Phương án B dùng `INNER JOIN`; khi đã join được thì `dk.MaSV` không thể là NULL theo điều kiện join. Phương án C lấy sinh viên có tồn tại bản ghi đăng ký, tức ngược đề. Phương án D sai vì so sánh NULL bằng `<> NULL` không cho TRUE; phải dùng `IS NULL` trong outer join. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`). Nguồn slide: `04_structured_query_language.pdf`, tr. 36–37 (`NULL` so sánh cho giá trị `UNKNOWN`; mệnh đề `WHERE` chỉ lấy các bộ có điều kiện TRUE).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "sql",
+          "not-in",
+          "null"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q022",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 2, Câu 6]\n\nChọn câu SQL đúng để liệt kê `MaSV`, `HoTen` của sinh viên đăng ký **ít nhất 2 môn** trong học kỳ 1 năm 2024.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT sv.MaSV, sv.HoTen FROM SinhVien sv JOIN DangKy dk ON sv.MaSV = dk.MaSV WHERE dk.HocKy = 1 AND dk.NamHoc = 2024 GROUP BY sv.MaSV, sv.HoTen HAVING COUNT(*) >= 2;"
+          },
+          {
+            "id": "B",
+            "text": "SELECT sv.MaSV, sv.HoTen FROM SinhVien sv WHERE sv.MaSV IN (SELECT MaSV FROM DangKy WHERE HocKy = 1 OR NamHoc = 2024 GROUP BY MaSV HAVING COUNT(*) >= 2);"
+          },
+          {
+            "id": "C",
+            "text": "SELECT sv.MaSV, sv.HoTen FROM SinhVien sv JOIN DangKy dk ON sv.MaSV = dk.MaSV WHERE dk.HocKy = 1 AND dk.NamHoc = 2024 HAVING COUNT(*) >= 2;"
+          },
+          {
+            "id": "D",
+            "text": "SELECT sv.MaSV, sv.HoTen FROM SinhVien sv WHERE NOT EXISTS (SELECT 1 FROM DangKy dk WHERE dk.MaSV = sv.MaSV AND dk.HocKy=1 AND dk.NamHoc=2024 GROUP BY dk.MaSV HAVING COUNT(*)>=2);"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nĐiều kiện “học kỳ 1 năm 2024” phải lọc bằng `WHERE dk.HocKy = 1 AND dk.NamHoc = 2024`. Sau đó nhóm theo từng sinh viên và dùng `HAVING COUNT(*) >= 2` để giữ các nhóm có ít nhất 2 dòng đăng ký. C thiếu `GROUP BY`; B dùng `OR` nên lẫn cả các bản ghi chỉ thỏa một trong hai điều kiện; D dùng `NOT EXISTS` nên đi theo hướng phủ định. Nguồn slide: `05_structured_query_language - part 2.pdf`, tr. 28–33 (`COUNT`, hàm kết tập, `GROUP BY`; thuộc tính trong `SELECT` phải là thuộc tính nhóm hoặc biểu thức kết tập), tr. 37–38 (`DISTINCT`).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "sql",
+          "group-by",
+          "having"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q023",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 2–3, Câu 7]\n\nChọn câu SQL đúng để thêm bản ghi đăng ký cho sinh viên `SV001` học môn `DBI001`, học kỳ 1, năm 2024, điểm chưa có (`NULL`).",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "INSERT INTO DangKy VALUES ('SV001', 'DBI001', 1, 2024);"
+          },
+          {
+            "id": "B",
+            "text": "INSERT INTO DangKy(MaSV, MaMon, HocKy, NamHoc) VALUES ('SV001', 'DBI001', 1, 2024, NULL);"
+          },
+          {
+            "id": "C",
+            "text": "INSERT INTO DangKy(MaSV, MaMon, HocKy, NamHoc, Diem) VALUES ('SV001', 'DBI001', 1, NULL, 2024);"
+          },
+          {
+            "id": "D",
+            "text": "INSERT INTO DangKy(MaSV, MaMon, HocKy, NamHoc, Diem) VALUES ('SV001', 'DBI001', 1, 2024, NULL);"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nKhi chỉ định danh sách cột trong `INSERT`, số giá trị và thứ tự giá trị trong `VALUES` phải tương ứng với danh sách cột. Cần gán `NamHoc = 2024` và `Diem = NULL`, nên phương án D đúng. A thiếu cột điểm nếu bảng có 5 cột; B số giá trị không khớp số cột; C đảo `NULL` sang cột năm học. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "sql",
+          "insert",
+          "null"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q024",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 3, Câu 8]\n\nPhát biểu nào sau đây là **sai** về khóa ngoại (foreign key)?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Một bảng có thể có nhiều khóa ngoại."
+          },
+          {
+            "id": "B",
+            "text": "Giá trị khóa ngoại có thể NULL nếu thuộc tính cho phép NULL."
+          },
+          {
+            "id": "C",
+            "text": "Thuộc tính tham gia khóa ngoại không được phép đồng thời thuộc khóa chính của chính bảng đó."
+          },
+          {
+            "id": "D",
+            "text": "Khóa ngoại tham chiếu đến khóa chính hoặc khóa ứng viên của bảng được tham chiếu."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nKhóa ngoại là một hoặc một tập thuộc tính trong một quan hệ tham chiếu khóa ứng viên/khóa chính của quan hệ khác hoặc cùng quan hệ. Không có quy tắc nào cấm một thuộc tính vừa thuộc khóa chính của bảng hiện tại, vừa là khóa ngoại. Trường hợp rất phổ biến là bảng liên kết N–M: khóa chính ghép gồm hai khóa ngoại. Nguồn slide: `01_02_Introduction_RDB.pdf`, tr. 49, 52 (foreign key là một/tập thuộc tính tham chiếu khóa ứng viên của cùng hoặc quan hệ khác), `04_structured_query_language.pdf`, tr. 20–21 (cú pháp và hành vi khóa ngoại).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "foreign-key",
+          "constraints"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q025",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 3, Câu 9]\n\nCho:\n\n```text\nLop(MaLop, TenLop)\nSinhVien(MaSV, HoTen, MaLop)\nDiem(MaSV, MaMH, DiemSo)\n```\n\nChọn biểu thức đại số quan hệ mô tả yêu cầu: “Liệt kê `TenLop` của những sinh viên có `HoTen = 'Tran Minh'` và `DiemSo > 9`”.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "π_TenLop(σ_HoTen='Tran Minh'(SinhVien) ⋈ DiemSo>9(Diem) × Lop)"
+          },
+          {
+            "id": "B",
+            "text": "π_TenLop(σ_HoTen='Tran Minh'(Lop) ⋈ σ_DiemSo>9(Diem) ⋈ SinhVien)"
+          },
+          {
+            "id": "C",
+            "text": "π_TenLop(σ_HoTen='Tran Minh'(π_HoTen(SinhVien)) ⋈ Diem ⋈ Lop)"
+          },
+          {
+            "id": "D",
+            "text": "π_TenLop(σ_HoTen='Tran Minh'(SinhVien) ⋈_{MaSV} σ_DiemSo>9(Diem) ⋈_{MaLop} Lop)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nCần lọc sinh viên theo `HoTen`, lọc điểm theo `DiemSo > 9`, rồi nối `SinhVien` với `Diem` qua `MaSV`, nối tiếp với `Lop` qua `MaLop`, cuối cùng chiếu `TenLop`. Đây là đúng thứ tự logic của selection–join–projection. Nguồn slide: `03_Relational_Algebra.pdf`, tr. 14–20 (selection, projection, join, division), tr. 24–27 (natural join và outer join).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "relational-algebra",
+          "join"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q026",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 3, Câu 10]\n\nCho:\n\n```text\nDangKy(MaSV, MaMH, NamHoc)\n(1,'DB',2024), (1,'OS',2024), (2,'DB',2024), (2,'DB',2023), (3,'DB',2024)\n\nTroGiang(MaSV, MaMH)\n(1,'DB'), (3,'DB'), (4,'DB'), (2,'OS')\n```\n\nTính kết quả của biểu thức:\n\n```text\nπ_MaSV(σ_NamHoc=2024(DangKy)) ∩ π_MaSV(σ_MaMH='DB'(TroGiang))\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "MaSV = {1, 2, 3}"
+          },
+          {
+            "id": "B",
+            "text": "MaSV = {1, 3}"
+          },
+          {
+            "id": "C",
+            "text": "MaSV = {2, 4}"
+          },
+          {
+            "id": "D",
+            "text": "MaSV = {1, 2, 3, 4}"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nVế trái lấy các sinh viên có đăng ký trong năm 2024: `{1,2,3}`. Vế phải lấy các trợ giảng của môn DB: `{1,3,4}`. Phép giao `∩` chỉ giữ phần tử xuất hiện ở cả hai tập, nên kết quả là `{1,3}`. Nguồn slide: `03_Relational_Algebra.pdf`, tr. 14–20 (selection, projection, join, division), tr. 24–27 (natural join và outer join).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "relational-algebra",
+          "intersection"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q027",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 3, Câu 11]\n\nTrong câu lệnh tạo bảng sau, lỗi cú pháp nằm ở đâu?\n\n```sql\nCREATE TABLE DonHang(\n  MaDH INT PRIMARY KEY,\n  NgayDat DATE NOT NULL;\n  MaKH CHAR(8)\n);\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thiếu dấu phẩy giữa các khai báo cột."
+          },
+          {
+            "id": "B",
+            "text": "Thiếu NOT NULL cho MaKH."
+          },
+          {
+            "id": "C",
+            "text": "Không có lỗi."
+          },
+          {
+            "id": "D",
+            "text": "Dấu chấm phẩy sau khai báo cột NgayDat."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nTrong danh sách khai báo cột của `CREATE TABLE`, các cột được ngăn cách bằng dấu phẩy. Dấu `;` dùng để kết thúc cả câu lệnh SQL, không được đặt giữa hai khai báo cột. Vì vậy lỗi nằm ở dấu chấm phẩy sau `NgayDat DATE NOT NULL`. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "sql",
+          "create-table"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q028",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 3, Câu 12]\n\nCây toán tử có dạng: nối `Product` với `Supplier` theo `SupplierID`, sau đó chọn `Price > 200`, cuối cùng chiếu `ProductName, Price`. Biểu thức đúng là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "σ_Price>200(π_ProductName,Price(Product ⋈_{SupplierID} Supplier))"
+          },
+          {
+            "id": "B",
+            "text": "π_ProductName,Price(σ_Price>200(Product ⋈_{SupplierID} Supplier))"
+          },
+          {
+            "id": "C",
+            "text": "π_ProductName,Price(Product) ⋈_{SupplierID} σ_Price>200(Supplier)"
+          },
+          {
+            "id": "D",
+            "text": "σ_Price>200(Product) ⋈_{SupplierID} π_ProductName,Price(Supplier)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nĐọc cây toán tử từ lá lên gốc: trước hết thực hiện join hai quan hệ, sau đó áp dụng selection `Price > 200`, cuối cùng projection chỉ giữ `ProductName` và `Price`. Vì projection ở gốc, ký hiệu ngoài cùng phải là `π_ProductName,Price(...)`. Nguồn slide: `03_Relational_Algebra.pdf`, tr. 14–20 (selection, projection, join, division), tr. 24–27 (natural join và outer join).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "relational-algebra",
+          "operator-tree"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q029",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 14]\n\nCho bảng `Employee(Id, Name, Dept)` với `Id` có kiểu `INT IDENTITY(1,1)`. Lệnh thêm dữ liệu nào là hợp lệ nhất?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "INSERT INTO Employee VALUES ('Lan','HR');"
+          },
+          {
+            "id": "B",
+            "text": "INSERT INTO Employee(Name,Dept) VALUES ('Lan','HR');"
+          },
+          {
+            "id": "C",
+            "text": "INSERT INTO Employee(Id,Name,Dept) VALUES (1,'Lan','HR');"
+          },
+          {
+            "id": "D",
+            "text": "INSERT INTO Employee(Dept,Name) VALUES ('Lan','HR');"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nCột `IDENTITY(1,1)` được hệ quản trị tự sinh giá trị, nên khi thêm bản ghi thông thường ta không truyền giá trị cho `Id`; chỉ cần chỉ định các cột còn lại là `Name` và `Dept`. Phương án A không nêu danh sách cột nên số lượng giá trị không khớp với số cột; C cố gán `Id` thủ công; D đảo ý nghĩa dữ liệu giữa `Dept` và `Name`. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "sql",
+          "insert",
+          "identity"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q030",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 15]\n\nTruy vấn trả về tên và tuổi hiện tại của nhân viên, biết `NamSinh` lưu năm sinh.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT TenNV, YEAR(NamSinh) AS Tuoi FROM NhanVien;"
+          },
+          {
+            "id": "B",
+            "text": "SELECT TenNV, NamSinh - YEAR(GETDATE()) AS Tuoi FROM NhanVien;"
+          },
+          {
+            "id": "C",
+            "text": "SELECT TenNV, YEAR(GETDATE()) - NamSinh AS Tuoi FROM NhanVien;"
+          },
+          {
+            "id": "D",
+            "text": "SELECT TenNV, DATEPART(GETDATE()) - NamSinh AS Tuoi FROM NhanVien;"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nNếu `NamSinh` là số nguyên biểu diễn năm sinh, tuổi xấp xỉ theo năm được tính bằng năm hiện tại trừ năm sinh: `YEAR(GETDATE()) - NamSinh`. Slide SQL liệt kê nhóm hàm ngày/giờ như `YEAR`, `MONTH`, `DAY` trong các hàm dùng trên từng bộ. Nguồn slide: `05_structured_query_language - part 2.pdf`, tr. 28–33 (`COUNT`, hàm kết tập, `GROUP BY`; thuộc tính trong `SELECT` phải là thuộc tính nhóm hoặc biểu thức kết tập), tr. 37–38 (`DISTINCT`).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "sql",
+          "date-functions"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q031",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 16]\n\nVới các quan hệ:\n\n```text\nNhanVien(MaNV, TenNV, DiaChi, NamSinh, MaPhong, MaCV)\nPhongBan(MaPhong, TenPhong, DiaChi, Tel)\nCongViec(MaCV, TenCV, Cap, KinhPhi)\n```\n\nChọn SQL đúng để truy vấn tên nhân viên làm việc ở phòng `Kỹ Thuật` và làm công việc `Giám sát`.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT TenNV FROM NhanVien, PhongBan, CongViec WHERE NhanVien.MaPhong=PhongBan.MaPhong AND NhanVien.MaCV=CongViec.MaCV AND TenPhong=N'Kỹ Thuật' AND TenCV=N'Giám sát';"
+          },
+          {
+            "id": "B",
+            "text": "SELECT TenNV FROM NhanVien WHERE TenPhong=N'Kỹ Thuật' AND TenCV=N'Giám sát';"
+          },
+          {
+            "id": "C",
+            "text": "SELECT TenNV FROM PhongBan JOIN CongViec WHERE TenPhong=N'Kỹ Thuật';"
+          },
+          {
+            "id": "D",
+            "text": "SELECT TenNV FROM CongViec WHERE TenCV=N'Giám sát';"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\n`TenPhong` nằm trong `PhongBan`, `TenCV` nằm trong `CongViec`, còn `TenNV` nằm trong `NhanVien`. Vì vậy phải nối `NhanVien` với `PhongBan` qua `MaPhong` và nối `NhanVien` với `CongViec` qua `MaCV`, rồi mới lọc hai điều kiện tên. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "sql",
+          "join"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q032",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 17]\n\nChọn SQL đúng để lấy tên các phòng **không có nhân viên nào có địa chỉ ở Đà Nẵng**.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "SELECT TenPhong FROM PhongBan WHERE MaPhong NOT IN (SELECT MaPhong FROM NhanVien WHERE DiaChi LIKE N'Đà Nẵng');"
+          },
+          {
+            "id": "B",
+            "text": "SELECT TenPhong FROM PhongBan WHERE MaPhong IN (SELECT MaPhong FROM NhanVien WHERE DiaChi <> N'Đà Nẵng');"
+          },
+          {
+            "id": "C",
+            "text": "SELECT TenPhong FROM NhanVien WHERE DiaChi <> N'Đà Nẵng';"
+          },
+          {
+            "id": "D",
+            "text": "SELECT TenPhong FROM PhongBan NATURAL JOIN NhanVien WHERE DiaChi = N'Đà Nẵng';"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nTruy vấn con lấy các phòng có ít nhất một nhân viên ở Đà Nẵng. Đề yêu cầu các phòng **không có** nhân viên như vậy nên truy vấn ngoài phải dùng `NOT IN`. Phương án B sai vì một phòng có thể vừa có nhân viên không ở Đà Nẵng vừa có nhân viên ở Đà Nẵng; dùng `IN` với `DiaChi <> ...` không loại đúng phòng. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "sql",
+          "not-in"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q033",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 18]\n\nTrong ER, `Khách hàng` liên kết 1–N với `Hóa đơn` qua quan hệ “Lập”. Nhận xét nào hợp lý nhất nếu thực thể `Hóa đơn` đã có cả thuộc tính `MaKH` trong sơ đồ ER?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không cần liên kết “Lập” vì Hóa đơn không liên quan đến Khách hàng."
+          },
+          {
+            "id": "B",
+            "text": "Hóa đơn nên là thuộc tính đa trị của Khách hàng."
+          },
+          {
+            "id": "C",
+            "text": "Sơ đồ đúng chuẩn, không có lỗi."
+          },
+          {
+            "id": "D",
+            "text": "Thuộc tính MaKH gắn vào thực thể Hóa đơn là dư thừa ở mức ER vì quan hệ “Lập” đã biểu diễn liên kết với Khách hàng."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nỞ mức ER, quan hệ “Lập” giữa `Khách hàng` và `Hóa đơn` đã biểu diễn việc hóa đơn thuộc về khách hàng nào. Khi chuyển sang mô hình quan hệ, với quan hệ 1–N ta thường đặt khóa chính của phía 1 (`MaKH`) làm khóa ngoại ở phía N (`Hóa đơn`). Nhưng trong sơ đồ ER khái niệm, việc vừa vẽ relationship vừa gắn `MaKH` như một thuộc tính thường là biểu diễn lặp/dư thừa. Nguồn slide: `06_entity_relationship_model.pdf`, tr. 24–28 (ánh xạ thực thể/yếu, quan hệ 1–1, 1–N, N–M và thuộc tính đa trị sang lược đồ quan hệ).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "er-model",
+          "mapping"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q034",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 19]\n\nCho hai quan hệ R(A,B,C) và S(B,D). Xét:\n\n```text\nE = π_{A,D}(σ_{C>10}(R * S))\n```\n\ntrong đó `*` là phép nối tự nhiên theo thuộc tính chung B. Biểu thức nào tương đương với E?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "π_{A,D}((σ_{C>10}(R)) * S)"
+          },
+          {
+            "id": "B",
+            "text": "π_{A,D}(R * σ_{C>10}(S))"
+          },
+          {
+            "id": "C",
+            "text": "σ_{C>10}(π_{A,D}(R * S))"
+          },
+          {
+            "id": "D",
+            "text": "π_{A,D}(σ_{C>10}(R) ∩ S)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nĐiều kiện `C > 10` chỉ dùng thuộc tính `C`, mà `C` thuộc quan hệ R. Selection đó có thể được đẩy xuống trước phép nối: lọc R trước rồi nối với S sẽ cho cùng các cặp sau khi chiếu `A,D`. Đây là quy tắc tối ưu hóa biểu thức đại số quan hệ dựa trên selection–join. Nguồn slide: `03_Relational_Algebra.pdf`, tr. 14–20 (selection, projection, join, division), tr. 24–27 (natural join và outer join). Nguồn bổ sung về query processing: `11_query_processing.pdf`, tr. 18 (biểu thức đại số cần chọn kế hoạch thực thi, ví dụ dùng join/select và chỉ mục).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "relational-algebra",
+          "query-optimization"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q035",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 20]\n\nTrong ER: `SinhViên —(1:N)— ĐăngKý —(N:1)— Lớp`. Ý nghĩa đúng là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mỗi sinh viên đăng ký đúng 1 lớp, mỗi lớp có nhiều sinh viên đăng ký."
+          },
+          {
+            "id": "B",
+            "text": "Mỗi sinh viên có thể có nhiều bản ghi đăng ký lớp; mỗi lớp cũng có thể có nhiều sinh viên đăng ký."
+          },
+          {
+            "id": "C",
+            "text": "Mỗi lớp chỉ có đúng 1 sinh viên đăng ký."
+          },
+          {
+            "id": "D",
+            "text": "SinhVien và Lop không có quan hệ nhiều-nhiều."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\n`ĐăngKý` đóng vai trò thực thể/quan hệ liên kết giữa sinh viên và lớp. Quan hệ `SinhViên 1–N ĐăngKý` nghĩa là một sinh viên có thể tạo nhiều bản ghi đăng ký; quan hệ `Lớp 1–N ĐăngKý` nghĩa là một lớp có thể có nhiều bản ghi đăng ký của nhiều sinh viên. Tổng thể giữa SinhViên và Lớp là quan hệ N–M được tách qua bảng/quan hệ liên kết `ĐăngKý`. Nguồn slide: `06_entity_relationship_model.pdf`, tr. 24–28 (ánh xạ thực thể/yếu, quan hệ 1–1, 1–N, N–M và thuộc tính đa trị sang lược đồ quan hệ).",
+          "images": []
+        },
+        "tags": [
+          "20251",
+          "er-model",
+          "many-to-many"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q036",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20222.pdf, trang 1, Câu 7]\n\nPhát biểu nào dưới đây là **sai** về trigger?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trigger được tự động kích hoạt bởi một sự kiện xảy ra."
+          },
+          {
+            "id": "B",
+            "text": "Các xử lý trong trigger không làm thay đổi dữ liệu ở các bảng."
+          },
+          {
+            "id": "C",
+            "text": "Trigger được thực thi ở phía hệ quản trị CSDL/server."
+          },
+          {
+            "id": "D",
+            "text": "Trigger là xử lý được gắn với các bảng dữ liệu."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nTrigger có phần action là “Any SQL statements”, có thể gồm nhiều câu lệnh SQL trong `BEGIN ... END`. Do đó trigger hoàn toàn có thể cập nhật/chèn/xóa dữ liệu, ví dụ slide trigger cập nhật số sinh viên của lớp sau khi có thay đổi. Vì vậy phát biểu “xử lý trong trigger không làm thay đổi dữ liệu ở các bảng” là sai. Nguồn slide: `13_Constraints_and_Triggers.pdf`, tr. 7 và 23–32 (trigger chỉ chạy khi sự kiện xác định xảy ra; mô hình Event–Condition–Action; event INSERT/DELETE/UPDATE; action là các câu lệnh SQL).",
+          "images": []
+        },
+        "tags": [
+          "20222",
+          "trigger"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q037",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20222.pdf, trang 2, Câu 11]\n\nCho Q(A,B,C,D) với F = {AB→C, D→B, C→ABD}. Q ở dạng chuẩn cao nhất nào trong các lựa chọn sau?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "3NF"
+          },
+          {
+            "id": "B",
+            "text": "2NF"
+          },
+          {
+            "id": "C",
+            "text": "1NF"
+          },
+          {
+            "id": "D",
+            "text": "Không đạt 1NF"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A — 3NF**.\n\nCác khóa ứng viên gồm `C`, `AB`, `AD`:\n\n- `C→ABD` nên `C` là khóa.\n- `AB→C`, rồi `C→ABD`, nên `AB` là khóa.\n- `D→B`, có `AD` thì có `AB`, suy ra `C`, rồi suy ra toàn bộ, nên `AD` là khóa.\n\nTất cả thuộc tính A, B, C, D đều là thuộc tính khóa/prime vì đều nằm trong ít nhất một khóa ứng viên. Phụ thuộc `D→B` có vế trái không phải siêu khóa nên không đạt BCNF, nhưng vế phải B là thuộc tính prime nên vẫn thỏa điều kiện 3NF. Trong các lựa chọn, dạng chuẩn cao nhất là 3NF. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (bao đóng thuộc tính và tiêu chuẩn suy diễn `X→Y` khi `Y⊆X+`), tr. 21–24 (định nghĩa/thuật toán khóa tối thiểu). Nguồn slide: `08_Normalization.pdf`, tr. 15–17 (1NF, 2NF, 3NF), tr. 19–23 (tính chất phân rã: bảo toàn thuộc tính/phụ thuộc, lossless join, thuật toán 3NF).",
+          "images": []
+        },
+        "tags": [
+          "20222",
+          "normalization",
+          "3nf"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q038",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20222.pdf, trang 2, Câu 14]\n\nCho bảng R(A1, A2, A3). Câu truy vấn sau được thực hiện thường xuyên trên bảng R rất lớn:\n\n```sql\nSELECT * FROM R WHERE A1 >= 1 AND A1 <= 15;\n```\n\nLựa chọn nào hợp lý nhất để cải thiện thời gian thực thi?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đánh chỉ mục trên A1 dùng B-tree/B+tree."
+          },
+          {
+            "id": "B",
+            "text": "Đánh chỉ mục trên A1 dùng hàm băm."
+          },
+          {
+            "id": "C",
+            "text": "Dùng tệp đóng/heap file, không cần chỉ mục."
+          },
+          {
+            "id": "D",
+            "text": "Chỉ cần đánh chỉ mục trên khóa chính (A1, A2)."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nĐiều kiện `A1 >= 1 AND A1 <= 15` là truy vấn **khoảng**. Hash index rất nhanh cho điều kiện bằng (`=`) trên hash field, nhưng không phù hợp bằng B-tree/B+tree cho truy vấn khoảng vì khóa trong B+tree được sắp theo thứ tự. Do đó nên lập chỉ mục B-tree/B+tree trên `A1`. Nguồn slide: `10_storage_index.pdf`, tr. 15, 18, 21–22, 25, 27–28 (tổ chức tệp, hash file, B+tree/hash index, clustered/non-clustered, tạo chỉ mục).",
+          "images": []
+        },
+        "tags": [
+          "20222",
+          "index",
+          "range-query"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q039",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 1, Câu 1]\n\nTrong sơ đồ ER, thực thể `DoiTuong` có thuộc tính `DTuongID` và `Ten`; nó còn tham gia các quan hệ với `TaiKhoan` như “Sở hữu”, “Có quyền”. Khi liệt kê các thuộc tính của bảng tương ứng với tập thực thể `DoiTuong`, chọn danh sách nào hợp lý nhất?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "DTuongID, Ten, TKID"
+          },
+          {
+            "id": "B",
+            "text": "DTuongID, Ten, TKID, ThoiGianTao"
+          },
+          {
+            "id": "C",
+            "text": "DTuongID, Ten, TKID, ThoiGianTao, TKID_quyen, ThoiHan"
+          },
+          {
+            "id": "D",
+            "text": "DTuongID, Ten"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **D**.\n\nKhi ánh xạ một tập thực thể mạnh sang quan hệ, trước hết tạo quan hệ chứa các thuộc tính đơn của chính tập thực thể đó. Các thuộc tính của relationship như `ThoiGianTao`, `ThoiHan` hoặc khóa ngoại sinh ra khi ánh xạ quan hệ liên kết không phải là thuộc tính nội tại của thực thể `DoiTuong`. Vì vậy bảng cho tập thực thể `DoiTuong` chỉ cần `DTuongID, Ten`. Nguồn slide: `06_entity_relationship_model.pdf`, tr. 24–28 (ánh xạ thực thể/yếu, quan hệ 1–1, 1–N, N–M và thuộc tính đa trị sang lược đồ quan hệ).",
+          "images": []
+        },
+        "tags": [
+          "20191",
+          "er-model",
+          "mapping"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q040",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 4, Câu 4]\n\nCâu lệnh sau thực hiện việc gì?\n\n```sql\nSELECT * FROM fruit;\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chọn cột `*` từ bảng `fruit`."
+          },
+          {
+            "id": "B",
+            "text": "Chọn bảng `*` từ bảng `fruit`."
+          },
+          {
+            "id": "C",
+            "text": "Chọn tất cả dữ liệu hiện có trong bảng `fruit`."
+          },
+          {
+            "id": "D",
+            "text": "Chọn bảng `fruit` từ bảng `*`."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nTrong cú pháp `SELECT`, dấu `*` ở danh sách chọn nghĩa là lấy **tất cả các cột** của bảng. Không có `WHERE`, câu truy vấn áp dụng cho tất cả các dòng. Vì vậy `SELECT * FROM fruit` trả về toàn bộ dữ liệu hiện có trong bảng `fruit`. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "20191",
+          "sql",
+          "select"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q041",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 7, Câu 11]\n\nCho câu lệnh SQL:\n\n```sql\nSELECT MaSV, Hoten\nFROM Sinhvien\nWHERE MaSV IN (SELECT MaSV FROM Dangky);\n```\n\nNhận định nào đúng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Câu truy vấn cho phép đưa ra danh sách sinh viên đã đăng ký ít nhất 1 môn học."
+          },
+          {
+            "id": "B",
+            "text": "Không đáp án còn lại nào đúng."
+          },
+          {
+            "id": "C",
+            "text": "Câu truy vấn đưa ra sinh viên chưa đăng ký môn nào."
+          },
+          {
+            "id": "D",
+            "text": "Câu truy vấn luôn đưa ra tất cả sinh viên."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nTruy vấn con `SELECT MaSV FROM Dangky` trả về tập mã sinh viên có xuất hiện trong bảng đăng ký. Điều kiện `MaSV IN (...)` giữ các sinh viên có mã thuộc tập đó, tức sinh viên đã đăng ký ít nhất một môn học. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "20191",
+          "sql",
+          "subquery",
+          "in"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q042",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20202.pdf, trang 2]\n\nCho bảng R(A1, A2, A3). Truy vấn `SELECT * FROM R WHERE A3 >= 5 AND A3 <= 15` chạy thường xuyên trên R lớn. Chọn giải pháp hợp lý nhất.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đánh chỉ mục trên A3 dùng B-tree/B+tree."
+          },
+          {
+            "id": "B",
+            "text": "Đánh chỉ mục trên A3 dùng hàm băm."
+          },
+          {
+            "id": "C",
+            "text": "Dùng tệp heap không cần chỉ mục."
+          },
+          {
+            "id": "D",
+            "text": "Chỉ cần đánh chỉ mục trên khóa chính (A1, A2)."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A**.\n\nĐiều kiện trên `A3` là điều kiện khoảng. B+tree giữ khóa theo thứ tự nên phù hợp để quét một đoạn khóa liên tiếp; hash file/hash index tối ưu cho tìm kiếm bằng đúng giá trị của hash field. Vì vậy B-tree/B+tree trên `A3` là lựa chọn hợp lý nhất. Nguồn slide: `10_storage_index.pdf`, tr. 15, 18, 21–22, 25, 27–28 (tổ chức tệp, hash file, B+tree/hash index, clustered/non-clustered, tạo chỉ mục).",
+          "images": []
+        },
+        "tags": [
+          "20202",
+          "index",
+          "range-query"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q043",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20202.pdf, trang 3]\n\nCho tổ chức tệp băm `h(x) = x mod y` với các khóa được phân vào các bucket 0, 1, 2, 3, 4. Hỏi `y` bằng bao nhiêu?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "4"
+          },
+          {
+            "id": "B",
+            "text": "5"
+          },
+          {
+            "id": "C",
+            "text": "6"
+          },
+          {
+            "id": "D",
+            "text": "Đáp án khác"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nVới hàm băm `h(x) = x mod y`, giá trị dư có thể là `0, 1, ..., y-1`, tức có đúng `y` bucket được đánh số từ 0 đến `y-1`. Sơ đồ có các bucket 0 đến 4, tổng cộng 5 bucket, nên `y = 5`. Nguồn slide: `10_storage_index.pdf`, tr. 15, 18, 21–22, 25, 27–28 (tổ chức tệp, hash file, B+tree/hash index, clustered/non-clustered, tạo chỉ mục).",
+          "images": []
+        },
+        "tags": [
+          "20202",
+          "hashing",
+          "storage"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q044",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20202.pdf, trang 6]\n\nPhát biểu nào dưới đây là đúng về khóa ngoại?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mỗi khóa ngoại chỉ có 1 thuộc tính."
+          },
+          {
+            "id": "B",
+            "text": "Mỗi bảng chỉ có 1 khóa ngoại."
+          },
+          {
+            "id": "C",
+            "text": "Một trường trong bảng có thể tham gia vừa vào khóa chính vừa vào khóa ngoại của bảng đó."
+          },
+          {
+            "id": "D",
+            "text": "Các thuộc tính trong khóa ngoại bắt buộc phải có cùng tên với thuộc tính được tham chiếu."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nKhóa ngoại có thể là một hoặc nhiều thuộc tính, và bảng có thể có nhiều khóa ngoại. Một thuộc tính cũng có thể đồng thời thuộc khóa chính của bảng hiện tại và là khóa ngoại tham chiếu bảng khác; ví dụ bảng liên kết N–M thường có khóa chính ghép từ hai khóa ngoại. Tên thuộc tính khóa ngoại không bắt buộc trùng tên thuộc tính được tham chiếu; điều quan trọng là khai báo tham chiếu đúng khóa chính/khóa ứng viên và miền dữ liệu tương thích. Nguồn slide: `01_02_Introduction_RDB.pdf`, tr. 49, 52 (foreign key là một/tập thuộc tính tham chiếu khóa ứng viên của cùng hoặc quan hệ khác), `04_structured_query_language.pdf`, tr. 20–21 (cú pháp và hành vi khóa ngoại).",
+          "images": []
+        },
+        "tags": [
+          "20202",
+          "foreign-key"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q045",
+        "type": "multiple_choice",
+        "question": {
+          "text": "[Database - cuối kì 20202.pdf, trang 7]\n\nCho R(A,B,C,D,E) với F = {AB→E, E→C, ABC→D, D→B}. Các khóa tối thiểu của lược đồ là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "ED"
+          },
+          {
+            "id": "B",
+            "text": "AD"
+          },
+          {
+            "id": "C",
+            "text": "AB"
+          },
+          {
+            "id": "D",
+            "text": "AC"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B",
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B và C**.\n\nTính bao đóng:\n\n- `AB+`: có `AB→E`, rồi `E→C`, có `ABC→D`, vậy `AB+ = ABCDE`; không bỏ A hoặc B được, nên `AB` là khóa tối thiểu.\n- `AD+`: từ `D→B`, có `A,B` nên `AB→E`, rồi `E→C`; vậy `AD+ = ABCDE`; không bỏ A hoặc D được, nên `AD` là khóa tối thiểu.\n- `ED+` cho E,C,D,B nhưng thiếu A; không là khóa.\n- `AC+` không suy ra được B/D/E đầy đủ; không là khóa.\n\nNguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (bao đóng thuộc tính và tiêu chuẩn suy diễn `X→Y` khi `Y⊆X+`), tr. 21–24 (định nghĩa/thuật toán khóa tối thiểu).",
+          "images": []
+        },
+        "tags": [
+          "20202",
+          "functional-dependency",
+          "candidate-key"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q046",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20202.pdf, trang 8]\n\nĐể chỉnh sửa giá trị dữ liệu của bản ghi đã có trong bảng, sử dụng lệnh nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "DELETE"
+          },
+          {
+            "id": "B",
+            "text": "INSERT"
+          },
+          {
+            "id": "C",
+            "text": "UPDATE"
+          },
+          {
+            "id": "D",
+            "text": "SELECT"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\n`INSERT` thêm bản ghi mới, `DELETE` xóa bản ghi, `SELECT` truy vấn dữ liệu. Lệnh dùng để thay đổi giá trị của các cột trong bản ghi đã tồn tại là `UPDATE <table> SET ... WHERE ...`. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "20202",
+          "sql",
+          "update"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "q047",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20202.pdf, trang 9]\n\nPhát biểu nào sau đây là **chưa chính xác** về khóa ngoại?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mỗi bảng có thể có nhiều khóa ngoại."
+          },
+          {
+            "id": "B",
+            "text": "Một khóa ngoại có thể có nhiều thuộc tính."
+          },
+          {
+            "id": "C",
+            "text": "Một trường tham gia vào khóa ngoại thì không thể tham gia vào khóa chính của bảng."
+          },
+          {
+            "id": "D",
+            "text": "Mỗi khóa ngoại của bảng này sẽ tham chiếu đến khóa chính/khóa ứng viên của một bảng được tham chiếu."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nPhát biểu C sai vì một cột vẫn có thể vừa là thành phần của khóa chính vừa là khóa ngoại. Đây là mẫu thiết kế chuẩn của bảng quan hệ liên kết, ví dụ `DangKy(MaSV, MaLop)` có khóa chính `(MaSV, MaLop)` đồng thời mỗi cột là khóa ngoại sang bảng tương ứng. Nguồn slide: `01_02_Introduction_RDB.pdf`, tr. 49, 52 (foreign key là một/tập thuộc tính tham chiếu khóa ứng viên của cùng hoặc quan hệ khác), `04_structured_query_language.pdf`, tr. 20–21 (cú pháp và hành vi khóa ngoại).",
+          "images": []
+        },
+        "tags": [
+          "20202",
+          "foreign-key"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q048",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20202.pdf, trang 10]\n\nCho hai quan hệ R có n bản ghi và S có m bản ghi. Số lượng bản ghi sau phép nối tự nhiên `R * S` là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đáp án khác."
+          },
+          {
+            "id": "B",
+            "text": "Nhỏ hơn min(n, m)."
+          },
+          {
+            "id": "C",
+            "text": "n + m."
+          },
+          {
+            "id": "D",
+            "text": "Nhỏ hơn hoặc bằng min(n, m)."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **A — đáp án khác**.\n\nSố dòng của natural join phụ thuộc vào dữ liệu cụ thể và thuộc tính chung. Nó có thể bằng 0 nếu không có giá trị chung khớp; cũng có thể lớn hơn `min(n,m)` nếu một giá trị chung lặp nhiều lần ở cả hai phía, tạo nhiều tổ hợp khớp. Vì vậy không thể kết luận luôn nhỏ hơn hoặc bằng `min(n,m)` hay bằng `n+m`. Nguồn slide: `03_Relational_Algebra.pdf`, tr. 14–20 (selection, projection, join, division), tr. 24–27 (natural join và outer join).",
+          "images": []
+        },
+        "tags": [
+          "20202",
+          "relational-algebra",
+          "natural-join"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q049",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20232.pdf, trang 18]\n\nPhát biểu nào dưới đây là **đúng** về khóa ngoại?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Khóa ngoại luôn tham gia vào khóa chính."
+          },
+          {
+            "id": "B",
+            "text": "Khóa ngoại của một bảng có thể tham chiếu đến khóa chính của chính bảng đó."
+          },
+          {
+            "id": "C",
+            "text": "Một bảng chỉ có nhiều nhất 1 khóa ngoại."
+          },
+          {
+            "id": "D",
+            "text": "Một bảng luôn có ít nhất 1 khóa ngoại."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nRàng buộc toàn vẹn tham chiếu cho phép một quan hệ tham chiếu đến khóa của một quan hệ khác **hoặc chính nó**. Trường hợp tự tham chiếu thường gặp là bảng nhân viên có `manager_id` tham chiếu `employee_id` trong cùng bảng. Các phát biểu còn lại đều quá mạnh: khóa ngoại không nhất thiết nằm trong khóa chính, một bảng có thể có nhiều khóa ngoại, và cũng có thể không có khóa ngoại nào. Nguồn slide: `01_02_Introduction_RDB.pdf`, tr. 49, 52 (foreign key là một/tập thuộc tính tham chiếu khóa ứng viên của cùng hoặc quan hệ khác), `04_structured_query_language.pdf`, tr. 20–21 (cú pháp và hành vi khóa ngoại).",
+          "images": []
+        },
+        "tags": [
+          "20232",
+          "foreign-key"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q050",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - cuối kì 20232.pdf, trang 8]\n\nCho U = {A, B, C, D, E}, F = {A→B, C→D, CD→E}. Phép tách lược đồ R thành R1(ABC), R2(CDE), R3(ACD) có bảo toàn phụ thuộc hàm không mất mát thông tin không?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không bảo toàn thông tin, không bảo toàn tập phụ thuộc hàm."
+          },
+          {
+            "id": "B",
+            "text": "Bảo toàn thông tin, bảo toàn tập phụ thuộc hàm."
+          },
+          {
+            "id": "C",
+            "text": "Không bảo toàn thông tin, bảo toàn tập phụ thuộc hàm."
+          },
+          {
+            "id": "D",
+            "text": "Bảo toàn thông tin, không bảo toàn tập phụ thuộc hàm."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nCác phụ thuộc được đặt trọn trong một mảnh:\n\n- `A→B` nằm trong R1(ABC).\n- `C→D` và `CD→E` nằm trong R2(CDE) hoặc R3/R2 khi nối.\n\nPhân rã cũng có giao đủ để nối không mất thông tin theo các phụ thuộc: R1 và R3 giao nhau ở `AC`; với `A→B`, `AC` xác định các thuộc tính còn lại của R1. R3 và R2 giao nhau ở `CD`; với `CD→E`, `CD` xác định các thuộc tính còn lại của R2. Do đó phép nối các mảnh tái tạo R và các phụ thuộc chính được bảo toàn. Nguồn slide: `08_Normalization.pdf`, tr. 15–17 (1NF, 2NF, 3NF), tr. 19–23 (tính chất phân rã: bảo toàn thuộc tính/phụ thuộc, lossless join, thuật toán 3NF).",
+          "images": []
+        },
+        "tags": [
+          "20232",
+          "normalization",
+          "decomposition"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "q051",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - giữa kì thầy Phương.pdf, trang 1, Câu 2]\n\nCho S(U,F), U={A,B,C,D,E,F,G,H}, F={A→BC, B→DE, DE→F, AD→G}. Tính bao đóng `(ABD)+`.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "ABCDE"
+          },
+          {
+            "id": "B",
+            "text": "ABCDEFG"
+          },
+          {
+            "id": "C",
+            "text": "ABDEG"
+          },
+          {
+            "id": "D",
+            "text": "ABCDEFGH"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **B**.\n\nBắt đầu với `{A,B,D}`. Từ `A→BC`, thêm C. Từ `B→DE`, thêm E (D đã có). Có `D,E` nên dùng `DE→F`, thêm F. Có `A,D` nên dùng `AD→G`, thêm G. Không có phụ thuộc nào suy ra H, nên `(ABD)+ = {A,B,C,D,E,F,G}`. Nguồn slide: `07_Functional_Dependency.pdf`, tr. 16–19 (bao đóng thuộc tính và tiêu chuẩn suy diễn `X→Y` khi `Y⊆X+`), tr. 21–24 (định nghĩa/thuật toán khóa tối thiểu).",
+          "images": []
+        },
+        "tags": [
+          "midterm",
+          "functional-dependency",
+          "closure"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "q052",
+        "type": "single_choice",
+        "question": {
+          "text": "[Database - giữa kì cô Oanh.pdf, trang 2]\n\nVới câu SQL `SELECT * FROM fruit`, phát biểu đúng nhất là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chọn cột tên `*` từ bảng fruit."
+          },
+          {
+            "id": "B",
+            "text": "Chọn bảng fruit từ bảng `*`."
+          },
+          {
+            "id": "C",
+            "text": "Chọn tất cả dữ liệu hiện có trong bảng fruit."
+          },
+          {
+            "id": "D",
+            "text": "Chọn tất cả bảng có tên bắt đầu bằng fruit."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "Đáp án đúng là **C**.\n\nDấu `*` trong danh sách chọn của `SELECT` có nghĩa là chọn tất cả các cột. Không có mệnh đề `WHERE`, nên toàn bộ dòng trong bảng được trả về. Nguồn slide: `04_structured_query_language.pdf`, tr. 27–28 (cú pháp `INSERT`, `DELETE`, `UPDATE`), tr. 30–33 (cú pháp `SELECT`, `WHERE`, `IN`, `LIKE`).",
+          "images": []
+        },
+        "tags": [
+          "midterm",
+          "sql",
+          "select"
+        ],
+        "difficulty": "easy"
+      }
+    ]
+  }
+}

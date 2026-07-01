@@ -7,7 +7,7 @@
     "language": "vi",
     "source": {
       "type": "merged",
-      "notes": "Gộp từ: AI/ai_quiz_20211.json, AI/ai_quiz_20221.json, AI/nmai_quiz.json, sample_quiz.json. ID câu hỏi có tiền tố để phân biệt nguồn gốc."
+      "notes": "Gộp từ: AI/ai_quiz_20211.json, AI/ai_quiz_20221.json, AI/nmai_quiz.json, sample_quiz.json. ID câu hỏi có tiền tố để phân biệt nguồn gốc. Đã hiệu chỉnh theo các slide được cung cấp: Logic/Suy diễn, Biểu diễn tri thức, Học máy, Tìm kiếm cơ bản, Tìm kiếm heuristic, CSP, Tác tử."
     },
     "settings": {
       "shuffleQuestions": true,
@@ -83,7 +83,7 @@
           ]
         },
         "explanation": {
-          "text": "Phát biểu trong câu hỏi là SAI. Trong thực tế:\n- DFS (tìm kiếm sâu) có thể đi sâu vô ích vào các nhánh không có lời giải, hoặc bị kẹt trong vòng lặp.\n- BFS (tìm kiếm rộng) tìm lời giải nông nhất (shallowest solution) trước → nhanh hơn với nhiều bài toán thực tế khi lời giải nằm ở độ sâu thấp.\nVì vậy phát biểu 'DFS có thời gian nhỏ hơn BFS' là SAI — và đáp án B xác nhận: BFS thực ra có thời gian nhỏ hơn.",
+          "text": "Phát biểu trong câu hỏi là SAI.\n\nTheo bảng so sánh trong slide, BFS có độ phức tạp thời gian O(b^(d+1)), còn DFS có độ phức tạp thời gian O(b^m), trong đó d là độ sâu lời giải nông nhất/chi phí thấp nhất và m là độ sâu tối đa của không gian trạng thái. Vì m có thể lớn hơn d rất nhiều, không thể nói DFS có thời gian nhỏ hơn BFS với phần lớn bài toán thực tế. Do đó chọn đáp án phủ định phù hợp với đề: BFS thường có lợi hơn khi lời giải nằm ở độ sâu thấp.",
           "images": []
         },
         "tags": [
@@ -119,13 +119,12 @@
         ],
         "answer": {
           "correctChoiceIds": [
-            "A",
-            "B",
+            "C",
             "D"
           ]
         },
         "explanation": {
-          "text": "SA chỉ còn màu xanh dương. NSW còn đỏ và xanh dương. SA và NSW liền kề nhau.\n- Nếu SA = xanh dương và NSW = xanh dương → vi phạm ràng buộc (trùng màu)!\n- Nếu NSW = đỏ thì không vi phạm, nhưng NSW vẫn còn khả năng = xanh dương → cạnh SA→NSW chưa phù hợp hoàn toàn.\n\nKiểm tra từng cạnh:\n- A (SA→NSW): SA=xanh dương, NSW có thể xanh dương → có thể xung đột → SAI (cạnh chưa phù hợp hoàn toàn).\n- B (NT→WA): WA=đỏ, NT còn {xanh lá, xanh dương} → NT không thể = đỏ → luôn khác WA → ĐÚNG (phù hợp).\n- C (NSW→SA): SA=xanh dương, NSW có đỏ → có thể khác → nhưng NSW cũng có thể xanh dương → chưa chắc phù hợp → SAI.\n- D (NT→T): NT còn {xanh lá, xanh dương}, T còn {đỏ, xanh lá, xanh dương} → có thể trùng màu xanh lá hoặc xanh dương → SAI.\n\nTheo đáp án đề: A, B, D là sai.",
+          "text": "Theo slide về phù hợp cạnh (arc consistency): cạnh (X → Y) phù hợp khi với mỗi giá trị x của X đều tồn tại một giá trị y của Y sao cho ràng buộc giữa X và Y được thỏa mãn. Tính phù hợp cạnh không đối xứng.\n\nVới miền sau khi đã gán WA=đỏ, Q=xanh lá:\n- SA = {xanh dương}, NSW = {đỏ, xanh dương}.\n- (SA → NSW) PHÙ HỢP: với SA=xanh dương, NSW có thể chọn đỏ để khác SA. Vì vậy A không sai.\n- (NT → WA) PHÙ HỢP: NT={xanh lá, xanh dương}, còn WA=đỏ; mọi giá trị của NT đều khác WA. Vì vậy B không sai.\n- (NSW → SA) KHÔNG phù hợp: nếu NSW=xanh dương thì SA chỉ có xanh dương, không có giá trị nào làm NSW≠SA; cần loại xanh dương khỏi NSW. Vì vậy C sai.\n- (NT → T) KHÔNG phải cạnh/ràng buộc trong đồ thị tô màu Úc; T (Tasmania) là nút cô lập, không liền kề NT. Vì vậy phát biểu “cạnh NT→T là phù hợp” sai.\n\nCác phát biểu SAI: C, D.",
           "images": []
         },
         "tags": [
@@ -383,9 +382,9 @@
       },
       {
         "id": "ai-20211-q010",
-        "type": "single_choice",
+        "type": "multiple_choice",
         "question": {
-          "text": "Amy, Betty, Cindy, và Diane đã có bữa trưa ở nhà hàng hải sản. Mỗi người gọi một món cá. Mỗi món cá chỉ có một trong hai loại màu: đỏ hoặc xanh. Sử dụng ký hiệu mệnh đề: A/B/C/D diễn đạt tương ứng cho phát biểu 'Amy/Betty/Cindy/Diane có món cá màu đỏ'. Đâu là phát biểu đúng khi chuyển một phát biểu thành mệnh đề logic định đề tương ứng?",
+          "text": "Amy, Betty, Cindy, và Diane đã có bữa trưa ở nhà hàng hải sản. Mỗi người gọi một món cá. Mỗi món cá chỉ có một trong hai loại màu: đỏ hoặc xanh. Sử dụng ký hiệu mệnh đề: A/B/C/D diễn đạt tương ứng cho phát biểu 'Amy/Betty/Cindy/Diane có món cá màu đỏ'. Các phát biểu nào đúng khi chuyển phát biểu tự nhiên thành mệnh đề logic định đề tương ứng? (Có thể chọn nhiều đáp án)",
           "images": []
         },
         "choices": [
@@ -408,11 +407,13 @@
         ],
         "answer": {
           "correctChoiceIds": [
+            "A",
+            "B",
             "C"
           ]
         },
         "explanation": {
-          "text": "Phân tích từng đáp án:\n- A: 'Amy và Betty khác màu' → Khi A=đỏ thì B≠đỏ tức ¬B, và ngược lại → A ↔ ¬B. Đây ĐÚNG nhưng câu A viết A↔(¬B) — cũng đúng. Tuy nhiên B cũng viết (¬A)↔B — (¬A)↔B ≡ A↔(¬B) → cũng đúng. Vậy cả A và B đều đúng cho phát biểu đầu?\n  Xét kỹ: A↔¬B và ¬A↔B là tương đương nhau. Cả hai A và B đều đúng cho phát biểu 'khác màu'.\n\n- C: 'Chỉ có đúng 2 người trong {A,C,D} có món đỏ'. Liệt kê 3 trường hợp 2/3:\n  * A=đỏ, C=đỏ, D=xanh: A ∧ C ∧ ¬D\n  * A=đỏ, C=xanh, D=đỏ: A ∧ ¬C ∧ D\n  * A=xanh, C=đỏ, D=đỏ: ¬A ∧ C ∧ D\n  Nối bằng ∨ → C đúng.\n\n- D: Dùng ∨ thay vì ∧ trong mỗi clause → đây là dạng CNF không diễn đạt đúng 'exactly 2' → D sai.\n\nĐáp án chính xác là C.",
+          "text": "Có nhiều phát biểu đúng, nên câu này phải là multiple_choice.\n\n- A đúng: “Amy và Betty khác màu” nghĩa là A đúng khi và chỉ khi B sai, tức A ↔ ¬B.\n- B đúng: ¬A ↔ B tương đương với A ↔ ¬B, nên cũng diễn đạt “Amy và Betty khác màu”.\n- C đúng: “Trong Amy, Cindy, Diane có đúng 2 người có món đỏ” được liệt kê bằng ba trường hợp: A∧C∧¬D, A∧¬C∧D, ¬A∧C∧D; nối các trường hợp bằng ∨.\n- D sai: dùng ∨ bên trong các nhóm nên không diễn đạt đúng điều kiện “đúng 2 người”.\n\nĐáp án đúng: A, B, C.",
           "images": []
         },
         "tags": [
@@ -803,7 +804,7 @@
           },
           {
             "id": "B",
-            "text": "Không có hàng xóm nào có hàm mục tiêu tốt hơn hoặc bằng trạng thái hiện tại"
+            "text": "Không có hàng xóm nào có giá trị hàm mục tiêu tốt hơn trạng thái hiện tại; nói cách khác, hàng xóm tốt nhất có VALUE ≤ VALUE(current)"
           },
           {
             "id": "C",
@@ -820,7 +821,7 @@
           ]
         },
         "explanation": {
-          "text": "Thuật toán leo đồi (Hill Climbing) kết thúc khi KHÔNG CÓ HÀNG XÓM NÀO tốt hơn trạng thái hiện tại — tức là đạt cực đại cục bộ (local maximum) hoặc cao nguyên (plateau).\n- A sai: Leo đồi không có tiêu chí dừng rõ ràng ngoài việc không cải thiện được.\n- C sai: Leo đồi CÓ THỂ dừng ở cực trị CỤC BỘ, không đảm bảo toàn cục.\n- D sai: Vì A và C không đúng.",
+          "text": "Theo thuật toán Hill-Climbing trong slide: chọn hàng xóm có giá trị cao nhất; nếu VALUE[neighbor] ≤ VALUE[current] thì trả về trạng thái hiện tại.\n\nVì vậy thuật toán dừng khi không có hàng xóm nào tốt hơn trạng thái hiện tại. Nếu hàng xóm tốt nhất chỉ bằng hiện tại thì vẫn dừng theo phiên bản thuật toán trong slide. Thuật toán có thể dừng ở cực trị cục bộ/plateau, không đảm bảo cực trị toàn cục.",
           "images": []
         },
         "tags": [
@@ -846,7 +847,7 @@
         "choices": [
           {
             "id": "A",
-            "text": "Giải thuật tìm kiếm A* trả về đường đi: A, C, G"
+            "text": "Giải thuật tìm kiếm A* trả về đường đi: A, C, F"
           },
           {
             "id": "B",
@@ -854,7 +855,7 @@
           },
           {
             "id": "C",
-            "text": "Giải thuật tìm kiếm tham lam (Greedy Best-First Search) trả về đường đi: A, D"
+            "text": "Giải thuật tìm kiếm tham lam (Greedy Best-First Search) ưu tiên mở rộng D ngay sau A vì h(D)=0 nhỏ nhất"
           },
           {
             "id": "D",
@@ -877,7 +878,7 @@
           ]
         },
         "explanation": {
-          "text": "Phân tích từng thuật toán:\n\n**A* (f = g + h):**\n- A: f=0+2=2. Mở A → thêm B(f=2+1=3), C(f=1+1=2), D(f=3+0=3).\n- Chọn C (f=2). Mở C → thêm F(f=2+0=2, là đích!), G(f=4+0=4), H(f=4+0=4).\n- F có f=2, là đích → nhưng cần kiểm tra: A→C(1)→F(g=1+1=2, h=0, f=2).\n- B có f=3, D có f=3. F có f=2 < 3 → A* chọn F? Nhưng đáp án đề là A (A→C→G).\n- Xét lại: A→C→G: g=1+3=4, f=4+0=4. A→B→F: g=2+1=3, f=3. A→C→F: g=1+1=2, f=2.\n- A* sẽ trả về A→C→F (f=2) không phải A→C→G. Hmm.\n- Theo đáp án đề: A (A,C,G) đúng — có thể do cây trong đề có cấu hình khác chi tiết. Theo đáp án được đánh dấu: A, C, E.\n\n**Greedy (f = h chỉ):**\n- A(h=2) → mở ra: B(h=1), C(h=1), D(h=0). Chọn D(h=0) → D là đích? D không phải đích, nhưng h=0.\n- C đúng: Greedy chọn D (h=0 nhỏ nhất) → A, D.\n\n**DFS:**\n- Mở A → thêm B, C, D (theo thứ tự). DFS lấy B trước (stack: B đầu).\n- Mở B → E, F. DFS lấy E (nếu thứ tự chữ cái) → E không phải đích.\n- Backtrack → F → F là đích → đường đi: A, B, F → E đúng.",
+          "text": "Phân tích theo đúng định nghĩa trong slide:\n\n**A*** dùng f(n)=g(n)+h(n).\n- Sau khi mở A: B có f=2+1=3, C có f=1+1=2, D có f=3+0=3 → chọn C.\n- Sau khi mở C: F có g=2,h=0,f=2; G có g=4,h=0,f=4; H có g=4,h=0,f=4.\n- F là đích và có f nhỏ nhất, nên A* trả về A → C → F. Vì vậy phát biểu A đã được sửa từ A,C,G thành A,C,F.\n\n**Greedy Best-First Search** dùng f(n)=h(n). Sau khi mở A, các con có h(B)=1, h(C)=1, h(D)=0 nên Greedy ưu tiên mở rộng D ngay sau A. Tuy nhiên D không phải đích, nên không thể nói Greedy “trả về đường đi A,D”; phát biểu C đã được sửa thành phát biểu về thứ tự mở rộng.\n\n**DFS** theo thứ tự trái sang phải sẽ đi A → B, thử E rồi quay lại F; F là đích nên đường đi lời giải là A → B → F.\n\nCác phát biểu đúng sau khi sửa nội dung lựa chọn: A, C, E.",
           "images": []
         },
         "tags": [
@@ -943,7 +944,7 @@
           },
           {
             "id": "B",
-            "text": "Cần một thay đổi đáng kể đối với cơ sở luật khi thêm các luật mới"
+            "text": "Mỗi luật mới cần được cân nhắc/kiểm tra với các luật đã có; chi phí xem xét tương tác giữa các luật có thể rất lớn"
           },
           {
             "id": "C",
@@ -957,11 +958,12 @@
         "answer": {
           "correctChoiceIds": [
             "A",
+            "B",
             "C"
           ]
         },
         "explanation": {
-          "text": "Hạn chế của hệ thống biểu diễn tri thức dựa trên luật (Rule-based systems):\n- A đúng: Phải viết luật thủ công — tốn kém thời gian và công sức (knowledge acquisition bottleneck).\n- C đúng: Khi hệ thống lớn, thêm luật mới có thể mâu thuẫn với các luật hiện có — khó đảm bảo nhất quán.\n- B sai: Hệ thống luật thường KHÔNG cần thay đổi luật cũ khi thêm luật mới — đây là ưu điểm của modular rules.\n- D sai: Ngược lại — luật dễ giải thích (explainable AI) là một ưu điểm của rule-based systems.",
+          "text": "Theo slide RBS:\n- A đúng: hệ luật có thể quá tốn kém chi phí thời gian, công sức, tiền bạc khi số luật lớn và cần xây dựng/bảo trì thủ công.\n- B đúng sau khi sửa câu chữ: khi thêm luật mới, cần cân nhắc/kiểm tra với các luật đã có; việc xem xét mọi tương tác giữa luật có thể rất khó và tốn kém.\n- C đúng: tương tác giữa các luật có thể gây hiệu ứng không mong muốn/mâu thuẫn, nên khó đảm bảo nhất quán khi cơ sở luật lớn.\n- D sai: ngược lại, các luật IF-THEN dễ hiểu là ưu điểm của RBS.\n\nĐáp án đúng: A, B, C.",
           "images": []
         },
         "tags": [
@@ -1168,9 +1170,9 @@
       },
       {
         "id": "ai-20211-q029",
-        "type": "single_choice",
+        "type": "multiple_choice",
         "question": {
-          "text": "Phép biến đổi nào sau đây đúng?",
+          "text": "Những phép biến đổi nào sau đây đúng? (Có thể chọn nhiều đáp án)",
           "images": []
         },
         "choices": [
@@ -1193,11 +1195,12 @@
         ],
         "answer": {
           "correctChoiceIds": [
-            "C"
+            "C",
+            "D"
           ]
         },
         "explanation": {
-          "text": "Kiểm tra từng entailment:\n\n- A: (A↔B) ⊨ (A∨B)? Khi A=F, B=F: A↔B=T, nhưng A∨B=F → không ngụ ý. Sai.\n\n- B: (A↔B) ⊨ (A∧B)? Khi A=F, B=F: A↔B=T, nhưng A∧B=F → không ngụ ý. Sai.\n\n- C: (A∧B) ⊨ (A↔B)? Khi A∧B=T, tức A=T và B=T, thì A↔B=T∧T=T. Mọi khi A∧B đúng thì A↔B đúng. → ĐÚNG ✓\n\n- D: (A↔B) ⊨ (¬A∨B)? Khi A=F, B=F: A↔B=T, ¬A∨B=T∨F=T ✓. Khi A=T, B=T: A↔B=T, ¬A∨B=F∨T=T ✓. Khi A=T, B=F: A↔B=F → không cần kiểm tra. Khi A=F, B=T: A↔B=F → không cần kiểm tra. → D cũng đúng?\n  Nhưng đáp án đề là C. Xét D thêm: A↔B đúng khi A=B. Nếu A=T,B=T: ¬A∨B=T ✓. Nếu A=F,B=F: ¬A∨B=T∨F=T ✓. Vậy D cũng là entailment đúng. Tuy nhiên theo đáp án đề, C là đáp án.",
+          "text": "Kiểm tra theo định nghĩa entailment: α ⊨ β nghĩa là mọi mô hình làm α đúng cũng làm β đúng.\n\n- A sai: nếu A=false, B=false thì A↔B đúng nhưng A∨B sai.\n- B sai: nếu A=false, B=false thì A↔B đúng nhưng A∧B sai.\n- C đúng: nếu A∧B đúng thì A=true và B=true, do đó A↔B đúng.\n- D đúng: nếu A↔B đúng thì chỉ có hai trường hợp A=B=true hoặc A=B=false. Với cả hai trường hợp, ¬A∨B đều đúng. Vì vậy (A↔B) ⊨ (¬A∨B).\n\nĐáp án đúng: C, D.",
           "images": []
         },
         "tags": [
@@ -1229,7 +1232,7 @@
           },
           {
             "id": "D",
-            "text": "Khi có một luật có thể được áp dụng ở bước suy diễn, cần phải chọn một trong những luật đó để áp dụng"
+            "text": "Khi có nhiều hơn một luật có thể được áp dụng ở bước suy diễn, cần chọn một trong những luật đó để áp dụng"
           }
         ],
         "answer": {
@@ -1238,7 +1241,7 @@
           ]
         },
         "explanation": {
-          "text": "Trong hệ thống suy luận dựa trên luật (Rule-based Reasoning Systems), xung đột xảy ra khi có NHIỀU HƠN MỘT luật có thể được kích hoạt (fire) tại cùng một thời điểm. Quy tắc giải quyết xung đột (Conflict Resolution Strategy) là cơ chế chọn LUẬT NÀO SẼ ĐƯỢC ÁP DỤNG trong số các luật có thể áp dụng.\nVí dụ các chiến lược: ưu tiên luật cụ thể hơn, luật mới nhất, luật đầu tiên...",
+          "text": "Trong hệ thống suy luận dựa trên luật, xung đột xảy ra khi có nhiều hơn một luật có thể áp dụng được với các sự kiện hiện có trong bộ nhớ làm việc. Khi đó cần một chiến lược giải quyết xung đột (Conflict Resolution Strategy) để quyết định luật nào được ưu tiên áp dụng.\n\nĐáp án: D.",
           "images": []
         },
         "tags": [
@@ -1442,11 +1445,11 @@
         ],
         "answer": {
           "correctChoiceIds": [
-            "D"
+            "B"
           ]
         },
         "explanation": {
-          "text": "Mệnh đề Horn là mệnh đề tuyển (clause) có tối đa MỘT literal dương (positive literal). Tương đương, nó có thể có nhiều literal âm nhưng chỉ TỐI ĐA MỘT literal dương. Câu hỏi hỏi về literal ÂM — trong Horn clause, số literal âm không bị giới hạn về phía dưới nhưng bị ràng buộc gián tiếp. Thực chất đáp án đúng là 'Maximum 1' literal DƯƠNG, tức là số literal âm có thể là bất kỳ. Tuy nhiên theo đáp án được đánh dấu trong đề, đáp án là D (Maximum 1 — ý hỏi về literal dương, bị nhầm hỏi là âm). Trong Horn clause: số literal dương ≤ 1.",
+          "text": "Theo slide, một mệnh đề trong dạng chuẩn Horn là một liên kết OR các literal và có tối đa 1 literal khẳng định (positive literal).\n\nCâu hỏi hỏi số literal âm trong một clause. Với dạng luật (¬p1 ∨ ¬p2 ∨ … ∨ ¬pn ∨ q), số literal âm có thể là 0, 1, hoặc nhiều literal; slide chỉ giới hạn số literal dương, không giới hạn số literal âm.\n\nĐáp án đúng: B — Không giới hạn (Unconstrained).",
           "images": []
         },
         "tags": [
@@ -1693,7 +1696,7 @@
           ]
         },
         "explanation": {
-          "text": "Chạy Alpha-Beta từ trái sang phải:\n1. Nút MIN trái: duyệt 2, 6, 4 → giá trị = 2; alpha tại nút MAX cha = 2.\n2. Nút MIN phải: duyệt 3 → giá trị ≤ 3 < alpha=6 (sau khi nút MAX cập nhật alpha=6 từ nhánh trái).\n\nSau khi xét nhánh trái hoàn chỉnh: MAX nhận được 6. alpha = 6.\nBắt đầu nhánh phải (MIN): xét node 3 → MIN đang xây ≤ 3 < alpha=6, nên nhánh phải MIN sẽ cắt sau node 7. Cụ thể: sau khi xét 3 và 7, MIN = 3 < alpha = 6 nên cắt ngay, node 5 bị cắt đầu tiên.",
+          "text": "Chạy α-β từ trái sang phải:\n\n1. Gốc là MIN. Xét nhánh trái là nút MAX trước.\n2. Ở nút MAX trái, các giá trị con được xét lần lượt 2, 6, 4 nên giá trị của nhánh trái là max(2,6,4)=6.\n3. Quay về gốc MIN: β của gốc hiện là 6. Khi sang nhánh phải (một nút MAX), nút này được gọi với cửa sổ có β=6.\n4. Ở nút MAX phải: xét con 3 thì α=3, chưa cắt vì 3<6. Xét tiếp con 7 thì α=7. Khi α≥β (7≥6), các con còn lại của nút MAX phải không thể làm thay đổi lựa chọn của nút MIN gốc nữa, nên bị cắt.\n\nCon còn lại đầu tiên bị cắt là Node 5. Đáp án: D.",
           "images": []
         },
         "tags": [
@@ -1935,13 +1938,12 @@
         "answer": {
           "correctChoiceIds": [
             "A",
-            "D",
             "E",
             "F"
           ]
         },
         "explanation": {
-          "text": "Trong logic vị từ bậc nhất:\n- A đúng: x bắt đầu bằng chữ thường (hoặc theo quy ước biến) → x là biến.\n- B sai: Car là ký hiệu VỊ TỪ (predicate/relation), không phải hàm. Nếu Car là hàm thì Car(x) phải là hạng, không phải atom.\n- C sai: x là biến, không phải hằng.\n- D đúng: Car(x) là một atom (công thức nguyên tử), và theo một số giáo trình, atom cũng được coi là term phức. Tuy nhiên theo chuẩn FOL: term là biến, hằng, hoặc f(t1,...,tn); Car(x) là atom không phải term. Nhưng theo đáp án đề, D được chấp nhận.\n- E đúng: Car(x) là một nguyên tử vị từ (predicate atom) — đây là cách dùng phổ biến trong giáo trình.\n- F đúng: Car là ký hiệu quan hệ/vị từ có bậc 1 (arity 1 — nhận 1 đối số).",
+          "text": "Theo cú pháp FOL trong slide:\n- Term/phần tử chỉ gồm: hằng, biến, hoặc f(t1,...,tn) với f là ký hiệu hàm.\n- Predicate/vị từ biểu diễn quan hệ có giá trị đúng/sai; nếu p là vị từ và t là term thì p(t) là atom/công thức nguyên tử.\n\nÁp dụng cho ∃x: Car(x) ∧ FlatRightTyre(x):\n- A đúng: x là biến.\n- B sai: Car không phải ký hiệu hàm; Car là ký hiệu quan hệ/vị từ bậc 1.\n- C sai: x không phải hằng.\n- D sai: Car(x) không phải term, vì Car là predicate/relation chứ không phải function symbol.\n- E đúng: Car(x) là atom/vị từ.\n- F đúng: Car là ký hiệu quan hệ/vị từ bậc 1.\n\nĐáp án đúng: A, E, F.",
           "images": []
         },
         "tags": [
@@ -2280,7 +2282,7 @@
           "images": [
             {
               "id": "diagram-ai-20221-q026",
-              "ascii": "Ký hiệu: N[h] = nút N có heuristic h(N); cạnh ghi bằng chi phí.\n\n                 A[5]\n               /  |  \\\n             2/  2|  ?\\\n             /    |    \\\n          B[5]--1--C[5]   D[6]\n          / \\       / \\    / \\\n        8/  8\\   7/  8\\ 5/  8\\\n        /     \\   /     \\ /     \\\n      E[1]  F[0]*     G[2]    H[0]*\n\n* = Goal\n\nDanh sách cạnh theo mô tả đề:\nA-B(2), A-C(2), B-E(8), B-F(8), B-C(1),\nC-F(7), C-G(8), D-G(5), D-H(8).\n\nLưu ý: đề gốc/OCR không nêu rõ cạnh nối A-D; dấu ? giữ vị trí D theo hình.",
+              "ascii": "Ký hiệu: N[h] = nút N có heuristic h(N); cạnh ghi bằng chi phí.\n\n                 A[5]\n               /  |  \\\n             2/  2|  ?\\\n             /    |    \\\n          B[5]--1--C[5]   D[6]\n          / \\       / \\    / \\\n        8/  8\\   7/  8\\ 5/  8\\\n        /     \\   /     \\ /     \\\n      E[1]  F[0]*     G[2]    H[0]*\n\n* = Goal\n\nDanh sách cạnh theo mô tả đề:\nA-B(2), A-C(2), B-E(8), B-F(8), B-C(1),\nC-F(7), C-G(8), D-G(5), D-H(8).\n\nLưu ý: theo mô tả cạnh hiện có không có cạnh nối vào D; vì vậy khi chạy từ A thì D/H không được xét. Nếu đề gốc có cạnh A-D thì cần bổ sung chi phí A-D trước khi tính lại.",
               "alt": "Đồ thị tìm kiếm A* có chi phí cạnh và heuristic"
             }
           ]
@@ -2288,7 +2290,7 @@
         "choices": [
           {
             "id": "A",
-            "text": "A, C, D, B, H"
+            "text": "A, B, C, F"
           },
           {
             "id": "B",
@@ -2305,11 +2307,11 @@
         ],
         "answer": {
           "correctChoiceIds": [
-            "B"
+            "A"
           ]
         },
         "explanation": {
-          "text": "Chạy A* (f = g + h), thứ tự chữ cái khi f bằng nhau:\n1. Mở A: f(A)=0+5=5. Thêm B(f=2+5=7), C(f=2+5=7).\n2. Mở A (đã xong). Frontier: B(7), C(7). Chọn B trước (thứ tự chữ cái)? Không, thực ra chọn thứ tự chữ cái: B < C nên chọn C trước? Theo đáp án đề là B (A, C, B, D, H).\n   Thực ra: Mở C (f=7) trước B (f=7) vì theo thứ tự chữ cái C < B? Không, B < C. Hmm.\n   Xét lại: đáp án đề cho là A, C, B, D, H. Điều này cho thấy C được mở trước B — có thể do quy tắc tie-breaking khác. Theo đề, thứ tự là A, C, B, D, H.",
+          "text": "Dựa đúng vào mô tả cạnh trong câu hỏi và định nghĩa A* trong slide: f(n)=g(n)+h(n).\n\nCác cạnh được mô tả không có cạnh nối từ A (hoặc B/C) tới D, nên D và H không thể được xét khi bắt đầu từ A. Với tie-breaking theo thứ tự chữ cái:\n1. Mở A. Sinh B và C: f(B)=2+5=7, f(C)=2+5=7. Hòa điểm nên chọn B trước C.\n2. Mở B. Sinh E với f=10+1=11, F(goal) với f=10+0=10, và C qua B có g=3 nên kém hơn C đã có g=2.\n3. Mở C. Sinh F(goal) với g=2+7=9, f=9; G với f=10+2=12.\n4. F có f nhỏ nhất và là goal, nên dừng.\n\nThứ tự mở nút: A, B, C, F. Đáp án đúng sau khi sửa lựa chọn A: A.",
           "images": []
         },
         "tags": [
@@ -2590,11 +2592,11 @@
         ],
         "answer": {
           "correctChoiceIds": [
-            "A"
+            "D"
           ]
         },
         "explanation": {
-          "text": "Optimal (Tối ưu): thuật toán tìm được lời giải có chi phí nhỏ nhất (least-cost path) nếu tồn tại lời giải.\nOptimally efficient (Tối ưu hiệu quả): trong số các thuật toán tối ưu, thuật toán này dùng ít tài nguyên nhất — cụ thể là mở rộng ít nút nhất (giữ số nút tối thiểu trong bộ nhớ). A* với heuristic admissible là ví dụ điển hình về optimally efficient.",
+          "text": "Optimal (tối ưu) nói về chất lượng lời giải: thuật toán tìm được đường đi/lời giải có chi phí thấp nhất nếu tồn tại.\n\nOptimally efficient (tối ưu hiệu quả) nói về hiệu quả tìm kiếm, thường xét số lượng/tập các nút phải mở rộng so với các thuật toán tối ưu khác trong cùng điều kiện. Nó không có nghĩa là “giữ số lượng nút tối thiểu trong RAM”.\n\nVì vậy phát biểu khớp nhất là D: tối ưu liên quan đến chi phí lời giải cuối cùng, còn tối ưu hiệu quả liên quan đến tập nút được mở rộng.",
           "images": []
         },
         "tags": [
@@ -2667,7 +2669,7 @@
           ]
         },
         "explanation": {
-          "text": "Phát biểu trong câu hỏi là SAI. Trong trường hợp tổng quát, cả DFS và BFS đều có độ phức tạp thời gian O(b^d) trong trường hợp xấu nhất. Nhưng BFS tìm lời giải tối ưu (ngắn nhất) sớm hơn, trong khi DFS có thể đi sâu vô ích. Đáp án C: 'Sai — BFS có độ phức tạp thời gian ít hơn DFS' là câu được đánh dấu đúng trong đề.",
+          "text": "Phát biểu trong câu hỏi là SAI.\n\nTheo bảng so sánh trong slide, BFS có độ phức tạp thời gian O(b^(d+1)), còn DFS có độ phức tạp thời gian O(b^m). Ở nhiều bài toán, m (độ sâu tối đa) có thể lớn hơn d rất nhiều, nên không thể khẳng định DFS có thời gian ít hơn BFS. BFS còn xét theo độ sâu tăng dần nên thường có lợi khi lời giải nằm nông.\n\nĐáp án: C.",
           "images": []
         },
         "tags": [
@@ -2779,12 +2781,13 @@
         ],
         "answer": {
           "correctChoiceIds": [
+            "A",
             "B",
             "C"
           ]
         },
         "explanation": {
-          "text": "B đúng: ∀y∃x: Food(y) → [Person(x) ∧ Likes(x,y)] có nghĩa 'Với mọi thứ y, nếu y là đồ ăn thì tồn tại x là người và x thích y' = 'For every food, there is a person who likes that food.' — khớp với mô tả.\nC đúng: ∀x∃y: Person(x) → [Food(y) ∧ Likes(x,y)] có nghĩa 'Với mọi x, nếu x là người thì tồn tại y là đồ ăn và x thích y' = 'For every person, there is a food that this person likes.' — khớp.\nA sai vì cùng công thức với C nhưng mô tả không khớp (theo đề).\nD sai: ∀x thay vì ∃x, và dùng ∨ thay vì ∧ — không diễn đạt đúng ý 'có một người thích'.",
+          "text": "A và C trong file hiện tại có cùng công thức và cùng câu tiếng Anh:\n∀x∃y: Person(x) → [Food(y) ∧ Likes(x,y)] — “For every person, there is a food that this person likes.”\nCông thức này diễn đạt đúng ý: với mọi x, nếu x là người thì tồn tại y là đồ ăn và x thích y. Vì vậy A và C đều đúng.\n\nB cũng đúng: ∀y∃x: Food(y) → [Person(x) ∧ Likes(x,y)] diễn đạt “với mọi y, nếu y là đồ ăn thì tồn tại một người x thích y”, tức “For every food, there is a person who likes that food.”\n\nD sai vì dùng ∀x và ∨, không diễn đạt “tồn tại một người thích món ăn đó”.\n\nĐáp án đúng: A, B, C.",
           "images": []
         },
         "tags": [
@@ -3389,11 +3392,11 @@
         ],
         "answer": {
           "correctChoiceIds": [
-            "C"
+            "B"
           ]
         },
         "explanation": {
-          "text": "Các thuật toán tìm kiếm chuẩn (BFS, UCS...) xem các trạng thái là 'hộp đen' (black boxes) — không khai thác cấu trúc của bài toán. CSP có cấu trúc đặc biệt: biến, miền giá trị, ràng buộc. Các thuật toán chuẩn không thể tận dụng cấu trúc này (không thể phát hiện sớm sự vi phạm ràng buộc, không thể propagate constraints). Do đó về bản chất không thể áp dụng hiệu quả.",
+          "text": "Theo slide, có thể áp dụng phương pháp tìm kiếm/kiểm thử tổng quát cho CSP bằng cách:\n1. Gán giá trị cho tất cả các biến.\n2. Kiểm tra tất cả ràng buộc.\n3. Lặp lại đến khi tìm được phép gán thỏa mãn.\n\nVì vậy phát biểu C (“về bản chất không có cách nào áp dụng”) là sai so với slide. Lý do các thuật toán tìm kiếm chuẩn không phù hợp là chúng kém hiệu quả/tốn quá nhiều thời gian do phải xét quá nhiều phép gán không thỏa ràng buộc, trong khi CSP cần khai thác cấu trúc biến–miền–ràng buộc để cắt sớm.\n\nĐáp án đúng: B.",
           "images": []
         },
         "tags": [
@@ -5241,7 +5244,7 @@
         "choices": [
           {
             "id": "A",
-            "text": "$O(b^{m})$, $O(d+1)$, $O(bd)$"
+            "text": "$O(b^{d+1})$, $O(bm)$, $O(bd)$"
           },
           {
             "id": "B",
@@ -5262,7 +5265,7 @@
           ]
         },
         "explanation": {
-          "text": "BFS phải lưu toàn bộ frontier đến chiều sâu $m \\Rightarrow O(b^{m})$. DFS lưu ngăn xếp từ gốc xuống độ sâu d $\\Rightarrow O(d+1)$ theo diễn giải của đề (mặc dù chuẩn là $O(bm)$). IDS lặp đệ quy tới độ sâu d $\\Rightarrow O(bd)$.",
+          "text": "Theo bảng so sánh các giải thuật tìm kiếm cơ bản trong slide:\n- BFS có độ phức tạp bộ nhớ O(b^(d+1)).\n- DFS có độ phức tạp bộ nhớ O(bm).\n- IDS có độ phức tạp bộ nhớ O(bd).\n\nVì các phương án cũ không có bộ ba đúng tuyệt đối theo slide, lựa chọn A đã được sửa thành: O(b^(d+1)), O(bm), O(bd). Đáp án: A.",
           "images": []
         },
         "tags": [
