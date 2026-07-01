@@ -16,7 +16,7 @@
     },
     "questions": [
       {
-        "id": "q001",
+        "id": "db-it3090-q001",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 1]\n\nCho U = {A, B, C, D, E, F} và F = {A→B, C→D, CD→EF}. Phủ tối thiểu của F là gì?",
@@ -57,7 +57,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q002",
+        "id": "db-it3090-q002",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 2]\n\nCSDL có các quan hệ:\n\n```text\nNhanVien(MaNV, TenNV, DiaChi, NamSinh, MaPh, MaCV)\nPhong(MaPh, TenPh, DiaChi, Tel)\nCongViec(MaCV, TenCV, Cap, KinhPhi)\n```\n\nChọn SQL để đưa ra tên các phòng **không có một nhân viên nào có địa chỉ ở Hà Nội**.",
@@ -99,7 +99,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q003",
+        "id": "db-it3090-q003",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 3]\n\nX là một khóa tối thiểu của lược đồ quan hệ S = ⟨U, F⟩ khi và chỉ khi điều kiện nào đúng?",
@@ -140,7 +140,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q004",
+        "id": "db-it3090-q004",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 4]\n\nPhát biểu nào dưới đây **không chính xác** về khóa chính (primary key) của một bảng?",
@@ -181,7 +181,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q005",
+        "id": "db-it3090-q005",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 5]\n\nCâu lệnh phân quyền:\n\n```sql\nGRANT x ON y TO z WITH GRANT OPTION;\n```\n\nPhát biểu nào đúng về `x`, `y`, `z`?",
@@ -222,7 +222,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q006",
+        "id": "db-it3090-q006",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 6]\n\nCho R(A,B,C,D,E,G,H) và tập phụ thuộc hàm:\n\n```text\nF = {AB→C, D→EG, C→A, BE→C, ACD→B, CE→AG, BC→D, CG→BD, G→H}\n```\n\nTính `(BE)+`.",
@@ -263,7 +263,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q007",
+        "id": "db-it3090-q007",
         "type": "multiple_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 7]\n\nTrong mô hình thực thể–liên kết (ER), các thuộc tính có thể là những loại nào? Chọn tất cả phương án phù hợp.",
@@ -305,7 +305,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q008",
+        "id": "db-it3090-q008",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 8–9]\n\nCho câu lệnh SQL:\n\n```sql\nSELECT TenSV\nFROM Sinhvien\nWHERE MaSV IN (\n  SELECT MaSV\n  FROM Dangky\n  GROUP BY MaSV\n  HAVING COUNT(MaMH) >= 0\n);\n```\n\nNhận định nào đúng?",
@@ -347,7 +347,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q009",
+        "id": "db-it3090-q009",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 10]\n\nCho lược đồ `Hoc(ma_sv, ma_lop, hoc_ky, diemthi)`. Xét câu lệnh:\n\n```sql\nUPDATE Hoc\nSET diemthi = 0\nWHERE NOT (NULL = 1);\n```\n\nTác động đúng của câu lệnh là gì?",
@@ -389,7 +389,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q010",
+        "id": "db-it3090-q010",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 13]\n\nPhát biểu nào dưới đây là đúng về trigger?",
@@ -429,7 +429,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q011",
+        "id": "db-it3090-q011",
         "type": "multiple_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 14–15]\n\nGiả sử bảng được tạo như sau:\n\n```sql\nCREATE TABLE sinhvien(\n  MSSV char(8) NOT NULL PRIMARY KEY,\n  Hoten varchar(50) NOT NULL,\n  Gioitinh boolean NOT NULL\n);\n```\n\nNhững câu lệnh nào dưới đây **chắc chắn không** thêm thành công bản ghi vào bảng trên?",
@@ -472,7 +472,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q012",
+        "id": "db-it3090-q012",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 17]\n\nThứ tự đúng khi viết các mệnh đề trong một câu truy vấn SQL là gì?",
@@ -513,7 +513,7 @@
         "difficulty": "easy"
       },
       {
-        "id": "q013",
+        "id": "db-it3090-q013",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 18]\n\nCho R(A,B,C,D,E), F = {AB→E, B→C, ABC→D, A→C}. Giả sử các thuộc tính đều chỉ nhận giá trị nguyên tố/atomic. Dạng chuẩn cao nhất của R là gì?",
@@ -554,7 +554,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q014",
+        "id": "db-it3090-q014",
         "type": "multiple_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 19 và 25]\n\nCho các quan hệ:\n\n```text\nKhachHang(IdKH, HoTen, DiaChi)\nMatHang(IdMH, TenHang, ChungLoai, GiaBan)\nDatHang(IDDonHang, IdKH, IdMH, NgayMua, SoLuong)\n```\n\nCâu SQL nào đưa ra **tổng số khách hàng khác nhau** mua hàng trong ngày `31/05/2017`?",
@@ -596,7 +596,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q015",
+        "id": "db-it3090-q015",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 20]\n\nCho R(A,B,C,D,E), F = {AB→D, C→B, CB→E, E→D}. Phân rã R thành R1(ABC), R2(CBE), R3(DE) thỏa tiêu chí nào?",
@@ -637,7 +637,7 @@
         "difficulty": "hard"
       },
       {
-        "id": "q016",
+        "id": "db-it3090-q016",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 23]\n\nChọn truy vấn `SELECT` trả về tất cả các mặt hàng mà tên bắt đầu bằng chuỗi ký tự `'choco'`. Biết `%` thay cho một chuỗi ký tự bất kỳ, `_` thay cho một ký tự bất kỳ.",
@@ -678,7 +678,7 @@
         "difficulty": "easy"
       },
       {
-        "id": "q017",
+        "id": "db-it3090-q017",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 1, Câu 1]\n\nCho CSDL:\n\n```text\nKhoa(MaKhoa, TenKhoa)\nLop(MaLop, TenLop, MaKhoa)\nSinhVien(MaSV, HoTen, NgaySinh, MaLop)\nDangKy(MaSV, MaMH, HocKy, NamHoc, Diem)\n```\n\nChọn câu SQL đúng để cập nhật mã lớp từ `'IT01A1'` sang `'IT01A2'` cho sinh viên có mã `'SV001'`.",
@@ -719,7 +719,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q018",
+        "id": "db-it3090-q018",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 1, Câu 2]\n\nChọn câu SQL đúng để liệt kê mã sinh viên và họ tên các sinh viên thuộc khoa có tên `N'CNTT'`.",
@@ -760,7 +760,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q019",
+        "id": "db-it3090-q019",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 1, Câu 3]\n\nChọn câu lệnh đúng để xóa sinh viên `'SV001'` mà không vi phạm khóa ngoại, giả sử bảng `DangKy` có thể đang chứa bản ghi của sinh viên này và không dùng `ON DELETE CASCADE`.",
@@ -802,7 +802,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q020",
+        "id": "db-it3090-q020",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 2, Câu 4]\n\nChọn câu SQL đúng để đếm số sinh viên của từng khoa, trả về `(MaKhoa, TenKhoa, SoSV)`.",
@@ -844,7 +844,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q021",
+        "id": "db-it3090-q021",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 2, Câu 5]\n\nChọn câu SQL đúng để liệt kê `MaSV`, `HoTen` của sinh viên **chưa đăng ký môn nào** (không có bản ghi trong `DangKy`).",
@@ -886,7 +886,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q022",
+        "id": "db-it3090-q022",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 2, Câu 6]\n\nChọn câu SQL đúng để liệt kê `MaSV`, `HoTen` của sinh viên đăng ký **ít nhất 2 môn** trong học kỳ 1 năm 2024.",
@@ -928,7 +928,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q023",
+        "id": "db-it3090-q023",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 2–3, Câu 7]\n\nChọn câu SQL đúng để thêm bản ghi đăng ký cho sinh viên `SV001` học môn `DBI001`, học kỳ 1, năm 2024, điểm chưa có (`NULL`).",
@@ -970,7 +970,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q024",
+        "id": "db-it3090-q024",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 3, Câu 8]\n\nPhát biểu nào sau đây là **sai** về khóa ngoại (foreign key)?",
@@ -1011,7 +1011,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q025",
+        "id": "db-it3090-q025",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 3, Câu 9]\n\nCho:\n\n```text\nLop(MaLop, TenLop)\nSinhVien(MaSV, HoTen, MaLop)\nDiem(MaSV, MaMH, DiemSo)\n```\n\nChọn biểu thức đại số quan hệ mô tả yêu cầu: “Liệt kê `TenLop` của những sinh viên có `HoTen = 'Tran Minh'` và `DiemSo > 9`”.",
@@ -1052,7 +1052,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q026",
+        "id": "db-it3090-q026",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 3, Câu 10]\n\nCho:\n\n```text\nDangKy(MaSV, MaMH, NamHoc)\n(1,'DB',2024), (1,'OS',2024), (2,'DB',2024), (2,'DB',2023), (3,'DB',2024)\n\nTroGiang(MaSV, MaMH)\n(1,'DB'), (3,'DB'), (4,'DB'), (2,'OS')\n```\n\nTính kết quả của biểu thức:\n\n```text\nπ_MaSV(σ_NamHoc=2024(DangKy)) ∩ π_MaSV(σ_MaMH='DB'(TroGiang))\n```",
@@ -1093,7 +1093,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q027",
+        "id": "db-it3090-q027",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 3, Câu 11]\n\nTrong câu lệnh tạo bảng sau, lỗi cú pháp nằm ở đâu?\n\n```sql\nCREATE TABLE DonHang(\n  MaDH INT PRIMARY KEY,\n  NgayDat DATE NOT NULL;\n  MaKH CHAR(8)\n);\n```",
@@ -1134,7 +1134,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q028",
+        "id": "db-it3090-q028",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 3, Câu 12]\n\nCây toán tử có dạng: nối `Product` với `Supplier` theo `SupplierID`, sau đó chọn `Price > 200`, cuối cùng chiếu `ProductName, Price`. Biểu thức đúng là gì?",
@@ -1175,7 +1175,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q029",
+        "id": "db-it3090-q029",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 14]\n\nCho bảng `Employee(Id, Name, Dept)` với `Id` có kiểu `INT IDENTITY(1,1)`. Lệnh thêm dữ liệu nào là hợp lệ nhất?",
@@ -1217,7 +1217,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q030",
+        "id": "db-it3090-q030",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 15]\n\nTruy vấn trả về tên và tuổi hiện tại của nhân viên, biết `NamSinh` lưu năm sinh.",
@@ -1258,7 +1258,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q031",
+        "id": "db-it3090-q031",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 16]\n\nVới các quan hệ:\n\n```text\nNhanVien(MaNV, TenNV, DiaChi, NamSinh, MaPhong, MaCV)\nPhongBan(MaPhong, TenPhong, DiaChi, Tel)\nCongViec(MaCV, TenCV, Cap, KinhPhi)\n```\n\nChọn SQL đúng để truy vấn tên nhân viên làm việc ở phòng `Kỹ Thuật` và làm công việc `Giám sát`.",
@@ -1299,7 +1299,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q032",
+        "id": "db-it3090-q032",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 17]\n\nChọn SQL đúng để lấy tên các phòng **không có nhân viên nào có địa chỉ ở Đà Nẵng**.",
@@ -1340,7 +1340,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q033",
+        "id": "db-it3090-q033",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 18]\n\nTrong ER, `Khách hàng` liên kết 1–N với `Hóa đơn` qua quan hệ “Lập”. Nhận xét nào hợp lý nhất nếu thực thể `Hóa đơn` đã có cả thuộc tính `MaKH` trong sơ đồ ER?",
@@ -1381,7 +1381,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q034",
+        "id": "db-it3090-q034",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 19]\n\nCho hai quan hệ R(A,B,C) và S(B,D). Xét:\n\n```text\nE = π_{A,D}(σ_{C>10}(R * S))\n```\n\ntrong đó `*` là phép nối tự nhiên theo thuộc tính chung B. Biểu thức nào tương đương với E?",
@@ -1422,7 +1422,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q035",
+        "id": "db-it3090-q035",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 4, Câu 20]\n\nTrong ER: `SinhViên —(1:N)— ĐăngKý —(N:1)— Lớp`. Ý nghĩa đúng là gì?",
@@ -1463,7 +1463,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q036",
+        "id": "db-it3090-q036",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20222.pdf, trang 1, Câu 7]\n\nPhát biểu nào dưới đây là **sai** về trigger?",
@@ -1503,7 +1503,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q037",
+        "id": "db-it3090-q037",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20222.pdf, trang 2, Câu 11]\n\nCho Q(A,B,C,D) với F = {AB→C, D→B, C→ABD}. Q ở dạng chuẩn cao nhất nào trong các lựa chọn sau?",
@@ -1544,7 +1544,7 @@
         "difficulty": "hard"
       },
       {
-        "id": "q038",
+        "id": "db-it3090-q038",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20222.pdf, trang 2, Câu 14]\n\nCho bảng R(A1, A2, A3). Câu truy vấn sau được thực hiện thường xuyên trên bảng R rất lớn:\n\n```sql\nSELECT * FROM R WHERE A1 >= 1 AND A1 <= 15;\n```\n\nLựa chọn nào hợp lý nhất để cải thiện thời gian thực thi?",
@@ -1585,7 +1585,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q039",
+        "id": "db-it3090-q039",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 1, Câu 1]\n\nTrong sơ đồ ER, thực thể `DoiTuong` có thuộc tính `DTuongID` và `Ten`; nó còn tham gia các quan hệ với `TaiKhoan` như “Sở hữu”, “Có quyền”. Khi liệt kê các thuộc tính của bảng tương ứng với tập thực thể `DoiTuong`, chọn danh sách nào hợp lý nhất?",
@@ -1626,7 +1626,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q040",
+        "id": "db-it3090-q040",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 4, Câu 4]\n\nCâu lệnh sau thực hiện việc gì?\n\n```sql\nSELECT * FROM fruit;\n```",
@@ -1667,7 +1667,7 @@
         "difficulty": "easy"
       },
       {
-        "id": "q041",
+        "id": "db-it3090-q041",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 7, Câu 11]\n\nCho câu lệnh SQL:\n\n```sql\nSELECT MaSV, Hoten\nFROM Sinhvien\nWHERE MaSV IN (SELECT MaSV FROM Dangky);\n```\n\nNhận định nào đúng?",
@@ -1709,7 +1709,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q042",
+        "id": "db-it3090-q042",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20202.pdf, trang 2]\n\nCho bảng R(A1, A2, A3). Truy vấn `SELECT * FROM R WHERE A3 >= 5 AND A3 <= 15` chạy thường xuyên trên R lớn. Chọn giải pháp hợp lý nhất.",
@@ -1750,7 +1750,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q043",
+        "id": "db-it3090-q043",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20202.pdf, trang 3]\n\nCho tổ chức tệp băm `h(x) = x mod y` với các khóa được phân vào các bucket 0, 1, 2, 3, 4. Hỏi `y` bằng bao nhiêu?",
@@ -1791,7 +1791,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q044",
+        "id": "db-it3090-q044",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20202.pdf, trang 6]\n\nPhát biểu nào dưới đây là đúng về khóa ngoại?",
@@ -1831,7 +1831,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q045",
+        "id": "db-it3090-q045",
         "type": "multiple_choice",
         "question": {
           "text": "[Database - cuối kì 20202.pdf, trang 7]\n\nCho R(A,B,C,D,E) với F = {AB→E, E→C, ABC→D, D→B}. Các khóa tối thiểu của lược đồ là gì?",
@@ -1873,7 +1873,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q046",
+        "id": "db-it3090-q046",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20202.pdf, trang 8]\n\nĐể chỉnh sửa giá trị dữ liệu của bản ghi đã có trong bảng, sử dụng lệnh nào?",
@@ -1914,7 +1914,7 @@
         "difficulty": "easy"
       },
       {
-        "id": "q047",
+        "id": "db-it3090-q047",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20202.pdf, trang 9]\n\nPhát biểu nào sau đây là **chưa chính xác** về khóa ngoại?",
@@ -1954,7 +1954,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q048",
+        "id": "db-it3090-q048",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20202.pdf, trang 10]\n\nCho hai quan hệ R có n bản ghi và S có m bản ghi. Số lượng bản ghi sau phép nối tự nhiên `R * S` là gì?",
@@ -1995,7 +1995,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q049",
+        "id": "db-it3090-q049",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20232.pdf, trang 18]\n\nPhát biểu nào dưới đây là **đúng** về khóa ngoại?",
@@ -2035,7 +2035,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q050",
+        "id": "db-it3090-q050",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20232.pdf, trang 8]\n\nCho U = {A, B, C, D, E}, F = {A→B, C→D, CD→E}. Phép tách lược đồ R thành R1(ABC), R2(CDE), R3(ACD) có bảo toàn phụ thuộc hàm không mất mát thông tin không?",
@@ -2076,7 +2076,7 @@
         "difficulty": "hard"
       },
       {
-        "id": "q051",
+        "id": "db-it3090-q051",
         "type": "single_choice",
         "question": {
           "text": "[Database - giữa kì thầy Phương.pdf, trang 1, Câu 2]\n\nCho S(U,F), U={A,B,C,D,E,F,G,H}, F={A→BC, B→DE, DE→F, AD→G}. Tính bao đóng `(ABD)+`.",
@@ -2117,7 +2117,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q052",
+        "id": "db-it3090-q052",
         "type": "single_choice",
         "question": {
           "text": "[Database - giữa kì cô Oanh.pdf, trang 2]\n\nVới câu SQL `SELECT * FROM fruit`, phát biểu đúng nhất là gì?",
@@ -2158,7 +2158,7 @@
         "difficulty": "easy"
       },
       {
-        "id": "q053",
+        "id": "db-it3090-q053",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 28]\n\nCSDL gồm:\n\n```text\nNhanVien(NV, HoTen, NamSinh)\nDuAn(DA, TenDA, KinhPhi)\nThamGia(NV, DA, MucLuong)\n```\n\nCho câu lệnh SQL:\n\n```sql\nSELECT NV, HoTen\nFROM NhanVien, ThamGia\nWHERE NhanVien.NV = ThamGia.NV AND DA = 'P01'\nINTERSECT\nSELECT NV, HoTen\nFROM NhanVien, ThamGia\nWHERE NhanVien.NV = ThamGia.NV AND DA = 'P02';\n```\n\nNhận định nào đúng?",
@@ -2198,7 +2198,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q054",
+        "id": "db-it3090-q054",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 33]\n\nVới các bảng có ràng buộc khóa chính, khóa ngoại đầy đủ:\n\n```text\nNhanVien(NV, HoTen, NamSinh)\nDuAn(DA, TenDA, KinhPhi)\nThamGia(NV, DA, MucLuong)   -- (NV, DA) là khóa chính; NV và DA là khóa ngoại\n```\n\nPhương án nào đảm bảo luôn xóa được nhân viên có tên là `Nguyễn Văn A`?",
@@ -2239,7 +2239,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q055",
+        "id": "db-it3090-q055",
         "type": "multiple_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 36]\n\nCho lược đồ quan hệ `R(A,B,C,D,E,G,H,I)` và tập phụ thuộc hàm:\n\n```text\nF = { BG→E, I→H, BC→IH, A→CD }\n```\n\nCác phụ thuộc hàm nào sau đây **KHÔNG** suy diễn được từ F?",
@@ -2281,7 +2281,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q056",
+        "id": "db-it3090-q056",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 39]\n\nCho các quan hệ:\n\n```text\nSinhvien(MaSV, HotenSV, Gioitinh, QueQuan, Malop)\nLop(Malop, Tenlop, Khoa)\nDangky(MaSV, MaMH, Hocky, Diem)\nMonhoc(MaMH, TenMH, soTinChi)\n```\n\nXét truy vấn:\n\n```sql\nSELECT s.*\nFROM Sinhvien s, Dangky d\nWHERE s.MaSV = d.MaSV\n  AND Malop = 'NN01'\n  AND TenMH = 'Database';\n```\n\nNhận định nào đúng?",
@@ -2322,7 +2322,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q057",
+        "id": "db-it3090-q057",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 44]\n\nCho CSDL:\n\n```text\nKhachhang(MaKH, Hoten, Sodienthoai, Coquan)\nNhachothue(MaN, Diachi, Giathue, Tenchunha)\nHopdong(MaN, MaKH, Ngaybatdau, Ngayketthuc)\n```\n\nCần tạo khung nhìn `KH(Ma, Hovaten, Dienthoai)` chứa mã, họ tên và điện thoại của các khách hàng thuê nhà có giá thuê trên 50 triệu đồng. Câu lệnh nào đúng?",
@@ -2362,7 +2362,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q058",
+        "id": "db-it3090-q058",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 46]\n\nCho CSDL:\n\n```text\nNhanVien(NV, HoTen, NamSinh)\nDuAn(DA, TenDA, KinhPhi)\nThamGia(NV, DA, MucLuong)   -- (NV, DA) là khóa chính; NV và DA là khóa ngoại\n```\n\nCâu lệnh SQL nào đưa ra `HoTen` nhân viên làm việc tại dự án có tên là `007`?",
@@ -2402,7 +2402,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q059",
+        "id": "db-it3090-q059",
         "type": "multiple_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 49]\n\nTrong một trigger, nhận định nào sau đây đúng về biến `NEW` và `OLD`?",
@@ -2442,7 +2442,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q060",
+        "id": "db-it3090-q060",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 51]\n\nTrong mô hình cơ sở dữ liệu 3 tầng khi trừu tượng hóa dữ liệu, gồm mức trong/vật lý, mức khái niệm/logic và mức ngoài/các khung nhìn. Điều khẳng định nào sau đây đúng?",
@@ -2482,7 +2482,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q061",
+        "id": "db-it3090-q061",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 53]\n\nKhi một bảng đã được tạo, nếu muốn bổ sung thêm cột hoặc loại bỏ cột cho bảng đó thì câu lệnh bắt đầu với từ khóa nào?",
@@ -2522,7 +2522,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q062",
+        "id": "db-it3090-q062",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20231.pdf, trang 58]\n\nHãy cho biết nhận định đúng về khung nhìn (`View`).",
@@ -2563,7 +2563,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q063",
+        "id": "db-it3090-q063",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 4, Câu hỏi 5]\n\nCho lược đồ quan hệ `R(A, B, C)` với tập phụ thuộc hàm `F = {A→B, B→C}`. R ở dạng chuẩn cao nhất nào trong các lựa chọn sau?",
@@ -2598,7 +2598,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q064",
+        "id": "db-it3090-q064",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 6, Câu hỏi 7]\n\nCâu lệnh nào sau đây bị sai?",
@@ -2638,7 +2638,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q065",
+        "id": "db-it3090-q065",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 8, Câu hỏi 16]\n\nTrong các mô hình tổ chức bộ nhớ sau, mô hình nào phải quét toàn bộ tệp để tìm kiếm một bản ghi?",
@@ -2678,7 +2678,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q066",
+        "id": "db-it3090-q066",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 8, Câu hỏi 17]\n\nCho lược đồ quan hệ `R(U,F)` với `U = {A,B,C,D,E}` và:\n\n```text\nF = { AB→CD, E→C, D→CE, A→E }\n```\n\nTính `(AD)+`.",
@@ -2718,7 +2718,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q067",
+        "id": "db-it3090-q067",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 9, Câu hỏi 18]\n\nCho bảng `Student(Id, Name, Address)`. Sinh viên có `Id = '20155041'` chuyển đến sống tại địa chỉ `Hawai`. Chọn câu lệnh cập nhật dữ liệu thích hợp.",
@@ -2758,7 +2758,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q068",
+        "id": "db-it3090-q068",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 10, Câu hỏi 22]\n\nPhát biểu nào sau đây là đúng?",
@@ -2798,7 +2798,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q069",
+        "id": "db-it3090-q069",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 10, Câu hỏi 23]\n\nTìm phủ tối thiểu của tập phụ thuộc hàm:\n\n```text\nF = { A→BC, A→B, B→C, AB→C }\n```",
@@ -2838,7 +2838,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q070",
+        "id": "db-it3090-q070",
         "type": "single_choice",
         "question": {
           "text": "[Database_-_cuối_kì_20191 (1).pdf, trang 11, Câu hỏi 24]\n\nCho các bảng:\n\n```text\nAcc(AccID, Password, AccID_parent)\nObject(ObjectID, name, type, AccID)\nPermission(AccID, ObjectID, type, expired_date)\n```\n\n`AccID_parent` là khóa ngoại tham chiếu đến `AccID` trong chính bảng `Acc`. Câu lệnh nào tạo ràng buộc khóa ngoại này đúng?",
@@ -2878,7 +2878,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q071",
+        "id": "db-it3090-q071",
         "type": "multiple_choice",
         "question": {
           "text": "[Database - cuối kì 20202.pdf, trang 14]\n\nCho lược đồ quan hệ `R(ABEIJGH)` và tập phụ thuộc hàm:\n\n```text\nF = { AB→E, AC→J, BH→I, B→G, GA→HB }\n```\n\nCó thể suy ra những phụ thuộc hàm nào?",
@@ -2919,7 +2919,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q072",
+        "id": "db-it3090-q072",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20202.pdf, trang 17]\n\nĐể tạo một bảng, dùng câu lệnh nào?",
@@ -2959,7 +2959,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q073",
+        "id": "db-it3090-q073",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20202.pdf, trang 21]\n\nLược đồ `R(A,B,C)`, `F = {A→B, B→C, C→A}` được tách thành `R1(AB), R2(BC)`. Phép tách này có tính chất gì?",
@@ -2999,7 +2999,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q074",
+        "id": "db-it3090-q074",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20202.pdf, trang 22]\n\nChọn câu truy vấn `SELECT` trả về tất cả các mặt hàng mà tên **chứa** chuỗi ký tự `choco`. Ghi chú: dấu `%` thay cho một chuỗi ký tự bất kỳ, dấu `_` thay cho một ký tự bất kỳ.",
@@ -3039,7 +3039,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q075",
+        "id": "db-it3090-q075",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 5, Câu 21]\n\nCho `R(ABCDE)`, `F = {AB→E, BC→D, A→C}`. Có thể suy ra phụ thuộc hàm nào?",
@@ -3079,7 +3079,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q076",
+        "id": "db-it3090-q076",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 5, Câu 22]\n\nCho các quan hệ:\n\n```text\nr(A,B,C) = {(1,2,5), (2,3,5), (3,4,6)}\ns(D,E,C) = {(7,8,5), (9,10,5), (7,8,6)}\nt(D,E) = {(7,8), (9,10)}\n```\n\nKết quả của `(r * s) ÷ t` là gì? (`*` là nối tự nhiên.)",
@@ -3119,7 +3119,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q077",
+        "id": "db-it3090-q077",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 5, Câu 23]\n\nQuan hệ `MedicalVisit(patientID, name, addr, date, time, doctorID, doctorName, note)` có tập phụ thuộc hàm:\n\n```text\npatientID → name, addr\ndoctorID → doctorName\npatientID, date, time → doctorID, note\n```\n\nTập lược đồ nào đạt 3NF hợp lý nhất?",
@@ -3159,7 +3159,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q078",
+        "id": "db-it3090-q078",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 5, Câu 24]\n\nCho `R(ABCDEF)`, `G = {AB→C, C→B, ABD→E, F→A}` và các lược đồ con:\n\n```text\nr1(BC), r2(AC), r3(ABDE), r4(ABDF)\n```\n\nPhép tách nào không mất mát thông tin?",
@@ -3199,7 +3199,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q079",
+        "id": "db-it3090-q079",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 5, Câu 25]\n\nKhẳng định đúng về 2NF là gì?",
@@ -3239,7 +3239,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q080",
+        "id": "db-it3090-q080",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 5, Câu 26]\n\nCho `R(A,B,C,D,E)`, `F = {AB→E, E→C, AC→D, D→B}`. Tập khóa tối thiểu của R là gì?",
@@ -3279,7 +3279,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q081",
+        "id": "db-it3090-q081",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 27]\n\nMột trigger `AFTER INSERT` trên bảng `SinhVien` chèn vào `AuditLog(Action, MaSV, NewDiemTB)` bằng dữ liệu từ bảng đặc biệt `inserted`. Sau đó chạy:\n\n```sql\nINSERT INTO dbo.SinhVien(MaSV, HoTen, DiemTB)\nVALUES ('SV0004', N'Phạm Dũng', 9.10);\n```\n\nNhận định nào đúng?",
@@ -3319,7 +3319,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q082",
+        "id": "db-it3090-q082",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 28]\n\nCâu lệnh nào để người dùng `uA` có thể xem dữ liệu bảng `KhachHang`, và `uA` được phép cấp lại quyền đó cho người dùng khác?",
@@ -3359,7 +3359,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q083",
+        "id": "db-it3090-q083",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 30]\n\nNgười dùng `u1` từng được cấp quyền `SELECT` trên bảng `KhachHang` với tùy chọn `WITH GRANT OPTION`, và đã cấp quyền này lại cho người khác. Lệnh nào thu hồi quyền `SELECT` từ `u1` và từ các người dùng khác mà `u1` đã cấp quyền?",
@@ -3399,7 +3399,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q084",
+        "id": "db-it3090-q084",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 31]\n\nCho `R(U)` với `U = {A,B,C,D,E,G,H}` và:\n\n```text\nF = { AB→CD, ABC→GH, AD→EG }\n```\n\nTập phụ thuộc hàm nào dưới đây **không đúng** là suy diễn được từ F?",
@@ -3439,7 +3439,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q085",
+        "id": "db-it3090-q085",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 32]\n\nCho `R(U)` với `U = {A,B,C,D,E}` và:\n\n```text\nF = { AB→C, BC→D, CD→B, BD→A, AD→E }\n```\n\nTập thuộc tính nào dưới đây **không phải** là khóa của R?",
@@ -3479,7 +3479,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q086",
+        "id": "db-it3090-q086",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 33]\n\nCho `R(U)` với `U = {A,B,C,D,E,G}` và:\n\n```text\nF = { AC→BD, ACD→EG, AD→EG }\n```\n\nTập phụ thuộc hàm nào dưới đây có thể suy diễn ra từ F?",
@@ -3519,7 +3519,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q087",
+        "id": "db-it3090-q087",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 6, Câu 34]\n\nCho `R(U)` với `U = {A,B,C,D,E,G,H}` và:\n\n```text\nF = { AC→BD, ACD→EG, AD→EG }\n```\n\nTập thuộc tính nào dưới đây là khóa tối thiểu của R?",
@@ -3559,7 +3559,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q088",
+        "id": "db-it3090-q088",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 7, Câu 36]\n\nCho CSDL:\n\n```text\nNhanVien(MaNV, TenNV, Luong, MaPhong)\nPhongBan(MaPhong, TenPhong)\n```\n\nTạo view hiển thị nhân viên có `Luong > 30` và tên phòng. Câu lệnh nào đúng?",
@@ -3600,7 +3600,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q089",
+        "id": "db-it3090-q089",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 7, Câu 38]\n\nBảng `R(A1,A2,A3)` rất lớn. Truy vấn thường xuyên:\n\n```sql\nSELECT * FROM R WHERE A3 BETWEEN 100 AND 200;\n```\n\nChọn giải pháp hợp lý nhất.",
@@ -3640,7 +3640,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q090",
+        "id": "db-it3090-q090",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20251.pdf, trang 7, Câu 39]\n\nPhát biểu nào sau đây đúng nhất về `clustered index` trong SQL Server?",
@@ -3680,7 +3680,7 @@
         "difficulty": "medium"
       },
       {
-        "id": "q091",
+        "id": "db-it3090-q091",
         "type": "single_choice",
         "question": {
           "text": "[Database - cuối kì 20232.pdf, trang 1]\n\nCho các quan hệ:\n\n```text\nAcc(AccID, password, AccID_parent)\nObject(ObjectID, name, type, AccID)\nPermission(AccID, ObjectID, type, expired_date)\n```\n\nXét câu lệnh:\n\n```sql\nDELETE FROM Acc\nWHERE NOT EXISTS (\n  SELECT * FROM Permission p\n  WHERE Acc.AccID = p.AccID\n);\n```\n\nKết quả/tác động của câu lệnh là gì?",
