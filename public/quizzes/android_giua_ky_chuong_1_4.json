@@ -442,7 +442,7 @@
         "id": "bank-1928",
         "type": "single_choice",
         "question": {
-          "text": "Kiểu dữ liệu trả về của hàm startActivityForResult() trong android là gì?",
+          "text": "Kiểu dữ liệu trả về của hàm `startActivityForResult()` trong android là gì?",
           "images": []
         },
         "choices": [
@@ -679,7 +679,7 @@
         "id": "bank-1935",
         "type": "single_choice",
         "question": {
-          "text": "Tham số android:maxSdkVersion trong file AndroidManifest.xml không được khuyến khích sử dụng?",
+          "text": "Tham số `android:maxSdkVersion` trong file `AndroidManifest.xml` không được khuyến khích sử dụng?",
           "images": []
         },
         "choices": [
@@ -766,7 +766,7 @@
         "id": "bank-1938",
         "type": "single_choice",
         "question": {
-          "text": "Thành phần nào nằm trong file AndroidManifest.xml?",
+          "text": "Thành phần nào nằm trong file `AndroidManifest.xml`?",
           "images": []
         },
         "choices": [
@@ -1196,7 +1196,7 @@
         "id": "bank-1946",
         "type": "single_choice",
         "question": {
-          "text": "Cấu trúc mặc định của code template Empty Activity không có thành phần nào sau đây?",
+          "text": "Cấu trúc mặc định của code template `Empty Activity` không có thành phần nào sau đây?",
           "images": []
         },
         "choices": [
@@ -1291,7 +1291,7 @@
         "id": "bank-1953",
         "type": "single_choice",
         "question": {
-          "text": "Làm thế nào để cho phép TextView hiển thị được nội dung dài quá kích thước màn hình ngang?",
+          "text": "Làm thế nào để cho phép `TextView` hiển thị được nội dung dài quá kích thước màn hình ngang?",
           "images": []
         },
         "choices": [
@@ -1386,7 +1386,7 @@
         "id": "bank-1955",
         "type": "single_choice",
         "question": {
-          "text": "Phát biểu nào sau đây về lớp R trong Android là đúng?",
+          "text": "Phát biểu nào sau đây về lớp `R` trong Android là đúng?",
           "images": []
         },
         "choices": [
@@ -1624,7 +1624,7 @@
         "id": "bank-1959",
         "type": "single_choice",
         "question": {
-          "text": "Phát biểu đúng về onCreate, onStart, và onResume?",
+          "text": "Phát biểu đúng về `onCreate()`, `onStart()`, và `onResume()`?",
           "images": []
         },
         "choices": [
@@ -1672,7 +1672,7 @@
         "id": "bank-1967",
         "type": "single_choice",
         "question": {
-          "text": "Thuộc tính nào sau đây cho phép thiết lập màu sắc chữ của view TextView?",
+          "text": "Thuộc tính nào sau đây cho phép thiết lập màu sắc chữ của view `TextView`?",
           "images": []
         },
         "choices": [
@@ -1719,7 +1719,7 @@
         "id": "bank-1948",
         "type": "single_choice",
         "question": {
-          "text": "Để thiết lập hộp nhập EditText cho phép nhập dữ liệu mật khẩu (không hiển thị ký tự lên) ta chọn inputType là gì?",
+          "text": "Để thiết lập hộp nhập `EditText` cho phép nhập dữ liệu mật khẩu (không hiển thị ký tự lên) ta chọn `inputType` là gì?",
           "images": []
         },
         "choices": [
@@ -1766,7 +1766,7 @@
         "id": "bank-1968",
         "type": "single_choice",
         "question": {
-          "text": "Trong khi viết chồng hàm onRestoreInstanceState (Bundle mySavedState), tại sao tham số mySavedState lại có kiểu dữ liệu là Bundle mà không phải kiểu dữ liệu nguyên thủy như string, hay int?",
+          "text": "Trong khi viết chồng hàm `onRestoreInstanceState(Bundle mySavedState)`, tại sao tham số `mySavedState` lại có kiểu dữ liệu là `Bundle` mà không phải kiểu dữ liệu nguyên thủy như string, hay int?",
           "images": []
         },
         "choices": [
@@ -1810,7 +1810,7 @@
         "id": "bank-1969",
         "type": "single_choice",
         "question": {
-          "text": "Trong phần nội dung của đối tượng TextView, cần thiết lập thuộc tính nào để cho phép nhúng weblink vào nội dung text?",
+          "text": "Trong phần nội dung của đối tượng `TextView`, cần thiết lập thuộc tính nào để cho phép nhúng weblink vào nội dung text?",
           "images": []
         },
         "choices": [
@@ -1857,7 +1857,7 @@
         "id": "bank-1949",
         "type": "single_choice",
         "question": {
-          "text": "Để xem logcat với lệnh Log.d() ta cần chọn bộ lọc Log levels là gì?",
+          "text": "Để xem logcat với lệnh `Log.d()` ta cần chọn bộ lọc Log levels là gì?",
           "images": []
         },
         "choices": [
@@ -1904,7 +1904,7 @@
         "id": "bank-1950",
         "type": "single_choice",
         "question": {
-          "text": "Đoạn code sau có tác dụng gì? (Ở đây `menu_main` là file xml khai báo các đối tượng trong menu)\n```java\n@Override\npublic boolean onCreateOptionsMenu(Menu menu) {\n    getMenuInflater().inflate(R.menu.menu_main, menu);\n    return true;\n}\n```",
+          "text": "Đoạn code sau có tác dụng gì? (Ở đây `menu_main` là file xml khai báo các đối tượng trong menu)\n\n```java\n@Override\npublic boolean onCreateOptionsMenu(Menu menu) {\n    getMenuInflater().inflate(R.menu.menu_main, menu);\n    return true;\n}\n```",
           "images": []
         },
         "choices": [
@@ -1947,7 +1947,7 @@
         "id": "bank-1951",
         "type": "single_choice",
         "question": {
-          "text": "Đối tượng ScrollView cho phép khai báo nhiều view con bên trong, và khi cuộn thì tất cả các view con sẽ cuộn cùng với nhau?",
+          "text": "Đối tượng `ScrollView` cho phép khai báo nhiều view con bên trong, và khi cuộn thì tất cả các view con sẽ cuộn cùng với nhau?",
           "images": []
         },
         "choices": [
@@ -1987,7 +1987,7 @@
         "id": "bank-1972",
         "type": "single_choice",
         "question": {
-          "text": "Cả Toast và Logcat đều có thể sử dụng với mục đích là để gỡ rối chương trình, phát biểu nào sau đây là sai?",
+          "text": "Cả `Toast` và `Logcat` đều có thể sử dụng với mục đích là để gỡ rối chương trình, phát biểu nào sau đây là sai?",
           "images": []
         },
         "choices": [
@@ -2169,7 +2169,7 @@
         "id": "bank-16493",
         "type": "single_choice",
         "question": {
-          "text": "Giả sử ảnh test.jpg được lưu vào thư mục drawable, phương thức nào của đối tượng ImageView được sử dụng để thiết lập nội dung là ảnh này?",
+          "text": "Giả sử ảnh `test.jpg` được lưu vào thư mục `res/drawable`, phương thức nào của đối tượng `ImageView` được sử dụng để thiết lập nội dung là ảnh này?",
           "images": []
         },
         "choices": [
@@ -2216,7 +2216,7 @@
         "id": "bank-15381",
         "type": "single_choice",
         "question": {
-          "text": "Lớp Button là lớp con trực tiếp của lớp nào?",
+          "text": "Lớp `Button` là lớp con trực tiếp của lớp nào?",
           "images": []
         },
         "choices": [
@@ -2263,7 +2263,7 @@
         "id": "bank-16492",
         "type": "single_choice",
         "question": {
-          "text": "Giá trị nào của thuộc tính scaleType của đối tượng ImageView cho phép giữ nguyên tỷ lệ và nội dung của ảnh (ảnh không bị crop)?",
+          "text": "Giá trị nào của thuộc tính `scaleType` của đối tượng `ImageView` cho phép giữ nguyên tỷ lệ và nội dung của ảnh (ảnh không bị crop)?",
           "images": []
         },
         "choices": [
@@ -2310,7 +2310,7 @@
         "id": "bank-15382",
         "type": "single_choice",
         "question": {
-          "text": "Nếu các đối tượng button trong 1 activity có thiết lập phương thức setOnClickListener(this) thì trong hàm callback onClick của acitivity làm thế nào để phân biệt đối tượng button nào được nhấn?",
+          "text": "Nếu các đối tượng button trong 1 activity có thiết lập phương thức `setOnClickListener(this)` thì trong hàm callback onClick của acitivity làm thế nào để phân biệt đối tượng button nào được nhấn?",
           "images": []
         },
         "choices": [
@@ -2498,7 +2498,7 @@
         "id": "bank-16494",
         "type": "single_choice",
         "question": {
-          "text": "Lớp RadioGroup kế thừa trực tiếp từ lớp nào?",
+          "text": "Lớp `RadioGroup` kế thừa trực tiếp từ lớp nào?",
           "images": []
         },
         "choices": [
@@ -2549,7 +2549,7 @@
         "id": "bank-16496",
         "type": "single_choice",
         "question": {
-          "text": "Interface nào được sử dụng để xử lý sự kiện khi người dùng thay đổi nội dung của đối tượng EditText?",
+          "text": "Interface nào được sử dụng để xử lý sự kiện khi người dùng thay đổi nội dung của đối tượng `EditText`?",
           "images": []
         },
         "choices": [
@@ -2643,7 +2643,7 @@
         "id": "bank-15386",
         "type": "single_choice",
         "question": {
-          "text": "Phương thức nào được sử dụng để kiểm tra xem một đối tượng CheckBox hoặc RadioButton có đang được chọn hay không?",
+          "text": "Phương thức nào được sử dụng để kiểm tra xem một đối tượng `CheckBox` hoặc `RadioButton` có đang được chọn hay không?",
           "images": []
         },
         "choices": [
@@ -2690,7 +2690,7 @@
         "id": "bank-16495",
         "type": "single_choice",
         "question": {
-          "text": "Lớp RadioGroup được sử dụng để làm gì?",
+          "text": "Lớp `RadioGroup` được sử dụng để làm gì?",
           "images": []
         },
         "choices": [
@@ -2832,7 +2832,7 @@
         "id": "bank-15383",
         "type": "single_choice",
         "question": {
-          "text": "Để thiết lập đối tượng EditText cho phép nhập dữ liệu mật khẩu (không hiển thị ký tự lên) giá trị thuộc tính inputType được chọn là gì?",
+          "text": "Để thiết lập đối tượng `EditText` cho phép nhập dữ liệu mật khẩu (không hiển thị ký tự lên) giá trị thuộc tính `inputType` được chọn là gì?",
           "images": []
         },
         "choices": [
@@ -2922,7 +2922,7 @@
         "id": "bank-16497",
         "type": "single_choice",
         "question": {
-          "text": "Phương thức nào được sử dụng để đóng 1 dialog đang mở?",
+          "text": "Phương thức nào được sử dụng để đóng 1 `Dialog` đang mở?",
           "images": []
         },
         "choices": [
@@ -2969,7 +2969,7 @@
         "id": "bank-16498",
         "type": "single_choice",
         "question": {
-          "text": "Phương thức nào được sử dụng để hiển thị một đối tượng dialog?",
+          "text": "Phương thức nào được sử dụng để hiển thị một đối tượng `Dialog`?",
           "images": []
         },
         "choices": [
@@ -3016,7 +3016,7 @@
         "id": "bank-15391",
         "type": "single_choice",
         "question": {
-          "text": "Phương thức onCreateOptionMenu() được sử dụng khi tạo menu dạng nào sau đây?",
+          "text": "Phương thức `onCreateOptionsMenu()` được sử dụng khi tạo menu dạng nào sau đây?",
           "images": []
         },
         "choices": [
@@ -3063,7 +3063,7 @@
         "id": "bank-15394",
         "type": "single_choice",
         "question": {
-          "text": "Đối tượng Spinner có thể được sử dụng thay thế cho đối tượng nào?",
+          "text": "Đối tượng `Spinner` có thể được sử dụng thay thế cho đối tượng nào?",
           "images": []
         },
         "choices": [
@@ -3110,7 +3110,7 @@
         "id": "bank-15407",
         "type": "single_choice",
         "question": {
-          "text": "Activity hiện tại của ứng dụng đang mở sẽ được tạo lại (phương thức onCreate() được gọi lại) khi nào?",
+          "text": "Activity hiện tại của ứng dụng đang mở sẽ được tạo lại (phương thức `onCreate()` được gọi lại) khi nào?",
           "images": []
         },
         "choices": [
@@ -3158,7 +3158,7 @@
         "id": "bank-15412",
         "type": "single_choice",
         "question": {
-          "text": "Phương thức callback nào được sử dụng để xử lý kết quả khi mở activity bằng phương thức startActivityForResult()?",
+          "text": "Phương thức callback nào được sử dụng để xử lý kết quả khi mở activity bằng phương thức `startActivityForResult()`?",
           "images": []
         },
         "choices": [
@@ -3302,7 +3302,7 @@
         "id": "bank-15415",
         "type": "single_choice",
         "question": {
-          "text": "Phương thức nào được sử dụng để thiết lập kết quả trả về của activity khi được mở bằng phương thức startActivityForResult()?",
+          "text": "Phương thức nào được sử dụng để thiết lập kết quả trả về của activity khi được mở bằng phương thức `startActivityForResult()`?",
           "images": []
         },
         "choices": [
@@ -3445,7 +3445,7 @@
         "id": "bank-15403",
         "type": "single_choice",
         "question": {
-          "text": "Đoạn chương trình sau được sử dụng để gửi tin nhắn đến một số điện thoại, hãy điền phần còn thiếu vào ô trống: Intent sendIntent = new Intent([ ], Uri.parse(\"sms:0987654321\")); sendIntent.putExtra(\"sms_body\", \"Hello!\"); startActivity(sendIntent);",
+          "text": "Đoạn chương trình sau được sử dụng để gửi tin nhắn đến một số điện thoại, hãy điền phần còn thiếu vào ô trống `[ ]`:\n\n```java\nIntent sendIntent = new Intent([ ], Uri.parse(\"sms:0987654321\"));\nsendIntent.putExtra(\"sms_body\", \"Hello!\");\nstartActivity(sendIntent);\n```",
           "images": []
         },
         "choices": [
@@ -3492,7 +3492,7 @@
         "id": "bank-15404",
         "type": "single_choice",
         "question": {
-          "text": "Đoạn chương trình sau được sử dụng để mở một trang web, hãy điền từ còn thiếu vào ô trống: [ ] address = [ ].parse(\"https://www.hust.edu.vn\"); Intent it = new Intent(Intent.ACTION_VIEW, address); startActivity(it);",
+          "text": "Đoạn chương trình sau được sử dụng để mở một trang web, hãy điền từ còn thiếu vào các ô trống `[ ]`:\n\n```java\n[ ] address = [ ].parse(\"https://www.hust.edu.vn\");\nIntent it = new Intent(Intent.ACTION_VIEW, address);\nstartActivity(it);\n```",
           "images": []
         },
         "choices": [
@@ -3539,7 +3539,7 @@
         "id": "bank-16489",
         "type": "single_choice",
         "question": {
-          "text": "Phát biểu nào sau đây và lớp ScrollView là không chính xác?",
+          "text": "Phát biểu nào sau đây và lớp `ScrollView` là không chính xác?",
           "images": []
         },
         "choices": [
@@ -4201,7 +4201,7 @@
         "id": "goog-004",
         "type": "single_choice",
         "question": {
-          "text": "Mục đích của tệp activity_main.xml trong dự án bạn đã tạo là gì?",
+          "text": "Mục đích của tệp `activity_main.xml` trong dự án bạn đã tạo là gì?",
           "images": []
         },
         "choices": [
@@ -4250,7 +4250,7 @@
         "id": "goog-005",
         "type": "single_choice",
         "question": {
-          "text": "Đúng hay sai? Mỗi lớp MainActivity trong Android phải có một hàm main().",
+          "text": "Đúng hay sai? Mỗi lớp `MainActivity` trong Android phải có một hàm `main()`.",
           "images": []
         },
         "choices": [
@@ -4715,7 +4715,7 @@
         "id": "goog-022",
         "type": "single_choice",
         "question": {
-          "text": "Câu lệnh \"when\" trong Kotlin có tương tự như câu lệnh trong các ngôn ngữ lập trình khác?",
+          "text": "Câu lệnh \"`when`\" trong Kotlin có tương tự như câu lệnh trong các ngôn ngữ lập trình khác?",
           "images": []
         },
         "choices": [
@@ -4757,7 +4757,7 @@
         "id": "goog-023",
         "type": "single_choice",
         "question": {
-          "text": "Câu nào sau đây thể hiện cách khai báo đúng các đối tượng cho lớp Book trong Kotlin?",
+          "text": "Câu nào sau đây thể hiện cách khai báo đúng các đối tượng cho lớp `Book` trong Kotlin?",
           "images": []
         },
         "choices": [
@@ -4890,7 +4890,7 @@
         "id": "goog-026",
         "type": "single_choice",
         "question": {
-          "text": "Phương thức nào làm thay đổi tài nguyên hình ảnh của ImageView trong mã Kotlin?",
+          "text": "Phương thức nào làm thay đổi tài nguyên hình ảnh của `ImageView` trong mã Kotlin?",
           "images": []
         },
         "choices": [
@@ -5028,7 +5028,7 @@
         "id": "goog-029",
         "type": "single_choice",
         "question": {
-          "text": "EditText là lớp con của lớp nào?",
+          "text": "`EditText` là lớp con của lớp nào?",
           "images": []
         },
         "choices": [
@@ -5076,7 +5076,7 @@
         "id": "goog-030",
         "type": "single_choice",
         "question": {
-          "text": "Trong ConstraintLayout, lựa chọn nào sau đây mô tả các quy tắc ràng buộc cần thiết để duy trì chế độ xem trong thời gian chạy?",
+          "text": "Trong `ConstraintLayout`, lựa chọn nào sau đây mô tả các quy tắc ràng buộc cần thiết để duy trì chế độ xem trong thời gian chạy?",
           "images": []
         },
         "choices": [
@@ -5124,7 +5124,7 @@
         "id": "goog-031",
         "type": "single_choice",
         "question": {
-          "text": "Phương thức onCreate() trong hoạt động của bạn nhận được Bundle có dữ liệu trong các trường hợp nào (tức là Bundle không phải null)?",
+          "text": "Phương thức `onCreate()` trong hoạt động của bạn nhận được `Bundle` có dữ liệu trong các trường hợp nào (tức là `Bundle` không phải null)?",
           "images": []
         },
         "choices": [
@@ -5341,7 +5341,7 @@
         "id": "slide-l1-q06",
         "type": "single_choice",
         "question": {
-          "text": "Cú pháp nào sau đây tạo một danh sách ArrayList trong Kotlin đúng cách?",
+          "text": "Cú pháp nào sau đây tạo một danh sách `ArrayList` trong Kotlin đúng cách?",
           "images": []
         },
         "choices": [
