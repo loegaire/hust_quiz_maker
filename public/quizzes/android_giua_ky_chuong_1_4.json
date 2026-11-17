@@ -1005,7 +1005,7 @@
         "id": "bank-1942",
         "type": "single_choice",
         "question": {
-          "text": "Trạng thái nào của Activity mà activity không được focus nhưng vẫn được nhìn thấy trên màn hình?",
+          "text": "Trạng thái nào của `Activity` mà activity không được focus nhưng vẫn được nhìn thấy trên màn hình?",
           "images": []
         },
         "choices": [
@@ -1149,7 +1149,7 @@
         "id": "bank-1945",
         "type": "single_choice",
         "question": {
-          "text": "Bạn sử dụng Intent action nào để mở trang web?",
+          "text": "Bạn sử dụng `Intent` action nào để mở trang web?",
           "images": []
         },
         "choices": [
@@ -1480,7 +1480,7 @@
         "id": "bank-1957",
         "type": "single_choice",
         "question": {
-          "text": "Muốn thiết lập Activity nào chạy đầu tiên thì thiết lập ở đâu?",
+          "text": "Muốn thiết lập `Activity` nào chạy đầu tiên thì thiết lập ở đâu?",
           "images": []
         },
         "choices": [
@@ -2084,19 +2084,19 @@
         "choices": [
           {
             "id": "A",
-            "text": "<uses-permission android:name=\"android.permission.ACCESS_MOCK_LOCATION\"/>;"
+            "text": "`<uses-permission android:name=\"android.permission.ACCESS_MOCK_LOCATION\"/>;`"
           },
           {
             "id": "B",
-            "text": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />;"
+            "text": "`<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />;`"
           },
           {
             "id": "C",
-            "text": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />"
+            "text": "`<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />`"
           },
           {
             "id": "D",
-            "text": "<uses-permission android:name=\"android.permission.ACCESS_GPS_STATE\" />"
+            "text": "`<uses-permission android:name=\"android.permission.ACCESS_GPS_STATE\" />`"
           }
         ],
         "answer": {
@@ -3110,7 +3110,7 @@
         "id": "bank-15407",
         "type": "single_choice",
         "question": {
-          "text": "Activity hiện tại của ứng dụng đang mở sẽ được tạo lại (phương thức `onCreate()` được gọi lại) khi nào?",
+          "text": "`Activity` hiện tại của ứng dụng đang mở sẽ được tạo lại (phương thức `onCreate()` được gọi lại) khi nào?",
           "images": []
         },
         "choices": [
@@ -4841,7 +4841,7 @@
         "id": "goog-025",
         "type": "single_choice",
         "question": {
-          "text": "Phương thức nào trên Activity làm tăng cường bố cục của ứng dụng và làm xuất hiện các thành phần hiển thị dưới dạng đối tượng?",
+          "text": "Phương thức nào trên `Activity` làm tăng cường bố cục của ứng dụng và làm xuất hiện các thành phần hiển thị dưới dạng đối tượng?",
           "images": []
         },
         "choices": [
@@ -5712,6 +5712,1739 @@
           "android",
           "accessibility",
           "touch-target",
+          "chuong-4"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-038",
+        "type": "single_choice",
+        "question": {
+          "text": "Chương trình (program) là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Một tác vụ cụ thể mà máy tính thực hiện độc lập"
+          },
+          {
+            "id": "B",
+            "text": "Một công cụ hoặc phần mềm hỗ trợ viết mã nguồn Kotlin"
+          },
+          {
+            "id": "C",
+            "text": "Một loạt hướng dẫn mà một hệ thống máy tính thực thi để hoàn thành một số thao tác"
+          },
+          {
+            "id": "D",
+            "text": "Một tập hợp hướng dẫn cố định chỉ dùng để yêu cầu máy tính in nội dung ra màn hình"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Một loạt hướng dẫn mà một hệ thống máy tính thực thi để hoàn thành một số thao tác\n\n### Lời giải từng bước\n\nTheo định nghĩa nền tảng về khoa học máy tính và lập trình Kotlin của Google, một chương trình (program) là một chuỗi các chỉ thị/hướng dẫn mà hệ thống máy tính thực thi tuần tự hoặc có điều khiển để hoàn thành một chuỗi thao tác hay bài toán cụ thể.\n\n### Phân tích từng lựa chọn\n\n- **A. Một tác vụ cụ thể — ❌ Sai.** Tác vụ (task) chỉ là một công việc đơn lẻ, không phải định nghĩa của cả chương trình.\n- **B. Một công cụ giúp bạn viết mã Kotlin — ❌ Sai.** Đây là định nghĩa của trình soạn thảo mã nguồn hoặc IDE (như Android Studio, IntelliJ IDEA), không phải chương trình nói chung.\n- **C. Một loạt hướng dẫn mà một hệ thống máy tính thực thi để hoàn thành một số thao tác — ✅ Đúng.** Định nghĩa chuẩn xác của Google về chương trình máy tính.\n- **D. Một tập hợp hướng dẫn cố định chỉ dùng để in — ❌ Sai.** In văn bản chỉ là một ví dụ minh họa đơn giản, không đại diện cho bản chất chương trình.\n\n### Điểm dễ nhầm\n\nTránh nhầm lẫn giữa công cụ phát triển (IDE) và chương trình máy tính (program).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 1.2 Giới thiệu Android.pdf` (Slide 3: *Tổng quan về ngôn ngữ Kotlin và cấu trúc chương trình cơ bản*)\n- **Tài liệu tham khảo web:** https://developer.android.com/courses/pathways/android-basics-kotlin-one\n- **Android - quiz Google.pdf trang 1:** Bài kiểm tra “android-basics-kotlin-one”, Câu hỏi 1, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-1"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-039",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Bạn cần làm điều nào sau đây để tạo một chương trình Kotlin có thể in một dòng văn bản? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Viết nhận xét mô tả chức năng của chương trình"
+          },
+          {
+            "id": "B",
+            "text": "Khai báo một hàm `main()` làm điểm khởi đầu"
+          },
+          {
+            "id": "C",
+            "text": "Đặt dấu ngoặc nhọn `{}` xung quanh các chỉ thị/câu lệnh dành cho hệ thống"
+          },
+          {
+            "id": "D",
+            "text": "Thực hiện một lệnh gọi đến hàm `print()` hoặc `println()`"
+          },
+          {
+            "id": "E",
+            "text": "Sử dụng một câu lệnh vòng lặp `repeat()`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B, C, D.**\n\n### Lời giải từng bước\n\nĐể tạo một chương trình Kotlin tối thiểu có thể in văn bản ra console:\n1. Bắt buộc phải có hàm khởi điểm `fun main()` (hoặc `fun main(args: Array<String>)`).\n2. Phần thân hàm phải được bao bọc bởi cặp dấu ngoặc nhọn `{}`.\n3. Cần gọi hàm xuất dữ liệu `print()` hoặc `println()` để hiển thị dòng văn bản.\nNhận xét (comment) và vòng lặp `repeat()` là tùy chọn, không bắt buộc để in văn bản.\n\n### Phân tích từng lựa chọn\n\n- **A. Nhận xét mô tả chức năng — ❌ Không chọn.** Nhận xét giúp người đọc hiểu mã nhưng trình biên dịch bỏ qua, không bắt buộc để chương trình chạy.\n- **B. Khai báo hàm `main()` — ✅ Đúng.** Điểm khởi chạy bắt buộc của chương trình Kotlin.\n- **C. Dấu ngoặc nhọn `{}` — ✅ Đúng.** Xác định khối lệnh (body) của hàm.\n- **D. Lệnh gọi đến `print()` hoặc `println()` — ✅ Đúng.** Lệnh trực tiếp xuất dữ liệu văn bản ra màn hình console.\n- **E. Câu lệnh `repeat()` — ❌ Không chọn.** Chỉ dùng khi muốn lặp lại thao tác, không bắt buộc để in một dòng văn bản.\n\n### Điểm dễ nhầm\n\nNhiều người nghĩ chỉ cần gọi `println()`, nhưng nếu không nằm trong hàm `main()` và khối `{}` thì chương trình Kotlin độc lập không thể biên dịch thực thi.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 1.2 Giới thiệu Android.pdf` (Slide 4: *Cấu trúc hàm main() và xuất dữ liệu với println()*)\n- **Tài liệu tham khảo web:** https://developer.android.com/courses/pathways/android-basics-kotlin-one\n- **Android - quiz Google.pdf trang 2:** Bài kiểm tra “android-basics-kotlin-one”, Câu hỏi 3, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-1"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-040",
+        "type": "single_choice",
+        "question": {
+          "text": "Bạn nghĩ mã Kotlin sau đây sẽ có tác dụng gì?\n\n```kotlin\nfun main(args: Array<String>) {\n    println(\"Hello, world!\")\n    println(\"It's a sunny and warm day!\")\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "In 1 dòng văn bản duy nhất"
+          },
+          {
+            "id": "B",
+            "text": "In 2 dòng văn bản liên tiếp"
+          },
+          {
+            "id": "C",
+            "text": "In 3 dòng văn bản"
+          },
+          {
+            "id": "D",
+            "text": "In 2 dòng văn bản được phân tách bằng một dòng trống"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** In 2 dòng văn bản liên tiếp\n\n### Lời giải từng bước\n\nHàm `println()` in chuỗi ký tự được truyền vào và tự động chèn một ký tự xuống dòng (`\\n`) ở cuối chuỗi. Ở đây có đúng 2 lệnh `println()`, do đó mã sẽ in ra 2 dòng văn bản:\n- Dòng 1: `Hello, world!`\n- Dòng 2: `It's a sunny and warm day!`\nKhông có lệnh `println()` rỗng nào ở giữa nên không có dòng trống phân tách.\n\n### Phân tích từng lựa chọn\n\n- **A. In 1 dòng văn bản — ❌ Sai.** Có 2 lệnh `println()` riêng biệt.\n- **B. In 2 dòng văn bản — ✅ Đúng.** Đúng chính xác hành vi của hai lời gọi `println()`.\n- **C. In 3 dòng văn bản — ❌ Sai.** Không có câu lệnh thứ ba.\n- **D. In 2 dòng văn bản phân tách bằng một dòng trống — ❌ Sai.** Để có dòng trống ở giữa, cần thêm một lệnh `println()` không tham số ở giữa hai dòng.\n\n### Điểm dễ nhầm\n\nPhân biệt giữa `print()` (không xuống dòng) và `println()` (tự động xuống dòng sau khi in).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 1.2 Giới thiệu Android.pdf` (Slide 4: *Xuất dữ liệu console trong Kotlin*)\n- **Tài liệu tham khảo web:** https://developer.android.com/courses/pathways/android-basics-kotlin-one\n- **Android - quiz Google.pdf trang 2:** Bài kiểm tra “android-basics-kotlin-one”, Câu hỏi 4, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-1"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-041",
+        "type": "single_choice",
+        "question": {
+          "text": "Bạn sẽ sửa đổi hàm `main()` sau đây như thế nào để in ra bánh sinh nhật 6 lớp nhân dịp sinh nhật lần thứ 4 của ai đó?\n\n```kotlin\nfun main() {\n    val age = 24\n    val layers = 5\n    printCakeCandles(age)\n    printCakeTop(age)\n    printCakeBottom(age, layers)\n}\n```",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đặt `age` thành 6, đặt `layers` thành 4"
+          },
+          {
+            "id": "B",
+            "text": "Đặt `age` thành `\"4\"`, đặt `layers` thành `\"6\"`"
+          },
+          {
+            "id": "C",
+            "text": "Đặt `age` thành 4, đặt `layers` thành 6"
+          },
+          {
+            "id": "D",
+            "text": "Giữ nguyên trạng mã nguồn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Đặt `age` thành 4, đặt `layers` thành 6\n\n### Lời giải từng bước\n\n- Sinh nhật lần thứ 4 tương ứng với số tuổi `age = 4` (truyền vào số nến `printCakeCandles`).\n- Bánh 6 lớp tương ứng với số lớp bánh `layers = 6` (truyền vào `printCakeBottom`).\n- Cả `age` và `layers` đều yêu cầu kiểu số nguyên `Int`, nên phải gán số nguyên trực tiếp `val age = 4` và `val layers = 6`, không dùng nháy kép kiểu chuỗi (`String`).\n\n### Phân tích từng lựa chọn\n\n- **A. age thành 6, layers thành 4 — ❌ Sai.** Bị đảo ngược giữa số tuổi và số lớp bánh.\n- **B. age thành \"4\", layers thành \"6\" — ❌ Sai.** Đặt trong dấu nháy kép biến chúng thành kiểu `String`, gây lỗi không khớp kiểu dữ liệu (`Type mismatch: inferred type is String but Int was expected`).\n- **C. age thành 4, layers thành 6 — ✅ Đúng.** Đúng giá trị số nguyên theo yêu cầu bài toán.\n- **D. Giữ nguyên trạng mã — ❌ Sai.** Mã ban đầu in bánh 5 lớp cho tuổi 24.\n\n### Điểm dễ nhầm\n\nChú ý không để nhầm kiểu dữ liệu `Int` (viết số thuần) sang `String` (viết trong dấu nháy kép `\"\"`).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 1 - Kotlin basics.pptx` (Slide 14: *Khai báo biến với val/var và các kiểu dữ liệu cơ bản Int, String*)\n- **Tài liệu tham khảo web:** https://developer.android.com/courses/pathways/android-basics-kotlin-one\n- **Android - quiz Google.pdf trang 2-3:** Bài kiểm tra “android-basics-kotlin-one”, Câu hỏi 5, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-1"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-042",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho khai báo hàm trong Kotlin sau đây:\n\n```kotlin\nfun createMessage(name: String, location: String, age: Int) {\n    println(\"My name is \\${name}. I am from \\${location}, and I am \\${age} years old.\")\n}\n```\n\nTuỳ chọn nào sau đây gọi hàm đúng cách và truyền các đối số đầu vào hợp lệ?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`createMessage(\"Amy\", \"Australia\", 20)`"
+          },
+          {
+            "id": "B",
+            "text": "`createMessage(\"Evan\", England, 9)`"
+          },
+          {
+            "id": "C",
+            "text": "`createmessage(\"Tom\", \"Thailand\", \"40\")`"
+          },
+          {
+            "id": "D",
+            "text": "`createMessage(Heather, \"Haiti\", 7)`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `createMessage(\"Amy\", \"Australia\", 20)`\n\n### Lời giải từng bước\n\nHàm `createMessage` có chữ ký: `(name: String, location: String, age: Int)`:\n- Tham số 1 (`name`) yêu cầu một giá trị chuỗi `String` -> hợp lệ khi đặt trong dấu ngoặc kép: `\"Amy\"`.\n- Tham số 2 (`location`) yêu cầu một giá trị chuỗi `String` -> hợp lệ: `\"Australia\"`.\n- Tham số 3 (`age`) yêu cầu một số nguyên `Int` -> hợp lệ: `20`.\n\n### Phân tích từng lựa chọn\n\n- **A. `createMessage(\"Amy\", \"Australia\", 20)` — ✅ Đúng.** Tên hàm viết hoa chữ cái chuẩn (`createMessage`) và các kiểu đối số hoàn toàn trùng khớp với định nghĩa hàm.\n- **B. `createMessage(\"Evan\", England, 9)` — ❌ Sai.** `England` không nằm trong dấu ngoặc kép `\"\"`, trình biên dịch sẽ tìm kiếm một biến tên là `England` và báo lỗi `Unresolved reference`.\n- **C. `createmessage(\"Tom\", \"Thailand\", \"40\")` — ❌ Sai.** Tên hàm bị viết sai chính tả (`createmessage` chữ m thường thay vì `createMessage`), đồng thời tham số `age` nhận `\"40\"` (String) thay vì `40` (Int).\n- **D. `createMessage(Heather, \"Haiti\", 7)` — ❌ Sai.** `Heather` không được đặt trong dấu ngoặc kép.\n\n### Điểm dễ nhầm\n\nKotlin phân biệt chữ hoa - chữ thường (case-sensitive) đối với định danh hàm và bắt buộc chuỗi ký tự phải được bao quanh bởi dấu ngoặc kép.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 2 - Functions.pptx` (Slide 8: *Định nghĩa hàm, danh sách tham số và truyền đối số trong Kotlin*)\n- **Tài liệu tham khảo web:** https://developer.android.com/courses/pathways/android-basics-kotlin-one\n- **Android - quiz Google.pdf trang 3:** Bài kiểm tra “android-basics-kotlin-one”, Câu hỏi 6, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-2"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-043",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Sử dụng Android Studio để phát triển ứng dụng Android mang lại những ưu điểm nào sau đây? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Có thể giúp bạn tránh lỗi chính tả và phát hiện sớm các lỗi khác trong mã nguồn."
+          },
+          {
+            "id": "B",
+            "text": "Đi kèm với thiết bị ảo (Android Virtual Device / Emulator) với khả năng chạy và kiểm thử ứng dụng của bạn."
+          },
+          {
+            "id": "C",
+            "text": "Có thể cho bạn xem trước theo thời gian thực (Design Preview / Layout Editor) giao diện của ứng dụng trong khi lập trình."
+          },
+          {
+            "id": "D",
+            "text": "Có thể tự động dịch ứng dụng của bạn sang các ngôn ngữ khác mà không cần cấu hình."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, B, C.**\n\n### Lời giải từng bước\n\nAndroid Studio là môi trường phát triển tích hợp (IDE) chính thức của Google cho Android, tích hợp sẵn:\n1. Công cụ phân tích tĩnh (Lint), tự động hoàn thành mã (auto-completion) giúp hạn chế lỗi chính tả cú pháp và logic.\n2. Trình giả lập thiết bị Android (AVD Emulator) cho phép chạy ứng dụng trên máy ảo mà không cần thiết bị vật lý.\n3. Bộ công cụ Layout Editor / Compose Preview hiển thị tức thì giao diện đồ họa khi lập trình.\nAndroid Studio không thể tự động dịch văn bản ứng dụng sang các ngôn ngữ khác (việc dịch bản địa hóa được quản lý thủ công thông qua Translations Editor và các tệp `strings.xml`).\n\n### Phân tích từng lựa chọn\n\n- **A. Tránh lỗi chính tả và phát hiện lỗi — ✅ Đúng.** Tính năng nhắc mã và kiểm tra lỗi thời gian thực.\n- **B. Đi kèm thiết bị ảo (Emulator) — ✅ Đúng.** Android Studio đi kèm AVD Manager để tạo và chạy trình mô phỏng.\n- **C. Xem trước giao diện thời gian thực — ✅ Đúng.** Layout Editor và Compose Preview cung cấp bản xem trước trực quan.\n- **D. Tự động dịch ứng dụng — ❌ Không chọn.** Nhà phát triển phải tự cung cấp nội dung bản dịch hoặc sử dụng dịch vụ dịch thuật bên ngoài, IDE không tự động dịch ngôn ngữ con người.\n\n### Điểm dễ nhầm\n\nAndroid Studio có công cụ hỗ trợ quản lý tệp dịch (Translations Editor) nhưng không tự dịch nội dung văn bản cho bạn.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 4: *Môi trường phát triển Android Studio và các công cụ hỗ trợ*)\n- **Tài liệu tham khảo web:** https://developer.android.com/studio/intro\n- **Android - quiz Google.pdf trang 5:** Bài kiểm tra “android-basics-kotlin-two”, Câu hỏi 2, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-044",
+        "type": "single_choice",
+        "question": {
+          "text": "Mục đích chính của việc sử dụng thiết bị ảo Android (Android Virtual Device / Emulator) trong Android Studio là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hiển thị nhiều thông báo lỗi chi tiết hơn cho người dùng cuối"
+          },
+          {
+            "id": "B",
+            "text": "Tự động sửa lỗi mã nguồn của ứng dụng trong môi trường an toàn"
+          },
+          {
+            "id": "C",
+            "text": "Thử nghiệm và chạy ứng dụng của bạn trên một thiết bị mô phỏng mà không cần có thiết bị phần cứng thực tế"
+          },
+          {
+            "id": "D",
+            "text": "Xem ứng dụng Android của bạn hiển thị như thế nào bên trong trình duyệt web máy tính"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Thử nghiệm và chạy ứng dụng của bạn trên một thiết bị mô phỏng mà không cần có thiết bị phần cứng thực tế\n\n### Lời giải từng bước\n\nAndroid Emulator mô phỏng các thiết bị Android hoàn chỉnh trên máy tính của bạn, giúp bạn xây dựng và thử nghiệm các ứng dụng Android trên nhiều loại thiết bị, kích thước màn hình và cấp API khác nhau mà không bắt buộc phải sở hữu thiết bị vật lý thực tế.\n\n### Phân tích từng lựa chọn\n\n- **A. Hiển thị thông báo lỗi cho người dùng cuối — ❌ Sai.** Trình mô phỏng dành cho lập trình viên thử nghiệm, không liên quan đến trải nghiệm người dùng cuối.\n- **B. Tự động sửa lỗi mã nguồn — ❌ Sai.** Emulator chỉ thực thi mã, không tự động sửa lỗi.\n- **C. Thử nghiệm trên thiết bị mô phỏng không cần phần cứng thực — ✅ Đúng.** Mục đích cốt lõi của Emulator.\n- **D. Xem hiển thị trong trình duyệt web — ❌ Sai.** Emulator chạy hệ điều hành Android hoàn chỉnh, không phải là trình duyệt web.\n\n### Điểm dễ nhầm\n\nEmulator chạy toàn bộ ngăn xếp hệ điều hành Android trên máy ảo (sử dụng QEMU/KVM), khác với việc chạy giả lập trên nền web.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 7: *Cấu hình và sử dụng Android Virtual Device (AVD)*)\n- **Tài liệu tham khảo web:** https://developer.android.com/studio/run/emulator\n- **Android - quiz Google.pdf trang 6:** Bài kiểm tra “android-basics-kotlin-two”, Câu hỏi 4, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-045",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Trong Android Studio, việc sử dụng mẫu dự án (Project Template, ví dụ `Empty Activity`) mang lại những ưu điểm nào sau đây? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Giúp Android Studio tải các gói tệp phụ thuộc xuống nhanh hơn."
+          },
+          {
+            "id": "B",
+            "text": "Giúp bắt đầu xây dựng một ứng dụng mới nhanh hơn."
+          },
+          {
+            "id": "C",
+            "text": "Cung cấp cấu trúc dự án chuẩn mực, tuân theo các phương pháp hay nhất (best practices)."
+          },
+          {
+            "id": "D",
+            "text": "Giúp hạn chế lỗi trong quá trình khởi tạo ứng dụng mới bằng cách điền sẵn một số mã nguồn mẫu cần thiết."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B, C, D.**\n\n### Lời giải từng bước\n\nCác mẫu dự án (Project Templates) trong Android Studio cung cấp bộ khung ứng dụng hoàn chỉnh ban đầu:\n1. Tiết kiệm thời gian thiết lập ban đầu (bắt đầu nhanh hơn).\n2. Tạo sẵn cấu trúc thư mục, tệp cấu hình Gradle và tệp kê khai `AndroidManifest.xml` tuân theo chuẩn khuyến nghị của Google.\n3. Khởi tạo sẵn một Activity mẫu với các phương thức vòng đời cơ bản, tránh các lỗi cú pháp khi khởi tạo thủ công.\nTốc độ tải tệp phụ thuộc (download dependencies) phụ thuộc vào đường truyền mạng và máy chủ, mẫu dự án không làm mạng nhanh hơn.\n\n### Phân tích từng lựa chọn\n\n- **A. Tải tệp xuống nhanh hơn — ❌ Không chọn.** Mẫu dự án không can thiệp vào tốc độ tải tệp mạng.\n- **B. Bắt đầu xây dựng nhanh hơn — ✅ Đúng.** Tiết kiệm công sức tạo boilerplate code.\n- **C. Cung cấp cấu trúc tuân theo best practices — ✅ Đúng.** Cấu trúc thư mục mã nguồn và tài nguyên được định chuẩn.\n- **D. Điền sẵn mã ứng dụng giúp ít lỗi — ✅ Đúng.** Mã khởi tạo mẫu đảm bảo ứng dụng có thể build và chạy ngay lập tức.\n\n### Điểm dễ nhầm\n\nTemplate không làm tăng tốc độ tải mạng của Gradle mà chỉ sinh sẵn cấu trúc mã nguồn.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 8: *Khởi tạo dự án mới với Empty Activity Template*)\n- **Tài liệu tham khảo web:** https://developer.android.com/studio/projects/create-project\n- **Android - quiz Google.pdf trang 6-7:** Bài kiểm tra “android-basics-kotlin-two”, Câu hỏi 5, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-046",
+        "type": "single_choice",
+        "question": {
+          "text": "Làm cách nào để bạn tạo một dự án mới trong Android Studio?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đăng xuất khỏi Android Studio, rồi chuyển đến thư mục cài đặt trên đĩa cứng để tìm tệp cấu hình"
+          },
+          {
+            "id": "B",
+            "text": "Nếu đã có sẵn một dự án đang mở, chọn `File` > `New` > `New Project` trong thanh bảng chọn của Android Studio"
+          },
+          {
+            "id": "C",
+            "text": "Trong cửa sổ chào mừng “Welcome to Android Studio”, nhấp vào nút “New Project” (hoặc “Start a new Android Studio project”)"
+          },
+          {
+            "id": "D",
+            "text": "Tạo một tệp văn bản mới trên máy tính và đặt tiêu đề là `New Android Studio Project`"
+          },
+          {
+            "id": "E",
+            "text": "Cả B và C đều là cách hợp lệ để tạo dự án mới trong Android Studio"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "E"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn E.** Cả B và C đều là cách hợp lệ để tạo dự án mới trong Android Studio\n\n### Lời giải từng bước\n\nTrong Android Studio:\n- Nếu chưa mở dự án nào: Ở màn hình chào mừng (Welcome Window), bạn có thể nhấp chuột vào nút **New Project**.\n- Nếu đang mở một dự án khác: Bạn có thể vào thanh menu chính: **File > New > New Project...**.\nCả hai cách trên đều mở ra trình hướng dẫn tạo dự án (Project Wizard).\n\n### Phân tích từng lựa chọn\n\n- **A. Đăng xuất khỏi Android Studio — ❌ Sai.** Hoàn toàn vô lý.\n- **B. File > New > New Project — ❌ Đúng một phần.** Là cách chính xác khi đang trong giao diện dự án.\n- **C. Welcome Window > New Project — ❌ Đúng một phần.** Là cách chính xác khi khởi động Android Studio.\n- **D. Tạo tệp văn bản thủ công — ❌ Sai.** Không thể tạo một dự án Android hợp lệ bằng cách tạo file văn bản trống.\n- **E. Cả B và C đều là cách tạo dự án mới — ✅ Đúng.** Kết hợp cả hai phương thức chuẩn của Android Studio.\n\n### Điểm dễ nhầm\n\nLưu ý các câu hỏi trắc nghiệm có lựa chọn gộp “Cả B và C đều đúng”.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 5: *Tạo dự án Android mới trong Android Studio*)\n- **Tài liệu tham khảo web:** https://developer.android.com/studio/projects/create-project\n- **Android - quiz Google.pdf trang 7:** Bài kiểm tra “android-basics-kotlin-two”, Câu hỏi 6, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-047",
+        "type": "single_choice",
+        "question": {
+          "text": "Phần tử nào sau đây được xem là một Thành phần hiển thị (`View`) trong giao diện ứng dụng Android?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Một hình ảnh hiển thị trên màn hình (`ImageView`)"
+          },
+          {
+            "id": "B",
+            "text": "Một nút bấm có thể tương tác nhấn chuột (`Button`)"
+          },
+          {
+            "id": "C",
+            "text": "Một đoạn văn bản hiển thị thông tin (`TextView`)"
+          },
+          {
+            "id": "D",
+            "text": "Tất cả các câu trên đều đúng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Tất cả các câu trên đều đúng\n\n### Lời giải từng bước\n\nTrong Android, lớp `android.view.View` là lớp cơ sở cho tất cả các thành phần giao diện người dùng (UI components / widgets). `ImageView`, `Button`, và `TextView` đều kế thừa trực tiếp hoặc gián tiếp từ `View`, do đó tất cả đều là các thành phần hiển thị (`View`).\n\n### Phân tích từng lựa chọn\n\n- **A. ImageView — ❌ Đúng một phần.** Kế thừa từ `View`.\n- **B. Button — ❌ Đúng một phần.** Kế thừa từ `TextView` -> `View`.\n- **C. TextView — ❌ Đúng một phần.** Kế thừa từ `View`.\n- **D. Tất cả các câu trên — ✅ Đúng.** Bao hàm toàn bộ các thành phần hiển thị nêu trên.\n\n### Điểm dễ nhầm\n\nMọi tiện ích giao diện người dùng tương tác hoặc hiển thị thông tin trên Android đều là con của lớp `View`.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 15: *Cấu trúc cây giao diện View và ViewGroup*)\n- **Tài liệu tham khảo web:** https://developer.android.com/reference/android/view/View\n- **Android - quiz Google.pdf trang 9:** Bài kiểm tra “android-basics-kotlin-three”, Câu hỏi 1, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-048",
+        "type": "single_choice",
+        "question": {
+          "text": "Mục đích chính của Nhóm thành phần hiển thị (`ViewGroup`) trong Android là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chỉ dùng để nhóm các thành phần hiển thị văn bản lại với nhau trên cùng một dòng"
+          },
+          {
+            "id": "B",
+            "text": "Đóng vai trò như một vùng chứa (container) dành cho các đối tượng `View` và chịu trách nhiệm định vị, sắp xếp bố cục các thành phần hiển thị con bên trong"
+          },
+          {
+            "id": "C",
+            "text": "Bắt buộc phải có để thiết lập màu nền và hình nền cho ứng dụng"
+          },
+          {
+            "id": "D",
+            "text": "Là thành phần dùng để lưu trữ dữ liệu người dùng tạm thời xuống bộ nhớ"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Đóng vai trò như một vùng chứa (container) dành cho các đối tượng `View` và chịu trách nhiệm định vị, sắp xếp bố cục các thành phần hiển thị con bên trong\n\n### Lời giải từng bước\n\n`ViewGroup` là một lớp con đặc biệt của `View`. Nó đóng vai trò là lớp cơ sở cho các bố cục (layouts) và vùng chứa (containers). Trách nhiệm chính của `ViewGroup` là chứa các `View` con và xác định vị trí, kích thước hiển thị của chúng trên màn hình theo quy tắc của layout tương ứng.\n\n### Phân tích từng lựa chọn\n\n- **A. Chỉ nhóm văn bản — ❌ Sai.** ViewGroup chứa được mọi loại View và ViewGroup con khác.\n- **B. Vùng chứa và sắp xếp bố cục các View con — ✅ Đúng.** Bản chất và vai trò cốt lõi của `ViewGroup`.\n- **C. Bắt buộc để đặt màu nền — ❌ Sai.** Từng `View` đơn lẻ cũng có thể đặt màu nền qua `android:background`.\n- **D. Lưu trữ dữ liệu — ❌ Sai.** ViewGroup chỉ phục vụ mục đích dựng giao diện UI.\n\n### Điểm dễ nhầm\n\nNhớ rằng bản thân `ViewGroup` cũng là một `View` (kế thừa từ `View`), do đó một `ViewGroup` có thể chứa các `ViewGroup` khác để tạo nên cây phân cấp giao diện (View hierarchy).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 16: *Khái niệm ViewGroup và các Layout phổ biến*)\n- **Tài liệu tham khảo web:** https://developer.android.com/reference/android/view/ViewGroup\n- **Android - quiz Google.pdf trang 9:** Bài kiểm tra “android-basics-kotlin-three”, Câu hỏi 2, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-049",
+        "type": "single_choice",
+        "question": {
+          "text": "Nhóm thành phần hiển thị (`ViewGroup`) giúp bạn định vị và sắp xếp các thành phần hiển thị con bên trong nó một cách linh hoạt bằng các điểm neo/ràng buộc liên hệ lẫn nhau được gọi là ___.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`ImageView`"
+          },
+          {
+            "id": "B",
+            "text": "`ConstraintLayout`"
+          },
+          {
+            "id": "C",
+            "text": "`TextView`"
+          },
+          {
+            "id": "D",
+            "text": "`ScrollView`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** `ConstraintLayout`\n\n### Lời giải từng bước\n\n`ConstraintLayout` là một `ViewGroup` mạnh mẽ cho phép định vị và định cỡ các widget con theo cách linh hoạt dựa trên các mối ràng buộc (constraints) tương đối với các view khác trong cùng layout hoặc với các cạnh của vùng chứa cha.\n\n### Phân tích từng lựa chọn\n\n- **A. ImageView — ❌ Sai.** `ImageView` là một `View` hiển thị ảnh, không phải `ViewGroup` định vị bố cục.\n- **B. ConstraintLayout — ✅ Đúng.** `ViewGroup` sử dụng hệ thống ràng buộc linh hoạt.\n- **C. TextView — ❌ Sai.** `TextView` là `View` hiển thị văn bản.\n- **D. ScrollView — ❌ Sai.** `ScrollView` là vùng chứa cuộn dọc chỉ chứa 1 phần tử con trực tiếp, không hỗ trợ định vị linh hoạt bằng các ràng buộc tự do.\n\n### Điểm dễ nhầm\n\nPhân biệt giữa View đơn (ImageView, TextView) và ViewGroup quản lý bố cục (ConstraintLayout, LinearLayout).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 19: *Bố cục ràng buộc ConstraintLayout*)\n- **Tài liệu tham khảo web:** https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout\n- **Android - quiz Google.pdf trang 10:** Bài kiểm tra “android-basics-kotlin-three”, Câu hỏi 3, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-050",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Nội dung nào sau đây là thuộc tính XML hợp lệ được hỗ trợ sẵn trong Android cho việc định cấu hình hiển thị văn bản? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`android:text`"
+          },
+          {
+            "id": "B",
+            "text": "`android:textSize`"
+          },
+          {
+            "id": "C",
+            "text": "`android:textUse`"
+          },
+          {
+            "id": "D",
+            "text": "`android:textColor`"
+          },
+          {
+            "id": "E",
+            "text": "`android:textContent`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, B, D.**\n\n### Lời giải từng bước\n\nTrong các thành phần hiển thị văn bản (như `TextView`, `Button`, `EditText`), Android cung cấp các thuộc tính XML chuẩn:\n- `android:text`: Thiết lập nội dung văn bản hiển thị.\n- `android:textSize`: Thiết lập kích thước chữ (thường dùng đơn vị `sp`).\n- `android:textColor`: Thiết lập màu sắc văn bản (mã màu hex hoặc tham chiếu `@color/...`).\nCác thuộc tính `textUse` và `textContent` không tồn tại trong hệ thống thuộc tính XML chuẩn của Android SDK.\n\n### Phân tích từng lựa chọn\n\n- **A. `android:text` — ✅ Đúng.** Thuộc tính đặt chuỗi văn bản.\n- **B. `android:textSize` — ✅ Đúng.** Thuộc tính đặt kích thước phông chữ.\n- **C. `android:textUse` — ❌ Không chọn.** Thuộc tính không tồn tại.\n- **D. `android:textColor` — ✅ Đúng.** Thuộc tính đặt màu chữ.\n- **E. `android:textContent` — ❌ Không chọn.** Thuộc tính không tồn tại trong Android (đây là thuộc tính của DOM JavaScript/HTML, không phải Android XML).\n\n### Điểm dễ nhầm\n\nTránh nhầm lẫn `textContent` của JavaScript DOM với `android:text` của Android XML.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 22: *Các thuộc tính cơ bản của TextView: text, textSize, textColor*)\n- **Tài liệu tham khảo web:** https://developer.android.com/reference/android/widget/TextView\n- **Android - quiz Google.pdf trang 10:** Bài kiểm tra “android-basics-kotlin-three”, Câu hỏi 4, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-051",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Ví dụ nào sau đây là ví dụ về “quy tắc ràng buộc” (constraint) có thể áp dụng cho một `View` trong `ConstraintLayout`? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Một thành phần hiển thị phải luôn cách cạnh của vùng chứa một khoảng cách tối thiểu (margin to container edge)"
+          },
+          {
+            "id": "B",
+            "text": "Một thành phần hiển thị phải luôn không có tam giác cảnh báo trong Layout Editor"
+          },
+          {
+            "id": "C",
+            "text": "Một thành phần hiển thị phải luôn nằm ở bên phải của một thành phần hiển thị khác (`layout_constraintLeft_toRightOf` / `layout_constraintStart_toEndOf`)"
+          },
+          {
+            "id": "D",
+            "text": "Một thành phần hiển thị phải luôn được neo vào cạnh trên cùng bên trong vùng chứa (`layout_constraintTop_toTopOf=\"parent\"`)"
+          },
+          {
+            "id": "E",
+            "text": "Một thành phần hiển thị phải luôn bắt buộc có thuộc tính `contentDescription`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, C, D.**\n\n### Lời giải từng bước\n\nTrong `ConstraintLayout`, một quy tắc ràng buộc (constraint) kết nối một điểm neo (cạnh trên, dưới, trái, phải/start, end) của một View với:\n- Một điểm neo của View khác (ví dụ: nằm bên phải của View khác -> lựa chọn C).\n- Cạnh của vùng chứa cha (ví dụ: neo vào cạnh trên của parent với khoảng cách lề tối thiểu -> lựa chọn A và D).\nViệc không có tam giác cảnh báo chỉ là trạng thái kiểm tra của IDE Lint, không phải là một quy tắc ràng buộc hình học. `contentDescription` là thuộc tính trợ năng, không phải quy tắc ràng buộc bố cục.\n\n### Phân tích từng lựa chọn\n\n- **A. Cách cạnh vùng chứa một khoảng tối thiểu — ✅ Đúng.** Xác định bởi constraint kèm thuộc tính margin.\n- **B. Không có tam giác cảnh báo — ❌ Không chọn.** Đây là cảnh báo chất lượng mã của Android Studio Lint.\n- **C. Ở bên phải một thành phần hiển thị khác — ✅ Đúng.** Ràng buộc quan hệ giữa 2 view (`toEndOf`/`toRightOf`).\n- **D. Neo vào cạnh trên cùng vùng chứa — ✅ Đúng.** Ràng buộc `layout_constraintTop_toTopOf=\"parent\"`.\n- **E. Bao gồm thuộc tính contentDescription — ❌ Không chọn.** Là quy tắc tiếp cận (accessibility), không phải ràng buộc layout.\n\n### Điểm dễ nhầm\n\nQuy tắc ràng buộc trong ConstraintLayout luôn biểu diễn mối quan hệ hình học về vị trí giữa các điểm neo (anchors).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 20: *Nguyên lý thiết lập ràng buộc trong ConstraintLayout*)\n- **Tài liệu tham khảo web:** https://developer.android.com/training/constraint-layout\n- **Android - quiz Google.pdf trang 10-11:** Bài kiểm tra “android-basics-kotlin-three”, Câu hỏi 6, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-052",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Tại sao bạn nên sử dụng tài nguyên chuỗi (`res/values/strings.xml`) thay vì viết chuỗi văn bản được mã hóa cứng (hardcoded strings) trong mã Kotlin hoặc tệp bố cục XML? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Giúp việc dịch và bản địa hóa (localization) ứng dụng sang các ngôn ngữ khác trở nên thuận tiện và dễ dàng hơn."
+          },
+          {
+            "id": "B",
+            "text": "Cho phép bạn sử dụng các chuỗi văn bản có độ dài ký tự lớn hơn so với viết trực tiếp."
+          },
+          {
+            "id": "C",
+            "text": "Cho phép tự động áp dụng các bộ lọc màu sắc đặc biệt lên văn bản."
+          },
+          {
+            "id": "D",
+            "text": "Cho phép tái sử dụng cùng một chuỗi văn bản ở nhiều vị trí khác nhau trong toàn bộ ứng dụng mà không bị trùng lặp."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, D.**\n\n### Lời giải từng bước\n\nSử dụng tệp tài nguyên `strings.xml` mang lại 2 lợi ích cốt lõi lớn nhất:\n1. **Bản địa hóa (Localization):** Bạn có thể dễ dàng cung cấp các tệp `strings.xml` riêng biệt cho từng ngôn ngữ/quốc gia (ví dụ: `values-vi/strings.xml`, `values-ja/strings.xml`) để Android tự động tải theo cài đặt hệ thống của người dùng.\n2. **Tái sử dụng (Reusability):** Khi cần thay đổi nội dung (ví dụ: tên ứng dụng, thông điệp chung), chỉ cần sửa ở một nơi duy nhất trong `strings.xml` thay vì tìm và sửa ở hàng chục màn hình XML hay file Kotlin.\nTài nguyên chuỗi không can thiệp vào độ dài tối đa của chuỗi cũng như không tự động tạo hiệu ứng màu sắc.\n\n### Phân tích từng lựa chọn\n\n- **A. Thuận tiện bản địa hóa — ✅ Đúng.** Ưu điểm số 1 được Google khuyến nghị.\n- **B. Dùng chuỗi dài hơn — ❌ Không chọn.** Độ dài chuỗi không phụ thuộc vào nơi lưu trữ.\n- **C. Áp dụng thuộc tính màu đặc biệt — ❌ Không chọn.** Màu sắc văn bản được điều khiển bởi `android:textColor` hoặc Style/Span, không phải do lưu trong strings.xml.\n- **D. Tái sử dụng ở nhiều vị trí — ✅ Đúng.** Tránh trùng lặp chuỗi và dễ bảo trì.\n\n### Điểm dễ nhầm\n\nAndroid Studio Lint sẽ phát tín hiệu cảnh báo màu vàng khi bạn hardcode chuỗi trực tiếp trong XML: `Hardcoded reference to string, should use @string resource`.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 25: *Quản lý tài nguyên chuỗi strings.xml và bản địa hóa ứng dụng*)\n- **Tài liệu tham khảo web:** https://developer.android.com/guide/topics/resources/string-resource\n- **Android - quiz Google.pdf trang 11-12:** Bài kiểm tra “android-basics-kotlin-three”, Câu hỏi 8, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-053",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Theo tư duy lập trình hướng đối tượng trong Kotlin, lựa chọn nào sau đây là ví dụ hợp lệ về một Lớp (`Class`)? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Lớp `Car` (Ô tô) có các thuộc tính như nhãn hiệu, dòng xe và có hành vi `drive()` (lái xe)"
+          },
+          {
+            "id": "B",
+            "text": "Lớp `Flower` (Hoa) có thuộc tính mùi hương"
+          },
+          {
+            "id": "C",
+            "text": "Lớp `Puppy` (Cún con) có các thuộc tính giống loài, cân nặng, tuổi và có hành vi `bark()` (sủa)"
+          },
+          {
+            "id": "D",
+            "text": "Lớp `ShoppingCart` (Giỏ hàng) có kích thước, tổng giá trị và hành vi chứa các món hàng"
+          },
+          {
+            "id": "E",
+            "text": "Lớp `Song` (Bài hát) có thuộc tính lời bài hát và nghệ sĩ trình bày"
+          },
+          {
+            "id": "F",
+            "text": "Không có ví dụ nào trong các câu trên là lớp."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, B, C, D, E (Tất cả đều đúng).**\n\n### Lời giải từng bước\n\nMột lớp (`Class`) là một khuôn mẫu trừu tượng (blueprint) xác định các thuộc tính (properties - trạng thái dữ liệu) và các phương thức (methods/functions - hành vi) mà các đối tượng thuộc loại đó sẽ có. Cả 5 ví dụ trên đều là sự mô hình hóa thực thể hoàn hảo của một lớp trong thế giới thực vào lập trình hướng đối tượng.\n\n### Phân tích từng lựa chọn\n\n- **A. Lớp Car — ✅ Đúng.** Đại diện cho khái niệm ô tô với trạng thái và hành vi.\n- **B. Lớp Flower — ✅ Đúng.** Đại diện cho loài hoa với thuộc tính mùi hương.\n- **C. Lớp Puppy — ✅ Đúng.** Đại diện cho thú cưng với thuộc tính và hành vi sủa.\n- **D. Lớp ShoppingCart — ✅ Đúng.** Đại diện cho thực thể thương mại điện tử.\n- **E. Lớp Song — ✅ Đúng.** Đại diện cho thực thể âm nhạc.\n\n### Điểm dễ nhầm\n\nMột số người nhầm lẫn giữa Lớp (bản thiết kế chung) và Bản sao/Đối tượng cụ thể (ví dụ: chiếc xe Toyota màu đỏ cụ thể của tôi).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 3 - Classes and objects.pptx` (Slide 4: *Khái niệm lớp (Class) và đối tượng (Object) trong Kotlin*)\n- **Tài liệu tham khảo web:** https://kotlinlang.org/docs/classes.html\n- **Android - quiz Google.pdf trang 14:** Bài kiểm tra “android-basics-kotlin-four”, Câu hỏi 1, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”.\n- **F. Không có ví dụ nào là lớp — ❌ Sai.** Cả 5 ví dụ trên đều là lớp hợp lệ."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-3"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-054",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Đâu là điểm khác biệt cốt lõi giữa Lớp (`Class`) và Bản sao/Thực thể (`Instance`/`Object`)? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bạn có thể coi lớp là bản vẽ thiết kế (blueprint) và bản sao là “sự vật/đối tượng” thực tế được tạo ra từ bản vẽ đó."
+          },
+          {
+            "id": "B",
+            "text": "Một lớp tương tự như bản vẽ thiết kế kiến trúc của một cây cầu, còn cây cầu Cổng Vàng (Golden Gate) là một bản sao cụ thể của thiết kế đó."
+          },
+          {
+            "id": "C",
+            "text": "Lớp dùng để xác định danh mục sự vật, còn bản sao dùng để định nghĩa các thuộc tính mà lớp có thể có."
+          },
+          {
+            "id": "D",
+            "text": "Bạn có thể tạo ra nhiều bản sao (instances) từ một lớp duy nhất, nhưng bạn không thể định nghĩa một lớp trực tiếp từ các bản sao."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, B, D.**\n\n### Lời giải từng bước\n\n- **Class (Lớp):** Là bản vẽ thiết kế, định nghĩa cấu trúc dữ liệu và các hành vi tổng quát.\n- **Instance (Bản sao / Thực thể đối tượng):** Là đối tượng cụ thể được cấp phát vùng nhớ trong thời gian chạy (runtime) từ bản thiết kế đó.\nTừ 1 Class có thể tạo ra vô số Instance độc lập với dữ liệu riêng biệt. Lớp là nơi định nghĩa các thuộc tính, còn instance chứa các giá trị dữ liệu cụ thể của những thuộc tính đó.\n\n### Phân tích từng lựa chọn\n\n- **A. Lớp là bản vẽ, bản sao là sự vật thực tế — ✅ Đúng.** Ẩn dụ kinh điển và chuẩn xác nhất về OOP.\n- **B. Thiết kế cầu và Cầu Cổng Vàng — ✅ Đúng.** Ví dụ minh họa thực tế trực quan của Google.\n- **C. Bản sao định nghĩa các thuộc tính — ❌ Không chọn.** Sai: Lớp mới là nơi định nghĩa các thuộc tính; bản sao chỉ gán giá trị cụ thể cho các thuộc tính đó.\n- **D. Tạo nhiều bản sao từ một lớp — ✅ Đúng.** Một lớp có thể khởi tạo hàng ngàn đối tượng.\n\n### Điểm dễ nhầm\n\nKhông nhầm lẫn: Thuộc tính được khai báo ở Lớp (`class`), còn Giá trị của thuộc tính được lưu trữ ở từng Thực thể (`instance`).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 3 - Classes and objects.pptx` (Slide 5: *Mối quan hệ giữa Class và Instance*)\n- **Tài liệu tham khảo web:** https://developer.android.com/courses/pathways/android-basics-kotlin-four\n- **Android - quiz Google.pdf trang 14:** Bài kiểm tra “android-basics-kotlin-four”, Câu hỏi 2, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-3"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-055",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Cách nào sau đây KHÔNG PHẢI là cú pháp hợp lệ để tạo nhận xét (comment) trong ngôn ngữ Kotlin? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thêm `//` vào đầu hoặc giữa một dòng, mọi ký tự nằm sau `//` trên dòng đó đều được coi là nhận xét."
+          },
+          {
+            "id": "B",
+            "text": "Đặt `/*` hoặc `/**` để bắt đầu nhận xét khối và kết thúc nhận xét đó bằng ký hiệu `*/`."
+          },
+          {
+            "id": "C",
+            "text": "Dùng `//` ở đầu hàm để tự động chuyển toàn bộ phần còn lại của hàm đó thành nhận xét qua nhiều dòng."
+          },
+          {
+            "id": "D",
+            "text": "Dùng `/*` để bắt đầu một nhận xét dài mà không cần ký hiệu đóng `*/` ở cuối."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C",
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C, D.**\n\n### Lời giải từng bước\n\nCâu hỏi yêu cầu tìm những cách **KHÔNG PHẢI** là cú pháp hợp lệ:\n1. Cú pháp `//` trong Kotlin chỉ có tác dụng trên một dòng duy nhất (single-line comment), không thể tự động chuyển phần còn lại của hàm qua nhiều dòng thành nhận xét -> C là nhận định sai cú pháp.\n2. Cú pháp `/*` là khối nhận xét nhiều dòng (multi-line block comment), bắt buộc phải có ký hiệu đóng tương ứng là `*/`. Nếu không có `*/`, trình biên dịch sẽ báo lỗi `Unclosed comment` -> D là nhận định sai cú pháp.\n\n### Phân tích từng lựa chọn\n\n- **A. `//` trên một dòng — ❌ Không chọn.** Đây là cách hợp lệ chuẩn trong Kotlin.\n- **B. `/*` kết thúc bằng `*/` — ❌ Không chọn.** Đây là cách tạo block comment hoàn toàn hợp lệ.\n- **C. `//` chuyển phần còn lại của hàm qua nhiều dòng — ✅ Đúng.** Đây KHÔNG PHẢI cách hợp lệ (cần chọn).\n- **D. `/*` không cần đóng — ✅ Đúng.** Đây KHÔNG PHẢI cách hợp lệ (cần chọn).\n\n### Điểm dễ nhầm\n\nĐọc kỹ câu hỏi phủ định “KHÔNG PHẢI cách tạo nhận xét”.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 1.2 Giới thiệu Android.pdf` (Slide 5: *Quy tắc viết ghi chú (Comments) trong Kotlin: // và /* */*)\n- **Tài liệu tham khảo web:** https://kotlinlang.org/docs/basic-syntax.html#comments\n- **Android - quiz Google.pdf trang 16:** Bài kiểm tra “android-basics-kotlin-four”, Câu hỏi 5, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-1"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-056",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây là đúng về câu lệnh có điều kiện (`if`/`else`, `when`) trong Kotlin? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Câu lệnh có điều kiện là phương thức để bạn thiết lập một điều kiện logic và đảm bảo đoạn mã bên trong chỉ thực thi nếu điều kiện đó được thỏa mãn (trả về `true`)."
+          },
+          {
+            "id": "B",
+            "text": "Câu lệnh có điều kiện trong Kotlin là biểu thức (expression) và có thể trả về một giá trị kết quả."
+          },
+          {
+            "id": "C",
+            "text": "Câu lệnh có điều kiện không yêu cầu bất kỳ từ khóa nào trong ngôn ngữ."
+          },
+          {
+            "id": "D",
+            "text": "Chỉ có thể sử dụng câu lệnh có điều kiện với các biểu thức chứa dữ liệu kiểu số nguyên (`Int`)."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, B.**\n\n### Lời giải từng bước\n\n- Trong lập trình, câu lệnh điều kiện cho phép kiểm tra một điều kiện Boolean để quyết định rẽ nhánh luồng thực thi của chương trình (A đúng).\n- Điểm đặc biệt trong Kotlin: cả `if` và `when` đều có thể hoạt động như một biểu thức (`expression`), nghĩa là chúng có thể trả về một giá trị cụ thể để gán trực tiếp cho một biến hoặc trả về từ một hàm (ví dụ: `val max = if (a > b) a else b`) (B đúng).\n- C sai vì câu lệnh điều kiện bắt buộc dùng các từ khóa như `if`, `else`, `when`.\n- D sai vì điều kiện có thể kiểm tra mọi kiểu dữ liệu (Boolean, String, Đối tượng, v.v.), không chỉ riêng số nguyên.\n\n### Phân tích từng lựa chọn\n\n- **A. Thực thi mã khi điều kiện đáp ứng — ✅ Đúng.** Bản chất của rẽ nhánh điều kiện.\n- **B. Hoạt động như biểu thức trả về giá trị — ✅ Đúng.** Tính năng biểu thức mạnh mẽ của Kotlin `if`/`when`.\n- **C. Không cần từ khóa — ❌ Không chọn.** Bắt buộc cần từ khóa `if`, `when`.\n- **D. Chỉ dùng với số nguyên — ❌ Không chọn.** Áp dụng cho mọi biểu thức Boolean hợp lệ.\n\n### Điểm dễ nhầm\n\nTrong Java, `if` chỉ là câu lệnh (statement); nhưng trong Kotlin, `if` vừa là statement vừa là expression trả về giá trị.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 1 - Kotlin basics.pptx` (Slide 30: *Câu lệnh và biểu thức điều kiện: if-else và when trong Kotlin*)\n- **Tài liệu tham khảo web:** https://kotlinlang.org/docs/control-flow.html\n- **Android - quiz Google.pdf trang 16:** Bài kiểm tra “android-basics-kotlin-four”, Câu hỏi 6, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-1"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-057",
+        "type": "single_choice",
+        "question": {
+          "text": "Vì sao bạn nên thêm nhận xét (comments) vào mã nguồn của mình?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Để tự giải thích cho chính mình hoặc đồng nghiệp về lý do viết đoạn mã theo một cách cụ thể"
+          },
+          {
+            "id": "B",
+            "text": "Giúp cấu trúc mã nguồn rõ ràng, tương tự các tiêu đề chương mục trong một cuốn sách"
+          },
+          {
+            "id": "C",
+            "text": "Để chỉ ra các phần quan trọng, các lưu ý đặc biệt hoặc những việc cần làm (`TODO`) trong mã"
+          },
+          {
+            "id": "D",
+            "text": "Để hướng dẫn các nhà phát triển khác cách sử dụng các hàm và lớp của bạn trong chương trình của họ"
+          },
+          {
+            "id": "E",
+            "text": "Tất cả các câu trên đều đúng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "E"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn E.** Tất cả các câu trên đều đúng\n\n### Lời giải từng bước\n\nViết nhận xét (commenting) là một trong những thực hành công nghệ phần mềm quan trọng nhất. Nhận xét giúp:\n1. Giải thích lý do và logic nghiệp vụ phía sau dòng mã.\n2. Đánh dấu cấu trúc file và phân tách các phần logic.\n3. Đánh dấu các ghi chú quan trọng hoặc cảnh báo cho người bảo trì.\n4. Tạo tài liệu hướng dẫn sử dụng API (thông qua KDoc `/** ... */`).\nDo đó tất cả các lý do nêu trên đều hoàn toàn chính xác.\n\n### Phân tích từng lựa chọn\n\n- **A, B, C, D — ❌ Đúng một phần.** Đều là các lợi ích thiết thực của nhận xét.\n- **E. Tất cả các câu trên — ✅ Đúng.** Lựa chọn toàn diện nhất.\n\n### Điểm dễ nhầm\n\nNhận xét tốt giải thích “Tại sao” (Why) thay vì chỉ mô tả lại “Cái gì” (What) mà mã đã thể hiện rõ ràng.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 1.2 Giới thiệu Android.pdf` (Slide 5: *Mục đích và phương pháp viết ghi chú trong lập trình chuyên nghiệp*)\n- **Tài liệu tham khảo web:** https://developer.android.com/courses/pathways/android-basics-kotlin-four\n- **Android - quiz Google.pdf trang 16:** Bài kiểm tra “android-basics-kotlin-four”, Câu hỏi 7, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-1"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-058",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Từ khoá nào sau đây là từ khóa hợp lệ được sử dụng trong các cấu trúc rẽ nhánh điều kiện của Kotlin? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`if` và `else`"
+          },
+          {
+            "id": "B",
+            "text": "`when`"
+          },
+          {
+            "id": "C",
+            "text": "`then`"
+          },
+          {
+            "id": "D",
+            "text": "`switch`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, B.**\n\n### Lời giải từng bước\n\nTrong ngôn ngữ lập trình Kotlin:\n- Cấu trúc rẽ nhánh chính là `if` và `else`.\n- Cấu trúc rẽ nhánh nhiều trường hợp là `when` (thay thế cho `switch` trong Java và C++).\n- Kotlin không có từ khóa `switch` (được thay thế bởi `when`).\n- Kotlin không sử dụng từ khóa `then` (khác với Visual Basic hay SQL).\n\n### Phân tích từng lựa chọn\n\n- **A. `if` và `else` — ✅ Đúng.** Cấu trúc điều kiện cơ bản nhất.\n- **B. `when` — ✅ Đúng.** Cấu trúc rẽ nhánh đa năng của Kotlin.\n- **C. `then` — ❌ Không chọn.** Không phải từ khóa trong Kotlin.\n- **D. `switch` — ❌ Không chọn.** Kotlin không có từ khóa `switch`.\n\n### Điểm dễ nhầm\n\nNhiều lập trình viên từ Java hoặc C++ sang thường nhầm lẫn rằng Kotlin vẫn có `switch`. Trong Kotlin, `switch` đã bị loại bỏ hoàn toàn và được thay thế bằng `when` linh hoạt hơn nhiều.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 1 - Kotlin basics.pptx` (Slide 31: *Cấu trúc điều khiển when trong Kotlin thay thế switch-case*)\n- **Tài liệu tham khảo web:** https://kotlinlang.org/docs/control-flow.html#when-expression\n- **Android - quiz Google.pdf trang 17:** Bài kiểm tra “android-basics-kotlin-four”, Câu hỏi 9, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-1"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-059",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây là đúng về tính kế thừa của lớp (`Inheritance`) trong ngôn ngữ Kotlin?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tính kế thừa của lớp cho phép bạn tái sử dụng mã nguồn và duy trì cấu trúc chương trình dễ dàng hơn."
+          },
+          {
+            "id": "B",
+            "text": "Các thuộc tính và hàm của lớp cha (superclass) sẽ được kế thừa lại cho các lớp con (subclass)."
+          },
+          {
+            "id": "C",
+            "text": "Bạn có thể định nghĩa thêm các thuộc tính và hàm bổ sung dành riêng cho các lớp con."
+          },
+          {
+            "id": "D",
+            "text": "Bạn có thể ghi đè (`override`) lại các thuộc tính và hàm của lớp cha trong các lớp con nếu lớp cha cho phép."
+          },
+          {
+            "id": "E",
+            "text": "Tất cả các câu trên đều đúng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "E"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn E.** Tất cả các câu trên đều đúng\n\n### Lời giải từng bước\n\nTính kế thừa (Inheritance) là một trong bốn trụ cột của lập trình hướng đối tượng:\n1. Cho phép lớp con kế thừa lại các thành phần của lớp cha mà không cần viết lại (tái sử dụng mã nguồn).\n2. Lớp con tự động sở hữu các thuộc tính và hàm mở của lớp cha.\n3. Lớp con có thể mở rộng thêm các thuộc tính và phương thức chuyên biệt của riêng mình.\n4. Bằng cách sử dụng từ khóa `override`, lớp con có thể định nghĩa lại hành vi của phương thức từ lớp cha (yêu cầu lớp cha và phương thức cha có từ khóa `open`).\n\n### Phân tích từng lựa chọn\n\n- **A, B, C, D — ❌ Đúng một phần.** Đều là các đặc tính chuẩn mực của tính kế thừa.\n- **E. Tất cả các câu trên — ✅ Đúng.** Lựa chọn đầy đủ và chuẩn xác nhất.\n\n### Điểm dễ nhầm\n\nTrong Kotlin, mặc định tất cả các lớp đều là `final`. Để một lớp có thể được kế thừa, lớp cha bắt buộc phải được đánh dấu bằng từ khóa `open`.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 3 - Classes and objects.pptx` (Slide 22: *Tính kế thừa (Inheritance) và từ khóa open trong Kotlin*)\n- **Tài liệu tham khảo web:** https://kotlinlang.org/docs/inheritance.html\n- **Android - quiz Google.pdf trang 20:** Bài kiểm tra “android-basics-kotlin-unit-2-pathway-1”, Câu hỏi 1, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-3"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-060",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Câu nào sau đây là đúng về lớp trừu tượng (`abstract class`) trong Kotlin? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Các lớp trừu tượng có thể được kế thừa/mở rộng bởi lớp con và lớp con sẽ cung cấp phần triển khai cụ thể cho các thành phần trừu tượng của nó."
+          },
+          {
+            "id": "B",
+            "text": "Các lớp trừu tượng luôn phải tự triển khai toàn bộ các thuộc tính và chức năng mà không để lại thành phần trừu tượng nào."
+          },
+          {
+            "id": "C",
+            "text": "Các lớp trừu tượng có thể chứa cả thuộc tính trừu tượng (`abstract val/var`), hàm trừu tượng (`abstract fun`) lẫn các thuộc tính và hàm đã triển khai sẵn."
+          },
+          {
+            "id": "D",
+            "text": "Không thể trực tiếp khởi tạo bản sao (instance) của một lớp trừu tượng bằng toán tử gọi hàm dựng (constructor)."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, C, D.**\n\n### Lời giải từng bước\n\nTrong Kotlin, một lớp trừu tượng (`abstract class`):\n- Mặc định đã là `open`, dùng làm khuôn mẫu cho các lớp con kế thừa và bắt buộc lớp con cụ thể phải triển khai các thành phần trừu tượng (A đúng).\n- Có thể chứa cả thành viên trừu tượng (chỉ có khai báo chữ ký, không có thân hàm) và thành viên thông thường đã có phần triển khai đầy đủ (C đúng, B sai).\n- Không thể được khởi tạo trực tiếp thành đối tượng (ví dụ: `val d = Dwelling()` sẽ gây lỗi biên dịch `Cannot create an instance of an abstract class`) (D đúng).\n\n### Phân tích từng lựa chọn\n\n- **A. Được mở rộng và lớp con cung cấp triển khai — ✅ Đúng.** Mục đích chính của lớp trừu tượng.\n- **B. Luôn tự triển khai toàn bộ — ❌ Không chọn.** Nếu triển khai toàn bộ thì không cần từ khóa abstract.\n- **C. Chứa cả thành phần trừu tượng lẫn thành phần cụ thể — ✅ Đúng.** Đặc tính linh hoạt của abstract class so với interface thuần túy.\n- **D. Không thể khởi tạo đối tượng trực tiếp — ✅ Đúng.** Nguyên tắc căn bản của lập trình hướng đối tượng.\n\n### Điểm dễ nhầm\n\nLớp trừu tượng khác với Interface ở chỗ: Abstract class có thể lưu giữ trạng thái trường dữ liệu (state/backing fields) và có constructor với tham số.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 3 - Classes and objects.pptx` (Slide 26: *Lớp trừu tượng (Abstract classes) trong Kotlin*)\n- **Tài liệu tham khảo web:** https://kotlinlang.org/docs/classes.html#abstract-classes\n- **Android - quiz Google.pdf trang 20:** Bài kiểm tra “android-basics-kotlin-unit-2-pathway-1”, Câu hỏi 2, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-3"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-061",
+        "type": "single_choice",
+        "question": {
+          "text": "Thành phần đặc biệt nào của một lớp trong Kotlin được tự động gọi đến khi bạn tạo mới một bản sao (instance) của lớp đó để khởi tạo giá trị ban đầu cho các thuộc tính?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hàm dựng (`Constructor`)"
+          },
+          {
+            "id": "B",
+            "text": "Phương thức huỷ (`Destructor`)"
+          },
+          {
+            "id": "C",
+            "text": "Hàm mở rộng (`Extension function`)"
+          },
+          {
+            "id": "D",
+            "text": "Khối `companion object`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Hàm dựng (`Constructor`)\n\n### Lời giải từng bước\n\nTrong Kotlin và lập trình hướng đối tượng, hàm dựng (`Constructor`) là phương thức đặc biệt được thực thi ngay khi tạo một đối tượng (bản sao) mới của lớp để khởi tạo trạng thái ban đầu của đối tượng. Kotlin hỗ trợ cả hàm dựng chính (primary constructor) được khai báo ngay trên tiêu đề lớp và hàm dựng phụ (secondary constructor) dùng từ khóa `constructor`.\n\n### Phân tích từng lựa chọn\n\n- **A. Constructor (Hàm dựng) — ✅ Đúng.** Chịu trách nhiệm khởi tạo đối tượng mới.\n- **B. Destructor (Phương thức hủy) — ❌ Sai.** Dùng để giải phóng tài nguyên khi đối tượng bị hủy (Kotlin dựa trên Garbage Collection của JVM, không dùng destructor tường minh).\n- **C. Extension function — ❌ Sai.** Hàm mở rộng thêm chức năng cho lớp mà không thay đổi mã nguồn.\n- **D. companion object — ❌ Sai.** Đối tượng đồng hành chứa các thành viên tĩnh (static-like).\n\n### Điểm dễ nhầm\n\nTrong Kotlin, từ khóa `new` không tồn tại; để gọi constructor, bạn chỉ cần gọi trực tiếp `TênLớp(các_đối_số)`.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 3 - Classes and objects.pptx` (Slide 10: *Hàm khởi tạo (Primary Constructor & Secondary Constructor)*)\n- **Tài liệu tham khảo web:** https://kotlinlang.org/docs/classes.html#constructors\n- **Android - quiz Google.pdf trang 21:** Bài kiểm tra “android-basics-kotlin-unit-2-pathway-1”, Câu hỏi 3, đáp án đúng được đánh dấu là `Constructor` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-3"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-062",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Xem xét đoạn mã bố cục XML sau đây:\n\n```xml\n1  <TextView\n2      android:layout_width=\"wrap_content\"\n3      android:layout_height\"wrap_content\"\n4      android:padding=\"8dp\"\n5      android:text=\"@string/title\"\n6      android:textSize=18sp />\n```\n\n(Các) dòng mã nào trong đoạn trên sẽ gây ra lỗi cú pháp biên dịch XML? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Dòng 1 – Thiếu thẻ đóng `>` ngay sau `<TextView`."
+          },
+          {
+            "id": "B",
+            "text": "Dòng 3 – Thiếu dấu bằng `=` sau tên thuộc tính `android:layout_height`."
+          },
+          {
+            "id": "C",
+            "text": "Dòng 4 – Thuộc tính `android:padding` không được hỗ trợ trên `TextView`."
+          },
+          {
+            "id": "D",
+            "text": "Dòng 5 – Bạn bắt buộc phải dùng cú pháp `@str/title` thay vì `@string/title`."
+          },
+          {
+            "id": "E",
+            "text": "Dòng 6 – Thiếu dấu ngoặc kép `\"\"` xung quanh giá trị thuộc tính kích thước `18sp`."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B",
+            "E"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B, E.**\n\n### Lời giải từng bước\n\nQuy tắc cú pháp chuẩn của XML trong Android yêu cầu mọi thuộc tính phải có dạng `tên=\"giá_trị\"`:\n- Tại Dòng 3: `android:layout_height\"wrap_content\"` bị thiếu dấu bằng `=`, gây lỗi phân tích cú pháp XML (`Syntax error: '=' expected`).\n- Tại Dòng 6: `android:textSize=18sp` không có dấu ngoặc kép bọc quanh giá trị `18sp`. Trong XML, tất cả giá trị thuộc tính bắt buộc phải nằm trong dấu nháy kép `\"...\"` hoặc nháy đơn `'...'`.\nCác dòng còn lại hoàn toàn đúng cú pháp: Dòng 1 mở thẻ và kết thúc ở dòng 6 bằng `/>`; Dòng 4 có thuộc tính `android:padding` hợp lệ; Dòng 5 tham chiếu tài nguyên chuỗi `@string/title` chuẩn xác.\n\n### Phân tích từng lựa chọn\n\n- **A. Dòng 1 thiếu thẻ đóng — ❌ Không chọn.** Thẻ tự đóng ở dòng 6 bằng `/>` là đúng quy tắc XML.\n- **B. Dòng 3 thiếu dấu bằng — ✅ Đúng.** Lỗi cú pháp XML rõ ràng.\n- **C. Dòng 4 padding không tồn tại — ❌ Không chọn.** `TextView` kế thừa từ `View` nên hỗ trợ đầy đủ `padding`.\n- **D. Dòng 5 dùng @str — ❌ Không chọn.** Cú pháp đúng là `@string/...`, không có `@str`.\n- **E. Dòng 6 thiếu dấu ngoặc kép quanh 18sp — ✅ Đúng.** Giá trị thuộc tính trong XML bắt buộc có dấu ngoặc kép.\n\n### Điểm dễ nhầm\n\nMột lỗi gõ phím rất phổ biến khi viết XML bằng tay là quên dấu `=` hoặc quên cặp dấu nháy kép quanh giá trị đơn vị kích thước (`dp`/`sp`).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 14: *Cú pháp khai báo giao diện người dùng bằng tệp XML*)\n- **Tài liệu tham khảo web:** https://developer.android.com/guide/topics/ui/declaring-layout\n- **Android - quiz Google.pdf trang 24:** Bài kiểm tra “android-basics-kotlin-unit-2-pathway-2”, Câu hỏi 1, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-063",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Câu nào sau đây là đúng về quản lý tài nguyên đồ họa và biểu tượng ứng dụng (App icon) trong Android? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bạn chỉ cần cung cấp một tệp ảnh bitmap kích thước nhỏ duy nhất thì biểu tượng sẽ tự động sắc nét trên mọi loại màn hình thiết bị."
+          },
+          {
+            "id": "B",
+            "text": "`mdpi`, `hdpi`, `xhdpi`, `xxhdpi` và `xxxhdpi` là các bộ hạn định mật độ (density qualifiers) cho thư mục tài nguyên, dùng để chứa các tài nguyên hình ảnh tương ứng với từng mật độ điểm ảnh của thiết bị."
+          },
+          {
+            "id": "C",
+            "text": "Biểu tượng thích ứng (Adaptive Icon) bao gồm một lớp tiền cảnh (foreground) và một lớp hậu cảnh (background), được hệ thống hiển thị cùng với mặt nạ hình học (OEM mask) do nhà sản xuất thiết bị áp dụng."
+          },
+          {
+            "id": "D",
+            "text": "Các đồ họa vector (`VectorDrawable`) chỉ hoạt động được trên một mật độ màn hình cố định duy nhất và không thể tự co giãn theo tỷ lệ."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B",
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B, C.**\n\n### Lời giải từng bước\n\n- **Bộ hạn định mật độ màn hình (Density Qualifiers):** Android phân loại màn hình theo mật độ DPI (`mdpi ~ 160dpi`, `hdpi ~ 240dpi`, `xhdpi ~ 320dpi`, `xxhdpi ~ 480dpi`, `xxxhdpi ~ 640dpi`). Cung cấp ảnh trong các thư mục `res/mipmap-*` hoặc `res/drawable-*` giúp ứng dụng luôn hiển thị sắc nét mà không bị mờ nhòe (B đúng, A sai).\n- **Adaptive Icons:** Từ Android 8.0 (API 26), biểu tượng thích ứng bắt buộc tách biệt thành 2 lớp: Foreground (tiền cảnh) và Background (hậu cảnh), kích thước 108x108 dp, cho phép thiết bị áp dụng các mặt nạ đa dạng (tròn, vuông bo góc, squircle) và hiệu ứng chuyển động thị sai (C đúng).\n- D sai vì `VectorDrawable` vẽ bằng các lệnh toán học XML, có khả năng co giãn vô hạn trên mọi mật độ màn hình mà không bao giờ bị vỡ hạt.\n\n### Phân tích từng lựa chọn\n\n- **A. Chỉ cần 1 ảnh bitmap nhỏ — ❌ Không chọn.** Ảnh bitmap đơn lẻ khi phóng to sẽ bị vỡ hạt trên màn hình độ phân giải cao.\n- **B. Bộ hạn định mật độ mdpi, hdpi, xhdpi... — ✅ Đúng.** Quy chuẩn cấu trúc thư mục tài nguyên Android.\n- **C. Biểu tượng thích ứng Foreground, Background và Mặt nạ OEM — ✅ Đúng.** Chuẩn thiết kế Adaptive Icons của Google.\n- **D. VectorDrawable không co giãn — ❌ Không chọn.** Sai hoàn toàn: Vector có ưu điểm lớn nhất là co giãn mượt mà trên mọi kích thước.\n\n### Điểm dễ nhầm\n\nBiểu tượng ứng dụng được đặt trong thư mục `res/mipmap/` (chứ không phải `res/drawable/`) để hệ điều hành luôn giữ độ phân giải tốt nhất ngay cả khi ứng dụng bị co tỷ lệ bởi launcher.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 27: *Quản lý tài nguyên hình ảnh Drawable và Biểu tượng ứng dụng mipmap*)\n- **Tài liệu tham khảo web:** https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive\n- **Android - quiz Google.pdf trang 25:** Bài kiểm tra “android-basics-kotlin-unit-2-pathway-2”, Câu hỏi 3, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-064",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Bước nào sau đây là một phần trong quy trình chuẩn để thay đổi màu sắc chủ đạo của chủ đề ứng dụng (App Theme) trong Android? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sửa đổi tệp cấu hình chủ đề `themes.xml` (hoặc `themes.xml (night)` cho chế độ tối)."
+          },
+          {
+            "id": "B",
+            "text": "Thiết lập các thuộc tính màu chủ đạo như `colorPrimary` và màu phụ `colorSecondary` trong tệp chủ đề của ứng dụng."
+          },
+          {
+            "id": "C",
+            "text": "Khai báo các giá trị mã màu (ví dụ hex color `#FF6200EE`) dưới dạng tài nguyên màu trong tệp `res/values/colors.xml`."
+          },
+          {
+            "id": "D",
+            "text": "Đặt thuộc tính màu nền cứng trực tiếp trên từng thành phần giao diện người dùng ở mọi màn hình XML."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, B, C.**\n\n### Lời giải từng bước\n\nQuy trình quản lý màu sắc theo thiết kế Material của Google gồm 3 bước tách bạch:\n1. Định nghĩa các hằng số màu sắc ngữ nghĩa trong `res/values/colors.xml` (ví dụ: `<color name=\"purple_500\">#FF6200EE</color>`) -> C đúng.\n2. Gán các tài nguyên màu này vào các thuộc tính chủ đề trừu tượng như `colorPrimary`, `colorSecondary`, `colorOnPrimary` trong tệp `res/values/themes.xml` (và `values-night/themes.xml` cho giao diện tối) -> A và B đúng.\n3. Các thành phần giao diện sẽ tự động áp dụng màu sắc của theme mà không cần phải đặt màu cứng trên từng View đơn lẻ (D sai vì đặt màu cứng đi ngược lại nguyên tắc thiết kế theme nhất quán).\n\n### Phân tích từng lựa chọn\n\n- **A. Sửa đổi themes.xml / themes.xml (night) — ✅ Đúng.** Nơi xác định cấu hình theme.\n- **B. Đặt colorPrimary và colorSecondary — ✅ Đúng.** Các thuộc tính cốt lõi của bảng màu Material Design.\n- **C. Khai báo mã màu trong colors.xml — ✅ Đúng.** Nguồn gốc định nghĩa giá trị màu.\n- **D. Đặt màu cứng trên từng view — ❌ Không chọn.** Thực hành xấu, gây khó khăn cho việc bảo trì và không hỗ trợ Dark Mode tự động.\n\n### Điểm dễ nhầm\n\n`colors.xml` là nơi lưu trữ giá trị màu thực tế (như `#FF018786`), còn `themes.xml` ánh xạ giá trị đó vào vai trò ngữ nghĩa của giao diện (như `colorPrimary`).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 26: *Định kiểu giao diện (Styles) và Chủ đề ứng dụng (Themes)*)\n- **Tài liệu tham khảo web:** https://developer.android.com/develop/ui/views/theming/themes\n- **Android - quiz Google.pdf trang 25-26:** Bài kiểm tra “android-basics-kotlin-unit-2-pathway-2”, Câu hỏi 4, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-065",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Tại sao bạn nên sử dụng thư viện Thành phần Material (Material Components for Android) khi xây dựng giao diện ứng dụng? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cung cấp các tiện ích (widgets) phong phú tuân theo các nguyên tắc thiết kế hiện đại của Material Design (như `MaterialButton`, `TextInputLayout`, `BottomNavigationView`)."
+          },
+          {
+            "id": "B",
+            "text": "Giúp mã nguồn Kotlin của ứng dụng biên dịch nhanh hơn đáng kể so với việc dùng các View cơ bản."
+          },
+          {
+            "id": "C",
+            "text": "Cung cấp các chủ đề Material (`Theme.MaterialComponents.*`) chuẩn mực mà bạn có thể dùng trực tiếp hoặc mở rộng và tùy biến."
+          },
+          {
+            "id": "D",
+            "text": "Giúp bạn nhanh chóng xây dựng những trải nghiệm người dùng đẹp mắt, nhất quán và dễ tiếp cận."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, C, D.**\n\n### Lời giải từng bước\n\nThư viện `Material Components for Android` (MDC) là bộ công cụ thiết kế giao diện chính thức của Google:\n1. Bổ sung các widget hiện đại, có sẵn hiệu ứng gợn sóng (ripple), đổ bóng (elevation), bo góc theo chuẩn Material Design (A đúng).\n2. Cung cấp hệ thống chủ đề (theming system) mạnh mẽ giúp dễ dàng đồng bộ bảng màu, phông chữ và hình khối trên toàn bộ ứng dụng (C đúng).\n3. Giảm bớt công sức tự thiết kế từ đầu, đẩy nhanh tốc độ xây dựng UI chất lượng cao (D đúng).\nThư viện MDC bổ sung thêm nhiều mã nguồn và tài nguyên nên không làm tăng tốc độ biên dịch (compile time) của ứng dụng (B sai).\n\n### Phân tích từng lựa chọn\n\n- **A. Cung cấp tiện ích chuẩn Material Design — ✅ Đúng.** Ưu điểm nổi bật của thư viện.\n- **B. Giúp biên dịch nhanh hơn — ❌ Không chọn.** Thư viện ngoài không làm nhanh tốc độ biên dịch.\n- **C. Cung cấp chủ đề Material mặc định dễ tùy chỉnh — ✅ Đúng.** Nền tảng xây dựng theme hiện đại.\n- **D. Xây dựng trải nghiệm đẹp mắt và nhất quán nhanh hơn — ✅ Đúng.** Nâng cao năng suất lập trình viên.\n\n### Điểm dễ nhầm\n\nĐể sử dụng được các widget Material (như `MaterialCardView`, `Chip`), ứng dụng của bạn phải áp dụng chủ đề con của `Theme.MaterialComponents` trong `AndroidManifest.xml`.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 30: *Thư viện Material Components for Android*)\n- **Tài liệu tham khảo web:** https://developer.android.com/develop/ui/views/theming/look-and-feel\n- **Android - quiz Google.pdf trang 26:** Bài kiểm tra “android-basics-kotlin-unit-2-pathway-2”, Câu hỏi 5, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-066",
+        "type": "single_choice",
+        "question": {
+          "text": "Hành vi kế thừa mặc định của một lớp (`class`) được khai báo trong Kotlin là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tất cả các lớp mặc định đều ở chế độ riêng tư (`private`)"
+          },
+          {
+            "id": "B",
+            "text": "Tất cả các lớp mặc định đều là lớp kín (`sealed`)"
+          },
+          {
+            "id": "C",
+            "text": "Tất cả các lớp mặc định đều là lớp cuối cùng (`final`), không thể kế thừa trừ khi được khai báo rõ ràng với từ khóa `open`"
+          },
+          {
+            "id": "D",
+            "text": "Tất cả các lớp mặc định đều cho phép kế thừa tự do từ bất kỳ đâu"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Tất cả các lớp mặc định đều là lớp cuối cùng (`final`), không thể kế thừa trừ khi được khai báo rõ ràng với từ khóa `open`\n\n### Lời giải từng bước\n\nKhác với Java (nơi các lớp mặc định đều có thể kế thừa tự do trừ khi đánh dấu `final`), triết lý thiết kế của ngôn ngữ Kotlin tuân theo nguyên tắc nổi tiếng của cuốn sách Effective Java: *“Design and document for inheritance or else prohibit it”* (Thiết kế và lập tài liệu cho tính kế thừa, nếu không hãy ngăn chặn nó). Do đó, trong Kotlin, mọi lớp mặc định đều là `final` và đóng với việc kế thừa. Muốn cho phép một lớp khác kế thừa, bạn phải tường minh thêm từ khóa `open class`.\n\n### Phân tích từng lựa chọn\n\n- **A. Mặc định private — ❌ Sai.** Mức độ hiển thị mặc định của lớp trong Kotlin là `public`.\n- **B. Mặc định sealed — ❌ Sai.** Lớp kín phải có từ khóa `sealed` tường minh.\n- **C. Mặc định final (đóng với kế thừa) — ✅ Đúng.** Quy tắc cốt lõi của Kotlin.\n- **D. Cho phép kế thừa tự do — ❌ Sai.** Đây là hành vi mặc định của Java, không phải Kotlin.\n\n### Điểm dễ nhầm\n\nLập trình viên chuyển từ Java sang thường ngạc nhiên khi thấy không thể kế thừa một lớp thông thường trong Kotlin mà bắt buộc phải thêm từ khóa `open`.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 3 - Classes and objects.pptx` (Slide 22: *Trạng thái mặc định final của lớp trong Kotlin và từ khóa open*)\n- **Tài liệu tham khảo web:** https://kotlinlang.org/docs/inheritance.html\n- **Android - quiz Google.pdf trang 72:** Bài kiểm tra “android-development-with-kotlin-3”, Câu hỏi 1, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-3"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-067",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Câu nào sau đây là đúng về các hàm mở rộng (`Extension functions`) trong Kotlin? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cho phép bạn viết thêm các hàm mới cho một lớp mà không cần phải kế thừa lớp đó hay sửa đổi trực tiếp mã nguồn của lớp ban đầu."
+          },
+          {
+            "id": "B",
+            "text": "Được gọi trên các biến hoặc đối tượng thuộc kiểu dữ liệu được mở rộng thông qua cú pháp dấu chấm thông thường (`biến.hàmMởRộng()`)."
+          },
+          {
+            "id": "C",
+            "text": "Bắt buộc phải khai báo trong cùng một tệp mã nguồn với lớp ban đầu mà bạn đang mở rộng."
+          },
+          {
+            "id": "D",
+            "text": "Bắt buộc phải sử dụng từ khóa `extend` ở đầu khai báo hàm."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, B.**\n\n### Lời giải từng bước\n\nHàm mở rộng (`Extension function`) là một tính năng cực kỳ mạnh mẽ của Kotlin:\n- Cho phép bổ sung chức năng cho bất kỳ lớp nào (kể cả các lớp có sẵn trong thư viện như `String`, `List`, `View`, `Context`) mà không cần kế thừa hay dùng design pattern như Decorator (A đúng).\n- Được gọi hoàn toàn tự nhiên bằng cú pháp dấu chấm như một phương thức thành viên thực thụ (ví dụ: `\"abc\".hasSpaces()`) (B đúng).\n- Có thể khai báo ở bất kỳ tệp nào (miễn là được `import` khi sử dụng), không bắt buộc cùng tệp với lớp gốc (C sai).\n- Cú pháp khai báo là đặt tên lớp nhận trước tên hàm (ví dụ: `fun String.hasSpaces(): Boolean`), không có từ khóa `extend` (D sai).\n\n### Phân tích từng lựa chọn\n\n- **A. Viết hàm mới không cần sửa đổi mã nguồn — ✅ Đúng.** Bản chất của hàm mở rộng.\n- **B. Dùng cú pháp dấu chấm để gọi — ✅ Đúng.** Trải nghiệm lập trình tự nhiên như phương thức nội tại.\n- **C. Bắt buộc cùng tệp — ❌ Không chọn.** Có thể đặt ở bất kỳ tệp utility nào.\n- **D. Dùng từ khóa extend — ❌ Không chọn.** Kotlin không dùng từ khóa `extend` cho hàm mở rộng.\n\n### Điểm dễ nhầm\n\nHàm mở rộng không thực sự chèn phương thức vào bên trong mã bytecode của lớp gốc; nó được trình biên dịch chuyển thành một hàm tĩnh (`static method`) nhận đối tượng làm tham số đầu tiên.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 3 - Classes and objects.pptx` (Slide 40: *Hàm mở rộng (Extension Functions) trong Kotlin*)\n- **Tài liệu tham khảo web:** https://kotlinlang.org/docs/extensions.html\n- **Android - quiz Google.pdf trang 72-73:** Bài kiểm tra “android-development-with-kotlin-3”, Câu hỏi 3, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-3"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-068",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Câu nào sau đây là đúng về lớp dữ liệu (`data class`) trong ngôn ngữ Kotlin? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Được thiết kế chuyên biệt cho các lớp có mục đích chính là lưu trữ dữ liệu (data holders / DTO / POJO)."
+          },
+          {
+            "id": "B",
+            "text": "Hệ thống sẽ tự động tạo sẵn các phương thức `equals()`, `hashCode()`, `toString()`, `copy()`, và các hàm `componentN()`."
+          },
+          {
+            "id": "C",
+            "text": "Hệ thống tự động sinh các phương thức getter (và setter cho các biến có thể thay đổi `var`) từ các thuộc tính trong hàm dựng chính."
+          },
+          {
+            "id": "D",
+            "text": "Hàm dựng chính của `data class` không bắt buộc phải có bất kỳ tham số nào."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, B, C.**\n\n### Lời giải từng bước\n\n`data class` là tính năng đặc sắc của Kotlin giúp loại bỏ hoàn toàn mã chuẩn (boilerplate) trong Java:\n1. Mục đích dùng làm lớp chứa dữ liệu thuần túy (A đúng).\n2. Trình biên dịch tự động sinh ra bộ phương thức tiện ích dựa trên các thuộc tính trong primary constructor: `equals()`, `hashCode()`, `toString()`, `copy()`, và `component1()`, `component2()`... phục vụ Destructuring Declarations (B đúng).\n3. Tự động sinh getter/setter chuẩn cho các thuộc tính `val`/`var` (C đúng).\n4. Yêu cầu bắt buộc của Kotlin: hàm dựng chính của `data class` phải có **ít nhất một tham số** và tất cả các tham số đó bắt buộc phải được đánh dấu bằng `val` hoặc `var` (D sai).\n\n### Phân tích từng lựa chọn\n\n- **A. Lớp chuyên lưu trữ dữ liệu — ✅ Đúng.** Bản chất của data class.\n- **B. Tự sinh equals, hashCode, toString, copy — ✅ Đúng.** Tiết kiệm hàng chục dòng mã boilerplate.\n- **C. Tự sinh getter/setter — ✅ Đúng.** Cơ chế thuộc tính tự động của Kotlin.\n- **D. Không cần tham số hàm dựng chính — ❌ Không chọn.** Sai: Quy tắc ngôn ngữ bắt buộc primary constructor của data class phải có ít nhất 1 tham số `val` hoặc `var`.\n\n### Điểm dễ nhầm\n\nNếu bạn viết `data class User()` không có tham số, trình biên dịch Kotlin sẽ báo lỗi ngay lập tức: `Data class must have at least one primary constructor parameter`.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 3 - Classes and objects.pptx` (Slide 32: *Đặc điểm và các hàm tự sinh của Lớp dữ liệu (Data class)*)\n- **Tài liệu tham khảo web:** https://kotlinlang.org/docs/data-classes.html\n- **Android - quiz Google.pdf trang 73:** Bài kiểm tra “android-development-with-kotlin-3”, Câu hỏi 4, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-3"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-069",
+        "type": "single_choice",
+        "question": {
+          "text": "Bạn sử dụng giá trị nào của thuộc tính bố cục `android:layout_width` để thiết lập chiều rộng của một `View` sao cho vừa khít với nội dung bên trong nó?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`android:layout_width=\"wrap_content\"`"
+          },
+          {
+            "id": "B",
+            "text": "`android:layout_width=\"match_parent\"`"
+          },
+          {
+            "id": "C",
+            "text": "`android:layout_width=\"fill_parent\"`"
+          },
+          {
+            "id": "D",
+            "text": "`android:view_width=\"wrap\"`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `android:layout_width=\"wrap_content\"`\n\n### Lời giải từng bước\n\nTrong hệ thống bố cục Android:\n- `wrap_content`: Thiết lập kích thước của `View` vừa đủ lớn để bao bọc khít nội dung bên trong nó (cộng thêm phần đệm `padding`).\n- `match_parent`: Mở rộng kích thước của `View` chiếm toàn bộ kích thước tối đa của vùng chứa cha.\n- `android:view_width=\"wrap\"` là thuộc tính không tồn tại trong Android SDK.\n\n### Phân tích từng lựa chọn\n\n- **A. `wrap_content` — ✅ Đúng.** Co giãn theo kích thước nội dung.\n- **B. `match_parent` — ❌ Sai.** Chiếm toàn bộ không gian của cha.\n- **C. `fill_parent` — ❌ Sai.** Tên gọi cũ đã bị thay thế bởi `match_parent` từ API 8.\n- **D. `android:view_width=\"wrap\"` — ❌ Sai.** Thuộc tính không tồn tại.\n\n### Điểm dễ nhầm\n\nTrong `ConstraintLayout`, khi muốn View khớp với các ràng buộc (match constraint), người ta đặt kích thước là `0dp`, chứ không dùng `match_parent`.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 17: *Các hằng số kích thước bố cục: wrap_content và match_parent*)\n- **Tài liệu tham khảo web:** https://developer.android.com/guide/topics/ui/declaring-layout#attributes\n- **Android - quiz Google.pdf trang 75:** Bài kiểm tra “android-development-with-kotlin-4”, Câu hỏi 2, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-070",
+        "type": "single_choice",
+        "question": {
+          "text": "Từ khoá `lateinit` khi đặt trước khai báo biến (`lateinit var`) trong Kotlin mang ý nghĩa gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Biến này không bao giờ được phép khởi tạo giá trị trong suốt vòng đời của ứng dụng"
+          },
+          {
+            "id": "B",
+            "text": "Biến này sẽ được tự động khởi tạo giá trị ban đầu là `null`"
+          },
+          {
+            "id": "C",
+            "text": "Biến này là một lời hứa với trình biên dịch rằng nó sẽ được khởi tạo giá trị muộn hơn (trước khi được truy cập thực tế), giúp tránh việc phải khai báo biến kiểu nullable (`?`)"
+          },
+          {
+            "id": "D",
+            "text": "Biến này chỉ có thể được gán giá trị duy nhất một lần trong luồng chạy ngầm"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Biến này là một lời hứa với trình biên dịch rằng nó sẽ được khởi tạo giá trị muộn hơn (trước khi được truy cập thực tế), giúp tránh việc phải khai báo biến kiểu nullable (`?`)\n\n### Lời giải từng bước\n\nThông thường trong Kotlin, mọi thuộc tính không rỗng (non-null) đều bắt buộc phải được khởi tạo ngay trong constructor hoặc tại vị trí khai báo. Tuy nhiên, trong Android, nhiều đối tượng (như các View liên kết qua `findViewById` hoặc ViewBinding) chỉ có thể được khởi tạo sau khi `setContentView()` được gọi trong `onCreate()`.\nTừ khóa `lateinit var` (Late Initialized Property) báo cho trình biên dịch biết: biến này sẽ được gán giá trị sau, cho phép khai báo kiểu non-null mà không cần gán giá trị khởi đầu hoặc gán `= null`. Nếu truy cập trước khi khởi tạo, hệ thống sẽ ném ra ngoại lệ `UninitializedPropertyAccessException`.\n\n### Phân tích từng lựa chọn\n\n- **A. Không bao giờ khởi tạo — ❌ Sai.** Biến bắt buộc phải được khởi tạo trước khi dùng.\n- **B. Tự động khởi tạo về null — ❌ Sai.** `lateinit` chỉ áp dụng cho kiểu non-null, không thể gán null.\n- **C. Lời hứa khởi tạo sau, tránh nullable — ✅ Đúng.** Bản chất của `lateinit` trong Kotlin.\n- **D. Gán trong luồng ngầm — ❌ Sai.** Không liên quan đến luồng (threading).\n\n### Điểm dễ nhầm\n\n`lateinit` chỉ dùng được với biến có thể thay đổi `var`, không dùng được với `val`, và không dùng được với các kiểu dữ liệu nguyên thủy (primitive types như `Int`, `Boolean`, `Double`).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 3 - Classes and objects.pptx` (Slide 15: *Khởi tạo muộn với từ khóa lateinit var trong Android Activity*)\n- **Tài liệu tham khảo web:** https://kotlinlang.org/docs/properties.html#late-initialized-properties-and-variables\n- **Android - quiz Google.pdf trang 76:** Bài kiểm tra “android-development-with-kotlin-4”, Câu hỏi 4, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "kotlin",
+          "chuong-3"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-071",
+        "type": "single_choice",
+        "question": {
+          "text": "Thành phần nào sau đây thuộc nhóm thành phần vùng chứa bố cục (`ViewGroup`) trong Android?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`EditText`"
+          },
+          {
+            "id": "B",
+            "text": "`LinearLayout`"
+          },
+          {
+            "id": "C",
+            "text": "`TextView`"
+          },
+          {
+            "id": "D",
+            "text": "`Button`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** `LinearLayout`\n\n### Lời giải từng bước\n\n- `LinearLayout` kế thừa từ `android.view.ViewGroup`, có vai trò chứa và sắp xếp các view con theo một chiều duy nhất (chiều dọc `vertical` hoặc chiều ngang `horizontal`).\n- `EditText`, `TextView`, và `Button` đều là các tiện ích giao diện cụ thể kế thừa từ `android.view.View`, không phải là lớp kế thừa từ `ViewGroup`.\n\n### Phân tích từng lựa chọn\n\n- **A. EditText — ❌ Sai.** Là `View` nhập văn bản (kế thừa `TextView`).\n- **B. LinearLayout — ✅ Đúng.** Là `ViewGroup` quản lý bố cục.\n- **C. TextView — ❌ Sai.** Là `View` hiển thị văn bản.\n- **D. Button — ❌ Sai.** Là `View` nút nhấn.\n\n### Điểm dễ nhầm\n\nNhận diện nhanh: Các lớp có hậu tố `Layout` (ConstraintLayout, LinearLayout, FrameLayout, RelativeLayout, TableLayout) đều là `ViewGroup`.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 16: *Phân loại View và ViewGroup*)\n- **Tài liệu tham khảo web:** https://developer.android.com/reference/android/widget/LinearLayout\n- **Android - quiz Google.pdf trang 78:** Bài kiểm tra “android-development-with-kotlin-5”, Câu hỏi 1, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-072",
+        "type": "single_choice",
+        "question": {
+          "text": "Hệ phân cấp chế độ xem (View hierarchy) nào sau đây là KHÔNG HỢP LỆ trong cây giao diện của Android?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`LinearLayout` > `TextView`, `TextView`, `ImageView`"
+          },
+          {
+            "id": "B",
+            "text": "`ScrollView` > `LinearLayout` > `TextView`, `Button`"
+          },
+          {
+            "id": "C",
+            "text": "`TextView` > `TextView`, `ImageView`, `ScrollView`"
+          },
+          {
+            "id": "D",
+            "text": "`ConstraintLayout` > `TextView`, `EditText`, `Button`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** `TextView` > `TextView`, `ImageView`, `ScrollView`\n\n### Lời giải từng bước\n\nQuy tắc cơ bản của cây phân cấp giao diện (View Tree) trong Android:\n- Chỉ có các lớp kế thừa từ `ViewGroup` mới có khả năng chứa các phần tử con (`children`).\n- `TextView` là một nút lá (`leaf View`) kế thừa trực tiếp từ `View`, nó không phải là `ViewGroup` nên hoàn toàn không thể chứa bất kỳ `View` hay `ViewGroup` con nào khác bên trong nó.\nDo đó, cấu trúc `TextView` chứa các view con là hoàn toàn không hợp lệ và sẽ gây lỗi biên dịch bố cục XML.\n\n### Phân tích từng lựa chọn\n\n- **A. LinearLayout > ... — ❌ Hợp lệ.** LinearLayout là ViewGroup chứa các View con.\n- **B. ScrollView > LinearLayout > ... — ❌ Hợp lệ.** ScrollView chứa 1 ViewGroup con trực tiếp là LinearLayout.\n- **C. TextView > ... — ✅ BẤT HỢP LỆ (cần chọn).** TextView không thể làm cha chứa các View khác.\n- **D. ConstraintLayout > ... — ❌ Hợp lệ.** ConstraintLayout chứa các View con.\n\n### Điểm dễ nhầm\n\nNhớ quy tắc: Trong sơ đồ cây UI, `ViewGroup` là cành/nhánh (branches), còn các widget hiển thị như `TextView`, `Button`, `ImageView` là lá (leaves).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 15: *Cấu trúc cây phân cấp giao diện người dùng*)\n- **Tài liệu tham khảo web:** https://developer.android.com/guide/topics/ui/declaring-layout\n- **Android - quiz Google.pdf trang 78:** Bài kiểm tra “android-development-with-kotlin-5”, Câu hỏi 2, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-073",
+        "type": "single_choice",
+        "question": {
+          "text": "Kiểu (Styles) là các tài nguyên được xác định trong tệp XML (ví dụ `res/values/styles.xml` hoặc `themes.xml`). Khi sử dụng Style, bạn có thể chỉ định màu sắc, phông chữ, kích thước văn bản cùng nhiều đặc điểm hiển thị khác cho một `View`. Phát biểu trên là Đúng hay Sai?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đúng"
+          },
+          {
+            "id": "B",
+            "text": "Sai"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Đúng\n\n### Lời giải từng bước\n\nTheo định nghĩa tài nguyên Android, một `Style` là một tập hợp các thuộc tính định dạng (như màu chữ `android:textColor`, kích thước `android:textSize`, khoảng đệm `android:padding`, màu nền `android:background`) được gom lại trong một thẻ `<style name=\"...\">` trong thư mục `res/values/`. Khi một `View` áp dụng style này thông qua thuộc tính `style=\"@style/...\"`, nó sẽ tự động kế thừa tất cả các thuộc tính định dạng đó, giúp tái sử dụng và đảm bảo tính nhất quán của giao diện.\n\n### Phân tích từng lựa chọn\n\n- **A. Đúng — ✅ Đúng.** Định nghĩa chính xác về Style trong Android.\n- **B. Sai — ❌ Sai.** Không phản ánh đúng cơ chế của Android Style.\n\n### Điểm dễ nhầm\n\nPhân biệt: `Style` áp dụng cho một `View` cụ thể; còn `Theme` là một Style được áp dụng cho toàn bộ `Activity` hoặc toàn bộ ứng dụng (Application).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 26: *Định nghĩa và áp dụng Styles trong Android*)\n- **Tài liệu tham khảo web:** https://developer.android.com/develop/ui/views/theming/themes\n- **Android - quiz Google.pdf trang 78:** Bài kiểm tra “android-development-with-kotlin-5”, Câu hỏi 3, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-074",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu sau đây là Đúng hay Sai: “Một `View` đơn lẻ thông thường có thể chứa bất kỳ số lượng `View` hoặc `ViewGroup` nào khác dưới dạng phần tử con”?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đúng, `View` là lớp cơ sở nên có thể chứa không giới hạn các phần tử con"
+          },
+          {
+            "id": "B",
+            "text": "Sai, chỉ có các lớp kế thừa từ `ViewGroup` mới có thể chứa các phần tử con, còn `View` thông thường không thể chứa phần tử con"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Sai, chỉ có các lớp kế thừa từ `ViewGroup` mới có thể chứa các phần tử con, còn `View` thông thường không thể chứa phần tử con\n\n### Lời giải từng bước\n\nTrong kiến trúc Android UI Toolkit:\n- `View` là phần tử cơ bản hiển thị trên màn hình và không có cấu trúc dữ liệu hay phương thức (`addView`) để quản lý các thành phần con.\n- `ViewGroup` là lớp con trực tiếp của `View` được thiết kế chuyên biệt để làm vùng chứa (container), cung cấp các phương thức như `addView()`, `removeView()`, `getChildAt()` để quản lý danh sách các view con.\nDo đó, phát biểu cho rằng một `View` thông thường có thể chứa các view con là hoàn toàn **Sai**.\n\n### Phân tích từng lựa chọn\n\n- **A. Đúng — ❌ Sai.** Nhầm lẫn giữa lớp con ViewGroup và lớp cha View.\n- **B. Sai — ✅ Đúng.** Chỉ `ViewGroup` mới có khả năng chứa các View con.\n\n### Điểm dễ nhầm\n\nNhớ rằng tất cả `ViewGroup` đều là `View`, nhưng KHÔNG PHẢI tất cả `View` đều là `ViewGroup`.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 15: *Mối quan hệ kế thừa giữa View và ViewGroup*)\n- **Tài liệu tham khảo web:** https://developer.android.com/reference/android/view/ViewGroup\n- **Android - quiz Google.pdf trang 79:** Bài kiểm tra “android-development-with-kotlin-5”, Câu hỏi 4, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-075",
+        "type": "single_choice",
+        "question": {
+          "text": "Nếu được thiết lập trên một `View`, giá trị thuộc tính hiển thị nào sau đây (`android:visibility`) sẽ ẩn hoàn toàn chế độ xem đó và đồng thời KHÔNG chiếm bất kỳ không gian kích thước nào trong bố cục màn hình?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`visible` (hiển thị)"
+          },
+          {
+            "id": "B",
+            "text": "`invisible` (không hiển thị)"
+          },
+          {
+            "id": "C",
+            "text": "`gone` (không tồn tại trong bố cục)"
+          },
+          {
+            "id": "D",
+            "text": "`hide` (ẩn)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** `gone` (không tồn tại trong bố cục)\n\n### Lời giải từng bước\n\nThuộc tính `android:visibility` có 3 giá trị chuẩn:\n- `visible` (0): View hiển thị bình thường trên màn hình và chiếm không gian.\n- `invisible` (1): View bị ẩn (trong suốt) nhưng vẫn tham gia tính toán bố cục và vẫn chiếm trọn không gian ban đầu của nó.\n- `gone` (2): View bị ẩn hoàn toàn và bị loại bỏ khỏi quá trình tính toán bố cục, tương đương như việc nó không hề tồn tại trên màn hình (không chiếm bất kỳ pixel không gian nào).\n`hide` không phải là giá trị thuộc tính hợp lệ của Android.\n\n### Phân tích từng lựa chọn\n\n- **A. visible — ❌ Sai.** Hiển thị bình thường.\n- **B. invisible — ❌ Sai.** Ẩn nhưng vẫn giữ nguyên diện tích chiếm dụng trong layout.\n- **C. gone — ✅ Đúng.** Ẩn và không chiếm diện tích trong layout.\n- **D. hide — ❌ Sai.** Giá trị không tồn tại trong Android SDK.\n\n### Điểm dễ nhầm\n\nPhân biệt rất rõ giữa `invisible` (vẫn chiếm chỗ) và `gone` (biến mất hoàn toàn, không chiếm chỗ, các view xung quanh co lại lấp vào chỗ trống).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 23: *Thuộc tính android:visibility và sự khác biệt giữa invisible và gone*)\n- **Tài liệu tham khảo web:** https://developer.android.com/reference/android/view/View#setVisibility(int)\n- **Android - quiz Google.pdf trang 79:** Bài kiểm tra “android-development-with-kotlin-5”, Câu hỏi 6, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "goog-076",
+        "type": "single_choice",
+        "question": {
+          "text": "Câu nào sau đây là đúng về thành phần hiển thị nút nhấn (`Button`) trong Android?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thành phần hiển thị `Button` là một lớp con của `ViewGroup`"
+          },
+          {
+            "id": "B",
+            "text": "Mỗi màn hình Activity chỉ được phép khai báo tối đa 3 nút bấm `Button`"
+          },
+          {
+            "id": "C",
+            "text": "Nút bấm `Button` ở dạng có thể tương tác nhấn chuột; khi có sự kiện nhấp, trình lắng nghe sự kiện (`OnClickListener`) được đính kèm sẽ thực thi hành động tương ứng"
+          },
+          {
+            "id": "D",
+            "text": "`Button` là một phần mở rộng kế thừa trực tiếp từ lớp `ImageView`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Nút bấm `Button` ở dạng có thể tương tác nhấn chuột; khi có sự kiện nhấp, trình lắng nghe sự kiện (`OnClickListener`) được đính kèm sẽ thực thi hành động tương ứng\n\n### Lời giải từng bước\n\n- `Button` kế thừa trực tiếp từ `TextView` (chứ không phải `ViewGroup` hay `ImageView`).\n- `Button` là một thành phần giao diện tương tác người dùng tiêu chuẩn. Khi người dùng chạm hoặc nhấp vào nút, hệ thống sẽ kích hoạt sự kiện và gọi hàm callback `onClick(View v)` của đối tượng `View.OnClickListener` được thiết lập qua `setOnClickListener`.\n- Không có bất kỳ giới hạn nào về số lượng Button trên một màn hình.\n\n### Phân tích từng lựa chọn\n\n- **A. Button là ViewGroup — ❌ Sai.** Button kế thừa TextView, là View đơn.\n- **B. Tối đa 3 Button — ❌ Sai.** Không hề có giới hạn này.\n- **C. Có thể tương tác, OnClickListener thực thi hành vi — ✅ Đúng.** Bản chất hoạt động của Button.\n- **D. Kế thừa từ ImageView — ❌ Sai.** Button kế thừa TextView (nút bấm hình ảnh là ImageButton).\n\n### Điểm dễ nhầm\n\nNhiều người ngạc nhiên khi biết trong mã nguồn Android SDK, `Button extends TextView` (vì nút bấm có hiển thị nhãn chữ).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 24: *Thành phần Button và xử lý sự kiện với setOnClickListener*)\n- **Tài liệu tham khảo web:** https://developer.android.com/reference/android/widget/Button\n- **Android - quiz Google.pdf trang 80:** Bài kiểm tra “android-development-with-kotlin-5”, Câu hỏi 7, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-077",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong thiết kế giao diện với `ConstraintLayout`, loại quy tắc định kích thước nào sau đây chỉ mở rộng kích thước của một `View` vừa đủ khi cần thiết để phù hợp với nội dung hiển thị bên trong nó?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Co giãn theo nội dung (`wrap_content` / Wrap content)"
+          },
+          {
+            "id": "B",
+            "text": "Quy tắc so khớp ràng buộc (`0dp` / Match constraint)"
+          },
+          {
+            "id": "C",
+            "text": "Kích thước cố định tuyệt đối (Fixed size, ví dụ `100dp`)"
+          },
+          {
+            "id": "D",
+            "text": "Quy tắc ràng buộc đường cơ sở (Baseline constraint)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Co giãn theo nội dung (`wrap_content` / Wrap content)\n\n### Lời giải từng bước\n\nTrong `ConstraintLayout` và Android UI Editor, có 3 chế độ định kích thước chính:\n1. **Wrap Content (`wrap_content`):** View chỉ mở rộng kích thước vừa vặn với nội dung bên trong nó.\n2. **Match Constraint (`0dp`):** View sẽ mở rộng tối đa để lấp đầy khoảng cách giữa các điểm ràng buộc neo của nó.\n3. **Fixed (`Xdp`):** Kích thước cố định không đổi theo nội dung.\nRàng buộc Baseline là quy tắc căn chỉnh dòng chữ theo phương thẳng đứng, không phải chế độ định kích thước.\n\n### Phân tích từng lựa chọn\n\n- **A. Co giãn theo nội dung (wrap_content) — ✅ Đúng.** Đáp ứng chuẩn xác mô tả của câu hỏi.\n- **B. Match constraint (0dp) — ❌ Sai.** Mở rộng theo khoảng cách giữa các ràng buộc, không theo nội dung.\n- **C. Fixed size — ❌ Sai.** Kích thước cố định bất biến.\n- **D. Baseline constraint — ❌ Sai.** Căn chỉnh dòng chân chữ giữa 2 TextView.\n\n### Điểm dễ nhầm\n\nTránh nhầm lẫn giữa định kích cỡ (Sizing: wrap_content, match_constraint, fixed) và căn chỉnh vị trí (Positioning: baseline, center, bias).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 20: *Định kích thước trong ConstraintLayout: wrap_content vs 0dp match_constraint*)\n- **Tài liệu tham khảo web:** https://developer.android.com/training/constraint-layout#adjust-the-view-size\n- **Android - quiz Google.pdf trang 80:** Bài kiểm tra “android-development-with-kotlin-5”, Câu hỏi 9, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-078",
+        "type": "multiple_choice",
+        "question": {
+          "text": "Những lợi ích nào sau đây người lập trình nhận được khi sử dụng Trình chỉnh sửa bố cục trực quan (Layout Editor) trong Android Studio? Chọn số lượng đáp án tuỳ ý.",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kéo và thả (drag & drop) các thành phần giao diện người dùng vào màn hình thông qua trình chỉnh sửa thiết kế hình ảnh (Design view)."
+          },
+          {
+            "id": "B",
+            "text": "Xem và chỉnh sửa trực tiếp các thuộc tính của `View` thông qua bảng thuộc tính (Attributes panel)."
+          },
+          {
+            "id": "C",
+            "text": "Chạy thử nghiệm tương tác và kiểm thử hành vi nhấp nút thực tế của ứng dụng mà không cần khởi chạy app."
+          },
+          {
+            "id": "D",
+            "text": "Dễ dàng chọn loại thiết bị, độ phân giải, hướng xoay màn hình để xem trước bố cục hiển thị."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A, B, D.**\n\n### Lời giải từng bước\n\nTrình chỉnh sửa bố cục (Layout Editor) của Android Studio cung cấp môi trường WYSIWYG mạnh mẽ:\n- Kéo thả các widget từ Palette vào Design surface (A đúng).\n- Chỉnh sửa thuộc tính trực quan trong Attributes window mà không cần gõ code XML (B đúng).\n- Xem trước tức thì giao diện trên nhiều cấu hình thiết bị (Pixel, Tablet, Foldable, màn hình ngang/dọc) (D đúng).\nLayout Editor chỉ là công cụ thiết kế tĩnh, nó không thực thi mã logic nghiệp vụ Kotlin/Java nên không thể kiểm thử hành vi tương tác nhấp nút hay chạy mã xử lý sự kiện (C sai, muốn kiểm thử tương tác phải chạy trên Emulator hoặc thiết bị thật).\n\n### Phân tích từng lựa chọn\n\n- **A. Kéo thả thành phần UI — ✅ Đúng.** Tính năng cốt lõi của Visual Design editor.\n- **B. Chỉnh sửa thuộc tính — ✅ Đúng.** Bảng Attributes panel hỗ trợ tìm kiếm và sửa nhanh thuộc tính.\n- **C. Kiểm thử hành vi nhấp nút — ❌ Không chọn.** Layout Editor không chạy logic sự kiện thời gian thực.\n- **D. Xem trước trên nhiều kích thước thiết bị — ✅ Đúng.** Tính năng Device Preview đa dạng.\n\n### Điểm dễ nhầm\n\nKhông nhầm lẫn giữa việc xem trước giao diện tĩnh (Preview) và việc chạy thử tương tác động của ứng dụng (Interactive Mode / Emulator).\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 12: *Sử dụng Trình chỉnh sửa bố cục Layout Editor trong Android Studio*)\n- **Tài liệu tham khảo web:** https://developer.android.com/studio/write/layout-editor\n- **Android - quiz Google.pdf trang 81:** Bài kiểm tra “android-development-with-kotlin-5”, Câu hỏi 10, đáp án đúng được đánh dấu bằng `check_box` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
+          "chuong-4"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "goog-079",
+        "type": "single_choice",
+        "question": {
+          "text": "Lý do nào sau đây KHÔNG PHẢI là nguyên nhân kỹ thuật giải thích vì sao nên giảm thiểu hoặc tránh việc lặp đi lặp lại các lệnh gọi `findViewById()` trong ứng dụng Android?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mỗi khi được gọi, `findViewById()` phải duyệt đệ quy qua cây phân cấp chế độ xem (View hierarchy) để tìm ID, gây tốn tài nguyên tính toán."
+          },
+          {
+            "id": "B",
+            "text": "`findViewById()` chạy trực tiếp trên luồng giao diện chính (UI Thread)."
+          },
+          {
+            "id": "C",
+            "text": "Các lệnh gọi `findViewById()` dày đặc có thể làm giảm số khung hình (drop frames) và gây giật lag giao diện người dùng."
+          },
+          {
+            "id": "D",
+            "text": "Ứng dụng của bạn sẽ ít có khả năng gặp sự cố sập ứng dụng (`crash`) hơn khi gọi `findViewById()` nhiều lần."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Ứng dụng của bạn sẽ ít có khả năng gặp sự cố sập ứng dụng (`crash`) hơn khi gọi `findViewById()` nhiều lần.\n\n### Lời giải từng bước\n\nCâu hỏi hỏi về lý do **KHÔNG PHẢI**:\n- Các lựa chọn A, B, C đều là nguyên nhân kỹ thuật hoàn toàn chính xác: `findViewById()` thực hiện duyệt cây (tree traversal) trên Main Thread, nếu cây view sâu và gọi nhiều lần (ví dụ trong vòng lặp cuộn) sẽ làm nghẽn UI Thread và gây giật lag (jank).\n- Lựa chọn D là khẳng định sai: Gọi `findViewById()` nhiều lần không hề làm ứng dụng ít lỗi hơn, ngược lại nó dễ gây ra lỗi `NullPointerException` tại thời gian chạy (runtime) nếu ID không tồn tại hoặc sai layout. Đó là lý do Google phát minh ra View Binding để thay thế hoàn toàn `findViewById()` với tính an toàn kiểu (`type-safe`) và an toàn null (`null-safe`).\n\n### Phân tích từng lựa chọn\n\n- **A. Duyệt qua cây phân cấp — ❌ Không chọn.** Là nguyên nhân kỹ thuật thật sự.\n- **B. Chạy trên luồng chính — ❌ Không chọn.** Là nguyên nhân kỹ thuật thật sự.\n- **C. Làm chậm giao diện — ❌ Không chọn.** Là nguyên nhân kỹ thuật thật sự.\n- **D. Ít có khả năng gặp sự cố hơn — ✅ Đúng (lựa chọn cần tìm).** Đây là phát biểu sai về `findViewById()`.\n\n### Điểm dễ nhầm\n\nĐọc kỹ câu hỏi phủ định “KHÔNG PHẢI là nguyên nhân”. View Binding ra đời chính là để giải quyết cả vấn đề hiệu năng lẫn an toàn tránh crash của `findViewById()`.\n\n### Nguồn\n\n- **Slide bài giảng:** `~/courses/android/Slides/Lesson 4 Build your first Android app-Compose-Vn.pdf` (Slide 31: *Nhược điểm của findViewById() và giải pháp View Binding*)\n- **Tài liệu tham khảo web:** https://developer.android.com/topic/libraries/view-binding\n- **Android - quiz Google.pdf trang 81:** Bài kiểm tra “android-development-with-kotlin-5”, Câu hỏi 11, đáp án đúng được đánh dấu bằng `radio_button_checked` và phản hồi “Chính xác!”."
+        },
+        "tags": [
+          "android",
+          "ui",
           "chuong-4"
         ],
         "difficulty": "medium"
