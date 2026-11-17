@@ -19,7 +19,9 @@ export function HomePage() {
       let failed = 0;
       for (const asset of quizAssets) {
         setMessage(`Importing ${asset.filename}... (${loaded}/${quizAssets.length})`);
-        const qRes = await fetch(asset.url);
+        const assetUrl = new URL(asset.url, window.location.href);
+        assetUrl.searchParams.set('v', String(Date.now()));
+        const qRes = await fetch(assetUrl, { cache: 'no-store' });
         if (!qRes.ok) {
           failed++;
           console.error(`Failed to fetch ${asset.filename}: ${qRes.status}`);

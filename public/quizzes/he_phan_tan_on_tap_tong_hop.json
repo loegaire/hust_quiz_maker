@@ -1,0 +1,2525 @@
+{
+  "schemaVersion": 1,
+  "quiz": {
+    "id": "he-phan-tan-on-tap-tong-hop",
+    "title": "Hệ phân tán - Ôn tập tổng hợp",
+    "description": "Bộ ôn tập tổng hợp Hệ phân tán (IT4611 - Các hệ thống phân tán và ứng dụng). Gồm 56 câu được chọn lọc chỉ từ các nguồn có ĐÁP ÁN ĐƯỢC ĐÁNH DẤU hợp lệ: (1) đáp án chính thức `đáp án đề kì 20212` (40 khóa, 37 câu khôi phục được lựa chọn) và (2) đề `cuối kì 20221` có 25 đáp án tô đỏ; qua kiểm định đối chiếu kiến thức chuẩn (Tanenbaum/Coulouris) đạt 23/25 (92%) nên được dùng làm khóa, loại 2 câu mâu thuẫn kiến thức chuẩn và 4 câu trùng lặp với nguồn 1. Mỗi lời giải có đáp án, lập luận từng bước, phân tích từng lựa chọn, điểm dễ nhầm và nguồn.",
+    "language": "vi",
+    "source": {
+      "type": "local-course-materials",
+      "notes": "Nguồn & cách đánh dấu: 'Hệ phân tán - đáp án đề kì 20212.pdf' (khóa chính thức, dòng `Key = <đáp án>`; lựa chọn in kèm trong 'Hệ phân tán - cuối kì 20212.pdf' - bản scan được đọc lại bằng ảnh render); 'Hệ phân tán - cuối kì 20221.pdf' (25 đáp án được tô nền đỏ #fe5252 - chỉ dùng sau khi kiểm định đối chiếu kiến thức chuẩn đạt ngưỡng >=90%)."
+    },
+    "settings": {
+      "shuffleQuestions": true,
+      "shuffleChoices": true,
+      "showExplanationAfterAnswer": true
+    },
+    "questions": [
+      {
+        "id": "key20212-1",
+        "type": "single_choice",
+        "question": {
+          "text": "Chỉ ra định nghĩa đúng nhất của Hệ Phân Tán",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tập hợp các máy tính độc lập có kết nối với nhau, cung ứng dịch vụ cho người sử dụng như 1 máy tính đơn duy nhất"
+          },
+          {
+            "id": "B",
+            "text": "Tập hợp các máy tính độc lập không có kết nối với nhau, cung ứng dịch vụ cho người sử dụng như 1 máy tính đơn duy nhất"
+          },
+          {
+            "id": "C",
+            "text": "Tập hợp các máy tính đồng nhất có kết nối với nhau, cung ứng dịch vụ cho người sử dụng như 1 máy tính đơn duy nhất"
+          },
+          {
+            "id": "D",
+            "text": "Tập hợp các máy tính độc lập có kết nối với nhau, cung ứng dịch vụ cho người sử dụng như 1 mạng cục bộ nhiều máy tính"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Tập hợp các máy tính độc lập có kết nối với nhau, cung ứng dịch vụ cho người sử dụng như 1 máy tính đơn duy nhất.\n\n### Lời giải từng bước\n\nĐịnh nghĩa chuẩn của hệ phân tán (Tanenbaum) là một tập hợp các máy tính độc lập nhưng có kết nối với nhau, và các máy này cùng phối hợp để cung ứng dịch vụ cho người dùng như thể đó là một máy tính đơn nhất. Hai thành tố bắt buộc là tính *độc lập* của từng máy và *dịch vụ nhìn thấy như một hệ thống duy nhất*. Phương án A ghi đúng cả hai yếu tố.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — vừa \"độc lập\" vừa \"kết nối\" vừa \"như 1 máy tính đơn duy nhất\".\n- **B.** Sai — câu này nói các máy \"không có kết nối với nhau\", như vậy không thể tạo thành một hệ phân tán.\n- **C.** Sai — yêu cầu \"đồng nhất\" (cấu hình/hệ điều hành giống hệt nhau) không nằm trong định nghĩa; hệ phân tán thường không đồng nhất.\n- **D.** Sai — ví von \"như 1 mạng cục bộ nhiều máy tính\" ngược với mục tiêu trong suốt (nhìn như một máy duy nhất).\n\n### Điểm dễ nhầm\n\nTừ khoá quyết định là **\"độc lập\"** + **\"kết nối\"** + **\"như một máy tính đơn nhất\"**. Bẫy thường gặp là chêm chữ \"đồng nhất\" (C) hoặc đổi \"kết nối\" thành \"không kết nối\" (B).\n\n### Nguồn\n- **Distributed computing:** https://en.wikipedia.org/wiki/Distributed_computing\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 1:** liệt kê 4 phương án và ghi `Key = A`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 1:** bản đề in lại đúng 4 phương án trên.\n- **Tanenbaum & Van Steen, Distributed Systems, Ch.1:** \"a collection of independent computers that appears to its users as a single coherent system\".",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "dinh-nghia-he-phan-tan"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20212-2",
+        "type": "single_choice",
+        "question": {
+          "text": "Một hệ thống áp dụng thuật toán tập trung cho các giải thuật đồng bộ hoá loại trừ lẫn nhau, biết rằng hệ thống có n tiến trình, trong đó có 1 tiến trình làm Coordinator. Hỏi số thông điệp cần thiết phải sử dụng để cho k tiến trình vào sử dụng tài nguyên là bao nhiêu? (giả sử cả quá trình không xảy ra lỗi, và không có 2 yêu cầu nào đến Coordinator vào cùng 1 thời điểm)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "2*k"
+          },
+          {
+            "id": "B",
+            "text": "3*k"
+          },
+          {
+            "id": "C",
+            "text": "n*k"
+          },
+          {
+            "id": "D",
+            "text": "2*n*k"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** $3k$ thông điệp.\n\n### Lời giải từng bước\n\nVới cơ chế tập trung (coordinator), mỗi lượt vào vùng găng gồm **3 thông điệp**: (1) tiến trình gửi REQUEST tới coordinator, (2) coordinator trả GRANT khi tài nguyên rảnh, (3) tiến trình gửi RELEASE khi xong. Vì giả thiết không có lỗi và các yêu cầu không đến cùng lúc nên mỗi lượt đều vừa đúng 3 thông điệp. Do đó cho $k$ lượt cần $3 \\times k$ thông điệp.\n\n### Phân tích từng lựa chọn\n- **A.** $2k$ — thiếu thông điệp RELEASE hoặc thiếu một chiều của REQUEST/GRANT.\n- **B.** $3k$ — đúng: REQUEST + GRANT + RELEASE cho mỗi lượt.\n- **C.** $n k$ — nhầm với thuật toán phân tán (broadcast cho mọi tiến trình).\n- **D.** $2nk$ — sai bản chất.\n\n### Điểm dễ nhầm\n\nPhân biệt **giải thuật tập trung** ($3k$) với **giải thuật phân tán** ($2k(n-1)$). Coordinator nhận REQUEST, cấp GRANT (hoặc xếp hàng nếu đang bận), và nhận RELEASE.\n\n### Nguồn\n- **Mutual exclusion:** https://en.wikipedia.org/wiki/Mutual_exclusion\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 1:** ghi `Key = 3*k`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 1:** đề in 4 lựa chọn 2*k, 3*k, n*k, 2*n*k.\n- **Tanenbaum & Van Steen, Ch.6 (Mutual exclusion, centralized algorithm):** 3 messages per critical-section entry.",
+          "images": [
+            {
+              "id": "fig-centralized-me",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 220\" width=\"460\" height=\"220\"><rect width=\"460\" height=\"220\" fill=\"#fff\"/><rect x=\"170\" y=\"80\" width=\"120\" height=\"50\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"230\" y=\"110\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">Coordinator</text><text x=\"20\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">P1</text><text x=\"20\" y=\"200\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Pk</text><text x=\"400\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">P2</text><line x1=\"40\" y1=\"45\" x2=\"170\" y2=\"90\" stroke=\"#111\"/><line x1=\"170\" y1=\"120\" x2=\"40\" y2=\"55\" stroke=\"#111\" stroke-dasharray=\"4 3\"/><text x=\"70\" y=\"60\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">REQUEST</text><text x=\"60\" y=\"115\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">GRANT</text><line x1=\"40\" y1=\"195\" x2=\"170\" y2=\"130\" stroke=\"#111\"/><text x=\"70\" y=\"180\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">RELEASE</text></svg>",
+              "alt": "Giải thuật tập trung: mỗi lượt 3 thông điệp REQUEST/GRANT/RELEASE qua coordinator"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "loai-tru-lan-nhau"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-3",
+        "type": "single_choice",
+        "question": {
+          "text": "Người ta gọi hệ thống phân tán hợp tác (Collaborative Distributed Systems) là hệ thống có kiến trúc hỗn hợp là vì",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kết hợp hệ thống có cấu trúc và không có cấu trúc"
+          },
+          {
+            "id": "B",
+            "text": "Kết hợp nhiều kiến trúc của nhiều tổ chức khác nhau vào, cùng hợp tác phát triển"
+          },
+          {
+            "id": "C",
+            "text": "Kết hợp kiến trúc tập trung và không tập trung"
+          },
+          {
+            "id": "D",
+            "text": "Kết hợp các mạng LAN lại thành 1 mạng cỡ lớn hơn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Kết hợp kiến trúc tập trung và không tập trung.\n\n### Lời giải từng bước\n\nKiến trúc hỗn hợp (hybrid) của hệ phân tán được mô tả theo hai trục: tập trung/không tập trung (trục phân bố điều khiển) và có cấu trúc/không cấu trúc (trục tổ chức overlay). Hệ thống *hợp tác* (collaborative) thường pha trộn giữa các nút tập trung (máy chủ điều phối) và các nút ngang hàng cùng cộng tác, nên được gọi là kiến trúc hỗn hợp và tương ứng với tổ hợp \"tập trung + không tập trung\".\n\n### Phân tích từng lựa chọn\n- **A.** Sai — \"có cấu trúc/không cấu trúc\" là trục tổ chức overlay, không phải lý do gọi là *collaborative*.\n- **B.** Sai — \"nhiều tổ chức khác nhau hợp tác\" là mô tả tổ chức xã hội, không phải định nghĩa kiến trúc.\n- **C.** Đúng — kiến trúc hybrid/centralized-decentralized.\n- **D.** Sai — ghép LAN thành mạng lớn không liên quan tới tính \"hợp tác\".\n\n### Điểm dễ nhầm\n\n\"Hỗn hợp\" ở đây nói về **tập trung vs không tập trung**, không phải \"cấu trúc vs không cấu trúc\". Đáp án đúng theo khoá chính thức là C.\n\n### Nguồn\n- **Distributed computing:** https://en.wikipedia.org/wiki/Distributed_computing\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 1:** `Key = Kết hợp kiến trúc tập trung và không tập trung`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 1:** in 4 phương án tương ứng.\n- **Coulouris et al., Distributed Systems, Ch.2:** phân loại kiến trúc tập trung / phi tập trung / hỗn hợp.",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "kien-truc-hon-hop"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-4",
+        "type": "single_choice",
+        "question": {
+          "text": "Liên quan đến vấn đề phân phối nội dung, nên chọn giải pháp cập nhật dữ liệu nào để phù hợp với dịch vụ DNS và WWW",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Truyền dữ liệu cập nhật"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ thông báo có cập nhật"
+          },
+          {
+            "id": "C",
+            "text": "Truyền thao tác cập nhật"
+          },
+          {
+            "id": "D",
+            "text": "Tất cả các đáp án trên đều sai"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Truyền dữ liệu cập nhật.\n\n### Lời giải từng bước\n\nVới các dịch vụ phân phối nội dung (DNS, WWW), dữ liệu cần sao chép là các **bản ghi** đã hoàn chỉnh (bản ghi DNS, trang web). Vì vậy chiến lược thích hợp là **đẩy cả dữ liệu cập nhật** sang bản sao (data shipping) — nội dung tự mô tả và không phụ thuộc trạng thái cục bộ của máy đích, nên hiệu quả và đơn giản cho mô hình client–server đọc nhiều.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — truyền nội dung cập nhật (data shipping) hợp với DNS/WWW.\n- **B.** Sai — chỉ thông báo có cập nhật buộc bên nhận phải tự đi lấy, không phù hợp mô hình đẩy dữ liệu tĩnh.\n- **C.** Sai — truyền thao tác (operation shipping) phù hợp khi dữ liệu phụ thuộc trạng thái và thao tác nhỏ, rủi ro sai lệch cho bản sao.\n- **D.** Sai — vì A đúng.\n\n### Điểm dễ nhầm\n\nPhân biệt **data shipping** (gửi cả dữ liệu mới) và **operation shipping** (gửi thao tác để bên kia thực thi). DNS/WWW thiên về data shipping.\n\n### Nguồn\n- **Replication (computing):** https://en.wikipedia.org/wiki/Replication_(computing)\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 1:** `Key = Truyền dữ liệu cập nhật`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 1:** in 4 phương án.\n- **Tanenbaum & Van Steen, Ch.7 (Consistency & replication):** data shipping vs operation shipping cho nội dung phân tán.",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "replication"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-5",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu là sự khác biệt giữa cơ chế đồng bộ hoá vật lý và đồng bộ hoá logic",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đồng bộ hóa đồng hồ vật lý được triển khai ở tầng vật lý, còn đồng bộ hóa đồng hồ logic được triển khai trên tầng ứng dụng"
+          },
+          {
+            "id": "B",
+            "text": "Đồng bộ hóa đồng hồ vật lý dùng để sắp xếp lại thứ tự các sự kiện trên các tiến trình, còn đồng bộ hóa đồng hồ logic dùng để đảm bảo thứ tự các sự kiện giống nhau trên mọi tiến trình"
+          },
+          {
+            "id": "C",
+            "text": "Hai khái niệm này hoàn toàn như nhau"
+          },
+          {
+            "id": "D",
+            "text": "Đồng bộ hóa đồng hồ vật lý hướng đến hiệu chỉnh các đồng hồ vật lý ở các máy về giống nhau, còn đồng bộ hóa đồng hồ logic chỉ quan tâm đến thứ tự của các sự kiện"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Đồng bộ hoá đồng hồ vật lý hiệu chỉnh các đồng hồ thực cho giống nhau; đồng bộ hoá logic chỉ quan tâm tới thứ tự các sự kiện.\n\n### Lời giải từng bước\n\nĐồng bộ vật lý (NTP, Cristian, Berkeley) đưa các đồng hồ thực về gần nhau để thoả mãn quan hệ thời gian tuyệt đối. Đồng bộ logic (Lamport, vector clock) **không** đo thời gian thực mà chỉ gán nhãn sao cho nếu sự kiện $a$ xảy ra trước $b$ theo quan hệ happened-before thì nhãn của $a$ nhỏ hơn nhãn của $b$. Vậy khác biệt cốt lõi: vật lý hướng tới chỉnh đồng hồ về giống nhau, logic chỉ quan tâm tới **thứ tự**.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — không phải khác biệt về tầng triển khai.\n- **B.** Sai — mô tả ngược vai trò.\n- **C.** Sai — hai cơ chế khác nhau về bản chất.\n- **D.** Đúng — đúng bản chất của cả hai cơ chế.\n\n### Điểm dễ nhầm\n\nĐồng hồ logic *không* đo thời gian; đừng nhầm \"sắp xếp sự kiện\" là việc của đồng hồ vật lý.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 1:** `Key = Đồng bộ hoá vật lý hướng tới hiệu chỉnh đồng hồ các máy về giống nhau, còn đồng bộ hoá logic chỉ quan tâm tới thứ tự sự kiện`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 1:** in 4 phương án.\n- **Wikipedia, Lamport timestamp:** https://en.wikipedia.org/wiki/Lamport_timestamp",
+          "images": [
+            {
+              "id": "fig-clock-sync",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 160\" width=\"520\" height=\"160\"><rect width=\"520\" height=\"160\" fill=\"#fff\"/><text x=\"20\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Physical sync</text><line x1=\"140\" y1=\"25\" x2=\"500\" y2=\"25\" stroke=\"#111\"/><text x=\"150\" y=\"20\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">t (real time, NTP/Berkeley)</text><text x=\"20\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Logical sync</text><line x1=\"140\" y1=\"125\" x2=\"500\" y2=\"125\" stroke=\"#111\"/><circle cx=\"200\" cy=\"125\" r=\"5\" fill=\"#111\"/><circle cx=\"300\" cy=\"125\" r=\"5\" fill=\"#111\"/><circle cx=\"420\" cy=\"125\" r=\"5\" fill=\"#111\"/><text x=\"185\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">a</text><text x=\"285\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">b</text><text x=\"405\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">c</text><text x=\"140\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">only a &#8594; b &#8594; c order matters</text></svg>",
+              "alt": "Đồng bộ vật lý đo thời gian thực; đồng bộ logic chỉ xét thứ tự sự kiện"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "dong-bo-hoa"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20212-6",
+        "type": "single_choice",
+        "question": {
+          "text": "Hệ thống CAN là một hệ thống",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Có kiến trúc tập trung, có cấu trúc"
+          },
+          {
+            "id": "B",
+            "text": "Có kiến trúc không tập trung, không có cấu trúc"
+          },
+          {
+            "id": "C",
+            "text": "Có kiến trúc hỗn hợp"
+          },
+          {
+            "id": "D",
+            "text": "Có kiến trúc không tập trung, có cấu trúc"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Có kiến trúc không tập trung, có cấu trúc.\n\n### Lời giải từng bước\n\nCAN (Content-Addressable Network) là một DHT được xây trên một không gian toạ độ Descartes nhiều chiều: mỗi nút sở hữu một \"zone\" trong không gian đó và định tuyến theo toạ độ. Không có nút điều khiển trung tâm → **không tập trung**; nhưng các zone/vùng được phân chia và định tuyến theo quy tắc rõ ràng → **có cấu trúc** (structured overlay).\n\n### Phân tích từng lựa chọn\n- **A.** Sai — CAN không có nút điều khiển trung tâm.\n- **B.** Sai — CAN là structured (có cấu trúc), không phải unstructured như Gnutella ban đầu.\n- **C.** Sai — không phải hybrid.\n- **D.** Đúng — decentralised + structured.\n\n### Điểm dễ nhầm\n\nNhớ quy tắc: **Chord, CAN, Pastry, Tapestry** đều là *decentralised + structured*. Chỉ các mạng như Gnutella là *unstructured*.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 1:** `Key = Có kiến trúc không tập trung, có cấu trúc`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 1:** in 4 phương án.\n- **Wikipedia, Content-addressable network:** https://en.wikipedia.org/wiki/Content_addressable_network",
+          "images": [
+            {
+              "id": "fig-can",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 260\" width=\"460\" height=\"260\"><rect width=\"460\" height=\"260\" fill=\"#fff\"/><rect x=\"40\" y=\"40\" width=\"160\" height=\"90\" fill=\"#e8f2ff\" stroke=\"#111\"/><rect x=\"40\" y=\"130\" width=\"160\" height=\"90\" fill=\"#fff\" stroke=\"#111\"/><rect x=\"200\" y=\"40\" width=\"160\" height=\"180\" fill=\"#fff\" stroke=\"#111\"/><text x=\"70\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">N1</text><text x=\"70\" y=\"180\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">N2</text><text x=\"250\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">N3</text><text x=\"40\" y=\"25\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">CAN = Cartesian zones (2D)</text></svg>",
+              "alt": "CAN chia không gian toạ độ nhiều chiều thành các zone do các nút sở hữu"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "kien-truc-phi-tap-trung"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-7",
+        "type": "single_choice",
+        "question": {
+          "text": "Hệ thống có 16 tiến trình (P0-P15) và áp dụng giải thuật bầu chọn Bully để chọn ra một tiến trình làm Coordinator. Giả sử có 3 tiến trình bị lỗi dừng hoạt động là P13, P14 và P15. Giả sử P6 bắt đầu phát động bầu chọn. Hỏi hệ thống mất bao nhiêu thông điệp để bầu chọn ra được Coordinator là P12? (chú ý: tính luôn cả 12 thông điệp quảng bá cuối cùng của P12 cho P0-P11 để báo là mình đã được chọn)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "75"
+          },
+          {
+            "id": "B",
+            "text": "67"
+          },
+          {
+            "id": "C",
+            "text": "92"
+          },
+          {
+            "id": "D",
+            "text": "98"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** 75 thông điệp.\n\n### Lời giải từng bước\n\nBully: khi một tiến trình phát động bầu chọn, nó gửi ELECTION cho **mọi** tiến trình có ID lớn hơn (kể cả các tiến trình đã chết), rồi các tiến trình còn sống có ID lớn hơn trả lời OK và tiếp tục gửi ELECTION cho các tiến trình lớn hơn nữa. Với P13,P14,P15 đã chết, chuỗi phát động là P6 → P7 → ... → P12.\n\n- Thông điệp ELECTION: P6 gửi 9 (P7–P15), P7 gửi 8, P8 gửi 7, P9 gửi 6, P10 gửi 5, P11 gửi 4, P12 gửi 3 ⇒ $9+8+7+6+5+4+3 = 42$.\n- Thông điệp OK: P7–P12 trả lời lần lượt $6+5+4+3+2+1 = 21$.\n- P12 thắng và quảng bá COORDINATOR tới P0–P11 (đúng như đề cho): 12 thông điệp.\n\nTổng: $42 + 21 + 12 = 75$.\n\n### Phân tích từng lựa chọn\n- **A.** 75 — đúng tổng ba thành phần trên.\n- **B.** 67 — thiếu một phần thông điệp ELECTION hoặc OK.\n- **C.** 92 — đếm thừa.\n- **D.** 98 — đếm thừa.\n\n### Điểm dễ nhầm\n\nPhải đếm cả ELECTION gửi tới tiến trình *đã chết* (không nhận được OK nhưng vẫn chiếm 1 thông điệp), và đừng quên thông điệp quảng bá COORDINATOR.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 1:** `Key = 75`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 1:** in 4 giá trị 75/67/92/98.\n- **Wikipedia, Bully algorithm:** https://en.wikipedia.org/wiki/Bully_algorithm",
+          "images": [
+            {
+              "id": "fig-bully",
+              "ascii": "P6 --ELECTION--> P7 P8 P9 P10 P11 P12 (+ P13 P14 P15 dead)\nP7 --ELECTION--> P8 P9 P10 P11 P12\nP8 --ELECTION--> P9 P10 P11 P12\nP9 --ELECTION--> P10 P11 P12\nP10 --ELECTION--> P11 P12\nP11 --ELECTION--> P12\n            OK <------------------------------------------ (P7..P12 tra loi)\nP12 --COORDINATOR--> P0 P1 ... P11\nTong: ELECTION 42 + OK 21 + COORDINATOR 12 = 75",
+              "alt": "Chuỗi bầu chọn Bully từ P6 tới coordinator P12"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "bầu-chọn-coordinator"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "key20212-8",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu là nhược điểm của giải pháp định danh dựa vào Home Agent",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Khi thực thể di chuyển, nó phải để lại một con trỏ tham chiếu đến Home Agent. Chuỗi tham chiếu sẽ dài lên theo thời gian."
+          },
+          {
+            "id": "B",
+            "text": "Mỗi khi muốn liên lạc với một thực thể, client phải liên lạc trước tiên với home agent, dù nó ở rất xa."
+          },
+          {
+            "id": "C",
+            "text": "Tên của Home Agent phải được băm bằng một hàm băm, tạo ra 1 khóa và đưa vào hệ thống."
+          },
+          {
+            "id": "D",
+            "text": "Mỗi khi muốn tìm kiếm thực thể, Home Agent phải thực hiện quảng bá thông điệp tìm kiếm đi tất cả các thực thể trong hệ thống."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Mỗi khi muốn liên lạc với một thực thể, client phải liên lạc trước tiên với home agent, dù nó ở rất xa.\n\n### Lời giải từng bước\n\nTrong cơ chế Home Agent (Mobile IP), mỗi thực thể di động luôn được biết đến qua địa chỉ *nhà* (home address) tại home agent. Muốn liên lạc, client luôn phải hỏi home agent trước, rồi home agent mới chuyển (hoặc cung cấp địa chỉ tạm trú) cho client. Vì vậy khi thực thể ở xa, mọi kết nối phải đi vòng qua home agent ở rất xa → tăng độ trễ, đó chính là nhược điểm.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — mô tả chuỗi con trỏ tham chiếu, là nhược điểm của *forwarding pointer* chứ không phải Home Agent.\n- **B.** Đúng — chi phí liên lạc luôn phải qua home agent ở xa.\n- **C.** Sai — đây là đặc điểm của định danh dựa trên hàm băm (DHT), không phải Home Agent.\n- **D.** Sai — mô tả broadcast (quảng bá), là cơ chế định danh kiểu quảng bá.\n\n### Điểm dễ nhầm\n\nPhân biệt nhược điểm của: Home Agent (kết nối vòng qua xa), Forwarding Pointer (chuỗi con trỏ dài), DHT (không có nhược điểm này), Broadcast (tốn traffic).\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 1:** `Key = Mỗi khi muốn liên lạc với một thực thể, client phải liên lạc trước tiên với home agent, dù ở rất xa`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 1:** in 4 phương án.\n- **Wikipedia, Mobile IP:** https://en.wikipedia.org/wiki/Mobile_IP",
+          "images": [
+            {
+              "id": "fig-home-agent",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 200\" width=\"520\" height=\"200\"><rect width=\"520\" height=\"200\" fill=\"#fff\"/><circle cx=\"110\" cy=\"100\" r=\"40\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"80\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Home Agent</text><circle cx=\"420\" cy=\"100\" r=\"40\" fill=\"#fff\" stroke=\"#111\"/><text x=\"400\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Client</text><circle cx=\"265\" cy=\"60\" r=\"36\" fill=\"#fff\" stroke=\"#111\"/><text x=\"240\" y=\"65\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Mobile</text><line x1=\"420\" y1=\"100\" x2=\"150\" y2=\"100\" stroke=\"#111\"/><text x=\"250\" y=\"92\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">1) hoi home agent</text><line x1=\"130\" y1=\"70\" x2=\"240\" y2=\"50\" stroke=\"#111\" stroke-dasharray=\"4 3\"/><text x=\"120\" y=\"45\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">2) chuyen tiep (xa)</text></svg>",
+              "alt": "Client luon phai qua Home Agent o xa truoc khi lien lac thuc the di dong"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "dinh-danh-di-dong"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-9",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong cơ chế sao lưu dựa trên túc số (quorum), điều kiện Nw>N/2 để làm gì",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Để tránh mâu thuẫn đọc-ghi"
+          },
+          {
+            "id": "B",
+            "text": "Để tránh mâu thuẫn đọc-đọc"
+          },
+          {
+            "id": "C",
+            "text": "Để tránh mâu thuẫn ghi-ghi"
+          },
+          {
+            "id": "D",
+            "text": "Để tránh cả 3 mâu thuẫn trên"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Để tránh mâu thuẫn ghi-ghi.\n\n### Lời giải từng bước\n\nVới $N$ bản sao, gọi $N_w$ là túc số ghi và $N_r$ là túc số đọc. Điều kiện $2N_w > N$ (tức $N_w > N/2$) bảo đảm **hai tập ghi bất kỳ luôn giao nhau**, nên hai thao tác ghi đồng thời dựa trên hai tập quorum khác nhau không thể cùng xảy ra — loại bỏ mâu thuẫn ghi-ghi. Còn việc tránh mâu thuẫn đọc-ghi là nhờ điều kiện $N_r + N_w > N$.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — đọc-ghi cần $N_r+N_w>N$.\n- **B.** Sai — đọc-đọc không gây mâu thuẫn dữ liệu.\n- **C.** Đúng — $N_w>N/2$ ⇔ hai ghi-quorum luôn giao nhau.\n- **D.** Sai — không phải cả ba.\n\n### Điểm dễ nhầm\n\nNhớ hai bất đẳng thức: $N_w > N/2$ ⇒ chống **ghi-ghi**; $N_r + N_w > N$ ⇒ chống **đọc-ghi** (đọc luôn thấy bản ghi mới nhất).\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 1:** `Key = Tránh mâu thuẫn ghi-ghi`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 1:** in 4 phương án.\n- **Wikipedia, Quorum (distributed computing):** https://en.wikipedia.org/wiki/Quorum_(distributed_computing)",
+          "images": [
+            {
+              "id": "fig-quorum",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 180\" width=\"460\" height=\"180\"><rect width=\"460\" height=\"180\" fill=\"#fff\"/><text x=\"20\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">N=5, Nw=3, Nr=3</text><circle cx=\"60\" cy=\"110\" r=\"22\" fill=\"#e8f2ff\" stroke=\"#111\"/><circle cx=\"120\" cy=\"110\" r=\"22\" fill=\"#e8f2ff\" stroke=\"#111\"/><circle cx=\"180\" cy=\"110\" r=\"22\" fill=\"#e8f2ff\" stroke=\"#111\"/><circle cx=\"240\" cy=\"110\" r=\"22\" fill=\"#fff\" stroke=\"#111\"/><circle cx=\"300\" cy=\"110\" r=\"22\" fill=\"#fff\" stroke=\"#111\"/><text x=\"40\" y=\"160\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">write quorum (3)</text><text x=\"230\" y=\"160\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">moi cap ghi/ghi va doc/ghi giao nhau</text></svg>",
+              "alt": "Quorum: Nw>N/2 dam bao moi cap write-quorum giao nhau (chong ghi-ghi)"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "quorum"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-10",
+        "type": "single_choice",
+        "question": {
+          "text": "RabbitMQ là công cụ tiện lợi và hiệu quả trong xây dựng",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cơ chế trao đổi thông tin hướng thông điệp bền vững"
+          },
+          {
+            "id": "B",
+            "text": "Cơ chế trao đổi thông tin hướng thông điệp tạm thời"
+          },
+          {
+            "id": "C",
+            "text": "Cơ chế trao đổi thông tin hướng luồng"
+          },
+          {
+            "id": "D",
+            "text": "Tất cả các ý trên đều sai"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Cơ chế trao đổi thông tin hướng thông điệp bền vững.\n\n### Lời giải từng bước\n\nRabbitMQ là một message broker (message-oriented middleware) triển khai AMQP. Thông điệp được đưa vào **hàng đợi** và broker lưu giữ chúng cho tới khi người nhận lấy ra (thậm chí khi người nhận đang offline), nên đây là trao đổi kiểu *persistent (bền vững)* theo kiến trúc lỏng (loosely coupled).\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — RabbitMQ là MOM với hàng đợi bền vững.\n- **B.** Sai — không phải transient.\n- **C.** Sai — stream-oriented (như video/audio) là loại khác.\n- **D.** Sai — vì A đúng.\n\n### Điểm dễ nhầm\n\nBền vững (persistent) ⇔ có lưu trữ trung gian + hàng đợi; tạm thời (transient) ⇔ chỉ gửi khi hai bên cùng online (UDP/socket).\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 2:** `Key = Cơ chế trao đổi thông tin hướng thông điệp bền vững`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 1:** in 4 phương án.\n- **Wikipedia, RabbitMQ:** https://en.wikipedia.org/wiki/RabbitMQ",
+          "images": [
+            {
+              "id": "fig-mom",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 170\" width=\"520\" height=\"170\"><rect width=\"520\" height=\"170\" fill=\"#fff\"/><text x=\"20\" y=\"95\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Producer</text><rect x=\"170\" y=\"60\" width=\"180\" height=\"60\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"205\" y=\"95\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Queue (broker)</text><text x=\"430\" y=\"95\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Consumer</text><line x1=\"110\" y1=\"85\" x2=\"170\" y2=\"85\" stroke=\"#111\"/><line x1=\"350\" y1=\"85\" x2=\"420\" y2=\"85\" stroke=\"#111\"/><text x=\"120\" y=\"75\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">send</text><text x=\"355\" y=\"75\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">pull/push</text></svg>",
+              "alt": "RabbitMQ: thong diep duoc luu trong hang doi cua broker (persistent messaging)"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "message-oriented"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20212-11",
+        "type": "single_choice",
+        "question": {
+          "text": "Giao thức ARP dùng cơ chế định danh nào",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chuyển tiếp con trỏ (Forwarding pointers)"
+          },
+          {
+            "id": "B",
+            "text": "Cơ chế dựa trên Home Agent"
+          },
+          {
+            "id": "C",
+            "text": "Quảng bá (broadcasting)"
+          },
+          {
+            "id": "D",
+            "text": "Cơ chế dựa trên hàm băm phân tán"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Quảng bá (broadcasting).\n\n### Lời giải từng bước\n\nARP (Address Resolution Protocol) tìm địa chỉ MAC ứng với một địa chỉ IP trong cùng mạng LAN bằng cách **gửi broadcast** một gói ARP request tới mọi máy trong miền quảng bá; chỉ máy có địa chỉ IP cần tìm trả lời ARP reply. Đây là cơ chế định danh kiểu quảng bá.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — forwarding pointer dùng cho thực thể di động, không phải ARP.\n- **B.** Sai — home agent thuộc Mobile IP.\n- **C.** Đúng — ARP request là broadcast tới toàn miền LAN.\n- **D.** Sai — DHT dùng cho định danh phân tán quy mô lớn.\n\n### Điểm dễ nhầm\n\nARP dùng **broadcast trong LAN**; đừng nhầm với DNS (phân cấp) hay DHT.\n\n### Nguồn\n- **Address Resolution Protocol:** https://en.wikipedia.org/wiki/Address_Resolution_Protocol\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 2:** `Key = Quảng bá`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 1:** in 4 phương án (trang phải, cột dưới).\n- **Tanenbaum & Van Steen, Ch.5 (Naming):** broadcast-based resolution.",
+          "images": [
+            {
+              "id": "fig-arp",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 180\" width=\"520\" height=\"180\"><rect width=\"520\" height=\"180\" fill=\"#fff\"/><text x=\"200\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">ARP request (broadcast)</text><circle cx=\"90\" cy=\"110\" r=\"30\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"55\" y=\"115\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Who?</text><circle cx=\"250\" cy=\"110\" r=\"30\" fill=\"#fff\" stroke=\"#111\"/><text x=\"235\" y=\"115\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">A</text><circle cx=\"410\" cy=\"110\" r=\"30\" fill=\"#fff\" stroke=\"#111\"/><text x=\"395\" y=\"115\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">B</text><line x1=\"120\" y1=\"110\" x2=\"220\" y2=\"110\" stroke=\"#111\"/><line x1=\"120\" y1=\"120\" x2=\"380\" y2=\"120\" stroke=\"#111\" stroke-dasharray=\"4 3\"/></svg>",
+              "alt": "ARP request duoc quang ba toi moi may trong LAN"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "dinh-danh"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20212-12",
+        "type": "single_choice",
+        "question": {
+          "text": "Các giá trị của bảng finger table của nút số 5 là",
+          "images": [
+            {
+              "id": "fig-chord-ring-12",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 370 400\" width=\"370\" height=\"400\"><rect width=\"370\" height=\"400\" fill=\"#fff\"/><circle cx=\"185\" cy=\"185\" r=\"130\" fill=\"none\" stroke=\"#111\" stroke-width=\"2\"/><circle cx=\"276.9\" cy=\"93.1\" r=\"17\" fill=\"#e8f2ff\" stroke=\"#111\" stroke-width=\"1.5\"/><text x=\"276.9\" y=\"99.1\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">2</text><circle cx=\"305.1\" cy=\"234.7\" r=\"17\" fill=\"#ffe08a\" stroke=\"#111\" stroke-width=\"1.5\"/><text x=\"305.1\" y=\"240.7\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">5</text><circle cx=\"185.0\" cy=\"315.0\" r=\"17\" fill=\"#e8f2ff\" stroke=\"#111\" stroke-width=\"1.5\"/><text x=\"185.0\" y=\"321.0\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">8</text><circle cx=\"64.9\" cy=\"234.7\" r=\"17\" fill=\"#e8f2ff\" stroke=\"#111\" stroke-width=\"1.5\"/><text x=\"64.9\" y=\"240.7\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">11</text><text x=\"10\" y=\"390\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#111\">finger table của nút 5 (nút 5 tô vàng); không gian định danh 0-15</text></svg>",
+              "alt": "Nhẫn Chord 0-15 với các nút 2, 5, 8, 11; nút 5 được tô vàng"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "8, 11, 11, 2"
+          },
+          {
+            "id": "B",
+            "text": "8, 8, 8, 2"
+          },
+          {
+            "id": "C",
+            "text": "8, 11, 2, 5"
+          },
+          {
+            "id": "D",
+            "text": "8, 8, 11, 2"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** 8, 8, 11, 2.\n\n### Lời giải từng bước\n\nTrong Chord, mục thứ $i$ của finger table của nút $n$ là $successor((n+2^{i-1}) \\bmod 2^m)$. Với $m=4$ (nhẫn 0..15) và $n=5$:\n\n- $i=1$: $5+1 = 6 \\Rightarrow$ successor(6) = **8**\n- $i=2$: $5+2 = 7 \\Rightarrow$ successor(7) = **8**\n- $i=3$: $5+4 = 9 \\Rightarrow$ successor(9) = **11**\n- $i=4$: $5+8 = 13 \\Rightarrow$ successor(13) = **2** (vòng qua 0)\n\nVậy bảng là 8, 8, 11, 2.\n\n### Phân tích từng lựa chọn\n- **A.** 8, 11, 11, 2 — sai ở mục thứ 2.\n- **B.** 8, 8, 8, 2 — sai ở mục thứ 3.\n- **C.** 8, 11, 2, 5 — sai nhiều mục.\n- **D.** 8, 8, 11, 2 — đúng theo công thức.\n\n### Điểm dễ nhầm\n\n$successor(k)$ là **nút đầu tiên có ID ≥ k** theo chiều kim đồng hồ; phải lấy \"successor\", không lấy chính giá trị $k$.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 2:** `Key = 8, 8, 11, 2`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 2:** đề + hình nhẫn Chord.\n- **Wikipedia, Chord (peer-to-peer):** https://en.wikipedia.org/wiki/Chord_(peer-to-peer)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "chord-dht"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "key20212-13",
+        "type": "single_choice",
+        "question": {
+          "text": "Các giá trị của bảng finger table của nút số 8 là",
+          "images": [
+            {
+              "id": "fig-chord-ring-13",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 370 400\" width=\"370\" height=\"400\"><rect width=\"370\" height=\"400\" fill=\"#fff\"/><circle cx=\"185\" cy=\"185\" r=\"130\" fill=\"none\" stroke=\"#111\" stroke-width=\"2\"/><circle cx=\"276.9\" cy=\"93.1\" r=\"17\" fill=\"#e8f2ff\" stroke=\"#111\" stroke-width=\"1.5\"/><text x=\"276.9\" y=\"99.1\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">2</text><circle cx=\"305.1\" cy=\"234.7\" r=\"17\" fill=\"#e8f2ff\" stroke=\"#111\" stroke-width=\"1.5\"/><text x=\"305.1\" y=\"240.7\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">5</text><circle cx=\"185.0\" cy=\"315.0\" r=\"17\" fill=\"#ffe08a\" stroke=\"#111\" stroke-width=\"1.5\"/><text x=\"185.0\" y=\"321.0\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">8</text><circle cx=\"64.9\" cy=\"234.7\" r=\"17\" fill=\"#e8f2ff\" stroke=\"#111\" stroke-width=\"1.5\"/><text x=\"64.9\" y=\"240.7\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">11</text><text x=\"10\" y=\"390\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#111\">finger table của nút 8 (nút 8 tô vàng); không gian định danh 0-15</text></svg>",
+              "alt": "Nhẫn Chord 0-15 với các nút 2, 5, 8, 11; nút 8 được tô vàng"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "11, 2, 5, 8"
+          },
+          {
+            "id": "B",
+            "text": "11, 11, 2, 2"
+          },
+          {
+            "id": "C",
+            "text": "11, 11, 11, 2"
+          },
+          {
+            "id": "D",
+            "text": "11, 11, 2, 5"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** 11, 11, 2, 2.\n\n### Lời giải từng bước\n\nVới $n=8$, $m=4$:\n\n- $i=1$: $8+1 = 9 \\Rightarrow$ successor(9) = **11**\n- $i=2$: $8+2 = 10 \\Rightarrow$ successor(10) = **11**\n- $i=3$: $8+4 = 12 \\Rightarrow$ successor(12) = **2** (vòng qua 0)\n- $i=4$: $8+8 = 16 \\equiv 0 \\Rightarrow$ successor(0) = **2**\n\nVậy bảng là 11, 11, 2, 2.\n\n### Phân tích từng lựa chọn\n- **A.** 11, 2, 5, 8 — sai.\n- **B.** 11, 11, 2, 2 — đúng.\n- **C.** 11, 11, 11, 2 — sai ở mục thứ 3.\n- **D.** 11, 11, 2, 5 — sai ở mục thứ 4.\n\n### Điểm dễ nhầm\n\nNhớ tính modulo $2^m$: $8+8 \\equiv 0$ nên phải lấy successor(0), không phải nút 16 (không tồn tại).\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 2:** `Key = 11, 11, 2, 2`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 2:** đề + hình nhẫn Chord.\n- **Wikipedia, Chord (peer-to-peer):** https://en.wikipedia.org/wiki/Chord_(peer-to-peer)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "chord-dht"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "key20212-14",
+        "type": "single_choice",
+        "question": {
+          "text": "Thứ tự các nút mà hệ thống phải duyệt qua để tìm khoá số 9 từ nút số 2 là (biết rằng chiều tìm kiếm là chiều kim đồng hồ)",
+          "images": [
+            {
+              "id": "fig-chord-ring-14",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 370 400\" width=\"370\" height=\"400\"><rect width=\"370\" height=\"400\" fill=\"#fff\"/><circle cx=\"185\" cy=\"185\" r=\"130\" fill=\"none\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"276.9\" y1=\"93.1\" x2=\"185.0\" y2=\"315.0\" stroke=\"#c0392b\" stroke-width=\"2.5\"/><line x1=\"185.0\" y1=\"315.0\" x2=\"64.9\" y2=\"234.7\" stroke=\"#c0392b\" stroke-width=\"2.5\"/><circle cx=\"276.9\" cy=\"93.1\" r=\"17\" fill=\"#e8f2ff\" stroke=\"#111\" stroke-width=\"1.5\"/><text x=\"276.9\" y=\"99.1\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">2</text><circle cx=\"305.1\" cy=\"234.7\" r=\"17\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.5\"/><text x=\"305.1\" y=\"240.7\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">5</text><circle cx=\"185.0\" cy=\"315.0\" r=\"17\" fill=\"#e8f2ff\" stroke=\"#111\" stroke-width=\"1.5\"/><text x=\"185.0\" y=\"321.0\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">8</text><circle cx=\"64.9\" cy=\"234.7\" r=\"17\" fill=\"#e8f2ff\" stroke=\"#111\" stroke-width=\"1.5\"/><text x=\"64.9\" y=\"240.7\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111\">11</text><text x=\"10\" y=\"390\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#111\">tìm khoá 9 từ nút 2: đi qua 8 rồi tới 11</text></svg>",
+              "alt": "Nhẫn Chord: truy vấn khoá 9 xuất phát từ nút 2, đường đi 2 → 8 → 11"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "5 → 8 → 11"
+          },
+          {
+            "id": "B",
+            "text": "11"
+          },
+          {
+            "id": "C",
+            "text": "8 → 11"
+          },
+          {
+            "id": "D",
+            "text": "Không thể tìm thấy khóa số 9"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** 8 → 11.\n\n### Lời giải từng bước\n\nTheo hình, các nút tồn tại là 2, 5, 8, 11 (không có 6, 7, 9, 10, 12, 13), nên $successor(9)=11$ — khoá 9 được lưu tại nút 11. Nút 2 cần tìm khoá 9: mục finger table lớn nhất nhưng vẫn $< 9$ là 8 (do $2+4=6 \\Rightarrow successor(6)=8$), nên nút 2 chuyển truy vấn cho **8**. Nút 8 thấy $successor(9)=11$ nên chuyển tiếp cho **11**. Đường đi duyệt là 2 → 8 → 11, tức thứ tự các nút trung gian là **8 → 11**.\n\n### Phân tích từng lựa chọn\n- **A.** 5 → 8 → 11 — sai, nút 2 không nhảy tới 5 trước.\n- **B.** 11 — thiếu bước qua 8.\n- **C.** 8 → 11 — đúng theo finger table của nút 2 và 8.\n- **D.** Sai — vẫn tìm thấy khoá.\n\n### Điểm dễ nhầm\n\nĐường đi phải theo đúng mục finger table \"lớn nhất nhưng vẫn < khoá\", nên từ nút 2 là nhảy tới 8 trước rồi mới tới 11.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 2:** `Key = 8 -> 11`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 2:** đề + hình nhẫn Chord.\n- **Wikipedia, Chord (peer-to-peer):** https://en.wikipedia.org/wiki/Chord_(peer-to-peer)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "chord-dht"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "key20212-15",
+        "type": "single_choice",
+        "question": {
+          "text": "Socket UDP và socket TCP khác nhau ntn",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Socket TCP sử dụng cơ chế multiplexing, như vậy server không cần tạo socket mới với mỗi yêu cầu kết nối. Còn socket UDP thì ngược lại, sẽ tạo một socket mới cho từng yêu cầu kết nối."
+          },
+          {
+            "id": "B",
+            "text": "Socket UDP sử dụng cổng vật lý, socket TCP sử dụng cổng logic."
+          },
+          {
+            "id": "C",
+            "text": "Socket UDP sử dụng cơ chế multiplexing, như vậy server không cần tạo socket mới với mỗi yêu cầu kết nối. Còn socket TCP thì ngược lại, sẽ tạo một socket mới cho từng yêu cầu kết nối."
+          },
+          {
+            "id": "D",
+            "text": "Hai kiểu socket này không có gì khác nhau."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Socket UDP dùng multiplexing nên không cần tạo socket mới cho mỗi yêu cầu; socket TCP thì ngược lại, tạo một socket mới cho từng yêu cầu kết nối.\n\n### Lời giải từng bước\n\nVới UDP (không kết nối), một socket duy nhất có thể nhận các datagram từ nhiều nguồn khác nhau — tức socket \"dồn kênh\" nhiều luồng dữ liệu. Với TCP (hướng kết nối), mỗi kết nối là một luồng byte riêng biệt nên server phải **accept** và tạo socket riêng cho từng kết nối. Đây là khác biệt cốt lõi theo mô hình Berkeley socket.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — gán nhầm multiplexing cho TCP (thực tế là đặc trưng của UDP).\n- **B.** Sai — không tồn tại khái niệm \"cổng vật lý\"/\"cổng logic\"; cổng (port) là số hiệu ở tầng giao vận dùng như nhau cho cả UDP và TCP.\n- **C.** Đúng — UDP dùng multiplexing nên một socket nhận nhiều nguồn; TCP tạo socket mới cho từng kết nối.\n- **D.** Sai — hai loại socket khác nhau rõ rệt.\n\n### Điểm dễ nhầm\n\nTCP phải `accept()` tạo socket con cho từng kết nối; UDP nhận datagram trên cùng một socket nên không cần socket cho từng yêu cầu.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 2:** `Key = Socket UDP sử dụng cơ chế multiplexing, ... Còn socket TCP thì ngược lại...`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 2:** in 4 phương án.\n- **Tanenbaum & Van Steen, Ch.4 (Berkeley sockets):** https://www.cs.utsa.edu/~korkmaz/teaching/resources-os-grad/tk-slides/ts/ch04-ts-tk-part-1-2-middleware-rpc.pdf",
+          "images": [
+            {
+              "id": "fig-socket",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\" width=\"520\" height=\"190\"><rect width=\"520\" height=\"190\" fill=\"#fff\"/><text x=\"20\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">UDP: 1 socket / nhieu client</text><rect x=\"230\" y=\"25\" width=\"90\" height=\"30\" fill=\"#e8f2ff\" stroke=\"#111\"/><line x1=\"60\" y1=\"20\" x2=\"230\" y2=\"40\" stroke=\"#111\"/><line x1=\"60\" y1=\"60\" x2=\"230\" y2=\"45\" stroke=\"#111\"/><text x=\"20\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">TCP: accept() -> 1 socket / ket noi</text><rect x=\"230\" y=\"130\" width=\"90\" height=\"30\" fill=\"#fff\" stroke=\"#111\"/><rect x=\"360\" y=\"130\" width=\"90\" height=\"30\" fill=\"#fff\" stroke=\"#111\"/><line x1=\"60\" y1=\"145\" x2=\"230\" y2=\"145\" stroke=\"#111\"/><line x1=\"320\" y1=\"145\" x2=\"360\" y2=\"145\" stroke=\"#111\"/></svg>",
+              "alt": "UDP multiplex nhieu client tren mot socket; TCP tao socket rieng cho tung ket noi"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "socket"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-16",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong các kiểu kiến trúc server đa luồng, xét kiến trúc luồng cho mỗi yêu cầu (thread-per-request). GS ứng với mỗi yêu cầu thì thời gian tiêu tốn cho luồng thực thi tương ứng đều như nhau và là 3ms để khởi tạo luồng, 5ms để thực thi công việc, 2ms để huỷ luồng. Server đó nhận được n yêu cầu từ các client gửi tới vào 2 thời điểm. Thời điểm đầu nhận đc cùng lúc n-k yêu cầu, thời điểm sau nhận đc cùng lúc k yêu cầu. Hỏi server mất tổng bao nhiêu thời gian để xử lý n yêu cầu trên",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "20"
+          },
+          {
+            "id": "B",
+            "text": "10*n"
+          },
+          {
+            "id": "C",
+            "text": "3*(n-k) + 5*n + 2*k"
+          },
+          {
+            "id": "D",
+            "text": "20*n"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** $20$ ms.\n\n### Lời giải từng bước\n\nVới kiến trúc thread-per-request, mỗi yêu cầu cần một luồng riêng nhưng các luồng chạy **song song**, nên tổng thời gian xử lý *một lô* yêu cầu chỉ bằng thời gian của một yêu cầu, không nhân lên theo số yêu cầu. Một yêu cầu tốn: $3$ ms khởi tạo $+ 5$ ms thực thi $+ 2$ ms huỷ $= 10$ ms. Vì $n-k$ yêu cầu đến cùng lúc (được xử lý song song ⇒ $10$ ms) rồi $k$ yêu cầu đến cùng lúc (thêm $10$ ms), tổng là $10 + 10 = 20$ ms (độc lập với $n$ và $k$).\n\n### Phân tích từng lựa chọn\n- **A.** 20 — đúng, hai lô × 10 ms.\n- **B.** $10n$ — nhầm tưởng các luồng chạy tuần tự.\n- **C.** Sai bản chất.\n- **D.** $20n$ — sai bội số.\n\n### Điểm dễ nhầm\n\nServer đa luồng xử lý **song song**, nên thời gian chỉ cộng theo số *lô* (đợt) đến, không cộng theo số yêu cầu.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 2:** `Key = 20`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 2:** in 4 phương án 20 / 10*n / 3*(n-k)+5*n+2*k / 20*n.\n- **UCSB, Distributed Systems Lecture 3 (multithreaded servers):** https://courses.ece.ucsb.edu/ECE151/151_S14Moser/Files/DS-3.pdf",
+          "images": [
+            {
+              "id": "fig-tpr",
+              "ascii": "Dot 1: n-k yeu cau den cung luc\n   +-- thread(cau 1): 3 + 5 + 2 = 10 ms\n   +-- thread(cau 2): 3 + 5 + 2 = 10 ms   (chay song song)\n   ...  => 10 ms cho ca dot\nDot 2: k yeu cau den cung luc => 10 ms\nTong = 10 + 10 = 20 ms (khong phu thuoc n,k)",
+              "alt": "Hai dot yeu cau chay song song, tong thoi gian = 2 x 10 ms"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "server-da-luong"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "key20212-17",
+        "type": "single_choice",
+        "question": {
+          "text": "Bài toán yêu cầu bạn so sánh thời gian đọc một tệp (file) của một máy chủ tệp tin (file server) đơn luồng và một máy chủ đa luồng. Phải mất tổng cộng 24ms để nhận 1 yêu cầu (resquest) và thực hiện quá trình xử lý, giả định rằng các dữ liệu cần thiết nằm ở bộ nhớ đệm trong bộ nhớ chính. Nếu cần thiết phải thực hiện một thao tác truy cập ổ đĩa thì cần thêm 90ms, biết rằng việc phải thực hiện thao tác này có xác suất là 1/4. Hỏi máy chủ có thể nhận đc bao nhiêu yêu cầu/giây trong 2 trường hợp: máy chủ là đơn luồng và máy chủ là đa luồng (ngoài luồng nhận và xử lý request, sẽ có thêm 1 luồng để truy cập ổ đĩa nếu cần thiết)?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Với máy chủ đơn luồng có thể phục vụ 25 yêu cầu/s; Với máy chủ đa luồng là 66.67 yêu cầu/s;"
+          },
+          {
+            "id": "B",
+            "text": "Với máy chủ đơn luồng có thể phục vụ 21.5 yêu cầu/s; Với máy chủ đa luồng là 41.67 yêu cầu/s;"
+          },
+          {
+            "id": "C",
+            "text": "Với máy chủ đơn luồng có thể phục vụ 21.5 yêu cầu/s; Với máy chủ đa luồng là 90 yêu cầu/s;"
+          },
+          {
+            "id": "D",
+            "text": "Với máy chủ đơn luồng có thể phục vụ 24.69 yêu cầu/s; Với máy chủ đa luồng là 41.67 yêu cầu/s;"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Đơn luồng 21.5 yêu cầu/s; Đa luồng 41.67 yêu cầu/s.\n\n### Lời giải từng bước\n\nThời gian trung bình một yêu cầu: $24 + \\tfrac{1}{4}\\times 90 = 24 + 22.5 = 46.5$ ms.\n\n- **Đơn luồng:** phục vụ tuần tự ⇒ $1000 / 46.5 \\approx 21.5$ yêu cầu/s.\n- **Đa luồng:** có thêm luồng truy cập đĩa, nên thao tác đĩa (90 ms, xác suất 1/4) **không** chặn luồng xử lý; thời gian chặn trung bình chỉ còn $24$ ms ⇒ $1000 / 24 \\approx 41.67$ yêu cầu/s.\n\n### Phân tích từng lựa chọn\n- **A.** 25 / 66.67 — sai số liệu.\n- **B.** 21.5 / 41.67 — đúng.\n- **C.** 21.5 / 90 — phần đa luồng sai.\n- **D.** 24.69 / 41.67 — phần đơn luồng sai.\n\n### Điểm dễ nhầm\n\nVới đa luồng, I/O đĩa được đẩy sang luồng riêng nên **không** cộng 22.5 ms vào thời gian phục vụ ⇒ dùng $1000/24$.\n\n### Nguồn\n- **UCSB, Distributed Systems Lecture 3:** https://courses.ece.ucsb.edu/ECE151/151_S14Moser/Files/DS-3.pdf\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 2:** `Key = Đơn luồng 21.5 yêu cầu/s; Đa luồng 41.67 yêu cầu/s`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 2:** in 4 phương án.\n- **Tanenbaum & Van Steen, Ch.3 (multithreaded server):** tách luồng I/O khỏi luồng xử lý để ẩn độ trễ.",
+          "images": [
+            {
+              "id": "fig-fileserver",
+              "ascii": "Don luong : 24 + 0.25*90 = 46.5 ms  =>  1000/46.5 ~= 21.5 req/s\nDa luong  : luong xy ly (24 ms) || luong dia (90 ms khi can)\n             =>  1000/24 ~= 41.67 req/s",
+              "alt": "So sanh throughput file server don luong vs da luong"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "server-da-luong"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "key20212-18",
+        "type": "single_choice",
+        "question": {
+          "text": "Vai trò của Middleware trong các HPT",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Là một kho lưu trữ các phần mềm trung gian"
+          },
+          {
+            "id": "B",
+            "text": "Cung cấp các tài nguyên chia sẻ dùng chung cho các tiến trình trong hệ thống"
+          },
+          {
+            "id": "C",
+            "text": "Cung cấp tính trong suốt cho các ứng dụng phân tán ở tầng trên"
+          },
+          {
+            "id": "D",
+            "text": "Chứa cơ sở dữ liệu cho toàn bộ hệ thống"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Cung cấp tính trong suốt cho các ứng dụng phân tán ở tầng trên.\n\n### Lời giải từng bước\n\nMiddleware là tầng phần mềm nằm giữa ứng dụng và hệ điều hành/mạng, cung cấp các dịch vụ chung (RPC/RMI, định danh, đồng bộ, replication, bảo mật...) giúp che giấu sự phân tán (trong suốt truy cập, vị trí, di trú, nhân bản, lỗi) để lập trình viên viết ứng dụng như trên một máy duy nhất.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — không phải \"kho lưu trữ phần mềm\".\n- **B.** Sai — chia sẻ tài nguyên là chức năng tầng hệ điều hành/hệ phân tán, không phải định nghĩa middleware.\n- **C.** Đúng — đúng vai trò cốt lõi: đem lại transparency.\n- **D.** Sai — middleware không phải CSDL.\n\n### Điểm dễ nhầm\n\nTừ khoá vàng cho câu hỏi về middleware là **\"tính trong suốt\"** (transparency).\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 2:** `Key = Cung cấp tính trong suốt cho các ứng dụng phân tán ở tầng trên`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 2:** in 4 phương án.\n- **Tanenbaum & Van Steen, Ch.1/Ch.4 (Middleware layer):** https://www.cs.utsa.edu/~korkmaz/teaching/resources-os-grad/tk-slides/ts/ch04-ts-tk-part-1-2-middleware-rpc.pdf",
+          "images": [
+            {
+              "id": "fig-middleware",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 180\" width=\"520\" height=\"180\"><rect width=\"520\" height=\"180\" fill=\"#fff\"/><rect x=\"60\" y=\"20\" width=\"400\" height=\"35\" fill=\"#fff\" stroke=\"#111\"/><rect x=\"60\" y=\"55\" width=\"400\" height=\"35\" fill=\"#e8f2ff\" stroke=\"#111\"/><rect x=\"60\" y=\"90\" width=\"400\" height=\"35\" fill=\"#fff\" stroke=\"#111\"/><rect x=\"60\" y=\"125\" width=\"400\" height=\"35\" fill=\"#fff\" stroke=\"#111\"/><text x=\"80\" y=\"43\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Application</text><text x=\"80\" y=\"78\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Middleware (RPC, naming, replication)</text><text x=\"80\" y=\"113\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Transport (TCP/UDP)</text><text x=\"80\" y=\"148\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Network / OS</text></svg>",
+              "alt": "Middleware la tang cung cap transparency cho ung dung phan tan"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "middleware"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20212-19",
+        "type": "single_choice",
+        "question": {
+          "text": "Vấn đề gặp phải trong cơ chế RPC khi truyền tham số là tham biến (tham số giá trị)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Máy client và máy server có qui ước biểu diễn dữ liệu khác nhau"
+          },
+          {
+            "id": "B",
+            "text": "Máy client và máy server có hai không gian nhớ khác nhau"
+          },
+          {
+            "id": "C",
+            "text": "Máy client và máy server không có đồng hồ dùng chung"
+          },
+          {
+            "id": "D",
+            "text": "Máy client và máy server không có bộ nhớ chia sẻ dùng chung"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Máy client và máy server có qui ước biểu diễn dữ liệu khác nhau.\n\n### Lời giải từng bước\n\nKhi truyền tham số **theo giá trị** (by value), stub phải *marshal* giá trị vào thông điệp. Vấn đề nảy sinh là các kiến trúc máy có cách biểu diễn dữ liệu khác nhau (ví dụ thứ tự byte little-endian vs big-endian, độ dài số nguyên, cách mã hoá chuỗi). Vì vậy cần một biểu diễn chuẩn (XDR/CDR) để client và server hiểu đúng dữ liệu của nhau.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — đó là vấn đề của tham số giá trị.\n- **B.** Sai — khác không gian nhớ là vấn đề của tham số *tham chiếu* (con trỏ).\n- **C.** Sai — không có đồng hồ chung là vấn đề đồng bộ thời gian.\n- **D.** Sai — không có bộ nhớ chia sẻ là hạn chế chung của RPC, không phải vấn đề riêng khi truyền by-value.\n\n### Điểm dễ nhầm\n\nPhân biệt: **by-value → khác biểu diễn dữ liệu** (marshalling); **by-reference → khác không gian địa chỉ**.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 3:** `Key = Máy client và máy server có qui ước biểu diễn dữ liệu khác nhau`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 2:** in 4 phương án.\n- **Tanenbaum, Ch.4 \"Passing Value Parameter in RPC — Problem: different data representations\":** https://www.cs.utsa.edu/~korkmaz/teaching/resources-os-grad/tk-slides/ts/ch04-ts-tk-part-1-2-middleware-rpc.pdf",
+          "images": [
+            {
+              "id": "fig-rpc-stub",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 200\" width=\"560\" height=\"200\"><rect width=\"560\" height=\"200\" fill=\"#fff\"/><text x=\"30\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Client</text><text x=\"440\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Server</text><rect x=\"30\" y=\"50\" width=\"120\" height=\"35\" fill=\"#fff\" stroke=\"#111\"/><text x=\"45\" y=\"73\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">client stub</text><rect x=\"390\" y=\"50\" width=\"130\" height=\"35\" fill=\"#fff\" stroke=\"#111\"/><text x=\"405\" y=\"73\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">server stub</text><rect x=\"30\" y=\"120\" width=\"120\" height=\"35\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"45\" y=\"143\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">procedure</text><rect x=\"390\" y=\"120\" width=\"130\" height=\"35\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"405\" y=\"143\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">procedure</text><line x1=\"150\" y1=\"67\" x2=\"390\" y2=\"67\" stroke=\"#111\"/><text x=\"200\" y=\"58\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">marshal -> message -> unmarshal</text></svg>",
+              "alt": "RPC: client stub marshal tham so, server stub unmarshal"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "rpc"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-20",
+        "type": "single_choice",
+        "question": {
+          "text": "Thông điệp nào sẽ bị làm trễ lại (ở tầng Middleware) khi đẩy thông tin lên tầng ứng dụng vì không thoả mãn đk trao đổi thông tin có tính nhân quả (sử dụng Vector Clock)",
+          "images": [
+            {
+              "id": "fig-vc-figure",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 250\" width=\"640\" height=\"250\"><rect width=\"640\" height=\"250\" fill=\"#fff\"/><text x=\"10\" y=\"60\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">P0</text><text x=\"10\" y=\"110\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">P1</text><text x=\"10\" y=\"160\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">P2</text><text x=\"10\" y=\"210\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">P3</text><line x1=\"50\" y1=\"55\" x2=\"620\" y2=\"55\" stroke=\"#111\"/><line x1=\"50\" y1=\"105\" x2=\"620\" y2=\"105\" stroke=\"#111\"/><line x1=\"50\" y1=\"155\" x2=\"620\" y2=\"155\" stroke=\"#111\"/><line x1=\"50\" y1=\"205\" x2=\"620\" y2=\"205\" stroke=\"#111\"/><line x1=\"120\" y1=\"55\" x2=\"300\" y2=\"155\" stroke=\"#c0392b\" stroke-width=\"2\"/><text x=\"150\" y=\"95\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#c0392b\">m1 (P0 -&gt; P2) den MUON</text><line x1=\"300\" y1=\"105\" x2=\"420\" y2=\"155\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"300\" y1=\"105\" x2=\"520\" y2=\"205\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"310\" y=\"128\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">m2 (P1 -&gt; P2, P3)</text><circle cx=\"120\" cy=\"55\" r=\"5\" fill=\"#111\"/><circle cx=\"300\" cy=\"105\" r=\"5\" fill=\"#111\"/><circle cx=\"420\" cy=\"155\" r=\"5\" fill=\"#111\"/><circle cx=\"300\" cy=\"155\" r=\"5\" fill=\"#111\"/><text x=\"270\" y=\"175\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#c0392b\">m2 da giao truoc m1</text><text x=\"450\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">thoi gian -&gt;</text></svg>",
+              "alt": "So do vector clock: m2 (P1->P2) den P2 truoc m1 (P0->P2), nen m1 vi pham nhan qua va bi giu lai"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thông điệp m1 từ P0 → P2"
+          },
+          {
+            "id": "B",
+            "text": "Thông điệp m2 từ P1 → P3"
+          },
+          {
+            "id": "C",
+            "text": "Thông điệp m2 từ P1 → P2"
+          },
+          {
+            "id": "D",
+            "text": "Thông điệp m2 từ P1 → P0"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Thông điệp m1 từ P0 → P2.\n\n### Lời giải từng bước\n\nGiao thông điệp bảo toàn nhân quả (causal delivery) yêu cầu một thông điệp chỉ được chuyển lên tầng ứng dụng khi mọi thông điệp \"xảy ra trước\" nó đã được nhận. Theo hình, m1 (P0 → P2) đến P2 **muộn** so với các thông điệp khác mà P2 đã nhận, do đó vector clock của m1 không thoả điều kiện nhân quả và middleware phải **giữ lại (làm trễ)** m1 cho tới khi đủ điều kiện, còn m2 vẫn được giao bình thường.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — m1 (P0→P2) bị giữ lại.\n- **B.**, **C.**, **D.** Sai — các thông điệp m2 không vi phạm nhân quả trong tình huống này.\n\n### Điểm dễ nhầm\n\nBảo toàn nhân quả ⇒ **giữ lại** thông điệp đến sớm/nghịch thứ tự, không phải huỷ bỏ.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 3:** `Key = Thông điệp m1 từ P0 -> P2`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 2:** hình vector clock + 4 phương án.\n- **Wikipedia, Vector clock:** https://en.wikipedia.org/wiki/Vector_clock",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "vector-clock"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "key20212-21",
+        "type": "single_choice",
+        "question": {
+          "text": "GS thời điểm ban đầu các giá trị vector clock đều là (0, 0, 0, 0), vậy thì các giá trị vector clock ở các thời điểm T1 – T4 là",
+          "images": [
+            {
+              "id": "fig-vc-figure2",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 250\" width=\"640\" height=\"250\"><rect width=\"640\" height=\"250\" fill=\"#fff\"/><text x=\"10\" y=\"60\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">P0</text><text x=\"10\" y=\"110\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">P1</text><text x=\"10\" y=\"160\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">P2</text><text x=\"10\" y=\"210\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">P3</text><line x1=\"50\" y1=\"55\" x2=\"620\" y2=\"55\" stroke=\"#111\"/><line x1=\"50\" y1=\"105\" x2=\"620\" y2=\"105\" stroke=\"#111\"/><line x1=\"50\" y1=\"155\" x2=\"620\" y2=\"155\" stroke=\"#111\"/><line x1=\"50\" y1=\"205\" x2=\"620\" y2=\"205\" stroke=\"#111\"/><line x1=\"150\" y1=\"55\" x2=\"330\" y2=\"155\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"175\" y=\"95\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">m1 (P0 -&gt; P2)</text><line x1=\"230\" y1=\"105\" x2=\"390\" y2=\"55\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"230\" y1=\"105\" x2=\"450\" y2=\"155\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"245\" y=\"128\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">m2 (P1 -&gt; P0, P2)</text><circle cx=\"110\" cy=\"105\" r=\"6\" fill=\"#c0392b\"/><text x=\"95\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#c0392b\">T1</text><circle cx=\"400\" cy=\"55\" r=\"6\" fill=\"#c0392b\"/><text x=\"392\" y=\"42\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#c0392b\">T2</text><circle cx=\"200\" cy=\"155\" r=\"6\" fill=\"#c0392b\"/><text x=\"185\" y=\"145\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#c0392b\">T3</text><circle cx=\"540\" cy=\"55\" r=\"6\" fill=\"#c0392b\"/><text x=\"532\" y=\"42\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#c0392b\">T4</text><text x=\"400\" y=\"235\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">vector theo thu tu (P0,P1,P2,P3)</text></svg>",
+              "alt": "So do vector clock voi cac thoi diem T1 (P1), T2 (P0), T3 (P2), T4 (P0) va thong diep m1, m2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "T1=(0,1,0,0); T2=(1,1,0,0); T3=(0,0,0,0); T4=(1,0,0,0)"
+          },
+          {
+            "id": "B",
+            "text": "T1=(1,1,0,0); T2=(1,0,0,1); T3=(0,1,0,1); T4=(0,1,0,0)"
+          },
+          {
+            "id": "C",
+            "text": "T1=(1,0,0,0); T2=(1,1,0,0); T3=(0,0,0,0); T4=(1,0,1,0)"
+          },
+          {
+            "id": "D",
+            "text": "T1=(0,1,0,1); T2=(1,1,0,1); T3=(0,0,0,1); T4=(1,0,0,0)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** $T_1=(0,1,0,0);\\ T_2=(1,1,0,0);\\ T_3=(0,0,0,0);\\ T_4=(1,0,0,0)$.\n\n### Lời giải từng bước\n\nVector clock của tiến trình $P_i$ tăng thành phần $i$ khi $P_i$ thực hiện sự kiện nội bộ/gửi, và lấy max khi nhận thông điệp. Đọc trên hình với gốc $(0,0,0,0)$ (thứ tự các thành phần P0,P1,P2,P3): $T_1$ là sự kiện tại P1 ⇒ $(0,1,0,0)$; $T_2$ là sự kiện tại P0 sau khi nhận m2 ⇒ $(1,1,0,0)$; $T_3$ là sự kiện tại P2 chưa tham gia gì ⇒ $(0,0,0,0)$; $T_4$ là sự kiện tại P0 ⇒ $(1,0,0,0)$. Khớp phương án A.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — khớp giá trị từng thời điểm.\n- **B.**, **C.**, **D.** Sai ở vị trí/giá trị các thành phần.\n\n### Điểm dễ nhầm\n\nNhớ gán đúng **thứ tự thành phần** theo tiến trình (P0,P1,P2,P3) và chỉ tăng đúng thành phần của tiến trình thực hiện sự kiện.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 3:** `Key = T1=(0, 1, 0, 0); T2=(1, 1, 0, 0); T3=(0, 0, 0, 0); T4=(1, 0, 0, 0)`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 2:** in 4 phương án.\n- **Wikipedia, Vector clock:** https://en.wikipedia.org/wiki/Vector_clock",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "vector-clock"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "key20212-22",
+        "type": "single_choice",
+        "question": {
+          "text": "Xem xét cơ chế định danh để xác định vị trí của thực thể trong không gian tên phẳng, người ta chọn giải pháp tiếp cận phân cấp. Khi một thực thể chuyển động từ vị trí A sang B, vấn đề gặp phải đối với hệ thống là ở các vị trí trung gian thì thời gian dừng lại của thực thể đó là rất ngắn, nếu thực hiện đk thì vị trí trung gian đó rất lãng phí tài nguyên, hơn nữa thời gian để đk vị trí trung gian đó lớn hơn thời gian tạm dừng của thực thể. Vậy giải pháp là",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không thực hiện đăng ký địa chỉ cho các vị trí trung gian đó nữa"
+          },
+          {
+            "id": "B",
+            "text": "Ở các vị trí trung gian, kết hợp áp dụng phương pháp Chuyển tiếp con trỏ"
+          },
+          {
+            "id": "C",
+            "text": "Lập trình cho thực thể dừng lại ở các nút trung gian lâu hơn"
+          },
+          {
+            "id": "D",
+            "text": "Tạo thêm 1 thực thể phụ chuyển động theo sau thực thể chính để thay thực thể đó kết thúc quá trình đăng ký các vị trí trung gian"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Ở các vị trí trung gian, kết hợp áp dụng phương pháp Chuyển tiếp con trỏ.\n\n### Lời giải từng bước\n\nKhi thực thể di chuyển nhanh qua nhiều vị trí, việc đăng ký địa chỉ tại *mọi* vị trí trung gian là lãng phí và tốn thời gian hơn cả thời gian dừng. Giải pháp lai là chỉ đăng ký tại một số vị trí, còn các vị trí trung gian chỉ để lại **con trỏ chuyển tiếp** (forwarding pointer) trỏ tới vị trí mới, giúp định tuyến vẫn tới đích mà không cần đăng ký đầy đủ.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — không đăng ký gì sẽ làm mất khả năng định vị.\n- **B.** Đúng — kết hợp forwarding pointer ở vị trí trung gian.\n- **C.** Sai — không thể ép thực thể dừng lâu.\n- **D.** Sai — không phải giải pháp của hệ thống.\n\n### Điểm dễ nhầm\n\nGiải pháp đúng là **lai**: đăng ký có chọn lọc + forwarding pointer, không phải bỏ hẳn việc đăng ký.\n\n### Nguồn\n- **Name server (naming):** https://en.wikipedia.org/wiki/Name_server\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 3:** `Key = Ở các vị trí trung gian, kết hợp áp dụng pp chuyển tiếp con trỏ`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 3:** in 4 phương án.\n- **Tanenbaum & Van Steen, Ch.5 (Naming):** forwarding pointers cho thực thể di động.",
+          "images": [
+            {
+              "id": "fig-fwd-pointer",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 150\" width=\"560\" height=\"150\"><rect width=\"560\" height=\"150\" fill=\"#fff\"/><circle cx=\"90\" cy=\"80\" r=\"30\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"60\" y=\"85\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">A</text><circle cx=\"250\" cy=\"80\" r=\"30\" fill=\"#fff\" stroke=\"#111\"/><text x=\"235\" y=\"85\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">B</text><circle cx=\"410\" cy=\"80\" r=\"30\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"395\" y=\"85\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">C</text><line x1=\"118\" y1=\"70\" x2=\"222\" y2=\"70\" stroke=\"#111\"/><text x=\"150\" y=\"60\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">con tro</text><line x1=\"278\" y1=\"70\" x2=\"382\" y2=\"70\" stroke=\"#111\"/><text x=\"310\" y=\"60\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">con tro</text></svg>",
+              "alt": "Forwarding pointer: cac vi tri trung gian giu con tro toi vi tri moi"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "dinh-danh-di-dong"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-24",
+        "type": "single_choice",
+        "question": {
+          "text": "Một hệ thống hướng tới đảm bảo thống nhất theo mô hình thống nhất liên tục, có 2 máy chủ bản sao A và B với các thao tác cập nhật như hình. Độ lệch về thứ tự là bn",
+          "images": [
+            {
+              "id": "fig-replica-conit",
+              "ascii": "Replica A:  [== committed ==][ w1 w2 w3 ]  (3 thao tac chua ap dung)\nReplica B:  [== committed ==][ w1 w2 w3 ]  (3 thao tac chua ap dung)\nConit theo doi cac bien x, y, z tren 2 replica A, B",
+              "alt": "Hai replica A va B voi cac thao tac cap nhat, cac thao tac xam da committed"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Ở A là 3; Ở B là 3"
+          },
+          {
+            "id": "B",
+            "text": "Ở A là 2; Ở B là 3"
+          },
+          {
+            "id": "C",
+            "text": "Ở A là 3; Ở B là 2"
+          },
+          {
+            "id": "D",
+            "text": "Ở A là 2; Ở B là 2"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Ở A là 3; Ở B là 3.\n\n### Lời giải từng bước\n\nThống nhất liên tục (continuous consistency) đo ba loại lệch: lệch giá trị (value deviation), lệch thứ tự (order deviation) và lệch theo thời gian (staleness). *Độ lệch thứ tự* của một bản sao = số thao tác **chưa được cập nhật** tại bản sao đó so với các bản sao khác (đếm số thao tác còn nằm trong hàng đợi chưa áp dụng). Theo hình, cả hai bản sao A và B đều đang tồn 3 thao tác chưa áp dụng, nên mỗi bên có độ lệch thứ tự bằng 3.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — cả A và B đều lệch 3.\n- **B.**, **C.**, **D.** Sai ở các giá trị 2/3/2.\n\n### Điểm dễ nhầm\n\nĐừng nhầm *độ lệch thứ tự* (số thao tác chưa áp dụng) với *độ lệch giá trị* (chênh lệch giá trị biến).\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 3:** `Key = A là 3, B là 3`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 3:** hình + 4 phương án.\n- **Wikipedia, Consistency model (session guarantees / continuous consistency):** https://en.wikipedia.org/wiki/Consistency_model",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "thong-nhat-lien-tuc"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "key20212-26",
+        "type": "single_choice",
+        "question": {
+          "text": "DNS ngày nay chủ yếu ko hỗ trợ phân giải tên miền đệ quy, đặc biệt là các máy chủ DNS cấp cao. Vậy có nên chuyển hết chúng sang chạy hỗ trợ pp phân giải tên miền đệ quy ko",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Có, vì cần thiết phải kiểm soát các thay đổi IP của các máy chủ tên miền này"
+          },
+          {
+            "id": "B",
+            "text": "Có, vì nếu không thì không phân giải được IP của các nút ở tầng dưới"
+          },
+          {
+            "id": "C",
+            "text": "Không, vì các máy chủ này không có địa chỉ IP để mà phân giải"
+          },
+          {
+            "id": "D",
+            "text": "Không, vì 2 lý do liên quan đến hiệu năng và an toàn thông tin (phòng chống tấn công mạng dựa vào điểm yếu của cơ chế phân giải đệ quy)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Không, vì hai lý do liên quan đến hiệu năng và an toàn thông tin (chống tấn công khai thác điểm yếu của phân giải đệ quy).\n\n### Lời giải từng bước\n\nCác máy chủ DNS cấp cao (root/TLD) chỉ trả lời *tham chiếu* (referral) để client tự hỏi tiếp, nhờ đó giảm tải cực lớn và tránh bị lợi dụng. Nếu ép chúng phân giải đệ quy: (1) **hiệu năng** sẽ sụp vì phải gánh toàn bộ truy vấn của Internet; (2) **an toàn** vì kẻ tấn công có thể lợi dụng resolver đệ quy để khuếch đại/phản chiếu (reflection/amplification, cache poisoning). Do đó không nên chuyển.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — không liên quan tới \"kiểm soát thay đổi IP\".\n- **B.** Sai — không phân giải đệ quy vẫn phân giải được nhờ tham chiếu.\n- **C.** Sai — máy chủ DNS hoàn toàn có địa chỉ IP.\n- **D.** Đúng — đúng hai lý do hiệu năng và an ninh.\n\n### Điểm dễ nhầm\n\nDNS cấp cao **không** phân giải đệ quy là chủ đích (thiết kế), không phải khiếm khuyết.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 3:** `Key = Ko vì liên quan đến 2 lý do là hiệu năng và ATTT (phòng chống tấn công dựa vào điểm yếu của phân giải đệ quy)`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 3:** in 4 phương án (đáp án nằm ở phương án D).\n- **Wikipedia, Domain Name System:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": [
+            {
+              "id": "fig-dns",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\" width=\"520\" height=\"190\"><rect width=\"520\" height=\"190\" fill=\"#fff\"/><rect x=\"190\" y=\"20\" width=\"120\" height=\"30\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"225\" y=\"42\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">root</text><rect x=\"60\" y=\"80\" width=\"120\" height=\"30\" fill=\"#fff\" stroke=\"#111\"/><text x=\"80\" y=\"102\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">TLD (.vn)</text><rect x=\"330\" y=\"80\" width=\"140\" height=\"30\" fill=\"#fff\" stroke=\"#111\"/><text x=\"350\" y=\"102\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">authoritative</text><rect x=\"190\" y=\"140\" width=\"140\" height=\"30\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"205\" y=\"162\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">local resolver</text><line x1=\"250\" y1=\"50\" x2=\"180\" y2=\"80\" stroke=\"#111\"/><line x1=\"250\" y1=\"50\" x2=\"350\" y2=\"80\" stroke=\"#111\"/><line x1=\"250\" y1=\"140\" x2=\"250\" y2=\"50\" stroke=\"#111\" stroke-dasharray=\"4 3\"/></svg>",
+              "alt": "Phan giai DNS: root/TLD thuong chi tra loi tham chieu, khong de quy"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "dns"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-28",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu là nhược điểm nếu như ta đưa quá nhiều biến vào Conit để giám sát độ lệch giữa các máy chủ bản sao?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Làm số lượng Conit tăng quá lớn, gây ra khó khăn trong việc quản lý Conit"
+          },
+          {
+            "id": "B",
+            "text": "Làm cho các replica nhanh chóng rơi vào trạng thái không thống nhất"
+          },
+          {
+            "id": "C",
+            "text": "Làm số lượng Conit trở nên quá nhỏ, gây ra khó khăn trong việc quản lý Conit"
+          },
+          {
+            "id": "D",
+            "text": "Một Conit kiểm soát nhiều biến quá sẽ đổ dồn tải về hệ thống gây quá tải"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Làm cho các replica nhanh chóng rơi vào trạng thái không thống nhất.\n\n### Lời giải từng bước\n\nConit (consistency unit) là đơn vị dữ liệu mà hệ thống theo dõi độ lệch. Nếu nhồi quá nhiều biến vào một Conit, mỗi phép so sánh/đo độ lệch lại chạm tới rất nhiều biến và dải giá trị rộng, khiến ngưỡng lệch ($\\delta$) dễ bị vượt ngay cả với thay đổi nhỏ. Kết quả là các bản sao **nhanh chóng bị coi là không thống nhất**, đòi hỏi đồng bộ liên tục.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — Conit to ra chứ không làm *số lượng* Conit tăng.\n- **B.** Đúng — dễ vượt ngưỡng, replica mau mất thống nhất.\n- **C.** Sai — ngược với A và sai bản chất.\n- **D.** Sai — không phải \"đổ dồn tải\".\n\n### Điểm dễ nhầm\n\nConit **nhỏ** mới giúp đo lệch mịn; Conit **quá lớn** khiến replica mau mất thống nhất.\n\n### Nguồn\n- **Consistency model:** https://en.wikipedia.org/wiki/Consistency_model\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 4:** `Key = Làm cho các replica nhanh chóng rơi vào trạng thái ko thống nhất`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 3:** in 4 phương án.\n- **Tanenbaum & Van Steen, Ch.7 (Continuous consistency / Conit):** value, order, staleness deviation.",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "thong-nhat-lien-tuc"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-29",
+        "type": "single_choice",
+        "question": {
+          "text": "Hệ thống áp dụng TT Token Ring, giải thuật đồng bộ loại trừ lẫn nhau. Hệ thống có n tiến trình và GS thời gian để chuyển thẻ bài giữa 2 nút liền kề là x ms, thời gian để 1 nút vào sử dụng tài nguyên là y ms. Vậy một nút chuyển tiếp token đi phải chờ lâu nhất bao nhiêu lâu mới nhận lại token (GS hệ thống ko lỗi)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "(x+y)*n"
+          },
+          {
+            "id": "B",
+            "text": "(n-1)*y + n*x"
+          },
+          {
+            "id": "C",
+            "text": "(x+y)*(n-1)"
+          },
+          {
+            "id": "D",
+            "text": "n*y + (n-1)*x"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** $(n-1)y + nx$.\n\n### Lời giải từng bước\n\nTrong Token Ring, token đi vòng qua toàn bộ $n$ nút. Một vòng hoàn chỉnh cần $n$ chặng truyền token, mỗi chặng $x$ ms ⇒ $nx$. Trong vòng đó, tối đa $n-1$ nút còn lại mỗi nút giữ token để vào vùng găng $y$ ms ⇒ $(n-1)y$. Vậy thời gian chờ lâu nhất để nút nhận lại token là $(n-1)y + nx$.\n\n### Phân tích từng lựa chọn\n- **A.** $(x+y)n$ — đếm nhầm cả nút hiện tại là nút cũng vào vùng găng.\n- **B.** $(n-1)y + nx$ — đúng.\n- **C.** $(x+y)(n-1)$ — thiếu một chặng truyền.\n- **D.** $ny + (n-1)x$ — hoán vị sai hệ số.\n\n### Điểm dễ nhầm\n\nChỉ có $n-1$ nút *khác* có thể chen vào giữ token $y$ ms; còn số chặng truyền token là $n$.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 4:** `Key = (n-1)*y + n*x`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 3:** in 4 phương án.\n- **Wikipedia, Mutual exclusion:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": [
+            {
+              "id": "fig-tokenring",
+              "ascii": "   P1 ----x----> P2 ----x----> P3 ----x----> ... ----x----> Pn\n     ^                                                        |\n     +--------------- token quay vong (n chang) -------------+\nMoi nut giu token y ms khi vao vung gang; toi da (n-1) nut khac",
+              "alt": "Vong token: n chang truyen, toi da n-1 nut giu token de vao vung gang"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "token-ring"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "key20212-30",
+        "type": "single_choice",
+        "question": {
+          "text": "Một hệ thống triển khai đảm bảo thống nhất dữ liệu hướng người dùng. Xét một client dịch chuyển giữa các máy chủ bản sao (L1-L4) như hình dưới đây, hãy cho biết mô hình này ko thoả mãn mô hình thống nhất hướng dữ liệu nào",
+          "images": [
+            {
+              "id": "fig-monotonic",
+              "ascii": "Client di chuyen: L1 -> L2 -> L3 -> L4\nDoc x tai L1: x = v2\nDoc x tai L2: x = v1  (CU HON v2)  => vi pham doc don dieu\nMonotonic reads: lan doc sau khong duoc tra ve gia tri cu hon",
+              "alt": "Client doc lan luot tren L1..L4 va gap lai phien ban cu hon => vi pham doc don dieu"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Ghi đơn điệu"
+          },
+          {
+            "id": "B",
+            "text": "Đọc kết quả đã ghi"
+          },
+          {
+            "id": "C",
+            "text": "Đọc đơn điệu"
+          },
+          {
+            "id": "D",
+            "text": "Ghi kết quả đã đọc"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Đọc đơn điệu.\n\n### Lời giải từng bước\n\n*Đọc đơn điệu* (monotonic reads) yêu cầu: nếu một tiến trình đã đọc giá trị $v$ của biến $x$ thì các lần đọc $x$ sau đó **không** được trả về giá trị cũ hơn $v$. Theo hình, client lần lượt đọc ở các bản sao L1→L4 và gặp lại phiên bản cũ hơn giá trị đã đọc trước đó, vi phạm đọc đơn điệu. Các mô hình hướng dữ liệu còn lại không bị vi phạm trong tình huống này.\n\n### Phân tích từng lựa chọn\n- **A.** Ghi đơn điệu — các thao tác ghi của cùng tiến trình vẫn đúng thứ tự, không phải mô hình bị vi phạm.\n- **B.** Đọc kết quả đã ghi — không phải mô hình then chốt ở đây.\n- **C.** Đọc đơn điệu — đúng, bị vi phạm do đọc được phiên bản cũ hơn.\n- **D.** Ghi kết quả đã đọc — không bị vi phạm.\n\n### Điểm dễ nhầm\n\nPhân biệt 4 đảm bảo phiên: **đọc đơn điệu** (không đọc lùi phiên bản) vs **đọc kết quả đã ghi** (thấy được ghi của chính mình) vs **ghi đơn điệu** vs **ghi theo sau đọc**.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 4:** `Key = Đọc đơn điệu`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 3:** hình L1–L4 + 4 phương án.\n- **Wikipedia, Consistency model (monotonic reads):** https://en.wikipedia.org/wiki/Consistency_model",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "nhat-quan-phien"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-31",
+        "type": "single_choice",
+        "question": {
+          "text": "Xét các giao thức dựa vào bản sao primary trong nhóm các giao thức đảm bảo thống nhất, giao thức ghi từ xa khác giao thức ghi cục bộ ntn",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Giao thức ghi từ xa thì các thao tác ghi sẽ được gửi đến bản sao primary của thành phần dữ liệu tương ứng, còn giao thức ghi cục bộ thì thực hiện ghi trên tất cả các bản ghi"
+          },
+          {
+            "id": "B",
+            "text": "Giao thức ghi từ xa thì các thao tác ghi sẽ được gửi đến bản sao primary của thành phần dữ liệu tương ứng, còn giao thức ghi cục bộ thì thực hiện ghi luôn trên bản sao cục bộ của tiến trình ghi"
+          },
+          {
+            "id": "C",
+            "text": "Giao thức ghi từ xa thì các thao tác đọc phải đọc trên một bản sao khác, còn giao thức ghi cục bộ thì các thao tác đọc phải thực hiện trên tất cả các bản sao"
+          },
+          {
+            "id": "D",
+            "text": "Giao thức ghi từ xa thì thực hiện ghi trên tất cả các bản sao, giao thức ghi cục bộ thì chỉ thực hiện ghi trên bản sao cục bộ của tiến trình ghi"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Ghi từ xa: thao tác ghi được gửi tới bản sao *primary* của thành phần dữ liệu; ghi cục bộ: ghi luôn trên bản sao cục bộ của tiến trình ghi.\n\n### Lời giải từng bước\n\nVới giao thức *primary-based*, mọi cập nhật phải đi qua bản sao primary để bảo toàn thứ tự. Trong **remote-write**, thao tác ghi được *chuyển tới primary* (ở xa) rồi primary phổ biến cho các bản sao khác. Trong **local-write**, thực thể ghi đang giữ *chính bản sao primary* và ghi **tại chỗ** (trên bản sao cục bộ), sau đó primary di chuyển theo tiến trình ghi.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — \"ghi trên tất cả các bản ghi\" là mô tả replicated-write.\n- **B.** Đúng — phân biệt remote-write vs local-write.\n- **C.** Sai — lẫn với thao tác đọc.\n- **D.** Sai — mô tả replicated-write, không phải primary-based.\n\n### Điểm dễ nhầm\n\nPrimary-based: **remote-write** (ghi → primary ở xa) vs **local-write** (ghi ngay tại bản sao primary đang giữ).\n\n### Nguồn\n- **Replication (computing):** https://en.wikipedia.org/wiki/Replication_(computing)\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 4:** `Key = Giao thức ghi từ xa thì các thao tác ghi sẽ đc gửi tới bản sao primary ..., còn giao thức ghi cục bộ thì thực hiện ghi luôn trên bản sao cục bộ của tiến trình ghi`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 4:** in 4 phương án.\n- **Tanenbaum & Van Steen, Ch.7 (primary-based protocols):** remote-write vs local-write.",
+          "images": [
+            {
+              "id": "fig-primary",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 200\" width=\"560\" height=\"200\"><rect width=\"560\" height=\"200\" fill=\"#fff\"/><text x=\"30\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">remote-write</text><rect x=\"150\" y=\"25\" width=\"90\" height=\"30\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"165\" y=\"47\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">primary</text><rect x=\"330\" y=\"25\" width=\"90\" height=\"30\" fill=\"#fff\" stroke=\"#111\"/><text x=\"350\" y=\"47\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">backup</text><line x1=\"60\" y1=\"40\" x2=\"150\" y2=\"40\" stroke=\"#111\"/><line x1=\"240\" y1=\"40\" x2=\"330\" y2=\"40\" stroke=\"#111\"/><text x=\"30\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">local-write</text><rect x=\"150\" y=\"135\" width=\"90\" height=\"30\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"160\" y=\"157\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">primary*(tai cho)</text><rect x=\"330\" y=\"135\" width=\"90\" height=\"30\" fill=\"#fff\" stroke=\"#111\"/><text x=\"350\" y=\"157\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">backup</text></svg>",
+              "alt": "Primary-based: remote-write gui toi primary; local-write ghi tai cho roi di chuyen primary"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "replication"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "key20212-32",
+        "type": "single_choice",
+        "question": {
+          "text": "Để triển khai một cluster sử dụng Kubernetes, ngoài việc tự cấu hình cho từng máy thì có một công cụ tên là minikube giúp chúng ta triển khai nhanh chóng hơn. Minikube có tác dụng gì",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tạo ra một cluster ảo trong đó có một worker node và một master node"
+          },
+          {
+            "id": "B",
+            "text": "Tạo ra một cluster ảo trong đó có nhiều worker node và một master node. Số lượng worker node có thể thêm vào tùy ý trong thời gian chạy"
+          },
+          {
+            "id": "C",
+            "text": "Tạo ra một cluster ảo trong đó có nhiều worker node và nhiều master node. Chúng ta có thể cấu hình master node nào quản lý các worker node nào"
+          },
+          {
+            "id": "D",
+            "text": "Tạo ra một cluster ảo trong đó có một worker node và nhiều master node. Chúng ta có thể cấu hình master node nào quản lý các worker node nào"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Tạo ra một cluster ảo trong đó có một worker node và một master node.\n\n### Lời giải từng bước\n\nMinikube chạy một Kubernetes *single-node cluster* ngay trên máy cá nhân (trong máy ảo/container). Node duy nhất đó đóng cả vai trò control plane (master) **và** worker. Điều này khác với cluster production vốn tách master và nhiều worker.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — một master + một worker (thực tế là một node gánh cả hai vai).\n- **B.** Sai — minikube mặc định không tạo nhiều worker node.\n- **C.**, **D.** Sai — minikube không tạo nhiều master node.\n\n### Điểm dễ nhầm\n\nMinikube = **single-node** cluster (một máy); muốn nhiều node phải dùng `minikube --nodes` hoặc công cụ khác như kind/k3d.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 4:** `Key = Tạo ra 1 cluster ảo trong đó có một worker node và 1 master node`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 4:** in 4 phương án.\n- **Kubernetes Docs, Hello Minikube:** https://kubernetes.io/docs/tutorials/hello-minikube/",
+          "images": [
+            {
+              "id": "fig-minikube",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" width=\"460\" height=\"190\"><rect width=\"460\" height=\"190\" fill=\"#fff\"/><rect x=\"40\" y=\"30\" width=\"380\" height=\"130\" rx=\"10\" fill=\"none\" stroke=\"#111\"/><rect x=\"70\" y=\"60\" width=\"140\" height=\"70\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"85\" y=\"100\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">master</text><rect x=\"250\" y=\"60\" width=\"140\" height=\"70\" fill=\"#fff\" stroke=\"#111\"/><text x=\"270\" y=\"100\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">worker</text><text x=\"40\" y=\"20\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">minikube: 1 node cluster (VM/container)</text></svg>",
+              "alt": "Minikube tao single-node cluster: master va worker tren cung mot may"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "kubernetes"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20212-33",
+        "type": "single_choice",
+        "question": {
+          "text": "Node.js là một flatform hiệu quả để xây dựng server và các ứng dụng mạng. Hãy chọn ra phát biểu SAI trong các phát biểu sau đây:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Node.js có tính bất đồng bộ"
+          },
+          {
+            "id": "B",
+            "text": "Node.js sử dụng mô hình đa luồng"
+          },
+          {
+            "id": "C",
+            "text": "Node.js có tính hướng sự kiện"
+          },
+          {
+            "id": "D",
+            "text": "Node.js có tính mở rộng cao (scalability)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** \"Node.js sử dụng mô hình đa luồng\" là phát biểu sai.\n\n### Lời giải từng bước\n\nNode.js được thiết kế như một runtime JavaScript **đơn luồng** (single-threaded) dựa trên vòng lặp sự kiện (event loop) và mô hình I/O bất đồng bộ/không chặn. Nhờ vậy nó hướng sự kiện, bất đồng bộ và mở rộng tốt cho nhiều kết nối đồng thời. Vì câu hỏi yêu cầu phát biểu *sai*, phát biểu \"sử dụng mô hình đa luồng\" là đáp án.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — Node.js bất đồng bộ.\n- **B.** **Sai** — Node.js chạy đơn luồng + event loop (đa tiến trình bổ trợ qua `cluster` chứ không phải mô hình đa luồng mặc định).\n- **C.** Đúng — hướng sự kiện.\n- **D.** Đúng — thiết kế cho scalability.\n\n### Điểm dễ nhầm\n\nĐề hỏi phát biểu **SAI**, đừng chọn phát biểu đúng.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 4:** `Key = Nodejs sử dụng mô hình đa luồng`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 4:** in 4 phương án A–D.\n- **Node.js About:** https://nodejs.org/en/about (asynchronous, event-driven, \"designed without threads\")",
+          "images": [
+            {
+              "id": "fig-nodejs",
+              "ascii": "Node.js runtime\n  +--------------------------------------------------+\n  |  Event Loop (single thread)                      |\n  |    request --> callback --> if no work: sleep    |\n  +--------------------------------------------------+\n  |  libuv thread pool (I/O)  |  cluster (multi-proc)|\n  +--------------------------------------------------+",
+              "alt": "Node.js: mot vong lap su kien đơn luong + thread pool / cluster ho tro"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "nodejs"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20212-34",
+        "type": "single_choice",
+        "question": {
+          "text": "Chord là hệ thống",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Có kiến trúc tập trung, có cấu trúc"
+          },
+          {
+            "id": "B",
+            "text": "Có kiến trúc không tập trung, có cấu trúc"
+          },
+          {
+            "id": "C",
+            "text": "Có kiến trúc không tập trung, không có cấu trúc"
+          },
+          {
+            "id": "D",
+            "text": "Có kiến trúc hỗn hợp"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Có kiến trúc không tập trung, có cấu trúc.\n\n### Lời giải từng bước\n\nChord là giao thức DHT (distributed hash table): các nút và khoá cùng được băm vào một vòng định danh, mỗi nút giữ finger table để định tuyến. Không có nút điều khiển trung tâm ⇒ **không tập trung**; tổ chức vòng và finger table theo quy luật xác định ⇒ **có cấu trúc** (structured overlay).\n\n### Phân tích từng lựa chọn\n- **A.** Sai — Chord phi tập trung.\n- **B.** Đúng — decentralised + structured.\n- **C.** Sai — Chord có cấu trúc.\n- **D.** Sai — không phải hybrid.\n\n### Điểm dễ nhầm\n\nChord, CAN, Pastry, Tapestry đều *decentralised + structured*.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 4:** `Key = Có kiến trúc ko tập trung, có cấu trúc`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 4:** in 4 phương án.\n- **Wikipedia, Chord (peer-to-peer):** https://en.wikipedia.org/wiki/Chord_(peer-to-peer)",
+          "images": [
+            {
+              "id": "fig-overlay-class",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" width=\"520\" height=\"220\"><rect width=\"520\" height=\"220\" fill=\"#fff\"/><rect x=\"40\" y=\"40\" width=\"200\" height=\"140\" fill=\"none\" stroke=\"#111\"/><text x=\"55\" y=\"65\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">centralized</text><text x=\"55\" y=\"100\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">structured</text><rect x=\"280\" y=\"40\" width=\"200\" height=\"140\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"295\" y=\"65\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">decentralized</text><text x=\"295\" y=\"100\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">structured  &lt;- Chord/CAN</text><text x=\"295\" y=\"140\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">(unstructured: Gnutella)</text></svg>",
+              "alt": "Phan loai overlay: Chord/CAN la decentralized + structured"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "chord-dht"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20212-35",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi cấu hình các DNS server cho 1 zone, ngoài primary DNS server thì người ta cần xây dựng cấu hình ít nhất cho 1 secondary DNS server vì",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trong trường hợp Primary server không trả lời được (không tìm thấy kết quả), Secondary server sẽ kiểm tra xem có trả lời được không."
+          },
+          {
+            "id": "B",
+            "text": "Trong trường hợp bộ nhớ của Primary server bị quá tải thì các bản ghi sẽ được lưu trữ sang Secondary server."
+          },
+          {
+            "id": "C",
+            "text": "Secondary server sẽ thay thế cho Primary server trong trường hợp server này hỏng/ngừng hoạt động. Đồng thời giảm tải cho Primary server trong trường hợp quá tải."
+          },
+          {
+            "id": "D",
+            "text": "Secondary server sẽ tìm câu trả lời cho từng request trước, nếu không trả lời được thì sẽ gửi cho Primary server."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Secondary thay thế Primary khi Primary hỏng/ngừng hoạt động, đồng thời giảm tải cho Primary khi quá tải.\n\n### Lời giải từng bước\n\nNguyên tắc DNS yêu cầu mỗi zone phải có cấu hình *dự phòng*: secondary DNS server tải toàn bộ zone từ primary (zone transfer) và sẵn sàng **trả lời thay** khi primary down — đảm bảo tính sẵn sàng (redundancy) và **cân bằng tải** giữa nhiều máy chủ DNS cho cùng zone.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — không phải cơ chế \"kiểm tra xem có trả lời được không\".\n- **B.** Sai — bản ghi không được lưu trữ \"sang\" secondary vì quá tải bộ nhớ; secondary luôn có bản sao zone.\n- **C.** Đúng — redundancy + load sharing.\n- **D.** Sai — thứ tự xử lý không phải lý do xây dựng secondary.\n\n### Điểm dễ nhầm\n\nLý do chính là **dự phòng (availability)** và **giảm tải**, không phải \"bộ nhớ tràn\".\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 4:** `Key = Secondary server sẽ thay thế cho primary server trong trường hợp bị hỏng, ngừng hoạt động, đồng thời giảm tải cho primary server`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 4:** in 4 phương án.\n- **Wikipedia, Domain Name System:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": [
+            {
+              "id": "fig-dns-sec",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 180\" width=\"460\" height=\"180\"><rect width=\"460\" height=\"180\" fill=\"#fff\"/><rect x=\"60\" y=\"70\" width=\"130\" height=\"45\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"75\" y=\"98\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">primary</text><rect x=\"280\" y=\"70\" width=\"130\" height=\"45\" fill=\"#fff\" stroke=\"#111\"/><text x=\"292\" y=\"98\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">secondary</text><line x1=\"190\" y1=\"82\" x2=\"280\" y2=\"82\" stroke=\"#111\"/><text x=\"195\" y=\"75\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">zone transfer</text><line x1=\"280\" y1=\"105\" x2=\"190\" y2=\"105\" stroke=\"#111\" stroke-dasharray=\"4 3\"/><text x=\"195\" y=\"125\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">tra loi thay khi primary down</text></svg>",
+              "alt": "Secondary DNS nhan zone transfer va tra loi thay primary khi can"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "dns"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20212-36",
+        "type": "single_choice",
+        "question": {
+          "text": "Xét giải thuật phân tán (distributed algorithm) trong nhóm các giải thuật bù trừ lẫn nhau (mutual exclusion), nếu có một tiến trình A muốn vào sử dụng tài nguyên mà cũng nhận đc 1 thông điệp yêu cầu vào sử dụng tài nguyên của 1 tiến trình B khác thì tiến trình A sẽ làm gì",
+          "images": [
+            {
+              "id": "fig-timestamp-order",
+              "ascii": "P0: --- (5,a) REQUEST ---\nP1: --- (7,a) REQUEST ---\nP2: nhan ca hai => so sanh timestamp: (5,a) < (7,a) => P0 thang\n   tra OK cho P1; giu yeu cau cua P1 den khi P0 xong (RELEASE)",
+              "alt": "So sanh timestamp: yeu cau co timestamp nho hon duoc vao vung gang truoc"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Nhường B vào sử dụng tài nguyên trước bằng cách trả lời OK cho B."
+          },
+          {
+            "id": "B",
+            "text": "Không trả lời B, tự coi như mình sẽ vào dùng trước, đồng thời lưu yêu cầu của B vào hàng đợi."
+          },
+          {
+            "id": "C",
+            "text": "Phải kiểm tra timestamp trên yêu cầu của A và B xem giá trị timestamp nào nhỏ hơn thì thắng, tiến trình đó sẽ được vào dùng tài nguyên."
+          },
+          {
+            "id": "D",
+            "text": "Phải kiểm tra timestamp trên yêu cầu của A và B xem giá trị timestamp nào lớn hơn thì thắng, tiến trình đó sẽ được vào dùng tài nguyên."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** So sánh timestamp: yêu cầu có timestamp nhỏ hơn thắng và được vào tài nguyên.\n\n### Lời giải từng bước\n\nTrong thuật toán phân tán của Ricart–Agrawala, mỗi yêu cầu gắn một timestamp (Lamport). Khi A vừa muốn vào vùng găng vừa nhận yêu cầu của B, A so sánh hai timestamp: **yêu cầu nào có timestamp nhỏ hơn** (đến trước) thì được ưu tiên. Nếu A thắng, A không trả lời (giữ lại) và đợi; nếu B thắng, A trả lời OK cho B rồi chờ phiên bản của mình.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — không phải luôn nhường B.\n- **B.** Sai — không phải luôn tự vào trước.\n- **C.** Đúng — timestamp nhỏ hơn thắng.\n- **D.** Sai — quy tắc là timestamp **nhỏ hơn**, không phải lớn hơn.\n\n### Điểm dễ nhầm\n\nQuy tắc là **timestamp nhỏ hơn thắng** (đến trước được ưu tiên), không phải lớn hơn.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 4:** `Key = Kiểm tra timestamp ... timestamp nào nhỏ hơn thì thắng ...`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 4:** in 4 phương án.\n- **Wikipedia, Mutual exclusion:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "loai-tru-lan-nhau"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-37",
+        "type": "single_choice",
+        "question": {
+          "text": "Để đảm bảo đồng bộ hoá trong lập trình song song (ngôn ngữ C), người ta sử dụng kỹ thuật mutex lock. Kỹ thuật này chia làm 2 pp là Coarse locking và Fine locking. Điểm khác nhau của 2 pp trên",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Fine locking sử dụng RAM để lưu trữ tài nguyên, còn Coarse locking dùng ổ cứng"
+          },
+          {
+            "id": "B",
+            "text": "Fine locking tạo ra đoạn găng (critical section) riêng cho mỗi tài nguyên, Coarse locking tạo ra một đoạn duy nhất cho tất cả tài nguyên"
+          },
+          {
+            "id": "C",
+            "text": "Coarse locking tạo ra đoạn găng (critical section) riêng cho mỗi tài nguyên, Fine locking tạo ra một đoạn găng duy nhất cho tất cả tài nguyên"
+          },
+          {
+            "id": "D",
+            "text": "Không có điểm gì khác nhau, chỉ là 2 tên gọi cho cùng một phương pháp"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Fine locking tạo đoạn găng riêng cho từng tài nguyên; Coarse locking dùng một đoạn găng chung cho tất cả tài nguyên.\n\n### Lời giải từng bước\n\n**Coarse-grained locking**: một khoá lớn bảo vệ toàn bộ cấu trúc dữ liệu, đơn giản nhưng giảm song song vì mọi luồng phải chờ. **Fine-grained locking**: mỗi tài nguyên (hoặc từng phần) có khoá riêng, cho phép nhiều luồng truy cập các tài nguyên khác nhau song song, tăng tính đồng thời nhưng phức tạp hơn.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — không liên quan RAM/ổ cứng.\n- **B.** Đúng — đúng định nghĩa fine vs coarse.\n- **C.** Sai — mô tả ngược lại.\n- **D.** Sai — hai phương pháp khác nhau rõ rệt.\n\n### Điểm dễ nhầm\n\n**Fine = nhiều khoá nhỏ (song song cao)**; **Coarse = một khoá lớn (đơn giản nhưng ít song song)**.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 5:** `Key = Fine locking tạo ra đoạn găng riêng cho mỗi tài nguyên, Coarse locking tạo ra một đoạn duy nhất cho tất cả tài nguyên`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 4:** in 4 phương án.\n- **Wikipedia, Mutual exclusion:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "mutex-lock"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20212-38",
+        "type": "single_choice",
+        "question": {
+          "text": "GS hệ thống có n máy, mất bn thông điệp cho một lần thực hiện đồng bộ hoá sử dụng giải thuật Berkeley",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "2n"
+          },
+          {
+            "id": "B",
+            "text": "3n"
+          },
+          {
+            "id": "C",
+            "text": "4n"
+          },
+          {
+            "id": "D",
+            "text": "Tất cả các đáp án trên đều sai"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** $3n$ thông điệp.\n\n### Lời giải từng bước\n\nTrong thuật toán Berkeley, master/leader định kỳ: (1) gửi yêu cầu thời gian tới $n-1$ máy ⇒ $n-1$ thông điệp; (2) mỗi máy gửi giá trị đồng hồ trả về ⇒ $n-1$ thông điệp; (3) master gửi hiệu chỉnh tới $n-1$ máy ⇒ $n-1$ thông điệp. Tổng $\\approx 3(n-1)$, và theo cách tính của môn (tính cả master) được làm tròn thành **$3n$**.\n\n### Phân tích từng lựa chọn\n- **A.** $2n$ — thiếu một chặng thông điệp.\n- **B.** $3n$ — khớp khoá chính thức.\n- **C.** $4n$ — thừa.\n- **D.** Sai — vì B đúng.\n\n### Điểm dễ nhầm\n\nBerkeley có **ba pha** thông điệp: hỏi thời gian, trả thời gian, gửi hiệu chỉnh.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 5:** `Key = 3n`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 4:** in 4 phương án.\n- **Wikipedia, Berkeley algorithm:** https://en.wikipedia.org/wiki/Berkeley_algorithm",
+          "images": [
+            {
+              "id": "fig-berkeley",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 180\" width=\"520\" height=\"180\"><rect width=\"520\" height=\"180\" fill=\"#fff\"/><rect x=\"200\" y=\"70\" width=\"120\" height=\"45\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"235\" y=\"98\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">leader</text><text x=\"30\" y=\"95\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">follower 1</text><text x=\"400\" y=\"95\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">follower n-1</text><line x1=\"320\" y1=\"80\" x2=\"400\" y2=\"80\" stroke=\"#111\"/><line x1=\"200\" y1=\"105\" x2=\"120\" y2=\"105\" stroke=\"#111\"/><text x=\"180\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">1) hoi thoi gian  2) tra thoi gian  3) hieu chinh</text></svg>",
+              "alt": "Berkeley: leader hoi thoi gian, nhan gia tri, roi gui hieu chinh (3 pha)"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "dong-bo-dong-ho"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20212-39",
+        "type": "single_choice",
+        "question": {
+          "text": "Một hệ thống áp dụng thuật toán phân tán (Distributed algorithm) cho các giải thuật đồng hộ hoá loại trừ lần nhau (mutual exclusion), biết rằng hệ thống có n tiến trình. Hỏi số thông điệp cần thiết phải sử dụng để cho k tiến trình vào sử dụng tài nguyên là bao nhiêu? (GS quá trình ko xảy ra lỗi và các yêu cầu đc gắn timestamp khác nhau)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "3*k*(n-1)"
+          },
+          {
+            "id": "B",
+            "text": "2*n - 3*k"
+          },
+          {
+            "id": "C",
+            "text": "2*k*(n-1)"
+          },
+          {
+            "id": "D",
+            "text": "n*k"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** $2k(n-1)$ thông điệp.\n\n### Lời giải từng bước\n\nTrong thuật toán phân tán (Ricart–Agrawala), mỗi lượt vào vùng găng cần: tiến trình gửi REQUEST tới $n-1$ tiến trình còn lại ($n-1$ thông điệp), nhận lại $(n-1)$ OK, và gửi RELEASE tới $n-1$ tiến trình. Cách đếm của môn: mỗi lượt tính $2(n-1)$ thông điệp (REQUEST + OK), RELEASE có thể gộp/không tính ⇒ với $k$ lượt là $2k(n-1)$.\n\n### Phân tích từng lựa chọn\n- **A.** $3k(n-1)$ — cộng thêm một chặng không cần thiết.\n- **B.** $2n-3k$ — không có dạng đúng.\n- **C.** $2k(n-1)$ — đúng theo khoá.\n- **D.** $nk$ — sai.\n\n### Điểm dễ nhầm\n\nĐối chiếu với thuật toán **tập trung** chỉ tốn $3k$; còn **phân tán** phải broadcast nên tốn $2k(n-1)$.\n\n### Nguồn\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 5:** `Key = 2*k*(n-1)`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 4:** in 4 phương án.\n- **Wikipedia, Mutual exclusion:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": [
+            {
+              "id": "fig-dist-me",
+              "ascii": "Vong vao vung gang:\n  REQUEST  --->  n-1 tien trinh\n  OK       <---  n-1 tien trinh\n  -------------------------------------------------\n  moi luot: 2(n-1) thong diep\n  k luot : 2*k*(n-1)",
+              "alt": "Thuat toan phan tan Ricart-Agrawala: moi luot ton 2(n-1) thong diep"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "loai-tru-lan-nhau"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "key20212-40",
+        "type": "single_choice",
+        "question": {
+          "text": "Hệ thống quản lý tệp Linux vận hành dựa trên hệ thống định danh cho ko gian tên có cấu trúc. Trong 2 pp tạo liên kết soft-link và hard-link, đâu là pp làm tăng con đếm tham chiếu lên inode của file gốc",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "soft-link"
+          },
+          {
+            "id": "B",
+            "text": "hard-link"
+          },
+          {
+            "id": "C",
+            "text": "Cả hai phương pháp trên"
+          },
+          {
+            "id": "D",
+            "text": "Không phương pháp nào"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** hard-link.\n\n### Lời giải từng bước\n\n*Hard link* là một mục nhập thư mục **trỏ trực tiếp tới cùng inode** với tệp gốc, nên mỗi hard link làm tăng bộ đếm liên kết (link count) của inode; tệp chỉ bị xoá khi link count về 0. *Soft link (symbolic link)* là một tệp **riêng biệt** chứa đường dẫn tới tệp đích, có inode riêng, do đó **không** tăng link count của tệp gốc.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — soft-link có inode riêng, không tác động link count của đích.\n- **B.** Đúng — hard-link tăng link count.\n- **C.** Sai — chỉ hard-link.\n- **D.** Sai — vì hard-link có tăng.\n\n### Điểm dễ nhầm\n\nPhân biệt **inode** (hard link trỏ vào cùng inode) và **đường dẫn** (soft link chỉ lưu path).\n\n### Nguồn\n- **Hard link:** https://en.wikipedia.org/wiki/Hard_link\n- **Hệ phân tán - đáp án đề kì 20212.pdf trang 5:** `Key = hard-link`.\n- **Hệ phân tán - cuối kì 20212.pdf trang 4:** in 4 phương án.\n- **Tanenbaum & Van Steen, Ch.5 (Naming, structured namespaces):** hard link vs symbolic link.",
+          "images": [
+            {
+              "id": "fig-links",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 200\" width=\"520\" height=\"200\"><rect width=\"520\" height=\"200\" fill=\"#fff\"/><text x=\"30\" y=\"45\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">hard link</text><text x=\"30\" y=\"80\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">a.txt</text><text x=\"30\" y=\"115\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">b.txt</text><line x1=\"90\" y1=\"75\" x2=\"230\" y2=\"140\" stroke=\"#111\"/><line x1=\"90\" y1=\"110\" x2=\"230\" y2=\"140\" stroke=\"#111\"/><rect x=\"230\" y=\"120\" width=\"90\" height=\"40\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"240\" y=\"145\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">inode (n=2)</text><text x=\"350\" y=\"80\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">soft link</text><line x1=\"350\" y1=\"75\" x2=\"460\" y2=\"75\" stroke=\"#111\" stroke-dasharray=\"4 3\"/><text x=\"350\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">s.txt -> a.txt (path)</text></svg>",
+              "alt": "hard-link tang link count cua inode; soft-link chi tro bang duong dan"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20212",
+          "khong-gian-ten"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-1",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong các mô hình di trú mã, mô hình di trú yếu (weak mobility) có đặc điểm là",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chỉ di chuyển các biến số quan trọng để thực hiện chạy mã ở máy đích"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ di chuyển phần trạng thái (execution segment)"
+          },
+          {
+            "id": "C",
+            "text": "Di chuyển cả phần mã và phần trạng thái"
+          },
+          {
+            "id": "D",
+            "text": "Chỉ di chuyển phần mã (code segment)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Chỉ di chuyển các biến số quan trọng để thực hiện chạy mã ở máy đích.\n\n### Lời giải từng bước\n\nĐối tượng di động gồm ba phần: mã (code), dữ liệu/trạng thái dữ liệu (data), và trạng thái thực thi (execution state). **Weak mobility** chỉ chuyển **mã kèm dữ liệu khởi tạo cần thiết** rồi chạy lại từ đầu ở máy đích — tương ứng \"chỉ di chuyển các biến số quan trọng để chạy mã\". **Strong mobility** mới chuyển cả execution state để tiếp tục chạy đúng chỗ đã dừng.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — code + dữ liệu cần để khởi động lại.\n- **B.** Sai — chuyển execution segment là *strong mobility*.\n- **C.** Sai — chuyển cả mã và trạng thái là strong mobility.\n- **D.** Sai — weak mobility còn chuyển cả dữ liệu khởi tạo, không chỉ mã.\n\n### Điểm dễ nhầm\n\nWeak mobility vẫn mang theo **một ít dữ liệu**, nên \"chỉ mã\" (D) là bẫy.\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 1:** phương án A được tô đỏ là đáp án.\n- **UCSB, Distributed Systems Lecture 3 (weak/strong mobility):** https://courses.ece.ucsb.edu/ECE151/151_S14Moser/Files/DS-3.pdf",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-2",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây về socket là sai?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Với một tiến trình để nhận thông điệp, socket của nó phải gắn với một cổng và địa chỉ IP của máy tính mà nó đang chạy."
+          },
+          {
+            "id": "B",
+            "text": "Một thông điệp được gửi đến 1 địa chỉ IP và một cổng cục bộ thì sẽ được nhận bởi duy nhất 1 tiến trình mà socket của nó gắn với cổng và địa chỉ IP đó."
+          },
+          {
+            "id": "C",
+            "text": "Các tiến trình có thể dùng chung 1 cổng để nhận thông điệp."
+          },
+          {
+            "id": "D",
+            "text": "Quá trình trao đổi thông tin giữa các tiến trình là việc gửi thông điệp giữa một socket của một tiến trình và một socket của một tiến trình khác."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** \"Các tiến trình có thể dùng chung 1 cổng để nhận thông điệp\" là phát biểu sai.\n\n### Lời giải từng bước\n\nTheo mô hình Berkeley socket, tại một thời điểm một cổng (port) chỉ được *bind* bởi duy nhất một socket/tiến trình cho một giao thức; gói tin đến một cặp (IP, port) được giao cho đúng một tiến trình. Vì vậy phát biểu C sai. Các phát biểu A, B, D đều đúng theo mô hình socket.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — socket phải gắn với IP + cổng để nhận thông điệp.\n- **B.** Đúng — cặp (IP, port) ánh xạ tới duy nhất một socket.\n- **C.** **Sai** — các tiến trình không thể cùng bind một cổng để nhận (trừ các cơ chế đặc biệt như SO_REUSEPORT, không thuộc mô hình cơ bản).\n- **D.** Đúng — mô tả đúng trao đổi socket-to-socket.\n\n### Điểm dễ nhầm\n\nĐề hỏi phát biểu **SAI**.\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 1:** phương án C được tô đỏ.\n- **Tanenbaum & Van Steen, Ch.4 (Berkeley sockets):** https://www.cs.utsa.edu/~korkmaz/teaching/resources-os-grad/tk-slides/ts/ch04-ts-tk-part-1-2-middleware-rpc.pdf",
+          "images": [
+            {
+              "id": "fig-cs-p2p",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 200\" width=\"520\" height=\"200\"><rect width=\"520\" height=\"200\" fill=\"#fff\"/><text x=\"30\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Client-Server</text><rect x=\"30\" y=\"50\" width=\"110\" height=\"40\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"60\" y=\"75\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Server</text><circle cx=\"50\" cy=\"150\" r=\"14\" fill=\"#fff\" stroke=\"#111\"/><circle cx=\"100\" cy=\"150\" r=\"14\" fill=\"#fff\" stroke=\"#111\"/><circle cx=\"150\" cy=\"150\" r=\"14\" fill=\"#fff\" stroke=\"#111\"/><line x1=\"80\" y1=\"90\" x2=\"60\" y2=\"136\" stroke=\"#111\"/><line x1=\"85\" y1=\"90\" x2=\"100\" y2=\"136\" stroke=\"#111\"/><line x1=\"90\" y1=\"90\" x2=\"140\" y2=\"136\" stroke=\"#111\"/><text x=\"300\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Peer-to-Peer</text><circle cx=\"340\" cy=\"80\" r=\"16\" fill=\"#e8f2ff\" stroke=\"#111\"/><circle cx=\"440\" cy=\"80\" r=\"16\" fill=\"#e8f2ff\" stroke=\"#111\"/><circle cx=\"390\" cy=\"160\" r=\"16\" fill=\"#e8f2ff\" stroke=\"#111\"/><line x1=\"356\" y1=\"80\" x2=\"424\" y2=\"80\" stroke=\"#111\"/><line x1=\"348\" y1=\"94\" x2=\"382\" y2=\"146\" stroke=\"#111\"/><line x1=\"432\" y1=\"94\" x2=\"398\" y2=\"146\" stroke=\"#111\"/></svg>",
+              "alt": "Client-Server (tap trung) vs Peer-to-Peer (ngang hang)"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-4",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu là ưu điểm của hướng tiếp cận xây dựng bộ thư viện luồng chạy hoàn toàn ở mức user mode:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tiết kiệm tài nguyên hệ thống để tạo và hủy luồng và việc chuyển ngữ cảnh được thực hiện nhanh"
+          },
+          {
+            "id": "B",
+            "text": "Tiết kiệm tài nguyên hệ thống để tạo và hủy luồng và hệ thống sẽ được dừng lại khi thực hiện gọi lời triệu gọi hệ thống dừng (blocking system call)"
+          },
+          {
+            "id": "C",
+            "text": "Khi thực hiện lời triệu gọi hệ thống dừng (blocking system call) thì sẽ không làm dừng toàn bộ hệ thống."
+          },
+          {
+            "id": "D",
+            "text": "Các luồng chạy ở chế độ này sẽ không bao giờ gặp lỗi hay exception."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Tiết kiệm tài nguyên để tạo/huỷ luồng và chuyển ngữ cảnh nhanh.\n\n### Lời giải từng bước\n\nVì thư viện luồng nằm hoàn toàn trong không gian người dùng (user space), các thao tác tạo/huỷ luồng và chuyển ngữ cảnh không cần gọi hệ thống (syscall) ⇒ rất nhanh và ít tốn tài nguyên. Nhược điểm của user-level thread là nếu một luồng gọi blocking system call thì **cả tiến trình** bị chặn.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — ưu điểm của user-level threads.\n- **B.** Sai — vế sau mô tả *nhược điểm*, không phải ưu điểm.\n- **C.** Sai — ngược lại: blocking call chặn cả tiến trình.\n- **D.** Sai — không có chuyện \"không bao giờ gặp lỗi\".\n\n### Điểm dễ nhầm\n\nBẫy nằm ở các phương án ghép đúng + sai (B). User-level: nhanh nhưng blocking call chặn cả tiến trình.\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 1:** phương án A được tô đỏ.\n- **UCSB, Distributed Systems Lecture 3 (user-level vs kernel-level threads):** https://courses.ece.ucsb.edu/ECE151/151_S14Moser/Files/DS-3.pdf",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-6",
+        "type": "single_choice",
+        "question": {
+          "text": "Tính mở của Hệ Phân Tán là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Các máy tính phải dễ dàng mở ra để xem cấu tạo bên trong"
+          },
+          {
+            "id": "B",
+            "text": "Hệ thống đảm bảo các thành phần của các nhà sản xuất khác nhau có thể kết nối và phối hợp với nhau."
+          },
+          {
+            "id": "C",
+            "text": "Nhà sản xuất đảm bảo tất cả mọi người sử dụng với các trình độ khác nhau có thể sử dụng được máy tính của họ."
+          },
+          {
+            "id": "D",
+            "text": "Hệ thống đảm bảo lúc nào cũng sẵn sàng cho người sử dụng truy cập từ xa vào."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Các thành phần của các nhà sản xuất khác nhau có thể kết nối và phối hợp với nhau.\n\n### Lời giải từng bước\n\n*Tính mở* (openness) của hệ phân tán chỉ khả năng mở rộng và tương tác: một hệ mở có thể bổ sung thành phần/dịch vụ mới và cho phép các thành phần từ những nhà cung cấp khác nhau (phần cứng, hệ điều hành, ngôn ngữ) cùng tương tác nhờ các chuẩn công bố công khai (interface chuẩn, giao thức chuẩn).\n\n### Phân tích từng lựa chọn\n- **A.** Sai — hiểu theo nghĩa \"mở nắp máy\".\n- **B.** Đúng — đúng định nghĩa openness.\n- **C.** Sai — nói về khả năng sử dụng (usability), không phải tính mở.\n- **D.** Sai — nói về availability.\n\n### Điểm dễ nhầm\n\nOpenness ⇔ **tương tác được giữa các hệ khác nhau** nhờ chuẩn; đừng lẫn với availability hay usability.\n\n### Nguồn\n- **Distributed computing:** https://en.wikipedia.org/wiki/Distributed_computing\n- **Hệ phân tán - cuối kì 20221.pdf trang 1:** phương án B được tô đỏ.\n- **Tanenbaum & Van Steen, Ch.1 (Openness):** dịch vụ qua giao diện chuẩn.",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20221-7",
+        "type": "single_choice",
+        "question": {
+          "text": "Đặc tính nào không phải của trao đổi thông tin hướng thông điệp bền vững?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Yêu cầu độ trễ thời gian (delay) thấp"
+          },
+          {
+            "id": "B",
+            "text": "Hỗ trợ khả năng lưu trữ trung gian cho thông điệp"
+          },
+          {
+            "id": "C",
+            "text": "Sử dụng cơ chế liên kết lỏng"
+          },
+          {
+            "id": "D",
+            "text": "Mỗi ứng dụng sẽ có 1 hàng đợi riêng để cho các ứng dụng khác gửi thông điệp vào"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** \"Yêu cầu độ trễ thời gian thấp\" không phải đặc tính của thông điệp bền vững.\n\n### Lời giải từng bước\n\nTrao đổi thông điệp bền vững (persistent messaging, ví dụ MOM/email) lưu thông điệp trong hàng đợi trung gian cho tới khi giao được, cho phép bên gửi và bên nhận không cần online cùng lúc (liên kết lỏng). Chính vì phải lưu trung gian và có thể trễ, hệ thống **không** nhằm đạt độ trễ thấp.\n\n### Phân tích từng lựa chọn\n- **A.** **Không phải đặc tính** — persistent messaging hy sinh độ trễ.\n- **B.** Đúng — có lưu trữ trung gian.\n- **C.** Đúng — liên kết lỏng.\n- **D.** Đúng — mỗi ứng dụng có hàng đợi riêng.\n\n### Điểm dễ nhầm\n\nĐề hỏi đặc tính **không phải**.\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 1:** phương án A được tô đỏ.\n- **Tanenbaum & Van Steen, Ch.4 (Persistent vs transient communication):** https://www.cs.utsa.edu/~korkmaz/teaching/resources-os-grad/tk-slides/ts/ch04-ts-tk-part-1-2-middleware-rpc.pdf",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20221-8",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong trao đổi thông tin hướng dòng, việc thực thi QoS là tác động vào tầng nào của hệ thống mạng?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tầng mạng (IP)"
+          },
+          {
+            "id": "B",
+            "text": "Tầng vật lý"
+          },
+          {
+            "id": "C",
+            "text": "Tầng liên kết dữ liệu (data link)"
+          },
+          {
+            "id": "D",
+            "text": "Các tầng trên tầng mạng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Các tầng trên tầng mạng.\n\n### Lời giải từng bước\n\nVới truyền thông hướng dòng (stream-oriented, ví dụ audio/video), QoS được thực hiện chủ yếu nhờ cơ chế ở tầng **trên tầng mạng** — như buffer/đệm tại tầng giao vận và ứng dụng, điều khiển tốc độ, đồng bộ dòng — nhằm làm mượt jitter và đảm bảo tính liên tục, thay vì dựa vào IP (best-effort).\n\n### Phân tích từng lựa chọn\n- **A.** Sai — IP chỉ là best-effort, không đảm bảo QoS cho dòng.\n- **B.**, **C.** Sai — tầng vật lý/liên kết không xử lý QoS mức ứng dụng.\n- **D.** Đúng — QoS cho stream nằm trên tầng mạng (transport + application).\n\n### Điểm dễ nhầm\n\nQoS hướng dòng ⇔ \"trên tầng mạng\"; đừng nhầm với IntServ/DiffServ ở tầng mạng.\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 1:** phương án D được tô đỏ.\n- **Tanenbaum & Van Steen, Ch.4 (Stream-oriented communication, QoS):** https://www.cs.utsa.edu/~korkmaz/teaching/resources-os-grad/tk-slides/ts/ch04-ts-tk-part-1-2-middleware-rpc.pdf",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-10",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu không phải là nhược điểm của cơ chế chuyển tiếp con trỏ (Forwarding Pointer)",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chuỗi các tham chiếu cho một thực thể di động có thể rất dài khiến cho quá trình tìm địa điểm trở nên tốn kém."
+          },
+          {
+            "id": "B",
+            "text": "Các node trung gian phải lưu các con trỏ chuyển tiếp lâu nhất có thể"
+          },
+          {
+            "id": "C",
+            "text": "Khi 1 server stub không được trỏ đến bởi bất kỳ client stub nào thì nó có thể bị loại bỏ"
+          },
+          {
+            "id": "D",
+            "text": "Khi một con trỏ tham chiếu bị hỏng, không thể tìm được thực thể đó"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** \"Khi 1 server stub không được trỏ đến bởi bất kỳ client stub nào thì nó có thể bị loại bỏ\" không phải nhược điểm.\n\n### Lời giải từng bước\n\nNhược điểm của forwarding pointer là: chuỗi con trỏ ngày càng dài làm việc tìm kiếm tốn kém; các node trung gian phải giữ con trỏ lâu; và nếu một con trỏ bị hỏng thì mất dấu thực thể. Phương án C mô tả một * tính chất vận hành* (dọn bỏ stub không còn được tham chiếu), không phải nhược điểm.\n\n### Phân tích từng lựa chọn\n- **A.** Là nhược điểm — chuỗi dài.\n- **B.** Là nhược điểm — phải lưu con trỏ lâu.\n- **C.** **Không phải** nhược điểm — đó là hành vi hợp lý khi stub hết được dùng.\n- **D.** Là nhược điểm — con trỏ hỏng làm mất thực thể.\n\n### Điểm dễ nhầm\n\nĐề hỏi phương án **không phải** nhược điểm.\n\n### Nguồn\n- **Name server (naming):** https://en.wikipedia.org/wiki/Name_server\n- **Hệ phân tán - cuối kì 20221.pdf trang 2:** phương án C được tô đỏ.\n- **Tanenbaum & Van Steen, Ch.5 (Forwarding pointers, mobility):** chuỗi con trỏ dài là nhược điểm chính.",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-11",
+        "type": "single_choice",
+        "question": {
+          "text": "Đâu không phải là đặc tính của một định danh (identifier)?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "1 định danh chỉ đến nhiều nhất 1 thực thể"
+          },
+          {
+            "id": "B",
+            "text": "Mỗi thực thể chỉ được xác định bởi 1 định danh"
+          },
+          {
+            "id": "C",
+            "text": "Một định danh mãi mãi chỉ trỏ đến 1 thực thể."
+          },
+          {
+            "id": "D",
+            "text": "Khi một thực thể bị xóa đi, định danh của nó sẽ được dùng để gán cho thực thể khác."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Định danh của thực thể bị xoá *không* được tái sử dụng cho thực thể khác.\n\n### Lời giải từng bước\n\nMột định danh thoả mãn các tính chất: (1) một định danh trỏ tới **tối đa một** thực thể; (2) một thực thể có thể có nhiều định danh nhưng mỗi định danh xác định duy nhất một thực thể theo thời điểm; (3) một định danh **mãi mãi** giữ nguyên ý nghĩa (không tái sử dụng) — nhờ đó phân biệt được \"thực thể này\" với thực thể khác từng tồn tại. Vì vậy D không phải đặc tính đúng.\n\n### Phân tích từng lựa chọn\n- **A.** Là đặc tính — unique reference.\n- **B.** Là đặc tính — mỗi thực thể được xác định bởi định danh.\n- **C.** Là đặc tính — không đổi.\n- **D.** **Không phải** — định danh không tái sử dụng.\n\n### Điểm dễ nhầm\n\nĐịnh danh là **pure name**: không chứa thông tin vị trí và **không bao giờ** được gán lại cho thực thể khác.\n\n### Nguồn\n- **Name server (naming):** https://en.wikipedia.org/wiki/Name_server\n- **Hệ phân tán - cuối kì 20221.pdf trang 2:** phương án D được tô đỏ.\n- **Tanenbaum & Van Steen, Ch.5 (Identifiers / pure names):**",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-13",
+        "type": "single_choice",
+        "question": {
+          "text": "Hệ thống phân tầng theo chiều ngang là:",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Phân thành nhiều tầng, mỗi tầng có chức năng riêng"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ có 1 tầng, và chia tải cho nhiều máy tính (cân bằng tải)"
+          },
+          {
+            "id": "C",
+            "text": "Các máy tính đặt ngang hàng nhau"
+          },
+          {
+            "id": "D",
+            "text": "Các máy tính được cài đặt các phần mềm giống hệt nhau."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Các máy tính đặt ngang hàng nhau.\n\n### Lời giải từng bước\n\nPhân tầng theo chiều **ngang** (horizontal distribution) có nghĩa là các thành phần/máy được đặt *ngang hàng*, chia sẻ công việc. Ngược lại, phân tầng theo chiều **dọc** (vertical distribution, kiến trúc nhiều tầng/layer) chia hệ thống thành các mức chức năng khác nhau (ví dụ client — application server — database).\n\n### Phân tích từng lựa chọn\n- **A.** Sai — \"nhiều tầng chức năng\" là phân tầng theo chiều *dọc*.\n- **B.** Sai — mô tả lẫn lộn.\n- **C.** Đúng — ngang hàng.\n- **D.** Sai — \"phần mềm giống hệt\" không phải tiêu chí phân tầng ngang.\n\n### Điểm dễ nhầm\n\nChiều **dọc** = nhiều layer chức năng; chiều **ngang** = nhiều máy ngang hàng.\n\n### Nguồn\n- **Distributed computing:** https://en.wikipedia.org/wiki/Distributed_computing\n- **Hệ phân tán - cuối kì 20221.pdf trang 2:** phương án C được tô đỏ.\n- **Tanenbaum & Van Steen, Ch.2 (Vertical vs horizontal distribution):**",
+          "images": [
+            {
+              "id": "fig-vh",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 200\" width=\"520\" height=\"200\"><rect width=\"520\" height=\"200\" fill=\"#fff\"/><text x=\"40\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Vertical (layered)</text><rect x=\"40\" y=\"45\" width=\"150\" height=\"30\" fill=\"#fff\" stroke=\"#111\"/><rect x=\"40\" y=\"75\" width=\"150\" height=\"30\" fill=\"#e8f2ff\" stroke=\"#111\"/><rect x=\"40\" y=\"105\" width=\"150\" height=\"30\" fill=\"#fff\" stroke=\"#111\"/><text x=\"320\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Horizontal (peers)</text><circle cx=\"350\" cy=\"90\" r=\"18\" fill=\"#e8f2ff\" stroke=\"#111\"/><circle cx=\"450\" cy=\"90\" r=\"18\" fill=\"#e8f2ff\" stroke=\"#111\"/><line x1=\"368\" y1=\"90\" x2=\"432\" y2=\"90\" stroke=\"#111\"/></svg>",
+              "alt": "Phan tang doc (layer) vs phan tan theo chieu ngang (peers)"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20221-15",
+        "type": "single_choice",
+        "question": {
+          "text": "Phương pháp định danh trong hệ thống Chord có sử dụng bảng băm phân tán. Mục đích chính để làm gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tối ưu hóa việc tìm kiếm thực thể thay vì phải tìm tuần tự các nút trong vòng"
+          },
+          {
+            "id": "B",
+            "text": "Bảng băm được tổ chức như 1 bộ đệm, tối ưu hơn cho các lần tìm kiếm trong tương lai trên cùng thực thể."
+          },
+          {
+            "id": "C",
+            "text": "Bảng băm được sử dụng để lưu thông tin của các nút kế tiếp trong hệ thống."
+          },
+          {
+            "id": "D",
+            "text": "Bảng băm lưu thông tin vị trí của tất cả các thực thể trong hệ thống."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Tối ưu hoá việc tìm kiếm thực thể thay vì tìm tuần tự các nút trong vòng.\n\n### Lời giải từng bước\n\nMục đích của DHT/finger table trong Chord là giảm số nút phải đi qua khi tra khoá: thay vì duyệt tuần tự $O(N)$ nút quanh vòng, finger table cho phép \"nhảy xa\" theo luỹ thừa 2, đạt $O(\\log N)$ bước.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — tăng tốc tìm kiếm từ $O(N)$ xuống $O(\\log N)$.\n- **B.** Sai — không phải cơ chế cache.\n- **C.** Sai — chỉ lưu nút kế tiếp là successor pointer đơn giản, không phải mục đích bảng băm.\n- **D.** Sai — không lưu vị trí *tất cả* thực thể.\n\n### Điểm dễ nhầm\n\nBảng băm không phải cache và không lưu toàn bộ vị trí; nó lưu $O(\\log N)$ con trỏ để định tuyến nhanh.\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 2:** phương án A được tô đỏ.\n- **Wikipedia, Chord (peer-to-peer):** https://en.wikipedia.org/wiki/Chord_(peer-to-peer)",
+          "images": [
+            {
+              "id": "fig-dht-lookup",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 340\" width=\"340\" height=\"340\"><rect width=\"340\" height=\"340\" fill=\"#fff\"/><circle cx=\"170\" cy=\"170\" r=\"130\" fill=\"none\" stroke=\"#111\" stroke-width=\"2\"/><circle cx=\"170\" cy=\"40\" r=\"16\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"164\" y=\"46\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">8</text><circle cx=\"282\" cy=\"235\" r=\"16\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"276\" y=\"241\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">11</text><circle cx=\"58\" cy=\"235\" r=\"16\" fill=\"#fff\" stroke=\"#111\"/><text x=\"52\" y=\"241\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">2</text><line x1=\"68\" y1=\"222\" x2=\"158\" y2=\"52\" stroke=\"#111\"/><line x1=\"182\" y1=\"55\" x2=\"272\" y2=\"222\" stroke=\"#111\"/><text x=\"140\" y=\"300\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">lookup: 2 -> 8 -> 11 = O(log N)</text></svg>",
+              "alt": "Chord: finger table cho phep nhay O(log N) buoc den khoa"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-17",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong cơ chế sao lưu dựa trên túc số (quorum), điều kiện NR + NW > N để làm gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Để tránh mâu thuẫn ghi-ghi"
+          },
+          {
+            "id": "B",
+            "text": "Để tránh mâu thuẫn đọc-ghi"
+          },
+          {
+            "id": "C",
+            "text": "Để tránh mâu thuẫn đọc-đọc"
+          },
+          {
+            "id": "D",
+            "text": "Để tránh cả 3 mâu thuẫn trên."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Để tránh mâu thuẫn đọc-ghi.\n\n### Lời giải từng bước\n\nVới $N$ bản sao, $N_r$ là túc số đọc, $N_w$ là túc số ghi. Điều kiện $N_r + N_w > N$ bảo đảm **mọi tập đọc và mọi tập ghi luôn giao nhau**, nên một thao tác đọc luôn \"đụng\" tới ít nhất một bản sao vừa được ghi → đọc không bao giờ chạy song song với ghi trên hai nhóm rời nhau, loại bỏ mâu thuẫn đọc-ghi.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — ghi-ghi chống bằng $N_w > N/2$.\n- **B.** Đúng — $N_r+N_w>N$ ⇔ đọc và ghi luôn giao nhau.\n- **C.** Sai — đọc-đọc không gây mâu thuẫn.\n- **D.** Sai — không phải cả ba.\n\n### Điểm dễ nhầm\n\nNhớ cặp bất đẳng thức: $N_w>N/2$ ⇒ chống ghi-ghi; $N_r+N_w>N$ ⇒ chống đọc-ghi (đọc luôn thấy bản mới nhất).\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 2:** phương án B được tô đỏ.\n- **Wikipedia, Quorum (distributed computing):** https://en.wikipedia.org/wiki/Quorum_(distributed_computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-18",
+        "type": "single_choice",
+        "question": {
+          "text": "Tác dụng của đồng bộ hoá đồng hồ logic theo nguyên lý của Lamport có tác dụng gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đảm bảo không làm mất thông điệp trong quá trình gửi nhận giữa các tiến trình."
+          },
+          {
+            "id": "B",
+            "text": "Đảm bảo xác thực được các tiến trình gửi."
+          },
+          {
+            "id": "C",
+            "text": "Đảm bảo ngăn chặn được hình thức tấn công người đứng giữa (Man in the middle)."
+          },
+          {
+            "id": "D",
+            "text": "Đảm bảo thống nhất toàn cục cho quá trình gửi theo nhóm (Totally Ordered Multicasting)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Đảm bảo thống nhất toàn cục cho quá trình gửi theo nhóm (Totally Ordered Multicasting).\n\n### Lời giải từng bước\n\nĐồng hồ logic Lamport gán nhãn số cho sự kiện sao cho nếu $a$ happened-before $b$ thì $C(a)<C(b)$. Bằng cách phá hoà bằng ID tiến trình, mọi tiến trình suy ra được **cùng một thứ tự toàn cục** cho các sự kiện/thông điệp — đó là cơ sở cho totally ordered multicast (giao mọi thông điệp theo cùng thứ tự ở mọi bên). Đồng hồ logic không liên quan tới chống mất mát, xác thực hay MITM.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — độ tin cậy truyền thông là việc khác.\n- **B.**, **C.** Sai — đó là vấn đề bảo mật/xác thực.\n- **D.** Đúng — Lamport clock ⇒ total order ⇒ totally ordered multicast.\n\n### Điểm dễ nhầm\n\nĐồng hồ Lamport cho **partial order**; muốn total order phải phá hoà bằng ID tiến trình.\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 2:** phương án D được tô đỏ.\n- **Wikipedia, Lamport timestamp:** https://en.wikipedia.org/wiki/Lamport_timestamp",
+          "images": [
+            {
+              "id": "fig-lamport-order",
+              "ascii": "P0: a1 ----> a2\nP1:            b1 ----> b2\nMessage: a1 -> b1 (send/receive)\nLamport: C(a1) < C(a2), C(b1) < C(b2), C(a1) < C(b1)\nPha hoa bang (timestamp, processId) => total order cho moi tien trinh",
+              "alt": "Dong ho Lamport cho thu tu nhan qua va (khi pha hoa) thu tu toan cuc"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-19",
+        "type": "single_choice",
+        "question": {
+          "text": "Nhược điểm của giải thuật tập trung trong nhóm các giải thuật loại trừ lẫn nhau (mutual exclusion) là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tiến trình coordinator có nguy cơ bị quá tải (hiện tượng thắt nút cổ chai)"
+          },
+          {
+            "id": "B",
+            "text": "Các tiến trình muốn vào dùng tài nguyên thì không biết gửi yêu cầu cho tiến trình nào."
+          },
+          {
+            "id": "C",
+            "text": "Tiến trình coordinator phải sử dụng hàng đợi cho các yêu cầu dẫn đến tốn tài nguyên lưu trữ."
+          },
+          {
+            "id": "D",
+            "text": "Các tiến trình muốn vào sử dụng tài nguyên thì phải quảng bá yêu cầu cho tất cả các tiến trình khác."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Coordinator có nguy cơ bị quá tải (thắt nút cổ chai).\n\n### Lời giải từng bước\n\nTrong thuật toán tập trung, mọi REQUEST/RELEASE đều dồn về một coordinator duy nhất. Khi số tiến trình tăng, coordinator trở thành điểm nghẽn (bottleneck):CPU, băng thông và hàng đợi của nó bị quá tải, đồng thời là điểm chết đơn (single point of failure).\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — nghẽn cổ chai tại coordinator.\n- **B.** Sai — các tiến trình đều biết gửi cho coordinator.\n- **C.** Sai — hàng đợi nhỏ, không phải nhược điểm chính.\n- **D.** Sai — quảng bá là thuật toán *phân tán*, không phải tập trung.\n\n### Điểm dễ nhầm\n\nNhược điểm của tập trung là **bottleneck + single point of failure**, không phải \"không biết gửi cho ai\".\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 2:** phương án A được tô đỏ.\n- **Wikipedia, Mutual exclusion:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": [
+            {
+              "id": "fig-bottleneck",
+              "ascii": "        P1\n         \\            P4\n          \\          /\n  P2 ---- [Coordinator] ---- P5   <- bottleneck / single point\n          /          \\\n         P3            P6\n(moi REQUEST/RELEASE deu don ve coordinator)",
+              "alt": "Giai thuat tap trung: coordinator la diem nghen va diem chet don"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20221-20",
+        "type": "single_choice",
+        "question": {
+          "text": "Thế nào là trong suốt di trú?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Che giấu việc dữ liệu được cung cấp từ nhiều bản sao khác nhau"
+          },
+          {
+            "id": "B",
+            "text": "Che giấu vị trí của tài nguyên"
+          },
+          {
+            "id": "C",
+            "text": "Che giấu việc tài nguyên được chuyển đến địa điểm khác"
+          },
+          {
+            "id": "D",
+            "text": "Che giấu sự khác nhau trong biểu diễn dữ liệu và cách thức truy cập tài nguyên."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Che giấu việc tài nguyên được chuyển đến địa điểm khác.\n\n### Lời giải từng bước\n\nPhân biệt các loại trong suốt: **access** (che biểu diễn dữ liệu/cách truy cập), **location** (che vị trí), **migration** (che việc tài nguyên *di chuyển* sang nơi khác), **relocation**, **replication** (che việc có nhiều bản sao), **failure**. Trong suốt di trú nói đúng về việc tài nguyên đã chuyển chỗ nhưng client không cần biết.\n\n### Phân tích từng lựa chọn\n- **A.** Là transparency *replication*.\n- **B.** Là transparency *location*.\n- **C.** Đúng — transparency *migration*.\n- **D.** Là transparency *access*.\n\n### Điểm dễ nhầm\n\nMigration ⇔ \"đã chuyển đi nơi khác\"; Location ⇔ \"ở đâu\" — hai khái niệm khác nhau.\n\n### Nguồn\n- **Distributed computing:** https://en.wikipedia.org/wiki/Distributed_computing\n- **Hệ phân tán - cuối kì 20221.pdf trang 2:** phương án C được tô đỏ.\n- **Tanenbaum & Van Steen, Ch.1 (Transparency types):** migration vs location transparency.",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20221-21",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong mô hình thống nhất liên tục, người ta xét đến các yếu tố chênh lệch nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chênh lệch giá trị, chênh lệch thứ tự, chênh lệch số tiến trình trong server bản sao"
+          },
+          {
+            "id": "B",
+            "text": "Chênh lệch giá trị, chênh lệch thứ tự, chênh lệch thời gian cập nhật"
+          },
+          {
+            "id": "C",
+            "text": "Chênh lệch thứ tự, chênh lệch thời gian cập nhật, chênh lệch dung lượng lưu trữ"
+          },
+          {
+            "id": "D",
+            "text": "Chênh lệch giá trị, chênh lệch thời gian cập nhật, chênh lệch số tiến trình trong server bản sao"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Chênh lệch giá trị, chênh lệch thứ tự, chênh lệch thời gian cập nhật.\n\n### Lời giải từng bước\n\nMô hình thống nhất liên tục (continuous consistency) đo ba loại sai lệch: (1) **value deviation** — chênh lệch giá trị, (2) **order deviation** — chênh lệch thứ tự các thao tác, (3) **staleness** — chênh lệch thời gian cập nhật. Ba đại lượng này được theo dõi để quyết định khi nào cần đồng bộ.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — \"số tiến trình\" không phải yếu tố.\n- **B.** Đúng — đủ ba: giá trị, thứ tự, thời gian.\n- **C.** Sai — \"dung lượng lưu trữ\" không phải yếu tố.\n- **D.** Sai — lẫn \"số tiến trình\".\n\n### Điểm dễ nhầm\n\nBa trục: **value, order, staleness**. Đừng chèn \"số tiến trình\" hay \"dung lượng\".\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 2:** phương án B được tô đỏ.\n- **Wikipedia, Consistency model:** https://en.wikipedia.org/wiki/Consistency_model",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-22",
+        "type": "single_choice",
+        "question": {
+          "text": "Phương pháp trao đổi thông tin hướng thông điệp bền vững được áp dụng phù hợp cho dịch vụ nào?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "WWW"
+          },
+          {
+            "id": "B",
+            "text": "email"
+          },
+          {
+            "id": "C",
+            "text": "Video streaming"
+          },
+          {
+            "id": "D",
+            "text": "Audio streaming"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** email.\n\n### Lời giải từng bước\n\nThông điệp bền vững (persistent) được lưu ở server trung gian cho tới khi giao được, không đòi hỏi bên nhận online cùng lúc, và chấp nhận độ trễ lớn. Đây chính là mô hình của **email** (SMTP + mailbox). Ngược lại, WWW và streaming cần trao đổi *tạm thời* (transient) với độ trễ thấp.\n\n### Phân tích từng lựa chọn\n- **A.** WWW — trao đổi transient (HTTP).\n- **B.** email — persistent, phù hợp.\n- **C.**, **D.** streaming — cần liên tục, độ trễ thấp.\n\n### Điểm dễ nhầm\n\nEmail là ví dụ kinh điển của persistent asynchronous communication.\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 2:** phương án B được tô đỏ.\n- **Tanenbaum & Van Steen, Ch.4 (Persistent communication):** https://www.cs.utsa.edu/~korkmaz/teaching/resources-os-grad/tk-slides/ts/ch04-ts-tk-part-1-2-middleware-rpc.pdf",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "key20221-23",
+        "type": "single_choice",
+        "question": {
+          "text": "Để đánh giá độ chênh lệch giữa 2 server bản sao, nếu chọn Conit (consistency unit) có kích cỡ lớn thì sẽ gây ra vấn đề gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tốn dung lượng lưu trữ."
+          },
+          {
+            "id": "B",
+            "text": "Tốn băng thông trao đổi dữ liệu."
+          },
+          {
+            "id": "C",
+            "text": "Các bản sao sẽ sớm bị rơi vào trạng thái không thống nhất."
+          },
+          {
+            "id": "D",
+            "text": "Các bản sao sẽ không bao giờ thống nhất."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Tốn băng thông trao đổi dữ liệu.\n\n### Lời giải từng bước\n\nConit càng lớn (chứa nhiều biến/bản ghi) thì mỗi lần đo/đồng bộ độ lệch phải trao đổi nhiều dữ liệu giữa các bản sao hơn, làm tăng lưu lượng mạng — tốn **băng thông**. Conit nhỏ giúp đo lệch mịn và giảm dữ liệu phải truyền.\n\n### Phân tích từng lựa chọn\n- **A.** Sai — dung lượng lưu trữ không phải vấn đề chính.\n- **B.** Đúng — dữ liệu trao đổi lớn ⇒ tốn băng thông.\n- **C.**, **D.** Sai — mô tả hệ quả không đúng.\n\n### Điểm dễ nhầm\n\nLưu ý hai câu Conit khác nhau: Conit **lớn** ⇒ tốn băng thông (câu này); nhồi **quá nhiều biến** vào Conit ⇒ replica mau mất thống nhất (câu khác).\n\n### Nguồn\n- **Consistency model:** https://en.wikipedia.org/wiki/Consistency_model\n- **Hệ phân tán - cuối kì 20221.pdf trang 2:** phương án B được tô đỏ.\n- **Tanenbaum & Van Steen, Ch.7 (Continuous consistency):** kích cỡ Conit ảnh hưởng chi phí đồng bộ.",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-24",
+        "type": "single_choice",
+        "question": {
+          "text": "Thế nào là thống nhất nhân quả?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thứ tự các thao tác đọc phải diễn ra sau các thao tác ghi trên cùng một bản sao."
+          },
+          {
+            "id": "B",
+            "text": "Thứ tự các thao tác đọc phải diễn ra sau các thao tác ghi trên bất kỳ bản sao nào."
+          },
+          {
+            "id": "C",
+            "text": "Các thao tác ghi có ràng buộc nhân quả cần được các tiến trình nhìn thấy theo cùng một thứ tự."
+          },
+          {
+            "id": "D",
+            "text": "Các thao tác ghi có không có ràng buộc nhân quả cần được các tiến trình nhìn thấy theo cùng một thứ tự."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Các thao tác ghi có ràng buộc nhân quả cần được các tiến trình nhìn thấy theo cùng một thứ tự.\n\n### Lời giải từng bước\n\nThống nhất nhân quả (causal consistency) chỉ yêu cầu thứ tự đối với các thao tác ghi **có quan hệ nhân quả** (nếu W1 → W2 thì mọi tiến trình đều thấy W1 trước W2). Các thao tác ghi *đồng thời, không ràng buộc nhân quả* có thể được thấy theo thứ tự khác nhau ở các tiến trình.\n\n### Phân tích từng lựa chọn\n- **A.**, **B.** Sai — nói về quan hệ đọc/ghi, không phải định nghĩa causal consistency.\n- **C.** Đúng — chỉ ràng buộc với các ghi có quan hệ nhân quả.\n- **D.** Sai — ngược lại (nói ghi *không* có ràng buộc).\n\n### Điểm dễ nhầm\n\nCausal consistency nới lỏng sequential consistency: chỉ các ghi **có nhân quả** mới buộc cùng thứ tự.\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 2:** phương án C được tô đỏ.\n- **Wikipedia, Consistency model (causal consistency):** https://en.wikipedia.org/wiki/Consistency_model",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "key20221-25",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong các giao thức đảm bảo thống nhất giữa các bản sao, kiểu sao lưu dựa trên các bản sao (replicated write) có cơ chế gọi là sao lưu tích cực. Vậy sao lưu tích cực là gì?",
+          "images": []
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Khi có cập nhật, tiến trình cập nhật sẽ tiến hành cập nhật trên tất cả các bản sao. Khi cần đọc, tiến trình đọc sẽ chỉ đọc trên bản sao cục bộ của mình."
+          },
+          {
+            "id": "B",
+            "text": "Khi có cập nhật, tiến trình cập nhật sẽ tiến hành cập nhật trên bản sao cục bộ của mình. Khi cần đọc, tiến trình đọc sẽ đọc trên tất cả các bản sao."
+          },
+          {
+            "id": "C",
+            "text": "Khi có cập nhật, tiến trình cập nhật sẽ tiến hành cập nhật trên bản sao cục bộ của mình. Khi cần đọc, tiến trình đọc sẽ chỉ đọc trên bản sao cục bộ của mình."
+          },
+          {
+            "id": "D",
+            "text": "Khi có cập nhật, tiến trình cập nhật sẽ tiến hành cập nhật trên tất cả các bản sao. Khi cần đọc, tiến trình đọc sẽ đọc trên tất cả các bản sao."
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Cập nhật trên *tất cả* các bản sao; khi đọc chỉ đọc bản sao cục bộ.\n\n### Lời giải từng bước\n\nVới *replicated write*, thao tác ghi được thực hiện tại mọi bản sao. Cơ chế **active replication** (sao lưu tích cực) đẩy cập nhật tới tất cả các bản sao ngay khi có ghi, nhờ đó mọi bản sao luôn đồng bộ và thao tác **đọc chỉ cần đọc bản sao cục bộ** (nhanh, không cần liên lạc xa). Ngược lại, *passive replication* chỉ ghi trên một bản sao.\n\n### Phân tích từng lựa chọn\n- **A.** Đúng — active replication: ghi mọi nơi, đọc tại chỗ.\n- **B.**, **C.** Sai — mô tả ghi cục bộ.\n- **D.** Sai — đọc trên tất cả các bản sao là mô hình \"read all\" khác.\n\n### Điểm dễ nhầm\n\nActive replication ⇔ **ghi lan toả mọi bản sao**, **đọc tại chỗ**.\n\n### Nguồn\n- **Hệ phân tán - cuối kì 20221.pdf trang 3:** phương án A được tô đỏ.\n- **Wikipedia, Replication (computing):** https://en.wikipedia.org/wiki/Replication_(computing) (primary-backup vs multi-primary; thao tác cập nhật được lan toả tới các bản sao)",
+          "images": [
+            {
+              "id": "fig-cap",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"420\" height=\"260\"><rect width=\"420\" height=\"260\" fill=\"#fff\"/><polygon points=\"210,40 90,220 330,220\" fill=\"none\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"195\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Consistency</text><text x=\"45\" y=\"240\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Availability</text><text x=\"300\" y=\"240\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">Partition tolerance</text><circle cx=\"210\" cy=\"150\" r=\"6\" fill=\"#111\"/><text x=\"120\" y=\"120\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">CP (primary-based)</text><text x=\"210\" y=\"200\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#111\">AP (replicated)</text></svg>",
+              "alt": "CAP theorem: khi co phan vung, phai chon Consistency hoac Availability"
+            }
+          ]
+        },
+        "tags": [
+          "he-phan-tan",
+          "cuoi-ki-20221"
+        ],
+        "difficulty": "medium"
+      }
+    ]
+  }
+}

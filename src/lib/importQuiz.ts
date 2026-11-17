@@ -14,6 +14,10 @@ export class QuizImportError extends Error {
   }
 }
 
+function getStoredQuestionId(quizId: string, questionId: string) {
+  return `${encodeURIComponent(quizId)}::${encodeURIComponent(questionId)}`;
+}
+
 function formatPathSegment(segment: string | number) {
   return typeof segment === 'number' ? `[${segment}]` : segment;
 }
@@ -177,7 +181,7 @@ export function parseQuizJson(raw: string): QuizPackFile {
 export async function saveImportedQuiz(data: QuizPackFile): Promise<void> {
   const now = Date.now();
 
-  await db.transaction('rw', db.quizPacks, db.questions, async () => {
+  await db.transaction('rw', db.quizPacks, db.questions, db.draftSessions, async () => {
     await db.quizPacks.put({
       id: data.quiz.id,
       title: data.quiz.title,
@@ -191,10 +195,14 @@ export async function saveImportedQuiz(data: QuizPackFile): Promise<void> {
     });
 
     await db.questions.where('quizId').equals(data.quiz.id).delete();
+    await db.draftSessions.where('quizId').equals(data.quiz.id).delete();
 
     await db.questions.bulkPut(
       data.quiz.questions.map((question) => ({
         ...question,
+        // Question IDs are only unique inside a quiz pack. Dexie uses this field
+        // as a global primary key, so namespace it before persisting.
+        id: getStoredQuestionId(data.quiz.id, question.id),
         quizId: data.quiz.id
       }))
     );

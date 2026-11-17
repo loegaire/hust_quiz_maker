@@ -64,5 +64,10 @@ temp/
 *.tmp
 *.bak
 
+# Local working files for quiz corpus extraction / QA (source zip stays locally, not in git)
+scratch/
+extracted/
+OneDrive_*.zip
+
 # Optional: generated quiz backups
 quiz-app-backup-*.json
