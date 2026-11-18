@@ -301,6 +301,80 @@ export function QuizPlayer({
     });
   }
 
+  function handleSelectChoice(question: QuestionRow, choiceId: string) {
+    setSession((currentSession) => {
+      if (!currentSession) {
+        return currentSession;
+      }
+
+      const existingResponse = currentSession.responses[question.id];
+      const existingIds = existingResponse?.selectedChoiceIds ?? [];
+      const selectedChoiceIds =
+        question.type === 'single_choice'
+          ? [choiceId]
+          : existingIds.includes(choiceId)
+            ? existingIds.filter((selectedId) => selectedId !== choiceId)
+            : [...existingIds, choiceId];
+
+      return {
+        ...currentSession,
+        responses: {
+          ...currentSession.responses,
+          [question.id]: buildResponse(question, {
+            selectedChoiceIds,
+            textAnswer: existingResponse?.textAnswer ?? ''
+          })
+        }
+      };
+    });
+  }
+
+  useEffect(() => {
+    if (!session || !currentQuestion) {
+      return;
+    }
+
+    const totalQuestions = orderedQuestions.length;
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.ctrlKey || event.metaKey || event.altKey) {
+        return;
+      }
+
+      if (event.key === 'Tab') {
+        event.preventDefault();
+        if (event.shiftKey) {
+          if (session!.currentIndex > 0) {
+            updateCurrentIndex(session!.currentIndex - 1);
+          }
+        } else if (session!.currentIndex < totalQuestions - 1) {
+          updateCurrentIndex(session!.currentIndex + 1);
+        }
+        return;
+      }
+
+      const target = event.target as HTMLElement | null;
+      const tagName = target?.tagName;
+      if (tagName === 'INPUT' || tagName === 'TEXTAREA' || tagName === 'SELECT' || target?.isContentEditable) {
+        return;
+      }
+
+      if (/^[1-9]$/.test(event.key) && (currentQuestion!.type === 'single_choice' || currentQuestion!.type === 'multiple_choice')) {
+        const choiceIndex = Number(event.key) - 1;
+        const choice = currentQuestion!.choices[choiceIndex];
+        if (choice) {
+          event.preventDefault();
+          handleSelectChoice(currentQuestion!, choice.id);
+        }
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [session, currentQuestion, orderedQuestions.length]);
+
   async function finishQuiz(sessionToFinish: DraftSession | null = session) {
     if (!sessionToFinish) {
       return;
@@ -459,19 +533,7 @@ export function QuizPlayer({
           selectedChoiceIds={responseForCurrent?.selectedChoiceIds ?? []}
           textAnswer={responseForCurrent?.textAnswer ?? ''}
           locked={false}
-          onSelectChoice={(choiceId) => {
-            const selectedChoiceIds =
-              currentQuestion.type === 'single_choice'
-                ? [choiceId]
-                : responseForCurrent?.selectedChoiceIds?.includes(choiceId)
-                  ? (responseForCurrent.selectedChoiceIds ?? []).filter((selectedId) => selectedId !== choiceId)
-                  : [...(responseForCurrent?.selectedChoiceIds ?? []), choiceId];
-
-            updateResponse(currentQuestion, {
-              selectedChoiceIds,
-              textAnswer: responseForCurrent?.textAnswer ?? ''
-            });
-          }}
+          onSelectChoice={(choiceId) => handleSelectChoice(currentQuestion, choiceId)}
           onTextAnswer={(value) =>
             updateResponse(currentQuestion, {
               selectedChoiceIds: responseForCurrent?.selectedChoiceIds ?? [],
@@ -512,6 +574,14 @@ export function QuizPlayer({
             Finish Quiz
           </button>
         </div>
+
+        <p className="text-xs text-[var(--muted)]">
+          Keyboard:{' '}
+          {currentQuestion.type !== 'fill_gap' && currentQuestion.choices.length > 0
+            ? `1–${Math.min(currentQuestion.choices.length, 9)} select/toggle answer · `
+            : ''}
+          Tab next question · Shift+Tab previous question
+        </p>
       </div>
 
       <QuestionMap

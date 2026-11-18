@@ -23,12 +23,19 @@ export function QuestionCard({ question, selectedChoiceIds, textAnswer, locked, 
 
       {(question.type === 'single_choice' || question.type === 'multiple_choice') && (
         <div className="space-y-2">
-          {question.choices.map((choice) => (
+          {question.choices.map((choice, index) => (
             <ChoiceButton
               key={choice.id}
               content={
                 <div className="space-y-1">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">{choice.id}</p>
+                  <div className="flex items-center gap-2">
+                    {index < 9 ? (
+                      <kbd className="inline-flex h-5 min-w-5 items-center justify-center border-2 border-black bg-[var(--bg)] px-1 text-[11px] font-bold">
+                        {index + 1}
+                      </kbd>
+                    ) : null}
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">{choice.id}</p>
+                  </div>
                   <RichText content={choice.text} />
                 </div>
               }
