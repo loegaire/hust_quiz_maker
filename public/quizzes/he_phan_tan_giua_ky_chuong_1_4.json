@@ -8285,6 +8285,1169 @@
         "difficulty": "easy"
       },
       {
+        "id": "c2y-01",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong lập trình socket UDP, hàm `receive` và `send` có đặc điểm chặn nào (Slide 37)?",
+          "images": [
+            {
+              "id": "c2y-01-img",
+              "src": "images/hpt/ch2_tcp_listen_queues.png",
+              "alt": "Hai hàng đợi của listening socket trong TCP: incomplete connection queue (SYN_RCVD) và completed connection queue (ESTABLISHED) với giới hạn backlog — Slide 80 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`send` không dừng (non-blocking), `receive` bị dừng (blocking)"
+          },
+          {
+            "id": "B",
+            "text": "Cả hai đều dừng"
+          },
+          {
+            "id": "C",
+            "text": "Cả hai đều không dừng"
+          },
+          {
+            "id": "D",
+            "text": "`send` dừng, `receive` không dừng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `send` không dừng, `receive` bị dừng.\n\n### Lời giải từng bước\n\nSlide 37: UDP không hướng kết nối, không tin cậy, không đồng bộ. Các vấn đề: kích cỡ thông điệp, blocking, timeouts, receive from any.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: đảo ngược.\n\n### Điểm dễ nhầm\n\nCần timeout cho `receive` vì thông điệp UDP có thể bị mất.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 37: Trao đổi thông tin với UDP)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/User_Datagram_Protocol",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "udp"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2y-02",
+        "type": "single_choice",
+        "question": {
+          "text": "Đoạn mã Java UDP server dưới đây (Slide 38) làm gì?\n\n```java\nDatagramSocket aSocket = new DatagramSocket(6789);\nbyte[] buffer = new byte[1000];\nwhile (true) {\n    DatagramPacket request = new DatagramPacket(buffer, buffer.length);\n    aSocket.receive(request);\n    DatagramPacket reply = new DatagramPacket(request.getData(),\n        request.getLength(), request.getAddress(), request.getPort());\n    aSocket.send(reply);\n}\n```",
+          "images": [
+            {
+              "id": "c2y-02-img",
+              "src": "images/hpt/ch2_tcp_listen_queues.png",
+              "alt": "Hai hàng đợi của listening socket trong TCP: incomplete connection queue (SYN_RCVD) và completed connection queue (ESTABLISHED) với giới hạn backlog — Slide 80 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Echo server: nhận datagram trên cổng 6789 và gửi lại đúng nội dung cho client"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ nhận mà không gửi"
+          },
+          {
+            "id": "C",
+            "text": "Mở kết nối TCP tới client"
+          },
+          {
+            "id": "D",
+            "text": "Gửi quảng bá tới mọi máy"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Echo server UDP.\n\n### Lời giải từng bước\n\n`receive` chặn đến khi có datagram; `reply` dùng lại `getData()`, `getLength()` và địa chỉ/cổng của client rồi `send`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: có gọi `send`.\n- **C — Sai:** Sai: UDP không có kết nối.\n- **D — Sai:** Sai: gửi unicast tới client.\n\n### Điểm dễ nhầm\n\nUDP server không `accept`.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 38: UDPServer)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/User_Datagram_Protocol",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "udp",
+          "java"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2y-03",
+        "type": "single_choice",
+        "question": {
+          "text": "`DatagramSocket aSocket = new DatagramSocket();` ở UDP client (Slide 39) khác server ở điểm nào?",
+          "images": [
+            {
+              "id": "c2y-03-img",
+              "src": "images/hpt/ch2_tcp_listen_queues.png",
+              "alt": "Hai hàng đợi của listening socket trong TCP: incomplete connection queue (SYN_RCVD) và completed connection queue (ESTABLISHED) với giới hạn backlog — Slide 80 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không chỉ định cổng: hệ thống chọn một cổng cục bộ tuỳ ý"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ định cổng 6789"
+          },
+          {
+            "id": "C",
+            "text": "Tạo kết nối TCP"
+          },
+          {
+            "id": "D",
+            "text": "Luôn gửi quảng bá"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Hệ thống chọn cổng bất kỳ.\n\n### Lời giải từng bước\n\nClient chỉ cần biết cổng của server (6789) để gửi request; cổng nguồn tự động chọn để server trả lời.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là server.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nServer cần cổng cố định, client thì không.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 39: UDPClient)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/User_Datagram_Protocol",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "udp",
+          "java"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2y-04",
+        "type": "single_choice",
+        "question": {
+          "text": "Tại sao RPC thường dùng **ngôn ngữ định nghĩa giao diện (IDL)** (Slide 58)?",
+          "images": [
+            {
+              "id": "c2y-04-img",
+              "src": "images/hpt/ch2_rpc_steps.png",
+              "alt": "Sơ đồ các bước thực hiện lời gọi thủ tục từ xa RPC thông qua Client stub và Server stub — Slide 52 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Để client và server được cài đặt bởi các nhà sản xuất khác nhau, độc lập công cụ và ngôn ngữ, vẫn có giao diện thống nhất"
+          },
+          {
+            "id": "B",
+            "text": "Để tăng tốc CPU"
+          },
+          {
+            "id": "C",
+            "text": "Để mã hoá dữ liệu"
+          },
+          {
+            "id": "D",
+            "text": "Để tránh dùng mạng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Tính mở của RPC.\n\n### Lời giải từng bước\n\nIDL mô tả đầy đủ, trung lập giao diện; từ đó sinh client-stub và server-stub cho từng ngôn ngữ.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nIDL không thực thi, chỉ mô tả.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 58: Tính mở của RPC)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Interface_description_language",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "rpc",
+          "idl"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-05",
+        "type": "single_choice",
+        "question": {
+          "text": "Vấn đề cơ bản khi truyền **tham chiếu (con trỏ)** trong RPC là gì (Slide 55)?",
+          "images": [
+            {
+              "id": "c2y-05-img",
+              "src": "images/hpt/ch2_rpc_steps.png",
+              "alt": "Sơ đồ các bước thực hiện lời gọi thủ tục từ xa RPC thông qua Client stub và Server stub — Slide 52 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Client và server có không gian nhớ khác nhau nên con trỏ cục bộ vô nghĩa ở máy kia"
+          },
+          {
+            "id": "B",
+            "text": "Con trỏ quá lớn"
+          },
+          {
+            "id": "C",
+            "text": "Con trỏ không thể là số nguyên"
+          },
+          {
+            "id": "D",
+            "text": "Mạng không truyền được số"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Hai không gian nhớ khác nhau.\n\n### Lời giải từng bước\n\nGiải pháp copy/restore (thay tham chiếu bằng sao chép) tốn băng thông và khó với dữ liệu có cấu trúc.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nKhác với vấn đề biểu diễn dữ liệu (endian).\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 55: Truyền tham chiếu)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Remote_procedure_call",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "rpc",
+          "tham-chieu"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-06",
+        "type": "single_choice",
+        "question": {
+          "text": "Ví dụ máy **Intel Pentium (little endian)** gửi số nguyên cho máy **SPARC (big endian)** (Slide 56) minh hoạ vấn đề nào?",
+          "images": [
+            {
+              "id": "c2y-06-img",
+              "src": "images/hpt/ch2_rpc_endianness.png",
+              "alt": "Sai lệch biểu diễn dữ liệu khi truyền tham số giá trị giữa Intel Pentium (Little-Endian) và SPARC (Big-Endian) — Slide 56 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Khác biểu diễn dữ liệu: cùng dãy byte được hiểu thành giá trị khác nhau"
+          },
+          {
+            "id": "B",
+            "text": "Khác không gian nhớ"
+          },
+          {
+            "id": "C",
+            "text": "Mất gói tin"
+          },
+          {
+            "id": "D",
+            "text": "Lỗi bắt tay TCP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Khác cách biểu diễn dữ liệu.\n\n### Lời giải từng bước\n\nLittle endian lưu byte thấp trước, big endian lưu byte cao trước. Cần thống nhất biểu diễn chung (Slide 57: định dạng thông điệp, biểu diễn kiểu dữ liệu cơ bản).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là vấn đề tham chiếu.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐây là vấn đề của truyền *giá trị*.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 56–57: Sai lệch truyền tham biến)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Endianness",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "rpc",
+          "endian"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-07",
+        "type": "single_choice",
+        "question": {
+          "text": "Các yếu tố mà hai bên gửi/nhận RPC phải thống nhất (Slide 57) gồm:",
+          "images": [
+            {
+              "id": "c2y-07-img",
+              "src": "images/hpt/ch2_rpc_steps.png",
+              "alt": "Sơ đồ các bước thực hiện lời gọi thủ tục từ xa RPC thông qua Client stub và Server stub — Slide 52 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Định dạng thông điệp, cách biểu diễn kiểu dữ liệu cơ bản, kiểu trao đổi thông điệp, cách triển khai client-stub/server-stub"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ màu giao diện"
+          },
+          {
+            "id": "C",
+            "text": "Chỉ hệ điều hành"
+          },
+          {
+            "id": "D",
+            "text": "Chỉ tên máy"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 57.\n\n### Lời giải từng bước\n\nĐây là nội dung đặc tả tham số: tuân thủ một kiểu giao thức chung.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nKhông cần cùng hệ điều hành.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 57: Đặc tả tham số)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Remote_procedure_call",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "rpc"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2y-08",
+        "type": "single_choice",
+        "question": {
+          "text": "So sánh **RMI** với **RPC** (Slide 65): điểm khác nhau chính là gì?",
+          "images": [
+            {
+              "id": "c2y-08-img",
+              "src": "images/hpt/ch2_rmi_arch.png",
+              "alt": "Kiến trúc phân lớp của hệ thống Java RMI: Stubs, Skeletons, Remote Reference Layer và Transport — Slide 70 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "RMI cho phép tận dụng điểm mạnh của lập trình hướng đối tượng và truyền tham chiếu đối tượng bằng định danh duy nhất"
+          },
+          {
+            "id": "B",
+            "text": "RMI không dựa trên yêu cầu/trả lời"
+          },
+          {
+            "id": "C",
+            "text": "RMI không có trong suốt"
+          },
+          {
+            "id": "D",
+            "text": "RMI chỉ dùng cho UDP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** OOP + tham chiếu đối tượng.\n\n### Lời giải từng bước\n\nGiống: hỗ trợ lập trình với giao diện, dựa trên giao thức yêu cầu/trả lời, mức độ trong suốt tương tự.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: giống RPC.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nRMI là RPC cho đối tượng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 65: RMI vs RPC)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://docs.oracle.com/javase/tutorial/rmi/overview.html",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "rmi",
+          "rpc"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-09",
+        "type": "single_choice",
+        "question": {
+          "text": "Ưu điểm và nhược điểm của **Java RMI** (Slide 69) là gì?",
+          "images": [
+            {
+              "id": "c2y-09-img",
+              "src": "images/hpt/ch2_rmi_arch.png",
+              "alt": "Kiến trúc phân lớp của hệ thống Java RMI: Stubs, Skeletons, Remote Reference Layer và Transport — Slide 70 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Ưu: đơn giản, trong suốt, tin cậy, an toàn nhờ JVM. Nhược: chỉ dùng cho Java"
+          },
+          {
+            "id": "B",
+            "text": "Ưu: dùng mọi ngôn ngữ. Nhược: không trong suốt"
+          },
+          {
+            "id": "C",
+            "text": "Ưu: không cần JVM. Nhược: không an toàn"
+          },
+          {
+            "id": "D",
+            "text": "Ưu: nhanh nhất. Nhược: tốn bộ nhớ"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 69.\n\n### Lời giải từng bước\n\nLời gọi phương thức từ xa giống lời gọi cục bộ; nhược điểm chỉ dùng cho Java (CORBA/DCOM hỗ trợ đa ngôn ngữ).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nGiới hạn ngôn ngữ là nhược điểm lớn nhất.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 69: Ưu điểm/Nhược điểm của RMI)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://docs.oracle.com/javase/tutorial/rmi/overview.html",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "rmi"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2y-10",
+        "type": "single_choice",
+        "question": {
+          "text": "Kiến trúc **Java RMI** (Slide 70) gồm các tầng nào giữa Application và Transport?",
+          "images": [
+            {
+              "id": "c2y-10-img",
+              "src": "images/hpt/ch2_rmi_arch.png",
+              "alt": "Kiến trúc phân lớp của hệ thống Java RMI: Stubs, Skeletons, Remote Reference Layer và Transport — Slide 70 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Stubs/Skeletons và Remote Reference Layer"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ Transport"
+          },
+          {
+            "id": "C",
+            "text": "Database và Cache"
+          },
+          {
+            "id": "D",
+            "text": "Compiler và Linker"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Stubs/Skeletons + Remote Reference Layer.\n\n### Lời giải từng bước\n\nPhía client có stub, phía server có skeleton; Remote Reference Layer quản lý tham chiếu và Transport truyền dữ liệu.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nStub (client) ↔ Skeleton (server).\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 70: Kiến trúc RMI)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://docs.oracle.com/javase/tutorial/rmi/overview.html",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "rmi"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-11",
+        "type": "single_choice",
+        "question": {
+          "text": "Công cụ nào của Windows RPC sinh ra **client stub và server stub** bằng C từ file giao diện (Slide 64)?",
+          "images": [
+            {
+              "id": "c2y-11-img",
+              "src": "images/hpt/ch2_rpc_steps.png",
+              "alt": "Sơ đồ các bước thực hiện lời gọi thủ tục từ xa RPC thông qua Client stub và Server stub — Slide 52 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trình biên dịch MIDL"
+          },
+          {
+            "id": "B",
+            "text": "gcc"
+          },
+          {
+            "id": "C",
+            "text": "make"
+          },
+          {
+            "id": "D",
+            "text": "javac"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** MIDL compiler.\n\n### Lời giải từng bước\n\nQuy trình: tạo file định nghĩa giao diện và cấu hình, dùng MIDL sinh stub và header, viết client/server, rồi biên dịch cùng thư viện RPC run-time.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nMIDL = Microsoft IDL compiler.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 64: RPC trên Windows)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Remote_procedure_call",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "rpc",
+          "midl"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-12",
+        "type": "single_choice",
+        "question": {
+          "text": "Dịch vụ nào KHÔNG thuộc DCE (Distributed Computing Environment) theo Slide 61?",
+          "images": [
+            {
+              "id": "c2y-12-img",
+              "src": "images/hpt/ch2_rpc_steps.png",
+              "alt": "Sơ đồ các bước thực hiện lời gọi thủ tục từ xa RPC thông qua Client stub và Server stub — Slide 52 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Distributed database cluster"
+          },
+          {
+            "id": "B",
+            "text": "Distributed file service"
+          },
+          {
+            "id": "C",
+            "text": "Directory service"
+          },
+          {
+            "id": "D",
+            "text": "Distributed time service"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** DCE cung cấp file, directory và time service.\n\n### Lời giải từng bước\n\nDCE do Open Group phát triển, là middleware theo mô hình client-server, giao tiếp qua RPC.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Không thuộc DCE.\n- **B — Sai:** Thuộc DCE.\n- **C — Sai:** Thuộc DCE.\n- **D — Sai:** Thuộc DCE.\n\n### Điểm dễ nhầm\n\nBa dịch vụ: file, directory, time.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 61: DCE RPC)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Remote_procedure_call",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "dce"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-13",
+        "type": "single_choice",
+        "question": {
+          "text": "**MOM (Message-Oriented Middleware)** hỗ trợ kiểu trao đổi nào (Slide 93)?",
+          "images": [
+            {
+              "id": "c2y-13-img",
+              "src": "images/hpt/ch2_message_queuing_4combinations.png",
+              "alt": "Bốn tổ hợp trạng thái hoạt động/thụ động của bên gửi và bên nhận trong mô hình hàng đợi thông điệp (MOM) — Slide 94 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không đồng bộ bền vững, có lưu trữ trung gian, chấp nhận độ trễ thời gian cao (ví dụ email)"
+          },
+          {
+            "id": "B",
+            "text": "Đồng bộ tức thời không lưu trữ"
+          },
+          {
+            "id": "C",
+            "text": "Chỉ truyền video"
+          },
+          {
+            "id": "D",
+            "text": "Chỉ truyền thanh"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Không đồng bộ bền vững.\n\n### Lời giải từng bước\n\nHệ thống hàng đợi thông điệp lưu thông điệp trung gian đến khi người nhận sẵn sàng.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nEmail là ví dụ điển hình.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 93: MOM)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Message-oriented_middleware",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "mom"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2y-14",
+        "type": "single_choice",
+        "question": {
+          "text": "**Message Broker** (Slide 97) thường đảm nhiệm vai trò gì?",
+          "images": [
+            {
+              "id": "c2y-14-img",
+              "src": "images/hpt/ch2_message_broker.png",
+              "alt": "Kiến trúc Message Broker chuyển đổi định dạng thông điệp dựa trên tập luật trong kho lưu trữ — Slide 97 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chuyển đổi định dạng thông điệp giữa các ứng dụng và định tuyến thông điệp"
+          },
+          {
+            "id": "B",
+            "text": "Mã hoá ổ cứng"
+          },
+          {
+            "id": "C",
+            "text": "Quản lý DNS"
+          },
+          {
+            "id": "D",
+            "text": "Cấp phát IP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Chuyển đổi và định tuyến thông điệp.\n\n### Lời giải từng bước\n\nBroker đóng vai trò cổng ứng dụng ở mức hàng đợi, giúp các ứng dụng dùng định dạng khác nhau giao tiếp; RabbitMQ là ví dụ.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nBroker tách rời producer và consumer.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 97–98: Message Broker, RabbitMQ)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://www.rabbitmq.com/tutorials",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "message-broker"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-15",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong hệ thống hàng đợi thông điệp, vì sao cần **router** (Slide 95–96)?",
+          "images": [
+            {
+              "id": "c2y-15-img",
+              "src": "images/hpt/ch2_message_queuing_4combinations.png",
+              "alt": "Bốn tổ hợp trạng thái hoạt động/thụ động của bên gửi và bên nhận trong mô hình hàng đợi thông điệp (MOM) — Slide 94 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Để ánh xạ địa chỉ mức hàng đợi sang địa chỉ mức mạng và chuyển thông điệp qua nhiều hàng đợi"
+          },
+          {
+            "id": "B",
+            "text": "Để nén video"
+          },
+          {
+            "id": "C",
+            "text": "Để xác thực người dùng"
+          },
+          {
+            "id": "D",
+            "text": "Để lưu cache DNS"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Ánh xạ địa chỉ và chuyển tiếp thông điệp.\n\n### Lời giải từng bước\n\nSlide 95 minh hoạ quan hệ giữa định địa chỉ mức hàng đợi và mức mạng; Slide 96 thêm các router trong hệ thống hàng đợi.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nRouter ở mức hàng đợi khác router IP.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 95–96: Định địa chỉ, router)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Message-oriented_middleware",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "mom",
+          "router"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-16",
+        "type": "single_choice",
+        "question": {
+          "text": "**MPI** (Message-Passing Interface, Slide 92) là gì?",
+          "images": [
+            {
+              "id": "c2y-16-img",
+              "src": "images/hpt/ch2_mpi_primitives.png",
+              "alt": "Bảng các hàm truyền thông điệp chuẩn của thư viện MPI (Message-Passing Interface) — Slide 92 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Giao diện chuẩn gồm các hàm truyền thông điệp thường dùng cho tính toán song song/phân tán"
+          },
+          {
+            "id": "B",
+            "text": "Một giao thức web"
+          },
+          {
+            "id": "C",
+            "text": "Một hệ quản trị CSDL"
+          },
+          {
+            "id": "D",
+            "text": "Một trình duyệt"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Chuẩn các hàm truyền thông điệp.\n\n### Lời giải từng bước\n\nMPI cung cấp hàm gửi/nhận (send/receive) dạng đồng bộ hoặc không đồng bộ giữa các tiến trình.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nMPI là thư viện, không phải giao thức mạng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 92: MPI)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Message_Passing_Interface",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "mpi"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2y-17",
+        "type": "single_choice",
+        "question": {
+          "text": "Phân biệt các kiểu truyền dòng dữ liệu (Slide 101): kiểu truyền nào yêu cầu **độ trễ truyền mỗi đơn vị nằm trong khoảng cho phép** (cả cận trên và cận dưới)?",
+          "images": [
+            {
+              "id": "c2y-17-img",
+              "src": "images/hpt/ch2_jitter_buffer.png",
+              "alt": "Sử dụng bộ đệm phát (playout buffer) ở phía nhận để khử độ biến thiên trễ (jitter) cho dòng dữ liệu — Slide 110 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Truyền đẳng thời (isochronous)"
+          },
+          {
+            "id": "B",
+            "text": "Truyền không đồng bộ"
+          },
+          {
+            "id": "C",
+            "text": "Truyền đồng bộ"
+          },
+          {
+            "id": "D",
+            "text": "Truyền ngẫu nhiên"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Truyền đẳng thời.\n\n### Lời giải từng bước\n\nKhông đồng bộ: không ràng buộc thời gian. Đồng bộ: có độ trễ tối đa. Đẳng thời: có cả cận trên và dưới (jitter bị giới hạn).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐẳng thời quan trọng cho audio/video.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 101: Dòng dữ liệu)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Quality_of_service",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "dong-du-lieu"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "c2y-18",
+        "type": "single_choice",
+        "question": {
+          "text": "Yêu cầu **độ trễ đầu cuối của audio tương tác** theo Slide 105 là gì?",
+          "images": [
+            {
+              "id": "c2y-18-img",
+              "src": "images/hpt/ch2_jitter_buffer.png",
+              "alt": "Sử dụng bộ đệm phát (playout buffer) ở phía nhận để khử độ biến thiên trễ (jitter) cho dòng dữ liệu — Slide 110 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "< 150 ms là tốt, < 400 ms chấp nhận được"
+          },
+          {
+            "id": "B",
+            "text": "< 1 ms"
+          },
+          {
+            "id": "C",
+            "text": "< 5 giây"
+          },
+          {
+            "id": "D",
+            "text": "Không giới hạn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** < 150 ms tốt, < 400 ms OK.\n\n### Lời giải từng bước\n\nĐộ trễ bao gồm cả đóng gói ở tầng ứng dụng và độ trễ mạng; trễ cao làm giảm tính tương tác (IP telephony, hội nghị video).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nStreaming lưu trữ chịu trễ khởi tạo lớn hơn nhiều (~10 giây).\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 104–105: Streaming tương tác)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Quality_of_service",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "audio",
+          "qos"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-19",
+        "type": "single_choice",
+        "question": {
+          "text": "Tốc độ bit của tín hiệu thoại lấy mẫu 8.000 mẫu/giây, mỗi mẫu lượng tử hoá thành 256 mức là bao nhiêu (Slide 106)?",
+          "images": [
+            {
+              "id": "c2y-19-img",
+              "src": "images/hpt/ch2_jitter_buffer.png",
+              "alt": "Sử dụng bộ đệm phát (playout buffer) ở phía nhận để khử độ biến thiên trễ (jitter) cho dòng dữ liệu — Slide 110 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "64.000 bps"
+          },
+          {
+            "id": "B",
+            "text": "8.000 bps"
+          },
+          {
+            "id": "C",
+            "text": "256.000 bps"
+          },
+          {
+            "id": "D",
+            "text": "2.048 bps"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `8000 × 8 bit = 64.000 bps`.\n\n### Lời giải từng bước\n\n256 = 2^8 nên mỗi mẫu cần 8 bit. Tốc độ = tần số lấy mẫu × số bit mỗi mẫu = `8000 × 8 = 64000`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: thiếu nhân số bit.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nSố bit = log2(số mức).\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 106: Nén dữ liệu audio)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Quality_of_service",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "audio",
+          "tinh-toan"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-20",
+        "type": "single_choice",
+        "question": {
+          "text": "Các chỉ số **QoS** của dòng dữ liệu (Slide 108) gồm:",
+          "images": [
+            {
+              "id": "c2y-20-img",
+              "src": "images/hpt/ch2_jitter_buffer.png",
+              "alt": "Sử dụng bộ đệm phát (playout buffer) ở phía nhận để khử độ biến thiên trễ (jitter) cho dòng dữ liệu — Slide 110 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bit-rate, delay, end-to-end delay, jitter, round-trip delay"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ dung lượng đĩa"
+          },
+          {
+            "id": "C",
+            "text": "Chỉ độ phân giải"
+          },
+          {
+            "id": "D",
+            "text": "Chỉ số tiến trình"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 108.\n\n### Lời giải từng bước\n\nTầng IP đơn giản theo best-effort; để thực thi QoS có thể dùng differentiated services (Slide 109).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nJitter là biến thiên độ trễ.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 108: Dòng dữ liệu và QoS)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Quality_of_service",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "qos"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2y-21",
+        "type": "single_choice",
+        "question": {
+          "text": "Cách dùng **bộ đệm (buffer)** phía nhận để giảm jitter (Slide 110) hoạt động thế nào?",
+          "images": [
+            {
+              "id": "c2y-21-img",
+              "src": "images/hpt/ch2_jitter_buffer.png",
+              "alt": "Sử dụng bộ đệm phát (playout buffer) ở phía nhận để khử độ biến thiên trễ (jitter) cho dòng dữ liệu — Slide 110 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Lưu tạm gói đến rồi phát đều đặn sau một độ trễ khởi đầu, bù cho biến thiên độ trễ mạng"
+          },
+          {
+            "id": "B",
+            "text": "Tăng tốc mạng"
+          },
+          {
+            "id": "C",
+            "text": "Xoá gói bị trễ"
+          },
+          {
+            "id": "D",
+            "text": "Mã hoá gói"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Làm trơn biến thiên độ trễ bằng độ trễ khởi đầu.\n\n### Lời giải từng bước\n\nĐổi lại độ trễ phát lại lớn hơn; không phù hợp tương tác thời gian thực khắt khe.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nBuffer giảm jitter nhưng tăng độ trễ.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 110: Thực thi QoS)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Quality_of_service",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "jitter",
+          "buffer"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-22",
+        "type": "single_choice",
+        "question": {
+          "text": "**FEC (Forward Error Correction)** và truyền xen kẽ (interleaving) (Slide 111) dùng để làm gì?",
+          "images": [
+            {
+              "id": "c2y-22-img",
+              "src": "images/hpt/ch2_fec_interleaving.png",
+              "alt": "Kỹ thuật truyền đan xen (Interleaved transmission) trong FEC giúp phân tán lỗi mất gói thành các khung rời rạc — Slide 111 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Giảm ảnh hưởng của mất gói mà không cần gửi lại"
+          },
+          {
+            "id": "B",
+            "text": "Tăng băng thông"
+          },
+          {
+            "id": "C",
+            "text": "Giảm độ trễ về 0"
+          },
+          {
+            "id": "D",
+            "text": "Xác thực người gửi"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Chịu mất gói không cần truyền lại.\n\n### Lời giải từng bước\n\nFEC gửi thêm thông tin dư thừa để khôi phục gói mất; interleaving trải gói mất ra nhiều đơn vị nhỏ để khó nhận biết.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nFEC tốn thêm băng thông.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 111: FEC, interleaving)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Forward_error_correction",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "fec"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2y-23",
+        "type": "single_choice",
+        "question": {
+          "text": "**Lip synchronization** (Slide 114) là đồng bộ giữa:",
+          "images": [
+            {
+              "id": "c2y-23-img",
+              "src": "images/hpt/ch2_lip_sync.png",
+              "alt": "Đồ thị ngưỡng cảm nhận độ lệch đồng bộ khẩu hình – âm thanh (Lip Synchronization skew) — Slide 114 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hai dòng liên tục: hình ảnh và âm thanh"
+          },
+          {
+            "id": "B",
+            "text": "Hai file văn bản"
+          },
+          {
+            "id": "C",
+            "text": "Hai tiến trình"
+          },
+          {
+            "id": "D",
+            "text": "Hai địa chỉ IP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Hình và tiếng.\n\n### Lời giải từng bước\n\nSlide 113: hai kiểu đồng bộ – giữa dòng rời rạc và dòng liên tục; giữa hai dòng liên tục.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nLệch quá ngưỡng thì không chấp nhận được.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 113–114: Đồng bộ hoá dòng)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Quality_of_service",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "lip-sync"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2y-24",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong hệ thống **X Window**, ở máy người dùng chạy thành phần nào (Slide 24)?",
+          "images": [
+            {
+              "id": "c2y-24-img",
+              "src": "images/hpt/ch2_xwindow_thinclient.png",
+              "alt": "Kiến trúc Thin-client X Window: Application server chạy ứng dụng (X-client) điều khiển màn hình tại User's terminal (X-server) qua X protocol — Slide 23 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "X-server, điều khiển màn hình/bàn phím; ứng dụng chạy là X-client"
+          },
+          {
+            "id": "B",
+            "text": "X-client"
+          },
+          {
+            "id": "C",
+            "text": "Cả hai giống nhau"
+          },
+          {
+            "id": "D",
+            "text": "Không có"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** X-server ở máy người dùng.\n\n### Lời giải từng bước\n\nCách gọi ngược trực giác: X-server nằm tại máy có màn hình, các ứng dụng (X-client) gửi lệnh vẽ tới nó.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nServer = bên có màn hình.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 23–24: X Window)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/X_Window_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "x-window"
+        ],
+        "difficulty": "medium"
+      },
+      {
         "id": "ch1-q001",
         "type": "single_choice",
         "question": {
