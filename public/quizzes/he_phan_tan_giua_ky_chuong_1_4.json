@@ -2487,6 +2487,2381 @@
         "difficulty": "hard"
       },
       {
+        "id": "e41-q02",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây về **Node.js** là **SAI**?",
+          "images": [
+            {
+              "id": "e41-q02-img",
+              "src": "images/hpt/ch2_dispatcher_worker.png",
+              "alt": "Mô hình server đa luồng Dispatcher/Worker: luồng điều phối nhận yêu cầu từ mạng và giao cho các luồng worker — Slide 14 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Node.js có tính đồng bộ: mỗi lời gọi I/O chặn luồng cho đến khi hoàn tất"
+          },
+          {
+            "id": "B",
+            "text": "Node.js dùng mô hình hướng sự kiện (event-driven) và I/O không chặn (non-blocking)"
+          },
+          {
+            "id": "C",
+            "text": "Node.js chạy ứng dụng trên một luồng chính (event loop) duy nhất"
+          },
+          {
+            "id": "D",
+            "text": "Node.js phù hợp với server cần xử lý nhiều kết nối I/O đồng thời"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Node.js **bất đồng bộ**, không phải đồng bộ; do đó phát biểu A là sai.\n\n### Lời giải từng bước\n\nNode.js dùng một luồng sự kiện (`event loop`) và các callback/Promise: khi gặp I/O, lời gọi được giao cho hệ thống và luồng chính tiếp tục xử lý yêu cầu khác, nên không bị chặn.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Sai vì Node.js là bất đồng bộ, non-blocking.\n- **B — Sai:** Đúng: đây chính là cơ chế của Node.js.\n- **C — Sai:** Đúng: một event loop trên luồng chính.\n- **D — Sai:** Đúng: thế mạnh của Node.js là nhiều kết nối I/O.\n\n### Điểm dễ nhầm\n\nĐừng nhầm *đơn luồng* với *đồng bộ*: Node.js đơn luồng nhưng lại bất đồng bộ.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 12–14: Mô hình luồng cho server)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "nodejs",
+          "bat-dong-bo"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e41-q10",
+        "type": "single_choice",
+        "question": {
+          "text": "Nhược điểm chính của **kiến trúc phân tầng** (`layered architecture`) là gì?",
+          "images": [
+            {
+              "id": "e41-q10-img",
+              "src": "images/hpt/ch1_ecommerce_3tier.png",
+              "alt": "Kiến trúc phân tầng 3 lớp (User interface, Processing, Data) của hệ thống thương mại điện tử — Slide 27 Chương 1"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Khó thay thế hoặc nâng cấp từng tầng độc lập"
+          },
+          {
+            "id": "B",
+            "text": "Các tầng phụ thuộc chặt chẽ vào nhau nên không thể mở rộng"
+          },
+          {
+            "id": "C",
+            "text": "Không thể phân chia hệ thống thành các thành phần"
+          },
+          {
+            "id": "D",
+            "text": "Hiệu năng thấp do mỗi yêu cầu của người dùng phải xử lý qua nhiều tầng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Nhược điểm là **hiệu năng thấp** vì mỗi yêu cầu phải đi xuyên qua nhiều tầng.\n\n### Lời giải từng bước\n\nKiến trúc phân tầng chia hệ thống thành các tầng xếp chồng, tầng trên chỉ gọi tầng dưới. Ưu điểm: tách biệt trách nhiệm, dễ thay thế từng tầng. Cái giá phải trả: mỗi yêu cầu đi qua nhiều tầng (và có thể qua mạng) nên độ trễ tăng.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Ngược lại: ưu điểm của phân tầng là dễ thay thế từng tầng.\n- **B — Sai:** Không đúng: phân tầng giúp mở rộng theo tầng.\n- **C — Sai:** Sai: phân tầng chính là cách phân chia thành phần.\n- **D — Đúng:** Đúng: độ trễ cộng dồn qua nhiều tầng.\n\n### Điểm dễ nhầm\n\nƯu điểm (tách biệt, dễ bảo trì) và nhược điểm (hiệu năng) thường được đặt cạnh nhau để gây nhầm.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 24–28: Kiến trúc phân tầng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Multitier_architecture",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-1",
+          "de-thi-giua-ky",
+          "kien-truc",
+          "phan-tang"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e41-q11",
+        "type": "single_choice",
+        "question": {
+          "text": "Kiến trúc của hệ thống **CORBA** thuộc kiểu kiến trúc nào?",
+          "images": [
+            {
+              "id": "e41-q11-img",
+              "src": "images/hpt/ch1_interceptors.png",
+              "alt": "Cơ chế Request-level interceptor và Message-level interceptor trong tầng Middleware — Slide 64 Chương 1"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kiến trúc hướng đối tượng"
+          },
+          {
+            "id": "B",
+            "text": "Kiến trúc hướng dữ liệu"
+          },
+          {
+            "id": "C",
+            "text": "Kiến trúc hướng sự kiện"
+          },
+          {
+            "id": "D",
+            "text": "Kiến trúc ngang hàng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** CORBA là ví dụ điển hình của **kiến trúc hướng đối tượng** (Slide 29 Chương 1).\n\n### Lời giải từng bước\n\nTrong CORBA, các thành phần là đối tượng phân tán giao tiếp qua `ORB` (Object Request Broker) bằng lời gọi phương thức từ xa; mỗi đối tượng đóng gói dữ liệu và thao tác.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng: thành phần là đối tượng, giao tiếp qua ORB.\n- **B — Sai:** Sai: kiến trúc hướng dữ liệu dựa trên kho dữ liệu chung.\n- **C — Sai:** Sai: hướng sự kiện dựa trên bus/publish-subscribe.\n- **D — Sai:** Sai: ngang hàng là P2P.\n\n### Điểm dễ nhầm\n\nNhớ cặp: CORBA/RMI → hướng đối tượng; Linda/kho chung → hướng dữ liệu; Pub/Sub → hướng sự kiện.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 29: Kiến trúc hướng đối tượng (CORBA))\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Middleware",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-1",
+          "de-thi-giua-ky",
+          "corba",
+          "kien-truc"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e41-q14",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu nào sau đây về **Microservices** là **SAI**?",
+          "images": [
+            {
+              "id": "e41-q14-img",
+              "src": "images/hpt/ch1_k8s_cluster.png",
+              "alt": "Kiến trúc cụm Kubernetes với Master node, các Worker node, Pod, Container và hệ số nhân bản (Replica) — Slide 38 Chương 1"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mỗi service có thể triển khai và mở rộng độc lập"
+          },
+          {
+            "id": "B",
+            "text": "Không có khả năng tái sử dụng các service"
+          },
+          {
+            "id": "C",
+            "text": "Các service giao tiếp với nhau qua API nhẹ"
+          },
+          {
+            "id": "D",
+            "text": "Có thể dùng công nghệ khác nhau cho từng service"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Microservices **có** khả năng tái sử dụng service; phát biểu B là sai (Slide 33 Chương 1 liệt kê *Tái sử dụng* là ưu điểm).\n\n### Lời giải từng bước\n\nMỗi microservice là một đơn vị nhỏ, độc lập, thực hiện một nghiệp vụ rõ ràng nên có thể được nhiều ứng dụng khác nhau tái sử dụng qua API.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Đúng: triển khai/mở rộng độc lập.\n- **B — Đúng:** Sai: tái sử dụng là ưu điểm của microservices.\n- **C — Sai:** Đúng: giao tiếp qua REST/gRPC/message.\n- **D — Sai:** Đúng: tự do công nghệ (polyglot).\n\n### Điểm dễ nhầm\n\nCâu hỏi hỏi phát biểu **sai**, dễ chọn nhầm đáp án đúng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 33–34: Microservices)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Microservices",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-1",
+          "de-thi-giua-ky",
+          "microservices"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e41-q16",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong **BitTorrent**, vai trò của `Tracker` là gì?",
+          "images": [
+            {
+              "id": "e41-q16-img",
+              "src": "images/hpt/ch1_bittorrent_collab.png",
+              "alt": "Kiến trúc hỗn hợp của hệ thống chia sẻ tệp hợp tác BitTorrent (Web server, tệp .torrent, Tracker và các nút ngang hàng) — Slide 53 Chương 1"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Nắm thông tin về các nút đang giữ file/mảnh file để giới thiệu cho nút khác"
+          },
+          {
+            "id": "B",
+            "text": "Lưu trữ toàn bộ nội dung file"
+          },
+          {
+            "id": "C",
+            "text": "Mã hoá dữ liệu truyền giữa các nút"
+          },
+          {
+            "id": "D",
+            "text": "Tính toán mã băm cho từng gói tin"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `Tracker` quản lý danh sách các nút đang chia sẻ file (Slide 53 Chương 1).\n\n### Lời giải từng bước\n\nNút mới tải file `.torrent`, liên hệ `Tracker` để nhận danh sách các `peer`, sau đó trao đổi các mảnh trực tiếp với nhau. Tracker không lưu nội dung file.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng: Tracker là máy chủ danh mục.\n- **B — Sai:** Sai: nội dung nằm trên các peer.\n- **C — Sai:** Sai: không phải việc của Tracker.\n- **D — Sai:** Sai: không phải vai trò của Tracker.\n\n### Điểm dễ nhầm\n\nĐừng nhầm Tracker là nơi lưu file — nó chỉ lưu *ai đang giữ file*.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 53: BitTorrent)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/BitTorrent",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-1",
+          "de-thi-giua-ky",
+          "bittorrent",
+          "p2p"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e42-q10",
+        "type": "single_choice",
+        "question": {
+          "text": "Vì sao **BitTorrent** được xếp vào kiến trúc **hỗn hợp (hybrid)**?",
+          "images": [
+            {
+              "id": "e42-q10-img",
+              "src": "images/hpt/ch1_bittorrent_collab.png",
+              "alt": "Kiến trúc hỗn hợp của hệ thống chia sẻ tệp hợp tác BitTorrent (Web server, tệp .torrent, Tracker và các nút ngang hàng) — Slide 53 Chương 1"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Lai giữa tập trung (Tracker) và không tập trung (chia sẻ trực tiếp giữa các nút)"
+          },
+          {
+            "id": "B",
+            "text": "Vì chạy được trên cả Windows và Linux"
+          },
+          {
+            "id": "C",
+            "text": "Vì dùng cả TCP và UDP"
+          },
+          {
+            "id": "D",
+            "text": "Vì có cả client và server trên cùng một máy"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** BitTorrent kết hợp **tập trung** (tracker) và **P2P phi tập trung** (trao đổi giữa các peer).\n\n### Lời giải từng bước\n\nGiai đoạn tìm nút do tracker (tập trung) hỗ trợ; giai đoạn tải dữ liệu là P2P trực tiếp.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: không liên quan hệ điều hành.\n- **C — Sai:** Sai: giao thức truyền không quyết định kiến trúc.\n- **D — Sai:** Sai: mọi peer đều có cả hai vai trò, đó là P2P thuần.\n\n### Điểm dễ nhầm\n\n*Hybrid* ở đây nói về kiến trúc hệ thống, không phải về giao thức hay nền tảng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 53: BitTorrent (hybrid))\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/BitTorrent",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-1",
+          "de-thi-giua-ky",
+          "bittorrent",
+          "hybrid"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e42-q05",
+        "type": "single_choice",
+        "question": {
+          "text": "Hệ thống tăng quy mô (số người dùng, tài nguyên) mà **không làm giảm chất lượng dịch vụ**. Đó là tính chất nào?",
+          "images": [
+            {
+              "id": "e42-q05-img",
+              "src": "images/hpt/ch1_email_www_arch.png",
+              "alt": "Sơ đồ kiến trúc hệ thống Email phân tán (MTA, MDA, SMTP, POP/IMAP, DNS MX) — Slide 10 Chương 1"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tính mở"
+          },
+          {
+            "id": "B",
+            "text": "Tính trong suốt"
+          },
+          {
+            "id": "C",
+            "text": "Tính sẵn sàng"
+          },
+          {
+            "id": "D",
+            "text": "Tính co giãn (scalability)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Khả năng tăng quy mô mà vẫn giữ QoS là **tính co giãn** (scalability).\n\n### Lời giải từng bước\n\nScalability có ba chiều: kích thước (số người dùng/tài nguyên), địa lý, hành chính. Hệ co giãn tốt khi tăng quy mô không làm tụt chất lượng.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Mở liên quan đến giao diện chuẩn.\n- **B — Sai:** Trong suốt là che giấu sự phân tán.\n- **C — Sai:** Sẵn sàng là thời gian hoạt động.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nPhân biệt *mở* (interoperability) với *co giãn* (quy mô).\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 18–20: Mục tiêu hệ phân tán – Scalability)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Distributed_computing",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-1",
+          "de-thi-giua-ky",
+          "scalability"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e42-q07",
+        "type": "single_choice",
+        "question": {
+          "text": "Vấn đề chính khi chuyển (offload) các tác vụ tính toán của thiết bị di động lên **cloud** là gì?",
+          "images": [
+            {
+              "id": "e42-q07-img",
+              "src": "images/hpt/ch1_email_www_arch.png",
+              "alt": "Sơ đồ kiến trúc hệ thống Email phân tán (MTA, MDA, SMTP, POP/IMAP, DNS MX) — Slide 10 Chương 1"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cloud không có đủ sức mạnh tính toán"
+          },
+          {
+            "id": "B",
+            "text": "Hạ tầng mạng Internet có giới hạn, đặc biệt với các ứng dụng đa phương tiện cần độ trễ thấp và băng thông lớn"
+          },
+          {
+            "id": "C",
+            "text": "Thiết bị di động không kết nối được mạng"
+          },
+          {
+            "id": "D",
+            "text": "Cloud không hỗ trợ lập trình đa luồng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Giới hạn hạ tầng mạng (độ trễ/băng thông) là trở ngại chính khi offload.\n\n### Lời giải từng bước\n\nCloud mạnh, nhưng dữ liệu phải truyền qua Internet; với video/đa phương tiện, độ trễ và băng thông làm giảm lợi ích. Đây là động lực của *edge computing*.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: cloud rất mạnh.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai: thiết bị vẫn kết nối được mạng.\n- **D — Sai:** Sai: không liên quan.\n\n### Điểm dễ nhầm\n\nTính toán nhanh không đồng nghĩa với phản hồi nhanh khi mạng là nút cổ chai.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 36–38: Cloud / Edge task offloading)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Distributed_computing",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-1",
+          "de-thi-giua-ky",
+          "cloud",
+          "offloading"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q17",
+        "type": "single_choice",
+        "question": {
+          "text": "Ưu điểm của **đa tiến trình** (multi-process) so với **đa luồng** (multi-thread) là gì?",
+          "images": [
+            {
+              "id": "e41-q17-img",
+              "src": "images/hpt/ch2_multithread_models.png",
+              "alt": "Ba mô hình tổ chức luồng phía server: Thread-per-request, Thread-per-connection và Thread-per-object — Slide 15 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chia sẻ bộ nhớ nhanh hơn"
+          },
+          {
+            "id": "B",
+            "text": "Tạo tiến trình nhẹ hơn tạo luồng"
+          },
+          {
+            "id": "C",
+            "text": "Tiết kiệm chi phí lập trình do không phải xử lý tương tranh trên dữ liệu chung"
+          },
+          {
+            "id": "D",
+            "text": "Chuyển ngữ cảnh nhanh hơn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Mỗi tiến trình có không gian nhớ riêng nên **ít phải xử lý tương tranh** hơn.\n\n### Lời giải từng bước\n\nCác luồng cùng tiến trình chia sẻ bộ nhớ nên phải đồng bộ (khoá, mutex). Tiến trình độc lập bộ nhớ nên tránh được lỗi tương tranh, đổi lại tạo/chuyển ngữ cảnh tốn hơn.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: tiến trình khó chia sẻ bộ nhớ hơn.\n- **B — Sai:** Sai: tiến trình nặng hơn luồng.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: chuyển ngữ cảnh tiến trình chậm hơn.\n\n### Điểm dễ nhầm\n\nƯu điểm của luồng là nhẹ và chia sẻ dễ; ưu điểm của tiến trình là cô lập.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 6–7: Tiến trình & luồng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "tien-trinh",
+          "luong"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e42-q11",
+        "type": "single_choice",
+        "question": {
+          "text": "Ưu điểm của **đa tiến trình** so với **đa luồng** là gì?",
+          "images": [
+            {
+              "id": "e42-q11-img",
+              "src": "images/hpt/ch2_multithread_models.png",
+              "alt": "Ba mô hình tổ chức luồng phía server: Thread-per-request, Thread-per-connection và Thread-per-object — Slide 15 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Nhẹ hơn, tạo nhanh hơn"
+          },
+          {
+            "id": "B",
+            "text": "Tiết kiệm chi phí lập trình do không phải xử lý tương tranh trên dữ liệu dùng chung"
+          },
+          {
+            "id": "C",
+            "text": "Dùng bộ nhớ ít hơn"
+          },
+          {
+            "id": "D",
+            "text": "Giao tiếp giữa các thành phần nhanh hơn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Bộ nhớ riêng giúp **tránh tương tranh** → giảm công lập trình.\n\n### Lời giải từng bước\n\nXem câu e41-q17: cô lập bộ nhớ là ưu điểm cốt lõi của đa tiến trình.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: tiến trình nặng hơn.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai: tiến trình tốn bộ nhớ hơn.\n- **D — Sai:** Sai: IPC chậm hơn chia sẻ biến.\n\n### Điểm dễ nhầm\n\nƯu điểm tương đối: cô lập vs hiệu năng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 6–7: Tiến trình & luồng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "tien-trinh",
+          "luong"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q18",
+        "type": "single_choice",
+        "question": {
+          "text": "Server dùng mô hình `thread-per-connection`: khởi tạo luồng `3ms`, mỗi yêu cầu xử lý `6ms`, huỷ luồng `2ms`. Ba client kết nối đồng thời gửi tuần tự lần lượt 10, 15 và 20 yêu cầu. Tổng thời gian để xử lý xong tất cả là bao nhiêu?",
+          "images": [
+            {
+              "id": "e41-q18-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 650 195\" width=\"650\" height=\"195\"><rect width=\"650\" height=\"195\" fill=\"#fff\"/><text x=\"20\" y=\"26\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#111\">Thread-per-connection: 3 luồng cho C1, C2, C3 chạy song song; trong mỗi kết nối xử lý tuần tự</text><rect x=\"30\" y=\"44\" width=\"240\" height=\"28\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"150\" y=\"63\" font-family=\"sans-serif\" font-size=\"12.5\" text-anchor=\"middle\" fill=\"#111\">Luồng C1 (10 y/c): kết thúc sớm</text><rect x=\"30\" y=\"80\" width=\"350\" height=\"28\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"205\" y=\"99\" font-family=\"sans-serif\" font-size=\"12.5\" text-anchor=\"middle\" fill=\"#111\">Luồng C2 (15 y/c): kết thúc giữa</text><rect x=\"30\" y=\"116\" width=\"520\" height=\"30\" rx=\"4\" fill=\"#ffe08a\" stroke=\"#c0392b\" stroke-width=\"2\"/><text x=\"290\" y=\"136\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">Luồng C3 (20 y/c — đường găng quyết định tổng thời gian!)</text><text x=\"30\" y=\"174\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">⇒ 3ms + 6ms × 20 + 2ms = 125ms</text></svg>",
+              "alt": "Dòng thời gian thread-per-connection"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "125 ms"
+          },
+          {
+            "id": "B",
+            "text": "135 ms"
+          },
+          {
+            "id": "C",
+            "text": "145 ms"
+          },
+          {
+            "id": "D",
+            "text": "165 ms"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Ba luồng chạy song song; luồng dài nhất (C3 với 20 yêu cầu): `3 + 20×6 + 2 = 125 ms`.\n\n### Lời giải từng bước\n\nMỗi kết nối có luồng riêng chạy song song. Thời gian tổng = luồng chậm nhất = `3 + 20 × 6 + 2 = 125 ms`. C1: `3+60+2 = 65`, C2: `3+90+2 = 95`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: không có lý do cộng thêm.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: nhầm cộng nối tiếp.\n\n### Điểm dễ nhầm\n\nĐừng cộng thời gian của 3 luồng — chúng chạy song song.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 10–12: Thread-per-connection)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "thread-per-connection",
+          "tinh-toan"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e42-q12",
+        "type": "single_choice",
+        "question": {
+          "text": "Server dùng `thread-per-connection`: khởi tạo `2ms`, mỗi yêu cầu `7ms`, huỷ `1ms`. Ba client đồng thời gửi tuần tự 10, 15, 20 yêu cầu. Tổng thời gian là:",
+          "images": [
+            {
+              "id": "e42-q12-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 650 195\" width=\"650\" height=\"195\"><rect width=\"650\" height=\"195\" fill=\"#fff\"/><text x=\"20\" y=\"26\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#111\">Thread-per-connection: 3 luồng cho C1, C2, C3 chạy song song; trong mỗi kết nối xử lý tuần tự</text><rect x=\"30\" y=\"44\" width=\"240\" height=\"28\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"150\" y=\"63\" font-family=\"sans-serif\" font-size=\"12.5\" text-anchor=\"middle\" fill=\"#111\">Luồng C1 (10 y/c): kết thúc sớm</text><rect x=\"30\" y=\"80\" width=\"350\" height=\"28\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"205\" y=\"99\" font-family=\"sans-serif\" font-size=\"12.5\" text-anchor=\"middle\" fill=\"#111\">Luồng C2 (15 y/c): kết thúc giữa</text><rect x=\"30\" y=\"116\" width=\"520\" height=\"30\" rx=\"4\" fill=\"#ffe08a\" stroke=\"#c0392b\" stroke-width=\"2\"/><text x=\"290\" y=\"136\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">Luồng C3 (20 y/c — đường găng quyết định tổng thời gian!)</text><text x=\"30\" y=\"174\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">⇒ 2ms + 7ms × 20 + 1ms = 143ms</text></svg>",
+              "alt": "Dòng thời gian thread-per-connection"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "121 ms"
+          },
+          {
+            "id": "B",
+            "text": "133 ms"
+          },
+          {
+            "id": "C",
+            "text": "143 ms"
+          },
+          {
+            "id": "D",
+            "text": "153 ms"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Luồng dài nhất: `2 + 20×7 + 1 = 143 ms`.\n\n### Lời giải từng bước\n\nBa luồng song song, tổng thời gian = luồng của client 3: `2 + 140 + 1 = 143 ms`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: tính thiếu.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: dư.\n\n### Điểm dễ nhầm\n\nLuôn lấy luồng chậm nhất khi chạy song song.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 10–12: Thread-per-connection)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "thread-per-connection",
+          "tinh-toan"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q19",
+        "type": "single_choice",
+        "question": {
+          "text": "Điều nào sau đây **KHÔNG** phải ưu điểm của **client đa luồng**?",
+          "images": [
+            {
+              "id": "e41-q19-img",
+              "src": "images/hpt/ch2_multithread_models.png",
+              "alt": "Ba mô hình tổ chức luồng phía server: Thread-per-request, Thread-per-connection và Thread-per-object — Slide 15 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tách biệt giao diện người dùng và phần xử lý"
+          },
+          {
+            "id": "B",
+            "text": "Tăng tốc khi làm việc với nhiều server khác nhau"
+          },
+          {
+            "id": "C",
+            "text": "Che giấu độ trễ truyền thông"
+          },
+          {
+            "id": "D",
+            "text": "Nhiều client có thể kết nối với một server"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** D mô tả khả năng của **server**, không phải ưu điểm của client đa luồng.\n\n### Lời giải từng bước\n\nClient đa luồng (ví dụ trình duyệt) dùng luồng riêng để tải nhiều tài nguyên và để giao diện không bị đóng băng (Slide 22 Chương 2).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Đúng: ưu điểm.\n- **B — Sai:** Đúng: ưu điểm.\n- **C — Sai:** Đúng: ưu điểm.\n- **D — Đúng:** Không phải ưu điểm của client.\n\n### Điểm dễ nhầm\n\nChú ý chủ ngữ: client hay server.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 22: Client đa luồng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "client-da-luong"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e42-q13",
+        "type": "single_choice",
+        "question": {
+          "text": "Ưu điểm của **client đa luồng** là gì?",
+          "images": [
+            {
+              "id": "e42-q13-img",
+              "src": "images/hpt/ch2_multithread_models.png",
+              "alt": "Ba mô hình tổ chức luồng phía server: Thread-per-request, Thread-per-connection và Thread-per-object — Slide 15 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tách biệt giao diện người dùng và việc xử lý; tăng tốc khi làm việc với nhiều server khác nhau"
+          },
+          {
+            "id": "B",
+            "text": "Giảm số lượng server cần dùng"
+          },
+          {
+            "id": "C",
+            "text": "Loại bỏ nhu cầu truyền thông mạng"
+          },
+          {
+            "id": "D",
+            "text": "Đảm bảo dữ liệu luôn nhất quán"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Xem Slide 22 Chương 2.\n\n### Lời giải từng bước\n\nLuồng giao diện và luồng xử lý chạy độc lập, nhiều luồng giao tiếp song song với nhiều server.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: đa luồng không bảo đảm nhất quán.\n\n### Điểm dễ nhầm\n\nĐa luồng không loại bỏ độ trễ mạng; nó chỉ che giấu nó.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 22: Client đa luồng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "client-da-luong"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e41-q21",
+        "type": "single_choice",
+        "question": {
+          "text": "Ưu điểm của **Broadcast RPC** là gì?",
+          "images": [
+            {
+              "id": "e41-q21-img",
+              "src": "images/hpt/ch2_rpc_steps.png",
+              "alt": "Sơ đồ các bước thực hiện lời gọi thủ tục từ xa RPC thông qua Client stub và Server stub — Slide 52 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Giảm số lượng thông điệp"
+          },
+          {
+            "id": "B",
+            "text": "Một client có thể gửi yêu cầu cho nhiều server khác nhau"
+          },
+          {
+            "id": "C",
+            "text": "Đảm bảo thứ tự thực thi"
+          },
+          {
+            "id": "D",
+            "text": "Không cần đăng ký dịch vụ"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Broadcast RPC cho phép **một client gửi nhiều yêu cầu cho nhiều server** (Slide 60 Chương 2).\n\n### Lời giải từng bước\n\nLời gọi được quảng bá đến nhiều server, mỗi server có thể xử lý và trả lời độc lập.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: thường tăng thông điệp.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai: không đảm bảo thứ tự.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nBroadcast RPC khác RPC đồng bộ truyền thống (1 client – 1 server).\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 60: Broadcast RPC)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Remote_procedure_call",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "rpc",
+          "broadcast"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q22",
+        "type": "single_choice",
+        "question": {
+          "text": "`Callback RPC`: client gọi 3 module có thời gian xử lý 4ms, 10ms, 16ms; thời gian chuẩn bị và truyền bằng 0. Client gửi yêu cầu kiểu `(NOWAIT)` rồi tiếp tục. Thời gian client bị chặn chờ là:",
+          "images": [
+            {
+              "id": "e41-q22-img",
+              "src": "images/hpt/ch2_rpc_steps.png",
+              "alt": "Sơ đồ các bước thực hiện lời gọi thủ tục từ xa RPC thông qua Client stub và Server stub — Slide 52 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "10 ms"
+          },
+          {
+            "id": "B",
+            "text": "16 ms"
+          },
+          {
+            "id": "C",
+            "text": "0 ms"
+          },
+          {
+            "id": "D",
+            "text": "30 ms"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Client không chờ kết quả (`NOWAIT`), nên thời gian chặn là **0 ms**.\n\n### Lời giải từng bước\n\nTrong callback RPC, server gọi ngược lại client khi xong. Client gửi yêu cầu rồi chạy tiếp, không bị chặn (Slide 59 Chương 2).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: đó là max của các thời gian khác.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: đó là tổng.\n\n### Điểm dễ nhầm\n\nĐừng áp dụng công thức của RPC đồng bộ.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 59: Callback RPC)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Remote_procedure_call",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "rpc",
+          "callback"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e42-q08",
+        "type": "single_choice",
+        "question": {
+          "text": "RPC **đồng bộ** gọi 3 module có thời gian xử lý 6ms, 12ms, 15ms; truyền yêu cầu 3ms, truyền kết quả 3ms. Nếu server **đa luồng** xử lý 3 module song song thì tổng thời gian là:",
+          "images": [
+            {
+              "id": "e42-q08-img",
+              "src": "images/hpt/ch2_rpc_steps.png",
+              "alt": "Sơ đồ các bước thực hiện lời gọi thủ tục từ xa RPC thông qua Client stub và Server stub — Slide 52 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "33 ms"
+          },
+          {
+            "id": "B",
+            "text": "39 ms"
+          },
+          {
+            "id": "C",
+            "text": "21 ms"
+          },
+          {
+            "id": "D",
+            "text": "27 ms"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** `3 + max(6,12,15) + 3 = 21 ms`.\n\n### Lời giải từng bước\n\nServer đa luồng: các module chạy song song, thời gian = module chậm nhất. Server đơn luồng sẽ là `3 + (6+12+15) + 3 = 39 ms`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai: đây là đơn luồng.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐa luồng → max; đơn luồng → tổng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 55–58: RPC đồng bộ)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Remote_procedure_call",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "rpc",
+          "tinh-toan"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q23",
+        "type": "single_choice",
+        "question": {
+          "text": "Mục đích chính của **RabbitMQ** là gì?",
+          "images": [
+            {
+              "id": "e41-q23-img",
+              "src": "images/hpt/ch2_rabbitmq_patterns.png",
+              "alt": "Sáu mô hình trao đổi thông điệp tiêu biểu của RabbitMQ (Simple, Work Queues, Pub/Sub, Routing, Topics, RPC) — Slide 98 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Lưu trữ dữ liệu quan hệ"
+          },
+          {
+            "id": "B",
+            "text": "Message Brokering (trung gian chuyển thông điệp)"
+          },
+          {
+            "id": "C",
+            "text": "Cân bằng tải HTTP"
+          },
+          {
+            "id": "D",
+            "text": "Quản lý container"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** RabbitMQ là **message broker**.\n\n### Lời giải từng bước\n\nRabbitMQ nhận thông điệp từ producer, lưu vào hàng đợi và chuyển cho consumer, giúp tách rời các thành phần.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐây là middleware hướng thông điệp.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 90–92: Message Queue / RabbitMQ)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://www.rabbitmq.com/tutorials",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "rabbitmq",
+          "mom"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e41-q24",
+        "type": "single_choice",
+        "question": {
+          "text": "Nhược điểm của **truyền thông điệp bền vững** (`persistent messaging`) là gì?",
+          "images": [
+            {
+              "id": "e41-q24-img",
+              "src": "images/hpt/ch2_message_queuing_4combinations.png",
+              "alt": "Bốn tổ hợp trạng thái hoạt động/thụ động của bên gửi và bên nhận trong mô hình hàng đợi thông điệp (MOM) — Slide 94 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chỉ phù hợp với các dịch vụ chấp nhận độ trễ thời gian cao"
+          },
+          {
+            "id": "B",
+            "text": "Mất thông điệp khi mạng lỗi"
+          },
+          {
+            "id": "C",
+            "text": "Bên gửi phải luôn trực tuyến"
+          },
+          {
+            "id": "D",
+            "text": "Không có hàng đợi"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Persistent messaging lưu thông điệp nên **độ trễ cao**, chỉ hợp với dịch vụ chấp nhận trễ.\n\n### Lời giải từng bước\n\nThông điệp được hệ thống lưu giữ cho đến khi chuyển được tới người nhận, người nhận có thể offline. Đổi lại thời gian giao không xác định.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là điểm mạnh.\n- **C — Sai:** Sai: bên gửi không cần trực tuyến.\n- **D — Sai:** Sai: có hàng đợi.\n\n### Điểm dễ nhầm\n\nBền vững = tin cậy nhưng không thời gian thực.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 85–88: Persistent/Transient messaging)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Message-oriented_middleware",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "mom",
+          "persistent"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q03",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong cơ chế **Home-based** định vị thực thể di động, để giảm hiệu ứng thực thể dừng ở nhiều vị trí trung gian, người ta làm gì?",
+          "images": [
+            {
+              "id": "e41-q03-img",
+              "src": "images/hpt/ch3_home_based_mobileip.png",
+              "alt": "Cơ chế định vị dựa trên Home Agent (Mobile IP): hỏi địa chỉ tại Home location, chuyển tiếp gói qua đường hầm và tối ưu đường đi — Slide 22 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tăng số Home agent"
+          },
+          {
+            "id": "B",
+            "text": "Ở các vị trí trung gian, kết hợp áp dụng phương pháp chuyển tiếp con trỏ (forwarding pointer)"
+          },
+          {
+            "id": "C",
+            "text": "Cấm thực thể di chuyển"
+          },
+          {
+            "id": "D",
+            "text": "Dùng DNS để cập nhật"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Kết hợp **forwarding pointer** ở các vị trí trung gian.\n\n### Lời giải từng bước\n\nHome agent luôn biết vị trí hiện tại; các điểm dừng ngắn trung gian được xử lý bằng con trỏ chuyển tiếp để tránh cập nhật liên tục về home.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nHome-based hay bị trễ khi thực thể đi xa home.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 40–45: Home-based & Forwarding)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "home-based",
+          "forwarding-pointer"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q04",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong Linux, khi xoá **tệp gốc**, điều gì xảy ra với **hard link** trỏ tới tệp đó?",
+          "images": [
+            {
+              "id": "e41-q04-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 660 235\" width=\"660\" height=\"235\"><rect width=\"660\" height=\"235\" fill=\"#fff\"/><defs><marker id=\"ahl\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 z\" fill=\"#111\"/></marker></defs><text x=\"165\" y=\"25\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#0b5394\">Hard Link ($ ln a.txt hard.txt)</text><rect x=\"20\" y=\"45\" width=\"95\" height=\"32\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"67\" y=\"66\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">a.txt (#42)</text><rect x=\"20\" y=\"105\" width=\"95\" height=\"32\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"67\" y=\"126\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">hard.txt(#42)</text><rect x=\"160\" y=\"65\" width=\"145\" height=\"58\" rx=\"6\" fill=\"#d9f7d9\" stroke=\"#111\" stroke-width=\"1.8\"/><text x=\"232\" y=\"88\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Inode #42 (count=2)</text><text x=\"232\" y=\"109\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#222\">Trỏ khối dữ liệu gốc</text><line x1=\"115\" y1=\"61\" x2=\"158\" y2=\"82\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><line x1=\"115\" y1=\"121\" x2=\"158\" y2=\"104\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><text x=\"165\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b7e3c\">Xóa a.txt → count giảm 2→1, dữ liệu CÒN NGUYÊN</text><line x1=\"330\" y1=\"15\" x2=\"330\" y2=\"215\" stroke=\"#ccc\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><text x=\"495\" y=\"25\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">Soft / Symbolic Link ($ ln -s a.txt sym.txt)</text><rect x=\"350\" y=\"55\" width=\"110\" height=\"34\" rx=\"4\" fill=\"#fff2cc\" stroke=\"#111\"/><text x=\"405\" y=\"77\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">sym.txt (#99)</text><rect x=\"495\" y=\"45\" width=\"145\" height=\"55\" rx=\"6\" fill=\"#ffe6e6\" stroke=\"#111\"/><text x=\"567\" y=\"67\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Inode mới #99</text><text x=\"567\" y=\"88\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">path: \"/.../a.txt\"</text><line x1=\"460\" y1=\"72\" x2=\"493\" y2=\"72\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><text x=\"495\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\">Không tăng link count của Inode #42</text><text x=\"495\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">Xóa a.txt → sym.txt bị TREO (dangling link)!</text></svg>",
+              "alt": "Hard link và soft link"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Liên kết cứng bị hỏng"
+          },
+          {
+            "id": "B",
+            "text": "Liên kết cứng vẫn cung cấp quyền truy cập vào dữ liệu của tệp gốc"
+          },
+          {
+            "id": "C",
+            "text": "Liên kết cứng tự bị xoá"
+          },
+          {
+            "id": "D",
+            "text": "Dữ liệu bị xoá ngay"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Hard link và tên gốc cùng trỏ tới một `inode`; xoá một tên chỉ giảm bộ đếm liên kết.\n\n### Lời giải từng bước\n\nDữ liệu chỉ bị giải phóng khi bộ đếm liên kết = 0. Vì vậy hard link vẫn truy cập được dữ liệu, còn symbolic link (soft link) sẽ bị treo.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: đó là soft link.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nNhầm hard link và soft link.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 50–52: Liên kết cứng/mềm)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Hard_link",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "hard-link",
+          "linux"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q05",
+        "type": "single_choice",
+        "question": {
+          "text": "Sự khác nhau giữa **trong suốt di trú** và **trong suốt chuyển địa điểm** là gì?",
+          "images": [
+            {
+              "id": "e41-q05-img",
+              "src": "images/hpt/ch1_email_www_arch.png",
+              "alt": "Sơ đồ kiến trúc hệ thống Email phân tán (MTA, MDA, SMTP, POP/IMAP, DNS MX) — Slide 10 Chương 1"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đều che giấu việc tài nguyên chuyển đến địa điểm khác; trong suốt chuyển địa điểm cho phép dịch chuyển tài nguyên ngay trong lúc tài nguyên đang được sử dụng"
+          },
+          {
+            "id": "B",
+            "text": "Hai loại là một"
+          },
+          {
+            "id": "C",
+            "text": "Di trú che giấu lỗi, chuyển địa điểm che giấu truy cập"
+          },
+          {
+            "id": "D",
+            "text": "Di trú chỉ áp dụng cho tiến trình"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Xem Slide 15 Chương 1.\n\n### Lời giải từng bước\n\n*Migration transparency*: tài nguyên có thể di chuyển mà người dùng không biết. *Relocation transparency*: tài nguyên di chuyển **ngay khi đang được dùng** mà vẫn không bị gián đoạn.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nRelocation mạnh hơn migration.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 15: Các dạng trong suốt)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Distributed_computing",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-1",
+          "de-thi-giua-ky",
+          "trong-suot"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q07",
+        "type": "single_choice",
+        "question": {
+          "text": "Phát biểu \"Web server là **stateful**\" đúng hay sai?",
+          "images": [
+            {
+              "id": "e41-q07-img",
+              "src": "images/hpt/ch1_email_www_arch.png",
+              "alt": "Sơ đồ kiến trúc hệ thống Email phân tán (MTA, MDA, SMTP, POP/IMAP, DNS MX) — Slide 10 Chương 1"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đúng, vì nó lưu trạng thái của mọi client"
+          },
+          {
+            "id": "B",
+            "text": "Đúng, vì nó dùng cookie"
+          },
+          {
+            "id": "C",
+            "text": "Sai, vì nó không cần lưu lại thông tin của các phiên trao đổi với client"
+          },
+          {
+            "id": "D",
+            "text": "Sai, vì nó dùng UDP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Web server (HTTP) là **stateless**.\n\n### Lời giải từng bước\n\nMỗi yêu cầu HTTP được xử lý độc lập; trạng thái phiên (nếu có) do client mang theo (cookie/token).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai: cookie lưu ở client.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: lý do sai.\n\n### Điểm dễ nhầm\n\nCookie không biến server thành stateful.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 22–23: Stateless/Stateful server)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Distributed_computing",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-1",
+          "de-thi-giua-ky",
+          "stateless"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e41-q09",
+        "type": "single_choice",
+        "question": {
+          "text": "Ghép hai không gian tên có cấu trúc bằng cách thêm một **nút gốc mới** phía trên hai gốc cũ. Hệ quả chính là gì?",
+          "images": [
+            {
+              "id": "e41-q09-img",
+              "src": "images/hpt/ch3_merging_superroot.png",
+              "alt": "Cơ chế trộn (Merging) hai không gian tên NS1 và NS2 bằng cách thêm một nút gốc mới ở trên cùng — Slide 53 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Giảm hiệu năng khi số nút rất lớn"
+          },
+          {
+            "id": "B",
+            "text": "Tăng số lượng bản sao"
+          },
+          {
+            "id": "C",
+            "text": "Không có hệ quả"
+          },
+          {
+            "id": "D",
+            "text": "Phải tham chiếu lại hoàn toàn các nút cũ của hai không gian tên đó"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Thêm super-root làm các đường dẫn tuyệt đối cũ không còn đúng.\n\n### Lời giải từng bước\n\nVí dụ `/home/steen/keys` phải thành `/vu/home/steen/keys`. Các tham chiếu tuyệt đối cũ phải được cập nhật (Slide 53 Chương 3).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Không phải hệ quả chính.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nĐường dẫn tương đối vẫn giữ nguyên.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 53: Hợp nhất không gian tên)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "namespace"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e42-q23",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi hợp nhất hai không gian tên bằng một nút gốc mới, việc nào là bắt buộc?",
+          "images": [
+            {
+              "id": "e42-q23-img",
+              "src": "images/hpt/ch3_merging_superroot.png",
+              "alt": "Cơ chế trộn (Merging) hai không gian tên NS1 và NS2 bằng cách thêm một nút gốc mới ở trên cùng — Slide 53 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tham chiếu lại hoàn toàn các nút cũ của hai không gian tên"
+          },
+          {
+            "id": "B",
+            "text": "Xoá một trong hai không gian tên"
+          },
+          {
+            "id": "C",
+            "text": "Chỉ cần đổi tên máy chủ"
+          },
+          {
+            "id": "D",
+            "text": "Không cần làm gì"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Xem e41-q09.\n\n### Lời giải từng bước\n\nĐường dẫn tuyệt đối cũ bị thay đổi do thêm tiền tố.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐây là nhược điểm của cách ghép đơn giản.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 53: Hợp nhất không gian tên)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "namespace"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q26",
+        "type": "single_choice",
+        "question": {
+          "text": "Điều nào sau đây **KHÔNG** phải ưu điểm của phân giải DNS **đệ quy** so với **lặp**?",
+          "images": [
+            {
+              "id": "e41-q26-img",
+              "src": "images/hpt/ch3_iterative_resolution.png",
+              "alt": "Phân giải tên không đệ quy (Iterative name resolution): Name resolver của client lần lượt hỏi từng máy chủ tên — Slide 60 Chương 3"
+            },
+            {
+              "id": "e41-q26-img2",
+              "src": "images/hpt/ch3_recursive_resolution.png",
+              "alt": "Phân giải tên đệ quy (Recursive name resolution): máy chủ tên tự chuyển tiếp truy vấn xuống cấp dưới và gom kết quả trả về — Slide 61 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Gánh nặng cho resolver nhẹ hơn"
+          },
+          {
+            "id": "B",
+            "text": "Hiệu quả cache tốt hơn"
+          },
+          {
+            "id": "C",
+            "text": "Số name server cần truy vấn ít hơn"
+          },
+          {
+            "id": "D",
+            "text": "Client chỉ cần gửi một yêu cầu"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Cả hai cách đều đi qua **cùng chuỗi name server** (root, nl, vu, cs).\n\n### Lời giải từng bước\n\nKhác biệt nằm ở *ai* gửi các truy vấn trung gian, không phải số name server được hỏi (Slide 60–62 Chương 3).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Đúng: ưu điểm.\n- **B — Sai:** Đúng: ưu điểm.\n- **C — Đúng:** Không phải ưu điểm.\n- **D — Sai:** Đúng: ưu điểm.\n\n### Điểm dễ nhầm\n\nSố server như nhau.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 60–62: Phân giải đệ quy vs lặp)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "dns"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e42-q18",
+        "type": "single_choice",
+        "question": {
+          "text": "Ưu điểm của phân giải **đệ quy** so với **lặp** là:",
+          "images": [
+            {
+              "id": "e42-q18-img",
+              "src": "images/hpt/ch3_recursive_resolution.png",
+              "alt": "Phân giải tên đệ quy (Recursive name resolution): máy chủ tên tự chuyển tiếp truy vấn xuống cấp dưới và gom kết quả trả về — Slide 61 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Giảm tải cho name server gốc"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ mất một cặp thông điệp yêu cầu và trả lời giữa client và name server, khai thác hiệu quả cơ chế bộ đệm"
+          },
+          {
+            "id": "C",
+            "text": "Không cần name server"
+          },
+          {
+            "id": "D",
+            "text": "Luôn nhanh hơn"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Đệ quy: client chỉ trao đổi một cặp thông điệp, name server tận dụng cache.\n\n### Lời giải từng bước\n\nName server trung gian lưu cache kết quả cho các yêu cầu sau.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐệ quy làm tăng tải name server.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 60–62: Phân giải đệ quy vs lặp)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "dns"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q27",
+        "type": "single_choice",
+        "question": {
+          "text": "Có 4 đối tượng với chuỗi con trỏ chuyển tiếp: `O1: P1→P5→P7→P10→P14`, `O2: P2→P6→P5→P10→P11→P13`, `O3: P2→P4→P7`, `O4: P3→P8→P5→P13`. Tiến trình nào nằm trên chuỗi của **O1, O2, O4 nhưng không thuộc O3**?",
+          "images": [
+            {
+              "id": "e41-q27-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 650 240\" width=\"650\" height=\"240\"><rect width=\"650\" height=\"240\" fill=\"#fff\"/><text x=\"20\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#111\">Chuỗi con trỏ chuyển tiếp của 4 thực thể O1–O4:</text><text x=\"30\" y=\"70\" font-family=\"monospace\" font-size=\"15\" fill=\"#111\">O1: P1 ──▶ </text><rect x=\"135\" y=\"52\" width=\"42\" height=\"25\" rx=\"4\" fill=\"#ffe08a\" stroke=\"#c0392b\" stroke-width=\"2\"/><text x=\"156\" y=\"70\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">P5</text><text x=\"184\" y=\"70\" font-family=\"monospace\" font-size=\"15\" fill=\"#111\"> ──▶ P7 ──▶ P10 ──▶ P14   (Mất dấu nếu P5 hỏng)</text><text x=\"30\" y=\"112\" font-family=\"monospace\" font-size=\"15\" fill=\"#111\">O2: P2 ──▶ P6 ──▶ </text><rect x=\"200\" y=\"94\" width=\"42\" height=\"25\" rx=\"4\" fill=\"#ffe08a\" stroke=\"#c0392b\" stroke-width=\"2\"/><text x=\"221\" y=\"112\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">P5</text><text x=\"249\" y=\"112\" font-family=\"monospace\" font-size=\"15\" fill=\"#111\"> ──▶ P10 ──▶ P11 ──▶ P13 (Mất dấu nếu P5 hỏng)</text><text x=\"30\" y=\"154\" font-family=\"monospace\" font-size=\"15\" fill=\"#1b7e3c\">O3: P2 ──▶ P4 ──▶ P7                       (KHÔNG đi qua P5 → An toàn!)</text><text x=\"30\" y=\"196\" font-family=\"monospace\" font-size=\"15\" fill=\"#111\">O4: P3 ──▶ P8 ──▶ </text><rect x=\"200\" y=\"178\" width=\"42\" height=\"25\" rx=\"4\" fill=\"#ffe08a\" stroke=\"#c0392b\" stroke-width=\"2\"/><text x=\"221\" y=\"196\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">P5</text><text x=\"249\" y=\"196\" font-family=\"monospace\" font-size=\"15\" fill=\"#111\"> ──▶ P13               (Mất dấu nếu P5 hỏng)</text></svg>",
+              "alt": "Bốn chuỗi con trỏ chuyển tiếp"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "P2"
+          },
+          {
+            "id": "B",
+            "text": "P5"
+          },
+          {
+            "id": "C",
+            "text": "P7"
+          },
+          {
+            "id": "D",
+            "text": "P10"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** `P5` nằm trên O1, O2, O4 nhưng không có trong O3.\n\n### Lời giải từng bước\n\nDuyệt từng chuỗi: P5 ∈ O1, O2, O4; P7 ∈ O1, O3; P10 ∈ O1, O2; P2 ∈ O2, O3.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** P2 thuộc O3.\n- **B — Đúng:** Đúng.\n- **C — Sai:** P7 thuộc O3.\n- **D — Sai:** P10 không thuộc O4.\n\n### Điểm dễ nhầm\n\nPhải loại các P xuất hiện trong O3.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 36–39: Forwarding pointers)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "forwarding-pointer"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e42-q20",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho 4 chuỗi con trỏ chuyển tiếp như hình. Tiến trình nào xuất hiện ở O1, O2, O4 nhưng không ở O3?",
+          "images": [
+            {
+              "id": "e42-q20-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 650 240\" width=\"650\" height=\"240\"><rect width=\"650\" height=\"240\" fill=\"#fff\"/><text x=\"20\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#111\">Chuỗi con trỏ chuyển tiếp của 4 thực thể O1–O4:</text><text x=\"30\" y=\"70\" font-family=\"monospace\" font-size=\"15\" fill=\"#111\">O1: P1 ──▶ </text><rect x=\"135\" y=\"52\" width=\"42\" height=\"25\" rx=\"4\" fill=\"#ffe08a\" stroke=\"#c0392b\" stroke-width=\"2\"/><text x=\"156\" y=\"70\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">P5</text><text x=\"184\" y=\"70\" font-family=\"monospace\" font-size=\"15\" fill=\"#111\"> ──▶ P7 ──▶ P10 ──▶ P14   (Mất dấu nếu P5 hỏng)</text><text x=\"30\" y=\"112\" font-family=\"monospace\" font-size=\"15\" fill=\"#111\">O2: P2 ──▶ P6 ──▶ </text><rect x=\"200\" y=\"94\" width=\"42\" height=\"25\" rx=\"4\" fill=\"#ffe08a\" stroke=\"#c0392b\" stroke-width=\"2\"/><text x=\"221\" y=\"112\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">P5</text><text x=\"249\" y=\"112\" font-family=\"monospace\" font-size=\"15\" fill=\"#111\"> ──▶ P10 ──▶ P11 ──▶ P13 (Mất dấu nếu P5 hỏng)</text><text x=\"30\" y=\"154\" font-family=\"monospace\" font-size=\"15\" fill=\"#1b7e3c\">O3: P2 ──▶ P4 ──▶ P7                       (KHÔNG đi qua P5 → An toàn!)</text><text x=\"30\" y=\"196\" font-family=\"monospace\" font-size=\"15\" fill=\"#111\">O4: P3 ──▶ P8 ──▶ </text><rect x=\"200\" y=\"178\" width=\"42\" height=\"25\" rx=\"4\" fill=\"#ffe08a\" stroke=\"#c0392b\" stroke-width=\"2\"/><text x=\"221\" y=\"196\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">P5</text><text x=\"249\" y=\"196\" font-family=\"monospace\" font-size=\"15\" fill=\"#111\"> ──▶ P13               (Mất dấu nếu P5 hỏng)</text></svg>",
+              "alt": "Bốn chuỗi con trỏ chuyển tiếp"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "P5"
+          },
+          {
+            "id": "B",
+            "text": "P7"
+          },
+          {
+            "id": "C",
+            "text": "P10"
+          },
+          {
+            "id": "D",
+            "text": "P13"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `P5`.\n\n### Lời giải từng bước\n\nP5 ∈ O1, O2, O4, không ∈ O3; P13 không ∈ O1.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Có trong O3.\n- **C — Sai:** Không có trong O4.\n- **D — Sai:** Không có trong O1.\n\n### Điểm dễ nhầm\n\nKiểm tra cả 4 chuỗi.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 36–39: Forwarding pointers)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "forwarding-pointer"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q29",
+        "type": "single_choice",
+        "question": {
+          "text": "Phân giải **lặp** cho `www.soict.hust.edu.vn`. Name server `.vn` trả về cho resolver thông tin gì?",
+          "images": [
+            {
+              "id": "e41-q29-img",
+              "src": "images/hpt/ch3_iterative_resolution.png",
+              "alt": "Phân giải tên không đệ quy (Iterative name resolution): Name resolver của client lần lượt hỏi từng máy chủ tên — Slide 60 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Địa chỉ IP máy chủ web"
+          },
+          {
+            "id": "B",
+            "text": "Địa chỉ IP máy chủ tên miền `hust`"
+          },
+          {
+            "id": "C",
+            "text": "Địa chỉ IP máy chủ tên miền gốc"
+          },
+          {
+            "id": "D",
+            "text": "Địa chỉ IP máy chủ tên miền `edu` (`edu.vn`)"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Server `.vn` trả về địa chỉ name server của `edu.vn`.\n\n### Lời giải từng bước\n\nMỗi server chỉ biết server của nhãn kế tiếp: root → `vn` → `edu.vn` → `hust.edu.vn` → `soict.hust.edu.vn`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: chỉ server cuối biết.\n- **B — Sai:** Sai: quá xa.\n- **C — Sai:** Sai.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nNhầm bước phân giải.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 58–62: DNS)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "dns"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e42-q21",
+        "type": "single_choice",
+        "question": {
+          "text": "Phân giải **lặp** cho `www.soict.hust.edu.vn`. Name server của `soict` trả về cho resolver thông tin gì?",
+          "images": [
+            {
+              "id": "e42-q21-img",
+              "src": "images/hpt/ch3_iterative_resolution.png",
+              "alt": "Phân giải tên không đệ quy (Iterative name resolution): Name resolver của client lần lượt hỏi từng máy chủ tên — Slide 60 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Địa chỉ IP name server `hust`"
+          },
+          {
+            "id": "B",
+            "text": "Địa chỉ IP name server `edu`"
+          },
+          {
+            "id": "C",
+            "text": "Địa chỉ IP máy chủ web của SOICT"
+          },
+          {
+            "id": "D",
+            "text": "Địa chỉ IP name server gốc"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Server cuối của `soict` trả về địa chỉ IP của `www`.\n\n### Lời giải từng bước\n\nĐây là bước cuối chuỗi lặp, trả bản ghi A của `www.soict.hust.edu.vn`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: đó là bước trước.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nNhầm với bước giữa.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 58–62: DNS)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "dns"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q30",
+        "type": "single_choice",
+        "question": {
+          "text": "Điều nào sau đây **KHÔNG** phải ưu điểm của **Mobile IP**?",
+          "images": [
+            {
+              "id": "e41-q30-img",
+              "src": "images/hpt/ch3_home_based_mobileip.png",
+              "alt": "Cơ chế định vị dựa trên Home Agent (Mobile IP): hỏi địa chỉ tại Home location, chuyển tiếp gói qua đường hầm và tối ưu đường đi — Slide 22 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Duy trì kết nối khi thiết bị di chuyển"
+          },
+          {
+            "id": "B",
+            "text": "Trong suốt với tầng ứng dụng"
+          },
+          {
+            "id": "C",
+            "text": "Không cần thay đổi cấu hình thủ công"
+          },
+          {
+            "id": "D",
+            "text": "Nhất quán IP: các thiết bị đều dùng chung một địa chỉ IP duy nhất"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Mobile IP dùng địa chỉ home cố định và care-of address riêng, **không** phải dùng chung một IP.\n\n### Lời giải từng bước\n\nMỗi thiết bị có địa chỉ home riêng; địa chỉ care-of thay đổi theo mạng.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Ưu điểm.\n- **B — Sai:** Ưu điểm.\n- **C — Sai:** Ưu điểm.\n- **D — Đúng:** Sai: không phải ưu điểm.\n\n### Điểm dễ nhầm\n\nĐọc kỹ ý 'dùng chung'.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 41–45: Mobile IP)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mobile_IP",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "mobile-ip"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q31",
+        "type": "single_choice",
+        "question": {
+          "text": "Nhược điểm lớn nhất của cơ chế **Home-based** là gì?",
+          "images": [
+            {
+              "id": "e41-q31-img",
+              "src": "images/hpt/ch3_home_based_mobileip.png",
+              "alt": "Cơ chế định vị dựa trên Home Agent (Mobile IP): hỏi địa chỉ tại Home location, chuyển tiếp gói qua đường hầm và tối ưu đường đi — Slide 22 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Sau một thời gian hoạt động, thực thể di chuyển rất xa Home agent nên mọi liên lạc phải đi vòng qua home, gây độ trễ cao"
+          },
+          {
+            "id": "B",
+            "text": "Cần quá nhiều bộ nhớ"
+          },
+          {
+            "id": "C",
+            "text": "Không hỗ trợ di động"
+          },
+          {
+            "id": "D",
+            "text": "Không dùng được ở mạng cục bộ"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Thực thể ở xa home thì mọi gói tin vẫn phải qua home agent.\n\n### Lời giải từng bước\n\nTam giác định tuyến làm tăng trễ khi thực thể và client ở xa home.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nBài toán 'định tuyến tam giác'.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 40–45: Home-based)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "home-based"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q32",
+        "type": "single_choice",
+        "question": {
+          "text": "**Cạn kiệt không gian tên** (namespace exhaustion) có thể xảy ra ở loại không gian tên nào?",
+          "images": [
+            {
+              "id": "e41-q32-img",
+              "src": "images/hpt/ch1_chord_16ring.png",
+              "alt": "Vòng Chord 16 định danh (m=4) với các nút thực 1, 4, 7, 12, 15 và tập khóa dữ liệu gán cho từng nút succ(k) — Slide 47 Chương 1"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không gian tên phẳng"
+          },
+          {
+            "id": "B",
+            "text": "Không gian tên phân cấp"
+          },
+          {
+            "id": "C",
+            "text": "Không gian tên theo thuộc tính"
+          },
+          {
+            "id": "D",
+            "text": "Không gian tên DNS"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Tên phẳng (định danh ngẫu nhiên, độ dài cố định) có thể cạn.\n\n### Lời giải từng bước\n\nKhông gian tên phẳng có kích thước hữu hạn (ví dụ $2^m$ định danh).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nCấu trúc phân cấp mở rộng được.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 32: Tên phẳng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "ten-phang"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e41-q33",
+        "type": "single_choice",
+        "question": {
+          "text": "Vòng Chord 16 định danh với các nút `{2, 5, 8, 11}`. Nút `2` tra cứu khoá `10`. Đường đi là:",
+          "images": [
+            {
+              "id": "e41-q33-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 410\" width=\"680\" height=\"410\"><rect width=\"680\" height=\"410\" fill=\"#fff\"/><defs><marker id=\"arr16\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L9,3 L0,6 z\" fill=\"#c0392b\"/></marker></defs><circle cx=\"270\" cy=\"195\" r=\"145\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"270.0\" cy=\"50.0\" r=\"11\" fill=\"#fafafa\" stroke=\"#888\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"270.0\" y=\"54.0\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#666\">0</text><circle cx=\"325.5\" cy=\"61.0\" r=\"11\" fill=\"#fafafa\" stroke=\"#888\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"325.5\" y=\"65.0\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#666\">1</text><circle cx=\"372.5\" cy=\"92.5\" r=\"16\" fill=\"#ffe08a\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"372.5\" y=\"97.5\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">2</text><circle cx=\"404.0\" cy=\"139.5\" r=\"11\" fill=\"#fafafa\" stroke=\"#888\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"404.0\" y=\"143.5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#666\">3</text><circle cx=\"415.0\" cy=\"195.0\" r=\"11\" fill=\"#fafafa\" stroke=\"#888\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"415.0\" y=\"199.0\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#666\">4</text><circle cx=\"404.0\" cy=\"250.5\" r=\"16\" fill=\"#cfe4ff\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"404.0\" y=\"255.5\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">5</text><circle cx=\"372.5\" cy=\"297.5\" r=\"11\" fill=\"#fafafa\" stroke=\"#888\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"372.5\" y=\"301.5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#666\">6</text><circle cx=\"325.5\" cy=\"329.0\" r=\"11\" fill=\"#fafafa\" stroke=\"#888\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"325.5\" y=\"333.0\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#666\">7</text><circle cx=\"270.0\" cy=\"340.0\" r=\"16\" fill=\"#cfe4ff\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"270.0\" y=\"345.0\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">8</text><circle cx=\"214.5\" cy=\"329.0\" r=\"11\" fill=\"#fafafa\" stroke=\"#888\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"214.5\" y=\"333.0\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#666\">9</text><circle cx=\"167.5\" cy=\"297.5\" r=\"11\" fill=\"#fafafa\" stroke=\"#888\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"167.5\" y=\"301.5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#666\">10</text><circle cx=\"136.0\" cy=\"250.5\" r=\"16\" fill=\"#cfe4ff\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"136.0\" y=\"255.5\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">11</text><circle cx=\"125.0\" cy=\"195.0\" r=\"11\" fill=\"#fafafa\" stroke=\"#888\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"125.0\" y=\"199.0\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#666\">12</text><circle cx=\"136.0\" cy=\"139.5\" r=\"11\" fill=\"#fafafa\" stroke=\"#888\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"136.0\" y=\"143.5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#666\">13</text><circle cx=\"167.5\" cy=\"92.5\" r=\"11\" fill=\"#fafafa\" stroke=\"#888\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"167.5\" y=\"96.5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#666\">14</text><circle cx=\"214.5\" cy=\"61.0\" r=\"11\" fill=\"#fafafa\" stroke=\"#888\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"214.5\" y=\"65.0\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#666\">15</text><rect x=\"470\" y=\"35\" width=\"185\" height=\"76\" rx=\"5\" fill=\"#fff7db\" stroke=\"#111\"/><text x=\"562\" y=\"53\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">FT nút 2: succ(p+2^(i-1))</text><text x=\"482\" y=\"79\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=1</text><text x=\"486\" y=\"99\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">?</text><text x=\"526\" y=\"79\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=2</text><text x=\"530\" y=\"99\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">?</text><text x=\"570\" y=\"79\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=3</text><text x=\"574\" y=\"99\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">?</text><text x=\"614\" y=\"79\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=4</text><text x=\"618\" y=\"99\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">?</text><rect x=\"470\" y=\"125\" width=\"185\" height=\"76\" rx=\"5\" fill=\"#f4f8ff\" stroke=\"#111\"/><text x=\"562\" y=\"143\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">FT nút 5: succ(p+2^(i-1))</text><text x=\"482\" y=\"169\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=1</text><text x=\"486\" y=\"189\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">8</text><text x=\"526\" y=\"169\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=2</text><text x=\"530\" y=\"189\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">8</text><text x=\"570\" y=\"169\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=3</text><text x=\"574\" y=\"189\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">11</text><text x=\"614\" y=\"169\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=4</text><text x=\"618\" y=\"189\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">2</text><rect x=\"470\" y=\"215\" width=\"185\" height=\"76\" rx=\"5\" fill=\"#f4f8ff\" stroke=\"#111\"/><text x=\"562\" y=\"233\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">FT nút 8: succ(p+2^(i-1))</text><text x=\"482\" y=\"259\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=1</text><text x=\"486\" y=\"279\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">11</text><text x=\"526\" y=\"259\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=2</text><text x=\"530\" y=\"279\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">11</text><text x=\"570\" y=\"259\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=3</text><text x=\"574\" y=\"279\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">2</text><text x=\"614\" y=\"259\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=4</text><text x=\"618\" y=\"279\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">2</text><rect x=\"470\" y=\"305\" width=\"185\" height=\"76\" rx=\"5\" fill=\"#f4f8ff\" stroke=\"#111\"/><text x=\"562\" y=\"323\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">FT nút 11: succ(p+2^(i-1))</text><text x=\"482\" y=\"349\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=1</text><text x=\"486\" y=\"369\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">2</text><text x=\"526\" y=\"349\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=2</text><text x=\"530\" y=\"369\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">2</text><text x=\"570\" y=\"349\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=3</text><text x=\"574\" y=\"369\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">2</text><text x=\"614\" y=\"349\" font-family=\"monospace\" font-size=\"12\" fill=\"#333\">i=4</text><text x=\"618\" y=\"369\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">5</text><text x=\"20\" y=\"398\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#222\">Nút 2 tra cứu khoá 10</text></svg>",
+              "alt": "Vòng Chord"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "2 → 5 → 8 → 11"
+          },
+          {
+            "id": "B",
+            "text": "2 → 8 → 11"
+          },
+          {
+            "id": "C",
+            "text": "2 → 11"
+          },
+          {
+            "id": "D",
+            "text": "2 → 5 → 11"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** `FT₂[3] = 8 ≤ 10 < FT₂[4] = 11`, nên `2 → 8 → 11`.\n\n### Lời giải từng bước\n\nNút 2 chọn entry lớn nhất không vượt quá khoá: 8. Nút 8 có successor 11 là nút chịu trách nhiệm khoá 10.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: không tối ưu.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai: 11 > 10.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nDùng finger table thay vì đi tuần tự.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 24: Chord)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Chord_(peer-to-peer)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "chord"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q12",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thuật loại trừ lẫn nhau **tập trung** với 30 tiến trình, mỗi tiến trình vào miền găng 7 lần. Tổng số thông điệp là:",
+          "images": [
+            {
+              "id": "e41-q12-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "14"
+          },
+          {
+            "id": "B",
+            "text": "30"
+          },
+          {
+            "id": "C",
+            "text": "7"
+          },
+          {
+            "id": "D",
+            "text": "21"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** `3 × 7 = 21` thông điệp.\n\n### Lời giải từng bước\n\nMỗi lần vào miền găng: `REQUEST`, `GRANT`, `RELEASE` = 3 thông điệp. Với 7 lần: `3 × 7 = 21`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nKhông phụ thuộc vào số tiến trình n.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 30–32: Mutual Exclusion tập trung)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "mutual-exclusion"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e42-q19",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thuật loại trừ lẫn nhau tập trung, 30 tiến trình, mỗi tiến trình vào miền găng 6 lần. Tổng số thông điệp là:",
+          "images": [
+            {
+              "id": "e42-q19-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "12"
+          },
+          {
+            "id": "B",
+            "text": "30"
+          },
+          {
+            "id": "C",
+            "text": "6"
+          },
+          {
+            "id": "D",
+            "text": "18"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** `3 × 6 = 18`.\n\n### Lời giải từng bước\n\n3 thông điệp mỗi lần vào miền găng.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nTương tự câu trước.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 30–32: Mutual Exclusion tập trung)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "mutual-exclusion"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "e41-q25",
+        "type": "single_choice",
+        "question": {
+          "text": "Dùng thuật toán **Berkeley** với 4 máy có giờ `8:14`, `8:15`, `8:20`, `7:55`; máy `8:14` là Time Daemon. Giờ chuẩn mới là:",
+          "images": [
+            {
+              "id": "e41-q25-img",
+              "src": "images/hpt/ch4_berkeley_step1.png",
+              "alt": "Giải thuật đồng bộ đồng hồ Berkeley (bước 1): Time daemon quảng bá giờ 3:00 tới các máy trong mạng — Slide 13 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "8:08"
+          },
+          {
+            "id": "B",
+            "text": "8:09"
+          },
+          {
+            "id": "C",
+            "text": "8:11"
+          },
+          {
+            "id": "D",
+            "text": "8:14"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Độ lệch so với 8:14: `0, +1, +6, −19`; trung bình `−3` phút → `8:11`.\n\n### Lời giải từng bước\n\nTính trung bình độ lệch: `(0+1+6−19)/4 = −3`. Giờ mới `8:14 − 3 = 8:11`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: không điều chỉnh.\n\n### Điểm dễ nhầm\n\nPhải tính trung bình độ lệch.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 12–14: Berkeley)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Berkeley_algorithm",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "berkeley"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q28",
+        "type": "single_choice",
+        "question": {
+          "text": "Ưu điểm của **fine locking** (khoá mịn) so với **coarse locking** là:",
+          "images": [
+            {
+              "id": "e41-q28-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đơn giản hơn"
+          },
+          {
+            "id": "B",
+            "text": "Ít khoá hơn"
+          },
+          {
+            "id": "C",
+            "text": "Tăng tính song song và giảm tranh chấp"
+          },
+          {
+            "id": "D",
+            "text": "Không bao giờ deadlock"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Khoá mịn bao phủ phần dữ liệu nhỏ hơn nên nhiều luồng chạy song song hơn.\n\n### Lời giải từng bước\n\nCoarse locking giữ khoá lâu trên vùng lớn, gây tranh chấp; fine locking chia nhỏ.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nKhoá mịn phức tạp hơn.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 28–30: Khoá)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "locking"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q34",
+        "type": "single_choice",
+        "question": {
+          "text": "**Token Ring** tập trung: phát hiện mất token bằng cách phát quảng bá đồng thời và trả lời song song. Thời gian 1 bước là `d`. Thời gian phát hiện là:",
+          "images": [
+            {
+              "id": "e41-q34-img",
+              "src": "images/hpt/ch4_ring_election.png",
+              "alt": "Giải thuật bầu chọn trên vòng (Ring Election): thông điệp Election thu thập danh sách ID quanh vòng rồi chuyển thành Coordinator — Slide 50 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "d"
+          },
+          {
+            "id": "B",
+            "text": "n × d"
+          },
+          {
+            "id": "C",
+            "text": "2 × d"
+          },
+          {
+            "id": "D",
+            "text": "n² × d"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** `d + d = 2d` (gửi + trả lời song song).\n\n### Lời giải từng bước\n\nQuảng bá và phản hồi diễn ra song song nên không phụ thuộc n.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐừng nhân với n.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 40–44: Token ring)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "token-ring"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q38",
+        "type": "single_choice",
+        "question": {
+          "text": "Ricart–Agrawala: khi tiến trình A **đang sử dụng** tài nguyên và nhận yêu cầu từ B, A phản ứng thế nào?",
+          "images": [
+            {
+              "id": "e41-q38-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trả lời OK ngay"
+          },
+          {
+            "id": "B",
+            "text": "Không trả lời B, lưu yêu cầu vào hàng đợi để trả lời sau khi dùng xong"
+          },
+          {
+            "id": "C",
+            "text": "Từ chối vĩnh viễn"
+          },
+          {
+            "id": "D",
+            "text": "Huỷ yêu cầu của chính mình"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** A hoãn trả lời, đưa yêu cầu vào hàng đợi.\n\n### Lời giải từng bước\n\nSau khi thoát miền găng, A gửi OK cho các yêu cầu đã hoãn (Slide 37–38 Chương 4).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nChỉ trả lời OK ngay nếu không dùng và không muốn dùng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 37–38: Ricart–Agrawala)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Ricart%E2%80%93Agrawala_algorithm",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "ricart-agrawala"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e41-q40",
+        "type": "single_choice",
+        "question": {
+          "text": "Ricart–Agrawala, mỗi lần quảng bá tốn `n` thông điệp, mỗi tiến trình vào miền găng `k` lần. Tổng số thông điệp là:",
+          "images": [
+            {
+              "id": "e41-q40-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "(2n − 1) × k"
+          },
+          {
+            "id": "B",
+            "text": "2n × k"
+          },
+          {
+            "id": "C",
+            "text": "n × k"
+          },
+          {
+            "id": "D",
+            "text": "(n − 1) × k"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `(2n − 1) × k`.\n\n### Lời giải từng bước\n\nMỗi lần: `n` thông điệp yêu cầu (gồm gửi chính mình) + `n − 1` OK = `2n − 1`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nChú ý quy ước quảng bá.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 37–38: Ricart–Agrawala)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Ricart%E2%80%93Agrawala_algorithm",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "ricart-agrawala"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e42-q31",
+        "type": "single_choice",
+        "question": {
+          "text": "Ricart–Agrawala với $n = 21$ tiến trình, mỗi tiến trình vào miền găng $k = 5$ lần. Tổng thông điệp (quy ước `2(n−1)` mỗi lần vào) là:",
+          "images": [
+            {
+              "id": "e42-q31-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "100"
+          },
+          {
+            "id": "B",
+            "text": "200"
+          },
+          {
+            "id": "C",
+            "text": "210"
+          },
+          {
+            "id": "D",
+            "text": "420"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** `2 × 5 × (21 − 1) = 200`.\n\n### Lời giải từng bước\n\nMỗi lần vào: `n−1` REQUEST + `n−1` OK = `2(n−1) = 40`. Tổng cho một tiến trình `40 × 5 = 200`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐề hỏi tổng cho k lần vào.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 37–38: Ricart–Agrawala)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Ricart%E2%80%93Agrawala_algorithm",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "ricart-agrawala"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e42-q26",
+        "type": "single_choice",
+        "question": {
+          "text": "Công thức NTP $\\theta$ giả định trễ truyền đối xứng $dT_{req} = dT_{res}$. Nếu $dT_{req} \\ne dT_{res}$, công thức đó:",
+          "images": [
+            {
+              "id": "e42-q26-img",
+              "src": "images/hpt/ch4_ntp_formula.png",
+              "alt": "Sơ đồ 4 mốc thời gian T1, T2, T3, T4 và công thức ước lượng độ lệch đồng hồ θ trong giao thức NTP — Slide 12 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Vẫn đúng"
+          },
+          {
+            "id": "B",
+            "text": "Không còn đúng"
+          },
+          {
+            "id": "C",
+            "text": "Chỉ đúng khi dT lớn"
+          },
+          {
+            "id": "D",
+            "text": "Chỉ đúng với UDP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** Không còn đúng — NTP giả định trễ hai chiều bằng nhau.\n\n### Lời giải từng bước\n\nĐộ lệch ước lượng $\\theta = \\frac{(T_2 - T_1) + (T_3 - T_4)}{2}$ suy ra từ giả định đối xứng. Khi bất đối xứng, sai số bằng nửa hiệu hai trễ.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nGiả định đối xứng là điểm yếu cố hữu.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 8–11: NTP)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Network_Time_Protocol",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "ntp"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e42-q27",
+        "type": "single_choice",
+        "question": {
+          "text": "Thuật toán **Bully**, 11 tiến trình `P0–P10`; `P8, P9, P10` đã hỏng; `P5` khởi xướng; `P7` thắng và gửi 7 `COORDINATOR`. Tổng số thông điệp là:",
+          "images": [
+            {
+              "id": "e42-q27-img",
+              "src": "images/hpt/ch4_bully_part1.png",
+              "alt": "Giải thuật bầu chọn Bully (phần 1): nút 4 phát hiện nút 7 lỗi và gửi Election cho 5, 6, 7; nút 5 và 6 trả lời OK rồi tự phát động tiếp — Slide 48 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "20"
+          },
+          {
+            "id": "B",
+            "text": "22"
+          },
+          {
+            "id": "C",
+            "text": "24"
+          },
+          {
+            "id": "D",
+            "text": "26"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** `ELECTION = 5+4+3 = 12`, `OK = 2+1 = 3`, `COORDINATOR = 7` → 22.\n\n### Lời giải từng bước\n\nTheo cách tính của đề: tổng thông điệp bầu cử + trả lời + thông báo = `12 + 3 + 7 = 22`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐếm đủ ba loại thông điệp.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 46–50: Bully)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Bully_algorithm",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "bully"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "e42-q02",
+        "type": "single_choice",
+        "question": {
+          "text": "Với sơ đồ đồng hồ vector của 4 tiến trình P0–P3 (xem hình), thông điệp nào bị **trễ** (đến sai thứ tự nhân quả)?",
+          "images": [
+            {
+              "id": "e42-q02-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 290\" width=\"680\" height=\"290\"><rect width=\"680\" height=\"290\" fill=\"#fff\"/><defs><marker id=\"ah_blk\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 z\" fill=\"#111\"/></marker><marker id=\"ah_red\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 z\" fill=\"#c0392b\"/></marker><marker id=\"ah_blu\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 z\" fill=\"#0b5394\"/></marker></defs><text x=\"340\" y=\"24\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Đồng hồ vector — đề 20242 Câu 2–3</text><text x=\"22\" y=\"60\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">P0</text><line x1=\"60\" y1=\"55\" x2=\"640\" y2=\"55\" stroke=\"#222\" stroke-width=\"1.6\" marker-end=\"url(#ah_blk)\"/><text x=\"22\" y=\"112\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">P1</text><line x1=\"60\" y1=\"107\" x2=\"640\" y2=\"107\" stroke=\"#222\" stroke-width=\"1.6\" marker-end=\"url(#ah_blk)\"/><text x=\"22\" y=\"164\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">P2</text><line x1=\"60\" y1=\"159\" x2=\"640\" y2=\"159\" stroke=\"#222\" stroke-width=\"1.6\" marker-end=\"url(#ah_blk)\"/><text x=\"22\" y=\"216\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">P3</text><line x1=\"60\" y1=\"211\" x2=\"640\" y2=\"211\" stroke=\"#222\" stroke-width=\"1.6\" marker-end=\"url(#ah_blk)\"/><circle cx=\"100\" cy=\"159\" r=\"3.5\" fill=\"#0b5394\"/><line x1=\"100\" y1=\"159\" x2=\"170\" y2=\"55\" stroke=\"#0b5394\" stroke-width=\"2\" marker-end=\"url(#ah_blu)\"/><text x=\"128.0\" y=\"111.4\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">m1</text><circle cx=\"100\" cy=\"159\" r=\"3.5\" fill=\"#0b5394\"/><line x1=\"100\" y1=\"159\" x2=\"430\" y2=\"107\" stroke=\"#0b5394\" stroke-width=\"2\" marker-end=\"url(#ah_blu)\"/><text x=\"232.0\" y=\"132.2\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">m1</text><circle cx=\"100\" cy=\"159\" r=\"3.5\" fill=\"#0b5394\"/><line x1=\"100\" y1=\"159\" x2=\"310\" y2=\"211\" stroke=\"#0b5394\" stroke-width=\"2\" marker-end=\"url(#ah_blu)\"/><text x=\"184.0\" y=\"173.8\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">m1</text><circle cx=\"200\" cy=\"55\" r=\"3.5\" fill=\"#c0392b\"/><line x1=\"200\" y1=\"55\" x2=\"270\" y2=\"107\" stroke=\"#c0392b\" stroke-width=\"2\" marker-end=\"url(#ah_red)\"/><text x=\"228.0\" y=\"69.8\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#c0392b\">m2</text><circle cx=\"200\" cy=\"55\" r=\"3.5\" fill=\"#111\"/><line x1=\"200\" y1=\"55\" x2=\"490\" y2=\"211\" stroke=\"#111\" stroke-width=\"2\" marker-end=\"url(#ah_blk)\"/><text x=\"316.0\" y=\"111.4\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">m2</text><line x1=\"270\" y1=\"100\" x2=\"270\" y2=\"114\" stroke=\"#111\" stroke-width=\"2.2\"/><text x=\"262\" y=\"95\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">T1</text><line x1=\"430\" y1=\"100\" x2=\"430\" y2=\"114\" stroke=\"#111\" stroke-width=\"2.2\"/><text x=\"422\" y=\"95\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">T2</text><line x1=\"310\" y1=\"204\" x2=\"310\" y2=\"218\" stroke=\"#111\" stroke-width=\"2.2\"/><text x=\"302\" y=\"199\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">T3</text><line x1=\"490\" y1=\"204\" x2=\"490\" y2=\"218\" stroke=\"#111\" stroke-width=\"2.2\"/><text x=\"482\" y=\"199\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">T4</text></svg>",
+              "alt": "Sơ đồ đồng hồ vector"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`m1` từ P2 → P1"
+          },
+          {
+            "id": "B",
+            "text": "`m2` từ P0 → P1"
+          },
+          {
+            "id": "C",
+            "text": "`m1` từ P2 → P3"
+          },
+          {
+            "id": "D",
+            "text": "`m2` từ P0 → P3"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "B"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn B.** `m2` từ P0 → P1 đến trước `m1` dù phụ thuộc nhân quả vào `m1`.\n\n### Lời giải từng bước\n\n`m2` được gửi sau khi P0 nhận `m1`, nên `m1 → m2`. Tại P1, `m2` đến trước `m1` → vi phạm nhân quả, phải trễ giao `m2`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai: m1 đến P3 trước m2.\n- **D — Sai:** Sai: đúng thứ tự.\n\n### Điểm dễ nhầm\n\nChú ý ai phụ thuộc ai.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 29: Thực thi trao đổi thông tin có tính nhân quả)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Vector_clock",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "vector-clock"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "e42-q03",
+        "type": "single_choice",
+        "question": {
+          "text": "Cũng với sơ đồ đó, giá trị các đồng hồ vector tại $T_1..T_4$ là:",
+          "images": [
+            {
+              "id": "e42-q03-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 290\" width=\"680\" height=\"290\"><rect width=\"680\" height=\"290\" fill=\"#fff\"/><defs><marker id=\"ah_blk\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 z\" fill=\"#111\"/></marker><marker id=\"ah_red\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 z\" fill=\"#c0392b\"/></marker><marker id=\"ah_blu\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 z\" fill=\"#0b5394\"/></marker></defs><text x=\"340\" y=\"24\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Đồng hồ vector — đề 20242 Câu 2–3</text><text x=\"22\" y=\"60\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">P0</text><line x1=\"60\" y1=\"55\" x2=\"640\" y2=\"55\" stroke=\"#222\" stroke-width=\"1.6\" marker-end=\"url(#ah_blk)\"/><text x=\"22\" y=\"112\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">P1</text><line x1=\"60\" y1=\"107\" x2=\"640\" y2=\"107\" stroke=\"#222\" stroke-width=\"1.6\" marker-end=\"url(#ah_blk)\"/><text x=\"22\" y=\"164\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">P2</text><line x1=\"60\" y1=\"159\" x2=\"640\" y2=\"159\" stroke=\"#222\" stroke-width=\"1.6\" marker-end=\"url(#ah_blk)\"/><text x=\"22\" y=\"216\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">P3</text><line x1=\"60\" y1=\"211\" x2=\"640\" y2=\"211\" stroke=\"#222\" stroke-width=\"1.6\" marker-end=\"url(#ah_blk)\"/><circle cx=\"100\" cy=\"159\" r=\"3.5\" fill=\"#0b5394\"/><line x1=\"100\" y1=\"159\" x2=\"170\" y2=\"55\" stroke=\"#0b5394\" stroke-width=\"2\" marker-end=\"url(#ah_blu)\"/><text x=\"128.0\" y=\"111.4\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">m1</text><circle cx=\"100\" cy=\"159\" r=\"3.5\" fill=\"#0b5394\"/><line x1=\"100\" y1=\"159\" x2=\"430\" y2=\"107\" stroke=\"#0b5394\" stroke-width=\"2\" marker-end=\"url(#ah_blu)\"/><text x=\"232.0\" y=\"132.2\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">m1</text><circle cx=\"100\" cy=\"159\" r=\"3.5\" fill=\"#0b5394\"/><line x1=\"100\" y1=\"159\" x2=\"310\" y2=\"211\" stroke=\"#0b5394\" stroke-width=\"2\" marker-end=\"url(#ah_blu)\"/><text x=\"184.0\" y=\"173.8\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0b5394\">m1</text><circle cx=\"200\" cy=\"55\" r=\"3.5\" fill=\"#c0392b\"/><line x1=\"200\" y1=\"55\" x2=\"270\" y2=\"107\" stroke=\"#c0392b\" stroke-width=\"2\" marker-end=\"url(#ah_red)\"/><text x=\"228.0\" y=\"69.8\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#c0392b\">m2</text><circle cx=\"200\" cy=\"55\" r=\"3.5\" fill=\"#111\"/><line x1=\"200\" y1=\"55\" x2=\"490\" y2=\"211\" stroke=\"#111\" stroke-width=\"2\" marker-end=\"url(#ah_blk)\"/><text x=\"316.0\" y=\"111.4\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">m2</text><line x1=\"270\" y1=\"100\" x2=\"270\" y2=\"114\" stroke=\"#111\" stroke-width=\"2.2\"/><text x=\"262\" y=\"95\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">T1</text><line x1=\"430\" y1=\"100\" x2=\"430\" y2=\"114\" stroke=\"#111\" stroke-width=\"2.2\"/><text x=\"422\" y=\"95\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">T2</text><line x1=\"310\" y1=\"204\" x2=\"310\" y2=\"218\" stroke=\"#111\" stroke-width=\"2.2\"/><text x=\"302\" y=\"199\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">T3</text><line x1=\"490\" y1=\"204\" x2=\"490\" y2=\"218\" stroke=\"#111\" stroke-width=\"2.2\"/><text x=\"482\" y=\"199\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">T4</text></svg>",
+              "alt": "Sơ đồ đồng hồ vector"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`T1=(0,0,0,0); T2=(0,0,1,0); T3=(0,0,1,0); T4=(1,0,1,0)`"
+          },
+          {
+            "id": "B",
+            "text": "`T1=(0,0,1,0); T2=(0,0,1,0); T3=(0,0,1,0); T4=(1,0,1,0)`"
+          },
+          {
+            "id": "C",
+            "text": "`T1=(1,0,1,0); T2=(0,0,1,0); T3=(0,0,0,0); T4=(1,0,1,0)`"
+          },
+          {
+            "id": "D",
+            "text": "`T1=(0,0,0,0); T2=(0,0,1,0); T3=(0,0,0,0); T4=(1,0,0,0)`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Đáp án A.\n\n### Lời giải từng bước\n\nP1 ở T1 chưa nhận gì nên `(0,0,0,0)`; sau khi nhận `m1` được `(0,0,1,0)`; P3 sau `m1` là `(0,0,1,0)`; sau `m2` là `(1,0,1,0)`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: T1 phải là 0.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nPhân biệt đồng hồ tại thời điểm nhận.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 27–29: Đồng hồ vector)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Vector_clock",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "vector-clock"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "e42-q17",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong đồ thị không gian tên Linux (hình), nút `n5` lưu chuỗi `\"/nuft/kalpe\"`. `n5` là loại liên kết nào?",
+          "images": [
+            {
+              "id": "e42-q17-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 300\" width=\"600\" height=\"300\"><rect width=\"600\" height=\"300\" fill=\"#fff\"/><defs><marker id=\"adag\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 z\" fill=\"#111\"/></marker></defs><rect x=\"285\" y=\"20\" width=\"44\" height=\"32\" fill=\"#e8f2ff\" stroke=\"#111\" stroke-width=\"1.8\"/><text x=\"307\" y=\"41\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">n0</text><rect x=\"175\" y=\"105\" width=\"44\" height=\"32\" fill=\"#e8f2ff\" stroke=\"#111\" stroke-width=\"1.8\"/><text x=\"197\" y=\"126\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">n1</text><rect x=\"285\" y=\"105\" width=\"44\" height=\"32\" fill=\"#e8f2ff\" stroke=\"#111\" stroke-width=\"1.8\"/><text x=\"307\" y=\"126\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">n3</text><circle cx=\"425\" cy=\"95\" r=\"18\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.6\"/><text x=\"425\" y=\"100\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">n4</text><circle cx=\"135\" cy=\"200\" r=\"19\" fill=\"#ffe08a\" stroke=\"#c0392b\" stroke-width=\"2\"/><text x=\"135\" y=\"205\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">n5</text><circle cx=\"245\" cy=\"200\" r=\"19\" fill=\"#d9f7d9\" stroke=\"#111\" stroke-width=\"1.6\"/><text x=\"245\" y=\"205\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">n2</text><circle cx=\"365\" cy=\"200\" r=\"19\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.6\"/><text x=\"365\" y=\"205\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">n6</text><line x1=\"285\" y1=\"45\" x2=\"215\" y2=\"103\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#adag)\"/><text x=\"215\" y=\"72\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#111\">cheftoon</text><line x1=\"307\" y1=\"52\" x2=\"307\" y2=\"103\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#adag)\"/><text x=\"315\" y=\"82\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#111\">nuft</text><line x1=\"329\" y1=\"42\" x2=\"408\" y2=\"86\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#adag)\"/><text x=\"378\" y=\"58\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#111\">tibir</text><line x1=\"185\" y1=\"137\" x2=\"147\" y2=\"183\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#adag)\"/><text x=\"130\" y=\"162\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#111\">kalpe</text><line x1=\"295\" y1=\"137\" x2=\"257\" y2=\"183\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#adag)\"/><text x=\"248\" y=\"162\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#111\">kalpe</text><line x1=\"319\" y1=\"137\" x2=\"354\" y2=\"183\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#adag)\"/><text x=\"348\" y=\"160\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#111\">currena</text><rect x=\"65\" y=\"240\" width=\"145\" height=\"34\" rx=\"6\" fill=\"#fff7db\" stroke=\"#c0392b\" stroke-width=\"1.6\"/><text x=\"137\" y=\"262\" font-family=\"monospace\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">\"/nuft/kalpe\"</text><line x1=\"135\" y1=\"219\" x2=\"135\" y2=\"240\" stroke=\"#c0392b\" stroke-width=\"1.5\" stroke-dasharray=\"4 2\"/></svg>",
+              "alt": "Đồ thị không gian tên Linux"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`soft-link` (liên kết mềm)"
+          },
+          {
+            "id": "B",
+            "text": "`hard-link` (liên kết cứng)"
+          },
+          {
+            "id": "C",
+            "text": "Thư mục"
+          },
+          {
+            "id": "D",
+            "text": "Tệp thường"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Nút lưu **đường dẫn** là liên kết mềm.\n\n### Lời giải từng bước\n\nSoft link lưu tên đường dẫn của đích; hard link trỏ cùng inode.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nNội dung là đường dẫn → soft link.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 50–52: Liên kết cứng/mềm)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Symbolic_link",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "soft-link"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "e42-q24",
+        "type": "single_choice",
+        "question": {
+          "text": "Home Agent đặt tại A, client tại E; X di chuyển B→C→D trên ma trận chi phí (xem hình). Tổng chi phí `C→A + D→A + E→A + A→E` là:",
+          "images": [
+            {
+              "id": "e42-q24-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 270\" width=\"680\" height=\"270\"><rect width=\"680\" height=\"270\" fill=\"#fff\"/><text x=\"180\" y=\"24\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Bảng chi phí gửi thông điệp (Từ hàng → Đến cột)</text><rect x=\"20\" y=\"36\" width=\"54\" height=\"32\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"47\" y=\"57\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\"></text><rect x=\"74\" y=\"36\" width=\"54\" height=\"32\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"101\" y=\"57\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">A</text><rect x=\"128\" y=\"36\" width=\"54\" height=\"32\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"155\" y=\"57\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">B</text><rect x=\"182\" y=\"36\" width=\"54\" height=\"32\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"209\" y=\"57\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">C</text><rect x=\"236\" y=\"36\" width=\"54\" height=\"32\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"263\" y=\"57\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">D</text><rect x=\"290\" y=\"36\" width=\"54\" height=\"32\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"317\" y=\"57\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">E</text><rect x=\"20\" y=\"68\" width=\"54\" height=\"34\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"47\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">A</text><rect x=\"74\" y=\"68\" width=\"54\" height=\"34\" fill=\"#ddd\" stroke=\"#111\"/><text x=\"101\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">—</text><rect x=\"128\" y=\"68\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"155\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">10</text><rect x=\"182\" y=\"68\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"209\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">20</text><rect x=\"236\" y=\"68\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"263\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">30</text><rect x=\"290\" y=\"68\" width=\"54\" height=\"34\" fill=\"#ffe08a\" stroke=\"#111\"/><text x=\"317\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">40</text><rect x=\"20\" y=\"102\" width=\"54\" height=\"34\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"47\" y=\"124\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">B</text><rect x=\"74\" y=\"102\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"101\" y=\"124\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">15</text><rect x=\"128\" y=\"102\" width=\"54\" height=\"34\" fill=\"#ddd\" stroke=\"#111\"/><text x=\"155\" y=\"124\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">—</text><rect x=\"182\" y=\"102\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"209\" y=\"124\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">42</text><rect x=\"236\" y=\"102\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"263\" y=\"124\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">26</text><rect x=\"290\" y=\"102\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"317\" y=\"124\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">31</text><rect x=\"20\" y=\"136\" width=\"54\" height=\"34\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"47\" y=\"158\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">C</text><rect x=\"74\" y=\"136\" width=\"54\" height=\"34\" fill=\"#ffe08a\" stroke=\"#111\"/><text x=\"101\" y=\"158\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">25</text><rect x=\"128\" y=\"136\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"155\" y=\"158\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">22</text><rect x=\"182\" y=\"136\" width=\"54\" height=\"34\" fill=\"#ddd\" stroke=\"#111\"/><text x=\"209\" y=\"158\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">—</text><rect x=\"236\" y=\"136\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"263\" y=\"158\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">44</text><rect x=\"290\" y=\"136\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"317\" y=\"158\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">28</text><rect x=\"20\" y=\"170\" width=\"54\" height=\"34\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"47\" y=\"192\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">D</text><rect x=\"74\" y=\"170\" width=\"54\" height=\"34\" fill=\"#ffe08a\" stroke=\"#111\"/><text x=\"101\" y=\"192\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">35</text><rect x=\"128\" y=\"170\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"155\" y=\"192\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">27</text><rect x=\"182\" y=\"170\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"209\" y=\"192\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">40</text><rect x=\"236\" y=\"170\" width=\"54\" height=\"34\" fill=\"#ddd\" stroke=\"#111\"/><text x=\"263\" y=\"192\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">—</text><rect x=\"290\" y=\"170\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"317\" y=\"192\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">45</text><rect x=\"20\" y=\"204\" width=\"54\" height=\"34\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"47\" y=\"226\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">E</text><rect x=\"74\" y=\"204\" width=\"54\" height=\"34\" fill=\"#ffe08a\" stroke=\"#111\"/><text x=\"101\" y=\"226\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">45</text><rect x=\"128\" y=\"204\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"155\" y=\"226\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">34</text><rect x=\"182\" y=\"204\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"209\" y=\"226\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">38</text><rect x=\"236\" y=\"204\" width=\"54\" height=\"34\" fill=\"#fff\" stroke=\"#111\"/><text x=\"263\" y=\"226\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">25</text><rect x=\"290\" y=\"204\" width=\"54\" height=\"34\" fill=\"#ddd\" stroke=\"#111\"/><text x=\"317\" y=\"226\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111\">—</text><rect x=\"365\" y=\"36\" width=\"295\" height=\"202\" rx=\"6\" fill=\"#f8fbff\" stroke=\"#111\"/><text x=\"380\" y=\"60\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#111\">Tóm tắt vị trí &amp; luồng bản tin:</text><text x=\"380\" y=\"84\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#111\">• Home Agent cố định tại: A</text><text x=\"380\" y=\"106\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#111\">• Client cố định tại: E</text><text x=\"380\" y=\"128\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#111\">• X ở B (đã có trong CSDL của A)</text><text x=\"380\" y=\"154\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#c0392b\">1) X từ B→C, báo về A (C→A): 25</text><text x=\"380\" y=\"176\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#c0392b\">2) X từ C→D, báo về A (D→A): 35</text><text x=\"380\" y=\"198\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#0b5394\">3) Client E hỏi A (E→A): 45</text><text x=\"380\" y=\"220\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#0b5394\">4) A trả lời vị trí D cho E (A→E): 40</text></svg>",
+              "alt": "Ma trận chi phí Home agent"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "125"
+          },
+          {
+            "id": "B",
+            "text": "135"
+          },
+          {
+            "id": "C",
+            "text": "145"
+          },
+          {
+            "id": "D",
+            "text": "155"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** `25 + 35 + 45 + 40 = 145`.\n\n### Lời giải từng bước\n\nCộng bốn đoạn chi phí lấy từ ma trận: cập nhật home từ C và D, rồi E→A và A→E.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐúng 4 đoạn cần cộng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 40–45: Home-based)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "home-based",
+          "tinh-toan"
+        ],
+        "difficulty": "hard"
+      },
+      {
         "id": "ch1-q001",
         "type": "single_choice",
         "question": {
