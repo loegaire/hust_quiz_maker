@@ -2523,7 +2523,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn A.** Node.js **bất đồng bộ**, không phải đồng bộ; do đó phát biểu A là sai.\n\n### Lời giải từng bước\n\nNode.js dùng một luồng sự kiện (`event loop`) và các callback/Promise: khi gặp I/O, lời gọi được giao cho hệ thống và luồng chính tiếp tục xử lý yêu cầu khác, nên không bị chặn.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Sai vì Node.js là bất đồng bộ, non-blocking.\n- **B — Sai:** Đúng: đây chính là cơ chế của Node.js.\n- **C — Sai:** Đúng: một event loop trên luồng chính.\n- **D — Sai:** Đúng: thế mạnh của Node.js là nhiều kết nối I/O.\n\n### Điểm dễ nhầm\n\nĐừng nhầm *đơn luồng* với *đồng bộ*: Node.js đơn luồng nhưng lại bất đồng bộ.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 12–14: Mô hình luồng cho server)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+          "text": "### Đáp án\n\n**Chọn A.** Node.js **bất đồng bộ**, không phải đồng bộ; do đó phát biểu A là sai.\n\n### Lời giải từng bước\n\nNode.js dùng một luồng sự kiện (`event loop`) và các callback/Promise: khi gặp I/O, lời gọi được giao cho hệ thống và luồng chính tiếp tục xử lý yêu cầu khác, nên không bị chặn.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Sai vì Node.js là bất đồng bộ, non-blocking.\n- **B — Sai:** Đúng: đây chính là cơ chế của Node.js.\n- **C — Sai:** Đúng: một event loop trên luồng chính.\n- **D — Sai:** Đúng: thế mạnh của Node.js là nhiều kết nối I/O.\n\n### Điểm dễ nhầm\n\nĐừng nhầm *đơn luồng* với *đồng bộ*: Node.js đơn luồng nhưng lại bất đồng bộ.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 15–16: Mô hình luồng server / Node.js)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
           "images": []
         },
         "tags": [
@@ -2572,7 +2572,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn D.** Nhược điểm là **hiệu năng thấp** vì mỗi yêu cầu phải đi xuyên qua nhiều tầng.\n\n### Lời giải từng bước\n\nKiến trúc phân tầng chia hệ thống thành các tầng xếp chồng, tầng trên chỉ gọi tầng dưới. Ưu điểm: tách biệt trách nhiệm, dễ thay thế từng tầng. Cái giá phải trả: mỗi yêu cầu đi qua nhiều tầng (và có thể qua mạng) nên độ trễ tăng.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Ngược lại: ưu điểm của phân tầng là dễ thay thế từng tầng.\n- **B — Sai:** Không đúng: phân tầng giúp mở rộng theo tầng.\n- **C — Sai:** Sai: phân tầng chính là cách phân chia thành phần.\n- **D — Đúng:** Đúng: độ trễ cộng dồn qua nhiều tầng.\n\n### Điểm dễ nhầm\n\nƯu điểm (tách biệt, dễ bảo trì) và nhược điểm (hiệu năng) thường được đặt cạnh nhau để gây nhầm.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 24–28: Kiến trúc phân tầng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Multitier_architecture",
+          "text": "### Đáp án\n\n**Chọn D.** Nhược điểm là **hiệu năng thấp** vì mỗi yêu cầu phải đi xuyên qua nhiều tầng.\n\n### Lời giải từng bước\n\nKiến trúc phân tầng chia hệ thống thành các tầng xếp chồng, tầng trên chỉ gọi tầng dưới. Ưu điểm: tách biệt trách nhiệm, dễ thay thế từng tầng. Cái giá phải trả: mỗi yêu cầu đi qua nhiều tầng (và có thể qua mạng) nên độ trễ tăng.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Ngược lại: ưu điểm của phân tầng là dễ thay thế từng tầng.\n- **B — Sai:** Không đúng: phân tầng giúp mở rộng theo tầng.\n- **C — Sai:** Sai: phân tầng chính là cách phân chia thành phần.\n- **D — Đúng:** Đúng: độ trễ cộng dồn qua nhiều tầng.\n\n### Điểm dễ nhầm\n\nƯu điểm (tách biệt, dễ bảo trì) và nhược điểm (hiệu năng) thường được đặt cạnh nhau để gây nhầm.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 23–26: Kiến trúc phân tầng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Multitier_architecture",
           "images": []
         },
         "tags": [
@@ -2670,7 +2670,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn B.** Microservices **có** khả năng tái sử dụng service; phát biểu B là sai (Slide 33 Chương 1 liệt kê *Tái sử dụng* là ưu điểm).\n\n### Lời giải từng bước\n\nMỗi microservice là một đơn vị nhỏ, độc lập, thực hiện một nghiệp vụ rõ ràng nên có thể được nhiều ứng dụng khác nhau tái sử dụng qua API.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Đúng: triển khai/mở rộng độc lập.\n- **B — Đúng:** Sai: tái sử dụng là ưu điểm của microservices.\n- **C — Sai:** Đúng: giao tiếp qua REST/gRPC/message.\n- **D — Sai:** Đúng: tự do công nghệ (polyglot).\n\n### Điểm dễ nhầm\n\nCâu hỏi hỏi phát biểu **sai**, dễ chọn nhầm đáp án đúng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 33–34: Microservices)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Microservices",
+          "text": "### Đáp án\n\n**Chọn B.** Microservices **có** khả năng tái sử dụng service; phát biểu B là sai (Slide 33 Chương 1 liệt kê *Tái sử dụng* là ưu điểm).\n\n### Lời giải từng bước\n\nMỗi microservice là một đơn vị nhỏ, độc lập, thực hiện một nghiệp vụ rõ ràng nên có thể được nhiều ứng dụng khác nhau tái sử dụng qua API.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Đúng: triển khai/mở rộng độc lập.\n- **B — Đúng:** Sai: tái sử dụng là ưu điểm của microservices.\n- **C — Sai:** Đúng: giao tiếp qua REST/gRPC/message.\n- **D — Sai:** Đúng: tự do công nghệ (polyglot).\n\n### Điểm dễ nhầm\n\nCâu hỏi hỏi phát biểu **sai**, dễ chọn nhầm đáp án đúng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 33–35: Microservices)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Microservices",
           "images": []
         },
         "tags": [
@@ -2816,7 +2816,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn D.** Khả năng tăng quy mô mà vẫn giữ QoS là **tính co giãn** (scalability).\n\n### Lời giải từng bước\n\nScalability có ba chiều: kích thước (số người dùng/tài nguyên), địa lý, hành chính. Hệ co giãn tốt khi tăng quy mô không làm tụt chất lượng.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Mở liên quan đến giao diện chuẩn.\n- **B — Sai:** Trong suốt là che giấu sự phân tán.\n- **C — Sai:** Sẵn sàng là thời gian hoạt động.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nPhân biệt *mở* (interoperability) với *co giãn* (quy mô).\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 18–20: Mục tiêu hệ phân tán – Scalability)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Distributed_computing",
+          "text": "### Đáp án\n\n**Chọn D.** Khả năng tăng quy mô mà vẫn giữ QoS là **tính co giãn** (scalability).\n\n### Lời giải từng bước\n\nScalability có ba chiều: kích thước (số người dùng/tài nguyên), địa lý, hành chính. Hệ co giãn tốt khi tăng quy mô không làm tụt chất lượng.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Mở liên quan đến giao diện chuẩn.\n- **B — Sai:** Trong suốt là che giấu sự phân tán.\n- **C — Sai:** Sẵn sàng là thời gian hoạt động.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nPhân biệt *mở* (interoperability) với *co giãn* (quy mô).\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 18: Mục tiêu – Scalability)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Distributed_computing",
           "images": []
         },
         "tags": [
@@ -2864,7 +2864,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn B.** Giới hạn hạ tầng mạng (độ trễ/băng thông) là trở ngại chính khi offload.\n\n### Lời giải từng bước\n\nCloud mạnh, nhưng dữ liệu phải truyền qua Internet; với video/đa phương tiện, độ trễ và băng thông làm giảm lợi ích. Đây là động lực của *edge computing*.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: cloud rất mạnh.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai: thiết bị vẫn kết nối được mạng.\n- **D — Sai:** Sai: không liên quan.\n\n### Điểm dễ nhầm\n\nTính toán nhanh không đồng nghĩa với phản hồi nhanh khi mạng là nút cổ chai.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 36–38: Cloud / Edge task offloading)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Distributed_computing",
+          "text": "### Đáp án\n\n**Chọn B.** Giới hạn hạ tầng mạng (độ trễ/băng thông) là trở ngại chính khi offload.\n\n### Lời giải từng bước\n\nCloud mạnh, nhưng dữ liệu phải truyền qua Internet; với video/đa phương tiện, độ trễ và băng thông làm giảm lợi ích. Đây là động lực của *edge computing*.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: cloud rất mạnh.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai: thiết bị vẫn kết nối được mạng.\n- **D — Sai:** Sai: không liên quan.\n\n### Điểm dễ nhầm\n\nTính toán nhanh không đồng nghĩa với phản hồi nhanh khi mạng là nút cổ chai.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 33–38: Microservices, Kubernetes & chuyển tác vụ lên cloud)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Distributed_computing",
           "images": []
         },
         "tags": [
@@ -2913,7 +2913,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn C.** Mỗi tiến trình có không gian nhớ riêng nên **ít phải xử lý tương tranh** hơn.\n\n### Lời giải từng bước\n\nCác luồng cùng tiến trình chia sẻ bộ nhớ nên phải đồng bộ (khoá, mutex). Tiến trình độc lập bộ nhớ nên tránh được lỗi tương tranh, đổi lại tạo/chuyển ngữ cảnh tốn hơn.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: tiến trình khó chia sẻ bộ nhớ hơn.\n- **B — Sai:** Sai: tiến trình nặng hơn luồng.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: chuyển ngữ cảnh tiến trình chậm hơn.\n\n### Điểm dễ nhầm\n\nƯu điểm của luồng là nhẹ và chia sẻ dễ; ưu điểm của tiến trình là cô lập.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 6–7: Tiến trình & luồng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "text": "### Đáp án\n\n**Chọn C.** Mỗi tiến trình có không gian nhớ riêng nên **ít phải xử lý tương tranh** hơn.\n\n### Lời giải từng bước\n\nCác luồng cùng tiến trình chia sẻ bộ nhớ nên phải đồng bộ (khoá, mutex). Tiến trình độc lập bộ nhớ nên tránh được lỗi tương tranh, đổi lại tạo/chuyển ngữ cảnh tốn hơn.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: tiến trình khó chia sẻ bộ nhớ hơn.\n- **B — Sai:** Sai: tiến trình nặng hơn luồng.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: chuyển ngữ cảnh tiến trình chậm hơn.\n\n### Điểm dễ nhầm\n\nƯu điểm của luồng là nhẹ và chia sẻ dễ; ưu điểm của tiến trình là cô lập.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 5–10: Tiến trình & luồng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
           "images": []
         },
         "tags": [
@@ -2962,7 +2962,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn B.** Bộ nhớ riêng giúp **tránh tương tranh** → giảm công lập trình.\n\n### Lời giải từng bước\n\nXem câu e41-q17: cô lập bộ nhớ là ưu điểm cốt lõi của đa tiến trình.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: tiến trình nặng hơn.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai: tiến trình tốn bộ nhớ hơn.\n- **D — Sai:** Sai: IPC chậm hơn chia sẻ biến.\n\n### Điểm dễ nhầm\n\nƯu điểm tương đối: cô lập vs hiệu năng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 6–7: Tiến trình & luồng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "text": "### Đáp án\n\n**Chọn B.** Bộ nhớ riêng giúp **tránh tương tranh** → giảm công lập trình.\n\n### Lời giải từng bước\n\nXem câu e41-q17: cô lập bộ nhớ là ưu điểm cốt lõi của đa tiến trình.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: tiến trình nặng hơn.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai: tiến trình tốn bộ nhớ hơn.\n- **D — Sai:** Sai: IPC chậm hơn chia sẻ biến.\n\n### Điểm dễ nhầm\n\nƯu điểm tương đối: cô lập vs hiệu năng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 5–10: Tiến trình & luồng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
           "images": []
         },
         "tags": [
@@ -3011,7 +3011,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn A.** Ba luồng chạy song song; luồng dài nhất (C3 với 20 yêu cầu): `3 + 20×6 + 2 = 125 ms`.\n\n### Lời giải từng bước\n\nMỗi kết nối có luồng riêng chạy song song. Thời gian tổng = luồng chậm nhất = `3 + 20 × 6 + 2 = 125 ms`. C1: `3+60+2 = 65`, C2: `3+90+2 = 95`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: không có lý do cộng thêm.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: nhầm cộng nối tiếp.\n\n### Điểm dễ nhầm\n\nĐừng cộng thời gian của 3 luồng — chúng chạy song song.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 10–12: Thread-per-connection)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "text": "### Đáp án\n\n**Chọn A.** Ba luồng chạy song song; luồng dài nhất (C3 với 20 yêu cầu): `3 + 20×6 + 2 = 125 ms`.\n\n### Lời giải từng bước\n\nMỗi kết nối có luồng riêng chạy song song. Thời gian tổng = luồng chậm nhất = `3 + 20 × 6 + 2 = 125 ms`. C1: `3+60+2 = 65`, C2: `3+90+2 = 95`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: không có lý do cộng thêm.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: nhầm cộng nối tiếp.\n\n### Điểm dễ nhầm\n\nĐừng cộng thời gian của 3 luồng — chúng chạy song song.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 15: Thread-per-connection)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
           "images": []
         },
         "tags": [
@@ -3060,7 +3060,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn C.** Luồng dài nhất: `2 + 20×7 + 1 = 143 ms`.\n\n### Lời giải từng bước\n\nBa luồng song song, tổng thời gian = luồng của client 3: `2 + 140 + 1 = 143 ms`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: tính thiếu.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: dư.\n\n### Điểm dễ nhầm\n\nLuôn lấy luồng chậm nhất khi chạy song song.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 10–12: Thread-per-connection)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "text": "### Đáp án\n\n**Chọn C.** Luồng dài nhất: `2 + 20×7 + 1 = 143 ms`.\n\n### Lời giải từng bước\n\nBa luồng song song, tổng thời gian = luồng của client 3: `2 + 140 + 1 = 143 ms`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: tính thiếu.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: dư.\n\n### Điểm dễ nhầm\n\nLuôn lấy luồng chậm nhất khi chạy song song.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 15: Thread-per-connection)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
           "images": []
         },
         "tags": [
@@ -3352,7 +3352,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn B.** RabbitMQ là **message broker**.\n\n### Lời giải từng bước\n\nRabbitMQ nhận thông điệp từ producer, lưu vào hàng đợi và chuyển cho consumer, giúp tách rời các thành phần.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐây là middleware hướng thông điệp.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 90–92: Message Queue / RabbitMQ)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://www.rabbitmq.com/tutorials",
+          "text": "### Đáp án\n\n**Chọn B.** RabbitMQ là **message broker**.\n\n### Lời giải từng bước\n\nRabbitMQ nhận thông điệp từ producer, lưu vào hàng đợi và chuyển cho consumer, giúp tách rời các thành phần.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐây là middleware hướng thông điệp.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 98: RabbitMQ)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://www.rabbitmq.com/tutorials",
           "images": []
         },
         "tags": [
@@ -3401,7 +3401,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn A.** Persistent messaging lưu thông điệp nên **độ trễ cao**, chỉ hợp với dịch vụ chấp nhận trễ.\n\n### Lời giải từng bước\n\nThông điệp được hệ thống lưu giữ cho đến khi chuyển được tới người nhận, người nhận có thể offline. Đổi lại thời gian giao không xác định.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là điểm mạnh.\n- **C — Sai:** Sai: bên gửi không cần trực tuyến.\n- **D — Sai:** Sai: có hàng đợi.\n\n### Điểm dễ nhầm\n\nBền vững = tin cậy nhưng không thời gian thực.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 85–88: Persistent/Transient messaging)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Message-oriented_middleware",
+          "text": "### Đáp án\n\n**Chọn A.** Persistent messaging lưu thông điệp nên **độ trễ cao**, chỉ hợp với dịch vụ chấp nhận trễ.\n\n### Lời giải từng bước\n\nThông điệp được hệ thống lưu giữ cho đến khi chuyển được tới người nhận, người nhận có thể offline. Đổi lại thời gian giao không xác định.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là điểm mạnh.\n- **C — Sai:** Sai: bên gửi không cần trực tuyến.\n- **D — Sai:** Sai: có hàng đợi.\n\n### Điểm dễ nhầm\n\nBền vững = tin cậy nhưng không thời gian thực.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 72, 93: Truyền thông điệp bền vững)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Message-oriented_middleware",
           "images": []
         },
         "tags": [
@@ -3450,7 +3450,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn B.** Kết hợp **forwarding pointer** ở các vị trí trung gian.\n\n### Lời giải từng bước\n\nHome agent luôn biết vị trí hiện tại; các điểm dừng ngắn trung gian được xử lý bằng con trỏ chuyển tiếp để tránh cập nhật liên tục về home.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nHome-based hay bị trễ khi thực thể đi xa home.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 40–45: Home-based & Forwarding)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "text": "### Đáp án\n\n**Chọn B.** Kết hợp **forwarding pointer** ở các vị trí trung gian.\n\n### Lời giải từng bước\n\nHome agent luôn biết vị trí hiện tại; các điểm dừng ngắn trung gian được xử lý bằng con trỏ chuyển tiếp để tránh cập nhật liên tục về home.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nHome-based hay bị trễ khi thực thể đi xa home.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 10–13, 21–22: Home-based & Forwarding)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
           "images": []
         },
         "tags": [
@@ -3499,7 +3499,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn B.** Hard link và tên gốc cùng trỏ tới một `inode`; xoá một tên chỉ giảm bộ đếm liên kết.\n\n### Lời giải từng bước\n\nDữ liệu chỉ bị giải phóng khi bộ đếm liên kết = 0. Vì vậy hard link vẫn truy cập được dữ liệu, còn symbolic link (soft link) sẽ bị treo.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: đó là soft link.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nNhầm hard link và soft link.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 50–52: Liên kết cứng/mềm)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Hard_link",
+          "text": "### Đáp án\n\n**Chọn B.** Hard link và tên gốc cùng trỏ tới một `inode`; xoá một tên chỉ giảm bộ đếm liên kết.\n\n### Lời giải từng bước\n\nDữ liệu chỉ bị giải phóng khi bộ đếm liên kết = 0. Vì vậy hard link vẫn truy cập được dữ liệu, còn symbolic link (soft link) sẽ bị treo.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: đó là soft link.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nNhầm hard link và soft link.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 43–49: Liên kết cứng/mềm)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Hard_link",
           "images": []
         },
         "tags": [
@@ -3596,7 +3596,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn C.** Web server (HTTP) là **stateless**.\n\n### Lời giải từng bước\n\nMỗi yêu cầu HTTP được xử lý độc lập; trạng thái phiên (nếu có) do client mang theo (cookie/token).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai: cookie lưu ở client.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: lý do sai.\n\n### Điểm dễ nhầm\n\nCookie không biến server thành stateful.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (Slide 22–23: Stateless/Stateful server)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Distributed_computing",
+          "text": "### Đáp án\n\n**Chọn C.** Web server (HTTP) là **stateless**.\n\n### Lời giải từng bước\n\nMỗi yêu cầu HTTP được xử lý độc lập; trạng thái phiên (nếu có) do client mang theo (cookie/token).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai: cookie lưu ở client.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: lý do sai.\n\n### Điểm dễ nhầm\n\nCookie không biến server thành stateful.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/01-tongquan-kientruc.pdf` (kiến thức bổ sung Chương 1 (client-server), không có slide riêng)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Distributed_computing",
           "images": []
         },
         "tags": [
@@ -3745,7 +3745,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn C.** Cả hai cách đều đi qua **cùng chuỗi name server** (root, nl, vu, cs).\n\n### Lời giải từng bước\n\nKhác biệt nằm ở *ai* gửi các truy vấn trung gian, không phải số name server được hỏi (Slide 60–62 Chương 3).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Đúng: ưu điểm.\n- **B — Sai:** Đúng: ưu điểm.\n- **C — Đúng:** Không phải ưu điểm.\n- **D — Sai:** Đúng: ưu điểm.\n\n### Điểm dễ nhầm\n\nSố server như nhau.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 60–62: Phân giải đệ quy vs lặp)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "text": "### Đáp án\n\n**Chọn C.** Cả hai cách đều đi qua **cùng chuỗi name server** (root, nl, vu, cs).\n\n### Lời giải từng bước\n\nKhác biệt nằm ở *ai* gửi các truy vấn trung gian, không phải số name server được hỏi (Slide 60–62 Chương 3).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Đúng: ưu điểm.\n- **B — Sai:** Đúng: ưu điểm.\n- **C — Đúng:** Không phải ưu điểm.\n- **D — Sai:** Đúng: ưu điểm.\n\n### Điểm dễ nhầm\n\nSố server như nhau.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 58, 67: Phân giải đệ quy vs lặp)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
           "images": []
         },
         "tags": [
@@ -3793,7 +3793,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn B.** Đệ quy: client chỉ trao đổi một cặp thông điệp, name server tận dụng cache.\n\n### Lời giải từng bước\n\nName server trung gian lưu cache kết quả cho các yêu cầu sau.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐệ quy làm tăng tải name server.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 60–62: Phân giải đệ quy vs lặp)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "text": "### Đáp án\n\n**Chọn B.** Đệ quy: client chỉ trao đổi một cặp thông điệp, name server tận dụng cache.\n\n### Lời giải từng bước\n\nName server trung gian lưu cache kết quả cho các yêu cầu sau.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐệ quy làm tăng tải name server.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 58, 67: Phân giải đệ quy vs lặp)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
           "images": []
         },
         "tags": [
@@ -3841,7 +3841,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn B.** `P5` nằm trên O1, O2, O4 nhưng không có trong O3.\n\n### Lời giải từng bước\n\nDuyệt từng chuỗi: P5 ∈ O1, O2, O4; P7 ∈ O1, O3; P10 ∈ O1, O2; P2 ∈ O2, O3.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** P2 thuộc O3.\n- **B — Đúng:** Đúng.\n- **C — Sai:** P7 thuộc O3.\n- **D — Sai:** P10 không thuộc O4.\n\n### Điểm dễ nhầm\n\nPhải loại các P xuất hiện trong O3.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 36–39: Forwarding pointers)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "text": "### Đáp án\n\n**Chọn B.** `P5` nằm trên O1, O2, O4 nhưng không có trong O3.\n\n### Lời giải từng bước\n\nDuyệt từng chuỗi: P5 ∈ O1, O2, O4; P7 ∈ O1, O3; P10 ∈ O1, O2; P2 ∈ O2, O3.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** P2 thuộc O3.\n- **B — Đúng:** Đúng.\n- **C — Sai:** P7 thuộc O3.\n- **D — Sai:** P10 không thuộc O4.\n\n### Điểm dễ nhầm\n\nPhải loại các P xuất hiện trong O3.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 13, 18: Forwarding pointers)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
           "images": []
         },
         "tags": [
@@ -3889,7 +3889,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn A.** `P5`.\n\n### Lời giải từng bước\n\nP5 ∈ O1, O2, O4, không ∈ O3; P13 không ∈ O1.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Có trong O3.\n- **C — Sai:** Không có trong O4.\n- **D — Sai:** Không có trong O1.\n\n### Điểm dễ nhầm\n\nKiểm tra cả 4 chuỗi.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 36–39: Forwarding pointers)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "text": "### Đáp án\n\n**Chọn A.** `P5`.\n\n### Lời giải từng bước\n\nP5 ∈ O1, O2, O4, không ∈ O3; P13 không ∈ O1.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Có trong O3.\n- **C — Sai:** Không có trong O4.\n- **D — Sai:** Không có trong O1.\n\n### Điểm dễ nhầm\n\nKiểm tra cả 4 chuỗi.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 13, 18: Forwarding pointers)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
           "images": []
         },
         "tags": [
@@ -3937,7 +3937,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn D.** Server `.vn` trả về địa chỉ name server của `edu.vn`.\n\n### Lời giải từng bước\n\nMỗi server chỉ biết server của nhãn kế tiếp: root → `vn` → `edu.vn` → `hust.edu.vn` → `soict.hust.edu.vn`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: chỉ server cuối biết.\n- **B — Sai:** Sai: quá xa.\n- **C — Sai:** Sai.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nNhầm bước phân giải.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 58–62: DNS)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "text": "### Đáp án\n\n**Chọn D.** Server `.vn` trả về địa chỉ name server của `edu.vn`.\n\n### Lời giải từng bước\n\nMỗi server chỉ biết server của nhãn kế tiếp: root → `vn` → `edu.vn` → `hust.edu.vn` → `soict.hust.edu.vn`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: chỉ server cuối biết.\n- **B — Sai:** Sai: quá xa.\n- **C — Sai:** Sai.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nNhầm bước phân giải.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 58, 67: DNS)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
           "images": []
         },
         "tags": [
@@ -3985,7 +3985,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn C.** Server cuối của `soict` trả về địa chỉ IP của `www`.\n\n### Lời giải từng bước\n\nĐây là bước cuối chuỗi lặp, trả bản ghi A của `www.soict.hust.edu.vn`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: đó là bước trước.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nNhầm với bước giữa.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 58–62: DNS)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "text": "### Đáp án\n\n**Chọn C.** Server cuối của `soict` trả về địa chỉ IP của `www`.\n\n### Lời giải từng bước\n\nĐây là bước cuối chuỗi lặp, trả bản ghi A của `www.soict.hust.edu.vn`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: đó là bước trước.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nNhầm với bước giữa.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 58, 67: DNS)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
           "images": []
         },
         "tags": [
@@ -4033,7 +4033,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn D.** Mobile IP dùng địa chỉ home cố định và care-of address riêng, **không** phải dùng chung một IP.\n\n### Lời giải từng bước\n\nMỗi thiết bị có địa chỉ home riêng; địa chỉ care-of thay đổi theo mạng.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Ưu điểm.\n- **B — Sai:** Ưu điểm.\n- **C — Sai:** Ưu điểm.\n- **D — Đúng:** Sai: không phải ưu điểm.\n\n### Điểm dễ nhầm\n\nĐọc kỹ ý 'dùng chung'.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 41–45: Mobile IP)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mobile_IP",
+          "text": "### Đáp án\n\n**Chọn D.** Mobile IP dùng địa chỉ home cố định và care-of address riêng, **không** phải dùng chung một IP.\n\n### Lời giải từng bước\n\nMỗi thiết bị có địa chỉ home riêng; địa chỉ care-of thay đổi theo mạng.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Ưu điểm.\n- **B — Sai:** Ưu điểm.\n- **C — Sai:** Ưu điểm.\n- **D — Đúng:** Sai: không phải ưu điểm.\n\n### Điểm dễ nhầm\n\nĐọc kỹ ý 'dùng chung'.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 10–12, 21–22: Home-based / Mobile IP)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mobile_IP",
           "images": []
         },
         "tags": [
@@ -4081,7 +4081,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn A.** Thực thể ở xa home thì mọi gói tin vẫn phải qua home agent.\n\n### Lời giải từng bước\n\nTam giác định tuyến làm tăng trễ khi thực thể và client ở xa home.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nBài toán 'định tuyến tam giác'.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 40–45: Home-based)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "text": "### Đáp án\n\n**Chọn A.** Thực thể ở xa home thì mọi gói tin vẫn phải qua home agent.\n\n### Lời giải từng bước\n\nTam giác định tuyến làm tăng trễ khi thực thể và client ở xa home.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nBài toán 'định tuyến tam giác'.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 10–12, 21–22: Home-based)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
           "images": []
         },
         "tags": [
@@ -4225,7 +4225,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn D.** `3 × 7 = 21` thông điệp.\n\n### Lời giải từng bước\n\nMỗi lần vào miền găng: `REQUEST`, `GRANT`, `RELEASE` = 3 thông điệp. Với 7 lần: `3 × 7 = 21`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nKhông phụ thuộc vào số tiến trình n.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 30–32: Mutual Exclusion tập trung)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "text": "### Đáp án\n\n**Chọn D.** `3 × 7 = 21` thông điệp.\n\n### Lời giải từng bước\n\nMỗi lần vào miền găng: `REQUEST`, `GRANT`, `RELEASE` = 3 thông điệp. Với 7 lần: `3 × 7 = 21`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nKhông phụ thuộc vào số tiến trình n.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 32–35: Mutual Exclusion tập trung)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
           "images": []
         },
         "tags": [
@@ -4273,7 +4273,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn D.** `3 × 6 = 18`.\n\n### Lời giải từng bước\n\n3 thông điệp mỗi lần vào miền găng.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nTương tự câu trước.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 30–32: Mutual Exclusion tập trung)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "text": "### Đáp án\n\n**Chọn D.** `3 × 6 = 18`.\n\n### Lời giải từng bước\n\n3 thông điệp mỗi lần vào miền găng.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Đúng:** Đúng.\n\n### Điểm dễ nhầm\n\nTương tự câu trước.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 32–35: Mutual Exclusion tập trung)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
           "images": []
         },
         "tags": [
@@ -4321,7 +4321,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn C.** Độ lệch so với 8:14: `0, +1, +6, −19`; trung bình `−3` phút → `8:11`.\n\n### Lời giải từng bước\n\nTính trung bình độ lệch: `(0+1+6−19)/4 = −3`. Giờ mới `8:14 − 3 = 8:11`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: không điều chỉnh.\n\n### Điểm dễ nhầm\n\nPhải tính trung bình độ lệch.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 12–14: Berkeley)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Berkeley_algorithm",
+          "text": "### Đáp án\n\n**Chọn C.** Độ lệch so với 8:14: `0, +1, +6, −19`; trung bình `−3` phút → `8:11`.\n\n### Lời giải từng bước\n\nTính trung bình độ lệch: `(0+1+6−19)/4 = −3`. Giờ mới `8:14 − 3 = 8:11`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai: không điều chỉnh.\n\n### Điểm dễ nhầm\n\nPhải tính trung bình độ lệch.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 13–15: Berkeley)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Berkeley_algorithm",
           "images": []
         },
         "tags": [
@@ -4369,7 +4369,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn C.** Khoá mịn bao phủ phần dữ liệu nhỏ hơn nên nhiều luồng chạy song song hơn.\n\n### Lời giải từng bước\n\nCoarse locking giữ khoá lâu trên vùng lớn, gây tranh chấp; fine locking chia nhỏ.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nKhoá mịn phức tạp hơn.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 28–30: Khoá)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "text": "### Đáp án\n\n**Chọn C.** Khoá mịn bao phủ phần dữ liệu nhỏ hơn nên nhiều luồng chạy song song hơn.\n\n### Lời giải từng bước\n\nCoarse locking giữ khoá lâu trên vùng lớn, gây tranh chấp; fine locking chia nhỏ.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nKhoá mịn phức tạp hơn.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (kiến thức bổ sung (không có trong slide Chương 4))\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
           "images": []
         },
         "tags": [
@@ -4417,7 +4417,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn C.** `d + d = 2d` (gửi + trả lời song song).\n\n### Lời giải từng bước\n\nQuảng bá và phản hồi diễn ra song song nên không phụ thuộc n.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐừng nhân với n.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 40–44: Token ring)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "text": "### Đáp án\n\n**Chọn C.** `d + d = 2d` (gửi + trả lời song song).\n\n### Lời giải từng bước\n\nQuảng bá và phản hồi diễn ra song song nên không phụ thuộc n.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐừng nhân với n.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 41–43: Token ring)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
           "images": []
         },
         "tags": [
@@ -4465,7 +4465,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn B.** A hoãn trả lời, đưa yêu cầu vào hàng đợi.\n\n### Lời giải từng bước\n\nSau khi thoát miền găng, A gửi OK cho các yêu cầu đã hoãn (Slide 37–38 Chương 4).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nChỉ trả lời OK ngay nếu không dùng và không muốn dùng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 37–38: Ricart–Agrawala)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Ricart%E2%80%93Agrawala_algorithm",
+          "text": "### Đáp án\n\n**Chọn B.** A hoãn trả lời, đưa yêu cầu vào hàng đợi.\n\n### Lời giải từng bước\n\nSau khi thoát miền găng, A gửi OK cho các yêu cầu đã hoãn (Slide 36–40 Chương 4).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nChỉ trả lời OK ngay nếu không dùng và không muốn dùng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 36–40: Ricart–Agrawala)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Ricart%E2%80%93Agrawala_algorithm",
           "images": []
         },
         "tags": [
@@ -4513,7 +4513,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn A.** `(2n − 1) × k`.\n\n### Lời giải từng bước\n\nMỗi lần: `n` thông điệp yêu cầu (gồm gửi chính mình) + `n − 1` OK = `2n − 1`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nChú ý quy ước quảng bá.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 37–38: Ricart–Agrawala)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Ricart%E2%80%93Agrawala_algorithm",
+          "text": "### Đáp án\n\n**Chọn A.** `(2n − 1) × k`.\n\n### Lời giải từng bước\n\nMỗi lần: `n` thông điệp yêu cầu (gồm gửi chính mình) + `n − 1` OK = `2n − 1`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nChú ý quy ước quảng bá.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 36–40: Ricart–Agrawala)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20241.pdf` (ngân hàng 40 câu giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Ricart%E2%80%93Agrawala_algorithm",
           "images": []
         },
         "tags": [
@@ -4561,7 +4561,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn B.** `2 × 5 × (21 − 1) = 200`.\n\n### Lời giải từng bước\n\nMỗi lần vào: `n−1` REQUEST + `n−1` OK = `2(n−1) = 40`. Tổng cho một tiến trình `40 × 5 = 200`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐề hỏi tổng cho k lần vào.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 37–38: Ricart–Agrawala)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Ricart%E2%80%93Agrawala_algorithm",
+          "text": "### Đáp án\n\n**Chọn B.** `2 × 5 × (21 − 1) = 200`.\n\n### Lời giải từng bước\n\nMỗi lần vào: `n−1` REQUEST + `n−1` OK = `2(n−1) = 40`. Tổng cho một tiến trình `40 × 5 = 200`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐề hỏi tổng cho k lần vào.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 36–40: Ricart–Agrawala)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Ricart%E2%80%93Agrawala_algorithm",
           "images": []
         },
         "tags": [
@@ -4609,7 +4609,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn B.** Không còn đúng — NTP giả định trễ hai chiều bằng nhau.\n\n### Lời giải từng bước\n\nĐộ lệch ước lượng $\\theta = \\frac{(T_2 - T_1) + (T_3 - T_4)}{2}$ suy ra từ giả định đối xứng. Khi bất đối xứng, sai số bằng nửa hiệu hai trễ.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nGiả định đối xứng là điểm yếu cố hữu.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 8–11: NTP)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Network_Time_Protocol",
+          "text": "### Đáp án\n\n**Chọn B.** Không còn đúng — NTP giả định trễ hai chiều bằng nhau.\n\n### Lời giải từng bước\n\nĐộ lệch ước lượng $\\theta = \\frac{(T_2 - T_1) + (T_3 - T_4)}{2}$ suy ra từ giả định đối xứng. Khi bất đối xứng, sai số bằng nửa hiệu hai trễ.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nGiả định đối xứng là điểm yếu cố hữu.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 12: NTP)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Network_Time_Protocol",
           "images": []
         },
         "tags": [
@@ -4657,7 +4657,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn B.** `ELECTION = 5+4+3 = 12`, `OK = 2+1 = 3`, `COORDINATOR = 7` → 22.\n\n### Lời giải từng bước\n\nTheo cách tính của đề: tổng thông điệp bầu cử + trả lời + thông báo = `12 + 3 + 7 = 22`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐếm đủ ba loại thông điệp.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 46–50: Bully)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Bully_algorithm",
+          "text": "### Đáp án\n\n**Chọn B.** `ELECTION = 5+4+3 = 12`, `OK = 2+1 = 3`, `COORDINATOR = 7` → 22.\n\n### Lời giải từng bước\n\nTheo cách tính của đề: tổng thông điệp bầu cử + trả lời + thông báo = `12 + 3 + 7 = 22`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Đúng:** Đúng.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐếm đủ ba loại thông điệp.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 47–49: Bully)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Bully_algorithm",
           "images": []
         },
         "tags": [
@@ -4753,7 +4753,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn A.** Đáp án A.\n\n### Lời giải từng bước\n\nP1 ở T1 chưa nhận gì nên `(0,0,0,0)`; sau khi nhận `m1` được `(0,0,1,0)`; P3 sau `m1` là `(0,0,1,0)`; sau `m2` là `(1,0,1,0)`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: T1 phải là 0.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nPhân biệt đồng hồ tại thời điểm nhận.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 27–29: Đồng hồ vector)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Vector_clock",
+          "text": "### Đáp án\n\n**Chọn A.** Đáp án A.\n\n### Lời giải từng bước\n\nP1 ở T1 chưa nhận gì nên `(0,0,0,0)`; sau khi nhận `m1` được `(0,0,1,0)`; P3 sau `m1` là `(0,0,1,0)`; sau `m2` là `(1,0,1,0)`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: T1 phải là 0.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nPhân biệt đồng hồ tại thời điểm nhận.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 26–29: Đồng hồ vector)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Vector_clock",
           "images": []
         },
         "tags": [
@@ -4801,7 +4801,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn A.** Nút lưu **đường dẫn** là liên kết mềm.\n\n### Lời giải từng bước\n\nSoft link lưu tên đường dẫn của đích; hard link trỏ cùng inode.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nNội dung là đường dẫn → soft link.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 50–52: Liên kết cứng/mềm)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Symbolic_link",
+          "text": "### Đáp án\n\n**Chọn A.** Nút lưu **đường dẫn** là liên kết mềm.\n\n### Lời giải từng bước\n\nSoft link lưu tên đường dẫn của đích; hard link trỏ cùng inode.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nNội dung là đường dẫn → soft link.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 43–49: Liên kết cứng/mềm)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Symbolic_link",
           "images": []
         },
         "tags": [
@@ -4849,7 +4849,7 @@
           ]
         },
         "explanation": {
-          "text": "### Đáp án\n\n**Chọn C.** `25 + 35 + 45 + 40 = 145`.\n\n### Lời giải từng bước\n\nCộng bốn đoạn chi phí lấy từ ma trận: cập nhật home từ C và D, rồi E→A và A→E.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐúng 4 đoạn cần cộng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 40–45: Home-based)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "text": "### Đáp án\n\n**Chọn C.** `25 + 35 + 45 + 40 = 145`.\n\n### Lời giải từng bước\n\nCộng bốn đoạn chi phí lấy từ ma trận: cập nhật home từ C và D, rồi E→A và A→E.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai.\n- **B — Sai:** Sai.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐúng 4 đoạn cần cộng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 10–12, 21–22: Home-based)\n- **Đề thi gốc:** `Hệ phân tán - cuối kì 20242.pdf` (đề giữa kỳ 45 phút)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
           "images": []
         },
         "tags": [
@@ -4860,6 +4860,1206 @@
           "tinh-toan"
         ],
         "difficulty": "hard"
+      },
+      {
+        "id": "c4x-01",
+        "type": "single_choice",
+        "question": {
+          "text": "Theo Lamport, khi tiến trình `Pj` nhận thông điệp `m` có nhãn `ts(m)`, nó cập nhật đồng hồ logic cục bộ như thế nào?",
+          "images": [
+            {
+              "id": "c4x-01-img",
+              "src": "images/hpt/ch4_lamport_clocks.png",
+              "alt": "Giải thuật đồng hồ logic Lamport hiệu chỉnh bộ đếm của P2 (lên 61) và P1 (lên 70) khi nhận thông điệp — Slide 24 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`Cj ← max{Cj, ts(m)}` rồi mới chuyển thông điệp lên tầng ứng dụng"
+          },
+          {
+            "id": "B",
+            "text": "`Cj ← ts(m)` bất kể giá trị cũ"
+          },
+          {
+            "id": "C",
+            "text": "`Cj ← Cj - 1`"
+          },
+          {
+            "id": "D",
+            "text": "Giữ nguyên `Cj`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `Cj ← max{Cj, ts(m)}`, sau đó chuyển `m` lên tầng ứng dụng.\n\n### Lời giải từng bước\n\nQuy tắc 3 trong slide: đồng hồ không bao giờ lùi và luôn không nhỏ hơn nhãn của thông điệp vừa nhận, nhờ đó nếu `a` là sự kiện gửi và `b` là sự kiện nhận thì `C(a) < C(b)`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng, đây là quy tắc 3 của Lamport.\n- **B — Sai:** Sai: có thể làm đồng hồ lùi nếu `ts(m)` nhỏ hơn `Cj`.\n- **C — Sai:** Sai: đồng hồ logic không bao giờ giảm.\n- **D — Sai:** Sai: phải đồng bộ với nhãn nhận được.\n\n### Điểm dễ nhầm\n\nĐồng hồ logic chỉ tăng, không bao giờ bị ghi đè bằng giá trị nhỏ hơn.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 22: Cập nhật bộ đếm Ci)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Lamport_timestamp",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "lamport-clock"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c4x-02",
+        "type": "single_choice",
+        "question": {
+          "text": "Quan hệ `happens-before` (→) của Lamport KHÔNG bao gồm trường hợp nào sau đây?",
+          "images": [
+            {
+              "id": "c4x-02-img",
+              "src": "images/hpt/ch4_lamport_clocks.png",
+              "alt": "Giải thuật đồng hồ logic Lamport hiệu chỉnh bộ đếm của P2 (lên 61) và P1 (lên 70) khi nhận thông điệp — Slide 24 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`a`, `b` cùng một tiến trình và `a` xảy ra trước `b`"
+          },
+          {
+            "id": "B",
+            "text": "`a` là sự kiện gửi thông điệp, `b` là sự kiện nhận chính thông điệp đó"
+          },
+          {
+            "id": "C",
+            "text": "Bắc cầu: `a → b` và `b → c` thì `a → c`"
+          },
+          {
+            "id": "D",
+            "text": "Hai sự kiện có đồng hồ vật lý khác nhau thì luôn có quan hệ → giữa chúng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Hai sự kiện chỉ khác giá trị đồng hồ vật lý thì chưa chắc có quan hệ →; chúng có thể tương tranh.\n\n### Lời giải từng bước\n\nSlide 20 nêu hai ngữ cảnh và tính bắc cầu. Hai sự kiện không liên hệ nhân quả qua thông điệp nào là *tương tranh*: không có `a → b` cũng không có `b → a`.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Đúng là quy tắc 1.\n- **B — Sai:** Đúng là quy tắc 2.\n- **C — Sai:** Đúng: tính bắc cầu.\n- **D — Đúng:** Sai: không phải quy tắc của →.\n\n### Điểm dễ nhầm\n\nĐừng đồng nhất thứ tự thời gian vật lý với quan hệ nhân quả.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 20: Quan hệ happens-before)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Lamport_timestamp",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "happens-before"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c4x-03",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong Vector Clock, giá trị `VCi[j] = k` có nghĩa là gì?",
+          "images": [
+            {
+              "id": "c4x-03-img",
+              "src": "images/hpt/ch4_vector_causal_delivery.png",
+              "alt": "Thực thi giao thông điệp bảo toàn nhân quả (Causal delivery) bằng Vector Clock tại tầng Middleware với 2 điều kiện kiểm tra — Slide 29 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`Pi` biết rằng đã có `k` sự kiện xảy ra ở `Pj`"
+          },
+          {
+            "id": "B",
+            "text": "`Pj` đã gửi `k` thông điệp tới `Pi`"
+          },
+          {
+            "id": "C",
+            "text": "`Pi` đã gửi `k` thông điệp tới `Pj`"
+          },
+          {
+            "id": "D",
+            "text": "`Pi` và `Pj` lệch nhau `k` đơn vị thời gian vật lý"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `VCi[j] = k` là tri thức của `Pi` về thời gian cục bộ ở `Pj`.\n\n### Lời giải từng bước\n\nSlide 27: `VCi[i]` là đồng hồ logic cục bộ của `Pi`; `VCi[j] = k` nghĩa là `Pi` biết đã có `k` sự kiện xảy ra ở `Pj`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đếm sự kiện, không chỉ số thông điệp gửi.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: là đồng hồ logic.\n\n### Điểm dễ nhầm\n\nChỉ số thứ hai `j` chỉ tiến trình mà `Pi` đang theo dõi.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 27: Vector Clocks (2))\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Vector_clock",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "vector-clock"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c4x-04",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi `Pi` gửi thông điệp `m` tới `Pj`, vector timestamp `ts(m)` được đặt thế nào?",
+          "images": [
+            {
+              "id": "c4x-04-img",
+              "src": "images/hpt/ch4_vector_causal_delivery.png",
+              "alt": "Thực thi giao thông điệp bảo toàn nhân quả (Causal delivery) bằng Vector Clock tại tầng Middleware với 2 điều kiện kiểm tra — Slide 29 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tăng `VCi[i]` lên 1, rồi đặt `ts(m) = VCi`"
+          },
+          {
+            "id": "B",
+            "text": "Đặt `ts(m)` bằng `VCj` của bên nhận"
+          },
+          {
+            "id": "C",
+            "text": "Đặt `ts(m)` rỗng"
+          },
+          {
+            "id": "D",
+            "text": "Đặt `ts(m) = VCi` trước khi tăng `VCi[i]`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Tăng `VCi[i]` trước, sau đó `ts(m)` = `VCi` hiện tại.\n\n### Lời giải từng bước\n\nSlide 28 bước 1 và 2: trước mỗi sự kiện (kể cả gửi) tăng `VCi[i]`; khi gửi, `ts(m)` bằng `VCi` **sau** bước 1.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: bên gửi không biết `VCj`.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: sai thứ tự.\n\n### Điểm dễ nhầm\n\nThứ tự: tăng rồi mới gắn nhãn.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 28: Vector Clocks (3))\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Vector_clock",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "vector-clock"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c4x-05",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi `Pj` nhận `m`, Vector Clock của nó được cập nhật thế nào?",
+          "images": [
+            {
+              "id": "c4x-05-img",
+              "src": "images/hpt/ch4_vector_causal_delivery.png",
+              "alt": "Thực thi giao thông điệp bảo toàn nhân quả (Causal delivery) bằng Vector Clock tại tầng Middleware với 2 điều kiện kiểm tra — Slide 29 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`VCj[k] ← max{VCj[k], ts(m)[k]}` với mọi `k`, sau đó mới gửi `m` lên tầng ứng dụng"
+          },
+          {
+            "id": "B",
+            "text": "`VCj ← ts(m)`"
+          },
+          {
+            "id": "C",
+            "text": "Chỉ cập nhật thành phần `VCj[j]`"
+          },
+          {
+            "id": "D",
+            "text": "Cộng `VCj[k] + ts(m)[k]` với mọi `k`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Lấy max từng thành phần.\n\n### Lời giải từng bước\n\nSlide 28 bước 3. Max theo từng thành phần giữ được tri thức của cả hai bên.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: mất tri thức cũ.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: cộng làm sai số sự kiện.\n\n### Điểm dễ nhầm\n\nPhép cập nhật là max từng phần tử, không phải cộng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 28: Vector Clocks (3))\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Vector_clock",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "vector-clock"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c4x-06",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho `VC(a) = (2,1,0)` và `VC(b) = (1,2,0)`. Quan hệ giữa hai sự kiện `a`, `b` là:",
+          "images": [
+            {
+              "id": "c4x-06-img",
+              "src": "images/hpt/ch4_vector_causal_delivery.png",
+              "alt": "Thực thi giao thông điệp bảo toàn nhân quả (Causal delivery) bằng Vector Clock tại tầng Middleware với 2 điều kiện kiểm tra — Slide 29 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`a → b`"
+          },
+          {
+            "id": "B",
+            "text": "`b → a`"
+          },
+          {
+            "id": "C",
+            "text": "`a` và `b` tương tranh"
+          },
+          {
+            "id": "D",
+            "text": "`a` và `b` là cùng một sự kiện"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Thành phần đầu `2 > 1` nhưng thành phần thứ hai `1 < 2`, nên hai vector không so sánh được: tương tranh.\n\n### Lời giải từng bước\n\n`a → b` khi `VC(a) ≤ VC(b)` mọi thành phần và khác nhau ở ít nhất một. Ở đây không vector nào ≤ vector còn lại.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Sai: thành phần 1 của a lớn hơn.\n- **B — Sai:** Sai: thành phần 2 của b lớn hơn.\n- **C — Đúng:** Đúng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nPhải so sánh từng thành phần.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 26–29: Vector clocks)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Vector_clock",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "vector-clock"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c4x-07",
+        "type": "single_choice",
+        "question": {
+          "text": "Cho `VC(a) = (1,2,0)` và `VC(b) = (2,2,1)`. Kết luận đúng là:",
+          "images": [
+            {
+              "id": "c4x-07-img",
+              "src": "images/hpt/ch4_vector_causal_delivery.png",
+              "alt": "Thực thi giao thông điệp bảo toàn nhân quả (Causal delivery) bằng Vector Clock tại tầng Middleware với 2 điều kiện kiểm tra — Slide 29 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`a → b` (a xảy ra trước b)"
+          },
+          {
+            "id": "B",
+            "text": "`b → a`"
+          },
+          {
+            "id": "C",
+            "text": "Tương tranh"
+          },
+          {
+            "id": "D",
+            "text": "Không thể kết luận"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `(1,2,0) ≤ (2,2,1)` mọi thành phần và khác nhau.\n\n### Lời giải từng bước\n\nMọi thành phần của `a` đều ≤ của `b` và có thành phần nhỏ hơn thực sự, nên `a → b`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: có thể kết luận.\n\n### Điểm dễ nhầm\n\nKiểm tra ≤ trên mọi thành phần.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 26–29: Vector clocks)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Vector_clock",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "vector-clock"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c4x-08",
+        "type": "single_choice",
+        "question": {
+          "text": "Ưu điểm và nhược điểm của giải thuật loại trừ lẫn nhau **tập trung** là gì?",
+          "images": [
+            {
+              "id": "c4x-08-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Ưu: đơn giản, tránh starvation và deadlock. Nhược: điểm đơn chịu lỗi, nút cổ chai hiệu năng"
+          },
+          {
+            "id": "B",
+            "text": "Ưu: không có điểm chịu lỗi. Nhược: phức tạp"
+          },
+          {
+            "id": "C",
+            "text": "Ưu: không cần thông điệp. Nhược: chậm"
+          },
+          {
+            "id": "D",
+            "text": "Ưu: mở rộng không giới hạn. Nhược: tốn bộ nhớ"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 35 nêu đúng như A.\n\n### Lời giải từng bước\n\nCoordinator xếp hàng đợi nên công bằng; nhưng nếu coordinator hỏng cả hệ thống ngừng và nó thành nút cổ chai.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: coordinator là điểm chịu lỗi.\n- **C — Sai:** Sai: cần 3 thông điệp.\n- **D — Sai:** Sai: bị nghẽn.\n\n### Điểm dễ nhầm\n\nĐiểm đơn chịu lỗi là nhược điểm lớn nhất.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 35: Giải thuật tập trung)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "mutual-exclusion"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c4x-09",
+        "type": "single_choice",
+        "question": {
+          "text": "Nhược điểm của giải thuật phân tán **Ricart–Agrawala** KHÔNG bao gồm:",
+          "images": [
+            {
+              "id": "c4x-09-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Phức tạp hơn giải thuật tập trung"
+          },
+          {
+            "id": "B",
+            "text": "Có `n` điểm chịu lỗi"
+          },
+          {
+            "id": "C",
+            "text": "Dùng quảng bá gây vấn đề khả năng mở rộng"
+          },
+          {
+            "id": "D",
+            "text": "Có thể xảy ra deadlock và starvation"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** Slide 40: giải thuật này giải quyết cả starvation và deadlock.\n\n### Lời giải từng bước\n\nRicart–Agrawala dùng timestamp để xác định thứ tự nên công bằng và không deadlock; nhược điểm là phức tạp, `n` điểm lỗi, quảng bá.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Đúng là nhược điểm.\n- **B — Sai:** Đúng là nhược điểm.\n- **C — Sai:** Đúng là nhược điểm.\n- **D — Đúng:** Sai: nó giải quyết cả hai.\n\n### Điểm dễ nhầm\n\nĐọc kỹ chữ KHÔNG.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 40: Giải thuật phân tán)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Ricart%E2%80%93Agrawala_algorithm",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "ricart-agrawala"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c4x-10",
+        "type": "single_choice",
+        "question": {
+          "text": "Ricart–Agrawala: tiến trình nhận `request` khi nó **không đang dùng nhưng cũng muốn dùng** tài nguyên sẽ làm gì?",
+          "images": [
+            {
+              "id": "c4x-10-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "So sánh timestamp; ai có timestamp nhỏ hơn thì được vào trước"
+          },
+          {
+            "id": "B",
+            "text": "Luôn trả lời OK"
+          },
+          {
+            "id": "C",
+            "text": "Luôn không trả lời"
+          },
+          {
+            "id": "D",
+            "text": "Huỷ yêu cầu của mình"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** So sánh timestamp.\n\n### Lời giải từng bước\n\nSlide 36 trường hợp 3: nếu timestamp của yêu cầu nhận được nhỏ hơn timestamp yêu cầu của mình thì trả lời OK, ngược lại lưu vào hàng đợi.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nCó 3 trường hợp, cần nhớ cả ba.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 36: Giải thuật phân tán (1))\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Ricart%E2%80%93Agrawala_algorithm",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "ricart-agrawala"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c4x-11",
+        "type": "single_choice",
+        "question": {
+          "text": "Vấn đề điển hình của giải thuật **Token Ring** là gì?",
+          "images": [
+            {
+              "id": "c4x-11-img",
+              "src": "images/hpt/ch4_ring_election.png",
+              "alt": "Giải thuật bầu chọn trên vòng (Ring Election): thông điệp Election thu thập danh sách ID quanh vòng rồi chuyển thành Coordinator — Slide 50 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mất token: phải sinh lại token và đảm bảo chỉ có duy nhất 1 token"
+          },
+          {
+            "id": "B",
+            "text": "Starvation"
+          },
+          {
+            "id": "C",
+            "text": "Deadlock"
+          },
+          {
+            "id": "D",
+            "text": "Không có nút cổ chai"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Mất token.\n\n### Lời giải từng bước\n\nSlide 43: Token Ring giải quyết starvation & deadlock nhưng nhược điểm là mất token.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: được giải quyết.\n- **C — Sai:** Sai: được giải quyết.\n- **D — Sai:** Không phải nhược điểm.\n\n### Điểm dễ nhầm\n\nToken mất nhưng khó phân biệt với việc nút đang dùng lâu.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 43: Giải thuật Token Ring)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "token-ring"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c4x-12",
+        "type": "single_choice",
+        "question": {
+          "text": "Token Ring: khi `Pi` nhận token mà **không** muốn dùng tài nguyên, nó làm gì?",
+          "images": [
+            {
+              "id": "c4x-12-img",
+              "src": "images/hpt/ch4_ring_election.png",
+              "alt": "Giải thuật bầu chọn trên vòng (Ring Election): thông điệp Election thu thập danh sách ID quanh vòng rồi chuyển thành Coordinator — Slide 50 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Truyền token cho nút kế tiếp `P(i+1) mod N`"
+          },
+          {
+            "id": "B",
+            "text": "Giữ token mãi"
+          },
+          {
+            "id": "C",
+            "text": "Huỷ token"
+          },
+          {
+            "id": "D",
+            "text": "Gửi token cho nút ngẫu nhiên"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Truyền tiếp cho `P(i+1) mod N`.\n\n### Lời giải từng bước\n\nSlide 42: nếu có nhu cầu thì giữ token, dùng xong truyền đi; nếu không thì truyền ngay.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nToken chỉ đi theo thứ tự vòng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 42: Giải thuật Token Ring)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "token-ring"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c4x-13",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong giải thuật **Suzuki–Kasami**, thông tin nào nằm trong token?",
+          "images": [
+            {
+              "id": "c4x-13-img",
+              "src": "images/hpt/ch4_ring_election.png",
+              "alt": "Giải thuật bầu chọn trên vòng (Ring Election): thông điệp Election thu thập danh sách ID quanh vòng rồi chuyển thành Coordinator — Slide 50 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hàng đợi các yêu cầu đang chờ xử lý"
+          },
+          {
+            "id": "B",
+            "text": "Đồng hồ vật lý của mọi nút"
+          },
+          {
+            "id": "C",
+            "text": "Danh sách nút đã hỏng"
+          },
+          {
+            "id": "D",
+            "text": "Địa chỉ IP của coordinator"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Token chứa hàng đợi các yêu cầu đang chờ.\n\n### Lời giải từng bước\n\nSlide 44: tiến trình muốn vào quảng bá yêu cầu; tiến trình giữ token thêm ID vào hàng đợi; dùng xong gửi token cho tiến trình kế tiếp trong hàng đợi.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nKhác Token Ring, token không đi theo vòng cố định.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 44: Suzuki-Kasami)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Suzuki%E2%80%93Kasami_algorithm",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "suzuki-kasami"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c4x-14",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thuật loại trừ lẫn nhau nào dưới đây **dựa trên Token**?",
+          "images": [
+            {
+              "id": "c4x-14-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Token Ring và Suzuki–Kasami"
+          },
+          {
+            "id": "B",
+            "text": "Tập trung và Ricart–Agrawala"
+          },
+          {
+            "id": "C",
+            "text": "Chỉ Ricart–Agrawala"
+          },
+          {
+            "id": "D",
+            "text": "Chỉ giải thuật tập trung"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 31 phân loại: dựa trên phân quyền (tập trung, Ricart–Agrawala) và dựa trên Token (Token Ring, Suzuki–Kasami).\n\n### Lời giải từng bước\n\nGiải thuật dựa trên phân quyền cần xin phép; dựa trên token thì ai giữ token mới được vào.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là dựa trên phân quyền.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nNhớ 2 + 2 giải thuật.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 31: Phân loại)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "mutual-exclusion"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c4x-15",
+        "type": "single_choice",
+        "question": {
+          "text": "Mục đích (đầu ra) của các giải thuật **bầu chọn** là gì?",
+          "images": [
+            {
+              "id": "c4x-15-img",
+              "src": "images/hpt/ch4_bully_part1.png",
+              "alt": "Giải thuật bầu chọn Bully (phần 1): nút 4 phát hiện nút 7 lỗi và gửi Election cho 5, 6, 7; nút 5 và 6 trả lời OK rồi tự phát động tiếp — Slide 48 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chọn được tiến trình có ID lớn nhất và còn hoạt động"
+          },
+          {
+            "id": "B",
+            "text": "Chọn tiến trình có ID nhỏ nhất"
+          },
+          {
+            "id": "C",
+            "text": "Chọn ngẫu nhiên một tiến trình"
+          },
+          {
+            "id": "D",
+            "text": "Chọn tiến trình có đồng hồ nhanh nhất"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 46.\n\n### Lời giải từng bước\n\nKết quả bầu chọn phải là tiến trình còn sống có định danh lớn nhất, và mọi tiến trình đều đồng ý.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nCòn hoạt động là điều kiện quan trọng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 46: Các giải thuật bầu chọn)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Leader_election",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "bau-chon"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c4x-16",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thuật Bully: tiến trình `P` gửi `ELECTION` tới ai?",
+          "images": [
+            {
+              "id": "c4x-16-img",
+              "src": "images/hpt/ch4_bully_part1.png",
+              "alt": "Giải thuật bầu chọn Bully (phần 1): nút 4 phát hiện nút 7 lỗi và gửi Election cho 5, 6, 7; nút 5 và 6 trả lời OK rồi tự phát động tiếp — Slide 48 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chỉ các tiến trình có định danh cao hơn `P`"
+          },
+          {
+            "id": "B",
+            "text": "Tất cả tiến trình"
+          },
+          {
+            "id": "C",
+            "text": "Chỉ các tiến trình có định danh thấp hơn"
+          },
+          {
+            "id": "D",
+            "text": "Chỉ tiến trình kế bên"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Chỉ tới các tiến trình có ID cao hơn.\n\n### Lời giải từng bước\n\nSlide 47: `P` gửi ELECTION kèm ID cho các tiến trình có ID cao hơn; nếu không ai trả lời sau timeout thì `P` thắng.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nBully luôn hướng lên ID cao.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 47: Giải thuật Bully)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Bully_algorithm",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "bully"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c4x-17",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải thuật Bully: khi nào `P` biết mình được chọn làm coordinator?",
+          "images": [
+            {
+              "id": "c4x-17-img",
+              "src": "images/hpt/ch4_bully_part2.png",
+              "alt": "Giải thuật bầu chọn Bully (phần 2): nút 6 thắng cuộc và quảng bá thông điệp Coordinator cho toàn mạng — Slide 49 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không có tiến trình nào trả lời sau timeout"
+          },
+          {
+            "id": "B",
+            "text": "Có ít nhất một tiến trình trả lời"
+          },
+          {
+            "id": "C",
+            "text": "Khi `P` có đồng hồ nhanh nhất"
+          },
+          {
+            "id": "D",
+            "text": "Khi `P` là tiến trình đầu tiên khởi động"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Không ai trả lời sau timeout.\n\n### Lời giải từng bước\n\nChỉ cần một tiến trình có ID cao hơn trả lời, `P` biết mình không được chọn và dừng lại (Slide 47).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đây là khi thua.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nTrả lời = thua.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 47: Giải thuật Bully)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Bully_algorithm",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "bully"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c4x-18",
+        "type": "single_choice",
+        "question": {
+          "text": "Điều nào KHÔNG phải yêu cầu khi chọn **superpeer** trong mạng cỡ lớn?",
+          "images": [
+            {
+              "id": "c4x-18-img",
+              "src": "images/hpt/ch4_superpeer_repulsion.png",
+              "alt": "Bầu chọn Superpeer trong mạng cỡ lớn: các nút giữ token đẩy nhau bằng lực đẩy ảo (repulsion force) để phân bố đều trên mạng overlay — Slide 55 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Nút thường truy cập superpeer với độ trễ thấp"
+          },
+          {
+            "id": "B",
+            "text": "Superpeer phân tán đều trong mạng overlay"
+          },
+          {
+            "id": "C",
+            "text": "Mỗi superpeer phục vụ càng nhiều nút thường càng tốt"
+          },
+          {
+            "id": "D",
+            "text": "Định trước tỷ lệ superpeer trong tổng số nút"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "C"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn C.** Slide 54: mỗi superpeer **không được** phục vụ quá nhiều nút thường.\n\n### Lời giải từng bước\n\nBốn yêu cầu: độ trễ thấp, phân tán đều, định trước tỷ lệ, không quá tải.\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Là yêu cầu.\n- **B — Sai:** Là yêu cầu.\n- **C — Đúng:** Ngược với yêu cầu thứ 4.\n- **D — Sai:** Là yêu cầu.\n\n### Điểm dễ nhầm\n\nĐáp án C đảo ngược yêu cầu.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 54: Bầu chọn cho mạng cỡ lớn)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Leader_election",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "superpeer"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c4x-19",
+        "type": "single_choice",
+        "question": {
+          "text": "Khó khăn khi triển khai **GPS** trong thực tế là gì?",
+          "images": [
+            {
+              "id": "c4x-19-img",
+              "src": "images/hpt/ch4_ntp_formula.png",
+              "alt": "Sơ đồ 4 mốc thời gian T1, T2, T3, T4 và công thức ước lượng độ lệch đồng hồ θ trong giao thức NTP — Slide 12 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tín hiệu đi qua các tầng khí quyển; đồng hồ vật lý của thiết bị thu và vệ tinh không đồng bộ"
+          },
+          {
+            "id": "B",
+            "text": "Vệ tinh không phát tín hiệu"
+          },
+          {
+            "id": "C",
+            "text": "Thiết bị thu không có bộ nhớ"
+          },
+          {
+            "id": "D",
+            "text": "Không có đồng hồ nguyên tử"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 9.\n\n### Lời giải từng bước\n\nHai khó khăn: độ trễ do khí quyển và lệch đồng hồ giữa thiết bị và vệ tinh.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: vệ tinh có đồng hồ nguyên tử.\n\n### Điểm dễ nhầm\n\nHai khó khăn đi cùng nhau.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 9: Global Positioning System (2))\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Clock_synchronization",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "gps"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c4x-20",
+        "type": "single_choice",
+        "question": {
+          "text": "Thuật toán Berkeley: `Time daemon` làm gì sau khi nhận giá trị đồng hồ của các máy?",
+          "images": [
+            {
+              "id": "c4x-20-img",
+              "src": "images/hpt/ch4_berkeley_step3.png",
+              "alt": "Giải thuật đồng bộ đồng hồ Berkeley (bước 3): Time daemon tính trung bình (3:05) và gửi độ lệch hiệu chỉnh (+5, +15, -20) — Slide 15 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tính giá trị trung bình rồi gửi cho mỗi máy giá trị cần hiệu chỉnh"
+          },
+          {
+            "id": "B",
+            "text": "Gửi giờ chuẩn UTC cho mọi máy"
+          },
+          {
+            "id": "C",
+            "text": "Chọn máy nhanh nhất làm chuẩn"
+          },
+          {
+            "id": "D",
+            "text": "Chỉ chỉnh đồng hồ của chính nó"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 15.\n\n### Lời giải từng bước\n\nTime daemon quảng bá giờ của mình (Slide 13), các máy trả lời (Slide 14), daemon tính trung bình và gửi **độ chỉnh** (Slide 15).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: không dùng UTC.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nGửi độ lệch cần chỉnh, không gửi giờ tuyệt đối.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 13–15: Thuật toán Berkeley)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Berkeley_algorithm",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "berkeley"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c4x-21",
+        "type": "single_choice",
+        "question": {
+          "text": "Mục đích của **Totally Ordered Multicasting** dùng đồng hồ Lamport là gì?",
+          "images": [
+            {
+              "id": "c4x-21-img",
+              "src": "images/hpt/ch4_totally_ordered_multicast.png",
+              "alt": "Bài toán cập nhật cơ sở dữ liệu nhân bản cần đảm bảo thứ tự toàn cục (Totally-Ordered Multicasting) nhờ đồng hồ Lamport — Slide 25 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Đảm bảo mọi bản sao xử lý các thông điệp gửi theo nhóm theo cùng một thứ tự toàn cục"
+          },
+          {
+            "id": "B",
+            "text": "Giảm số thông điệp"
+          },
+          {
+            "id": "C",
+            "text": "Đồng bộ đồng hồ vật lý"
+          },
+          {
+            "id": "D",
+            "text": "Bầu chọn coordinator"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 25.\n\n### Lời giải từng bước\n\nMỗi bản sao sắp thông điệp theo nhãn Lamport (phá hoà bằng ID) nên mọi nơi giao theo cùng thứ tự.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nCần thứ tự giống nhau ở mọi nơi, không cần thứ tự đúng thực tế.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 25: Totally Ordered Multicasting)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Lamport_timestamp",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "lamport-tom"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c4x-22",
+        "type": "single_choice",
+        "question": {
+          "text": "Ba vấn đề chính cần giải quyết trong loại trừ lẫn nhau (Slide 31) là:",
+          "images": [
+            {
+              "id": "c4x-22-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Starvation, deadlock, mất token"
+          },
+          {
+            "id": "B",
+            "text": "Latency, jitter, mất gói"
+          },
+          {
+            "id": "C",
+            "text": "Fork, join, wait"
+          },
+          {
+            "id": "D",
+            "text": "Đọc, ghi, xoá"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 31.\n\n### Lời giải từng bước\n\nStarvation: một tiến trình chờ mãi; deadlock: chờ vòng; mất token: với giải thuật token.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: thuộc truyền thông đa phương tiện.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nMất token chỉ áp dụng cho giải thuật token.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 31: Các thuật toán loại trừ lẫn nhau)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "mutual-exclusion"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c4x-23",
+        "type": "single_choice",
+        "question": {
+          "text": "Ricart–Agrawala, `n = 5`. Tổng số thông điệp cho **một** lần vào miền găng (quy ước `2(n−1)`) là:",
+          "images": [
+            {
+              "id": "c4x-23-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "8"
+          },
+          {
+            "id": "B",
+            "text": "5"
+          },
+          {
+            "id": "C",
+            "text": "10"
+          },
+          {
+            "id": "D",
+            "text": "3"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `2 × (5 − 1) = 8`.\n\n### Lời giải từng bước\n\n`4` REQUEST + `4` OK = `8`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: là của giải thuật tập trung.\n\n### Điểm dễ nhầm\n\nKhông nhầm với 3 của giải thuật tập trung.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 36–40: Ricart–Agrawala)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Ricart%E2%80%93Agrawala_algorithm",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "ricart-agrawala"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c4x-24",
+        "type": "single_choice",
+        "question": {
+          "text": "Token Ring có `N` tiến trình. Trong trường hợp xấu nhất, một tiến trình phải chờ token qua tối đa bao nhiêu bước truyền khi mọi nút khác đều dùng tài nguyên?",
+          "images": [
+            {
+              "id": "c4x-24-img",
+              "src": "images/hpt/ch4_ring_election.png",
+              "alt": "Giải thuật bầu chọn trên vòng (Ring Election): thông điệp Election thu thập danh sách ID quanh vòng rồi chuyển thành Coordinator — Slide 50 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`N − 1`"
+          },
+          {
+            "id": "B",
+            "text": "`1`"
+          },
+          {
+            "id": "C",
+            "text": "`2N`"
+          },
+          {
+            "id": "D",
+            "text": "`N²`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `N − 1` bước truyền.\n\n### Lời giải từng bước\n\nToken đi vòng, mỗi nút giữ rồi truyền; nút trước đó phải qua `N − 1` nút khác.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nTính số bước, chưa tính thời gian giữ.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 41–43: Token Ring)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "token-ring"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c4x-25",
+        "type": "single_choice",
+        "question": {
+          "text": "Thuật toán loại trừ lẫn nhau tập trung: số thông điệp cho **một** lần vào miền găng là:",
+          "images": [
+            {
+              "id": "c4x-25-img",
+              "src": "images/hpt/ch4_make_clock_skew.png",
+              "alt": "Lỗi công cụ make không biên dịch lại output.c (2143) do đồng hồ máy biên dịch chạy nhanh hơn máy soạn thảo (output.o mang nhãn 2144) — Slide 7 Chương 4"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "3 (REQUEST, GRANT, RELEASE)"
+          },
+          {
+            "id": "B",
+            "text": "2"
+          },
+          {
+            "id": "C",
+            "text": "`n`"
+          },
+          {
+            "id": "D",
+            "text": "`2(n−1)`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** 3 thông điệp.\n\n### Lời giải từng bước\n\nSlide 32–34: yêu cầu, chấp nhận, giải phóng.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: thiếu RELEASE.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: là của Ricart–Agrawala.\n\n### Điểm dễ nhầm\n\nGiải thuật tập trung độc lập với n.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/04-dongbohoa-vie.pdf` (Slide 32–34: Giải thuật tập trung)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 4 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Mutual_exclusion",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-4",
+          "de-thi-giua-ky",
+          "mutual-exclusion"
+        ],
+        "difficulty": "easy"
       },
       {
         "id": "ch1-q001",
