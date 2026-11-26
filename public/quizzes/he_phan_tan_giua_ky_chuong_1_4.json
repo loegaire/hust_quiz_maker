@@ -7510,6 +7510,781 @@
         "difficulty": "medium"
       },
       {
+        "id": "c2x-01",
+        "type": "single_choice",
+        "question": {
+          "text": "Theo Slide 5 Chương 2, tài nguyên nào được cấp cho một **tiến trình**?",
+          "images": [
+            {
+              "id": "c2x-01-img",
+              "src": "images/hpt/ch2_multithread_models.png",
+              "alt": "Ba mô hình tổ chức luồng phía server: Thread-per-request, Thread-per-connection và Thread-per-object — Slide 15 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bộ xử lý ảo (virtual processor) và bộ nhớ ảo (virtual memory)"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ bộ nhớ vật lý"
+          },
+          {
+            "id": "C",
+            "text": "Chỉ đĩa cứng"
+          },
+          {
+            "id": "D",
+            "text": "Chỉ băng thông mạng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Virtual Processor và Virtual Memory.\n\n### Lời giải từng bước\n\nTiến trình là chương trình đang hoạt động; hệ điều hành cấp cho nó bộ xử lý ảo và bộ nhớ ảo, đảm bảo trong suốt tương tranh giữa các tiến trình.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nLuồng chia sẻ tài nguyên của tiến trình.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 5: Tiến trình)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "tien-trinh"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2x-02",
+        "type": "single_choice",
+        "question": {
+          "text": "Các **luồng** (thread) của cùng một tiến trình trao đổi thông tin với nhau bằng cách nào (Slide 6)?",
+          "images": [
+            {
+              "id": "c2x-02-img",
+              "src": "images/hpt/ch2_multithread_models.png",
+              "alt": "Ba mô hình tổ chức luồng phía server: Thread-per-request, Thread-per-connection và Thread-per-object — Slide 15 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thông qua các biến chia sẻ"
+          },
+          {
+            "id": "B",
+            "text": "Thông qua socket bắt buộc"
+          },
+          {
+            "id": "C",
+            "text": "Thông qua RPC bắt buộc"
+          },
+          {
+            "id": "D",
+            "text": "Không thể trao đổi"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Biến chia sẻ.\n\n### Lời giải từng bước\n\nCác luồng dùng chung môi trường thực hiện của tiến trình nên giao tiếp qua biến chia sẻ; tính an toàn và hợp lý do lập trình viên quyết định (vì vậy tốn chi phí lập trình).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nLuồng: hiệu năng + chi phí lập trình.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 6: Luồng)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "luong"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2x-03",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi cài đặt luồng ở **chế độ người sử dụng (user mode)**, nếu một luồng thực hiện thao tác vào/ra dừng (blocking), điều gì xảy ra (Slide 8)?",
+          "images": [
+            {
+              "id": "c2x-03-img",
+              "src": "images/hpt/ch2_multithread_models.png",
+              "alt": "Ba mô hình tổ chức luồng phía server: Thread-per-request, Thread-per-connection và Thread-per-object — Slide 15 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cả tiến trình bị block"
+          },
+          {
+            "id": "B",
+            "text": "Chỉ luồng đó bị block"
+          },
+          {
+            "id": "C",
+            "text": "Hệ điều hành tạo tiến trình mới"
+          },
+          {
+            "id": "D",
+            "text": "Không có gì"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Cả tiến trình bị block.\n\n### Lời giải từng bước\n\nHệ điều hành chỉ nhìn thấy tiến trình, không nhìn thấy các luồng ở mức user; vì vậy lời gọi hệ thống dừng làm block toàn tiến trình. Ở chế độ nhân thì tốn kém hơn.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là chế độ nhân.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nChế độ nhân: tốn kém; chế độ NSD: block cả tiến trình.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 8: Cài đặt luồng)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "luong"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2x-04",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong Linux, thay vì `fork()`, các **tiến trình nhẹ (LWP)** dùng hàm nào để tạo luồng (Slide 10)?",
+          "images": [
+            {
+              "id": "c2x-04-img",
+              "src": "images/hpt/ch2_fork_concurrent_sockets.png",
+              "alt": "Trạng thái descriptor trên Concurrent TCP Server sau khi tiến trình cha đóng connfd và tiến trình con đóng listenfd — Slide 90 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`clone()`"
+          },
+          {
+            "id": "B",
+            "text": "`exec()`"
+          },
+          {
+            "id": "C",
+            "text": "`wait()`"
+          },
+          {
+            "id": "D",
+            "text": "`pipe()`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `clone()`.\n\n### Lời giải từng bước\n\nLinux ánh xạ 1–1 mỗi thread với một LWP ở nhân; luồng mức user theo chuẩn POSIX dùng thư viện `pthread`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: `exec()` nạp chương trình mới.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\n`fork()` tạo tiến trình mới, `clone()` cho phép chia sẻ tài nguyên.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 9–10: Tiến trình nhẹ trong Linux)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "linux",
+          "lwp"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2x-05",
+        "type": "single_choice",
+        "question": {
+          "text": "**Server đơn luồng** có đặc điểm nào sau đây (Slide 12)?",
+          "images": [
+            {
+              "id": "c2x-05-img",
+              "src": "images/hpt/ch2_dispatcher_worker.png",
+              "alt": "Mô hình server đa luồng Dispatcher/Worker: luồng điều phối nhận yêu cầu từ mạng và giao cho các luồng worker — Slide 14 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chỉ xử lý được một yêu cầu tại một thời điểm và không đảm bảo tính trong suốt"
+          },
+          {
+            "id": "B",
+            "text": "Xử lý song song nhiều yêu cầu"
+          },
+          {
+            "id": "C",
+            "text": "Không bao giờ bị chặn"
+          },
+          {
+            "id": "D",
+            "text": "Luôn nhanh hơn đa luồng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Một yêu cầu tại một thời điểm.\n\n### Lời giải từng bước\n\nCác yêu cầu được xử lý tuần tự hoặc bởi các tiến trình khác nhau; không đảm bảo trong suốt.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐơn luồng không song song.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 12: Server đơn luồng)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "server-don-luong"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2x-06",
+        "type": "single_choice",
+        "question": {
+          "text": "Ba mô hình server đa luồng ở Slide 15 là:",
+          "images": [
+            {
+              "id": "c2x-06-img",
+              "src": "images/hpt/ch2_multithread_models.png",
+              "alt": "Ba mô hình tổ chức luồng phía server: Thread-per-request, Thread-per-connection và Thread-per-object — Slide 15 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thread-per-request, Thread-per-connection, Thread-per-object"
+          },
+          {
+            "id": "B",
+            "text": "Thread-per-user, Thread-per-file, Thread-per-socket"
+          },
+          {
+            "id": "C",
+            "text": "Thread-per-CPU, Thread-per-core, Thread-per-process"
+          },
+          {
+            "id": "D",
+            "text": "Thread-per-thread, Thread-per-fork, Thread-per-pipe"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Thread-per-request, per-connection, per-object.\n\n### Lời giải từng bước\n\nThread-per-request: mỗi yêu cầu một luồng; per-connection: mỗi kết nối một luồng; per-object: mỗi đối tượng một luồng.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nThread-per-connection tiết kiệm chi phí khởi tạo hơn per-request.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 15: Server đa luồng)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Thread_(computing)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "server-da-luong"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2x-07",
+        "type": "single_choice",
+        "question": {
+          "text": "**Mô hình máy trạng thái hữu hạn** (Slide 16) cho server có đặc điểm gì?",
+          "images": [
+            {
+              "id": "c2x-07-img",
+              "src": "images/hpt/ch2_dispatcher_worker.png",
+              "alt": "Mô hình server đa luồng Dispatcher/Worker: luồng điều phối nhận yêu cầu từ mạng và giao cho các luồng worker — Slide 14 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không cần đa luồng; các lời gọi xử lý là lời gọi không dừng; ví dụ Node.js"
+          },
+          {
+            "id": "B",
+            "text": "Cần nhiều luồng để chạy"
+          },
+          {
+            "id": "C",
+            "text": "Dùng lời gọi hệ thống dừng"
+          },
+          {
+            "id": "D",
+            "text": "Không xử lý song song"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Không cần đa luồng, dùng lời gọi không dừng.\n\n### Lời giải từng bước\n\nYêu cầu của client được xếp hàng và xử lý bất đồng bộ, hướng sự kiện. Node.js đơn luồng nhưng khả năng co giãn cao.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai: song song nhờ không dừng.\n\n### Điểm dễ nhầm\n\nSong song nhưng không đa luồng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 16: Máy trạng thái hữu hạn)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "fsm",
+          "nodejs"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2x-08",
+        "type": "single_choice",
+        "question": {
+          "text": "Ghép đúng mô hình server với đặc điểm (Slide 17): *Máy trạng thái hữu hạn* là:",
+          "images": [
+            {
+              "id": "c2x-08-img",
+              "src": "images/hpt/ch2_multithread_models.png",
+              "alt": "Ba mô hình tổ chức luồng phía server: Thread-per-request, Thread-per-connection và Thread-per-object — Slide 15 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Song song, lời gọi hệ thống không dừng"
+          },
+          {
+            "id": "B",
+            "text": "Song song, lời gọi hệ thống dừng"
+          },
+          {
+            "id": "C",
+            "text": "Không song song, lời gọi hệ thống dừng"
+          },
+          {
+            "id": "D",
+            "text": "Không song song, lời gọi hệ thống không dừng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Song song + lời gọi không dừng.\n\n### Lời giải từng bước\n\nĐa luồng: song song + dừng. Đơn luồng: không song song + dừng. Máy trạng thái hữu hạn: song song + không dừng.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là đa luồng.\n- **C — Sai:** Sai: đó là đơn luồng.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nBảng so sánh ba mô hình.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 17: So sánh)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "so-sanh-mo-hinh-server"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2x-09",
+        "type": "single_choice",
+        "question": {
+          "text": "`Inetd` (superserver) có vai trò gì (Slide 18–19)?",
+          "images": [
+            {
+              "id": "c2x-09-img",
+              "src": "images/hpt/ch2_tcp_listen_queues.png",
+              "alt": "Hai hàng đợi của listening socket trong TCP: incomplete connection queue (SYN_RCVD) và completed connection queue (ESTABLISHED) với giới hạn backlog — Slide 80 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Lắng nghe nhiều cổng thay cho các dịch vụ và khởi động server tương ứng khi có yêu cầu"
+          },
+          {
+            "id": "B",
+            "text": "Mã hoá dữ liệu"
+          },
+          {
+            "id": "C",
+            "text": "Phân giải tên miền"
+          },
+          {
+            "id": "D",
+            "text": "Cân bằng tải"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Superserver lắng nghe nhiều cổng.\n\n### Lời giải từng bước\n\nCấu hình lưu trong `/etc/inetd.conf` (tên dịch vụ, kiểu socket...). Nó tiết kiệm tài nguyên vì không phải chạy sẵn mọi daemon.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nSuperserver chỉ khởi động dịch vụ khi cần.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 18–19: Inetd)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Network_socket",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "inetd"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2x-10",
+        "type": "single_choice",
+        "question": {
+          "text": "Hàm `listen(sockfd, backlog)` thực hiện việc gì (Slide 79–80)?",
+          "images": [
+            {
+              "id": "c2x-10-img",
+              "src": "images/hpt/ch2_tcp_listen_queues.png",
+              "alt": "Hai hàng đợi của listening socket trong TCP: incomplete connection queue (SYN_RCVD) và completed connection queue (ESTABLISHED) với giới hạn backlog — Slide 80 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chuyển socket chưa kết nối thành socket bị động (LISTEN) và `backlog` là số kết nối tối đa kernel xếp hàng"
+          },
+          {
+            "id": "B",
+            "text": "Kết nối tới server"
+          },
+          {
+            "id": "C",
+            "text": "Gửi dữ liệu"
+          },
+          {
+            "id": "D",
+            "text": "Đóng socket"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Chuyển sang LISTEN; backlog giới hạn hàng đợi.\n\n### Lời giải từng bước\n\n```c\nint listen(int sockfd, int backlog);\n```\nChỉ server TCP gọi `listen`. Kernel giữ hai hàng đợi: kết nối chưa hoàn tất và đã hoàn tất bắt tay 3 bước.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là `connect`.\n- **C — Sai:** Sai: đó là `send`.\n- **D — Sai:** Sai: đó là `close`.\n\n### Điểm dễ nhầm\n\nSocket mới tạo là socket chủ động (client).\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 79–81: listen)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://man7.org/linux/man-pages/man2/listen.2.html",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "socket",
+          "listen"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2x-11",
+        "type": "single_choice",
+        "question": {
+          "text": "Hàm `accept()` làm gì nếu **hàng đợi kết nối hoàn tất** rỗng (Slide 82)?",
+          "images": [
+            {
+              "id": "c2x-11-img",
+              "src": "images/hpt/ch2_tcp_listen_queues.png",
+              "alt": "Hai hàng đợi của listening socket trong TCP: incomplete connection queue (SYN_RCVD) và completed connection queue (ESTABLISHED) với giới hạn backlog — Slide 80 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tiến trình bị đưa vào trạng thái ngủ (blocking) cho tới khi có kết nối"
+          },
+          {
+            "id": "B",
+            "text": "Trả lỗi ngay"
+          },
+          {
+            "id": "C",
+            "text": "Tạo kết nối giả"
+          },
+          {
+            "id": "D",
+            "text": "Đóng socket"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Tiến trình bị ngủ.\n\n### Lời giải từng bước\n\n```c\nint accept(int sockfd, struct sockaddr *cliaddr, socklen_t *addrlen);\n```\n`accept` trả về descriptor không âm của kết nối đã hoàn tất ở đầu hàng đợi; `cliaddr` và `addrlen` trả về địa chỉ của client.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\n`addrlen` là tham số value-result.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 82: accept)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://man7.org/linux/man-pages/man2/accept.2.html",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "socket",
+          "accept"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2x-12",
+        "type": "single_choice",
+        "question": {
+          "text": "`fork()` trả về giá trị nào trong tiến trình cha và tiến trình con (Slide 84)?",
+          "images": [
+            {
+              "id": "c2x-12-img",
+              "src": "images/hpt/ch2_fork_concurrent_sockets.png",
+              "alt": "Trạng thái descriptor trên Concurrent TCP Server sau khi tiến trình cha đóng connfd và tiến trình con đóng listenfd — Slide 90 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cha: PID của con; con: 0"
+          },
+          {
+            "id": "B",
+            "text": "Cha: 0; con: PID của cha"
+          },
+          {
+            "id": "C",
+            "text": "Cả hai đều trả 0"
+          },
+          {
+            "id": "D",
+            "text": "Cả hai đều trả PID của con"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Cha nhận PID của con, con nhận 0.\n\n### Lời giải từng bước\n\n```c\npid_t pid = fork();\nif (pid == 0) { /* con */ } else if (pid > 0) { /* cha */ }\n```\n`fork` được gọi một lần nhưng trả về hai lần; con luôn lấy được PID cha qua `getppid()`.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đảo ngược.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nLỗi trả về -1.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 84: fork và exec)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://man7.org/linux/man-pages/man2/fork.2.html",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "fork"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2x-13",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong **server đồng thời** dùng `fork`, sau khi `fork` trả về, tiến trình cha và con cần đóng socket nào (Slide 86–90)?",
+          "images": [
+            {
+              "id": "c2x-13-img",
+              "src": "images/hpt/ch2_fork_concurrent_sockets.png",
+              "alt": "Trạng thái descriptor trên Concurrent TCP Server sau khi tiến trình cha đóng connfd và tiến trình con đóng listenfd — Slide 90 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cha đóng socket đã kết nối (connected), con đóng socket lắng nghe (listening)"
+          },
+          {
+            "id": "B",
+            "text": "Cha đóng socket lắng nghe, con đóng socket đã kết nối"
+          },
+          {
+            "id": "C",
+            "text": "Cả hai đóng cả hai socket"
+          },
+          {
+            "id": "D",
+            "text": "Không đóng gì"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Cha đóng connected socket; con đóng listening socket.\n\n### Lời giải từng bước\n\nCon chỉ phục vụ client nên không cần socket lắng nghe; cha tiếp tục `accept` nên không cần socket đã kết nối. Nếu cha không đóng, sẽ rò rỉ descriptor và kết nối không thực sự đóng.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đảo ngược.\n- **C — Sai:** Sai: cha vẫn cần socket lắng nghe.\n- **D — Sai:** Sai: gây rò rỉ.\n\n### Điểm dễ nhầm\n\nNếu cha không đóng, khi con đóng thì kết nối vẫn mở.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 86–91: Concurrent servers)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://man7.org/linux/man-pages/man2/fork.2.html",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "fork",
+          "server-dong-thoi"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "c2x-14",
+        "type": "single_choice",
+        "question": {
+          "text": "Lỗi `ECONNREFUSED` khi gọi `connect()` cho biết điều gì (Slide 77)?",
+          "images": [
+            {
+              "id": "c2x-14-img",
+              "src": "images/hpt/ch2_tcp_listen_queues.png",
+              "alt": "Hai hàng đợi của listening socket trong TCP: incomplete connection queue (SYN_RCVD) và completed connection queue (ESTABLISHED) với giới hạn backlog — Slide 80 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Server trả về RST: không có tiến trình nào đang lắng nghe tại cổng đó"
+          },
+          {
+            "id": "B",
+            "text": "Không nhận được phản hồi SYN sau 75 giây"
+          },
+          {
+            "id": "C",
+            "text": "Router trả ICMP unreachable"
+          },
+          {
+            "id": "D",
+            "text": "Kết nối thành công"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Server trả RST.\n\n### Lời giải từng bước\n\nETIMEDOUT: không có phản hồi SYN (75 giây). ECONNREFUSED: nhận RST. EHOSTUNREACH/ENETUNREACH: soft error từ ICMP.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là ETIMEDOUT.\n- **C — Sai:** Sai: đó là soft error.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nBa loại lỗi connect khác nhau.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 77: connect (2))\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://man7.org/linux/man-pages/man2/connect.2.html",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "socket",
+          "connect"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c2x-15",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong bắt tay 3 bước TCP (Slide 76), bước 2 là gì?",
+          "images": [
+            {
+              "id": "c2x-15-img",
+              "src": "images/hpt/ch2_tcp_listen_queues.png",
+              "alt": "Hai hàng đợi của listening socket trong TCP: incomplete connection queue (SYN_RCVD) và completed connection queue (ESTABLISHED) với giới hạn backlog — Slide 80 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "B nhận SYN và trả lời `SYNACK`, khởi tạo vùng đệm và seq # của B"
+          },
+          {
+            "id": "B",
+            "text": "A gửi `SYN`"
+          },
+          {
+            "id": "C",
+            "text": "A trả `ACK` kèm dữ liệu"
+          },
+          {
+            "id": "D",
+            "text": "B gửi `FIN`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** `SYNACK`.\n\n### Lời giải từng bước\n\nBước 1: A gửi SYN (seq của A, không dữ liệu). Bước 2: B trả SYNACK. Bước 3: A trả ACK (có thể kèm dữ liệu).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: bước 1.\n- **C — Sai:** Sai: bước 3.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nBước 3 mới có thể kèm dữ liệu.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 76: Bắt tay 3 bước)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Transmission_Control_Protocol",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "tcp"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c2x-16",
+        "type": "single_choice",
+        "question": {
+          "text": "`bind()` dùng để làm gì (Slide 78)?",
+          "images": [
+            {
+              "id": "c2x-16-img",
+              "src": "images/hpt/ch2_tcp_listen_queues.png",
+              "alt": "Hai hàng đợi của listening socket trong TCP: incomplete connection queue (SYN_RCVD) và completed connection queue (ESTABLISHED) với giới hạn backlog — Slide 80 Chương 2"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Gán địa chỉ giao thức cục bộ (IP, port) cho socket"
+          },
+          {
+            "id": "B",
+            "text": "Chấp nhận kết nối"
+          },
+          {
+            "id": "C",
+            "text": "Chuyển socket sang LISTEN"
+          },
+          {
+            "id": "D",
+            "text": "Đóng socket"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Gán địa chỉ cục bộ cho socket.\n\n### Lời giải từng bước\n\n```c\nint bind(int sockfd, const struct sockaddr *myaddr, socklen_t addrlen);\n```\nClient thường không cần `bind` trước `connect`: kernel tự chọn cổng tạm thời (ephemeral) và địa chỉ IP nguồn.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: `accept`.\n- **C — Sai:** Sai: `listen`.\n- **D — Sai:** Sai: `close`.\n\n### Điểm dễ nhầm\n\nServer cần bind cổng cố định; client thì không.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/02-tientrinh-traodoithongtin.pdf` (Slide 78: bind)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 2 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Network_socket",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-2",
+          "de-thi-giua-ky",
+          "socket",
+          "bind"
+        ],
+        "difficulty": "easy"
+      },
+      {
         "id": "ch1-q001",
         "type": "single_choice",
         "question": {
