@@ -6062,6 +6062,1454 @@
         "difficulty": "easy"
       },
       {
+        "id": "c3x-01",
+        "type": "single_choice",
+        "question": {
+          "text": "Theo Slide 8 Chương 3, tính chất nào sau đây của **định danh** (identifier) là **SAI**?",
+          "images": [
+            {
+              "id": "c3x-01-img",
+              "src": "images/hpt/ch3_dns_3layers.png",
+              "alt": "Phân chia không gian tên có cấu trúc thành 3 tầng: Global layer, Administrational layer và Managerial layer — Slide 56 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Một định danh chỉ đến nhiều nhất một thực thể"
+          },
+          {
+            "id": "B",
+            "text": "Mỗi thực thể chỉ được xác định bởi một định danh"
+          },
+          {
+            "id": "C",
+            "text": "Một định danh mãi mãi chỉ trỏ đến một thực thể"
+          },
+          {
+            "id": "D",
+            "text": "Một định danh có thể được tái sử dụng để trỏ đến thực thể khác sau khi thực thể cũ bị xoá"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "D"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn D.** D sai vì định danh mãi mãi chỉ trỏ đến một thực thể.\n\n### Lời giải từng bước\n\nSlide 8 nêu ba tính chất: (1) một định danh chỉ đến nhiều nhất một thực thể, (2) mỗi thực thể được xác định bởi một định danh, (3) một định danh mãi mãi chỉ trỏ đến một thực thể (không tái sử dụng).\n\n### Phân tích từng lựa chọn\n\n- **A — Sai:** Đúng, tính chất 1.\n- **B — Sai:** Đúng, tính chất 2.\n- **C — Sai:** Đúng, tính chất 3.\n- **D — Đúng:** Sai: mâu thuẫn tính chất 3.\n\n### Điểm dễ nhầm\n\nPhân biệt định danh với tên, địa chỉ: địa chỉ có thể đổi, định danh thì không.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 8: Định danh)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "dinh-danh"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-02",
+        "type": "single_choice",
+        "question": {
+          "text": "Tại sao nên **tách biệt dịch vụ (thực thể) và vị trí (địa chỉ)** bằng định danh/tên?",
+          "images": [
+            {
+              "id": "c3x-02-img",
+              "src": "images/hpt/ch3_dns_3layers.png",
+              "alt": "Phân chia không gian tên có cấu trúc thành 3 tầng: Global layer, Administrational layer và Managerial layer — Slide 56 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Vì thực thể có thể thay đổi điểm truy cập (địa chỉ) mà tên không đổi"
+          },
+          {
+            "id": "B",
+            "text": "Vì địa chỉ luôn cố định mãi mãi"
+          },
+          {
+            "id": "C",
+            "text": "Vì tên luôn chứa địa chỉ"
+          },
+          {
+            "id": "D",
+            "text": "Vì không cần phân giải tên nữa"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Thực thể có thể đổi access point mà tên giữ nguyên.\n\n### Lời giải từng bước\n\nSlide 6–7: thực thể có tên và có thể có nhiều điểm truy cập (access point), mỗi điểm có địa chỉ. Khi thực thể di chuyển, địa chỉ đổi nhưng tên giữ nguyên.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: địa chỉ thay đổi khi thực thể di động.\n- **C — Sai:** Sai: tên không chứa thông tin vị trí.\n- **D — Sai:** Sai: vẫn cần phân giải.\n\n### Điểm dễ nhầm\n\nĐịa chỉ ≠ tên.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 6–7: Thực thể, A.P; Tách biệt dịch vụ và vị trí)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "dinh-danh"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-03",
+        "type": "single_choice",
+        "question": {
+          "text": "Mô hình **bảng ánh xạ tên–địa chỉ tập trung** có vấn đề gì?",
+          "images": [
+            {
+              "id": "c3x-03-img",
+              "src": "images/hpt/ch3_dns_3layers.png",
+              "alt": "Phân chia không gian tên có cấu trúc thành 3 tầng: Global layer, Administrational layer và Managerial layer — Slide 56 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Không phù hợp với hệ thống mạng cỡ lớn"
+          },
+          {
+            "id": "B",
+            "text": "Không lưu được địa chỉ"
+          },
+          {
+            "id": "C",
+            "text": "Không có điểm chịu lỗi"
+          },
+          {
+            "id": "D",
+            "text": "Tốn quá ít bộ nhớ"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Không phù hợp với mạng cỡ lớn.\n\n### Lời giải từng bước\n\nSlide 9: mô hình tập trung có nút cổ chai, điểm đơn chịu lỗi nên cần hệ phân giải tên phân tán, đáp ứng quy mô vô hạn, bền vững, sẵn sàng/chịu lỗi.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai: tập trung chính là điểm đơn chịu lỗi.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nYêu cầu: quy mô, bền vững, sẵn sàng.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 9: Phân giải tên và định danh)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "dich-vu-ten"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-04",
+        "type": "single_choice",
+        "question": {
+          "text": "URI gồm 5 phần nào theo Slide 10?",
+          "images": [
+            {
+              "id": "c3x-04-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 175\" width=\"680\" height=\"175\"><rect width=\"680\" height=\"175\" fill=\"#fff\"/><text x=\"340\" y=\"28\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Cấu trúc 5 thành phần của một URI chuẩn (Slide 10 Chương 3)</text><rect x=\"20\" y=\"50\" width=\"75\" height=\"38\" rx=\"4\" fill=\"#ffe6e6\" stroke=\"#111\"/><text x=\"57\" y=\"74\" font-family=\"monospace\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">https</text><text x=\"103\" y=\"74\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">://</text><rect x=\"122\" y=\"50\" width=\"165\" height=\"38\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"204\" y=\"74\" font-family=\"monospace\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">soict.hust.edu.vn:443</text><rect x=\"295\" y=\"50\" width=\"135\" height=\"38\" rx=\"4\" fill=\"#e6ffe8\" stroke=\"#111\"/><text x=\"362\" y=\"74\" font-family=\"monospace\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">/courses/it4611</text><text x=\"436\" y=\"74\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">?</text><rect x=\"446\" y=\"50\" width=\"115\" height=\"38\" rx=\"4\" fill=\"#fff2cc\" stroke=\"#111\"/><text x=\"503\" y=\"74\" font-family=\"monospace\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">sem=20261</text><text x=\"568\" y=\"74\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">#</text><rect x=\"578\" y=\"50\" width=\"82\" height=\"38\" rx=\"4\" fill=\"#f3e6ff\" stroke=\"#111\"/><text x=\"619\" y=\"74\" font-family=\"monospace\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">chap3</text><text x=\"57\" y=\"114\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#a61c1c\">1. scheme</text><text x=\"204\" y=\"114\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#0b5394\">2. authority</text><text x=\"362\" y=\"114\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b7e3c\">3. path</text><text x=\"503\" y=\"114\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#8a6d00\">4. query</text><text x=\"619\" y=\"114\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#5e2b97\">5. fragment</text><text x=\"340\" y=\"150\" font-family=\"sans-serif\" font-size=\"12.5\" text-anchor=\"middle\" fill=\"#333\">URL cho biết ĐỊA CHỈ truy cập tài nguyên • URN (vd: urn:isbn:0-486-27557-4) định danh tên độc lập vị trí</text></svg>",
+              "alt": "Cấu trúc URI"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "scheme, authority, path, query, fragment"
+          },
+          {
+            "id": "B",
+            "text": "protocol, host, port, file, hash"
+          },
+          {
+            "id": "C",
+            "text": "domain, ip, path, key, value"
+          },
+          {
+            "id": "D",
+            "text": "scheme, host, path, cookie, token"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** scheme, authority, path, query và fragment.\n\n### Lời giải từng bước\n\nSlide 10: URI có 5 phần; được phân loại là URL (vị trí) hoặc URN (tên bền vững, ví dụ ISBN).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nURN: tên; URL: vị trí.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 10: URI, URL và URN)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Uniform_Resource_Identifier",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "uri"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-05",
+        "type": "single_choice",
+        "question": {
+          "text": "`urn:isbn:0-486-27557-4` và `file:///home/username/RomeoAndJuliet.pdf` lần lượt là loại gì?",
+          "images": [
+            {
+              "id": "c3x-05-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 175\" width=\"680\" height=\"175\"><rect width=\"680\" height=\"175\" fill=\"#fff\"/><text x=\"340\" y=\"28\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Cấu trúc 5 thành phần của một URI chuẩn (Slide 10 Chương 3)</text><rect x=\"20\" y=\"50\" width=\"75\" height=\"38\" rx=\"4\" fill=\"#ffe6e6\" stroke=\"#111\"/><text x=\"57\" y=\"74\" font-family=\"monospace\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">https</text><text x=\"103\" y=\"74\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">://</text><rect x=\"122\" y=\"50\" width=\"165\" height=\"38\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"204\" y=\"74\" font-family=\"monospace\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">soict.hust.edu.vn:443</text><rect x=\"295\" y=\"50\" width=\"135\" height=\"38\" rx=\"4\" fill=\"#e6ffe8\" stroke=\"#111\"/><text x=\"362\" y=\"74\" font-family=\"monospace\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">/courses/it4611</text><text x=\"436\" y=\"74\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">?</text><rect x=\"446\" y=\"50\" width=\"115\" height=\"38\" rx=\"4\" fill=\"#fff2cc\" stroke=\"#111\"/><text x=\"503\" y=\"74\" font-family=\"monospace\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">sem=20261</text><text x=\"568\" y=\"74\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" fill=\"#111\">#</text><rect x=\"578\" y=\"50\" width=\"82\" height=\"38\" rx=\"4\" fill=\"#f3e6ff\" stroke=\"#111\"/><text x=\"619\" y=\"74\" font-family=\"monospace\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">chap3</text><text x=\"57\" y=\"114\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#a61c1c\">1. scheme</text><text x=\"204\" y=\"114\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#0b5394\">2. authority</text><text x=\"362\" y=\"114\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b7e3c\">3. path</text><text x=\"503\" y=\"114\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#8a6d00\">4. query</text><text x=\"619\" y=\"114\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#5e2b97\">5. fragment</text><text x=\"340\" y=\"150\" font-family=\"sans-serif\" font-size=\"12.5\" text-anchor=\"middle\" fill=\"#333\">URL cho biết ĐỊA CHỈ truy cập tài nguyên • URN (vd: urn:isbn:0-486-27557-4) định danh tên độc lập vị trí</text></svg>",
+              "alt": "Cấu trúc URI"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "URN và URL"
+          },
+          {
+            "id": "B",
+            "text": "URL và URN"
+          },
+          {
+            "id": "C",
+            "text": "Cả hai là URL"
+          },
+          {
+            "id": "D",
+            "text": "Cả hai là URN"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** ISBN là URN; đường dẫn file là URL.\n\n### Lời giải từng bước\n\nSlide 10: URN định danh tài nguyên bằng tên (không chỉ vị trí), URL chỉ rõ vị trí/cách truy cập.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đảo ngược.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nURL nói *ở đâu*, URN nói *là gì*.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 10: URI, URL và URN)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Uniform_Resource_Identifier",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "uri",
+          "urn"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-06",
+        "type": "single_choice",
+        "question": {
+          "text": "Giải pháp **quảng bá** (broadcast) để phân giải tên phẳng có nhược điểm chính nào?",
+          "images": [
+            {
+              "id": "c3x-06-img",
+              "src": "images/hpt/ch3_dns_3layers.png",
+              "alt": "Phân chia không gian tên có cấu trúc thành 3 tầng: Global layer, Administrational layer và Managerial layer — Slide 56 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Kém hiệu quả khi kích thước mạng tăng: băng thông bận và các thực thể xử lý yêu cầu không phải của mình"
+          },
+          {
+            "id": "B",
+            "text": "Không tìm được thực thể"
+          },
+          {
+            "id": "C",
+            "text": "Chỉ dùng được trong mạng Internet"
+          },
+          {
+            "id": "D",
+            "text": "Cần bảng ánh xạ tập trung"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 15.\n\n### Lời giải từng bước\n\nThông báo chứa định danh được gửi tới mọi thực thể; chỉ thực thể đúng mới trả lời, nhưng tất cả đều phải xử lý. Có thể thay bằng truyền thông nhóm.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai: dùng trong mạng cục bộ như ARP.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nARP là ví dụ quảng bá trong LAN.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 14–15: Quảng bá/thông báo nhóm)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Address_Resolution_Protocol",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "quang-ba",
+          "arp"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-07",
+        "type": "single_choice",
+        "question": {
+          "text": "Điều kiện để dùng giải pháp **quảng bá** phân giải tên là gì?",
+          "images": [
+            {
+              "id": "c3x-07-img",
+              "src": "images/hpt/ch3_dns_3layers.png",
+              "alt": "Phân chia không gian tên có cấu trúc thành 3 tầng: Global layer, Administrational layer và Managerial layer — Slide 56 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hệ phân tán hỗ trợ trao đổi thông tin qua quảng bá"
+          },
+          {
+            "id": "B",
+            "text": "Có Home Agent"
+          },
+          {
+            "id": "C",
+            "text": "Có DNS root"
+          },
+          {
+            "id": "D",
+            "text": "Tên có cấu trúc phân cấp"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 14.\n\n### Lời giải từng bước\n\nGiải pháp chỉ khả thi khi mạng hỗ trợ quảng bá (ví dụ LAN với ARP).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nARP-spoofing là điểm yếu của ARP vì không xác thực.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 14: Quảng bá)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Address_Resolution_Protocol",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "quang-ba"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-08",
+        "type": "single_choice",
+        "question": {
+          "text": "Vấn đề của giải pháp **chuyển tiếp con trỏ** (forwarding pointer) là gì?",
+          "images": [
+            {
+              "id": "c3x-08-img",
+              "src": "images/hpt/ch3_shortcut_pointer.png",
+              "alt": "Tái định hướng con trỏ (tạo đường tắt shortcut) giúp rút ngắn chuỗi tham chiếu chuyển tiếp — Slide 20 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chuỗi con trỏ có thể dài vô hạn và có thể có chuỗi không tham chiếu được"
+          },
+          {
+            "id": "B",
+            "text": "Không lưu được địa chỉ"
+          },
+          {
+            "id": "C",
+            "text": "Luôn cần quảng bá"
+          },
+          {
+            "id": "D",
+            "text": "Server không cần stub"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 21.\n\n### Lời giải từng bước\n\nKhi thực thể di chuyển nhiều lần, chuỗi con trỏ dài. Giải pháp: dùng short cut; loại bỏ con trỏ cũ; hoặc dùng home-based.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nShort cut rút ngắn chuỗi.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 18–21: Forwarding pointers)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "forwarding-pointer"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c3x-09",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong **forwarding pointer**, khi thực thể chuyển vị, điều gì được thực hiện?",
+          "images": [
+            {
+              "id": "c3x-09-img",
+              "src": "images/hpt/ch3_forwarding_pointers.png",
+              "alt": "Cơ chế chuyển tiếp con trỏ (Forwarding Pointers) qua các cặp (Client stub, Server stub) giữa các tiến trình — Slide 19 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Để lại tham chiếu mới tại địa chỉ cũ"
+          },
+          {
+            "id": "B",
+            "text": "Xoá thực thể"
+          },
+          {
+            "id": "C",
+            "text": "Cập nhật DNS gốc"
+          },
+          {
+            "id": "D",
+            "text": "Quảng bá tới mọi nút"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 18.\n\n### Lời giải từng bước\n\nClient stub và server stub quản lý các pointer: stub ở địa chỉ cũ chuyển yêu cầu tới địa chỉ mới.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nChuỗi hình thành theo lịch sử di chuyển.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 18: Chuyển tiếp con trỏ)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "forwarding-pointer"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-10",
+        "type": "single_choice",
+        "question": {
+          "text": "Nhược điểm của giải pháp **Home-based** là gì?",
+          "images": [
+            {
+              "id": "c3x-10-img",
+              "src": "images/hpt/ch3_home_based_mobileip.png",
+              "alt": "Cơ chế định vị dựa trên Home Agent (Mobile IP): hỏi địa chỉ tại Home location, chuyển tiếp gói qua đường hầm và tối ưu đường đi — Slide 22 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Server root quá tải và vấn đề đường đi"
+          },
+          {
+            "id": "B",
+            "text": "Không hỗ trợ di động"
+          },
+          {
+            "id": "C",
+            "text": "Không cần lưu địa chỉ"
+          },
+          {
+            "id": "D",
+            "text": "Chỉ dùng được cho tên phân cấp"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 23: vấn đề về quy mô và đường đi.\n\n### Lời giải từng bước\n\nMọi lần liên lạc phải hỏi home agent, nên khi thực thể đi xa home thì đường đi dài và root quá tải.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nLiên quan định tuyến tam giác.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 23: Vấn đề về quy mô)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Code_mobility",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "home-based"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c3x-11",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong **Chord** (Slide 24), các nút được tổ chức thế nào?",
+          "images": [
+            {
+              "id": "c3x-11-img",
+              "src": "images/hpt/ch3_chord_32ring_ft.png",
+              "alt": "Vòng Chord 32 định danh (m=5) kèm bảng Finger Table chi tiết và đường đi phân giải khóa k=12, k=26 — Slide 25 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Thành vòng, mỗi nút có `prev(n)` và `succ(n)`, kèm finger table để tra cứu nhanh"
+          },
+          {
+            "id": "B",
+            "text": "Thành cây phân cấp"
+          },
+          {
+            "id": "C",
+            "text": "Thành lưới 2 chiều"
+          },
+          {
+            "id": "D",
+            "text": "Thành danh sách liên kết đơn không vòng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Vòng với `prev`, `succ` và finger table.\n\n### Lời giải từng bước\n\nKhoá `k` do nút `succ(k)` quản lý. Finger table `FTp` cho phép nhảy xa theo luỹ thừa 2, nên tra cứu mất `O(log N)` bước.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là cách tiếp cận phân cấp.\n- **C — Sai:** Sai: đó là CAN.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nChord là vòng, CAN là toạ độ.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 24: Chord)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Chord_(peer-to-peer)",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "chord"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c3x-12",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong **giải pháp phân cấp** (Slide 26), domain lá thường là gì?",
+          "images": [
+            {
+              "id": "c3x-12-img",
+              "src": "images/hpt/ch3_hierarchical_lookup.png",
+              "alt": "Quá trình tìm kiếm thực thể E đi ngược lên cha rồi đi xuống nút con trong dịch vụ vị trí phân cấp — Slide 28 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mạng cục bộ hoặc cell"
+          },
+          {
+            "id": "B",
+            "text": "Toàn bộ Internet"
+          },
+          {
+            "id": "C",
+            "text": "Một tệp"
+          },
+          {
+            "id": "D",
+            "text": "Một địa chỉ IP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Domain lá là mạng cục bộ, cell.\n\n### Lời giải từng bước\n\nMỗi domain chứa các bản ghi (định danh, địa chỉ hoặc domain con) của tất cả các nút thuộc domain đó.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nDomain gốc bao toàn bộ.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 26: Giải pháp phân cấp)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "phan-cap"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-13",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong giải pháp phân cấp, **bộ đệm** (Slide 29) giúp gì?",
+          "images": [
+            {
+              "id": "c3x-13-img",
+              "src": "images/hpt/ch3_hierarchical_cache.png",
+              "alt": "Khai thác bộ đệm vị trí tại nút miền trung gian trong dịch vụ định vị phân cấp — Slide 29 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tìm kiếm nhanh hơn do lưu con trỏ gần với thực thể"
+          },
+          {
+            "id": "B",
+            "text": "Tăng thời gian tìm kiếm"
+          },
+          {
+            "id": "C",
+            "text": "Loại bỏ domain lá"
+          },
+          {
+            "id": "D",
+            "text": "Không có tác dụng"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Giảm bước tìm kiếm.\n\n### Lời giải từng bước\n\nNút trung gian lưu lại kết quả tìm kiếm trước để lần sau đi thẳng tới domain thấp hơn.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nCache có thể chứa thông tin lỗi thời.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 29: Bộ đệm)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "phan-cap",
+          "cache"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c3x-14",
+        "type": "single_choice",
+        "question": {
+          "text": "Các cách để chống **cạn kiệt không gian tên** (Slide 32) là gì?",
+          "images": [
+            {
+              "id": "c3x-14-img",
+              "src": "images/hpt/ch3_refcount_duplicate.png",
+              "alt": "Lỗi đếm 2 lần (duplicate counting) trong con đếm tham chiếu khi gói báo nhận ACK bị thất lạc — Slide 36 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Loại bỏ tên của các thực thể lâu không được tham chiếu hoặc lâu không được sử dụng (dùng con đếm tham chiếu)"
+          },
+          {
+            "id": "B",
+            "text": "Tăng giá cho mỗi tên"
+          },
+          {
+            "id": "C",
+            "text": "Chỉ dùng tên ngắn"
+          },
+          {
+            "id": "D",
+            "text": "Cấm tạo tên mới"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 32.\n\n### Lời giải từng bước\n\nDùng con đếm tham chiếu hoặc thuật toán vét cạn để loại thực thể không còn được tham chiếu.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nCác thực thể tham chiếu lẫn nhau làm bài toán khó.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 32–33: Cạn kiệt không gian tên)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "ten-phang"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c3x-15",
+        "type": "single_choice",
+        "question": {
+          "text": "Khó khăn khi dùng **con đếm tham chiếu** (Slide 35) trong Unix file system là gì?",
+          "images": [
+            {
+              "id": "c3x-15-img",
+              "src": "images/hpt/ch3_refcount_race.png",
+              "alt": "Lỗi đếm chậm (premature removal) khi thông điệp -1 đến đối tượng O trước thông điệp +1 và cách khắc phục bằng ACK — Slide 37 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Vấn đề đếm hai lần và đếm chậm"
+          },
+          {
+            "id": "B",
+            "text": "Không đếm được"
+          },
+          {
+            "id": "C",
+            "text": "Luôn đếm đúng"
+          },
+          {
+            "id": "D",
+            "text": "Cần quảng bá"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 35: đếm hai lần, đếm chậm.\n\n### Lời giải từng bước\n\nSlide 36 (đếm 2 lần) và Slide 37 (đếm chậm) minh hoạ hai tình huống race khi nhiều bước tham chiếu.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐây là hai ví dụ trong slide.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 35–37: Con đếm tham chiếu)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Inode",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "con-dem-tham-chieu"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "id": "c3x-16",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong không gian tên có cấu trúc, **nút lá** và **nút thư mục** khác nhau thế nào (Slide 40)?",
+          "images": [
+            {
+              "id": "c3x-16-img",
+              "src": "images/hpt/ch3_mounting_nfs.png",
+              "alt": "Cơ chế gắn kết (Mounting) không gian tên từ xa qua NFS trên máy A và máy B — Slide 52 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Nút lá không có nhánh ra và chứa địa chỉ thực thể; nút thư mục có nhánh ra và chứa tên các thực thể"
+          },
+          {
+            "id": "B",
+            "text": "Nút lá có nhánh ra"
+          },
+          {
+            "id": "C",
+            "text": "Nút thư mục chứa địa chỉ thực thể"
+          },
+          {
+            "id": "D",
+            "text": "Không khác nhau"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 40.\n\n### Lời giải từng bước\n\nĐường dẫn tương ứng một tên: tên toàn cục là đường dẫn tuyệt đối; tên cục bộ là đường dẫn tương đối.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nLá = đích; thư mục = trung gian.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 40: Không gian tên có cấu trúc)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "khong-gian-ten-cau-truc"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-17",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi phân giải tên `/home/trunghq/teaching/ds/`, ta luôn cần điều gì (Slide 42)?",
+          "images": [
+            {
+              "id": "c3x-17-img",
+              "src": "images/hpt/ch3_mounting_nfs.png",
+              "alt": "Cơ chế gắn kết (Mounting) không gian tên từ xa qua NFS trên máy A và máy B — Slide 52 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Một điểm cố định để bắt đầu: biết địa chỉ của thư mục gốc (nguyên tắc bao đóng)"
+          },
+          {
+            "id": "B",
+            "text": "Quảng bá cho toàn mạng"
+          },
+          {
+            "id": "C",
+            "text": "Biết địa chỉ của `ds` trước"
+          },
+          {
+            "id": "D",
+            "text": "Không cần biết gì"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Cần điểm bắt đầu cố định.\n\n### Lời giải từng bước\n\nPhải biết địa chỉ thư mục gốc, đọc nội dung gốc để xác định `home`, rồi lần lượt đến `ds`. Điểm bắt đầu này gọi là nguyên tắc bao đóng.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nKhông thể phân giải nếu không có điểm tựa.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 42: Phân giải tên)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "phan-giai-ten"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c3x-18",
+        "type": "single_choice",
+        "question": {
+          "text": "Một thư mục trong Unix là gì (Slide 44)?",
+          "images": [
+            {
+              "id": "c3x-18-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 660 235\" width=\"660\" height=\"235\"><rect width=\"660\" height=\"235\" fill=\"#fff\"/><defs><marker id=\"ahl\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 z\" fill=\"#111\"/></marker></defs><text x=\"165\" y=\"25\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#0b5394\">Hard Link ($ ln a.txt hard.txt)</text><rect x=\"20\" y=\"45\" width=\"95\" height=\"32\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"67\" y=\"66\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">a.txt (#42)</text><rect x=\"20\" y=\"105\" width=\"95\" height=\"32\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"67\" y=\"126\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">hard.txt(#42)</text><rect x=\"160\" y=\"65\" width=\"145\" height=\"58\" rx=\"6\" fill=\"#d9f7d9\" stroke=\"#111\" stroke-width=\"1.8\"/><text x=\"232\" y=\"88\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Inode #42 (count=2)</text><text x=\"232\" y=\"109\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#222\">Trỏ khối dữ liệu gốc</text><line x1=\"115\" y1=\"61\" x2=\"158\" y2=\"82\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><line x1=\"115\" y1=\"121\" x2=\"158\" y2=\"104\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><text x=\"165\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b7e3c\">Xóa a.txt → count giảm 2→1, dữ liệu CÒN NGUYÊN</text><line x1=\"330\" y1=\"15\" x2=\"330\" y2=\"215\" stroke=\"#ccc\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><text x=\"495\" y=\"25\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">Soft / Symbolic Link ($ ln -s a.txt sym.txt)</text><rect x=\"350\" y=\"55\" width=\"110\" height=\"34\" rx=\"4\" fill=\"#fff2cc\" stroke=\"#111\"/><text x=\"405\" y=\"77\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">sym.txt (#99)</text><rect x=\"495\" y=\"45\" width=\"145\" height=\"55\" rx=\"6\" fill=\"#ffe6e6\" stroke=\"#111\"/><text x=\"567\" y=\"67\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Inode mới #99</text><text x=\"567\" y=\"88\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">path: \"/.../a.txt\"</text><line x1=\"460\" y1=\"72\" x2=\"493\" y2=\"72\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><text x=\"495\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\">Không tăng link count của Inode #42</text><text x=\"495\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">Xóa a.txt → sym.txt bị TREO (dangling link)!</text></svg>",
+              "alt": "Liên kết cứng và mềm"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Một tệp có nội dung là bảng liên kết gắn tên tệp với inode"
+          },
+          {
+            "id": "B",
+            "text": "Một dãy byte không cấu trúc"
+          },
+          {
+            "id": "C",
+            "text": "Một địa chỉ IP"
+          },
+          {
+            "id": "D",
+            "text": "Một tiến trình"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 44.\n\n### Lời giải từng bước\n\nMỗi liên kết gắn một tên tệp với một inode của hệ thống tệp.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nTên nằm trong thư mục, không nằm trong inode.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 44: Thư mục)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Inode",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "inode"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-19",
+        "type": "single_choice",
+        "question": {
+          "text": "Lệnh `ln fbis lien` (không có `-s`) tạo ra loại liên kết nào và hệ quả gì?",
+          "images": [
+            {
+              "id": "c3x-19-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 660 235\" width=\"660\" height=\"235\"><rect width=\"660\" height=\"235\" fill=\"#fff\"/><defs><marker id=\"ahl\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 z\" fill=\"#111\"/></marker></defs><text x=\"165\" y=\"25\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#0b5394\">Hard Link ($ ln a.txt hard.txt)</text><rect x=\"20\" y=\"45\" width=\"95\" height=\"32\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"67\" y=\"66\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">a.txt (#42)</text><rect x=\"20\" y=\"105\" width=\"95\" height=\"32\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"67\" y=\"126\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">hard.txt(#42)</text><rect x=\"160\" y=\"65\" width=\"145\" height=\"58\" rx=\"6\" fill=\"#d9f7d9\" stroke=\"#111\" stroke-width=\"1.8\"/><text x=\"232\" y=\"88\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Inode #42 (count=2)</text><text x=\"232\" y=\"109\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#222\">Trỏ khối dữ liệu gốc</text><line x1=\"115\" y1=\"61\" x2=\"158\" y2=\"82\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><line x1=\"115\" y1=\"121\" x2=\"158\" y2=\"104\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><text x=\"165\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b7e3c\">Xóa a.txt → count giảm 2→1, dữ liệu CÒN NGUYÊN</text><line x1=\"330\" y1=\"15\" x2=\"330\" y2=\"215\" stroke=\"#ccc\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><text x=\"495\" y=\"25\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">Soft / Symbolic Link ($ ln -s a.txt sym.txt)</text><rect x=\"350\" y=\"55\" width=\"110\" height=\"34\" rx=\"4\" fill=\"#fff2cc\" stroke=\"#111\"/><text x=\"405\" y=\"77\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">sym.txt (#99)</text><rect x=\"495\" y=\"45\" width=\"145\" height=\"55\" rx=\"6\" fill=\"#ffe6e6\" stroke=\"#111\"/><text x=\"567\" y=\"67\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Inode mới #99</text><text x=\"567\" y=\"88\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">path: \"/.../a.txt\"</text><line x1=\"460\" y1=\"72\" x2=\"493\" y2=\"72\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><text x=\"495\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\">Không tăng link count của Inode #42</text><text x=\"495\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">Xóa a.txt → sym.txt bị TREO (dangling link)!</text></svg>",
+              "alt": "Liên kết cứng và mềm"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Liên kết vật lý (hard link): tệp mới chia sẻ cùng inode và khối dữ liệu với tệp ban đầu"
+          },
+          {
+            "id": "B",
+            "text": "Liên kết biểu tượng, tạo inode mới"
+          },
+          {
+            "id": "C",
+            "text": "Sao chép toàn bộ dữ liệu sang inode mới"
+          },
+          {
+            "id": "D",
+            "text": "Xoá tệp `fbis`"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 46.\n\n### Lời giải từng bước\n\nHard link là quan hệ giữa tên tệp trong thư mục với một inode; có thể có nhiều hard link tới cùng inode.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: cần `-s`.\n- **C — Sai:** Sai: không sao chép dữ liệu.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\n`ln -s` tạo soft link.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 46: Liên kết vật lý)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Hard_link",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "hard-link"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c3x-20",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi xoá một tệp bằng `rm`, điều gì xảy ra (Slide 48)?",
+          "images": [
+            {
+              "id": "c3x-20-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 660 235\" width=\"660\" height=\"235\"><rect width=\"660\" height=\"235\" fill=\"#fff\"/><defs><marker id=\"ahl\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 z\" fill=\"#111\"/></marker></defs><text x=\"165\" y=\"25\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#0b5394\">Hard Link ($ ln a.txt hard.txt)</text><rect x=\"20\" y=\"45\" width=\"95\" height=\"32\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"67\" y=\"66\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">a.txt (#42)</text><rect x=\"20\" y=\"105\" width=\"95\" height=\"32\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"67\" y=\"126\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">hard.txt(#42)</text><rect x=\"160\" y=\"65\" width=\"145\" height=\"58\" rx=\"6\" fill=\"#d9f7d9\" stroke=\"#111\" stroke-width=\"1.8\"/><text x=\"232\" y=\"88\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Inode #42 (count=2)</text><text x=\"232\" y=\"109\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#222\">Trỏ khối dữ liệu gốc</text><line x1=\"115\" y1=\"61\" x2=\"158\" y2=\"82\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><line x1=\"115\" y1=\"121\" x2=\"158\" y2=\"104\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><text x=\"165\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b7e3c\">Xóa a.txt → count giảm 2→1, dữ liệu CÒN NGUYÊN</text><line x1=\"330\" y1=\"15\" x2=\"330\" y2=\"215\" stroke=\"#ccc\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><text x=\"495\" y=\"25\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">Soft / Symbolic Link ($ ln -s a.txt sym.txt)</text><rect x=\"350\" y=\"55\" width=\"110\" height=\"34\" rx=\"4\" fill=\"#fff2cc\" stroke=\"#111\"/><text x=\"405\" y=\"77\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">sym.txt (#99)</text><rect x=\"495\" y=\"45\" width=\"145\" height=\"55\" rx=\"6\" fill=\"#ffe6e6\" stroke=\"#111\"/><text x=\"567\" y=\"67\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Inode mới #99</text><text x=\"567\" y=\"88\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">path: \"/.../a.txt\"</text><line x1=\"460\" y1=\"72\" x2=\"493\" y2=\"72\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><text x=\"495\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\">Không tăng link count của Inode #42</text><text x=\"495\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">Xóa a.txt → sym.txt bị TREO (dangling link)!</text></svg>",
+              "alt": "Liên kết cứng và mềm"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Xoá một liên kết; nếu là liên kết vật lý cuối cùng đến inode thì các khối dữ liệu cũng bị xoá"
+          },
+          {
+            "id": "B",
+            "text": "Luôn xoá toàn bộ dữ liệu"
+          },
+          {
+            "id": "C",
+            "text": "Không xoá gì"
+          },
+          {
+            "id": "D",
+            "text": "Chỉ xoá inode"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 48.\n\n### Lời giải từng bước\n\nSố liên kết vật lý đến inode xem bằng `ls -l`. Chỉ khi liên kết cuối cùng bị xoá thì dữ liệu mới được giải phóng.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nTệp có nhiều hard link thì xoá một tên không mất dữ liệu.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 48: Liên kết vật lý)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Hard_link",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "hard-link",
+          "rm"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c3x-21",
+        "type": "single_choice",
+        "question": {
+          "text": "Soft link (liên kết biểu tượng) lưu gì trong inode mới được tạo (Slide 50)?",
+          "images": [
+            {
+              "id": "c3x-21-svg",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 660 235\" width=\"660\" height=\"235\"><rect width=\"660\" height=\"235\" fill=\"#fff\"/><defs><marker id=\"ahl\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 z\" fill=\"#111\"/></marker></defs><text x=\"165\" y=\"25\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#0b5394\">Hard Link ($ ln a.txt hard.txt)</text><rect x=\"20\" y=\"45\" width=\"95\" height=\"32\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"67\" y=\"66\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">a.txt (#42)</text><rect x=\"20\" y=\"105\" width=\"95\" height=\"32\" rx=\"4\" fill=\"#e8f2ff\" stroke=\"#111\"/><text x=\"67\" y=\"126\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">hard.txt(#42)</text><rect x=\"160\" y=\"65\" width=\"145\" height=\"58\" rx=\"6\" fill=\"#d9f7d9\" stroke=\"#111\" stroke-width=\"1.8\"/><text x=\"232\" y=\"88\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Inode #42 (count=2)</text><text x=\"232\" y=\"109\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#222\">Trỏ khối dữ liệu gốc</text><line x1=\"115\" y1=\"61\" x2=\"158\" y2=\"82\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><line x1=\"115\" y1=\"121\" x2=\"158\" y2=\"104\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><text x=\"165\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b7e3c\">Xóa a.txt → count giảm 2→1, dữ liệu CÒN NGUYÊN</text><line x1=\"330\" y1=\"15\" x2=\"330\" y2=\"215\" stroke=\"#ccc\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><text x=\"495\" y=\"25\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#c0392b\">Soft / Symbolic Link ($ ln -s a.txt sym.txt)</text><rect x=\"350\" y=\"55\" width=\"110\" height=\"34\" rx=\"4\" fill=\"#fff2cc\" stroke=\"#111\"/><text x=\"405\" y=\"77\" font-family=\"monospace\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111\">sym.txt (#99)</text><rect x=\"495\" y=\"45\" width=\"145\" height=\"55\" rx=\"6\" fill=\"#ffe6e6\" stroke=\"#111\"/><text x=\"567\" y=\"67\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">Inode mới #99</text><text x=\"567\" y=\"88\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">path: \"/.../a.txt\"</text><line x1=\"460\" y1=\"72\" x2=\"493\" y2=\"72\" stroke=\"#111\" stroke-width=\"1.6\" marker-end=\"url(#ahl)\"/><text x=\"495\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\">Không tăng link count của Inode #42</text><text x=\"495\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">Xóa a.txt → sym.txt bị TREO (dangling link)!</text></svg>",
+              "alt": "Liên kết cứng và mềm"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Tên (đường dẫn tuyệt đối hoặc tương đối) của phần tử được trỏ tới"
+          },
+          {
+            "id": "B",
+            "text": "Số inode của đích"
+          },
+          {
+            "id": "C",
+            "text": "Toàn bộ nội dung đích"
+          },
+          {
+            "id": "D",
+            "text": "Địa chỉ IP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 50.\n\n### Lời giải từng bước\n\n`ln -s` tạo inode mới chứa đường dẫn đích; nếu đích bị xoá, soft link bị treo.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là hard link.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nSoft link có inode riêng, hard link thì không.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 49–50: Liên kết biểu tượng)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Symbolic_link",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "soft-link"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c3x-22",
+        "type": "single_choice",
+        "question": {
+          "text": "**Mounting** trong không gian tên có cấu trúc nghĩa là gì (Slide 52)?",
+          "images": [
+            {
+              "id": "c3x-22-img",
+              "src": "images/hpt/ch3_mounting_nfs.png",
+              "alt": "Cơ chế gắn kết (Mounting) không gian tên từ xa qua NFS trên máy A và máy B — Slide 52 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Ánh xạ một không gian tên vào một không gian tên khác"
+          },
+          {
+            "id": "B",
+            "text": "Xoá không gian tên"
+          },
+          {
+            "id": "C",
+            "text": "Sao lưu không gian tên"
+          },
+          {
+            "id": "D",
+            "text": "Mã hoá không gian tên"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 52.\n\n### Lời giải từng bước\n\nMột nút trong không gian tên này trỏ tới gốc không gian tên khác.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nKhác merging (thêm gốc mới).\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 52: Mounting)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "mounting"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-23",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong phân tán không gian tên (Slide 55–57), mức nào có **số server ít, thời gian đáp ứng chậm (giây), ít thay đổi**?",
+          "images": [
+            {
+              "id": "c3x-23-img",
+              "src": "images/hpt/ch3_dns_3layers.png",
+              "alt": "Phân chia không gian tên có cấu trúc thành 3 tầng: Global layer, Administrational layer và Managerial layer — Slide 56 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Mức toàn cục (global)"
+          },
+          {
+            "id": "B",
+            "text": "Mức quản lý"
+          },
+          {
+            "id": "C",
+            "text": "Mức quản trị"
+          },
+          {
+            "id": "D",
+            "text": "Không mức nào"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Mức toàn cục.\n\n### Lời giải từng bước\n\nBảng Slide 57: toàn cục — địa cầu, ít nút, thời gian giây, thay đổi chậm, nhiều bản sao; quản lý — mức tổ chức, ms; quản trị — tức khắc.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: nhanh hơn, ms.\n- **C — Sai:** Sai: tức khắc.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nToàn cục chậm nhưng ổn định.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 55–57: Phân tán không gian tên)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "phan-tan-khong-gian-ten"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c3x-24",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong **phân giải tên đệ quy**, ai gửi các truy vấn trung gian tới name server kế tiếp?",
+          "images": [
+            {
+              "id": "c3x-24-img",
+              "src": "images/hpt/ch3_recursive_resolution.png",
+              "alt": "Phân giải tên đệ quy (Recursive name resolution): máy chủ tên tự chuyển tiếp truy vấn xuống cấp dưới và gom kết quả trả về — Slide 61 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Name server nhận yêu cầu, thay mặt client"
+          },
+          {
+            "id": "B",
+            "text": "Chính client"
+          },
+          {
+            "id": "C",
+            "text": "Resolver gốc"
+          },
+          {
+            "id": "D",
+            "text": "Không ai"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 61.\n\n### Lời giải từng bước\n\nClient chỉ gửi một yêu cầu, name server đầu tiên tự đi hỏi các name server khác (khác phân giải lặp, nơi client gửi từng yêu cầu).\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là phân giải lặp.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nĐệ quy: trách nhiệm đẩy về server.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 61–62: Phân giải đệ quy)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "dns"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-25",
+        "type": "single_choice",
+        "question": {
+          "text": "Bản ghi DNS `MX` dùng để làm gì (Slide 65)?",
+          "images": [
+            {
+              "id": "c3x-25-img",
+              "src": "images/hpt/ch3_dns_3layers.png",
+              "alt": "Phân chia không gian tên có cấu trúc thành 3 tầng: Global layer, Administrational layer và Managerial layer — Slide 56 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Chỉ tới mail server xử lý thư gửi tới nút/domain đó"
+          },
+          {
+            "id": "B",
+            "text": "Chứa địa chỉ IP của host"
+          },
+          {
+            "id": "C",
+            "text": "Chỉ tới name server của zone"
+          },
+          {
+            "id": "D",
+            "text": "Bí danh (alias) của tên chính"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** MX = mail exchanger.\n\n### Lời giải từng bước\n\nSlide 65: `A` chứa IP; `NS` chỉ name server; `CNAME` là symbolic link tới tên chính; `MX` chỉ mail server.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: đó là `A`.\n- **C — Sai:** Sai: đó là `NS`.\n- **D — Sai:** Sai: đó là `CNAME`.\n\n### Điểm dễ nhầm\n\nNhớ nghĩa từng loại bản ghi.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 65: Một số bản ghi quan trọng)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/List_of_DNS_record_types",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "dns",
+          "ban-ghi"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-26",
+        "type": "single_choice",
+        "question": {
+          "text": "Bản ghi DNS `CNAME` có ý nghĩa gì?",
+          "images": [
+            {
+              "id": "c3x-26-img",
+              "src": "images/hpt/ch3_dns_3layers.png",
+              "alt": "Phân chia không gian tên có cấu trúc thành 3 tầng: Global layer, Administrational layer và Managerial layer — Slide 56 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Symbolic link tới tên chính (primary name) của nút"
+          },
+          {
+            "id": "B",
+            "text": "Địa chỉ IP của host"
+          },
+          {
+            "id": "C",
+            "text": "Mail server"
+          },
+          {
+            "id": "D",
+            "text": "Thông tin phần cứng host"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** CNAME = canonical name.\n\n### Lời giải từng bước\n\nSlide 65: `CNAME` thuộc loại *Node*, là liên kết biểu tượng với tên chính.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai: `A`.\n- **C — Sai:** Sai: `MX`.\n- **D — Sai:** Sai: `HINFO`.\n\n### Điểm dễ nhầm\n\nCNAME giống soft link.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 65: Một số bản ghi quan trọng)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/List_of_DNS_record_types",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "dns",
+          "ban-ghi"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-27",
+        "type": "single_choice",
+        "question": {
+          "text": "**DNS amplification attack** (Slide 67–68) lợi dụng điều gì?",
+          "images": [
+            {
+              "id": "c3x-27-img",
+              "src": "images/hpt/ch3_recursive_resolution.png",
+              "alt": "Phân giải tên đệ quy (Recursive name resolution): máy chủ tên tự chuyển tiếp truy vấn xuống cấp dưới và gom kết quả trả về — Slide 61 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "DNS đệ quy dựa trên UDP/ICMP không có cơ chế xác thực: truy vấn nhỏ (64 byte) nhận phản hồi lớn (3.223 byte) gửi tới nạn nhân"
+          },
+          {
+            "id": "B",
+            "text": "Lỗi tràn bộ nhớ trong name server"
+          },
+          {
+            "id": "C",
+            "text": "Mật khẩu yếu"
+          },
+          {
+            "id": "D",
+            "text": "Khoá riêng bị lộ"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 67–68.\n\n### Lời giải từng bước\n\nKẻ tấn công giả mạo địa chỉ nguồn là nạn nhân; name server gửi phản hồi lớn tới nạn nhân, khuếch đại băng thông khoảng 50 lần.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nGiả mạo địa chỉ nguồn + phản hồi lớn.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 67–68: DNS Amplification)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Domain_Name_System",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "dns",
+          "amplification"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c3x-28",
+        "type": "single_choice",
+        "question": {
+          "text": "**RDF** (Resource Description Framework) biểu diễn thông tin dưới dạng nào (Slide 70)?",
+          "images": [
+            {
+              "id": "c3x-28-img",
+              "src": "images/hpt/ch3_ldap_dit.png",
+              "alt": "Cây thông tin thư mục DIT (Directory Information Tree) trong X.500 / LDAP — Slide 74 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "Cặp bộ 3 (subject, predicate, object), ví dụ (Person, name, Alice)"
+          },
+          {
+            "id": "B",
+            "text": "Cặp (key, value)"
+          },
+          {
+            "id": "C",
+            "text": "Cây nhị phân"
+          },
+          {
+            "id": "D",
+            "text": "Ma trận kề"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 70.\n\n### Lời giải từng bước\n\nThuộc tính động dùng khung mô tả tài nguyên RDF.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nRDF = bộ ba.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 70: Dịch vụ thư mục)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Resource_Description_Framework",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "rdf",
+          "dich-vu-thu-muc"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "id": "c3x-29",
+        "type": "single_choice",
+        "question": {
+          "text": "Trong **LDAP**, `RDN` và `DIT` là gì (Slide 73–74)?",
+          "images": [
+            {
+              "id": "c3x-29-img",
+              "src": "images/hpt/ch3_ldap_dit.png",
+              "alt": "Cây thông tin thư mục DIT (Directory Information Tree) trong X.500 / LDAP — Slide 74 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "`RDN` (Relative Distinguished Name) là tên tương đối của một bản ghi; `DIT` là cây thông tin thư mục, mỗi nút biểu diễn một bản ghi"
+          },
+          {
+            "id": "B",
+            "text": "`RDN` là cây, `DIT` là bản ghi"
+          },
+          {
+            "id": "C",
+            "text": "Cả hai là giao thức"
+          },
+          {
+            "id": "D",
+            "text": "Cả hai là địa chỉ IP"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 73–74.\n\n### Lời giải từng bước\n\nVí dụ `/C=NL/O=Vrije Universiteit/OU=Comp. Sc.`; DSA là agent dịch vụ thư mục, DUA là agent người dùng.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nRDN là một thành phần của đường dẫn.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 73–74: LDAP, DIT)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "ldap"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "id": "c3x-30",
+        "type": "single_choice",
+        "question": {
+          "text": "Khi ánh xạ dịch vụ thư mục vào **bảng băm phân tán**, cấu trúc nào được dùng (Slide 78)?",
+          "images": [
+            {
+              "id": "c3x-30-img",
+              "src": "images/hpt/ch3_avtree_dht.png",
+              "alt": "Biểu diễn thực thể bằng cây thuộc tính–giá trị AVTree để ánh xạ vào bảng băm phân tán DHT — Slide 78 Chương 3"
+            }
+          ]
+        },
+        "choices": [
+          {
+            "id": "A",
+            "text": "AVTree (attribute-value tree)"
+          },
+          {
+            "id": "B",
+            "text": "B-tree"
+          },
+          {
+            "id": "C",
+            "text": "Trie"
+          },
+          {
+            "id": "D",
+            "text": "Heap"
+          }
+        ],
+        "answer": {
+          "correctChoiceIds": [
+            "A"
+          ]
+        },
+        "explanation": {
+          "text": "### Đáp án\n\n**Chọn A.** Slide 78.\n\n### Lời giải từng bước\n\nThuộc tính–giá trị được tổ chức thành cây, mỗi nút ánh xạ vào khoá băm.\n\n### Phân tích từng lựa chọn\n\n- **A — Đúng:** Đúng.\n- **B — Sai:** Sai.\n- **C — Sai:** Sai.\n- **D — Sai:** Sai.\n\n### Điểm dễ nhầm\n\nAVTree phục vụ tìm kiếm theo thuộc tính.\n\n### Nguồn\n\n- **Slide bài giảng:** `hpt-slides/03-dinhdanh.pdf` (Slide 78: Ánh xạ vào DHT)\n- **Đề thi gốc:** Câu hỏi biên soạn từ slide Chương 3 (dạng đề giữa kỳ)\n- **Tài liệu tham khảo:** https://en.wikipedia.org/wiki/Distributed_hash_table",
+          "images": []
+        },
+        "tags": [
+          "he-phan-tan",
+          "chuong-3",
+          "de-thi-giua-ky",
+          "avtree"
+        ],
+        "difficulty": "medium"
+      },
+      {
         "id": "ch1-q001",
         "type": "single_choice",
         "question": {
